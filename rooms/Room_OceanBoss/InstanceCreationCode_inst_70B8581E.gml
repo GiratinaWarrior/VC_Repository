@@ -1,0 +1,1 @@
+follow = obj_KingChimarineIntro;

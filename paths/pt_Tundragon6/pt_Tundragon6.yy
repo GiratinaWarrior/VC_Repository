@@ -1,0 +1,16 @@
+{
+  "resourceType": "GMPath",
+  "resourceVersion": "1.0",
+  "name": "pt_Tundragon6",
+  "closed": false,
+  "kind": 0,
+  "parent": {
+    "name": "Room2",
+    "path": "folders/Paths/Tundragons/Room2.yy",
+  },
+  "points": [
+    {"speed":100.0,"x":898.10693,"y":63.922333,},
+    {"speed":100.0,"x":1497.136,"y":61.009705,},
+  ],
+  "precision": 4,
+}

@@ -1,0 +1,1 @@
+path_start(pt_TitleMoon, 1, path_action_restart, true);

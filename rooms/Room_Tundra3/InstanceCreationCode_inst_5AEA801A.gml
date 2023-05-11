@@ -1,0 +1,1 @@
+path_start(pt_Tundragon8, 3, path_action_continue, true);

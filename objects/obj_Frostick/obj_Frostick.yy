@@ -1,0 +1,45 @@
+{
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_Frostick",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":1,"eventType":3,"isDnD":false,},
+  ],
+  "managed": true,
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_Enemy","path":"objects/parent_Enemy/parent_Enemy.yy",},"propertyId":{"name":"HealthDrop","path":"objects/parent_Enemy/parent_Enemy.yy",},"value":"1",},
+  ],
+  "parent": {
+    "name": "Tick",
+    "path": "folders/Objects/Enemies/Tundra/Tick.yy",
+  },
+  "parentObjectId": {
+    "name": "parent_Enemy",
+    "path": "objects/parent_Enemy/parent_Enemy.yy",
+  },
+  "persistent": false,
+  "physicsAngularDamping": 0.1,
+  "physicsDensity": 0.5,
+  "physicsFriction": 0.2,
+  "physicsGroup": 1,
+  "physicsKinematic": false,
+  "physicsLinearDamping": 0.1,
+  "physicsObject": false,
+  "physicsRestitution": 0.1,
+  "physicsSensor": false,
+  "physicsShape": 1,
+  "physicsShapePoints": [],
+  "physicsStartAwake": true,
+  "properties": [
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"AfraidOfHeights","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"True","varType":3,},
+  ],
+  "solid": false,
+  "spriteId": {
+    "name": "spr_Frostick",
+    "path": "sprites/spr_Frostick/spr_Frostick.yy",
+  },
+  "spriteMaskId": null,
+  "visible": true,
+}

@@ -1,0 +1,1 @@
+CrabSpeed = 0;

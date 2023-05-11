@@ -1,0 +1,48 @@
+{
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_ScarletCrab",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":1,"eventType":3,"isDnD":false,},
+  ],
+  "managed": true,
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_Enemy","path":"objects/parent_Enemy/parent_Enemy.yy",},"propertyId":{"name":"Health","path":"objects/parent_Enemy/parent_Enemy.yy",},"value":"3",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_Enemy","path":"objects/parent_Enemy/parent_Enemy.yy",},"propertyId":{"name":"Damage","path":"objects/parent_Enemy/parent_Enemy.yy",},"value":"1",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_Enemy","path":"objects/parent_Enemy/parent_Enemy.yy",},"propertyId":{"name":"HealthDrop","path":"objects/parent_Enemy/parent_Enemy.yy",},"value":"1/4",},
+  ],
+  "parent": {
+    "name": "Crab",
+    "path": "folders/Objects/Enemies/Ocean/Crab.yy",
+  },
+  "parentObjectId": {
+    "name": "parent_Enemy",
+    "path": "objects/parent_Enemy/parent_Enemy.yy",
+  },
+  "persistent": false,
+  "physicsAngularDamping": 0.1,
+  "physicsDensity": 0.5,
+  "physicsFriction": 0.2,
+  "physicsGroup": 1,
+  "physicsKinematic": false,
+  "physicsLinearDamping": 0.1,
+  "physicsObject": false,
+  "physicsRestitution": 0.1,
+  "physicsSensor": false,
+  "physicsShape": 1,
+  "physicsShapePoints": [],
+  "physicsStartAwake": true,
+  "properties": [
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"CanShoot","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"True","varType":3,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"AfraidOfHeights","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"True","varType":3,},
+  ],
+  "solid": false,
+  "spriteId": {
+    "name": "spr_ScarletCrab",
+    "path": "sprites/spr_ScarletCrab/spr_ScarletCrab.yy",
+  },
+  "spriteMaskId": null,
+  "visible": true,
+}

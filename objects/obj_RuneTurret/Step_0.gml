@@ -1,0 +1,177 @@
+/// @description Shootings lasers
+
+#region Old Code
+
+/*
+//check if the player exists
+if (instance_exists(obj_NewPlayer))
+{
+	//check if Player is within range
+	if (point_distance(obj_NewPlayer.x, obj_NewPlayer.y, x, y) < 600)
+	{
+		//Start the count down to shoot
+		countdown--;
+		
+		//If the count down reaches 0
+		if (countdown <= 0)
+		{
+			
+			if (!collision_line(x, y, obj_NewPlayer.x, obj_NewPlayer.y, obj_WallPlatform, false, false))
+			{
+			
+				sprite_index = spr_RuneTurretShoot;
+			
+				//Play the sound effect
+				audio_play_sound(sound_Shoot, 5, false);
+				
+				//Create the Rune Turret laser
+				with (instance_create_layer(x , y , layer, obj_RuneTurretLaser))
+				{
+					//Set its speed
+					speed = 6;
+					
+					//Set the direction to be at the Player
+					other.shootDir = point_direction(other.x, other.y, obj_NewPlayer.x, obj_NewPlayer.y);
+					
+					//How mouch the Rune Turret can miss by
+					var shootRange = 0;
+					
+					//The direction that the Rune Turret travels in
+					direction = other.shootDir + random_range(-shootRange, shootRange);
+					image_angle = direction;
+					
+				}//end create Rune Turret Laser
+				
+				//Reset the countdown
+				countdown = countdownrate;
+			
+			}//if the Rune Turret has a clear shot
+			
+		}//end if countdown is or less than zero
+		
+	}//end if player is in range
+	
+}//end if player exists
+*/
+
+#endregion
+
+#region New Code
+
+#endregion
+
+//Rune Turret State Machine
+switch(TurretState)
+{
+	//If RT is passive
+	case RUNETURRET_STATE.IDLE:
+	
+		#region Idle Code
+	
+			image_speed = 1;
+			sprite_index = spr_RuneTurret;
+	
+			//Check if the Player exists
+			if (instance_exists(obj_NewPlayer))
+			{
+				//Check if they're in range
+				if (point_distance(obj_NewPlayer.x, obj_NewPlayer.y, x, y) < 600)
+				{
+				
+					//If the count down reaches 0
+					if (countdown <= 0)
+					{
+						//Switch to the charging state
+						TurretState = RUNETURRET_STATE.CHARGE;
+					}
+					
+					//If the countdown hasn't reached 0
+					else
+					{
+						countdown--;
+					}
+		
+				}//end player in range
+	
+			}//end if player exists
+		
+		#endregion
+		
+		break; //end RT passive
+		
+	//If RT is charging an attack	
+	case RUNETURRET_STATE.CHARGE:
+	
+		#region Charge Code
+	
+			sprite_index = spr_RuneTurretCharge;
+		
+			//If the charge animation is about to end
+			if (image_index >= image_number - 1)
+			{
+				//If the player exists
+				if (instance_exists(obj_NewPlayer))
+				{
+					//If RT has a clear shot
+					if (!collision_line(x, y, obj_NewPlayer.x, obj_NewPlayer.y, obj_WallPlatform, false, false))
+					{
+						TurretState = RUNETURRET_STATE.SHOOT;
+					}//end clear shot
+					
+					//If RT doesn't have a clear shot
+					else
+					{
+						//Freeze frame
+						image_speed = 0;
+						image_index = image_number - 1;
+					}//end no clear shot
+					
+				}//if the player exists
+				
+			
+			}//end charge end
+	
+		#endregion
+	
+		break; //end RT Charge
+		
+	//If RT is shooting an attack
+	case RUNETURRET_STATE.SHOOT:
+	
+		#region Shoot Code
+		
+			//Play the sound effect
+			audio_play_sound(sound_Shoot, 5, false);
+				
+			//Create the Rune Turret laser
+			with (instance_create_layer(x, y, layer, obj_RuneTurretLaser))
+			{
+				//Set its speed
+				speed = 6;
+				
+				//If the player exists
+				if (instance_exists(obj_NewPlayer))
+				{
+					//Set the direction to be at the Player
+					other.shootDir = point_direction(other.x, other.y, obj_NewPlayer.x, obj_NewPlayer.y);
+				}
+				
+				//How mouch the Rune Turret can miss by
+				var shootRange = 0;
+					
+				//The direction that the Rune Turret travels in
+				direction = other.shootDir + random_range(-shootRange, shootRange);
+				image_angle = direction;
+					
+			}//end create Rune Turret Laser
+				
+			//Reset the countdown
+			countdown = countdownrate;
+			
+			TurretState = RUNETURRET_STATE.IDLE;
+		
+		#endregion
+	
+		break; //end RT Shoot
+		
+}

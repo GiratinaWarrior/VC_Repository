@@ -1,0 +1,3 @@
+The reason parent_Enemy is not used to check for collision with obj_MagicShot
+Is because this for some reason does not work
+It results in nothing happening

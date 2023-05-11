@@ -1,0 +1,1 @@
+path_start(pt_Tundragon5, 3, path_action_reverse, true);

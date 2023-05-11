@@ -1,0 +1,25 @@
+Log Entry April 26 #1
+
+	spr_PlayerIdle
+		Automatic
+		Precise Per Frame
+	
+	spr_PlayerJump
+		Automatic
+		Precise Per Frame
+	
+	All player movement uses spr_PlayerIdle as the mask_index: This is working partially
+		Occassional clipping to the corners of walls
+	
+Log Entry April 28 #1
+
+	All player sprites have been set to 35 by 35
+		Precise collision mask
+		Middle-centered origin
+	
+	This is partially functional
+		Clipping to corners is still an issue
+		
+Log Entry April 28 #2
+
+	

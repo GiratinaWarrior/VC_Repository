@@ -1,0 +1,13 @@
+Towns;
+	City of Eternal Night
+	Mysticasia Town
+	Sermaria Settlement
+	Vitrustal Kingdom
+	Arecitus Village
+	
+Areas;
+	Somnium Forest
+	Aeternus Ocean
+	Inexoria Mountains
+	Acribus Desert
+	
