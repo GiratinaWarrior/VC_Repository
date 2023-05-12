@@ -80,7 +80,7 @@
 
 PlayerState = PLAYERSTATE.NEUTRAL;
 
-PlayerState_Neutral = PLAYERSTATE_NEUTRAL.AIR;
+PlayerNeutralState = PLAYERSTATE_NEUTRAL.AIR;
 
 #endregion
 
@@ -90,7 +90,7 @@ enum PLAYERSPRITE_NEUTRAL
 {
 	IDLE,
 	RUN,
-	AIR,
+	JUMP,
 	SWIM,
 	HURT,
 	DEAD,

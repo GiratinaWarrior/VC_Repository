@@ -122,6 +122,7 @@ y += ySpeed;
 		case ATTACK.FREE:
 			if (sign(xSpeed) != 0) image_xscale = sign(xSpeed);
 			mask_index = sprite_index;
+			
 			switch(FreeState)
 			{
 				//If the player is on the ground
@@ -155,13 +156,7 @@ y += ySpeed;
 					else 
 					{
 						image_index = 0;
-						Gravity_Normal = Gravity_Jump; //Give them a lighter gravity
-						//If they press the down key, stop jumping
-						if (key_crouch)
-						{
-							//ySpeed = 0;
-						}
-						
+						Gravity_Normal = Gravity_Jump; //Give them a lighter gravity						
 						//If the player releases the jump button
 						if (!key_jump)
 						{
