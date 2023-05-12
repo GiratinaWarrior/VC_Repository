@@ -40,28 +40,40 @@
 
 ySpeed += Gravity; //Apply Gravity
 
-xSpeed = PlayerSpeed * move;
+xSpeed = PlayerSpeed * move; //Change the horizontal movement according to the players input
 
+//Keep the players coyote timer above 0
 if (PlayerJump <= 0)
 {
 	PlayerJump = 0;
 }
 
+//If the player enters the jump key
 if (key_jump)
 {
+	//If the player is allowed to jump
 	if (PlayerJump > 0)
 	{
-		ySpeed = -JumpPower;
-		PlayerJump = 0;
-	}
+		ySpeed = -JumpPower; //Jump
+		PlayerJump = 0; //Reset the coyote jump timer
+	}//end player can jump
 	
+	//If the player is underwater, simply move them upwards
 	else if (PlayerNeutralState == FREE.WATER)
 	{
 		ySpeed = -JumpPower / SwimPower;
-	}
-}
+	}//end if underwater
+	
+}//end jump key pressed
+
+//Collision with walls when falling and running
+Wall_FallOn();
+Wall_StopRun();
 
 
+//Apply the speeds to the x and y coordinates
+x += xSpeed;
+y += ySpeed;
 
 #endregion
 
@@ -90,7 +102,8 @@ switch(PlayerState)
 {
 	//If the player is not doing anything special today
 	case PLAYERSTATE.NEUTRAL:
-	if (sign(xSpeed) != 0) image_xscale = sign(xSpeed);
+		if (sign(xSpeed) != 0) image_xscale = sign(xSpeed);
+		mask_index = sprite_index;
 		
 		//The player's neutral state machine
 		switch(PlayerNeutralState)
@@ -125,6 +138,8 @@ switch(PlayerState)
 					
 				}//end jumping
 				
+				mask_index = PlayerSpriteSet[PLAYERSTATE_SPRITE.IDLE];
+				
 				#endregion
 					
 				break;//end player airborne
@@ -150,6 +165,8 @@ switch(PlayerState)
 				else sprite_index = PlayerSpriteSet[PLAYERSTATE_SPRITE.IDLE];
 				
 				#endregion
+			
+				mask_index = sprite_index;
 			
 				break;//end player grounded
 				

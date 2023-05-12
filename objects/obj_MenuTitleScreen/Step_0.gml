@@ -46,9 +46,10 @@ if (menu_y < -100) && (menu_committed != -1) {
 			{
 				//If a savefile does not exist
 				if (!file_exists(SAVEFILE)) {
-					global.SpawnX = 904;
-					global.SpawnY = 228; 
-					global.Spawnpoint = Room_NoxCity;
+					global.SpawnX = 990;
+					global.SpawnY = 540; 
+					global.Spawnpoint = FirstPlayerRoom;
+					
 					SlideTransition(TRANS_MODE.GOTO, FirstPlayerRoom); 
 					SummonPlayer();
 				}//end savefile doesn't exist
