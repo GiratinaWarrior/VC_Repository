@@ -73,12 +73,14 @@
 	//the players neutral states
 	enum PLAYERSTATE_NEUTRAL
 	{
-		IDLE,
-		RUN,
-		JUMP,
-		FALL,
-		SWIM
+		AIR,
+		WATER,
+		GROUND
 	}
+
+PlayerState = PLAYERSTATE.NEUTRAL;
+
+PlayerState_Neutral = PLAYERSTATE_NEUTRAL.AIR;
 
 #endregion
 

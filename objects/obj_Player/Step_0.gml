@@ -38,4 +38,33 @@
 
 #region Movement
 
+ySpeed += Gravity;
+
+xSpeed = PlayerSpeed * move;
+
+#endregion
+
+#region State Machine
+
+//The Player's state machine
+switch(PlayerState)
+{
+	//If the player is not doing anything special today
+	case PLAYERSTATE.NEUTRAL:
+	
+		break;//end neutral state
+		
+	
+	//When the player uses the Eclipse Blood Sword
+	case PLAYERSTATE.SWORD:
+		
+		break;//end sword state
+	
+	//When the player uses Lunar Cannon
+	case PLAYERSTATE.CANNON:
+	
+		break;//end Lunar Cannon
+		
+}//end PLayer State Machine
+
 #endregion
