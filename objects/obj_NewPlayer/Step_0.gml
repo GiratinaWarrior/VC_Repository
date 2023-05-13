@@ -127,16 +127,23 @@ y += ySpeed;
 			{
 				//If the player is on the ground
 				case FREE.LAND:
+				
 					Gravity = Gravity_Normal;
+					
 					image_speed = 1;
+					
 					PlayerJump = MaxCoyoteJump;
+					
 					if (sprite_index = PlayerSpriteSet[PLAYERSTATE_SPRITE.JUMP]) {
 						audio_play_sound(sound_Landing, 40, false);
 					}	
+					
 					if (xSpeed != 0) sprite_index = PlayerSpriteSet[PLAYERSTATE_SPRITE.RUN];
+					
 					else sprite_index = PlayerSpriteSet[PLAYERSTATE_SPRITE.IDLE];
 					
 					mask_index = sprite_index;
+					
 					break;
 				
 				//If the player is in the air
@@ -162,9 +169,8 @@ y += ySpeed;
 						{
 							ySpeed = 0;
 						}
-					}
+					}					
 					
-					mask_index = PlayerSpriteSet[PLAYERSTATE_SPRITE.IDLE];
 					break;
 				
 				

@@ -66,19 +66,6 @@ if (key_jump)
 	
 }//end jump key pressed
 
-//Collision with walls when falling and running
-Wall_FallOn();
-Wall_StopRun();
-
-
-//Apply the speeds to the x and y coordinates
-x += xSpeed;
-y += ySpeed;
-
-#endregion
-
-#region State Machine
-
 //If the player is on land and not in water
 if (place_meeting(x, y + 1, obj_WallPlatform) && (!place_meeting(x, y, obj_WaterBody)))
 {
@@ -97,24 +84,67 @@ else
 	PlayerJump--;
 }
 
+//Collision with walls when falling and running
+Wall_FallOn();
+Wall_StopRun();
+
+
+//Apply the speeds to the x and y coordinates
+x += xSpeed;
+
+y += ySpeed;
+
+#endregion
+
+#region State Machine
+
+show_debug_message(PlayerState);
+
 //The Player's state machine
 switch(PlayerState)
 {
 	//If the player is not doing anything special today
 	case PLAYERSTATE.NEUTRAL:
 		if (sign(xSpeed) != 0) image_xscale = sign(xSpeed);
-		mask_index = sprite_index;
 		
 		//The player's neutral state machine
 		switch(PlayerNeutralState)
 		{
+			
+			//If the player is on the ground
+			case PLAYERSTATE_NEUTRAL.GROUND:
+				
+				#region Grounded State
+				
+				Gravity = Gravity_Normal; //Reset the Gravity
+				
+				image_speed = 1;
+				
+				PlayerJump = MaxCoyoteJump; //Reset the Coyote Time
+				
+				//If the player just landed on the ground, play the landing sound
+				if (sprite_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.JUMP]) {
+					audio_play_sound(sound_Landing, 40, false);
+				}//end landed
+				
+				//If the player is moving horizontally, play the running animation
+				if (xSpeed != 0) sprite_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.RUN];
+				//If the player is not moving horizontally, play the idle animation
+				else sprite_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.IDLE];
+				
+				#endregion
+			
+				break;//end player grounded
+			
 			//If the player is in the air
 			case PLAYERSTATE_NEUTRAL.AIR:
 				
 				#region Jumping/Falling State
-				
-				sprite_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.JUMP]; //Set the sprite to jumping sprite
+
 				Gravity = Gravity_Normal; //Set the gravity back to normal
+
+				sprite_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.JUMP]; //Set the sprite to jumping sprite
+
 				image_speed = 0;
 				
 				//If the player is falling
@@ -138,37 +168,9 @@ switch(PlayerState)
 					
 				}//end jumping
 				
-				mask_index = PlayerSpriteSet[PLAYERSTATE_SPRITE.IDLE];
-				
 				#endregion
 					
 				break;//end player airborne
-				
-			//If the player is on the ground
-			case PLAYERSTATE_NEUTRAL.GROUND:
-				
-				#region Grounded State
-				
-				image_speed = 1;
-				Gravity = Gravity_Normal; //Reset the Gravity
-				
-				PlayerJump = MaxCoyoteJump; //Reset the Coyote Time
-				
-				//If the player just landed on the ground, play the landing sound
-				if (sprite_index = PlayerSpriteSet[PLAYERSTATE_SPRITE.JUMP]) {
-					audio_play_sound(sound_Landing, 40, false);
-				}//end landed
-				
-				//If the player is moving horizontally, play the running animation
-				if (xSpeed != 0) sprite_index = PlayerSpriteSet[PLAYERSTATE_SPRITE.RUN];
-				//If the player is not moving horizontally, play the idle animation
-				else sprite_index = PlayerSpriteSet[PLAYERSTATE_SPRITE.IDLE];
-				
-				#endregion
-			
-				mask_index = sprite_index;
-			
-				break;//end player grounded
 				
 			//If the player is submerged in water
 			case PLAYERSTATE_NEUTRAL.WATER:
