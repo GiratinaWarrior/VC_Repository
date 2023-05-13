@@ -13,17 +13,17 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"97d5cb87-9277-43fe-b097-82ef638e63f6",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a01b1d61-cb95-46ef-9c8a-75eec82f4fb7",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 32,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"528dec87-13ee-4d6c-ac91-0227b3f2068f","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"93842d39-b491-4c8c-a070-e530cc0abca8","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 7,
+  "origin": 4,
   "parent": {
     "name": "Movement",
     "path": "folders/Sprites/Player/Animations/Player/WhiteHair/Movement.yy",
@@ -54,13 +54,13 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"97d5cb87-9277-43fe-b097-82ef638e63f6","path":"sprites/spr_PlayerIdle/spr_PlayerIdle.yy",},},},"Disabled":false,"id":"522f105c-4d6f-43a1-b85f-43eb192210ca","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a01b1d61-cb95-46ef-9c8a-75eec82f4fb7","path":"sprites/spr_PlayerIdle/spr_PlayerIdle.yy",},},},"Disabled":false,"id":"d553f2ec-75c2-4a57-976a-6fa22e7dfff1","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
     "volume": 1.0,
     "xorigin": 16,
-    "yorigin": 32,
+    "yorigin": 16,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,
