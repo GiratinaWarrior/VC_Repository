@@ -82,7 +82,7 @@ else if (place_meeting(x, y, obj_WaterBody))
 else
 {
 	PlayerNeutralState = PLAYERSTATE_NEUTRAL.AIR;
-	//PlayerJump--;
+	PlayerJump--;
 }
 
 //Collision with walls when falling and running
@@ -98,8 +98,6 @@ y += ySpeed;
 #endregion
 
 #region State Machine
-
-show_debug_message(PlayerState);
 
 //The Player's state machine
 switch(PlayerState)
@@ -132,6 +130,8 @@ switch(PlayerState)
 				if (xSpeed != 0) sprite_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.RUN];
 				//If the player is not moving horizontally, play the idle animation
 				else sprite_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.IDLE];
+				
+				mask_index = sprite_index;
 				
 				#endregion
 			
@@ -168,6 +168,8 @@ switch(PlayerState)
 					}//end varying jump height
 					
 				}//end jumping
+				
+				mask_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.IDLE];
 				
 				#endregion
 					
