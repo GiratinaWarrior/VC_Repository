@@ -59,7 +59,7 @@ if (key_jump)
 	}//end player can jump
 	
 	//If the player is underwater, simply move them upwards
-	else if (PlayerNeutralState == FREE.WATER)
+	else if (PlayerNeutralState == PLAYERSTATE_NEUTRAL.WATER)
 	{
 		ySpeed = -JumpPower / SwimPower;
 	}//end if underwater
@@ -69,19 +69,20 @@ if (key_jump)
 //If the player is on land and not in water
 if (place_meeting(x, y + 1, obj_WallPlatform) && (!place_meeting(x, y, obj_WaterBody)))
 {
-	PlayerNeutralState = FREE.LAND;
+	PlayerNeutralState = PLAYERSTATE_NEUTRAL.GROUND;
+	PlayerJump = MaxCoyoteJump;
 }		
 
 //if the player is in water
 else if (place_meeting(x, y, obj_WaterBody))
 {
-	PlayerNeutralState = FREE.WATER;
+	PlayerNeutralState = PLAYERSTATE_NEUTRAL.WATER;
 }
 //if the player is not in water or land, they're in the air
 else
 {
-	PlayerNeutralState = FREE.AIR;
-	PlayerJump--;
+	PlayerNeutralState = PLAYERSTATE_NEUTRAL.AIR;
+	//PlayerJump--;
 }
 
 //Collision with walls when falling and running
