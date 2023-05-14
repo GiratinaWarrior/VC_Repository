@@ -1,7 +1,8 @@
-/// @description PlayerState_RosyCut(target_dir)
-/// @arg target_dir
-function PlayerState_RosyCut(argument0){
+/// @description PlayerState_RosyCut()
+function PlayerState_RosyCut(){
 
+
+		
 	
 
 }

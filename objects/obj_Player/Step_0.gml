@@ -215,43 +215,33 @@ switch(PlayerState)
 	//When the player uses the Rosy Cuts
 	case PLAYERSTATE.SWORD:
 		
-		PlayerState_RosyCut()
+		if (sign(xSpeed) != 0) image_xscale = sign(xSpeed);	
 		
-		_rosycutsprite = spr_RosyCut_Side1;
-		
-		//Decide where to attack based on what the player was doing prior
 		switch(PlayerNeutralState)
 		{
+			
 			//If the player is on the ground
 			case PLAYERSTATE_NEUTRAL.GROUND:
-				_rosycutsprite = spr_RosyCut_Side1;
-				break;
 				
-			//If the player is not on the ground
-			default:
-				//If the player is aiming upwards
-				if (key_up && !key_down)
-				{
-					_rosycutsprite = spr_RosyCut_Up1;
-				}
-				//If the player is aiming downwards
-				else if (key_down && !key_up)
-				{
-					_rosycutsprite = spr_RosyCut_Down1;
-				}
-				//If the player is aiming up or down
-				else
-				{
-					_rosycutsprite = spr_RosyCut_Side1;
-				}
-				break;
-		}//end decide where to attack
+				
+				break;//end player grounded
+			
+			//If the player is in the air
+			case PLAYERSTATE_NEUTRAL.AIR:
+				
+					
+				break;//end player airborne
+				
+			//If the player is submerged in water
+			case PLAYERSTATE_NEUTRAL.WATER:
+			
 		
-		instance_create_depth(x + (image_xscale * abs(sprite_width/2)), y, depth + choose(-1, 1), obj_RosyCut)
-		{
-			sprite_index = other._rosycutsprite;
-			image_xscale = other.image_xscale;
-		}
+				break;//end player swimming
+				
+		}//end check Neutral State
+		
+		
+		PlayerState_RosyCut()
 		
 		break;//end sword state
 	

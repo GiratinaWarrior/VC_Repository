@@ -7,7 +7,7 @@
   "bbox_right": 27,
   "bbox_top": 1,
   "bboxMode": 0,
-  "collisionKind": 1,
+  "collisionKind": 4,
   "collisionTolerance": 0,
   "DynamicTexturePage": false,
   "edgeFiltering": false,
@@ -26,8 +26,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "RosyCutSprites",
-    "path": "folders/Sprites/Player/Animations/Player/RosyCutSprites.yy",
+    "name": "Swim",
+    "path": "folders/Sprites/Player/Animations/Player/RosyCutSprites/Swim.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
