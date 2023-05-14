@@ -476,6 +476,7 @@
     {"name":"spr_SharkDude","order":7,"path":"sprites/spr_SharkDude/spr_SharkDude.yy",},
     {"name":"spr_HarmfulPlaceholder","order":3,"path":"sprites/spr_HarmfulPlaceholder/spr_HarmfulPlaceholder.yy",},
     {"name":"obj_RestInTurmoil","order":1,"path":"objects/obj_RestInTurmoil/obj_RestInTurmoil.yy",},
+    {"name":"PlayerState_RosyCut","order":1,"path":"scripts/PlayerState_RosyCut/PlayerState_RosyCut.yy",},
     {"name":"spr_KingChimarineLightning","order":4,"path":"sprites/spr_KingChimarineLightning/spr_KingChimarineLightning.yy",},
     {"name":"spr_DarkShrine13Tiles","order":3,"path":"sprites/spr_DarkShrine13Tiles/spr_DarkShrine13Tiles.yy",},
     {"name":"spr_GuideGuy","order":8,"path":"sprites/spr_GuideGuy/spr_GuideGuy.yy",},

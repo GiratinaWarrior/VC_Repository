@@ -9,12 +9,6 @@ with (other)
 	//store the direction of the attack relative to the enemy
 	HitFrom = point_direction(other.x, other.y, x, y);
 	
-	//If the attack can't phase through enemies, destroy itself
-	if (!CanPhase_Enemy)
-	{
-		instance_destroy();
-	}//end if can't phase through enemy
-	
 	Attacked = true;
 	if (!alarm[11])
 	{
@@ -24,3 +18,9 @@ with (other)
 	}
 	
 }//end access enemy
+
+//If the attack can't phase through enemies, destroy itself
+if (!CanPhase_Enemy)
+{
+	instance_destroy();
+}//end if can't phase through enemy

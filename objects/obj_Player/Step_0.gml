@@ -10,7 +10,7 @@
 		key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
 		key_jump = keyboard_check(vk_up) || keyboard_check(ord("W"))
 		key_up = keyboard_check(vk_up) || keyboard_check(ord("W"));
-		key_crouch = keyboard_check(vk_down) || keyboard_check(ord("S"));
+		key_down = keyboard_check(vk_down) || keyboard_check(ord("S"));
 		key_sword = mouse_check_button(mb_left);
 		key_moon = keyboard_check(vk_space);
 		key_dash = keyboard_check(vk_shift);
@@ -26,7 +26,7 @@
 			key_left = 0;
 			key_jump = 0;
 			key_up = 0;
-			key_crouch = 0;
+			key_down = 0;
 			move = 0;
 			key_sword = 0;
 			key_moon = 0;
@@ -97,10 +97,23 @@ y += ySpeed;
 
 #endregion
 
-
-
-
 #region State Machine
+
+//If the player attacks with Rosy Cuts
+if (key_sword)
+{
+	PlayerState = PLAYERSTATE.SWORD;
+}
+//If the player attacks with Lunar Cannon
+else if (key_moon)
+{
+	PlayerState = PLAYERSTATE.CANNON;
+}
+//If the player isn't in attacking or being attacked
+if (PlayerState < 1)
+{
+	PlayerState = PLAYERSTATE.NEUTRAL;
+}
 
 //The Player's state machine
 switch(PlayerState)
@@ -201,6 +214,44 @@ switch(PlayerState)
 		
 	//When the player uses the Rosy Cuts
 	case PLAYERSTATE.SWORD:
+		
+		PlayerState_RosyCut()
+		
+		_rosycutsprite = spr_RosyCut_Side1;
+		
+		//Decide where to attack based on what the player was doing prior
+		switch(PlayerNeutralState)
+		{
+			//If the player is on the ground
+			case PLAYERSTATE_NEUTRAL.GROUND:
+				_rosycutsprite = spr_RosyCut_Side1;
+				break;
+				
+			//If the player is not on the ground
+			default:
+				//If the player is aiming upwards
+				if (key_up && !key_down)
+				{
+					_rosycutsprite = spr_RosyCut_Up1;
+				}
+				//If the player is aiming downwards
+				else if (key_down && !key_up)
+				{
+					_rosycutsprite = spr_RosyCut_Down1;
+				}
+				//If the player is aiming up or down
+				else
+				{
+					_rosycutsprite = spr_RosyCut_Side1;
+				}
+				break;
+		}//end decide where to attack
+		
+		instance_create_depth(x + (image_xscale * abs(sprite_width/2)), y, depth + choose(-1, 1), obj_RosyCut)
+		{
+			sprite_index = other._rosycutsprite;
+			image_xscale = other.image_xscale;
+		}
 		
 		break;//end sword state
 	

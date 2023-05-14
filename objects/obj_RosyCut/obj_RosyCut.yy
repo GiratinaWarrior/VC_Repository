@@ -4,14 +4,20 @@
   "name": "obj_RosyCut",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_PlayerAttack","path":"objects/parent_PlayerAttack/parent_PlayerAttack.yy",},"propertyId":{"name":"CanPhase_Enemy","path":"objects/parent_PlayerAttack/parent_PlayerAttack.yy",},"value":"True",},
+  ],
   "parent": {
     "name": "Attacks",
     "path": "folders/Objects/PlayerStuff/Mechanics/Attacks.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "parent_PlayerAttack",
+    "path": "objects/parent_PlayerAttack/parent_PlayerAttack.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -27,7 +33,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_RosyCut_Side1",
+    "path": "sprites/spr_RosyCut_Side1/spr_RosyCut_Side1.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

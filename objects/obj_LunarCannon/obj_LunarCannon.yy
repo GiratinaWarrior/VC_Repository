@@ -10,7 +10,9 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"parent_EnemyAttack","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
   ],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_PlayerAttack","path":"objects/parent_PlayerAttack/parent_PlayerAttack.yy",},"propertyId":{"name":"PlayerAttackDamage","path":"objects/parent_PlayerAttack/parent_PlayerAttack.yy",},"value":"3",},
+  ],
   "parent": {
     "name": "Attacks",
     "path": "folders/Objects/PlayerStuff/Mechanics/Attacks.yy",

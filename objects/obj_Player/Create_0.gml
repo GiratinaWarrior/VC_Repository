@@ -67,7 +67,8 @@
 		HEAL,
 		STARJUMP,
 		AIRDASH,
-		WALL
+		WALL,
+		HURT
 	}
 
 	//the players neutral states
@@ -105,7 +106,7 @@ enum PLAYERSPRITE_SPECIAL
 }
 	
 	//The spriteset for Rose throughout the whole game
-	AdultRoseSpriteSet = 
+	RoseSpriteSet_Neutral = 
 	[
 		spr_PlayerIdle,
 		spr_PlayerRun,
@@ -114,9 +115,10 @@ enum PLAYERSPRITE_SPECIAL
 		spr_PlayerDamaged,
 		spr_PlayerDying
 	];
-
+	
+	
 	//An array that holds the players different sprites
-	PlayerSpriteSet = AdultRoseSpriteSet;	
+	PlayerSpriteSet = RoseSpriteSet_Neutral;	
 	
 #endregion
 
