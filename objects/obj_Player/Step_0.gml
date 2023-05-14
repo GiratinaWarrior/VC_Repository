@@ -217,17 +217,49 @@ switch(PlayerState)
 		
 		if (sign(xSpeed) != 0) image_xscale = sign(xSpeed);	
 		
+		var _rosycutsprite;
+		var _rosycuthitbox;
+		var _rosycutdir;
+		
+		//Set the sprite based on what the player current state is
 		switch(PlayerNeutralState)
 		{
 			
 			//If the player is on the ground
 			case PLAYERSTATE_NEUTRAL.GROUND:
 				
+				_rosycuthitbox = spr_RosyCutHitbox_Horizontal;
+				
+				if (xSpeed == 0)
+				{
+					_rosycutsprite = choose(spr_PlayerIdle_RosyCuts1, spr_PlayerIdle_RosyCuts2);
+				}
+				else
+				{
+					_rosycutsprite = choose(spr_PlayerRun_RosyCuts1, spr_PlayerRun_RosyCuts2);	
+				}
 				
 				break;//end player grounded
 			
 			//If the player is in the air
 			case PLAYERSTATE_NEUTRAL.AIR:
+				
+				if (key_down)
+				{
+					_rosycutsprite = choose(spr_PlayerJumpDown_RosyCuts1, spr_PlayerJumpDown_RosyCuts2);
+					_rosycuthitbox = spr_RosyCutHitbox_Vertical;
+				}
+				else if (key_up)
+				{
+					_rosycutsprite = choose(spr_PlayerJumpUp_RosyCuts1, spr_PlayerJumpUp_RosyCuts2);	
+					_rosycuthitbox = spr_RosyCutHitbox_Vertical;
+				}
+				else
+				{
+					_rosycutsprite = choose(spr_PlayerJumpMid_RosyCuts1, spr_PlayerJumpMid_RosyCuts2);	
+					_rosycuthitbox = spr_RosyCutHitbox_Horizontal;
+				}
+				
 				
 					
 				break;//end player airborne
@@ -241,7 +273,7 @@ switch(PlayerState)
 		}//end check Neutral State
 		
 		
-		PlayerState_RosyCut()
+		PlayerState_RosyCut(_rosycutsprite, _rosycuthitbox)
 		
 		break;//end sword state
 	
