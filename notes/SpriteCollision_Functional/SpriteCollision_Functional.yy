@@ -4,6 +4,6 @@
   "name": "SpriteCollision_Functional",
   "parent": {
     "name": "Movement",
-    "path": "folders/Sprites/Player/Animations/Player/WhiteHair/Movement.yy",
+    "path": "folders/Sprites/Player/Animations/Player/Movement.yy",
   },
 }

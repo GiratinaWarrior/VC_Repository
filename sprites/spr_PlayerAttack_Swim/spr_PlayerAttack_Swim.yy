@@ -31,7 +31,7 @@
   "origin": 4,
   "parent": {
     "name": "Swim",
-    "path": "folders/Sprites/Player/Animations/Player/WhiteHair/Attacks/Animation/Swim.yy",
+    "path": "folders/Sprites/Player/Animations/Player/Sword(Loser)Sprites/Animation/Swim.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

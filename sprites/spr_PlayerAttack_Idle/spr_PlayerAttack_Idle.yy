@@ -32,7 +32,7 @@
   "origin": 9,
   "parent": {
     "name": "Ground",
-    "path": "folders/Sprites/Player/Animations/Player/WhiteHair/Attacks/Animation/Ground.yy",
+    "path": "folders/Sprites/Player/Animations/Player/Sword(Loser)Sprites/Animation/Ground.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

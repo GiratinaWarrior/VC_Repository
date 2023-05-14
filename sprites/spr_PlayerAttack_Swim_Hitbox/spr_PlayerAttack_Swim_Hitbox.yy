@@ -32,7 +32,7 @@
   "origin": 4,
   "parent": {
     "name": "Swim",
-    "path": "folders/Sprites/Player/Animations/Player/WhiteHair/Attacks/Hitboxes/Swim.yy",
+    "path": "folders/Sprites/Player/Animations/Player/Sword(Loser)Sprites/Hitboxes/Swim.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

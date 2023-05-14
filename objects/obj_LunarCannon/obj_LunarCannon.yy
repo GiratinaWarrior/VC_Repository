@@ -3,7 +3,6 @@
   "resourceVersion": "1.0",
   "name": "obj_LunarCannon",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"parent_Enemy","path":"objects/parent_Enemy/parent_Enemy.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_VioletRosery","path":"objects/obj_VioletRosery/obj_VioletRosery.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_KingChimarine","path":"objects/obj_KingChimarine/obj_KingChimarine.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
@@ -13,10 +12,13 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Mechanics",
-    "path": "folders/Objects/PlayerStuff/Mechanics.yy",
+    "name": "Attacks",
+    "path": "folders/Objects/PlayerStuff/Mechanics/Attacks.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "parent_PlayerAttack",
+    "path": "objects/parent_PlayerAttack/parent_PlayerAttack.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

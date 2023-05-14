@@ -27,7 +27,7 @@
   "origin": 4,
   "parent": {
     "name": "Movement",
-    "path": "folders/Sprites/Player/Animations/Player/WhiteHair/Movement.yy",
+    "path": "folders/Sprites/Player/Animations/Player/Movement.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

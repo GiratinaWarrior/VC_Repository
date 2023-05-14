@@ -26,7 +26,7 @@
   "origin": 4,
   "parent": {
     "name": "Other",
-    "path": "folders/Sprites/Player/Other.yy",
+    "path": "folders/Sprites/Player/Other/Attacks/Other.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

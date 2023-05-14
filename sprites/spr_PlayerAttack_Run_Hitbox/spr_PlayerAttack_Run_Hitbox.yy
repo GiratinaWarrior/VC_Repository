@@ -56,7 +56,7 @@
   "origin": 9,
   "parent": {
     "name": "Ground",
-    "path": "folders/Sprites/Player/Animations/Player/WhiteHair/Attacks/Hitboxes/Ground.yy",
+    "path": "folders/Sprites/Player/Animations/Player/Sword(Loser)Sprites/Hitboxes/Ground.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

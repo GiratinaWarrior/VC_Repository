@@ -33,7 +33,7 @@
   "origin": 9,
   "parent": {
     "name": "Air",
-    "path": "folders/Sprites/Player/Animations/Player/WhiteHair/Attacks/Hitboxes/Air.yy",
+    "path": "folders/Sprites/Player/Animations/Player/Sword(Loser)Sprites/Hitboxes/Air.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

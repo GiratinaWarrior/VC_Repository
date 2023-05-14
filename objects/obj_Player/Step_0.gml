@@ -97,6 +97,9 @@ y += ySpeed;
 
 #endregion
 
+
+
+
 #region State Machine
 
 //The Player's state machine
@@ -104,6 +107,7 @@ switch(PlayerState)
 {
 	//If the player is not doing anything special today
 	case PLAYERSTATE.NEUTRAL:
+	
 		if (sign(xSpeed) != 0) image_xscale = sign(xSpeed);
 		
 		//The player's neutral state machine
@@ -178,12 +182,24 @@ switch(PlayerState)
 			//If the player is submerged in water
 			case PLAYERSTATE_NEUTRAL.WATER:
 			
+				Gravity = Gravity_Swim;
+				
+				image_speed = 1;
+				
+				sprite_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.SWIM];
+				ySpeed = lerp(ySpeed, 0, 0.1);
+				
+				if (key_crouch && !place_meeting(x, y + 1, obj_WallPlatform))
+				{
+					ySpeed = JumpPower / SwimPower;
+				}
+				
 				break;//end player swimming
 		}
 		
 		break;//end neutral state
 		
-	//When the player uses the Eclipse Blood Sword
+	//When the player uses the Rosy Cuts
 	case PLAYERSTATE.SWORD:
 		
 		break;//end sword state
