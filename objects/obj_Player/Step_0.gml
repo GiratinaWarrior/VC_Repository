@@ -9,12 +9,12 @@
 		key_left = keyboard_check(vk_left) || keyboard_check(ord("A"));
 		key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
 		key_jump = keyboard_check(vk_up) || keyboard_check(ord("W"))
-		key_up = keyboard_check(vk_up) || keyboard_check(ord("W"));
+		key_up = keyboard_check(vk_up) || keyboard_check(ord("W")) ||  keyboard_check(vk_space);
 		key_down = keyboard_check(vk_down) || keyboard_check(ord("S"));
 		key_sword = mouse_check_button(mb_left);
-		key_moon = keyboard_check(vk_space);
+		key_moon = keyboard_check(ord("Q"));
 		key_dash = keyboard_check(vk_shift);
-		key_heal = keyboard_check(vk_numpad1);
+		key_heal = keyboard_check(ord("F"));
 		
 		move = key_right - key_left;
 
@@ -195,6 +195,8 @@ switch(PlayerState)
 			//If the player is submerged in water
 			case PLAYERSTATE_NEUTRAL.WATER:
 			
+				#region Swimming State
+			
 				Gravity = Gravity_Swim;
 				
 				image_speed = 1;
@@ -202,10 +204,12 @@ switch(PlayerState)
 				sprite_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.SWIM];
 				ySpeed = lerp(ySpeed, 0, 0.1);
 				
-				if (key_crouch && !place_meeting(x, y + 1, obj_WallPlatform))
+				if (key_down && !place_meeting(x, y + 1, obj_WallPlatform))
 				{
 					ySpeed = JumpPower / SwimPower;
 				}
+				
+				#endregion
 				
 				break;//end player swimming
 		}
@@ -214,6 +218,8 @@ switch(PlayerState)
 		
 	//When the player uses the Rosy Cuts
 	case PLAYERSTATE.SWORD:
+		
+		image_speed = 1;
 		
 		if (sign(xSpeed) != 0) image_xscale = sign(xSpeed);	
 		
@@ -228,8 +234,10 @@ switch(PlayerState)
 			//If the player is on the ground
 			case PLAYERSTATE_NEUTRAL.GROUND:
 				
+				//Set the hitbox to the horizontal one
 				_rosycuthitbox = spr_RosyCutHitbox_Horizontal;
 				
+				//Set the sprite based on whether the player was moving or not
 				if (xSpeed == 0)
 				{
 					_rosycutsprite = choose(spr_PlayerIdle_RosyCuts1, spr_PlayerIdle_RosyCuts2);
@@ -239,29 +247,36 @@ switch(PlayerState)
 					_rosycutsprite = choose(spr_PlayerRun_RosyCuts1, spr_PlayerRun_RosyCuts2);	
 				}
 				
+				//Set the direction that the hitbox spawns
+				_rosycutdir = image_xscale;
+				
 				break;//end player grounded
 			
 			//If the player is in the air
 			case PLAYERSTATE_NEUTRAL.AIR:
 				
-				if (key_down)
+				//If the player aims down
+				if (key_down && !key_up)
 				{
 					_rosycutsprite = choose(spr_PlayerJumpDown_RosyCuts1, spr_PlayerJumpDown_RosyCuts2);
 					_rosycuthitbox = spr_RosyCutHitbox_Vertical;
+					_rosycutdir = ROSYCUT_V_DIR.DOWN;
 				}
-				else if (key_up)
+				//if the player aims up
+				else if (key_up && !key_down)
 				{
 					_rosycutsprite = choose(spr_PlayerJumpUp_RosyCuts1, spr_PlayerJumpUp_RosyCuts2);	
 					_rosycuthitbox = spr_RosyCutHitbox_Vertical;
+					_rosycutdir = ROSYCUT_V_DIR.UP;
 				}
+				//if the player doesnt aim up nor down
 				else
 				{
 					_rosycutsprite = choose(spr_PlayerJumpMid_RosyCuts1, spr_PlayerJumpMid_RosyCuts2);	
 					_rosycuthitbox = spr_RosyCutHitbox_Horizontal;
+					_rosycutdir = image_xscale;
 				}
 				
-				
-					
 				break;//end player airborne
 				
 			//If the player is submerged in water
@@ -272,8 +287,7 @@ switch(PlayerState)
 				
 		}//end check Neutral State
 		
-		
-		PlayerState_RosyCut(_rosycutsprite, _rosycuthitbox)
+		PlayerState_RosyCut(_rosycutsprite, _rosycuthitbox, _rosycutdir)
 		
 		break;//end sword state
 	

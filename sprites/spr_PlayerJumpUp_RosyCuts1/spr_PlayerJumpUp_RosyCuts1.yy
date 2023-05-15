@@ -27,7 +27,7 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"98d8e7e4-c055-47e0-834e-83b811444b0f","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 4,
+  "origin": 9,
   "parent": {
     "name": "Jump",
     "path": "folders/Sprites/Player/Animations/Player/RosyCutSprites/Jump.yy",
@@ -68,7 +68,7 @@
     "visibleRange": null,
     "volume": 1.0,
     "xorigin": 16,
-    "yorigin": 32,
+    "yorigin": 48,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

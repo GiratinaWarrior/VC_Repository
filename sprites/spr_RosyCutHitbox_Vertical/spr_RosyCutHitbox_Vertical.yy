@@ -23,7 +23,7 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"86b44a05-656c-41cf-8cd3-601023c82803","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 1,
+  "origin": 4,
   "parent": {
     "name": "Other",
     "path": "folders/Sprites/Player/Other/Attacks/Other.yy",
@@ -60,7 +60,7 @@
     "visibleRange": null,
     "volume": 1.0,
     "xorigin": 16,
-    "yorigin": 0,
+    "yorigin": 12,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

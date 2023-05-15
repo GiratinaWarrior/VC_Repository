@@ -4,7 +4,7 @@
   "name": "spr_RosyCutHitbox_Horizontal",
   "bbox_bottom": 26,
   "bbox_left": 0,
-  "bbox_right": 34,
+  "bbox_right": 26,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -23,7 +23,7 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"86b44a05-656c-41cf-8cd3-601023c82803","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 3,
+  "origin": 4,
   "parent": {
     "name": "Other",
     "path": "folders/Sprites/Player/Other/Attacks/Other.yy",
@@ -59,7 +59,7 @@
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 0,
+    "xorigin": 13,
     "yorigin": 13,
   },
   "swatchColours": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 35,
+  "width": 27,
 }

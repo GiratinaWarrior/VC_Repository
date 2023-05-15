@@ -4,12 +4,13 @@
   "name": "obj_RosyCutHitbox",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_PlayerAttack","path":"objects/parent_PlayerAttack/parent_PlayerAttack.yy",},"propertyId":{"name":"CanPhase_Wall","path":"objects/parent_PlayerAttack/parent_PlayerAttack.yy",},"value":"True",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_PlayerAttack","path":"objects/parent_PlayerAttack/parent_PlayerAttack.yy",},"propertyId":{"name":"CanPhase_Enemy","path":"objects/parent_PlayerAttack/parent_PlayerAttack.yy",},"value":"True",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_PlayerAttack","path":"objects/parent_PlayerAttack/parent_PlayerAttack.yy",},"propertyId":{"name":"PlayerAttackDamage","path":"objects/parent_PlayerAttack/parent_PlayerAttack.yy",},"value":"2",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_PlayerAttack","path":"objects/parent_PlayerAttack/parent_PlayerAttack.yy",},"propertyId":{"name":"PlayerAttackDamage","path":"objects/parent_PlayerAttack/parent_PlayerAttack.yy",},"value":"1",},
   ],
   "parent": {
     "name": "Attacks",
@@ -39,5 +40,5 @@
     "path": "sprites/spr_RosyCutHitbox_Horizontal/spr_RosyCutHitbox_Horizontal.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }
