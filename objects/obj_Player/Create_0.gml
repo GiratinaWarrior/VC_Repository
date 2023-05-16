@@ -92,7 +92,8 @@ enum PLAYERSPRITE_NEUTRAL
 	IDLE,
 	RUN,
 	JUMP,
-	SWIM,
+	SWIM_H,
+	SWIM_V,
 	HURT,
 	DEAD,
 }
@@ -111,7 +112,8 @@ enum PLAYERSPRITE_SPECIAL
 		spr_PlayerIdle,
 		spr_PlayerRun,
 		spr_PlayerJump,
-		spr_PlayerSwim,
+		spr_PlayerSwimHorizontal,
+		spr_PlayerSwimVertical
 		spr_PlayerDamaged,
 		spr_PlayerDying
 	];

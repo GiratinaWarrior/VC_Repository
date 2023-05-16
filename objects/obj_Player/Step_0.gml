@@ -99,7 +99,7 @@ y += ySpeed;
 
 #region State Machine
 
-//If the player attacks with Rosy Cuts
+//If the player attacks with the Eclipse Blade
 if (key_sword)
 {
 	PlayerState = PLAYERSTATE.SWORD;
@@ -201,14 +201,23 @@ switch(PlayerState)
 				
 				image_speed = 1;
 				
-				sprite_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.SWIM];
+				
 				ySpeed = lerp(ySpeed, 0, 0.1);
 				
 				if (key_down && !place_meeting(x, y + 1, obj_WallPlatform))
 				{
-					ySpeed = JumpPower / SwimPower;
+						ySpeed = JumpPower / SwimPower;
 				}
 				
+				if (ySpeed < 0)
+				{
+					sprite_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.SWIM_V];
+				}
+				else
+				{
+					sprite_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.SWIM_V];
+				}
+					
 				#endregion
 				
 				break;//end player swimming
@@ -216,7 +225,7 @@ switch(PlayerState)
 		
 		break;//end neutral state
 		
-	//When the player uses the Rosy Cuts
+	//When the player uses the Eclipse Blade
 	case PLAYERSTATE.SWORD:
 		
 		image_speed = 1;
@@ -227,67 +236,7 @@ switch(PlayerState)
 		var _rosycuthitbox;
 		var _rosycutdir;
 		
-		//Set the sprite based on what the player current state is
-		switch(PlayerNeutralState)
-		{
-			
-			//If the player is on the ground
-			case PLAYERSTATE_NEUTRAL.GROUND:
-				
-				//Set the hitbox to the horizontal one
-				_rosycuthitbox = spr_RosyCutHitbox_Horizontal;
-				
-				//Set the sprite based on whether the player was moving or not
-				if (xSpeed == 0)
-				{
-					_rosycutsprite = choose(spr_PlayerIdle_RosyCuts1, spr_PlayerIdle_RosyCuts2);
-				}
-				else
-				{
-					_rosycutsprite = choose(spr_PlayerRun_RosyCuts1, spr_PlayerRun_RosyCuts2);	
-				}
-				
-				//Set the direction that the hitbox spawns
-				_rosycutdir = image_xscale;
-				
-				break;//end player grounded
-			
-			//If the player is in the air
-			case PLAYERSTATE_NEUTRAL.AIR:
-				
-				//If the player aims down
-				if (key_down && !key_up)
-				{
-					_rosycutsprite = choose(spr_PlayerJumpDown_RosyCuts1, spr_PlayerJumpDown_RosyCuts2);
-					_rosycuthitbox = spr_RosyCutHitbox_Vertical;
-					_rosycutdir = ROSYCUT_V_DIR.DOWN;
-				}
-				//if the player aims up
-				else if (key_up && !key_down)
-				{
-					_rosycutsprite = choose(spr_PlayerJumpUp_RosyCuts1, spr_PlayerJumpUp_RosyCuts2);	
-					_rosycuthitbox = spr_RosyCutHitbox_Vertical;
-					_rosycutdir = ROSYCUT_V_DIR.UP;
-				}
-				//if the player doesnt aim up nor down
-				else
-				{
-					_rosycutsprite = choose(spr_PlayerJumpMid_RosyCuts1, spr_PlayerJumpMid_RosyCuts2);	
-					_rosycuthitbox = spr_RosyCutHitbox_Horizontal;
-					_rosycutdir = image_xscale;
-				}
-				
-				break;//end player airborne
-				
-			//If the player is submerged in water
-			case PLAYERSTATE_NEUTRAL.WATER:
-			
 		
-				break;//end player swimming
-				
-		}//end check Neutral State
-		
-		PlayerState_RosyCut(_rosycutsprite, _rosycuthitbox, _rosycutdir)
 		
 		break;//end sword state
 	

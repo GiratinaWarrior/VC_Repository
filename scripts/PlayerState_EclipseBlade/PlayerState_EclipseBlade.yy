@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "PlayerState_RosyCut",
+  "name": "PlayerState_EclipseBlade",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
