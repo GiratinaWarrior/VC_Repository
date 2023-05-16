@@ -349,8 +349,33 @@ switch(PlayerState)
 		
 		//mask_index = sprite_index;
 		mask_index = PlayerSpriteSet[PLAYERSTATE_SPRITE.IDLE];
-		
+	
 		PlayerState_SeleneSword(_attacksprite, _attackhitbox, _attackdir);
+		
+		switch(PlayerNeutralState)
+			{
+				//If the player is on the ground
+				case PLAYERSTATE_NEUTRAL.GROUND:
+					Gravity = Gravity_Normal;
+					PlayerJump = MaxCoyoteJump;
+					break;
+				
+				//If the player is in the air
+				case PLAYERSTATE_NEUTRAL.AIR:
+					Gravity = Gravity_Normal;
+					break;
+				
+				//If the player is in the water
+				case PLAYERSTATE_NEUTRAL.WATER:
+					Gravity = Gravity_Swim;
+					//ySpeed = lerp(ySpeed, 0, 0.1);
+					if (key_crouch && !place_meeting(x, y + 1, obj_WallPlatform))
+					{
+						ySpeed = JumpPower / SwimPower;
+					}
+					break;
+			
+			}
 		
 		break;//end sword state
 	

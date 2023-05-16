@@ -18,13 +18,19 @@ function PlayerState_SeleneSword(argument0, argument1, argument2){
 		audio_sound_gain(SwordSFX, 0.05, 0);
 		audio_play_sound(SwordSFX, 5000, false);
 	}
-	
-	xSpeed = 0;
-	if (PlayerNeutralState == PLAYERSTATE_NEUTRAL.WATER)
+
+	if (ySpeed >= 0)
+	{ 	
+		Gravity_Normal = Gravity_Fall;
+	} 
+	else 
 	{
-		ySpeed = 0;
+		Gravity_Normal = Gravity_Jump;
+		if (!key_jump)
+		{
+			ySpeed = 0;
+		}
 	}
-	
 	
 	if (animation_end())
 	{
