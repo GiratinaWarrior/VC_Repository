@@ -45,7 +45,8 @@ enum PLAYERSTATE_SPRITE
 	IDLE,
 	RUN,
 	JUMP,
-	SWIM,
+	SWIM_H,
+	SWIM_V,
 	DAMAGED,
 	DEAD
 }
@@ -56,7 +57,8 @@ AdultRoseSpriteSet =
 	spr_PlayerIdle,
 	spr_PlayerRun,
 	spr_PlayerJump,
-	spr_PlayerSwim,
+	spr_PlayerSwimHorizontal,
+	spr_PlayerSwimVertical,
 	spr_PlayerDamaged,
 	spr_PlayerDying
 ];

@@ -201,7 +201,6 @@ switch(PlayerState)
 				
 				image_speed = 1;
 				
-				
 				ySpeed = lerp(ySpeed, 0, 0.1);
 				
 				if (key_down && !place_meeting(x, y + 1, obj_WallPlatform))
@@ -215,8 +214,10 @@ switch(PlayerState)
 				}
 				else
 				{
-					sprite_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.SWIM_V];
+					sprite_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.SWIM_H];
 				}
+					
+				mask_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.IDLE];
 					
 				#endregion
 				
@@ -232,11 +233,124 @@ switch(PlayerState)
 		
 		if (sign(xSpeed) != 0) image_xscale = sign(xSpeed);	
 		
-		var _rosycutsprite;
-		var _rosycuthitbox;
-		var _rosycutdir;
+		var _attacksprite;
+		var _attackhitbox;
+		var _attackdir;
 		
+		//Check what kind of attack is used based on what state the player was in
+			//Set the appropriate sprite and hitbox, as well as direction for the hitbox to spawn
+		switch(PlayerNeutralState)
+		{
+			//If the player is in the air
+			case PLAYERSTATE_NEUTRAL.AIR:
+				
+				#region Aerial Attack Set Up
+				
+					//If the player aims up
+					if (key_up && !key_down)
+					{
+						_attacksprite = spr_PlayerAirJumpUp_SeleneSword;
+						_attackhitbox = spr_Hitbox_PlayerSword_V;
+						_attackdir = SWORD_V_DIR.UP;
+					}//end aim up
+				
+					//If the player aims down
+					else if (key_down && !key_up)
+					{
+						_attacksprite = spr_PlayerAirJumpDown_SeleneSword;
+						_attackhitbox = spr_Hitbox_PlayerSword_V;
+						_attackdir = SWORD_V_DIR.DOWN;
+					}//end aim down
+				
+					//If the player aims forward
+					else
+					{
+						//If the player is falling
+						if (ySpeed > 0)
+						{
+							_attacksprite = spr_PlayerAirFallNeutral_SeleneSword;
+							_attackhitbox = spr_Hitbox_PlayerSword_H;
+							_attackdir = image_xscale;
+						}//end falling
+					
+						//If the player is jumping
+						else
+						{
+							_attacksprite = spr_PlayerAirJumpNeutral_SeleneSword;
+							_attackhitbox = spr_Hitbox_PlayerSword_H;
+							_attackdir = image_xscale;
+						}//end jumping
+					
+					}//end aim forward
+				
+				#endregion
+				
+				break; //end air
+			
+			//If the player is on the ground
+			case PLAYERSTATE_NEUTRAL.GROUND:
+				
+				#region Grounded Attack Set Up
+					
+					//If the player is not moving
+					if (xSpeed == 0)
+					{
+						_attacksprite = spr_PlayerIdle_SeleneSword;
+						_attackhitbox = spr_Hitbox_PlayerSword_H;
+						_attackdir = image_xscale;
+					}//end idle
+					
+					//If the player is running
+					else
+					{
+						_attacksprite = spr_PlayerRun_SeleneSword;
+						_attackhitbox = spr_Hitbox_PlayerSword_H;
+						_attackdir = image_xscale;
+					}//end running
+				
+				#endregion
+			
+				break; //end ground
+			
+			//If the player is underwater
+			case PLAYERSTATE_NEUTRAL.WATER:
+				
+				#region Marine Attack Set Up
+				
+					//If the player aims up
+					if (key_up && !key_down)
+					{
+						_attacksprite = spr_PlayerSwimUp_SeleneSword;
+						_attackhitbox = spr_Hitbox_PlayerSword_V;
+						_attackdir = SWORD_V_DIR.UP;
+					}//end aim up
+				
+					//If the player aims down
+					else if (key_down && !key_up)
+					{
+						_attacksprite = spr_PlayerSwimDown_SeleneSword;
+						_attackhitbox = spr_Hitbox_PlayerSword_V;
+						_attackdir = SWORD_V_DIR.DOWN;
+					}//end aim down
+				
+					//If the player aims forward
+					else
+					{
+						_attacksprite = spr_PlayerSwimNeutral_SeleneSword;
+						_attackhitbox = spr_Hitbox_PlayerSword_H;
+						_attackdir = image_xscale;
+					}//end aim forward
+				
+				#endregion
+				
+				break; //end water
+			
+		}//end neutral state machine
 		
+		//mask_index = sprite_index;
+		mask_index = PlayerSpriteSet[PLAYERSTATE_SPRITE.IDLE];
+		
+		PlayerState_SeleneSword(_attacksprite, _attackhitbox, _attackdir);
 		
 		break;//end sword state
 	

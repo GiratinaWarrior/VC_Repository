@@ -178,7 +178,7 @@ y += ySpeed;
 				case FREE.WATER:
 					Gravity = Gravity_Swim;
 					image_speed = 1;
-					sprite_index = PlayerSpriteSet[PLAYERSTATE_SPRITE.SWIM];
+					sprite_index = PlayerSpriteSet[PLAYERSTATE_SPRITE.SWIM_H];
 					ySpeed = lerp(ySpeed, 0, 0.1);
 					if (key_crouch && !place_meeting(x, y + 1, obj_WallPlatform))
 					{

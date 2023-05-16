@@ -113,7 +113,7 @@ enum PLAYERSPRITE_SPECIAL
 		spr_PlayerRun,
 		spr_PlayerJump,
 		spr_PlayerSwimHorizontal,
-		spr_PlayerSwimVertical
+		spr_PlayerSwimVertical,
 		spr_PlayerDamaged,
 		spr_PlayerDying
 	];
