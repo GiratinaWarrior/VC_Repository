@@ -19,6 +19,26 @@ function PlayerState_SeleneSword(argument0, argument1, argument2){
 		audio_play_sound(SwordSFX, 5000, false);
 	}
 
+	var _offsetmax = 48;
+	
+	if (_attackhitbox == spr_Hitbox_PlayerSword_V)
+	{
+		var _offsety = _offsetmax *_attackdir;
+		var _offsetx = 0;
+	}
+	else
+	{
+		var _offsetx = _offsetmax * _attackdir;
+		var _offsety = 0;
+	}
+
+	_SeleneSwordHitboxsprite = _attackhitbox;
+
+	with (instance_create_layer(x + _offsetx, y + _offsety, layer, obj_PlayerSwordHitbox))
+	{
+		sprite_index = other._SeleneSwordHitboxsprite;
+	}
+
 	if (ySpeed >= 0)
 	{ 	
 		Gravity_Normal = Gravity_Fall;

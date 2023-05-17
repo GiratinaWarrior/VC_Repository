@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_PlayerHitbox",
+  "name": "obj_PlayerSwordHitbox",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,},
@@ -40,5 +40,5 @@
     "path": "sprites/spr_Hitbox_PlayerSword_H/spr_Hitbox_PlayerSword_H.yy",
   },
   "spriteMaskId": null,
-  "visible": false,
+  "visible": true,
 }
