@@ -40,5 +40,5 @@
     "path": "sprites/spr_Hitbox_PlayerSword_H/spr_Hitbox_PlayerSword_H.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

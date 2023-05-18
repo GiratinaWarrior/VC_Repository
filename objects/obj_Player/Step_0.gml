@@ -97,7 +97,9 @@ y += ySpeed;
 
 #endregion
 
-#region State Machine
+#region State Transitions
+
+LunarCannonCooldown--;
 
 //If the player attacks with the Eclipse Blade
 if (key_sword)
@@ -107,19 +109,30 @@ if (key_sword)
 //If the player attacks with Lunar Cannon
 else if (key_moon)
 {
-	PlayerState = PLAYERSTATE.CANNON;
+	if (LunarCannonCooldown < 0) PlayerState = PLAYERSTATE.CANNON;
 }
+else if (key_dash)
+{
+	if (CrescentBlitzUsable) PlayerState = PLAYERSTATE.AIRDASH;
+}
+
+
 //If the player isn't in attacking or being attacked
 if (PlayerState < 1)
 {
 	PlayerState = PLAYERSTATE.NEUTRAL;
 }
 
+#endregion
+
+#region State Machine
 //The Player's state machine
 switch(PlayerState)
 {
 	//If the player is not doing anything special today
 	case PLAYERSTATE.NEUTRAL:
+	
+		#region Neutral State
 	
 		if (sign(xSpeed) != 0) image_xscale = sign(xSpeed);
 		
@@ -137,6 +150,8 @@ switch(PlayerState)
 				image_speed = 1;
 				
 				PlayerJump = MaxCoyoteJump; //Reset the Coyote Time
+				
+				CrescentBlitzUsable = true;
 				
 				//If the player just landed on the ground, play the landing sound
 				if (sprite_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.JUMP]) {
@@ -224,10 +239,14 @@ switch(PlayerState)
 				break;//end player swimming
 		}
 		
+		#endregion
+		
 		break;//end neutral state
 		
 	//When the player uses the Eclipse Blade
 	case PLAYERSTATE.SWORD:
+		
+		#region Eclipse Blade State
 		
 		image_speed = 1;
 		
@@ -377,12 +396,23 @@ switch(PlayerState)
 			
 			}
 		
+		#endregion
+		
 		break;//end sword state
 	
 	//When the player uses Lunar Cannon
 	case PLAYERSTATE.CANNON:
 	
+		PlayerState_LunarCannon();
+	
 		break;//end Lunar Cannon
+		
+	//When the player uses Crescent Blitz
+	case PLAYERSTATE.AIRDASH:
+	
+		PlayerState_CrescentBlitz();
+	
+		break;
 		
 }//end PLayer State Machine
 

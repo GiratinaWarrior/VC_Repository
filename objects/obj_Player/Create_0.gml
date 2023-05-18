@@ -42,18 +42,20 @@
 
 #endregion
 
-#region Variables that have something to do with violence
+#region Attacks
 
-	//The time between shots allowed
-	firingdelay = 0;
-
-	/*
-		does something maybe idk i forget
-		oh right it sets the things hit by an attack to be
-		equal to a list of things hit
-	*/
-	hitByAttack = ds_list_create();
-
+	//Lunar Cannon Variables
+	LunarCannonCooldownMax = 60;
+	LunarCannonCooldown = 0;
+	
+	//Crescent Blitz Variables
+	CrescentBlitz_Usable = false;
+	CrescentBlitz_MaxDistance = 100;
+	CrescentBlitz_Speed = 10;
+	CrescentBlitz_DistTraveled = 0;
+	CrescentBlitz_Direction = 0;
+	
+	
 #endregion
 
 #region State Machine
@@ -124,7 +126,7 @@ enum PLAYERSPRITE_SPECIAL
 	
 #endregion
 
-#region Attacked Variables
+#region Hurt Variables
 
 //Invincibility Variables
 Invincible = false; //If the player is invincible or not

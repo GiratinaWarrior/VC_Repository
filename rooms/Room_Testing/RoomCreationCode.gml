@@ -1,7 +1,13 @@
 with (obj_NewPlayer)
 {
 	//instance_change(obj_Player, true);
+	with (obj_Camera)
+	{
+	//	follow = obj_Player
+	}
 }
+
+
 
 with (obj_PlayBGM)
 {
