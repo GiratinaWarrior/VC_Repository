@@ -11,7 +11,8 @@
   ],
   "managed": true,
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_PlayerAttack","path":"objects/parent_PlayerAttack/parent_PlayerAttack.yy",},"propertyId":{"name":"PlayerAttackDamage","path":"objects/parent_PlayerAttack/parent_PlayerAttack.yy",},"value":"3",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_PlayerAttack","path":"objects/parent_PlayerAttack/parent_PlayerAttack.yy",},"propertyId":{"name":"PlayerAttackDamage","path":"objects/parent_PlayerAttack/parent_PlayerAttack.yy",},"value":"5",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_PlayerAttack","path":"objects/parent_PlayerAttack/parent_PlayerAttack.yy",},"propertyId":{"name":"CanPhase_Enemy","path":"objects/parent_PlayerAttack/parent_PlayerAttack.yy",},"value":"False",},
   ],
   "parent": {
     "name": "Attacks",

@@ -44,17 +44,27 @@
 
 #region Attacks
 
-	//Lunar Cannon Variables
+	//////Lunar Cannon Variables
 	LunarCannonCooldownMax = 60;
+	
 	LunarCannonCooldown = 0;
 	
-	//Crescent Blitz Variables
-	CrescentBlitz_Usable = false;
-	CrescentBlitz_MaxDistance = 100;
-	CrescentBlitz_Speed = 10;
-	CrescentBlitz_DistTraveled = 0;
-	CrescentBlitz_Direction = 0;
+	/////Crescent Blitz Variables
+	CrescentBlitz_Usable = false; //If the player can dash or not
 	
+	CrescentBlitz_MaxDistance = 50; //The max distance the dash travels
+	
+	CrescentBlitz_MaxTime = 10; //The time the dash lasts for
+	
+	CrescentBlitz_Speed = CrescentBlitz_MaxDistance/CrescentBlitz_MaxTime; //The speed of the dash
+	
+	CrescentBlitz_Direction = 0; //The direction to dash in
+	
+	CrescentBlitz_Duration = CrescentBlitz_MaxDistance; //the countdown for the dash while active
+	
+	/////Star Jump Variables
+	StarJump_Usable = false;
+	StarJump_Power = 10;
 	
 #endregion
 

@@ -29,7 +29,7 @@
   "origin": 9,
   "parent": {
     "name": "Swim",
-    "path": "folders/Sprites/Player/Animations/Player/EclipseBlade/Swim.yy",
+    "path": "folders/Sprites/Player/Animations/Player/SeleneSword/Swim.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

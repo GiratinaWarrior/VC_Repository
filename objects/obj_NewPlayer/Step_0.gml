@@ -100,7 +100,11 @@ y += ySpeed;
 	
 		if (key_sword)
 		{
-			AttackState = ATTACK.SWORD; 
+			instance_change(obj_Player, true);
+			with (obj_Camera)
+			{
+				follow = obj_Player;
+			}
 		}
 
 		else if (key_moon)

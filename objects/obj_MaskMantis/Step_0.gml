@@ -6,12 +6,6 @@ ySpeed += Gravity;
 
 //show_debug_message(JumpTimer);
 
-//Face the direction they're moving
-if (xSpeed != 0)
-{
-	image_xscale = -sign(xSpeed);
-}
-
 //turn around at a ledge
 Wall_LedgeTurn();
 
@@ -88,6 +82,12 @@ switch(MantisState)
 	//If MM is walking
 	case MASKMANTIS_STATE.WALK:
 	
+		//Face the direction they're moving
+		if (xSpeed != 0)
+		{
+			image_xscale = -sign(xSpeed);
+		}
+	
 		//Change the sprite to walking
 		image_speed = 1;
 		sprite_index = spr_MaskMantisMoving; 
@@ -118,6 +118,12 @@ switch(MantisState)
 	//If MM is jumping
 	case MASKMANTIS_STATE.JUMP:
 	
+		//Face the direction they're moving
+		if (xSpeed != 0)
+		{
+			image_xscale = -sign(xSpeed);
+		}
+	
 		//Set the sprite to the jumping sprite
 		sprite_index = spr_MaskMantisJumping;
 		
@@ -138,6 +144,12 @@ switch(MantisState)
 	//If MM is falling
 	case MASKMANTIS_STATE.FALL:
 		
+		//Face the direction they're moving
+		if (xSpeed != 0)
+		{
+			image_xscale = -sign(xSpeed);
+		}
+		
 		//Set the sprite to the falling sprite
 		sprite_index = spr_MaskMantisFalling;
 		
@@ -150,8 +162,9 @@ switch(MantisState)
 	
 	//If hit by an attack
 	case MASKMANTIS_STATE.KNOCKBACK:
-		xSpeed = 0;
-		ySpeed = 0;
+	
+		xSpeed = lengthdir_x(5, HitFrom);
+		
 		break;
 	
 }

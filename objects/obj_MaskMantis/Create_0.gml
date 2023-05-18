@@ -17,3 +17,4 @@ enum MASKMANTIS_STATE
 }
 
 MantisState = MASKMANTIS_STATE.WALK;
+

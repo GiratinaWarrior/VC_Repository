@@ -1,4 +1,4 @@
-/// @description Knockback(power, direction, <upward force>)
+/// @description Knockback(power, direction, upward force)
 /// @arg power
 /// @arg direction
 /// @arg <upward force>
@@ -18,5 +18,4 @@ function Knockback(argument0, argument1){
 	xSpeed = lengthdir_x(argument0, argument1);
 	ySpeed = lengthdir_y(argument0, argument1) - _upforce;
 	
-
 }

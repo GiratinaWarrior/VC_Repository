@@ -9,6 +9,11 @@ function PlayerState_SeleneSword(argument0, argument1, argument2){
 	var _attackhitbox = argument1;
 	var _attackdir = argument2;
 
+	if (PlayerNeutralState == PLAYERSTATE_NEUTRAL.GROUND)
+	{
+		xSpeed *= 0.9;
+	}
+
 	if (sprite_index != _attacksprite)
 	{
 		sprite_index = _attacksprite;

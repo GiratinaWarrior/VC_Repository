@@ -8,8 +8,8 @@
 		//player inputs left, right, up, space
 		key_left = keyboard_check(vk_left) || keyboard_check(ord("A"));
 		key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
-		key_jump = keyboard_check(vk_up) || keyboard_check(ord("W"))
-		key_up = keyboard_check(vk_up) || keyboard_check(ord("W")) ||  keyboard_check(vk_space);
+		key_up = keyboard_check(vk_up) || keyboard_check(ord("W"));
+		key_jump = keyboard_check(vk_space) || key_up;
 		key_down = keyboard_check(vk_down) || keyboard_check(ord("S"));
 		key_sword = mouse_check_button(mb_left);
 		key_moon = keyboard_check(ord("Q"));
@@ -40,31 +40,11 @@
 
 ySpeed += Gravity; //Apply Gravity
 
-xSpeed = PlayerSpeed * move; //Change the horizontal movement according to the players input
-
 //Keep the players coyote timer above 0
 if (PlayerJump <= 0)
 {
 	PlayerJump = 0;
 }
-
-//If the player enters the jump key
-if (key_jump)
-{
-	//If the player is allowed to jump
-	if (PlayerJump > 0)
-	{
-		ySpeed = -JumpPower; //Jump
-		PlayerJump = 0; //Reset the coyote jump timer
-	}//end player can jump
-	
-	//If the player is underwater, simply move them upwards
-	else if (PlayerNeutralState == PLAYERSTATE_NEUTRAL.WATER)
-	{
-		ySpeed = -JumpPower / SwimPower;
-	}//end if underwater
-	
-}//end jump key pressed
 
 //If the player is on land and not in water
 if (place_meeting(x, y + 1, obj_WallPlatform) && (!place_meeting(x, y, obj_WaterBody)))
@@ -111,11 +91,22 @@ else if (key_moon)
 {
 	if (LunarCannonCooldown < 0) PlayerState = PLAYERSTATE.CANNON;
 }
+//If the player uses Crescent Blitz
 else if (key_dash)
 {
-	if (CrescentBlitzUsable) PlayerState = PLAYERSTATE.AIRDASH;
+	//If the dash is usable
+	if (CrescentBlitz_Usable) 
+	{
+		PlayerJump = 0;
+		CrescentBlitz_Usable = false;
+		CrescentBlitz_Direction = point_direction(0, 0, move, key_down - key_up);
+		CrescentBlitz_Speed = CrescentBlitz_MaxDistance/CrescentBlitz_MaxTime;
+		CrescentBlitz_Duration = CrescentBlitz_MaxDistance;
+		
+		if !(CrescentBlitz_Direction == 0 && move == 0) PlayerState = PLAYERSTATE.AIRDASH;
+		
+	}//end dash usable
 }
-
 
 //If the player isn't in attacking or being attacked
 if (PlayerState < 1)
@@ -126,6 +117,7 @@ if (PlayerState < 1)
 #endregion
 
 #region State Machine
+
 //The Player's state machine
 switch(PlayerState)
 {
@@ -135,6 +127,32 @@ switch(PlayerState)
 		#region Neutral State
 	
 		if (sign(xSpeed) != 0) image_xscale = sign(xSpeed);
+		
+		xSpeed = PlayerSpeed * move; //Change the horizontal movement according to the players input
+
+		//If the player enters the jump key
+		if (key_jump)
+		{
+			//If the player is allowed to jump
+			if (PlayerJump > 0)
+			{
+				ySpeed = -JumpPower; //Jump
+				PlayerJump = 0; //Reset the coyote jump timer
+			}//end player can jump
+	
+			//If the player is underwater, simply move them upwards
+			else if (PlayerNeutralState == PLAYERSTATE_NEUTRAL.WATER)
+			{
+				ySpeed = -JumpPower / SwimPower;
+			}//end if underwater
+			
+			else if (StarJump_Usable)
+			{
+				ySpeed = -StarJump_Power;
+				PlayerState = PLAYERSTATE.STARJUMP;
+			}
+	
+		}//end jump key pressed
 		
 		//The player's neutral state machine
 		switch(PlayerNeutralState)
@@ -151,7 +169,7 @@ switch(PlayerState)
 				
 				PlayerJump = MaxCoyoteJump; //Reset the Coyote Time
 				
-				CrescentBlitzUsable = true;
+				CrescentBlitz_Usable = true;
 				
 				//If the player just landed on the ground, play the landing sound
 				if (sprite_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.JUMP]) {
@@ -163,7 +181,7 @@ switch(PlayerState)
 				//If the player is not moving horizontally, play the idle animation
 				else sprite_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.IDLE];
 				
-				mask_index = sprite_index;
+				mask_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.IDLE];
 				
 				#endregion
 			
@@ -238,6 +256,8 @@ switch(PlayerState)
 				
 				break;//end player swimming
 		}
+		
+	//	mask_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.IDLE];
 		
 		#endregion
 		
@@ -411,6 +431,12 @@ switch(PlayerState)
 	case PLAYERSTATE.AIRDASH:
 	
 		PlayerState_CrescentBlitz();
+	
+		break;
+		
+	case PLAYERSTATE.STARJUMP:
+	
+		PlayerState_StarJump();
 	
 		break;
 		

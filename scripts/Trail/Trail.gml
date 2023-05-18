@@ -11,6 +11,8 @@ function Trail(){
 		//Set the sprites to be the same
 		sprite_index = other.sprite_index;
 		
+		image_xscale = other.image_xscale;
+		
 		//Set the color to the first argument of the function
 		if (argument_count > 0) image_blend = argument0;
 		else image_blend = c_white;

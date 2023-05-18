@@ -29,7 +29,7 @@
   "origin": 9,
   "parent": {
     "name": "Ground",
-    "path": "folders/Sprites/Player/Animations/Player/EclipseBlade/Ground.yy",
+    "path": "folders/Sprites/Player/Animations/Player/SeleneSword/Ground.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "CreateRosyCuts",
+  "name": "PlayerState_StarJump",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "Now New",
+    "path": "folders/Objects/PlayerStuff/Player/Now New.yy",
   },
 }
