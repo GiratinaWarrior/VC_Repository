@@ -35,11 +35,20 @@
 	hascontrol = true;
 
 	//the inputs for the attacks
-	key_moon = false;
+	
+	key_left = false;
+	key_right = false;
+	key_up = false;
+	key_down = false;
+	key_jump = false;
+	key_starjump = false;
+	key_wall = false;
 	key_sword = false;
+	key_moon = false;
 	key_dash = false;
 	key_heal = false;
-
+	
+	
 #endregion
 
 #region Attacks
@@ -65,6 +74,20 @@
 	/////Star Jump Variables
 	StarJump_Usable = false;
 	StarJump_Power = 9;
+	
+	/////Cling To Hope Variables
+	enum CLINGTOHOPE_STATE
+	{
+		CLIMB,
+		JUMP
+	}
+	Gravity_Wall = 0; //The Gravity experienced by the Player when using the wall cling
+	ClingToHope_JumpPower = 6; //The Jump height of the wall jump
+	ClingToHope_MaxControl = 20; //How long it takes to regain control after a wall jump
+	ClingToHope_JumpTimer = ClingToHope_MaxControl; //Timer to countdown to control regain
+	ClingToHope_Usable = 0; //If Cling To Hope is usable
+	ClingToHope_State = CLINGTOHOPE_STATE.CLIMB;
+	
 	
 #endregion
 

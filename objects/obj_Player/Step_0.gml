@@ -5,13 +5,14 @@
 	//If the player has control over their own actions
 	if (hascontrol == true) {
 
-		//player inputs left, right, up, space
+		//player input controls
 		key_left = keyboard_check(vk_left) || keyboard_check(ord("A"));
 		key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
 		key_up = keyboard_check(vk_up) || keyboard_check(ord("W"));
-		key_jump = keyboard_check(vk_space) || key_up;
-		key_starjump = keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"));
 		key_down = keyboard_check(vk_down) || keyboard_check(ord("S"));
+		key_jump = keyboard_check(vk_space)
+		key_starjump = keyboard_check_pressed(vk_space);
+		key_wall = key_jump;
 		key_sword = mouse_check_button(mb_left);
 		key_moon = keyboard_check(ord("Q"));
 		key_dash = keyboard_check(vk_shift);
@@ -26,6 +27,8 @@
 			key_right = 0;
 			key_left = 0;
 			key_jump = 0;
+			key_starjump = 0;
+			key_wall = 0;
 			key_up = 0;
 			key_down = 0;
 			move = 0;
@@ -33,6 +36,7 @@
 			key_moon = 0;
 			key_dash = 0;
 			key_heal = 0;
+			
 	}
 
 #endregion
@@ -46,8 +50,6 @@ if (PlayerJump <= 0)
 {
 	PlayerJump = 0;
 }
-
-PlayerMovement();
 
 //If the player is on land and not in water
 if (place_meeting(x, y + 1, obj_WallPlatform) && (!place_meeting(x, y, obj_WaterBody)))
@@ -124,6 +126,8 @@ switch(PlayerState)
 		#region Neutral State
 	
 		if (sign(xSpeed) != 0) image_xscale = sign(xSpeed);
+		
+		PlayerMovement();
 		
 		//The player's neutral state machine
 		switch(PlayerNeutralState)
@@ -211,6 +215,14 @@ switch(PlayerState)
 					ParticleTrail(spr_StarJumpParticles);
 				}
 				
+				ClingToHope_Usable = place_meeting(x + 1, y, obj_WallPlatform) - place_meeting(x - 1, y, obj_WallPlatform);
+				
+				if (ClingToHope_Usable != 0)
+				{
+					PlayerState = PLAYERSTATE.WALL;
+					ClingToHope_State = CLINGTOHOPE_STATE.CLIMB;
+				}
+				
 				#endregion
 					
 				break;//end player airborne
@@ -259,6 +271,8 @@ switch(PlayerState)
 		image_speed = 1;
 		
 		if (sign(xSpeed) != 0) image_xscale = sign(xSpeed);	
+		
+		PlayerMovement();
 		
 		var _attacksprite;
 		var _attackhitbox;
@@ -422,10 +436,21 @@ switch(PlayerState)
 	
 		break;
 		
-	case PLAYERSTATE.STARJUMP:
-	
-		PlayerState_StarJump();
-	
+	case PLAYERSTATE.WALL:
+		
+		switch (ClingToHope_State)
+		{
+			case CLINGTOHOPE_STATE.CLIMB:
+				
+				PlayerState_ClingToHope();
+				
+				break;
+				
+			case CLINGTOHOPE_STATE.JUMP:
+			
+				break;
+				
+		}
 		break;
 		
 }//end PLayer State Machine
