@@ -10,6 +10,7 @@
 		key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
 		key_up = keyboard_check(vk_up) || keyboard_check(ord("W"));
 		key_jump = keyboard_check(vk_space) || key_up;
+		key_starjump = keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"));
 		key_down = keyboard_check(vk_down) || keyboard_check(ord("S"));
 		key_sword = mouse_check_button(mb_left);
 		key_moon = keyboard_check(ord("Q"));
@@ -45,6 +46,8 @@ if (PlayerJump <= 0)
 {
 	PlayerJump = 0;
 }
+
+PlayerMovement();
 
 //If the player is on land and not in water
 if (place_meeting(x, y + 1, obj_WallPlatform) && (!place_meeting(x, y, obj_WaterBody)))
@@ -108,12 +111,6 @@ else if (key_dash)
 	}//end dash usable
 }
 
-//If the player isn't in attacking or being attacked
-if (PlayerState < 1)
-{
-	PlayerState = PLAYERSTATE.NEUTRAL;
-}
-
 #endregion
 
 #region State Machine
@@ -127,32 +124,6 @@ switch(PlayerState)
 		#region Neutral State
 	
 		if (sign(xSpeed) != 0) image_xscale = sign(xSpeed);
-		
-		xSpeed = PlayerSpeed * move; //Change the horizontal movement according to the players input
-
-		//If the player enters the jump key
-		if (key_jump)
-		{
-			//If the player is allowed to jump
-			if (PlayerJump > 0)
-			{
-				ySpeed = -JumpPower; //Jump
-				PlayerJump = 0; //Reset the coyote jump timer
-			}//end player can jump
-	
-			//If the player is underwater, simply move them upwards
-			else if (PlayerNeutralState == PLAYERSTATE_NEUTRAL.WATER)
-			{
-				ySpeed = -JumpPower / SwimPower;
-			}//end if underwater
-			
-			else if (StarJump_Usable)
-			{
-				ySpeed = -StarJump_Power;
-				PlayerState = PLAYERSTATE.STARJUMP;
-			}
-	
-		}//end jump key pressed
 		
 		//The player's neutral state machine
 		switch(PlayerNeutralState)
@@ -168,6 +139,8 @@ switch(PlayerState)
 				image_speed = 1;
 				
 				PlayerJump = MaxCoyoteJump; //Reset the Coyote Time
+				
+				StarJump_Usable = true;
 				
 				CrescentBlitz_Usable = true;
 				
@@ -221,6 +194,23 @@ switch(PlayerState)
 				
 				mask_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.IDLE];
 				
+				//If the player can use Star Jump
+				if (StarJump_Usable)
+				{
+					//if the player presses the star jump button
+					if (key_starjump)
+					{
+						ySpeed = -StarJump_Power;
+						StarJump_Usable = false;
+					}
+				}
+				
+				else if (ySpeed < 0)
+				{
+					//SpeedTrail(c_ltgrey);
+					ParticleTrail(spr_StarJumpParticles);
+				}
+				
 				#endregion
 					
 				break;//end player airborne
@@ -256,9 +246,7 @@ switch(PlayerState)
 				
 				break;//end player swimming
 		}
-		
-	//	mask_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.IDLE];
-		
+			
 		#endregion
 		
 		break;//end neutral state

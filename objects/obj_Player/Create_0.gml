@@ -52,7 +52,7 @@
 	/////Crescent Blitz Variables
 	CrescentBlitz_Usable = false; //If the player can dash or not
 	
-	CrescentBlitz_MaxDistance = 50; //The max distance the dash travels
+	CrescentBlitz_MaxDistance = 70; //The max distance the dash travels
 	
 	CrescentBlitz_MaxTime = 10; //The time the dash lasts for
 	
@@ -64,7 +64,7 @@
 	
 	/////Star Jump Variables
 	StarJump_Usable = false;
-	StarJump_Power = 10;
+	StarJump_Power = 9;
 	
 #endregion
 

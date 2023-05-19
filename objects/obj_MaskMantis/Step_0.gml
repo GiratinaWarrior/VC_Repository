@@ -137,7 +137,7 @@ switch(MantisState)
 			ySpeed = 0;
 		}
 		
-		Trail(c_green);
+		SpeedTrail(c_green);
 		
 		break; //end MM jumping
 		

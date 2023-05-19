@@ -1,10 +1,9 @@
-/// @description Trail(<image_blend>, <FadeRate> , <image_alpha>)
+/// @description SpeedTrail(<image_blend>, <FadeRate> , <image_alpha>)
 /// @arg <image_blend>
 /// @arg <image_alpha>
 /// @arg <FadeRate>
-function Trail(){
+function SpeedTrail(){
 
-	
 	//Create an instance of a Trail object behind the current object
 	with (instance_create_depth(x, y, depth + 1, obj_Trail))
 	{

@@ -61,7 +61,7 @@ else if (sprite_index == _frenzySpr[2])
 			if (point_distance(x, y, FrenzyTargetX, FrenzyTargetY) > 5 && y < 650)
 			{
 			    move_towards_point(FrenzyTargetX, FrenzyTargetY, FrenzySpeed);
-				Trail();
+				SpeedTrail();
 			}//end VR not reached target
 			
 			//If VR has reached it's target

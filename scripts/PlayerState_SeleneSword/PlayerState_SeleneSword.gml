@@ -11,7 +11,7 @@ function PlayerState_SeleneSword(argument0, argument1, argument2){
 
 	if (PlayerNeutralState == PLAYERSTATE_NEUTRAL.GROUND)
 	{
-		xSpeed *= 0.9;
+		//xSpeed *= 0.9;
 	}
 
 	if (sprite_index != _attacksprite)

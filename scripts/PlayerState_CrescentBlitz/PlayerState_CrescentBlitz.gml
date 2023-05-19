@@ -2,10 +2,12 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function PlayerState_CrescentBlitz(){
 
+	if (sign(xSpeed) != 0) image_xscale = sign(xSpeed);
+
 	xSpeed = lengthdir_x(CrescentBlitz_Speed, CrescentBlitz_Direction);
 	ySpeed = lengthdir_y(CrescentBlitz_Speed, CrescentBlitz_Direction);
 	
-	Trail(c_black);
+	SpeedTrail(c_black);
 	
 	Wall_StopRun();
 	Wall_FallOn();
