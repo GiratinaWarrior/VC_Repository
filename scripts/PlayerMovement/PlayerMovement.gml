@@ -18,7 +18,7 @@ function PlayerMovement(){
 		//If the player is underwater, simply move them upwards
 		else if (PlayerNeutralState == PLAYERSTATE_NEUTRAL.WATER)
 		{
-			ySpeed = -JumpPower / SwimPower;
+			//ySpeed = -JumpPower / SwimPower;
 		}//end if underwater
 	
 	

@@ -82,11 +82,12 @@
 		JUMP
 	}
 	Gravity_Wall = 0; //The Gravity experienced by the Player when using the wall cling
-	ClingToHope_JumpPower = 6; //The Jump height of the wall jump
-	ClingToHope_MaxControl = 20; //How long it takes to regain control after a wall jump
-	ClingToHope_JumpTimer = ClingToHope_MaxControl; //Timer to countdown to control regain
+	ClingToHope_JumpPowerY = 9; //The Jump height of the wall jump
+	ClingToHope_JumpPowerX = 5; //How far horizontally the wall jump goes
 	ClingToHope_Usable = 0; //If Cling To Hope is usable
 	ClingToHope_State = CLINGTOHOPE_STATE.CLIMB;
+	ClingToHope_JumpMomentum = 0;
+	ClingToHope_MaxMomentum = 15;
 	
 	
 #endregion

@@ -10,9 +10,9 @@
 		key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
 		key_up = keyboard_check(vk_up) || keyboard_check(ord("W"));
 		key_down = keyboard_check(vk_down) || keyboard_check(ord("S"));
-		key_jump = keyboard_check(vk_space)
-		key_starjump = keyboard_check_pressed(vk_space);
-		key_wall = key_jump;
+		key_jump = keyboard_check(vk_space) || key_up;
+		key_starjump = keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"));
+		key_wall = keyboard_check_pressed(vk_space);
 		key_sword = mouse_check_button(mb_left);
 		key_moon = keyboard_check(ord("Q"));
 		key_dash = keyboard_check(vk_shift);
@@ -129,6 +129,8 @@ switch(PlayerState)
 		
 		PlayerMovement();
 		
+		ClingToHope_Usable = place_meeting(x + 1, y, obj_WallPlatform) - place_meeting(x - 1, y, obj_WallPlatform);
+		
 		//The player's neutral state machine
 		switch(PlayerNeutralState)
 		{
@@ -215,12 +217,14 @@ switch(PlayerState)
 					ParticleTrail(spr_StarJumpParticles);
 				}
 				
-				ClingToHope_Usable = place_meeting(x + 1, y, obj_WallPlatform) - place_meeting(x - 1, y, obj_WallPlatform);
-				
 				if (ClingToHope_Usable != 0)
 				{
-					PlayerState = PLAYERSTATE.WALL;
-					ClingToHope_State = CLINGTOHOPE_STATE.CLIMB;
+					if (key_wall)
+					{
+						PlayerState = PLAYERSTATE.WALL;
+						ClingToHope_State = CLINGTOHOPE_STATE.CLIMB;
+					}
+					
 				}
 				
 				#endregion
@@ -243,6 +247,11 @@ switch(PlayerState)
 						ySpeed = JumpPower / SwimPower;
 				}
 				
+				if (key_up)
+				{
+					ySpeed = -JumpPower / SwimPower;
+				}
+				
 				if (ySpeed < 0)
 				{
 					sprite_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.SWIM_V];
@@ -263,10 +272,10 @@ switch(PlayerState)
 		
 		break;//end neutral state
 		
-	//When the player uses the Eclipse Blade
+	//When the player uses the Selene Sword
 	case PLAYERSTATE.SWORD:
 		
-		#region Eclipse Blade State
+		#region Selene Sword State
 		
 		image_speed = 1;
 		
@@ -420,7 +429,7 @@ switch(PlayerState)
 		
 		#endregion
 		
-		break;//end sword state
+		break;//end Selene Sword
 	
 	//When the player uses Lunar Cannon
 	case PLAYERSTATE.CANNON:
@@ -434,24 +443,14 @@ switch(PlayerState)
 	
 		PlayerState_CrescentBlitz();
 	
-		break;
+		break;//end Crescent Blitz
 		
+	//When the player uses Cling To Hope
 	case PLAYERSTATE.WALL:
 		
-		switch (ClingToHope_State)
-		{
-			case CLINGTOHOPE_STATE.CLIMB:
-				
-				PlayerState_ClingToHope();
-				
-				break;
-				
-			case CLINGTOHOPE_STATE.JUMP:
-			
-				break;
-				
-		}
-		break;
+		PlayerState_ClingToHope();
+		
+		break;//end Cling To Hope
 		
 }//end PLayer State Machine
 
