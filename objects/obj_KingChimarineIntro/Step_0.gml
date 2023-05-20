@@ -12,9 +12,9 @@ if (image_alpha > 0)
 
 if (image_alpha >= 2)
 {
-	obj_NewPlayer.hascontrol = true;
+	obj_Player.hascontrol = true;
 	
-	obj_Camera.follow = obj_NewPlayer;
+	obj_Camera.follow = obj_Player;
 	
 	with (obj_KCBossAura)
 	{

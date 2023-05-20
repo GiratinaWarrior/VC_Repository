@@ -8,6 +8,16 @@ function PlayerState_Hurt(){
 	mask_index = spr_PlayerIdle;
 	image_alpha = Wave(0, 1, 0.1, 1);
 	
+	var _vulnerable = function()
+	{
+		Invincible = false;
+		image_alpha = 1;
+		PlayerState = PLAYERSTATE.NEUTRAL;
+		DamagedTimer = 0;
+	}
+	
+	InvincTimer = time_source_create(time_source_game, 100, time_source_units_frames, _vulnerable);
+	
 	DamagedTimer++;
 	
 	if (ySpeed > 0)
@@ -43,7 +53,7 @@ function PlayerState_Hurt(){
 		x += xSpeed;
 	
 		//If the player was in the Swim State
-		if (FreeState == FREE.WATER)
+		if (PlayerNeutralState == PLAYERSTATE_NEUTRAL.WATER)
 		{
 			//If the player is no longer in the water
 			if (!place_meeting(x, y + ySpeed - (sign(ySpeed)), obj_WallPlatform))
@@ -58,12 +68,9 @@ function PlayerState_Hurt(){
 	if (place_meeting(x, y + ySpeed + sign(ySpeed), obj_WallPlatform) || DamagedTimer > 20)
 	{
 		hascontrol = true;
-		AttackState = ATTACK.FREE;
+		PlayerState = PLAYERSTATE.NEUTRAL;
 		DamagedTimer = 0;
-		if (!alarm[0])
-		{
-			alarm[0] = InvincCoolDown;
-		}
+		time_source_start(InvincTimer);
 	}
 	
 	

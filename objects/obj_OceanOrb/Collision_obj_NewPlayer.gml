@@ -15,7 +15,7 @@ if (OceanOrbTouched == false)
 
 OceanOrbTouched = true;
 
-with (obj_NewPlayer)
+with (obj_Player)
 {
 	hascontrol = false;
 }

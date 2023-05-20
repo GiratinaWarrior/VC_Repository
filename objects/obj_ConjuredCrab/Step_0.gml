@@ -67,17 +67,17 @@ y = y + ySpeed;
 #region Shooting
 
 //Check if this instance can shoot
-if (CanShoot) && (instance_exists(obj_NewPlayer))
+if (CanShoot) && (instance_exists(obj_Player))
 {
 	
 	var InRange = false;
 	
 	//Check the distance between the Scarlet Crab and the Player
-	var XDist = point_distance(x, y, obj_NewPlayer.x, obj_NewPlayer.y);
+	var XDist = point_distance(x, y, obj_Player.x, obj_Player.y);
 	
-	var YDist = y - obj_NewPlayer.y;
+	var YDist = y - obj_Player.y;
 	
-	var ObstructShot = collision_line(x, y, obj_NewPlayer.x, obj_NewPlayer.y, obj_WallPlatform, false, false);
+	var ObstructShot = collision_line(x, y, obj_Player.x, obj_Player.y, obj_WallPlatform, false, false);
 	
 	if (XDist <= 495 && (abs(YDist) <= 50) && !ObstructShot)
 	{

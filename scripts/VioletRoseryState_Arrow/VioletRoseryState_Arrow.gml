@@ -38,9 +38,9 @@ function VioletRoseryState_Arrow(){
 		else
 		{
 			//The arrow direction is changed relative to the players position
-			if (instance_exists(obj_NewPlayer))
+			if (instance_exists(obj_Player))
 			{
-				ArrowDir = point_direction(x, y, obj_NewPlayer.x, obj_NewPlayer.y);
+				ArrowDir = point_direction(x, y, obj_Player.x, obj_Player.y);
 			}//end set arrow direction
 	
 			//Create an arrow

@@ -2,7 +2,7 @@
 global.FieldOrb = 1;
 global.OrbsCollected++;
 
-with (obj_NewPlayer)
+with (obj_Player)
 {
 	hascontrol = true;
 }

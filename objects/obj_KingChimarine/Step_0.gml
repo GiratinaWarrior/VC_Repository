@@ -1,10 +1,10 @@
 /// @description Actions
 
 //Make King Chimarine face the player
-if (instance_exists(obj_NewPlayer))
+if (instance_exists(obj_Player))
 {
 	
-	if (obj_NewPlayer.x >= x)
+	if (obj_Player.x >= x)
 	{
 		image_xscale = -1;
 	}

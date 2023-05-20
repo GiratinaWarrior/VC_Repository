@@ -60,10 +60,10 @@ image_angle += SpinSpeed;
 //DrawSetText(c_white, font_NPC, fa_left, fa_top);
 //draw_text(x, y + 60, PauseFloat);
 
-if (instance_exists(obj_NewPlayer))
+if (instance_exists(obj_Player))
 {
 
-if (point_in_circle(obj_NewPlayer.x, obj_NewPlayer.y, x, y, TalkRange)) //&& (!instance_exists(obj_NPCTextBox))
+if (point_in_circle(obj_Player.x, obj_Player.y, x, y, TalkRange)) //&& (!instance_exists(obj_NPCTextBox))
 {
 	
 	if (mouse_check_button_pressed(mb_right)){
@@ -102,8 +102,8 @@ else
 	{
 		instance_destroy(myTextbox);
 		myTextbox = noone;
-		obj_Camera.follow = obj_NewPlayer;
-		obj_NewPlayer.hascontrol = true;
+		obj_Camera.follow = obj_Player;
+		obj_Player.hascontrol = true;
 	}
 	
 	CanFloat = PauseFloat;

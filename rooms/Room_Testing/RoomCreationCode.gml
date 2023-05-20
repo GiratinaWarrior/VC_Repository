@@ -1,4 +1,4 @@
-with (obj_NewPlayer)
+with (obj_Player)
 {
 	//instance_change(obj_Player, true);
 	with (obj_Camera)

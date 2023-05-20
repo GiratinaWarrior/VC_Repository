@@ -24,10 +24,10 @@ if (xSpeed != 0) image_xscale = sign(xSpeed);
 #region Icicle Attack
 
 //check if the player exists
-if (instance_exists(obj_NewPlayer))
+if (instance_exists(obj_Player))
 {
 	//Check if they're in range
-	if (abs(obj_NewPlayer.x - x) < 100)
+	if (abs(obj_Player.x - x) < 100)
 	{
 		//If unactivated, activate
 		if (!alarm[0])

@@ -4,10 +4,10 @@
 
 /*
 //check if the player exists
-if (instance_exists(obj_NewPlayer))
+if (instance_exists(obj_Player))
 {
 	//check if Player is within range
-	if (point_distance(obj_NewPlayer.x, obj_NewPlayer.y, x, y) < 600)
+	if (point_distance(obj_Player.x, obj_Player.y, x, y) < 600)
 	{
 		//Start the count down to shoot
 		countdown--;
@@ -16,7 +16,7 @@ if (instance_exists(obj_NewPlayer))
 		if (countdown <= 0)
 		{
 			
-			if (!collision_line(x, y, obj_NewPlayer.x, obj_NewPlayer.y, obj_WallPlatform, false, false))
+			if (!collision_line(x, y, obj_Player.x, obj_Player.y, obj_WallPlatform, false, false))
 			{
 			
 				sprite_index = spr_RuneTurretShoot;
@@ -31,7 +31,7 @@ if (instance_exists(obj_NewPlayer))
 					speed = 6;
 					
 					//Set the direction to be at the Player
-					other.shootDir = point_direction(other.x, other.y, obj_NewPlayer.x, obj_NewPlayer.y);
+					other.shootDir = point_direction(other.x, other.y, obj_Player.x, obj_Player.y);
 					
 					//How mouch the Rune Turret can miss by
 					var shootRange = 0;
@@ -72,10 +72,10 @@ switch(TurretState)
 			sprite_index = spr_RuneTurret;
 	
 			//Check if the Player exists
-			if (instance_exists(obj_NewPlayer))
+			if (instance_exists(obj_Player))
 			{
 				//Check if they're in range
-				if (point_distance(obj_NewPlayer.x, obj_NewPlayer.y, x, y) < 600)
+				if (point_distance(obj_Player.x, obj_Player.y, x, y) < 600)
 				{
 				
 					//If the count down reaches 0
@@ -110,10 +110,10 @@ switch(TurretState)
 			if (image_index >= image_number - 1)
 			{
 				//If the player exists
-				if (instance_exists(obj_NewPlayer))
+				if (instance_exists(obj_Player))
 				{
 					//If RT has a clear shot
-					if (!collision_line(x, y, obj_NewPlayer.x, obj_NewPlayer.y, obj_WallPlatform, false, false))
+					if (!collision_line(x, y, obj_Player.x, obj_Player.y, obj_WallPlatform, false, false))
 					{
 						TurretState = RUNETURRET_STATE.SHOOT;
 					}//end clear shot
@@ -150,10 +150,10 @@ switch(TurretState)
 				speed = 6;
 				
 				//If the player exists
-				if (instance_exists(obj_NewPlayer))
+				if (instance_exists(obj_Player))
 				{
 					//Set the direction to be at the Player
-					other.shootDir = point_direction(other.x, other.y, obj_NewPlayer.x, obj_NewPlayer.y);
+					other.shootDir = point_direction(other.x, other.y, obj_Player.x, obj_Player.y);
 				}
 				
 				//How mouch the Rune Turret can miss by

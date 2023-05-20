@@ -17,7 +17,7 @@ if (image_alpha > 0)
 
 if (image_alpha >= 2)
 {
-	obj_NewPlayer.hascontrol = true;
+	obj_Player.hascontrol = true;
 	
 	with (obj_Camera)
 	{

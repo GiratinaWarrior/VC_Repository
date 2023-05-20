@@ -7,6 +7,6 @@ enum SWORD_V_DIR
 	DOWN = 1
 }
 
-alarm[0] = 5;
+alarm[0] = 7;
 
-hitBySeleneSword = ds_list_create();
+//hitBySeleneSword = ds_list_create();

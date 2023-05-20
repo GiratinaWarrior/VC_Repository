@@ -7,9 +7,9 @@ image_speed = 0;
 image_alpha = 7;
 meltrate = 0;//0.01;
 
-if (instance_exists(obj_NewPlayer))
+if (instance_exists(obj_Player))
 {
 
-	if (abs(obj_NewPlayer.x - x) < 495) audio_play_sound(sound_IceFin, 15, false);
+	if (abs(obj_Player.x - x) < 495) audio_play_sound(sound_IceFin, 15, false);
 	
 }

@@ -1,5 +1,14 @@
 /// @description Stuff
 
+if (Invincible == true) {
+	image_alpha = Wave(0, 1, 0.1, 1);
+}
+
+if (place_meeting(x, y, parent_Enemy) || place_meeting(x, y, parent_Enemy))
+{
+	PlayerTakenDamage();
+}
+
 #region Collect player input
 
 	//If the player has control over their own actions
@@ -13,7 +22,7 @@
 		key_jump =  key_up;
 		key_starjump = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"));
 		key_wall = keyboard_check_pressed(vk_space);
-		key_sword = mouse_check_button(mb_left);
+		key_sword = mouse_check_button_pressed(mb_left);
 		key_moon = keyboard_check(ord("Q"));
 		key_dash = keyboard_check(vk_shift);
 		key_heal = keyboard_check(ord("F"));
@@ -111,6 +120,11 @@ else if (key_dash)
 		if !(CrescentBlitz_Direction == 0 && move == 0) PlayerState = PLAYERSTATE.AIRDASH;
 		
 	}//end dash usable
+}
+
+if (PlayerState != PLAYERSTATE.WALL)
+{
+	image_yscale = 1;
 }
 
 #endregion
@@ -451,6 +465,14 @@ switch(PlayerState)
 		PlayerState_ClingToHope();
 		
 		break;//end Cling To Hope
+		
+	//If the player is hurt
+	case PLAYERSTATE.HURT:
+	
+		x += xSpeed;
+		PlayerState_Hurt();
+		
+		break;//end hurt
 		
 }//end PLayer State Machine
 

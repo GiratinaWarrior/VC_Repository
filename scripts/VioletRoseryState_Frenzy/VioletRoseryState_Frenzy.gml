@@ -50,7 +50,7 @@ else if (sprite_index == _frenzySpr[2])
 	FrenzyRushCooldown--;
 	
 	//Check if the player exists, and if so, proceed with the Frenzy Code
-	if (instance_exists(obj_NewPlayer))
+	if (instance_exists(obj_Player))
 	{
 	
 		//If the cooldown is done and the player is still alive, start attacking
@@ -90,11 +90,11 @@ else if (sprite_index == _frenzySpr[2])
 			speed = 0;
 		
 			//If the player is still alive
-			if (instance_exists(obj_NewPlayer))
+			if (instance_exists(obj_Player))
 			{
 				//Set the player as the target for movement
-				FrenzyTargetX = obj_NewPlayer.x;
-				FrenzyTargetY = obj_NewPlayer.y;
+				FrenzyTargetX = obj_Player.x;
+				FrenzyTargetY = obj_Player.y;
 	
 			}//end if player is alive
 		

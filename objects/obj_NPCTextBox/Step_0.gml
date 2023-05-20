@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-with (obj_NewPlayer)
+with (obj_Player)
 {
 	hascontrol = false;
 }
@@ -16,8 +16,8 @@ if (mouse_check_button_pressed(mb_right))
 	{
 		instance_destroy();
 		obj_NPC.alarm[1] = 1;
-		obj_NewPlayer.hascontrol = true;
-		obj_Camera.follow = obj_NewPlayer;
+		obj_Player.hascontrol = true;
+		obj_Camera.follow = obj_Player;
 		with (obj_NPC)
 		{
 			CanFloat = PauseFloat;

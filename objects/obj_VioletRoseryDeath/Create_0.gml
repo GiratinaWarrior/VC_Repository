@@ -32,7 +32,7 @@ if (instance_exists(obj_VRBossHealth))
 	instance_destroy(obj_VRBossHealth);
 }
 
-with (obj_NewPlayer)
+with (obj_Player)
 {
 	hascontrol = false;
 	move = 0;

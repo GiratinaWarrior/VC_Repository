@@ -1,7 +1,7 @@
 /// @description If the Player is dumb and takes a swim in Acid
 
 //With the Player
-with (obj_NewPlayer)
+with (obj_Player)
 {
 	//Check if the player is in water
 	if (FreeState == FREE.WATER)

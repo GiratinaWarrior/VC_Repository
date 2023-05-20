@@ -20,7 +20,7 @@ function ScarletCrab_Shoot(){
 	
 	
 	
-	image_xscale = sign(x - obj_NewPlayer.x);
+	image_xscale = sign(x - obj_Player.x);
 	
 	if (image_index == 4)
 	{

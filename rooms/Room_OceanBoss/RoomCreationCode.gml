@@ -5,7 +5,7 @@ with (obj_PlayBGM)
 
 global.Spawnpoint = Room_OceanTown;
 
-with (obj_NewPlayer)
+with (obj_Player)
 {
 	hascontrol = false;
 }

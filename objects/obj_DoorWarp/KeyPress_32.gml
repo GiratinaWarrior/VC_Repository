@@ -1,10 +1,10 @@
 /// @description Teleport the player
 
 //If the player is touching the door object
-if (place_meeting(x, y, obj_NewPlayer))
+if (place_meeting(x, y, obj_Player))
 {
 	//Access the player object
-	with (obj_NewPlayer)
+	with (obj_Player)
 	{
 		//if the player can control their actions
 		if (hascontrol) 

@@ -145,7 +145,7 @@ enum PLAYERSPRITE_SPECIAL
 	//The spriteset for Rose throughout the whole game
 	RoseSpriteSet_Neutral = 
 	[
-		spr_PlayerIdle,
+		spr_PlayerIdleAnimation,
 		spr_PlayerRun,
 		spr_PlayerJump,
 		spr_PlayerSwimHorizontal,
@@ -171,5 +171,14 @@ DamagedTimer = 0;
 
 //The ID of the object that attacked the player
 AttackerID = noone;
+
+#endregion
+
+#region Room Transition
+
+x = global.SpawnX;
+y = global.SpawnY;
+
+RoomIsCutscene = false;
 
 #endregion

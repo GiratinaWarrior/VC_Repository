@@ -1,10 +1,10 @@
 /// @description Rotation and Stuff
 
 //Check if the player and the Tundragon exists
-if (instance_exists(obj_NewPlayer)) && (instance_exists(IceSpikeOrigin))
+if (instance_exists(obj_Player)) && (instance_exists(IceSpikeOrigin))
 {
 	//If the Player and the Tundragon are in attack range
-	if (point_distance(obj_NewPlayer.x, obj_NewPlayer.y, IceSpikeOrigin.x, IceSpikeOrigin.y) <= IceSpikeRange) && (!collision_line(obj_NewPlayer.x, obj_NewPlayer.y, IceSpikeOrigin.x, IceSpikeOrigin.y, obj_WallPlatform, false, false))
+	if (point_distance(obj_Player.x, obj_Player.y, IceSpikeOrigin.x, IceSpikeOrigin.y) <= IceSpikeRange) && (!collision_line(obj_Player.x, obj_Player.y, IceSpikeOrigin.x, IceSpikeOrigin.y, obj_WallPlatform, false, false))
 	{
 		PlayerInProximity = true;
 	}
@@ -66,7 +66,7 @@ if (IceSpikeLaunched)
 	with(instance_create_layer(x, y, layer, obj_IceSpikeAttack))
 	{
 		sprite_index = other.sprite_index;
-		direction = point_direction(other.x, other.y, obj_NewPlayer.x, obj_NewPlayer.y);
+		direction = point_direction(other.x, other.y, obj_Player.x, obj_Player.y);
 		speed = 10;
 		instance_destroy(other);
 	}

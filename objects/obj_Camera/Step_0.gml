@@ -8,12 +8,6 @@ if (instance_exists(follow))
 	xTo = follow.x;
 	yTo = follow.y;
 
-	if ((follow).object_index == obj_NewPlayerDying) 
-	{
-		x = xTo;
-		y = yTo;
-	}
-
 }
 
 //Update object position

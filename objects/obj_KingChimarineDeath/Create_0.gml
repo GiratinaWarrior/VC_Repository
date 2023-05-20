@@ -70,7 +70,7 @@ if (instance_exists(obj_KCBossHealth))
 	instance_destroy(obj_KCBossHealth);
 }
 
-with (obj_NewPlayer)
+with (obj_Player)
 {
 	hascontrol = false;
 	move = 0;

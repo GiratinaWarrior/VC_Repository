@@ -3,7 +3,7 @@
 draw_sprite_stretched(spr_PlayerHealthBar, 0, HealthBarX, HealthBarY, (global.Health/MaxHealth) * HealthBarWidth, HealthBarHeight);
 draw_sprite_stretched(spr_PlayerHealthBorder, 0, HealthBarX, HealthBarY, HealthBarWidth, HealthBarHeight);
 
-with (obj_NewPlayer)
+with (obj_Player)
 {
 	var _moonmeter;
 	var _mooncolor;

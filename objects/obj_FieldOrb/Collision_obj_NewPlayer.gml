@@ -15,7 +15,7 @@ if (FieldOrbTouched == false)
 
 FieldOrbTouched = true;
 
-with (obj_NewPlayer)
+with (obj_Player)
 {
 	hascontrol = false;
 }

@@ -10,7 +10,7 @@ function PlayerState_Moon(){
 		firingdelay = 60;
 			
 		//switch-case for the players direction
-		switch(obj_NewPlayer.image_xscale){
+		switch(obj_Player.image_xscale){
 					
 			case 1:
 				MagicAttack.direction = 0;
