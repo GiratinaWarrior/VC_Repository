@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Miscellaneous",
-    "path": "folders/Scripts/Miscellaneous.yy",
+    "name": "Attacks",
+    "path": "folders/Objects/Enemies/Bosses/VioletRosery/Attacks.yy",
   },
 }

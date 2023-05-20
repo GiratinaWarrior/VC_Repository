@@ -5,7 +5,7 @@ IceSpikeCooldown -= 1;
 //Generate the orbiting spikes
 if (numOfIceSpikes < maxIceSpikes)
 {
-	with(instance_create_layer(x, y, "Tundragon", obj_IceSpikeOrbit))
+	with(instance_create_depth(x, y, depth - 1, obj_IceSpikeOrbit))
 	{
 		//Set the ice spikes to orbit 60 pixels away from a Tundragon
 		IceSpikeOrbitDist = 60;

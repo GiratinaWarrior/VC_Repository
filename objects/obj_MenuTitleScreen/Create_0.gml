@@ -17,3 +17,56 @@ menu_items = array_length_1d(menu);
 menu_cursor = 2;
 
 FirstPlayerRoom = Room_Testing;
+
+TitleMenu_NewGame = function()
+{
+	global.SpawnX = 904;
+	global.SpawnY = 228; 
+	global.Spawnpoint = Room_NoxCity;
+	SlideTransition(TRANS_MODE.GOTO, FirstPlayerRoom); 
+	SummonPlayer();
+}
+
+TitleMenu_Continue = function()
+{
+	//If a savefile does not exist
+	if (!file_exists(SAVEFILE)) 
+	{
+		global.SpawnX = 990;
+		global.SpawnY = 540; 
+		global.Spawnpoint = FirstPlayerRoom;
+					
+		SlideTransition(TRANS_MODE.GOTO, FirstPlayerRoom); 
+		SummonPlayer();
+	}//end savefile doesn't exist
+				
+	//If a savefile exists, transfer the data within it
+	else 
+	{
+		var file = file_text_open_read(SAVEFILE);
+		var target = file_text_read_real(file);
+		var startx = file_text_read_real(file);
+		var starty = file_text_read_real(file);
+		var saveArray = global.SavedVar;
+		for (var f = 3; f < array_length(saveArray); f++)
+		{
+			saveArray[f] = file_text_read_real(file);
+		}
+		file_text_close(file);
+		global.SavedVar = saveArray;
+		SlideTransition(TRANS_MODE.GOTO, target);
+		SummonPlayer(startx, starty);
+	}
+}
+
+TitleMenu_Quit = function()
+{
+	game_end(); 
+}
+
+MenuOptions_2DArray = 
+[
+	["Continue", TitleMenu_Continue],
+	["New Game", TitleMenu_NewGame],
+	["Quit", TitleMenu_Quit]
+]

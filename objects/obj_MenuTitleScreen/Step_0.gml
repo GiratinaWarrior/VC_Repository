@@ -1,5 +1,9 @@
 /// @description Control Menu
 
+#region Old Shmenu
+
+/*
+
 //item ease in
 menu_y += (menu_y_target - menu_y) / menu_speed;
 
@@ -80,3 +84,13 @@ if (menu_y < -100) && (menu_committed != -1) {
 	}
 
 }
+
+*/
+
+#endregion Old Shmenu
+
+#region New Menu
+
+Menu(room_width/2, room_height/2, MenuOptions_2DArray, "Desk",font_TitleScreen);
+
+#endregion New Menu

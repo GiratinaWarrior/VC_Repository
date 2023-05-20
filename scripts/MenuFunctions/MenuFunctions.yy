@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "FeralArrow",
+  "name": "MenuFunctions",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Attacks",
-    "path": "folders/Objects/Enemies/Bosses/VioletRosery/Attacks.yy",
+    "name": "Scripts",
+    "path": "folders/Scripts.yy",
   },
 }

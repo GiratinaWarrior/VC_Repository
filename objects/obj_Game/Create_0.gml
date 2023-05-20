@@ -48,18 +48,14 @@ global.Health = 10;
 global.WarpTargetX = 904;
 global.WarpTargetY = 228;
 
-global.SavedVar = 
-[
-global.Spawnpoint,
-global.SpawnX,
-global.SpawnY,
-global.Health,
-global.OrbsCollected, 
-global.FieldOrb, 
-global.OceanOrb, 
-global.TundraOrb, 
-global.DesertOrb,
-];
+global.AbilityUnlocked_SeleneSword = true;
+global.AbilityUnlocked_LunarCannon = true;
+global.AbilityUnlocked_StarJump = true;
+global.AbilityUnlocked_CrescentBlitz = true;
+global.AbilityUnlocked_ClingToHope = true;
+global.AbilityUnlocked_NightNight = true;
+
+global.SavedVar = [];
 
 enum SAVED_VAR
 {
@@ -71,7 +67,13 @@ enum SAVED_VAR
 	FIELDORB,
 	OCEANORB,
 	TUNDRAORB,
-	DESERTORB
+	DESERTORB,
+	SELENESWORD_UNLOCKED,
+	LUNARCANNON_UNLOCKED,
+	STARJUMP_UNLOCKED,
+	CRESCENTBLITZ_UNLOCKED,
+	CLINGTOHOPE_UNLOCKED,
+	NIGHTNIGHT_UNLOCKED
 }
 
 

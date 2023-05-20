@@ -1,4 +1,8 @@
 /// @description Draw Menu
+
+#region Old Shmenu
+
+/*
 draw_set_font(font_TitleScreen);
 draw_set_halign(fa_center);
 draw_set_valign(fa_bottom);
@@ -36,7 +40,8 @@ for (var i = 0; i < menu_items; i++)
 	
 	
 }
+*/
 
-
+#endregion Old Schmenu
 
 
