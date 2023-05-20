@@ -10,8 +10,8 @@
 		key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
 		key_up = keyboard_check(vk_up) || keyboard_check(ord("W"));
 		key_down = keyboard_check(vk_down) || keyboard_check(ord("S"));
-		key_jump = keyboard_check(vk_space) || key_up;
-		key_starjump = keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"));
+		key_jump =  key_up;
+		key_starjump = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"));
 		key_wall = keyboard_check_pressed(vk_space);
 		key_sword = mouse_check_button(mb_left);
 		key_moon = keyboard_check(ord("Q"));

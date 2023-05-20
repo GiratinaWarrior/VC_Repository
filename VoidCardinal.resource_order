@@ -365,6 +365,7 @@
     {"name":"sound_Landing","order":4,"path":"sounds/sound_Landing/sound_Landing.yy",},
     {"name":"sound_WindBlowing","order":1,"path":"sounds/sound_WindBlowing/sound_WindBlowing.yy",},
     {"name":"spr_PlayerAirJumpNeutral_SeleneSword","order":3,"path":"sprites/spr_PlayerAirJumpNeutral_SeleneSword/spr_PlayerAirJumpNeutral_SeleneSword.yy",},
+    {"name":"ArrayFindValue","order":20,"path":"scripts/ArrayFindValue/ArrayFindValue.yy",},
     {"name":"spr_StainJaw","order":3,"path":"sprites/spr_StainJaw/spr_StainJaw.yy",},
     {"name":"VioletRoseryState_Arrow","order":3,"path":"scripts/VioletRoseryState_Arrow/VioletRoseryState_Arrow.yy",},
     {"name":"Room_Testing","order":13,"path":"rooms/Room_Testing/Room_Testing.yy",},

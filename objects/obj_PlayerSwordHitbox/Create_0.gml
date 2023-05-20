@@ -8,3 +8,5 @@ enum SWORD_V_DIR
 }
 
 alarm[0] = 5;
+
+hitBySeleneSword = ds_list_create();

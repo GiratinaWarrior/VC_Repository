@@ -480,6 +480,7 @@
     {"id":{"name":"sound_WindBlowing","path":"sounds/sound_WindBlowing/sound_WindBlowing.yy",},},
     {"id":{"name":"spr_PlayerAirJumpNeutral_SeleneSword","path":"sprites/spr_PlayerAirJumpNeutral_SeleneSword/spr_PlayerAirJumpNeutral_SeleneSword.yy",},},
     {"id":{"name":"obj_RoomWarp","path":"objects/obj_RoomWarp/obj_RoomWarp.yy",},},
+    {"id":{"name":"ArrayFindValue","path":"scripts/ArrayFindValue/ArrayFindValue.yy",},},
     {"id":{"name":"spr_StainJaw","path":"sprites/spr_StainJaw/spr_StainJaw.yy",},},
     {"id":{"name":"VioletRoseryState_Arrow","path":"scripts/VioletRoseryState_Arrow/VioletRoseryState_Arrow.yy",},},
     {"id":{"name":"Room_Testing","path":"rooms/Room_Testing/Room_Testing.yy",},},
