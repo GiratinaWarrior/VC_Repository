@@ -57,11 +57,28 @@ TitleMenu_Continue = function()
 		SlideTransition(TRANS_MODE.GOTO, target);
 		SummonPlayer(startx, starty);
 	}
-}
+} 
 
 TitleMenu_Quit = function()
 {
 	game_end(); 
+}
+
+Test_1 = function()
+{
+	show_debug_message(obj_Menu.Menu_Hover);
+}
+
+
+Test_2 = function()
+{
+	show_debug_message(obj_Menu.Menu_Hover);
+}
+
+
+Test_3 = function()
+{
+	show_debug_message(obj_Menu.Menu_Hover);
 }
 
 MenuOptions_2DArray = 
@@ -70,3 +87,5 @@ MenuOptions_2DArray =
 	["New Game", TitleMenu_NewGame],
 	["Quit", TitleMenu_Quit]
 ]
+
+Menu(room_width/2 + 100, room_height/2, MenuOptions_2DArray, -1 ,font_TitleScreen);

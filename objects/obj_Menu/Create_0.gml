@@ -1,4 +1,6 @@
-/// @description
-Menu_Hover = -1;
+/// @description Create Menu Mouse Variables
+
 Menu_MouseXPrev = mouse_x;
 Menu_MouseYPrev = mouse_y;
+
+Menu_Chosen = false;

@@ -15,6 +15,9 @@ function Menu(_x, _y, _options, _description = -1, _font){
 	//Create Menu object instance
 	with (instance_create_depth(x, y, -999, obj_Menu))
 	{
+		
+		Menu_Hover = 0;
+		
 		//Set the options and description
 		Menu_Options = _options;	
 		Menu_Desc = _description;
@@ -41,7 +44,7 @@ function Menu(_x, _y, _options, _description = -1, _font){
 		Menu_Width += string_width(Menu_HoverMarker);
 		
 		//Set the height
-		Menu_HeightLine = 16
+		Menu_HeightLine = 30;
 		Menu_Height = Menu_HeightLine * (Menu_NumOfOptions + !(Menu_Desc == -1));
 		
 		//Set the size of the text box

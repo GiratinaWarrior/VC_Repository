@@ -18,7 +18,7 @@ for (l = 0; l < (Menu_NumOfOptions + _desc); l++)
 	//If there is a description, write the description
 	if (l == 0) && (_desc)
 	{
-		draw_text(x, y, Menu_Desc);
+		draw_text(x, y + (l * Menu_HeightLine) - Menu_HeightLine + Menu_Margin * 2, Menu_Desc);
 	}//end if description
 	
 	//If there is no description, or its already been drawn
@@ -35,6 +35,6 @@ for (l = 0; l < (Menu_NumOfOptions + _desc); l++)
 		}
 		
 		//Draw the text
-		draw_text(x, y + (l * Menu_HeightLine), _str);
+		draw_text(x, y + (l * Menu_HeightLine) - Menu_HeightLine + Menu_Margin * 2, _str);
 	}//end draw options
 }
