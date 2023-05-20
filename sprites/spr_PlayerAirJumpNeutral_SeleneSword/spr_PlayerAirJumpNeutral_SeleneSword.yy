@@ -29,7 +29,7 @@
   "origin": 9,
   "parent": {
     "name": "Air",
-    "path": "folders/Sprites/Player/Animations/Player/SeleneSword/Air.yy",
+    "path": "folders/Sprites/Player/Animations/Player/VallenSpells/SeleneSword/Air.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
