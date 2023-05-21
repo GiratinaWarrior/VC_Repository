@@ -19,5 +19,5 @@ if (numOfIceSpikes < maxIceSpikes)
 		IceSpikeOrigin = other.id;
 	}
 	numOfIceSpikes++;
-	show_debug_message(numOfIceSpikes);
+//	show_debug_message(numOfIceSpikes);
 }

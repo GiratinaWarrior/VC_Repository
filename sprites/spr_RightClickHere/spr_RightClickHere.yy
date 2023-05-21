@@ -27,8 +27,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Misc",
-    "path": "folders/Sprites/Misc.yy",
+    "name": "TextBox",
+    "path": "folders/Sprites/Misc/TextBox.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

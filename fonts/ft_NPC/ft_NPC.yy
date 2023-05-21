@@ -1,7 +1,7 @@
 {
   "resourceType": "GMFont",
   "resourceVersion": "1.0",
-  "name": "font_NPC",
+  "name": "ft_NPC",
   "AntiAlias": 1,
   "applyKerning": 0,
   "ascender": 5,

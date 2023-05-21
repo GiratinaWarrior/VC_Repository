@@ -9,5 +9,5 @@ draw_sprite(spr_TextMarker, 0, x, y);
 draw_set_alpha(1);
 
 //Draw Text
-DrawSetText(c_white, font_Sign, fa_center, fa_top);
+DrawSetText(c_white, ft_Sign, fa_center, fa_top);
 draw_text(x, y - h - border, text_current);

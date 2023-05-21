@@ -1,7 +1,7 @@
 {
   "resourceType": "GMFont",
   "resourceVersion": "1.0",
-  "name": "font_BossName",
+  "name": "ft_BossName",
   "AntiAlias": 1,
   "applyKerning": 0,
   "ascender": 29,

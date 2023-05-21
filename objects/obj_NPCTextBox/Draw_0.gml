@@ -4,10 +4,10 @@
 
 draw_sprite(spr_NPCTextBox, 0, x, y);
 
-draw_set_font(font_NPC);
+draw_set_font(ft_NPC);
 draw_set_color(c_white);
 
-DrawSetText(c_white, font_NPC, fa_left, fa_top);
+DrawSetText(c_white, ft_NPC, fa_left, fa_top);
 
 if (CharCount < string_length(Text[Page]))
 {

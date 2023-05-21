@@ -1,7 +1,7 @@
 {
   "resourceType": "GMFont",
   "resourceVersion": "1.0",
-  "name": "font_Silver",
+  "name": "ft_Silver",
   "AntiAlias": 1,
   "applyKerning": 0,
   "ascender": 15,

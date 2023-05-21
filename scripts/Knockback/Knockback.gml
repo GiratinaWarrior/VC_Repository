@@ -1,7 +1,7 @@
-/// @description Knockback(power, direction, upward force)
+/// @description Knockback(power, direction)
 /// @arg power
 /// @arg direction
-/// @arg <upward force>
+/// @arg upward force
 	//This function applies knockback to an entity when called
 	//power refers to the launch force
 	//direction refers to the direction knockback is applied to
@@ -9,13 +9,9 @@
 		//used for the arc effect
 	
 	
-function Knockback(argument0, argument1){
+function Knockback(_power, _dir, _upforce = 0){
 
-	var _upforce = 0;
-	
-	if (argument_count > 2) _upforce = argument2;
-
-	xSpeed = lengthdir_x(argument0, argument1);
-	ySpeed = lengthdir_y(argument0, argument1) - _upforce;
+	xSpeed = lengthdir_x(_power, _dir);
+	ySpeed = lengthdir_y(_power, _dir) - _upforce;
 	
 }

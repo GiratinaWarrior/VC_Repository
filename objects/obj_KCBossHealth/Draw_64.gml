@@ -3,7 +3,7 @@
 draw_sprite_stretched(spr_BossHealthBar, 0, KC_BarX, KC_BarY, (KC_Health/KC_MaxHealth) * KC_BossBarWidth, KC_BossBarHeight);
 draw_sprite_stretched(spr_BossHealthBorder, 0, KC_BarX, KC_BarY, KC_BossBarWidth, KC_BossBarHeight);
 
-DrawSetText(c_black, font_BossName, fa_center, fa_center);
+DrawSetText(c_black, ft_BossName, fa_center, fa_center);
 draw_text(KC_BarX + KC_BossBarWidth/2, KC_BarY + KC_BossBarHeight/2, "King Chimarine");
 
 //offset black

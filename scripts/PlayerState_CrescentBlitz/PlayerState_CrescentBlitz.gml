@@ -16,7 +16,7 @@ function PlayerState_CrescentBlitz(){
 	y += ySpeed;
 	
 	CrescentBlitz_Duration -= CrescentBlitz_Speed;
-	if (CrescentBlitz_Duration < 0 || !key_dash)
+	if (CrescentBlitz_Duration < 0)
 	{
 		//xSpeed = 0;
 		ySpeed = 0;

@@ -19,7 +19,7 @@ if (Invincible == true) {
 		key_wall = keyboard_check_pressed(vk_space);
 		key_sword = mouse_check_button_pressed(mb_left);
 		key_moon = keyboard_check(ord("Q"));
-		key_dash = keyboard_check(vk_shift);
+		key_dash = keyboard_check_pressed(vk_shift);
 		key_heal = keyboard_check(ord("F"));
 		
 		move = key_right - key_left;
@@ -428,7 +428,7 @@ switch(PlayerState)
 				case PLAYERSTATE_NEUTRAL.WATER:
 					Gravity = Gravity_Swim;
 					//ySpeed = lerp(ySpeed, 0, 0.1);
-					if (key_crouch && !place_meeting(x, y + 1, obj_WallPlatform))
+					if (key_down && !place_meeting(x, y + 1, obj_WallPlatform))
 					{
 						ySpeed = JumpPower / SwimPower;
 					}
@@ -464,7 +464,8 @@ switch(PlayerState)
 	//If the player is hurt
 	case PLAYERSTATE.HURT:
 	
-		x += xSpeed;
+		//x += xSpeed;
+		//y += ySpeed;
 		PlayerState_Hurt();
 		
 		break;//end hurt

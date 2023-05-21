@@ -57,7 +57,7 @@ image_angle += SpinSpeed;
 
 #region Text
 
-//DrawSetText(c_white, font_NPC, fa_left, fa_top);
+//DrawSetText(c_white, ft_NPC, fa_left, fa_top);
 //draw_text(x, y + 60, PauseFloat);
 
 if (instance_exists(obj_Player))
