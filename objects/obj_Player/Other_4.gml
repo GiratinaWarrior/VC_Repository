@@ -13,14 +13,12 @@ if (layer_exists("Player"))
 	layer = layer_get_id("Player");
 }
 
-	/*
-		Give back the players ability to move when they switch rooms
-		If the room is not a cutscene room
-	*/
-	if (!RoomIsCutscene)
-	{
-		hascontrol = true;
-	}
+/*
+	Give back the players ability to move when they switch rooms
+	If the room is not a cutscene room
+*/
+if (!RoomIsCutscene)
+{
+	hascontrol = true;
+}
 
-//Save the Game
-//SaveGame();

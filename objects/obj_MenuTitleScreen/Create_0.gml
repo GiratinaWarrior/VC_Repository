@@ -8,7 +8,8 @@ TitleMenu_NewGame = function()
 	global.SpawnX = 990;
 	global.SpawnY = 540; 
 	global.Spawnpoint = Room_NoxCity;
-	SlideTransition(TRANS_MODE.GOTO, FirstPlayerRoom); 
+	//SlideTransition(TRANS_MODE.GOTO, FirstPlayerRoom); 
+	TransitionStart(FirstPlayerRoom, seq_FadeOut, seq_FadeIn);
 	SummonPlayer();
 }
 
@@ -34,7 +35,8 @@ TitleMenu_Continue = function()
 		}
 		file_text_close(file);
 		global.SavedVar = saveArray;
-		SlideTransition(TRANS_MODE.GOTO, target);
+		//SlideTransition(TRANS_MODE.GOTO, target);
+		TransitionStart(target, seq_FadeOut, seq_FadeIn);
 		SummonPlayer(startx, starty);
 	}
 } 
