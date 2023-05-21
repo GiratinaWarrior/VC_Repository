@@ -8,5 +8,5 @@ with (obj_PlayBGS)
 	NextBGS = blanksound;
 }
 
-global.SpawnX = 1888;
-global.SpawnY = 224;
+//global.SpawnX = 128;
+//global.SpawnY = 128;

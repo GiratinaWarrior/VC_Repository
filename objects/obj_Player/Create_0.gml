@@ -25,7 +25,7 @@
 
 	//Check if the player can jump
 	PlayerJump = 0;
-	MaxCoyoteJump = 10;
+	MaxCoyoteJump = 5;
 
 #endregion
 
@@ -82,7 +82,7 @@
 	}
 	Gravity_Wall = 0; //The Gravity experienced by the Player when using the wall cling
 	ClingToHope_JumpPowerY = 9; //The Jump height of the wall jump
-	ClingToHope_JumpPowerX = 5; //How far horizontally the wall jump goes
+	ClingToHope_JumpPowerX = 9; //How far horizontally the wall jump goes
 	ClingToHope_Usable = 0; //If Cling To Hope is usable
 	ClingToHope_State = CLINGTOHOPE_STATE.CLIMB;
 	ClingToHope_JumpMomentum = 0;

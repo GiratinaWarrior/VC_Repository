@@ -9,7 +9,7 @@ if (global.Health <= 0)
 		with(instance_create_layer(x, y, layer, obj_PlayerDying))
 		{
 			image_index = 0;
-			sprite_index = other.PlayerSpriteSet[PLAYERSTATE_SPRITE.DEAD];
+			sprite_index = other.PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.DEAD];
 		}
 		
 		//Destroy the regular player object

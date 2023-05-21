@@ -93,18 +93,24 @@ LunarCannonCooldown--;
 //If the player attacks with the Eclipse Blade
 if (key_sword)
 {
-	PlayerState = PLAYERSTATE.SWORD;
+	if (global.AbilityUnlocked_SeleneSword) 
+	{
+		PlayerState = PLAYERSTATE.SWORD;
+	}
 }
 //If the player attacks with Lunar Cannon
 else if (key_moon)
 {
-	if (LunarCannonCooldown < 0) PlayerState = PLAYERSTATE.CANNON;
+	if (LunarCannonCooldown < 0 && global.AbilityUnlocked_LunarCannon) 
+	{
+		PlayerState = PLAYERSTATE.CANNON;
+	}
 }
 //If the player uses Crescent Blitz
 else if (key_dash)
 {
 	//If the dash is usable
-	if (CrescentBlitz_Usable) 
+	if (CrescentBlitz_Usable && global.AbilityUnlocked_CrescentBlitz) 
 	{
 		PlayerJump = 0;
 		CrescentBlitz_Usable = false;
@@ -187,7 +193,7 @@ switch(PlayerState)
 				image_speed = 0;
 				
 				//If the player is falling
-				if (ySpeed > 0)
+				if (ySpeed >= 0)
 				{
 					image_index = 1;
 					Gravity_Normal = Gravity_Fall; //Set the gravity to the falling gravity
@@ -213,7 +219,7 @@ switch(PlayerState)
 				if (StarJump_Usable)
 				{
 					//if the player presses the star jump button
-					if (key_starjump)
+					if (key_starjump && global.AbilityUnlocked_StarJump)
 					{
 						ySpeed = -StarJump_Power;
 						StarJump_Usable = false;
@@ -226,7 +232,7 @@ switch(PlayerState)
 					ParticleTrail(spr_StarJumpParticles);
 				}
 				
-				if (ClingToHope_Usable != 0)
+				if (ClingToHope_Usable != 0 && global.AbilityUnlocked_ClingToHope)
 				{
 					if (key_wall)
 					{

@@ -27,7 +27,12 @@ function PlayerState_LunarCannon(){
 	
 		image_speed = 1;
 		
-		sprite_index = spr_RoseLunarCannon;
+		if (sprite_index != spr_RoseLunarCannon)
+		{
+			image_index = 0;
+			sprite_index = spr_RoseLunarCannon;
+		}
+	
 	
 		if (image_index > 3)
 		{

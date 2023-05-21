@@ -1,13 +1,11 @@
 /// @description GUI/Vars/Menu setup
 #macro SAVEFILE "Save.sav"
 
-FirstPlayerRoom = Room_Testing;
+FirstPlayerRoom = Room_RoseRoom;
 
 TitleMenu_NewGame = function()
 {
-	global.SpawnX = 990;
-	global.SpawnY = 540; 
-	global.Spawnpoint = Room_NoxCity;
+	SetSpawnpoint(128, 128, Room_RoseRoom);
 	//SlideTransition(TRANS_MODE.GOTO, FirstPlayerRoom); 
 	TransitionStart(FirstPlayerRoom, seq_FadeOut, seq_FadeIn);
 	SummonPlayer();

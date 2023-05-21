@@ -1,11 +1,12 @@
-/// @description SetSpawnpoint(x, y)
+/// @description SetSpawnpoint(x, y, room)
 /// @arg x
 /// @arg y
-function SetSpawnpoint(argument0, argument1){
+/// @arg room
+function SetSpawnpoint(_spawnx, _spawny, _spawnroom = room){
 
-	global.Spawnpoint = room;
-	global.SpawnX = argument0;
-	global.SpawnY = argument1;
+	global.Spawnpoint = _spawnroom;
+	global.SpawnX = _spawnx;
+	global.SpawnY = _spawny;
 	
 	global.WarpTargetX = global.SpawnX;
 	global.WarpTargetY = global.SpawnY;

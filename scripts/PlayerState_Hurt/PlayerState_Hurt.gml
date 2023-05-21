@@ -4,8 +4,8 @@ function PlayerState_Hurt(){
 
 	hascontrol = false;
 	image_speed = 0;
-	sprite_index = PlayerSpriteSet[PLAYERSTATE_SPRITE.DAMAGED];
-	mask_index = PlayerSpriteSet[PLAYERSTATE_SPRITE.IDLE];
+	sprite_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.HURT];
+	mask_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.IDLE];
 	//image_alpha = Wave(0, 1, 0.1, 1);
 	
 	var _vulnerable = function()

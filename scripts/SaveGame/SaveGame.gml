@@ -6,7 +6,9 @@ function SaveGame(){
 	if (file_exists(SAVEFILE)) {
 		file_delete(SAVEFILE);
 	}
-
+	
+	SetSpawnpoint(x, y, room);
+	
 	//Create new save
 	var file;
 	var saveArray = global.SavedVar;

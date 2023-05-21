@@ -13,9 +13,6 @@ global.OceanOrb = 0;
 global.TundraOrb = 0;
 global.DesertOrb = 0;
 
-//How much damaage bosses take from swords
-global.BossDamage = 4;
-
 global.Spawnpoint = Room_Testing;
 global.SpawnX = 904;
 global.SpawnY = 228;
@@ -23,9 +20,6 @@ global.SpawnY = 228;
 //Immortal = 1 | mortal
 //Immortal = 0 | immortal
 global.Immortal = 1;
-
-//amount of damage the Tsukuyomi Sword
-global.SwordDamage = 4;
 
 //The names of the player
 global.Title = "Cardinal";
@@ -52,10 +46,10 @@ global.WarpTargetY = 228;
 
 global.AbilityUnlocked_SeleneSword = true;
 global.AbilityUnlocked_LunarCannon = true;
-global.AbilityUnlocked_StarJump = true;
-global.AbilityUnlocked_CrescentBlitz = true;
-global.AbilityUnlocked_ClingToHope = true;
-global.AbilityUnlocked_NightNight = true;
+global.AbilityUnlocked_StarJump = false;
+global.AbilityUnlocked_CrescentBlitz = false;
+global.AbilityUnlocked_ClingToHope = false;
+global.AbilityUnlocked_NightNight = false;
 
 global.SavedVar = [];
 
