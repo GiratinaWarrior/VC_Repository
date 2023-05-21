@@ -407,7 +407,7 @@ switch(PlayerState)
 		}//end neutral state machine
 		
 		//mask_index = sprite_index;
-		mask_index = PlayerSpriteSet[PLAYERSTATE_SPRITE.IDLE];
+		mask_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.IDLE];
 	
 		PlayerState_SeleneSword(_attacksprite, _attackhitbox, _attackdir);
 		

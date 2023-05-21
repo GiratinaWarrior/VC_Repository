@@ -32,10 +32,9 @@
 #region Input Variables
 
 	//Whether the player has control over their actions
-	hascontrol = true;
+	hascontrol = false;
 
 	//the inputs for the attacks
-	
 	key_left = false;
 	key_right = false;
 	key_up = false;
@@ -164,7 +163,6 @@ enum PLAYERSPRITE_SPECIAL
 
 //Invincibility Variables
 Invincible = false; //If the player is invincible or not
-InvincCoolDown = 100; //How long the player is invincible
 
 //A measure of how long the player is in the HURT state for
 DamagedTimer = 0;

@@ -1,3 +1,3 @@
-target = Room_NoxCity;
-WarpX = 990;
-WarpY = 500;
+target = Room_RoseRoom;
+WarpX = 907;
+WarpY = 270;

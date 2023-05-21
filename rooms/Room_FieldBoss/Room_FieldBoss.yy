@@ -69,7 +69,6 @@
     {"name":"inst_731200DC","path":"rooms/Room_FieldBoss/Room_FieldBoss.yy",},
     {"name":"inst_2B4EA845","path":"rooms/Room_FieldBoss/Room_FieldBoss.yy",},
     {"name":"inst_1136B50F","path":"rooms/Room_FieldBoss/Room_FieldBoss.yy",},
-    {"name":"inst_464EBBCE","path":"rooms/Room_FieldBoss/Room_FieldBoss.yy",},
     {"name":"inst_14298855","path":"rooms/Room_FieldBoss/Room_FieldBoss.yy",},
     {"name":"inst_54FCE1BE","path":"rooms/Room_FieldBoss/Room_FieldBoss.yy",},
     {"name":"inst_712E69EB","path":"rooms/Room_FieldBoss/Room_FieldBoss.yy",},
@@ -123,7 +122,6 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_186DE9EB","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_VRBossAura","path":"objects/obj_VRBossAura/obj_VRBossAura.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":944.0,"y":512.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Player","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_464EBBCE","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Transition","path":"objects/obj_Transition/obj_Transition.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1007.0,"y":448.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_54FCE1BE","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Camera","path":"objects/obj_Camera/obj_Camera.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":800.0,"y":512.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Platforms","depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[

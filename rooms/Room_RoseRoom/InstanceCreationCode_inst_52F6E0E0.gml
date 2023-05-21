@@ -1,1 +1,0 @@
-target = Room_ShrineHall;
