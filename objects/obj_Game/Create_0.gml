@@ -3,6 +3,8 @@
 //The number of orbs we've retrieved
 global.OrbsCollected = 0;
 
+global.MaxHealth = 10;
+
 //Which orbs we've retrieved in specific
 // 0 = false, unretrieved
 // 1 = true, retrieved
@@ -43,7 +45,7 @@ global.OceanSound = sound_StormySeas;
 global.TundraTheme = music_TundraTheme;
 global.TundraSound = sound_Blizzard;
 
-global.Health = 10;
+global.Health = global.MaxHealth;
 
 global.WarpTargetX = 904;
 global.WarpTargetY = 228;

@@ -14,4 +14,21 @@ menu[0] = "Surrender";
 menu_items = array_length_1d(menu);
 menu_cursor = 2;
 
-//menu_top = menu_y - ((menu_itemheight * 1.5) * menu_items);
+GameOverMenu_Strive = function()
+{
+	SlideTransition(TRANS_MODE.GOTO, global.Spawnpoint); 
+	SummonPlayer();
+}
+
+GameOverMenu_Surrender = function()
+{
+	game_end();
+}
+
+MenuOptions_2DArray =
+[
+	["Strive", GameOverMenu_Strive],
+	["Surrender", GameOverMenu_Surrender]
+]
+
+Menu(room_width/2 + 200, room_height/2, MenuOptions_2DArray, -1, font_TitleScreen);

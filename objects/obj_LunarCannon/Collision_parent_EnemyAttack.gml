@@ -2,8 +2,7 @@
 
 with (other)
 {
-	if (!Indestructible)
-	{
-		Health -= other.Damage;
-	}
+	
+	Health -= other.PlayerAttackDamage;
+	
 }

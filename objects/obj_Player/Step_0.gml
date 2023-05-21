@@ -122,14 +122,6 @@ if (PlayerState != PLAYERSTATE.WALL)
 	image_yscale = 1;
 }
 
-if (place_meeting(x, y, parent_Enemy) || place_meeting(x, y, parent_EnemyAttack))
-{	
-	if (Invincible == false && global.Immortal == 1)
-	{
-		PlayerTakenDamage();
-	}
-}
-
 #endregion
 
 #region State Machine

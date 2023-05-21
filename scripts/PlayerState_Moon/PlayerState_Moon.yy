@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Moon",
-    "path": "folders/Objects/PlayerStuff/Player/PlayerScripts/Moon.yy",
+    "path": "folders/Objects/PlayerStuff/Player/WorthlessScripts/Moon.yy",
   },
 }

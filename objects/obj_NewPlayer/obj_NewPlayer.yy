@@ -16,8 +16,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Now Old",
-    "path": "folders/Objects/PlayerStuff/Player/Now Old.yy",
+    "name": "Worthless",
+    "path": "folders/Objects/PlayerStuff/Player/Worthless.yy",
   },
   "parentObjectId": null,
   "persistent": true,

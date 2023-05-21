@@ -182,3 +182,12 @@ y = global.SpawnY;
 RoomIsCutscene = false;
 
 #endregion
+
+#region Health
+
+HealthBarWidth = 200; 
+HealthBarHeight = HealthBarWidth/10;
+HealthBarX = 10;
+HealthBarY = 10;
+
+#endregion

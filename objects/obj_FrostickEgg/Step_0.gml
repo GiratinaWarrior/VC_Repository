@@ -2,7 +2,7 @@
 
 if (EggSize > 0.7)
 {
-	instance_create_layer(x, y, "Frosticks", obj_SnowBall);
+	instance_create_depth(x, y, depth + 1, obj_SnowBall);
 }
 
 if (EggSize >= 1)

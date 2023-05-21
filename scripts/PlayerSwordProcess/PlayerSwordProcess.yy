@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Sword",
-    "path": "folders/Objects/PlayerStuff/Player/PlayerScripts/Sword.yy",
+    "path": "folders/Objects/PlayerStuff/Player/WorthlessScripts/Sword.yy",
   },
 }

@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Now New",
-    "path": "folders/Objects/PlayerStuff/Player/Now New.yy",
+    "name": "Scripts",
+    "path": "folders/Objects/PlayerStuff/Player/Scripts.yy",
   },
 }

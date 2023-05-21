@@ -63,7 +63,7 @@ else
 //If the spike has been launched
 if (IceSpikeLaunched)
 {
-	with(instance_create_layer(x, y, layer, obj_IceSpikeAttack))
+	with(instance_create_depth(x, y, depth, obj_IceSpikeAttack))
 	{
 		sprite_index = other.sprite_index;
 		direction = point_direction(other.x, other.y, obj_Player.x, obj_Player.y);

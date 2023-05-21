@@ -20,8 +20,8 @@ FirstPlayerRoom = Room_Testing;
 
 TitleMenu_NewGame = function()
 {
-	global.SpawnX = 904;
-	global.SpawnY = 228; 
+	global.SpawnX = 990;
+	global.SpawnY = 540; 
 	global.Spawnpoint = Room_NoxCity;
 	SlideTransition(TRANS_MODE.GOTO, FirstPlayerRoom); 
 	SummonPlayer();
@@ -32,12 +32,7 @@ TitleMenu_Continue = function()
 	//If a savefile does not exist
 	if (!file_exists(SAVEFILE)) 
 	{
-		global.SpawnX = 990;
-		global.SpawnY = 540; 
-		global.Spawnpoint = FirstPlayerRoom;
-					
-		SlideTransition(TRANS_MODE.GOTO, FirstPlayerRoom); 
-		SummonPlayer();
+		TitleMenu_NewGame()
 	}//end savefile doesn't exist
 				
 	//If a savefile exists, transfer the data within it
@@ -64,23 +59,6 @@ TitleMenu_Quit = function()
 	game_end(); 
 }
 
-Test_1 = function()
-{
-	show_debug_message(obj_Menu.Menu_Hover);
-}
-
-
-Test_2 = function()
-{
-	show_debug_message(obj_Menu.Menu_Hover);
-}
-
-
-Test_3 = function()
-{
-	show_debug_message(obj_Menu.Menu_Hover);
-}
-
 MenuOptions_2DArray = 
 [
 	["Continue", TitleMenu_Continue],
@@ -88,4 +66,4 @@ MenuOptions_2DArray =
 	["Quit", TitleMenu_Quit]
 ]
 
-Menu(room_width/2 + 100, room_height/2, MenuOptions_2DArray, -1 ,font_TitleScreen);
+Menu(room_width/2 + 200, room_height/2, MenuOptions_2DArray, -1 ,font_TitleScreen);

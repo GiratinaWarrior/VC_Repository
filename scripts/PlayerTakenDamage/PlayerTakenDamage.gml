@@ -6,9 +6,9 @@ function PlayerTakenDamage(){
 	{
 		audio_play_sound(sound_PlayerDamage, 5, false);
 	
-		//global.Health -= other.Damage * global.Immortal;
-	
 		AttackerID = other.id;
+	
+		global.Health -= other.Damage;
 	
 		PlayerState = PLAYERSTATE.HURT;
 	
