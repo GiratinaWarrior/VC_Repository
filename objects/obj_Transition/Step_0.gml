@@ -4,19 +4,21 @@
 if (mode != TRANS_MODE.OFF)
 {
 	
+	PercentRise = 0.005;
+	
 	MaxReach = 1.2;
 	
 	//if the intro is starting
 	if (mode == TRANS_MODE.INTRO) {
 		
-		percent = max(0, percent - max((percent/10), 0.005));
+		percent = max(0, percent - max((percent/10), PercentRise));
 		
 	}//end intro start
 	
 	//if the intro has already started
 	else {
 		
-		percent = min(MaxReach, percent + max(((MaxReach - percent)/10), 0.005));
+		percent = min(MaxReach, percent + max(((MaxReach - percent)/10), PercentRise));
 		
 	}//end intro already started
 	

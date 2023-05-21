@@ -9,20 +9,10 @@ GameOverMenu_Surrender = function()
 	game_end();
 }
 
-Test_1 = function()
-{
-	show_debug_message("Test 1");
-}
-
-Test_2 = function()
-{
-	show_debug_message("Test 2");
-}
-
 MenuOptions_2DArray =
 [
-	["Strive", Test_1],
-	["Surrender", Test_2]
+	["Strive", GameOverMenu_Strive],
+	["Surrender", GameOverMenu_Surrender]
 ]
 
 

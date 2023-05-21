@@ -24,8 +24,8 @@
     "Keyframes": [],
   },
   "parent": {
-    "name": "Sequences",
-    "path": "folders/Sequences.yy",
+    "name": "Title",
+    "path": "folders/Sequences/Title.yy",
   },
   "playback": 1,
   "playbackSpeed": 10.0,

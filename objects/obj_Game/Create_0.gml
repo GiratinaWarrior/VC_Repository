@@ -16,7 +16,7 @@ global.DesertOrb = 0;
 //How much damaage bosses take from swords
 global.BossDamage = 4;
 
-global.Spawnpoint = Room_NoxCity;
+global.Spawnpoint = Room_Testing;
 global.SpawnX = 904;
 global.SpawnY = 228;
 
