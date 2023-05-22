@@ -12,12 +12,12 @@ Wall_LedgeTurn();
 //Turn direction at a wall
 Wall_SwitchRun();
 
-x = x + xSpeed;
+x += xSpeed;
 
 //Collision for walls when falling
 Wall_FallOn();
 
-y = y + ySpeed;
+y += ySpeed;
 
 #endregion
 

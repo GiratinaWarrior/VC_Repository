@@ -4,7 +4,7 @@ Gravity = 0.5;
 
 SoldierSpeed = 5;
 
-xSpeed = 5;
+xSpeed = SoldierSpeed;
 ySpeed = 0;
 
 enum SHRINESOLDIER_STATE
