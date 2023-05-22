@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Wall_LedgeTurn(){
 	
-	if (Grounded) && (AfraidOfHeights) && (!place_meeting(x + xSpeed + (sign(xSpeed) * abs(sprite_width)), y + 1, obj_WallPlatform)) 
+	if (place_meeting(x, y + 1, obj_WallPlatform)) && (!place_meeting(x + xSpeed + (sign(xSpeed) * abs(sprite_width/2)), y + 1, obj_WallPlatform)) 
 	{
 		xSpeed = -xSpeed;
 	}

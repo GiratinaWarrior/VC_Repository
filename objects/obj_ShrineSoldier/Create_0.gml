@@ -2,7 +2,7 @@
 
 Gravity = 0.5;
 
-SoldierSpeed = 5;
+SoldierSpeed = 1;
 
 xSpeed = SoldierSpeed;
 ySpeed = 0;
@@ -15,3 +15,5 @@ enum SHRINESOLDIER_STATE
 }
 
 SoldierState = SHRINESOLDIER_STATE.WALK;
+
+PlayerInRange = 0;

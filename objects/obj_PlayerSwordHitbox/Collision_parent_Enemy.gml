@@ -1,6 +1,6 @@
 /// @description
 
-
+HitSomething = true;
 
 //Access the enemy instance
 with (other)
@@ -21,17 +21,20 @@ with (other)
 		
 		
 }//end access enemy
-	
-with (obj_Player)
+
+with(obj_Player)
 {
+	//If the player attacked down, do a pogo jump
 	if (sprite_index == spr_PlayerAirJumpDown_SeleneSword)
 	{
-		ySpeed = -JumpPower * 2;
-	}
+		ySpeed = -JumpPower * 1;
+	}//end pogo jump
+			
+	//If the player attack up, make the vertical speed zero
 	else if (sprite_index == spr_PlayerAirJumpUp_SeleneSword)
 	{
 		ySpeed = 0;
-	}
+	}//end stop jump
 }
 
 //If the attack can't phase through enemies, destroy itself

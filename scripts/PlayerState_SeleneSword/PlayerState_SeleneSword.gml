@@ -8,6 +8,8 @@ function PlayerState_SeleneSword(argument0, argument1, argument2){
 	var _attacksprite = argument0;
 	var _attackhitbox = argument1;
 	var _attackdir = argument2;
+	
+	var _newHitBox = noone;
 
 	if (PlayerNeutralState == PLAYERSTATE_NEUTRAL.GROUND)
 	{
@@ -37,14 +39,35 @@ function PlayerState_SeleneSword(argument0, argument1, argument2){
 		}
 
 		_SeleneSwordHitboxsprite = _attackhitbox;
-
-		with (instance_create_layer(x + _offsetx, y + _offsety, layer, obj_PlayerSwordHitbox))
-		{
-			sprite_index = other._SeleneSwordHitboxsprite;
-		}
+		
+		_newHitBox = instance_create_layer(x + _offsetx, y + _offsety, layer, obj_PlayerSwordHitbox);
+		
+		_newHitBox.sprite_index = _SeleneSwordHitboxsprite;
+		
 		
 	}
 
+	//Check if the hitbox still exists
+	if (instance_exists(_newHitBox))
+	{
+		//Check if the hitbox hit something
+		if (_newHitBox.HitSomething)
+		{
+			//If the player attacked down, do a pogo jump
+			if (sprite_index == spr_PlayerAirJumpDown_SeleneSword)
+			{
+				ySpeed = -JumpPower * 1;
+			}//end pogo jump
+			
+			//If the player attack up, make the vertical speed zero
+			else if (sprite_index == spr_PlayerAirJumpUp_SeleneSword)
+			{
+				ySpeed = 0;
+			}//end stop jump
+			
+		}//end if hit something
+		
+	}//end hitbox exists
 
 	if (ySpeed >= 0)
 	{ 	
@@ -55,7 +78,7 @@ function PlayerState_SeleneSword(argument0, argument1, argument2){
 		Gravity_Normal = Gravity_Jump;
 		if (!key_jump)
 		{
-			ySpeed = 0;
+			//ySpeed = 0;
 		}
 	}
 	

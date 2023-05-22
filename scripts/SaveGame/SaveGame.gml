@@ -7,7 +7,6 @@ function SaveGame(){
 		file_delete(SAVEFILE);
 	}
 	
-	SetSpawnpoint(x, y, room);
 	
 	//Create new save
 	var file;

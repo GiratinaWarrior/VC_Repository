@@ -2,7 +2,7 @@
 function PlayerTakenDamage(){
 
 	//show_debug_message(global.Immortal);
-	if (global.Immortal == 1)
+	if (other.Damage > 0)
 	{
 		audio_play_sound(sound_PlayerDamage, 5, false);
 	
