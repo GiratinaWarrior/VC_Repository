@@ -1,15 +1,29 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function Enemy_RecoverFromAttack(_func){
+function Enemy_RecoverFromAttack(_additionalfunc = function(){}){
 	
-	Attacked = false;
-	HitFlash = 0;
-	HitFrom = 0;
-	image_alpha = 1;
+	_EnemyRecoverAdditionalFunction = _additionalfunc;
+	
+	var _recovery = function()
+	{
+		Attacked = false;
+		HitFlash = 0;
+		HitFrom = 0;
+		image_alpha = 1;
+		_EnemyRecoverAdditionalFunction();
+		Attacked = false;
+	}
+	
+	var _newMeth = method(self, _recovery);
+	
+	//FlashLength
+	var _newshit = time_source_create(time_source_game, FlashLength, time_source_units_frames, _newMeth);
+	
+	time_source_start(_newshit);
 	
 }
 
-function Enemy_Stunned()
+function Enemy_Stunned(_morehurtfunc = function(){}, _morerecoverfunc = function(){})
 {
 	//Decrease enemy health
 	Health -= other.PlayerAttackDamage;
@@ -19,7 +33,8 @@ function Enemy_Stunned()
 	
 	Attacked = true;
 	
-	//FlashLength
+	_morehurtfunc();
 	
+	Enemy_RecoverFromAttack(_morerecoverfunc);
 	
 }

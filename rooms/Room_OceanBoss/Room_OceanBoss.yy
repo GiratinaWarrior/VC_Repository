@@ -2,7 +2,7 @@
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
   "name": "Room_OceanBoss",
-  "creationCodeFile": "${project_dir}/rooms/Room_OceanBoss/RoomCreationCode.gml",
+  "creationCodeFile": "rooms/Room_OceanBoss/RoomCreationCode.gml",
   "inheritCode": false,
   "inheritCreationOrder": false,
   "inheritLayers": false,

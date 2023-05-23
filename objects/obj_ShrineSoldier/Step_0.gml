@@ -8,6 +8,8 @@
 	Wall_SwitchRun();
 	Wall_LedgeTurn();
 
+	x += xSpeed;
+	
 	y += ySpeed;
 
 #endregion Movement
@@ -46,7 +48,6 @@ switch(SoldierState)
 		
 		if (xSpeed != 0) image_xscale = sign(xSpeed);
 	
-		x += xSpeed;
 		
 		break;
 		
@@ -55,6 +56,8 @@ switch(SoldierState)
 		break;
 		
 	case SHRINESOLDIER_STATE.HURT:
+		
+		image_speed = 0;
 		
 		xSpeed = lengthdir_x(SoldierSpeed, HitFrom);
 		

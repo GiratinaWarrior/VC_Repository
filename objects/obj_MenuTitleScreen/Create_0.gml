@@ -16,7 +16,8 @@ TitleMenu_Continue = function()
 	//If a savefile does not exist
 	if (!file_exists(SAVEFILE)) 
 	{
-		TitleMenu_NewGame()
+		TitleMenu_NewGame();
+		//show_debug_message("Save doesnt exist : Make new one");
 	}//end savefile doesn't exist
 				
 	//If a savefile exists, transfer the data within it
@@ -35,6 +36,8 @@ TitleMenu_Continue = function()
 		global.SavedVar = saveArray;
 		//SlideTransition(TRANS_MODE.GOTO, target);
 		TransitionStart(target, seq_FadeOut, seq_FadeIn);
+		show_debug_message("Target Room Read From File: {0}" , room_get_name(target));
+		show_debug_message("Global Spawnpoint: {0}", room_get_name(global.Spawnpoint));
 		SummonPlayer(startx, starty);
 	}
 } 

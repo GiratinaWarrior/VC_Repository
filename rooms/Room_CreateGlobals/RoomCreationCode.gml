@@ -1,0 +1,1 @@
+TransitionStart(Room_TitleScreen, seq_FadeOut, seq_FadeIn);

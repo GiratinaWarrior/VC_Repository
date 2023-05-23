@@ -13,7 +13,7 @@ global.OceanOrb = 0;
 global.TundraOrb = 0;
 global.DesertOrb = 0;
 
-global.Spawnpoint = Room_Testing;
+global.Spawnpoint = Room_RoseRoom;
 global.SpawnX = 904;
 global.SpawnY = 228;
 
@@ -51,8 +51,6 @@ global.AbilityUnlocked_CrescentBlitz = false;
 global.AbilityUnlocked_ClingToHope = false;
 global.AbilityUnlocked_NightNight = false;
 
-global.SavedVar = [];
-
 enum SAVED_VAR
 {
 	SPAWNPOINT,
@@ -72,7 +70,7 @@ enum SAVED_VAR
 	NIGHTNIGHT_UNLOCKED
 }
 
-
+SetGlobalArray();
 
 
 

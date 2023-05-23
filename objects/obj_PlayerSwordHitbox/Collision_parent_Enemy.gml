@@ -5,21 +5,9 @@ HitSomething = true;
 //Access the enemy instance
 with (other)
 {
-	//Decrease enemy health
-	Health -= other.PlayerAttackDamage;
-		
-	//store the direction of the attack relative to the enemy
-	HitFrom = point_direction(other.x, other.y, x, y);
 	
-	Attacked = true;
-	if (!alarm[11])
-	{
-
-		alarm[11] = FlashLength;
-
-	}
-		
-		
+//	Enemy_Stunned();
+			
 }//end access enemy
 
 with(obj_Player)

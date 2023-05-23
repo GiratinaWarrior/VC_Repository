@@ -7,17 +7,19 @@ function SaveGame(){
 		file_delete(SAVEFILE);
 	}
 	
+	SetGlobalArray();
 	
 	//Create new save
 	var file;
 	var saveArray = global.SavedVar;
 	file = file_text_open_write(SAVEFILE);
-	file_text_write_real(file, global.Spawnpoint);
-	for (var f = 1; f < array_length(saveArray); f++)
+	//file_text_write_real(file, global.Spawnpoint);
+	for (var f = 0; f < array_length(saveArray); f++)
 	{
 		file_text_write_real(file, saveArray[f]);
 	}
 	global.SavedVar = saveArray;
 	file_text_close(file);
+	//show_debug_message("Game Saved");
 	
 }

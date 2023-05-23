@@ -10,5 +10,7 @@ function SetSpawnpoint(_spawnx, _spawny, _spawnroom = room){
 	
 	global.WarpTargetX = global.SpawnX;
 	global.WarpTargetY = global.SpawnY;
+	
+	show_debug_message(room_get_name(global.Spawnpoint));
 
 }

@@ -9,4 +9,5 @@ with (obj_PlayBGS)
 }
 
 SaveGame();
-SetSpawnpoint(1920, 512);
+SetSpawnpoint(1920, 512, Room_ShrineHall);
+show_debug_message("Shrine Hall Set Spawnpoint")

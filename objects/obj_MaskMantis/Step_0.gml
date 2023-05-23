@@ -23,6 +23,7 @@ y += ySpeed;
 
 #region Change State
 
+//If MM has been attacked by the player
 if (!Attacked)
 {
 	//If the Masked Mantis is on the ground
@@ -68,11 +69,13 @@ if (!Attacked)
 	
 	}//end MM in the air 
 }
-
+//If MM has not been attacked
 else
 {
 	MantisState = MASKMANTIS_STATE.KNOCKBACK;
 }
+
+
 
 #endregion
 
@@ -162,7 +165,9 @@ switch(MantisState)
 	
 	//If hit by an attack
 	case MASKMANTIS_STATE.KNOCKBACK:
-	
+		
+		image_speed = 0;
+		
 		xSpeed = lengthdir_x(5, HitFrom);
 		
 		break;
