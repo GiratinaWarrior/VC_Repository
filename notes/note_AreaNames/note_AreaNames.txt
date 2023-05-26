@@ -1,5 +1,5 @@
 Towns;
-	City of Eternal Night
+	Noctis City
 	Mysticasia Town
 	Sermaria Settlement
 	Vitrustal Kingdom
@@ -7,7 +7,9 @@ Towns;
 	
 Areas;
 	Somnium Forest
+	Nestmask
 	Aeternus Ocean
+	
 	Inexoria Mountains
 	Acribus Desert
 	

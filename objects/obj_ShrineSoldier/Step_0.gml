@@ -18,22 +18,14 @@
 
 if (instance_exists(obj_Player))
 {
-	PlayerInRange = (abs(x - obj_Player.x) > 50);
+	PlayerInRange = (abs(x - obj_Player.x) < 100 && abs(y - obj_Player.y) < 32);
 }
-
-if (!Attacked)
-{
-	if (PlayerInRange)
-	{
-		//SoldierState = SHRINESOLDIER_STATE.ATTACK;
-	}
-	else
-	{
-		SoldierState = SHRINESOLDIER_STATE.WALK;
-	}
-}
-
 else
+{
+	PlayerInRange = false;
+}
+
+if (Attacked)
 {
 	SoldierState = SHRINESOLDIER_STATE.HURT;
 }
@@ -50,10 +42,13 @@ switch(SoldierState)
 		
 		image_speed = 1;
 		
-		
-		
 		if (xSpeed != 0) image_xscale = sign(xSpeed);
-	
+		
+		if (PlayerInRange)
+		{
+			SoldierState = SHRINESOLDIER_STATE.ATTACK;
+		}
+		
 		break;
 		
 	case SHRINESOLDIER_STATE.ATTACK:
@@ -69,6 +64,10 @@ switch(SoldierState)
 		image_speed = 0;
 		
 		xSpeed = lengthdir_x(SoldierSpeed, HitFrom);
+	
+		x += xSpeed;
+	
+		instance_destroy(ShrineSoldierAttackHitbox);
 		
 		break;
 }

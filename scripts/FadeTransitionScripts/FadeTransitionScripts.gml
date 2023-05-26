@@ -16,6 +16,9 @@ function TransitionSequence(_type){
 //Transition to another room, using sequences of choice
 function TransitionStart(_roomTarget, _typeOut, _typeIn)
 {
+	
+	show_debug_message("TransitionStart Called");
+	
 	//Check if a room transition is currently occuring
 	if (!global.MidTransition)
 	{
@@ -25,14 +28,17 @@ function TransitionStart(_roomTarget, _typeOut, _typeIn)
 		layer_set_target_room(_roomTarget); //target a different room
 		TransitionSequence(_typeIn); //target a different room, and create a transition sequence
 		layer_reset_target_room(); //reset the target room
-		return true;
+		
+		show_debug_message("Transition Started");
+		
 	}
-	else return false;
+	
 }
 
 //Change rooms
 function TransitionRoom()
 {
+	show_debug_message("TransitionRoom Called");
 	room_goto(global.roomTarget);
 }
 
@@ -41,4 +47,5 @@ function TransitionFinished()
 {
 	layer_sequence_destroy(self.elementID);
 	global.MidTransition = false;
+	show_debug_message("TransitionFinished Called");
 }

@@ -21,8 +21,8 @@
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Player","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
   ],
   "parent": {
-    "name": "SpecialScreens",
-    "path": "folders/Rooms/SpecialScreens.yy",
+    "name": "Menu",
+    "path": "folders/Rooms/Menu.yy",
   },
   "parentRoom": null,
   "physicsSettings": {

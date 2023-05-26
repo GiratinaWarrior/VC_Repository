@@ -78,7 +78,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"1_Field","folderPath":"folders/Rooms/1_Field.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"2_Ocean","folderPath":"folders/Rooms/2_Ocean.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"3_Tundra","folderPath":"folders/Rooms/3_Tundra.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"SpecialScreens","folderPath":"folders/Rooms/SpecialScreens.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Menu","folderPath":"folders/Rooms/Menu.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Scripts","folderPath":"folders/Scripts.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Miscellaneous","folderPath":"folders/Scripts/Miscellaneous.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Numbers","folderPath":"folders/Scripts/Numbers.yy",},
@@ -185,6 +185,8 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Shrine","folderPath":"folders/Tile Sets/Shrine.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tundra","folderPath":"folders/Tile Sets/Tundra.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Unplayable","folderPath":"folders/Rooms/Unplayable.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Cutscene","folderPath":"folders/Rooms/Cutscene.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"FieldTiles(MatureTime).tset","CopyToMask":-1,"filePath":"datafiles",},
@@ -237,6 +239,7 @@
     {"id":{"name":"spr_TextMarker","path":"sprites/spr_TextMarker/spr_TextMarker.yy",},},
     {"id":{"name":"obj_TitleCard","path":"objects/obj_TitleCard/obj_TitleCard.yy",},},
     {"id":{"name":"spr_OceanOrb","path":"sprites/spr_OceanOrb/spr_OceanOrb.yy",},},
+    {"id":{"name":"Room_OpeningCutscene","path":"rooms/Room_OpeningCutscene/Room_OpeningCutscene.yy",},},
     {"id":{"name":"pt_Tundragon12","path":"paths/pt_Tundragon12/pt_Tundragon12.yy",},},
     {"id":{"name":"spr_VioletRoseryFrenzyRevert","path":"sprites/spr_VioletRoseryFrenzyRevert/spr_VioletRoseryFrenzyRevert.yy",},},
     {"id":{"name":"spr_ConjuredCrabDead","path":"sprites/spr_ConjuredCrabDead/spr_ConjuredCrabDead.yy",},},
@@ -666,6 +669,7 @@
     {"roomId":{"name":"Room_ShrineHall","path":"rooms/Room_ShrineHall/Room_ShrineHall.yy",},},
     {"roomId":{"name":"Room_Testing","path":"rooms/Room_Testing/Room_Testing.yy",},},
     {"roomId":{"name":"Room_ShrineLobby","path":"rooms/Room_ShrineLobby/Room_ShrineLobby.yy",},},
+    {"roomId":{"name":"Room_OpeningCutscene","path":"rooms/Room_OpeningCutscene/Room_OpeningCutscene.yy",},},
   ],
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},

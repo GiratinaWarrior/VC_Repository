@@ -14,7 +14,7 @@ if (Menu_Hover < 0)
 	Menu_Hover = 0;
 }
 
-if (keyboard_check_pressed(vk_space))
+if (keyboard_check_pressed(vk_space) && !global.MidTransition)
 {
 	Menu_Chosen = true;
 	if (array_length(Menu_Options[Menu_Hover]) == 2)
