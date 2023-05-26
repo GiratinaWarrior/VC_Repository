@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "SetSpawnpoint",
+  "name": "SaveAndLoadScripts",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

@@ -14,8 +14,8 @@ global.TundraOrb = 0;
 global.DesertOrb = 0;
 
 global.Spawnpoint = Room_RoseRoom;
-global.SpawnX = 904;
-global.SpawnY = 228;
+global.SpawnX = 128;
+global.SpawnY = 128;
 
 //Immortal = 1 | mortal
 //Immortal = 0 | immortal
@@ -41,8 +41,8 @@ global.TundraSound = sound_Blizzard;
 
 global.Health = global.MaxHealth;
 
-global.WarpTargetX = 904;
-global.WarpTargetY = 228;
+global.WarpTargetX = 128;
+global.WarpTargetY = 128;
 
 global.AbilityUnlocked_SeleneSword = true;
 global.AbilityUnlocked_LunarCannon = true;
@@ -51,29 +51,8 @@ global.AbilityUnlocked_CrescentBlitz = false;
 global.AbilityUnlocked_ClingToHope = false;
 global.AbilityUnlocked_NightNight = false;
 
-enum SAVED_VAR
-{
-	SPAWNPOINT,
-	SPAWNX,
-	SPAWNY,
-	HEALTH,
-	ORBSCOLLECTED,
-	FIELDORB,
-	OCEANORB,
-	TUNDRAORB,
-	DESERTORB,
-	SELENESWORD_UNLOCKED,
-	LUNARCANNON_UNLOCKED,
-	STARJUMP_UNLOCKED,
-	CRESCENTBLITZ_UNLOCKED,
-	CLINGTOHOPE_UNLOCKED,
-	NIGHTNIGHT_UNLOCKED
-}
-
-SetGlobalArray();
 
 
 
 
-
-
+//SetGlobalArray();

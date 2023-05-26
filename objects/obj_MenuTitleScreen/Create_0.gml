@@ -1,45 +1,32 @@
 /// @description GUI/Vars/Menu setup
+
 #macro SAVEFILE "Save.sav"
 
 FirstPlayerRoom = Room_RoseRoom;
 
 TitleMenu_NewGame = function()
 {
-	SetSpawnpoint(128, 128, Room_RoseRoom);
-	//SlideTransition(TRANS_MODE.GOTO, FirstPlayerRoom); 
+	///Set spawnpoint 
 	TransitionStart(FirstPlayerRoom, seq_FadeOut, seq_FadeIn);
+	show_debug_message("TitleScreen New Game Spawnpoint: {0}", global.Spawnpoint);
 	SummonPlayer();
 }
 
 TitleMenu_Continue = function()
 {
-	//If a savefile does not exist
-	if (!file_exists(SAVEFILE)) 
-	{
-		TitleMenu_NewGame();
-		//show_debug_message("Save doesnt exist : Make new one");
-	}//end savefile doesn't exist
-				
-	//If a savefile exists, transfer the data within it
-	else 
-	{
-		var file = file_text_open_read(SAVEFILE);
-		var target = file_text_read_real(file);
-		var startx = file_text_read_real(file);
-		var starty = file_text_read_real(file);
-		var saveArray = global.SavedVar;
-		for (var f = 3; f < array_length(saveArray); f++)
-		{
-			saveArray[f] = file_text_read_real(file);
-		}
-		file_text_close(file);
-		global.SavedVar = saveArray;
-		//SlideTransition(TRANS_MODE.GOTO, target);
-		TransitionStart(target, seq_FadeOut, seq_FadeIn);
-		show_debug_message("Target Room Read From File: {0}" , room_get_name(target));
-		show_debug_message("Global Spawnpoint: {0}", room_get_name(global.Spawnpoint));
-		SummonPlayer(startx, starty);
-	}
+
+		#region New Load Save Mechanic
+		
+		LoadSave();
+		
+		show_debug_message("TitleScreen Continue Spawnpoint: {0}", global.Spawnpoint);
+		
+		TransitionStart(global.Spawnpoint, seq_FadeOut, seq_FadeIn);
+		SummonPlayer(global.SpawnX, global.SpawnY);
+		
+		#endregion
+		
+	
 } 
 
 TitleMenu_Quit = function()

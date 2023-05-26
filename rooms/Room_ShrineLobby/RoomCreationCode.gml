@@ -6,3 +6,6 @@ with (obj_PlayBGS)
 {
 	NextBGS = blanksound;
 }
+
+SetSpawnpoint();
+SaveGame();
