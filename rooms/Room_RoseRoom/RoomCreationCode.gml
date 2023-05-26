@@ -8,5 +8,5 @@ with (obj_PlayBGS)
 	NextBGS = blanksound;
 }
 
-SetSpawnpoint(128, 128);
+SetSpawnpoint();
 SaveGame();

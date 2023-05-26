@@ -6,7 +6,7 @@ FirstPlayerRoom = Room_RoseRoom;
 
 TitleMenu_NewGame = function()
 {
-	///Set spawnpoint 
+	DeleteSave()
 	TransitionStart(FirstPlayerRoom, seq_FadeOut, seq_FadeIn);
 	show_debug_message("TitleScreen New Game Spawnpoint: {0}", global.Spawnpoint);
 	SummonPlayer();
@@ -23,7 +23,8 @@ TitleMenu_Continue = function()
 		
 		TransitionStart(global.Spawnpoint, seq_FadeOut, seq_FadeIn);
 		SummonPlayer(global.SpawnX, global.SpawnY);
-		
+		global.WarpTargetX = global.SpawnX;
+		global.WarpTargetY = global.SpawnY;
 		#endregion
 		
 	

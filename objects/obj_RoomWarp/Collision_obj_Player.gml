@@ -12,3 +12,5 @@ with (obj_Player)
 TransitionStart(target, ExitSequence, EnterSequence);
 global.WarpTargetX = WarpX;
 global.WarpTargetY = WarpY;
+global.SpawnX = global.WarpTargetX;
+global.SpawnY = global.WarpTargetY;

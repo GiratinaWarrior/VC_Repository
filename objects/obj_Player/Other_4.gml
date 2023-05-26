@@ -4,9 +4,6 @@
 x = global.WarpTargetX;
 y = global.WarpTargetY;
 
-//global.SpawnX = global.WarpTargetX;
-//global.SpawnY = global.WarpTargetY;
-
 //Make the player face the direction with more stuff
 image_xscale = sign((room_width/2) - x);
 

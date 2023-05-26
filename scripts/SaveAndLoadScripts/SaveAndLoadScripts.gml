@@ -68,3 +68,13 @@ function LoadSave()
 	}
 
 }
+
+/// DeleteSave()
+// This function deletes a save file
+function DeleteSave()
+{
+	if (file_exists("SaveGame.save"))
+	{
+		file_delete("SaveGame.save");
+	}
+}
