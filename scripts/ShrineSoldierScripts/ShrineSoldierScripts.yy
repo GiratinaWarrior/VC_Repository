@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "PlayerSpawnScripts",
+  "name": "ShrineSoldierScripts",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "Shrine",
+    "path": "folders/Objects/Enemies/Shrine.yy",
   },
 }
