@@ -1,0 +1,138 @@
+////////////////obj_NPC Create
+
+	myTextbox = noone;
+	Speech[0] = "";
+	
+/////////////////obj_NPC Step
+
+	//If the player is present
+	if (instance_exists(obj_Player))
+	{
+
+		//If the player is within talking range
+		if (point_in_circle(obj_Player.x, obj_Player.y, x, y, TalkRange))
+		{
+	
+			//If the player talks to the NPC with the talk button
+			if (mouse_check_button_pressed(mb_right)){
+		
+				if (myTextbox = noone)
+				{
+			
+					CanFloat = 0;
+					walkspeed = 0;
+			
+					TextBoxWidth = sprite_get_width(spr_NPCTextBox);
+			
+					myTextbox = instance_create_layer(x - TextBoxWidth/2, y - 80, layer, obj_NPCTextBox)
+			
+					with (myTextbox) 
+					{
+						Text = other.Speech;					
+						length = string_length(Text);
+					}
+			
+					with (obj_Camera)
+					{
+						follow = other.id;
+					}
+			
+				}//if myTextbox is empty
+
+		
+			}//end mouse right button pressed
+	
+		}//end if nearby
+
+		//If the player isnt in talking range
+		else 
+		{
+			if (myTextbox != noone)
+			{
+				instance_destroy(myTextbox);
+				myTextbox = noone;
+				obj_Camera.follow = obj_Player;
+				obj_Player.hascontrol = true;
+			}
+	
+			CanFloat = PauseFloat;
+	
+		}
+
+	}
+	
+
+//////////obj_NPC Alarm 1
+
+	myTextbox = noone;
+	
+/////////obj_NPCTextBox Create
+	
+	BorderBuffer = 5;
+
+	xBuffer = BorderBuffer;
+	yBuffer = BorderBuffer;
+
+	Text = "default";
+	BoxWidth = sprite_get_width(spr_NPCTextBox) - (2 * xBuffer);
+	StringHeight = string_height(Text);
+	Page = 0;
+	CharCount = 0;
+	CharIncrease = obj_NPC.TalkSpeed;
+	
+////////obj_NPCTextbox Step
+	
+	with (obj_Player)
+	{
+		hascontrol = false;
+	}
+
+	if (mouse_check_button_pressed(mb_right))
+	{
+		if (Page + 1 < array_length(Text)){
+			Page++;
+			CharCount = 0;
+		}
+		else
+		{
+			instance_destroy();
+			obj_NPC.alarm[1] = 1;
+			obj_Player.hascontrol = true;
+			obj_Camera.follow = obj_Player;
+			with (obj_NPC)
+			{
+				CanFloat = PauseFloat;
+				walkspeed = PauseRun;
+				TalkedTo++;
+			}
+		}
+	}
+	
+////////obj_NPCTextBox Draw
+	
+	draw_sprite(spr_NPCTextBox, 0, x, y);
+
+	draw_set_font(ft_NPC);
+	draw_set_color(c_white);
+
+	DrawSetText(c_white, ft_NPC, fa_left, fa_top);
+
+	if (CharCount < string_length(Text[Page]))
+	{
+		CharCount += CharIncrease;
+	}
+
+	TextSect = string_copy(Text[Page], 1, CharCount);
+
+	draw_text_ext(x + xBuffer, y + yBuffer, TextSect, StringHeight - 33, BoxWidth);	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

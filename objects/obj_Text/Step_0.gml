@@ -1,16 +1,11 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description If the talk button is pressed
 
-with (obj_Player)
-{
-	hascontrol = false;
-}
-
+//If the talk button is pressed
 if (mouse_check_button_pressed(mb_right))
 {
-	if (Page + 1 < array_length(Text)){
-		Page++;
-		CharCount = 0;
+	if (TextBox_Page + 1 < array_length(TextBox_Text)){
+		TextBox_Page++;
+		TextBox_CharCount = 0;
 	}
 	else
 	{

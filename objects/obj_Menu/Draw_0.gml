@@ -28,7 +28,7 @@ for (l = 0; l < (Menu_NumOfOptions + _desc); l++)
 		//If we're hovering over this menu option
 		if (Menu_Hover == l - _desc)
 		{
-			draw_set_color(c_yellow);
+			draw_set_color(Menu_ChosenTextColor);
 			_str = Menu_HoverMarker + _str;
 		}
 		

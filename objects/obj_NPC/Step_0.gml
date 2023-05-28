@@ -62,35 +62,50 @@ if (instance_exists(obj_Player))
 {
 
 	//If the player is within talking range
-	if (point_in_circle(obj_Player.x, obj_Player.y, x, y, TalkRange)) //&& (!instance_exists(obj_NPCTextBox))
+	if (point_in_circle(obj_Player.x, obj_Player.y, x, y, TalkRange)) 
 	{
 	
 		//If the player talks to the NPC with the talk button
 		if (mouse_check_button_pressed(mb_right)){
 		
+			//If a textbox hasn't been created yet
 			if (myTextbox = noone)
 			{
-			
-				CanFloat = 0;
-				walkspeed = 0;
-			
-				TextBoxWidth = sprite_get_width(spr_NPCTextBox);
-			
-				myTextbox = instance_create_layer(x - TextBoxWidth/2, y - 80, layer, obj_NPCTextBox)
-			
-				with (myTextbox) 
+				
+				with (obj_Player)
 				{
-					Text = other.Speech;					
-					length = string_length(Text);
+					hascontrol = false;
 				}
-			
+				
+				//Create a new textbox 
+				myTextbox = instance_create_depth(x, y, -999, obj_Text);
+				
+				//Access tthe new textbox
+				with (myTextbox)
+				{
+					//Set the text to be the NPC's Speech
+					TextBox_Text = other.Speech;
+					
+					//If the NPC has a name, add the name to their speech
+					if (other.Name != "" && other.NameInserted == false) 
+					{
+						for (var i = 0; i < array_length(TextBox_Text); i++)
+						{
+							TextBox_Text[i] = other.Name + ": " + TextBox_Text[i];
+						}
+						other.NameInserted = true;
+						
+					}//end if NPC has name
+					
+				}//end access textbox
+				
+				//Have the camera follow the NPC
 				with (obj_Camera)
 				{
 					follow = other.id;
 				}
-			
-			}//if myTextbox is empty
-
+				
+			}//if a textbox hasn't been created
 		
 		}//end mouse right button pressed
 	

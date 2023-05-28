@@ -10,3 +10,7 @@ PauseFloat = CanFloat;
 PauseRun = walkspeed;
 
 TalkedTo = 0;
+
+Name = "";
+
+NameInserted = false;
