@@ -11,7 +11,7 @@ TextBox_Height = 360 - TextBox_EdgeMargin * 1;
 TextBox_Text = "default";
 
 //The height of the text
-TextBox_TextHeight = string_height(TextBox_Text);
+TextBox_TextHeight = string_height(TextBox_Text) * 1.2;
 
 //The page the text is on
 TextBox_Page = 0;
@@ -32,3 +32,7 @@ TextBox_BufferX = TextBox_BorderBuffer;
 TextBox_BufferY = TextBox_BorderBuffer;
 
 TextBox_TextWidth = TextBox_Width - (TextBox_BufferX * 2);
+
+TextBox_BoxSprite = spr_TextBox;
+TextBox_TextColor = c_black;
+TextBox_Font = ft_NPC;

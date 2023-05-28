@@ -8,5 +8,6 @@ with (obj_PlayBGS)
 	NextBGS = blanksound;
 }
 
+SummonPlayer(128, 128);
 SetSpawnpoint();
 SaveGame();

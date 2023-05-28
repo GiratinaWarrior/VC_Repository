@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "CutsceneScripts",
+  "name": "TextScripts",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
