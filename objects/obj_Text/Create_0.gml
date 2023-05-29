@@ -24,7 +24,7 @@ TextBox_CharIncrease = 1;
 
 //The location of the text box on the GUI
 TextBox_X = TextBox_EdgeMargin;
-TextBox_Y = 1080 - TextBox_Height - TextBox_EdgeMargin;//1080 - TextBox_EdgeMargin;
+TextBox_Y = 1080 - TextBox_Height - TextBox_EdgeMargin;
 
 //The minimum distance the text can be from the textbox
 TextBox_BorderBuffer = 30;
@@ -36,3 +36,15 @@ TextBox_TextWidth = TextBox_Width - (TextBox_BufferX * 2);
 TextBox_BoxSprite = spr_TextBox;
 TextBox_TextColor = c_black;
 TextBox_Font = ft_NPC;
+
+
+
+
+
+
+
+
+
+
+
+

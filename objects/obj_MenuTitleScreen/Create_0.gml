@@ -1,6 +1,6 @@
 /// @description GUI/Vars/Menu setup
 
-FirstPlayerRoom = Room_OpeningCutscene;
+FirstPlayerRoom = Room_TextTesting//Room_OpeningCutscene;
 
 TitleMenu_NewGame = function()
 {

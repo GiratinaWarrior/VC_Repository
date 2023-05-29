@@ -33,7 +33,7 @@ if (event_data[? "event_type"] == "sequence event")
 			break;//end Lavender Decipher
 			
 		//If Lavender notices the wierd star
-		case "LavenderSeeStar":
+		case "LavenderSeesStar":
 			var LavenderStarTalk = 
 			[
 				"Oh? That star is a strange one, how do you do little star?"

@@ -2,10 +2,19 @@
 /// This function creates an instance of the player object if it doesn't already exist
 function SummonPlayer(_x = x, _y = y){
 	
+	if (layer_exists("Player"))
+	{
+		var _layer = "Player";
+	}
+	else
+	{
+		var _layer = layer;
+	}
+	
 	if (!instance_exists(obj_Player))
 	{
 
-		instance_create_layer(_x, _y, layer, obj_Player);
+		instance_create_layer(_x, _y, _layer, obj_Player);
 			
 	}
 }

@@ -11,7 +11,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Sign",
-    "path": "folders/Objects/Text/Sign.yy",
+    "path": "folders/Objects/Text/Entities/Sign.yy",
   },
   "parentObjectId": null,
   "persistent": false,

@@ -22,3 +22,11 @@ function CutsceneText(_text = [""], _name = "" ,_font = ft_NPC, _color = c_black
 	}
 	
 }
+	
+/// @param
+function CreateText(_text)
+{
+	
+	
+	
+}

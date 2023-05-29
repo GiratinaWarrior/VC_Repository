@@ -1,17 +1,17 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_Text",
+  "name": "obj_Entity",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":1,"eventType":2,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Text",
-    "path": "folders/Objects/Text.yy",
+    "name": "Entities",
+    "path": "folders/Objects/Text/Entities.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -27,9 +27,15 @@
   "physicsShape": 1,
   "physicsShapePoints": [],
   "physicsStartAwake": true,
-  "properties": [],
+  "properties": [
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"TalkSpeed","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"1","varType":0,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"TalkRange","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"40","varType":0,},
+  ],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_SignPost",
+    "path": "sprites/spr_SignPost/spr_SignPost.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }
