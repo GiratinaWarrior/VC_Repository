@@ -9,8 +9,9 @@ PauseFloat = CanFloat;
 
 PauseRun = walkspeed;
 
-TalkedTo = 0;
-
 Name = "";
 
 NameInserted = false;
+
+TextBox_Text[0] = "";
+TextBox_PageNumber = 0;

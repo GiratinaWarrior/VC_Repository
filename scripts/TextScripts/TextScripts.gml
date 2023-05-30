@@ -23,10 +23,25 @@ function CutsceneText(_text = [""], _name = "" ,_font = ft_NPC, _color = c_black
 	
 }
 	
-/// @param
-function CreateText(_text)
+//---------This function creates a new text in the text array--------------------//
+/// @param text
+function Text(_text)
 {
 	
-	
-	
+	TextBox_Text[TextBox_PageNumber] = _text;
+	TextBox_PageNumber++;
+
+}
+
+//---------This function returns a set of arguments to create a dialogue page--------------------//
+/// @param text
+/// @param name
+/// @param portrait
+function GameText()
+{
+	for (var a = 0; a < argument_count; a++)
+	{
+		TextParams[a] = argument[a]
+	}
+	return TextParams;
 }

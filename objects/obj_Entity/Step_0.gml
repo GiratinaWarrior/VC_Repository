@@ -26,24 +26,13 @@ if (instance_exists(obj_Player))
 				//Create a new textbox 
 				myTextbox = instance_create_depth(x, y, -999, obj_Text);
 				
-				//Access tthe new textbox
+				//access myTextbox
 				with (myTextbox)
 				{
-					//Set the text to be the NPC's Speech
-					TextBox_Text = other.Speech;
-					
-					//If the NPC has a name, add the name to their speech
-					if (other.Name != "" && other.NameInserted == false) 
-					{
-						for (var i = 0; i < array_length(TextBox_Text); i++)
-						{
-							TextBox_Text[i] = other.Name + ": " + TextBox_Text[i];
-						}
-						other.NameInserted = true;
-						
-					}//end if NPC has name
-					
-				}//end access textbox
+					//TextArgArray = other.DialogueArray;
+					TextBox_Text = other.TextBox_Text;
+				}//end access myTextbox
+				
 				
 				//Have the camera follow the NPC
 				with (obj_Camera)

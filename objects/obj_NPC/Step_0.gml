@@ -57,8 +57,8 @@ image_angle += SpinSpeed;
 
 #region Text 
 
-//If the player is present
-if (instance_exists(obj_Player))
+	//If the player is present
+	if (instance_exists(obj_Player))
 {
 
 	//If the player is within talking range
@@ -84,7 +84,7 @@ if (instance_exists(obj_Player))
 				with (myTextbox)
 				{
 					//Set the text to be the NPC's Speech
-					TextBox_Text = other.Speech;
+					TextBox_Text = other.TextBox_Text;
 					
 					//If the NPC has a name, add the name to their speech
 					if (other.Name != "" && other.NameInserted == false) 

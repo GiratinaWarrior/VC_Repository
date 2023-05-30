@@ -1,12 +1,12 @@
 /// @description GUI/Vars/Menu setup
 
-FirstPlayerRoom = Room_TextTesting//Room_OpeningCutscene;
+FirstPlayerRoom = Room_RoseRoom //Room_OpeningCutscene;
 
 TitleMenu_NewGame = function()
 {
 	DeleteSave()
 	TransitionStart(FirstPlayerRoom, seq_FadeOut, seq_FadeIn);
-	show_debug_message("TitleScreen New Game Spawnpoint: {0}", room_get_name(global.Spawnpoint));
+	//show_debug_message("TitleScreen New Game Spawnpoint: {0}", room_get_name(global.Spawnpoint));
 	//SummonPlayer();
 }
 
@@ -17,7 +17,7 @@ TitleMenu_Continue = function()
 		
 		LoadSave();
 		
-		show_debug_message("TitleScreen New Game Spawnpoint: {0}", room_get_name(global.Spawnpoint));
+	//	show_debug_message("TitleScreen New Game Spawnpoint: {0}", room_get_name(global.Spawnpoint));
 	
 		TransitionStart(global.Spawnpoint, seq_FadeOut, seq_FadeIn);
 		SummonPlayer(global.SpawnX, global.SpawnY);

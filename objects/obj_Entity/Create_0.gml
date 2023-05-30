@@ -5,6 +5,8 @@ myTextbox = noone;
 
 Speech[0] = "";
 
+TextBox_Text[0] = "";
+
 Name = "";
 
 NameInserted = false;

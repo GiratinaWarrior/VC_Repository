@@ -23,7 +23,8 @@ if (mouse_check_button_pressed(mb_right))
 			alarm[1] = 1;
 			CanFloat = PauseFloat;
 			walkspeed = PauseRun;
-			TalkedTo++;
+			//TalkedTo++;
 		}
 	}
+	
 }

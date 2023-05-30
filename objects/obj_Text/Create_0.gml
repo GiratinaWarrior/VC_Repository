@@ -36,15 +36,3 @@ TextBox_TextWidth = TextBox_Width - (TextBox_BufferX * 2);
 TextBox_BoxSprite = spr_TextBox;
 TextBox_TextColor = c_black;
 TextBox_Font = ft_NPC;
-
-
-
-
-
-
-
-
-
-
-
-

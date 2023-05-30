@@ -638,7 +638,6 @@
     {"id":{"name":"sound_SwordAttack","path":"sounds/sound_SwordAttack/sound_SwordAttack.yy",},},
     {"id":{"name":"spr_ScarletCrabStill","path":"sprites/spr_ScarletCrabStill/spr_ScarletCrabStill.yy",},},
     {"id":{"name":"spr_CrabBlast","path":"sprites/spr_CrabBlast/spr_CrabBlast.yy",},},
-    {"id":{"name":"obj_TextBox","path":"objects/obj_TextBox/obj_TextBox.yy",},},
     {"id":{"name":"spr_OceanBossTiles","path":"sprites/spr_OceanBossTiles/spr_OceanBossTiles.yy",},},
     {"id":{"name":"sound_Footstep3","path":"sounds/sound_Footstep3/sound_Footstep3.yy",},},
     {"id":{"name":"spr_PlayerRun","path":"sprites/spr_PlayerRun/spr_PlayerRun.yy",},},

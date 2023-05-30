@@ -1,5 +1,11 @@
 /// @description Our global variables
 
+#macro WINDOW_WIDTH 1920
+#macro WINDOW_HEIGHT 1080
+
+#macro RES_W 960
+#macro RES_H 540
+
 //The number of orbs we've retrieved
 global.OrbsCollected = 0;
 

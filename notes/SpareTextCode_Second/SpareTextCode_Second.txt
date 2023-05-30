@@ -39,7 +39,7 @@ TextBox_Font = ft_NPC;
 
 //--------------------obj_Text: Step Event---------------------------------//
 
-/If the talk button is pressed
+//If the talk button is pressed
 if (mouse_check_button_pressed(mb_right))
 {
 	//If there is another page of text to display, move to the next page
@@ -83,11 +83,79 @@ TextBox_TextSect = string_copy(TextBox_Text[TextBox_Page], 1, TextBox_CharCount)
 
 draw_text_ext(TextBox_X + TextBox_BufferX, TextBox_Y + TextBox_BufferY, TextBox_TextSect, TextBox_TextHeight * 2, TextBox_TextWidth);
 
+//--------------------obj_NPC: Step Event---------------------------------//
 
+#region Text 
 
+//If the player is present
+if (instance_exists(obj_Player))
+{
 
+	//If the player is within talking range
+	if (point_in_circle(obj_Player.x, obj_Player.y, x, y, TalkRange)) 
+	{
+	
+		//If the player talks to the NPC with the talk button
+		if (mouse_check_button_pressed(mb_right)){
+		
+			//If a textbox hasn't been created yet
+			if (myTextbox = noone)
+			{
+				
+				with (obj_Player)
+				{
+					hascontrol = false;
+				}
+				
+				//Create a new textbox 
+				myTextbox = instance_create_depth(x, y, -999, obj_TextBox);
+				
+				//Access tthe new textbox
+				with (myTextbox)
+				{
+					//Set the text to be the NPC's Speech
+					TextBox_Text = other.Speech;
+					
+					//If the NPC has a name, add the name to their speech
+					if (other.Name != "" && other.NameInserted == false) 
+					{
+						for (var i = 0; i < array_length(TextBox_Text); i++)
+						{
+							TextBox_Text[i] = other.Name + ": " + TextBox_Text[i];
+						}
+						other.NameInserted = true;
+						
+					}//end if NPC has name
+					
+				}//end access textbox
+				
+				//Have the camera follow the NPC
+				with (obj_Camera)
+				{
+					follow = other.id;
+				}
+				
+			}//if a textbox hasn't been created
+		
+		}//end mouse right button pressed
+	
+	}//end if nearby
 
+	//If the player isnt in talking range
+	else 
+	{
+		if (myTextbox != noone)
+		{
+			instance_destroy(myTextbox);
+			myTextbox = noone;
+			obj_Camera.follow = obj_Player;
+			obj_Player.hascontrol = true;
+		}
+	
+		CanFloat = PauseFloat;
+	
+	}
 
+}
 
-
-
+#endregion

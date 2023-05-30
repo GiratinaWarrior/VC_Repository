@@ -485,7 +485,6 @@
     {"name":"sound_SwordAttack","order":2,"path":"sounds/sound_SwordAttack/sound_SwordAttack.yy",},
     {"name":"spr_ScarletCrabStill","order":4,"path":"sprites/spr_ScarletCrabStill/spr_ScarletCrabStill.yy",},
     {"name":"spr_CrabBlast","order":3,"path":"sprites/spr_CrabBlast/spr_CrabBlast.yy",},
-    {"name":"obj_TextBox","order":9,"path":"objects/obj_TextBox/obj_TextBox.yy",},
     {"name":"spr_OceanBossTiles","order":2,"path":"sprites/spr_OceanBossTiles/spr_OceanBossTiles.yy",},
     {"name":"sound_Footstep3","order":2,"path":"sounds/sound_Footstep3/sound_Footstep3.yy",},
     {"name":"spr_PlayerRun","order":4,"path":"sprites/spr_PlayerRun/spr_PlayerRun.yy",},

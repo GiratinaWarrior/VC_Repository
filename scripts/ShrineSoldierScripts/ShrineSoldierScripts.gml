@@ -24,7 +24,7 @@ function ShrineSoldierState_Attack(){
 	
 	if (SoldierState == SHRINESOLDIER_STATE.HURT || Attacked)
 	{
-		show_debug_message("Detected Attack")
+		//show_debug_message("Detected Attack")
 		instance_destroy(ShrineSoldierAttackHitbox);
 	}
 	else
