@@ -1,5 +1,24 @@
 /// @description Display the text
 
+//The location of the text box on the GUI
+TextBox_X = TextBox_EdgeMargin;
+
+//Decide where the should be positioned on the screen
+switch (TextBox_UIPosition)
+{
+	
+	//If the text box should be at the top of the screen
+	case TEXTBOX_POS.TOP:
+		TextBox_Y = TextBox_EdgeMargin;
+		break;//end top of screen
+		
+	//If the text box should be at the bottom of the screen
+	case TEXTBOX_POS.BOTTOM:
+		TextBox_Y = WINDOW_HEIGHT - TextBox_Height - TextBox_EdgeMargin;
+		break;//end bottom of screen
+	
+}//end textbox position
+
 //Draw the text box to the screen
 draw_sprite_stretched(TextBox_BoxSprite, 0, TextBox_X, TextBox_Y, TextBox_Width, TextBox_Height); 
 

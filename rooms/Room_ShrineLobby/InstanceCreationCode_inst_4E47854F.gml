@@ -1,1 +1,1 @@
-Text("So you've arrived here, maybe it'll be funner next time you visit");
+Text("So you've arrived here, but I bet you can't reach that ledge up there");

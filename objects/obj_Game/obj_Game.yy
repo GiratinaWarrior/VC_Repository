@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "ImportantPermanent",
-    "path": "folders/Objects/Operators/ImportantPermanent.yy",
+    "name": "Persistents",
+    "path": "folders/Objects/Operators/Persistents.yy",
   },
   "parentObjectId": null,
   "persistent": true,

@@ -39,8 +39,9 @@ if (mouse_check_button_pressed(mb_right))
 			//Access the NPC
 			with (obj_NPC)
 			{
-				//Make the NPC move again
-				CanFloat = PauseFloat;
+			
+			
+
 			}//end access NPC
 			
 		}//end dialogue finished

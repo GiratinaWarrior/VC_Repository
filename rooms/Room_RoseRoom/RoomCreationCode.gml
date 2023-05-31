@@ -1,13 +1,4 @@
-with (obj_PlayBGM)
-{
-	NextBGM = music_ShrineMemoryTheme; 
-}
-
-with (obj_PlayBGS)
-{
-	NextBGS = blanksound;
-}
-
+SetRoomAudio(music_ShrinePeacefulTheme);
 SummonPlayer(128, 176);
 SetSpawnpoint();
 SaveGame();

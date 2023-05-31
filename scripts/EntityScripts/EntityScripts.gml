@@ -1,5 +1,7 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+/// @description NPC_Movement()
+/* 
+This function runs the movement code for the NPCs, where they will move around as normal
+*/
 function NPC_Movement(){
 
 	#region Movement
@@ -85,6 +87,7 @@ function EntityTextBox()
 								TextBox_Text[n] = other.Name + ": " + TextBox_Text[n];
 							}
 							other.NameInserted = true;
+							TextBox_UIPosition = other.TextBox_UIPosition;
 						}
 					}//end access myTextbox
 				

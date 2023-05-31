@@ -1,10 +1,11 @@
 /// @description CutsceneText(text, name, color, font, box)
-/// @arg text is the text displayed
-/// @arg name is the name of the speaker
-/// @arg font is the font choice of the text
-/// @arg color is the color of the text
-/// @arg box is the sprite of the textbox
-function CutsceneText(_text = [""], _name = "" ,_font = ft_NPC, _color = c_black , _box = spr_TextBox){
+/// @param text is the text displayed
+/// @param name is the name of the speaker
+/// @param pos is the location of the textbox on the screen
+/// @param font is the font choice of the text
+/// @param color is the color of the text
+/// @param box is the sprite of the textbox
+function CutsceneText(_text = [""], _name = "" , _pos = TEXTBOX_POS.BOTTOM, _font = ft_NPC, _color = c_black , _box = spr_TextBox){
 	
 	with(instance_create_depth(x, y, -99, obj_Text))
 	{
@@ -19,6 +20,9 @@ function CutsceneText(_text = [""], _name = "" ,_font = ft_NPC, _color = c_black
 		TextBox_Font = _font;
 		TextBox_BoxSprite = _box;
 		TextBox_TextColor = _color;
+		
+		TextBox_UIPosition = _pos;
+		
 	}
 	
 }
