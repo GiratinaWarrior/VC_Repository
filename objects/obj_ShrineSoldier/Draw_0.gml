@@ -12,3 +12,7 @@ if (Health > 0)
 		gpu_set_fog(false, c_white, 0, 0);
 	}
 }
+else
+{
+	draw_self();
+}

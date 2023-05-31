@@ -2,12 +2,14 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function NPC_Movement(){
 
-#region Movement
+	#region Movement
 
 	Wall_FallOn();
 	Wall_SwitchRun();
 
-	x = Wave(distlimit, -distlimit, xSpeed);
+	x = Wave(middlepoint + distlimit, middlepoint - distlimit, 0.1, 1)
+	
+	//show_debug_message("NPC Coordinates: ( x = {0} , y = {1} )", x, y);
 
 	if (xSpeed != 0)
 	{
@@ -80,7 +82,7 @@ function EntityTextBox()
 						{
 							for (var n = 0; n < array_length(TextBox_Text); n++)
 							{
-								TextBox_Text[n] = Name + ": " + TextBox_Text[n];
+								TextBox_Text[n] = other.Name + ": " + TextBox_Text[n];
 							}
 							other.NameInserted = true;
 						}

@@ -41,7 +41,6 @@ if (mouse_check_button_pressed(mb_right))
 			{
 				//Make the NPC move again
 				CanFloat = PauseFloat;
-				walkspeed = PauseRun;
 			}//end access NPC
 			
 		}//end dialogue finished

@@ -1,0 +1,1 @@
+Text("So you've arrived here, maybe it'll be funner next time you visit");

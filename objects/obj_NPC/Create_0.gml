@@ -7,7 +7,7 @@ Speech[0] = "";
 
 PauseFloat = CanFloat;
 
-PauseRun = walkspeed;
+PauseRun = xSpeed;
 
 Name = "";
 

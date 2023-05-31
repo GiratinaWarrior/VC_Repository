@@ -49,12 +49,17 @@ function ShrineSoldierState_Defeat(){
 	
 	xSpeed = 0;
 	
+	//show_debug_message("Shrine Soldier Image Index: {0}", image_index);
+	
 	//If the Shrine Soldier hasnt changed their sprite to the defeated one, do so
 	if (sprite_index != spr_ShrineSoldierDefeated)
 	{
-		image_speed = 1;
+		image_index = 0;
+		image_xscale = sign(obj_Player.x - x);
 		sprite_index = spr_ShrineSoldierDefeated;
 	}//end sprite change not happened
+	
+	
 	
 	//If the Shrine Soldier has changed their sprite
 	else
@@ -64,16 +69,31 @@ function ShrineSoldierState_Defeat(){
 		{
 			image_index = image_number - 1;
 			image_speed = 0;
+			
+			
 			with (instance_create_depth(x, y, depth, obj_NPC))
 			{
-				sprite_index = other.sprite_index;
-				image_index = other.image_index;
-				image_speed = other.image_speed;
+				sprite_index = spr_ShrineSoldierDefeated;
+				image_xscale = other.image_xscale;
+				image_index = image_number - 1;
+				image_speed = 0;
 				TextBox_Text = other.TextBox_Text;
+				Name = other.Name;
 			}
+			
 			instance_destroy();
+			
+			
 		}//end Shrine Soldier Defeated animation ended
 		
+		else
+		{
+			image_speed = 1;
+		}
+		
 	}//end sprite change happened
+
+	
+	
 	
 }//end ShrineSoldierState_Defeat
