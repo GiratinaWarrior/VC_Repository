@@ -1,5 +1,4 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+/// This function manages the Shrine Soldier's state while their attacking the player
 function ShrineSoldierState_Attack(){
 	
 	if (sprite_index != spr_ShrineSoldierAttack)
@@ -43,4 +42,38 @@ function ShrineSoldierState_Attack(){
 		xSpeed = SoldierSpeed * image_xscale;
 	}
 	
-}
+}//end ShrineSoldierState_Attack()
+	
+/// This function manages the Shrine Soldier's state after being defeated
+function ShrineSoldierState_Defeat(){
+	
+	xSpeed = 0;
+	
+	//If the Shrine Soldier hasnt changed their sprite to the defeated one, do so
+	if (sprite_index != spr_ShrineSoldierDefeated)
+	{
+		image_speed = 1;
+		sprite_index = spr_ShrineSoldierDefeated;
+	}//end sprite change not happened
+	
+	//If the Shrine Soldier has changed their sprite
+	else
+	{
+		//if the Shrine Soldier Defeated animation has ended, stay at the last sprite
+		if (animation_end())
+		{
+			image_index = image_number - 1;
+			image_speed = 0;
+			with (instance_create_depth(x, y, depth, obj_NPC))
+			{
+				sprite_index = other.sprite_index;
+				image_index = other.image_index;
+				image_speed = other.image_speed;
+				TextBox_Text = other.TextBox_Text;
+			}
+			instance_destroy();
+		}//end Shrine Soldier Defeated animation ended
+		
+	}//end sprite change happened
+	
+}//end ShrineSoldierState_Defeat

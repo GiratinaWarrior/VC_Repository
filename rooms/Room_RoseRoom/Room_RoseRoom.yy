@@ -59,7 +59,7 @@
     {"name":"inst_76A3B18","path":"rooms/Room_RoseRoom/Room_RoseRoom.yy",},
     {"name":"inst_482B5E2A","path":"rooms/Room_RoseRoom/Room_RoseRoom.yy",},
     {"name":"inst_44E781C0","path":"rooms/Room_RoseRoom/Room_RoseRoom.yy",},
-    {"name":"inst_66485170","path":"rooms/Room_RoseRoom/Room_RoseRoom.yy",},
+    {"name":"inst_54612C96","path":"rooms/Room_RoseRoom/Room_RoseRoom.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -132,7 +132,7 @@
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Player","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7CCF390F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Camera","path":"objects/obj_Camera/obj_Camera.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":288.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3B209CD7","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_RoomWarp","path":"objects/obj_RoomWarp/obj_RoomWarp.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.5,"x":-96.0,"y":304.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_66485170","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_NPC","path":"objects/obj_NPC/obj_NPC.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":461.0,"y":162.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_54612C96","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Entity","path":"objects/obj_Entity/obj_Entity.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":480.0,"y":160.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"RoseBackdrop","depth":500,"effectEnabled":true,"effectType":"_filter_tintfilter","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
         {"name":"g_TintCol","type":1,"value":"#FF7C7C7C",},

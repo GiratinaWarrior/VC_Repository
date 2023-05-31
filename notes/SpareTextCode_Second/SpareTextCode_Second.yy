@@ -4,6 +4,6 @@
   "name": "SpareTextCode_Second",
   "parent": {
     "name": "Notes",
-    "path": "folders/Objects/Text/Notes.yy",
+    "path": "folders/Objects/Textentities/Notes.yy",
   },
 }

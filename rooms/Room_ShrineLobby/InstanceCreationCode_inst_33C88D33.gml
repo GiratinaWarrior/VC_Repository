@@ -1,0 +1,1 @@
+Text("Unlike that weakling down there, I would LOVE IT if you used me as a sword trampoline");

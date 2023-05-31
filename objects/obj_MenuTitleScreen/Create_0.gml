@@ -1,6 +1,6 @@
 /// @description GUI/Vars/Menu setup
 
-FirstPlayerRoom = Room_RoseRoom //Room_OpeningCutscene;
+FirstPlayerRoom = Room_OpeningCutscene;
 
 TitleMenu_NewGame = function()
 {
@@ -16,8 +16,6 @@ TitleMenu_Continue = function()
 		#region New Load Save Mechanic
 		
 		LoadSave();
-		
-	//	show_debug_message("TitleScreen New Game Spawnpoint: {0}", room_get_name(global.Spawnpoint));
 	
 		TransitionStart(global.Spawnpoint, seq_FadeOut, seq_FadeIn);
 		SummonPlayer(global.SpawnX, global.SpawnY);

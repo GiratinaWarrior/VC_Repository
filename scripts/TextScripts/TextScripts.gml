@@ -32,16 +32,3 @@ function Text(_text)
 	TextBox_PageNumber++;
 
 }
-
-//---------This function returns a set of arguments to create a dialogue page--------------------//
-/// @param text
-/// @param name
-/// @param portrait
-function GameText()
-{
-	for (var a = 0; a < argument_count; a++)
-	{
-		TextParams[a] = argument[a]
-	}
-	return TextParams;
-}

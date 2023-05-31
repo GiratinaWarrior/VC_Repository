@@ -9,7 +9,8 @@ enum SHRINESOLDIER_STATE
 {
 	WALK,
 	ATTACK,
-	HURT
+	HURT,
+	DEFEAT
 }
 
 SoldierState = SHRINESOLDIER_STATE.WALK;
@@ -17,3 +18,5 @@ SoldierState = SHRINESOLDIER_STATE.WALK;
 PlayerInRange = 0;
 
 ShrineSoldierAttackHitbox = noone;
+
+TextBox_Text[0] = "";

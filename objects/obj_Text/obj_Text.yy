@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Text",
-    "path": "folders/Objects/Text.yy",
+    "name": "Textentities",
+    "path": "folders/Objects/Textentities.yy",
   },
   "parentObjectId": null,
   "persistent": false,

@@ -11,9 +11,12 @@
   "overriddenProperties": [],
   "parent": {
     "name": "NPC",
-    "path": "folders/Objects/Text/Entities/NPC.yy",
+    "path": "folders/Objects/Textentities/Entities/NPC.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_Entity",
+    "path": "objects/obj_Entity/obj_Entity.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -36,7 +39,7 @@
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"TalkSpeed","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"1","varType":0,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"SpinSpeed","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0","varType":0,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"TalkRange","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"40","varType":0,},
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"walkspeed","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0","varType":0,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"xSpeed","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0","varType":0,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"middlepoint","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"x","varType":0,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"distlimit","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0","varType":0,},
   ],

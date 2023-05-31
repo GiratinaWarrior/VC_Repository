@@ -10,7 +10,7 @@
   ],
   "parent": {
     "name": "NPC",
-    "path": "folders/Objects/Text/Entities/NPC.yy",
+    "path": "folders/Objects/Textentities/Entities/NPC.yy",
   },
   "parentObjectId": {
     "name": "obj_NPC",

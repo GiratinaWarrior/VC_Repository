@@ -4,8 +4,8 @@
 TextBox_EdgeMargin = 10;
 
 //The width and height of the text box
-TextBox_Width = 1980 - TextBox_EdgeMargin * 2;
-TextBox_Height = 360 - TextBox_EdgeMargin * 1; 
+TextBox_Width = WINDOW_WIDTH - TextBox_EdgeMargin * 2;
+TextBox_Height = WINDOW_HEIGHT/3 - TextBox_EdgeMargin * 1; 
 
 //The Text displayed by the textbox
 TextBox_Text = "default";

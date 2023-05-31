@@ -11,7 +11,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Entities",
-    "path": "folders/Objects/Text/Entities.yy",
+    "path": "folders/Objects/Textentities/Entities.yy",
   },
   "parentObjectId": null,
   "persistent": false,

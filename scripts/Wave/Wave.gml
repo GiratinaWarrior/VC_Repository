@@ -15,7 +15,7 @@
 //      image_xscale = Wave(0.5, 2.0, 1.0, 0.0)
 //      image_yscale = Wave(2.0, 0.5, 1.0, 0.0)
  
-function Wave(argument0, argument1, argument2, argument3)
+function Wave(argument0, argument1, argument2, argument3 = 0)
 {
  
 a4 = (argument1 - argument0) * 0.5;
