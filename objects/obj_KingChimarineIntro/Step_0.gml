@@ -6,7 +6,7 @@ if (image_alpha > 0)
 {
 	with (obj_PlayBGM)
 	{
-		NextBGM = music_BossTheme;
+		NextBGM = music_NightfallKnightTheme;
 	}
 }
 

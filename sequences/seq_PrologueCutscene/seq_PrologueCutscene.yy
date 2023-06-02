@@ -37,8 +37,8 @@
     "Keyframes": [],
   },
   "parent": {
-    "name": "Cutscenes",
-    "path": "folders/Sequences/Cutscenes.yy",
+    "name": "Prologue",
+    "path": "folders/Sequences/Cutscenes/Prologue.yy",
   },
   "playback": 0,
   "playbackSpeed": 60.0,

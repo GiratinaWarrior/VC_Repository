@@ -1,2 +1,2 @@
 /// @description
-//ShrineArenaBossCutsceneSequenceID = layer_sequence_create(layer, 495, 272, seq_PrologueCutscene);
+ShrineArenaBossCutsceneSequenceID = layer_sequence_create(layer, 0, 0, seq_ShrineArenaBossCutscene);

@@ -1,7 +1,7 @@
 
 with (obj_PlayBGM)
 {
-	NextBGM = music_BossTheme;
+	NextBGM = music_NightfallKnightTheme;
 }
 
 //Phase Variables
