@@ -38,7 +38,7 @@
   },
   "parent": {
     "name": "Prologue",
-    "path": "folders/Sequences/Cutscenes/Prologue.yy",
+    "path": "folders/Sequences/Cutscenes/OpeningAct/Prologue.yy",
   },
   "playback": 0,
   "playbackSpeed": 60.0,

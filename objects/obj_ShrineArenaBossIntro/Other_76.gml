@@ -15,10 +15,18 @@ if (event_data[? "event_type"] == "sequence event")
 				x = 224 + 640;
 				y = 162 + 270;
 			}
-			ArenaEntrance = instance_create_layer(928, 416, "Platforms", obj_WallPlatform);
-			instance_create_layer(240, 388, "ShrineGeneral", obj_ShrineGeneral);
-			//var _seqID = layer_sequence_get_instance(ShrineArenaBossCutsceneSequenceID);
+			instance_create_layer(928, 416, "Platforms", obj_WallPlatform);
+			if !(instance_exists(obj_ShrineGeneral))
+			{
+				instance_create_layer(240, 388, "ShrineGeneral", obj_ShrineGeneral);
+			}
 			layer_sequence_destroy(ShrineArenaBossCutsceneSequenceID);
+			with (obj_Camera)
+			{
+				follow = noone;
+				x = 0;
+				y = 0;
+			}
 			break;//end activate Shrine General
 			
 	}//end action from message
