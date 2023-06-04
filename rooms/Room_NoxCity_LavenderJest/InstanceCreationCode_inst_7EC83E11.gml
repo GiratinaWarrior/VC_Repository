@@ -1,4 +1,4 @@
-sprite_index = spr_WarlockJest;
+sprite_index = spr_Jest_Walk;
 
 var Name = "Jest";
 

@@ -1,0 +1,4 @@
+eventFunc = function()
+{
+	CutsceneText(["Huhuhuuu..."], "???");
+}

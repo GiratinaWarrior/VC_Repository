@@ -1,5 +1,5 @@
 /// @description CutsceneText(text, name, color, font, box)
-/// @param text is the text displayed
+/// @param textarray is the text displayed
 /// @param name is the name of the speaker
 /// @param pos is the location of the textbox on the screen
 /// @param font is the font choice of the text
