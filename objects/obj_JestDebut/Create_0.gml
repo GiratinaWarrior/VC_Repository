@@ -2,6 +2,7 @@
 
 enum JESTDEBUTCUTSCENE_STAGE
 {
+	OFFSCREEN,
 	ENTER,
 	ENTER_TALK,
 	DANCE,
@@ -9,6 +10,10 @@ enum JESTDEBUTCUTSCENE_STAGE
 	EXIT
 }
 
-JestDebut_Stage = JESTDEBUTCUTSCENE_STAGE.ENTER;
+JestDebut_Stage = JESTDEBUTCUTSCENE_STAGE.OFFSCREEN;
 
 JestDebut_EnterSeq = noone;
+
+JestDebut_StartedOffscreenTalk = false;
+
+JestDebut_StartedEnterTalk = false;

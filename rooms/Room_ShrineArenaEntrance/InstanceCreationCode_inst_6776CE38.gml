@@ -1,4 +1,0 @@
-eventFunc = function()
-{
-	CutsceneText(["Huhuhuuu..."], "???");
-}
