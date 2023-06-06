@@ -23,6 +23,8 @@ function CutsceneText(_text = [""], _name = "" , _pos = TEXTBOX_POS.BOTTOM, _fon
 		
 		TextBox_UIPosition = _pos;
 		
+		TextBox_Cutscene = true;
+		
 	}
 	
 }

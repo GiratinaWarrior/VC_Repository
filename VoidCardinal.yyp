@@ -394,6 +394,7 @@
     {"id":{"name":"music_StoryCutsceneTheme","path":"sounds/music_StoryCutsceneTheme/music_StoryCutsceneTheme.yy",},},
     {"id":{"name":"Room_ShrineArenaEntrance","path":"rooms/Room_ShrineArenaEntrance/Room_ShrineArenaEntrance.yy",},},
     {"id":{"name":"sound_Footstep1","path":"sounds/sound_Footstep1/sound_Footstep1.yy",},},
+    {"id":{"name":"seq_JestDebut_Dance","path":"sequences/seq_JestDebut_Dance/seq_JestDebut_Dance.yy",},},
     {"id":{"name":"spr_WallPlatform","path":"sprites/spr_WallPlatform/spr_WallPlatform.yy",},},
     {"id":{"name":"spr_PlayerAirFallNeutral_SeleneSword","path":"sprites/spr_PlayerAirFallNeutral_SeleneSword/spr_PlayerAirFallNeutral_SeleneSword.yy",},},
     {"id":{"name":"spr_BossHealthBar","path":"sprites/spr_BossHealthBar/spr_BossHealthBar.yy",},},

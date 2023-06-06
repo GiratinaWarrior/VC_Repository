@@ -34,3 +34,42 @@ function CreateThenDestroySequence(_seq = noone, _x = 0, _y = 0, _createfunc = E
 	}//end if sequence created
 	
 }//end CreateThenDestroySequence
+
+///This function takes an object and overrides it with a sequence, the sequence is destroyed upon ending
+/// @param object is the object to turn into a sequence
+/// @param sequence is the sequence that overrides the object
+/// @param x
+/// @param y
+/// @param layer
+/// @param KEEP_FALSE is a variable that is used to ensure that a sequence is created only once
+function TurnObjectToSequence(_obj, _seq, _x = x, _y = y, _layer = layer, _finishfunc = EmptyFunction, _seqcreated = false)
+{
+	
+	var _elm = noone;
+	var _id = noone;
+	
+	//If the sequence hasn't been created yet, create it
+	if (!_seqcreated)
+	{
+		_elm = layer_sequence_create(_layer, _x, _y, _seq);
+		_id = layer_sequence_get_instance(_elm);
+		_seqcreated = true;
+	}//end sequence not created
+			
+	//If the sequence has been created
+	else
+	{
+		//Sequence overrides object
+		sequence_instance_override_object(_id, _obj, instance_find(_obj, 0))
+				
+		//If the sequence has finished playing
+		if (layer_sequence_is_finished(_elm))
+		{
+			layer_sequence_destroy(_elm);
+			sequence_destroy(_id);
+		}//end sequence finished
+				
+	}//end sequence created
+			
+		
+}

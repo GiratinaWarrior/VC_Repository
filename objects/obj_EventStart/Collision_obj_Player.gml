@@ -3,5 +3,9 @@ with(other)
 {
 	hascontrol = false;
 }
-eventFunc();
+if (!EventTriggered)
+{
+	eventFunc();
+	EventTriggered = true;
+}
 instance_destroy();

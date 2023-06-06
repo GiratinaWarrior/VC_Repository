@@ -17,32 +17,30 @@ if (mouse_check_button_pressed(mb_right))
 		{
 			instance_destroy(); //Destroy the text object
 			
-			//Give the player control back
-			with (obj_Player)
+			//If this textbox was created for a cutscene
+			if (!TextBox_Cutscene)
 			{
-				hascontrol = true;
-			}//end give player control
-		
-			//Make the camera follow the player
-			obj_Camera.follow = obj_Player; 
-			
-			//Access the entity who summoned to text
-			with (obj_Entity)
-			{
-				//Set the NPC's textbox to noone
-				if (!alarm[1])
+				//Give the player control back
+				with (obj_Player)
 				{
-					alarm[1] = 1;
-				}
-			}//end access entity
+					hascontrol = true;
+				}//end give player control
 			
-			//Access the NPC
-			with (obj_NPC)
-			{
+		
+				//Make the camera follow the player
+				obj_Camera.follow = obj_Player; 
 			
+				//Access the entity who summoned to text
+				with (obj_Entity)
+				{
+					//Set the NPC's textbox to noone
+					if (!alarm[1])
+					{
+						alarm[1] = 1;
+					}
+				}//end access entity
 			
-
-			}//end access NPC
+			}//end cutscene text
 			
 		}//end dialogue finished
 		

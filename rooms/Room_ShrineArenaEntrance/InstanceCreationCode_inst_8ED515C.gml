@@ -1,8 +1,7 @@
 eventFunc = function()
 {
-	if (!instance_exists(obj_JestDebut))
+	with (instance_find(obj_JestDebut, 0))
 	{
-		instance_create_layer(-64, 231, layer, obj_JestDebut)
+		JestDebut_Stage = JESTDEBUTCUTSCENE_STAGE.OFFSCREEN;
 	}
-	instance_destroy();
 }
