@@ -22,14 +22,23 @@ JestDebut_StartedOffscreenTalk = false;
 JestDebut_FinishedOffscreenTalk = false;
 
 //------------Variables for the Enter Stage-------------------//
-JestDebut_EnterSeqId = noone;
-JestDebut_EnterSeqElm = noone;
 JestDebut_EnterSequenceCreated = false;
 
 //------------Variables for the Enter Talk Stage-------------------//
 JestDebut_StartedEnterTalk = false;
 
 //------------Variables for the Dance Stage-------------------//
-JestDebut_DanceSeqId = noone;
-JestDebut_DanceSeqElm = noone;
 JestDebut_DanceSequenceCreated = false;
+
+//------------Variables for the Exit Talk Stage-------------------//
+JestDebut_StartedExitTalk = false;
+
+//------------Variables for the Exit Stage-------------------//
+JestDebut_ExitSequenceCreated = false;
+
+
+
+
+
+
+

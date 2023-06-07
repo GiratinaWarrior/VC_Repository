@@ -1,5 +1,9 @@
 /// @description The different stages for Jest
 
+y = clamp(y, 0, room_height);
+
+show_debug_message("speed: {0}", speed);
+
 //Do things based on what stage the Jest Cutscene is at
 switch(JestDebut_Stage)
 {
@@ -41,27 +45,18 @@ switch(JestDebut_Stage)
 		
 		#region Enter
 			
-			//If the sequence hasn't been created yet, create it
+			with (obj_Camera)
+			{
+				follow = other.id;
+			}
+			
 			if (!JestDebut_EnterSequenceCreated)
 			{
-				JestDebut_EnterSeqElm = layer_sequence_create(layer, x, y, seq_JestDebut_Enter);
-				JestDebut_EnterSeqId = layer_sequence_get_instance(JestDebut_EnterSeqElm);
-				JestDebut_EnterSequenceCreated = true;
-			}//end sequence not created
+				TurnObjectToSequence(object_index, seq_JestDebut_Enter, x, y, layer, function(){JestDebut_Stage = JESTDEBUTCUTSCENE_STAGE.ENTER_TALK;});
+				JestDebut_EnterSequenceCreated = true
+			}
 			
-			//If the sequence has been created
-			else
-			{
-				//Sequence overrides object
-				sequence_instance_override_object(JestDebut_EnterSeqId, obj_JestDebut, instance_find(obj_JestDebut, 0))
-				
-				//If the sequence has finished playing
-				if (layer_sequence_is_finished(JestDebut_EnterSeqElm))
-				{
-					JestDebut_Stage = JESTDEBUTCUTSCENE_STAGE.ENTER_TALK;
-				}//end sequence finished
-				
-			}//end sequence created
+			
 			
 		#endregion
 		
@@ -71,6 +66,8 @@ switch(JestDebut_Stage)
 	case JESTDEBUTCUTSCENE_STAGE.ENTER_TALK:
 	
 		#region Enter Talk
+			
+			show_debug_message("Enter talk scene");
 			
 			//Create the words Jest says to Rosey
 			var _text = 
@@ -115,30 +112,82 @@ switch(JestDebut_Stage)
 	
 		#region Dance
 			
-			//If the sequence hasn't been created yet, create it
 			if (!JestDebut_DanceSequenceCreated)
 			{
-				JestDebut_DanceSeqElm = layer_sequence_create(layer, x, y, seq_JestDebut_Dance);
-				JestDebut_DanceSeqId = layer_sequence_get_instance(JestDebut_DanceSeqElm);
-				JestDebut_EnterSequenceCreated = true;
-			}//end sequence not created
-			
-			//If the sequence has been created
-			else
-			{
-				//Sequence overrides object
-				sequence_instance_override_object(JestDebut_DanceSeqId, obj_JestDebut, instance_find(obj_JestDebut, 0))
-				
-				//If the sequence has finished playing
-				if (layer_sequence_is_finished(JestDebut_DanceSeqElm))
-				{
-					JestDebut_Stage = JESTDEBUTCUTSCENE_STAGE.EXIT_TALK;
-				}//end sequence finished
-				
-			}//end sequence created
-			
+				TurnObjectToSequence(object_index, seq_JestDebut_Dance, x, y, layer, function(){JestDebut_Stage = JESTDEBUTCUTSCENE_STAGE.EXIT_TALK;});
+				JestDebut_DanceSequenceCreated = true;
+			}
+		
 		#endregion
 	
 		break;
+		
+	//When Jest makes his last speech before leaving
+	case JESTDEBUTCUTSCENE_STAGE.EXIT_TALK:
 	
-}
+		#region Exit Talk
+			
+			//Create the words Jest says to Rosey
+			var _text = 
+			[
+				"Buuut I'm not about to just tell you what it is, that would ruin the surprise wouldn't it?",
+				"Little Rosey, you're going to have the time of your life, huhuhuhu",
+				"Now then, I have to go make preparations, so I'll see you when you're Cardinal"
+			]
+			
+			with (obj_Text)
+			{
+				if (TextBox_CharCount < string_length(TextBox_Text[TextBox_Page]))
+				{
+					other.image_speed = 1;
+				}
+				else
+				{
+					other.image_speed = 0;
+					other.image_index = 0;
+				}
+			}
+			
+			//If Jest hasn't started talking, start talking
+			if (!JestDebut_StartedExitTalk)
+			{
+				CutsceneText(_text, "Jest");
+				JestDebut_StartedExitTalk = true;
+			}//end Jest start talking
+			
+			//If Jest has finished talking, starting dancing
+			if (!instance_exists(obj_Text) && JestDebut_StartedExitTalk == true)
+			{
+				JestDebut_Stage = JESTDEBUTCUTSCENE_STAGE.EXIT;
+			}//end Jest finished talking
+			
+		#endregion
+	
+		break;//end Jest exit speech
+	
+	//When Jest starts leaving
+	case JESTDEBUTCUTSCENE_STAGE.EXIT:
+	
+		var _exitfunc = function()
+		{
+			with (obj_Camera)
+			{
+				follow = obj_Player;
+			}
+			with (obj_Player)
+			{
+				hascontrol = true;
+			}
+			instance_destroy();	
+		}
+	
+		if (!JestDebut_ExitSequenceCreated)
+		{
+			TurnObjectToSequence(object_index, seq_JestDebut_Exit, x, y, layer, _exitfunc);
+			
+			JestDebut_ExitSequenceCreated = true;
+		}
+	
+		break;//end Jest exit
+	
+}//end Jest Cutscene Stage

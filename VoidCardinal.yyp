@@ -585,6 +585,7 @@
     {"id":{"name":"spr_Cursor","path":"sprites/spr_Cursor/spr_Cursor.yy",},},
     {"id":{"name":"spr_BlueBird","path":"sprites/spr_BlueBird/spr_BlueBird.yy",},},
     {"id":{"name":"sound_Footstep2","path":"sounds/sound_Footstep2/sound_Footstep2.yy",},},
+    {"id":{"name":"seq_JestDebut_Exit","path":"sequences/seq_JestDebut_Exit/seq_JestDebut_Exit.yy",},},
     {"id":{"name":"TextScripts","path":"scripts/TextScripts/TextScripts.yy",},},
     {"id":{"name":"obj_VioletRoseryIntro","path":"objects/obj_VioletRoseryIntro/obj_VioletRoseryIntro.yy",},},
     {"id":{"name":"obj_IceSpikeOrbit","path":"objects/obj_IceSpikeOrbit/obj_IceSpikeOrbit.yy",},},

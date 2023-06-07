@@ -451,6 +451,7 @@
     {"name":"spr_Cursor","order":6,"path":"sprites/spr_Cursor/spr_Cursor.yy",},
     {"name":"spr_BlueBird","order":5,"path":"sprites/spr_BlueBird/spr_BlueBird.yy",},
     {"name":"sound_Footstep2","order":1,"path":"sounds/sound_Footstep2/sound_Footstep2.yy",},
+    {"name":"seq_JestDebut_Exit","order":2,"path":"sequences/seq_JestDebut_Exit/seq_JestDebut_Exit.yy",},
     {"name":"TextScripts","order":8,"path":"scripts/TextScripts/TextScripts.yy",},
     {"name":"obj_VioletRoseryIntro","order":1,"path":"objects/obj_VioletRoseryIntro/obj_VioletRoseryIntro.yy",},
     {"name":"spr_TundraMountains","order":1,"path":"sprites/spr_TundraMountains/spr_TundraMountains.yy",},

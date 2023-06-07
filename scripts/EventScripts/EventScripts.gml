@@ -41,35 +41,38 @@ function CreateThenDestroySequence(_seq = noone, _x = 0, _y = 0, _createfunc = E
 /// @param x
 /// @param y
 /// @param layer
-/// @param KEEP_FALSE is a variable that is used to ensure that a sequence is created only once
-function TurnObjectToSequence(_obj, _seq, _x = x, _y = y, _layer = layer, _finishfunc = EmptyFunction, _seqcreated = false)
+/// @param finishfunc is the function that is called when the sequence finished
+function TurnObjectToSequence(_obj, _seq, _x = x, _y = y, _layer = layer, _finishfunc = EmptyFunction)
 {
 	
 	var _elm = noone;
 	var _id = noone;
 	
-	//If the sequence hasn't been created yet, create it
-	if (!_seqcreated)
+	var _seqCreate = false;
+	
+	if (!_seqCreate)
 	{
-		_elm = layer_sequence_create(_layer, _x, _y, _seq);
-		_id = layer_sequence_get_instance(_elm);
-		_seqcreated = true;
-	}//end sequence not created
-			
-	//If the sequence has been created
+		//Create the sequence element and id
+		 _elm = layer_sequence_create(_layer, _x, _y, _seq);
+		 _id = layer_sequence_get_instance(_elm);
+		 //Sequence overrides object
+		sequence_instance_override_object(_id, _obj, instance_find(_obj, 0));
+		 _seqCreate = true;
+	}
+
 	else
 	{
-		//Sequence overrides object
-		sequence_instance_override_object(_id, _obj, instance_find(_obj, 0))
-				
+		
+		show_debug_message("ELSESES");
+		
 		//If the sequence has finished playing
 		if (layer_sequence_is_finished(_elm))
 		{
+
 			layer_sequence_destroy(_elm);
 			sequence_destroy(_id);
+			_finishfunc();
 		}//end sequence finished
-				
-	}//end sequence created
-			
+	}
 		
-}
+}//end TurnObjectToSequence()
