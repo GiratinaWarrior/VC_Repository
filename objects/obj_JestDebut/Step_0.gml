@@ -52,10 +52,34 @@ switch(JestDebut_Stage)
 			
 			if (!JestDebut_EnterSequenceCreated)
 			{
+				//Create the sequence element and id
+				 JestDebut_EnterSequenceElm = layer_sequence_create(layer, x, y, seq_JestDebut_Enter);
+				 JestDebut_EnterSequenceId = layer_sequence_get_instance(JestDebut_EnterSequenceElm);
+				 //Sequence overrides object
+				sequence_instance_override_object(JestDebut_EnterSequenceId, object_index, instance_find(object_index, 0));
+				JestDebut_EnterSequenceCreated = true;
+			}
+
+			else
+			{
+		
+				//If the sequence has finished playing
+				if (layer_sequence_is_finished(JestDebut_EnterSequenceElm))
+				{
+
+					layer_sequence_destroy(JestDebut_EnterSequenceElm);
+					//sequence_destroy(JestDebut_EnterSequenceId);
+					JestDebut_Stage = JESTDEBUTCUTSCENE_STAGE.ENTER_TALK;
+				}//end sequence finished
+			}
+			
+			/*
+			if (!JestDebut_EnterSequenceCreated)
+			{
 				TurnObjectToSequence(object_index, seq_JestDebut_Enter, x, y, layer, function(){JestDebut_Stage = JESTDEBUTCUTSCENE_STAGE.ENTER_TALK;});
 				JestDebut_EnterSequenceCreated = true
 			}
-			
+			*/
 			
 			
 		#endregion
@@ -114,8 +138,25 @@ switch(JestDebut_Stage)
 			
 			if (!JestDebut_DanceSequenceCreated)
 			{
-				TurnObjectToSequence(object_index, seq_JestDebut_Dance, x, y, layer, function(){JestDebut_Stage = JESTDEBUTCUTSCENE_STAGE.EXIT_TALK;});
+				//Create the sequence element and id
+				 JestDebut_DanceSequenceElm = layer_sequence_create(layer, x, y, seq_JestDebut_Dance);
+				 JestDebut_DanceSequenceId = layer_sequence_get_instance(JestDebut_DanceSequenceElm);
+				 //Sequence overrides object
+				sequence_instance_override_object(JestDebut_DanceSequenceId, object_index, instance_find(object_index, 0));
 				JestDebut_DanceSequenceCreated = true;
+			}
+
+			else
+			{
+		
+				//If the sequence has finished playing
+				if (layer_sequence_is_finished(JestDebut_DanceSequenceElm))
+				{
+
+					layer_sequence_destroy(JestDebut_DanceSequenceElm);
+					//sequence_destroy(JestDebut_EnterSequenceId);
+					JestDebut_Stage = JESTDEBUTCUTSCENE_STAGE.EXIT_TALK;
+				}//end sequence finished
 			}
 		
 		#endregion
@@ -168,25 +209,36 @@ switch(JestDebut_Stage)
 	//When Jest starts leaving
 	case JESTDEBUTCUTSCENE_STAGE.EXIT:
 	
-		var _exitfunc = function()
-		{
-			with (obj_Camera)
-			{
-				follow = obj_Player;
-			}
-			with (obj_Player)
-			{
-				hascontrol = true;
-			}
-			instance_destroy();	
-		}
-	
 		if (!JestDebut_ExitSequenceCreated)
-		{
-			TurnObjectToSequence(object_index, seq_JestDebut_Exit, x, y, layer, _exitfunc);
-			
-			JestDebut_ExitSequenceCreated = true;
-		}
+			{
+				//Create the sequence element and id
+				 JestDebut_ExitSequenceElm = layer_sequence_create(layer, x, y, seq_JestDebut_Exit);
+				 JestDebut_ExitSequenceId = layer_sequence_get_instance(JestDebut_ExitSequenceElm);
+				 //Sequence overrides object
+				sequence_instance_override_object(JestDebut_ExitSequenceId, object_index, instance_find(object_index, 0));
+				JestDebut_ExitSequenceCreated = true;
+			}
+
+			else
+			{
+		
+				//If the sequence has finished playing
+				if (layer_sequence_is_finished(JestDebut_ExitSequenceElm))
+				{
+
+					layer_sequence_destroy(JestDebut_ExitSequenceElm);
+					with (obj_Camera)
+					{
+						follow = obj_Player;
+					}
+					with (obj_Player)
+					{
+						hascontrol = true;
+					}
+					global.JestDebut_Cutscene_Seen = true;
+					instance_destroy();	
+				}//end sequence finished
+			}
 	
 		break;//end Jest exit
 	

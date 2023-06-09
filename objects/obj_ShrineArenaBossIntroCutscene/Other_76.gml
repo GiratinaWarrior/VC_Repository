@@ -16,9 +16,9 @@ if (event_data[? "event_type"] == "sequence event")
 				y = 162 + 270;
 			}
 			instance_create_layer(928, 416, "Platforms", obj_WallPlatform);
-			if !(instance_exists(obj_ShrineGeneral))
+			if !(instance_exists(obj_ShrineGeneral_Main_PhaseOne))
 			{
-				instance_create_layer(240, 388, "ShrineGeneral", obj_ShrineGeneral);
+				instance_create_layer(240, 388, "ShrineGeneral", obj_ShrineGeneral_Main_PhaseOne);
 			}
 			layer_sequence_destroy(ShrineArenaBossCutsceneSequenceID);
 			with (obj_Camera)

@@ -35,5 +35,5 @@
     "path": "sprites/spr_EventTrigger/spr_EventTrigger.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

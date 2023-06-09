@@ -21,7 +21,8 @@ function SaveGame()
 		UnlockedCrescentBlitz : global.AbilityUnlocked_CrescentBlitz,
 		UnlockedClingToHope : global.AbilityUnlocked_ClingToHope,
 		UnlockedNightNight : global.AbilityUnlocked_NightNight,
-		OrbsCollected : global.OrbsCollected
+		OrbsCollected : global.OrbsCollected,
+		SeenJestDebutCutscene: global.JestDebut_Cutscene_Seen
 	}
 	
 	var _dataString = json_stringify(_saveVar);
@@ -63,9 +64,9 @@ function LoadSave()
 		global.AbilityUnlocked_ClingToHope = _loadData.UnlockedClingToHope;
 		global.AbilityUnlocked_NightNight = _loadData.UnlockedNightNight;
 		global.OrbsCollected = _loadData.OrbsCollected;
+		global.JestDebut_Cutscene_Seen = _loadData.SeenJestDebutCutscene
 		
-		
-	}
+	} 
 
 }
 

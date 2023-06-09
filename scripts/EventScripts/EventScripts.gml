@@ -63,8 +63,6 @@ function TurnObjectToSequence(_obj, _seq, _x = x, _y = y, _layer = layer, _finis
 	else
 	{
 		
-		show_debug_message("ELSESES");
-		
 		//If the sequence has finished playing
 		if (layer_sequence_is_finished(_elm))
 		{

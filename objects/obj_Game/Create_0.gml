@@ -11,14 +11,6 @@ global.OrbsCollected = 0;
 
 global.MaxHealth = 10;
 
-//Which orbs we've retrieved in specific
-// 0 = false, unretrieved
-// 1 = true, retrieved
-global.FieldOrb = 0;
-global.OceanOrb = 0;
-global.TundraOrb = 0;
-global.DesertOrb = 0;
-
 global.Spawnpoint = Room_RoseRoom;
 global.SpawnX = 128;
 global.SpawnY = 128;
@@ -32,7 +24,7 @@ global.Title = "Cardinal";
 global.Name = "Rose";
 
 //The range our player can see
-global.xrange = 495;
+global.xrange = RES_W/2;
 //global.yrange = 172;
 
 //Music and sound effects
@@ -50,6 +42,8 @@ global.Health = global.MaxHealth;
 global.WarpTargetX = 128;
 global.WarpTargetY = 128;
 
+//------------Abilities Unlocked------------//
+
 global.AbilityUnlocked_SeleneSword = true;
 global.AbilityUnlocked_LunarCannon = true;
 global.AbilityUnlocked_StarJump = false;
@@ -57,6 +51,18 @@ global.AbilityUnlocked_CrescentBlitz = false;
 global.AbilityUnlocked_ClingToHope = false;
 global.AbilityUnlocked_NightNight = false;
 
+//--------------Story Flags-----------------//
+
+
+//Which orbs we've retrieved in specific
+// 0 = false, unretrieved
+// 1 = true, retrieved
+global.FieldOrb = 0;
+global.OceanOrb = 0;
+global.TundraOrb = 0;
+global.DesertOrb = 0;
+
+global.JestDebut_Cutscene_Seen = false;
 
 
 
