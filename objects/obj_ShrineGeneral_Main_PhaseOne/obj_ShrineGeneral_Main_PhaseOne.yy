@@ -14,8 +14,8 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_Enemy","path":"objects/parent_Enemy/parent_Enemy.yy",},"propertyId":{"name":"FlashLength","path":"objects/parent_Enemy/parent_Enemy.yy",},"value":"4",},
   ],
   "parent": {
-    "name": "ShrineGeneral",
-    "path": "folders/Objects/Enemies/Bosses/ShrineGeneral.yy",
+    "name": "Body",
+    "path": "folders/Objects/Enemies/Bosses/ShrineGeneral/PhaseOne/Body.yy",
   },
   "parentObjectId": {
     "name": "obj_BossEnemy",

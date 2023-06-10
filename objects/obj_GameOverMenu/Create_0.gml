@@ -1,7 +1,10 @@
 GameOverMenu_Strive = function()
 {
-	SlideTransition(TRANS_MODE.GOTO, global.Spawnpoint); 
-	SummonPlayer();
+	TransitionStart(global.Spawnpoint, seq_FadeOut, seq_FadeIn);
+	global.Health = global.MaxHealth;
+	SummonPlayer(global.SpawnX, global.SpawnY);
+	global.WarpTargetX = global.SpawnX;
+	global.WarpTargetY = global.SpawnY;
 }
 
 GameOverMenu_Surrender = function()

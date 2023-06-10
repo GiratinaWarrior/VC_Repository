@@ -49,6 +49,8 @@ function ShrineSoldierState_Defeat(){
 	
 	xSpeed = 0;
 	
+	Damage = 0;
+	
 	//show_debug_message("Shrine Soldier Image Index: {0}", image_index);
 	
 	//If the Shrine Soldier hasnt changed their sprite to the defeated one, do so

@@ -6,8 +6,6 @@ TitleMenu_NewGame = function()
 {
 	DeleteSave()
 	TransitionStart(FirstPlayerRoom, seq_FadeOut, seq_FadeIn);
-	//show_debug_message("TitleScreen New Game Spawnpoint: {0}", room_get_name(global.Spawnpoint));
-	//SummonPlayer();
 }
 
 TitleMenu_Continue = function()

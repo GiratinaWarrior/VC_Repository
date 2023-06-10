@@ -3,9 +3,7 @@ with (obj_PlayBGM)
 	NextBGM = music_GameOverTheme;
 }
 
-//global.Health = global.MaxHealth;
-
-//audio_stop_sound(sound_FrenzyLaugh);
+global.Health = global.MaxHealth;
 
 with (obj_PlayBGS)
 {

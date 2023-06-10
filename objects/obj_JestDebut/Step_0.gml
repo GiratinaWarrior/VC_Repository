@@ -1,8 +1,8 @@
 /// @description The different stages for Jest
 
-y = clamp(y, 0, room_height);
+//y = clamp(y, 0, room_height);
 
-show_debug_message("speed: {0}", speed);
+//show_debug_message("speed: {0}", speed);
 
 //Do things based on what stage the Jest Cutscene is at
 switch(JestDebut_Stage)

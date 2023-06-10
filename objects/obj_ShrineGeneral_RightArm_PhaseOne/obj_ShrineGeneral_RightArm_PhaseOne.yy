@@ -4,10 +4,12 @@
   "name": "obj_ShrineGeneral_RightArm_PhaseOne",
   "eventList": [],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_EnemyAttack","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"propertyId":{"name":"Damage","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"value":"0",},
+  ],
   "parent": {
-    "name": "ShrineGeneral",
-    "path": "folders/Objects/Enemies/Bosses/ShrineGeneral.yy",
+    "name": "Body",
+    "path": "folders/Objects/Enemies/Bosses/ShrineGeneral/PhaseOne/Body.yy",
   },
   "parentObjectId": {
     "name": "parent_EnemyAttack",

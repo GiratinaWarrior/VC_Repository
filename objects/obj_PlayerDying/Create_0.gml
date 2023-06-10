@@ -10,6 +10,6 @@ image_index = 0;
 image_speed = 1;
 image_alpha = 1;
 
-//audio_play_sound(sound_Death, 10, false);
+global.Health = global.MaxHealth;
 
 obj_Camera.follow = obj_PlayerDying;
