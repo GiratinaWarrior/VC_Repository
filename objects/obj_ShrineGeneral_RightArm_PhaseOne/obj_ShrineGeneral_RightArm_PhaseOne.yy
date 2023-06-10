@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_ShrineGeneral_RightArm_Idle_PhaseOne208",
-    "path": "sprites/spr_ShrineGeneral_RightArm_Idle_PhaseOne208/spr_ShrineGeneral_RightArm_Idle_PhaseOne208.yy",
+    "name": "spr_ShrineGeneral_RightArm_Idle_PhaseOne",
+    "path": "sprites/spr_ShrineGeneral_RightArm_Idle_PhaseOne/spr_ShrineGeneral_RightArm_Idle_PhaseOne.yy",
   },
   "spriteMaskId": null,
   "visible": true,

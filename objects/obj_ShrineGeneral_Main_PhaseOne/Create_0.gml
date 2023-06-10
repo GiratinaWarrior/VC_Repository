@@ -26,8 +26,8 @@ ShrineGeneral_StateChangeCounter = 0;
 ShrineGeneral_StateChangeLimit = 100;
 
 //-------------Arm Objects-------------//
-ShrineGeneral_LeftArm = instance_create_depth(x, y, depth + 1, obj_ShrineGeneral_LeftArm_PhaseOne);
-ShrineGeneral_RightArm = instance_create_depth(x, y, depth - 1, obj_ShrineGeneral_RightArm_PhaseOne);
+ShrineGeneral_LeftArm = instance_create_depth(x, y, depth - 1, obj_ShrineGeneral_LeftArm_PhaseOne);
+ShrineGeneral_RightArm = instance_create_depth(x, y, depth + 1, obj_ShrineGeneral_RightArm_PhaseOne);
 
 //-------------Distance Range Variables-------------//
 
@@ -43,10 +43,12 @@ ShrineGeneral_RocketRange = 1000;
 enum SHRINEGENERAL_ROCKETPUNCH_STATE
 {
 	WINDUP,
-	PUNCH,
-	HANG,
+	JAB,
+	CROSS,
 	COOLDOWN
 }
+
+ShrineGeneral_RocketPunch_State = SHRINEGENERAL_ROCKETPUNCH_STATE.WINDUP;
 
 //The distance the rocket punch travels
 ShrineGeneral_RocketPunch_MaxDist = 200;
