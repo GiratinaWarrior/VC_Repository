@@ -46,7 +46,7 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"221f33d8-90ec-4f58-bad3-17fc3cd6070d","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 4,
+  "origin": 9,
   "parent": {
     "name": "WindUp",
     "path": "folders/Sprites/Bosses/ShrineGeneral/PhaseOne/RocketPunch/WindUp.yy",
@@ -105,7 +105,7 @@
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 48,
+    "xorigin": 72,
     "yorigin": 48,
   },
   "swatchColours": null,

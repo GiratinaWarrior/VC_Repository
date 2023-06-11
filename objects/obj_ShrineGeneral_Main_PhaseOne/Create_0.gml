@@ -57,13 +57,14 @@ ShrineGeneral_RocketPunch_MaxTime = 10;
 //The speed of the punch
 ShrineGeneral_RocketPunch_Speed = ShrineGeneral_RocketPunch_MaxDist/ShrineGeneral_RocketPunch_MaxTime; 
 
+ShrineGeneral_RocketPunch_Accel = 2;
+
+ShrineGeneral_RocketPunch_Dir = image_xscale;
+
 //The time it takes to wind up the punch, as well as the timer
 ShrineGeneral_RocketPunch_TimeToWindUp = 40;
 ShrineGeneral_RocketPunch_StartTimer = 0;
 
-//The size multiplier the punch reaches
-	//unless I decide to make a new sprite for it
-ShrineGeneral_RocketPunch_Size = 1.5;
 //The damage the rocket punch does
 ShrineGeneral_RocketPunch_Damage = 3;
 
