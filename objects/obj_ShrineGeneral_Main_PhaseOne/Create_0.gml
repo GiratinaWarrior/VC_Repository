@@ -23,7 +23,7 @@ ShrineGeneral_State_One = SHRINEGENERAL_STATE_ONE.IDLE;
 //Variable the counts up to change the state
 ShrineGeneral_StateChangeCounter = 0;
 //How long it takes for SG to use an attack
-ShrineGeneral_StateChangeLimit = 100;
+ShrineGeneral_StateChangeLimit = 200;
 
 //-------------Arm Objects-------------//
 ShrineGeneral_LeftArm = instance_create_depth(x, y, depth - 1, obj_ShrineGeneral_LeftArm_PhaseOne);
@@ -53,7 +53,7 @@ ShrineGeneral_RocketPunch_State = SHRINEGENERAL_ROCKETPUNCH_STATE.WINDUP;
 //The distance the rocket punch travels
 ShrineGeneral_RocketPunch_MaxDist = 200;
 //The time it takes for the punch to reach its max distance
-ShrineGeneral_RocketPunch_MaxTime = 10;
+ShrineGeneral_RocketPunch_MaxTime = 20;
 //The speed of the punch
 ShrineGeneral_RocketPunch_Speed = ShrineGeneral_RocketPunch_MaxDist/ShrineGeneral_RocketPunch_MaxTime; 
 

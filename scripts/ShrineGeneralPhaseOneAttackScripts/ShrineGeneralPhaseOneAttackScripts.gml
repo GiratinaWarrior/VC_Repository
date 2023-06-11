@@ -10,16 +10,20 @@ function ShrineGeneralPhaseOne_RocketPunch(){
 		//The wind up stage of the rocket punch
 		case SHRINEGENERAL_ROCKETPUNCH_STATE.WINDUP:
 		
+			image_xscale = -sign(x - obj_Player.x);
+		
 			//Do stuff to the right arm
 			with (ShrineGeneral_RightArm)
 			{
 				sprite_index = spr_ShrineGeneral_RightArm_RocketPunchWindUp_PhaseOne;
+				image_xscale = other.image_xscale;
 			}//end with Right Arm
 			
 			//Do stuff to the left arm
 			with (ShrineGeneral_LeftArm)
 			{
 				sprite_index = spr_ShrineGeneral_LeftArm_RocketPunchWindUp_PhaseOne;
+				image_xscale = other.image_xscale;
 			}//end with Left Arm
 			
 			//If the wind up time is finished
@@ -33,27 +37,52 @@ function ShrineGeneralPhaseOne_RocketPunch(){
 		//The jab state for the rocket punch
 		case SHRINEGENERAL_ROCKETPUNCH_STATE.JAB:
 
-			//access the right arm
-			with (ShrineGeneral_RightArm)
-			{
-				//change the sprite
-				sprite_index = spr_ShrineGeneral_RightArm_RocketPunchAttack_PhaseOne;
-				//make it do damage
-				Damage = other.ShrineGeneral_RocketPunch_Damage;
+			#region Old Right Arm
+			
+				/*
+			
+				//access the right arm
+				with (ShrineGeneral_RightArm)
+				{
+					//change the sprite
+					sprite_index = spr_ShrineGeneral_RightArm_RocketPunchAttack_PhaseOne;
+					//make it do damage
+					Damage = other.ShrineGeneral_RocketPunch_Damage;
 				
-				//Set the direction the punch goes
+					//Set the direction the punch goes
+					other.ShrineGeneral_RocketPunch_Dir = image_xscale;
+				
+					//Make it MOVE
+					x += (other.ShrineGeneral_RocketPunch_Speed * other.ShrineGeneral_RocketPunch_Dir);
+				
+					//If the rocket punch has reached its maximum range
+					if (abs(point_distance(x, y, other.x, other.y)) >= other.ShrineGeneral_RocketPunch_MaxDist)
+					{
+						other.ShrineGeneral_RocketPunch_State = SHRINEGENERAL_ROCKETPUNCH_STATE.CROSS;
+					}//end reached max distance
+				
+				}//end access right arm
+				
+				*/
+				
+			#endregion
+			
+			#region New Right Arm
+				
+				ShrineGeneral_RightArm.sprite_index = spr_ShrineGeneral_RightArm_RocketPunchAttack_PhaseOne;
+				
+				ShrineGeneral_RightArm.Damage = ShrineGeneral_RocketPunch_Damage;
+				
 				ShrineGeneral_RocketPunch_Dir = image_xscale;
 				
-				//Make it MOVE
-				x += Approach(0, other.ShrineGeneral_RocketPunch_Speed * other.ShrineGeneral_RocketPunch_Dir, other.ShrineGeneral_RocketPunch_Accel);
+				ShrineGeneral_RightArm.x += ShrineGeneral_RocketPunch_Speed * ShrineGeneral_RocketPunch_Dir;
 				
-				//If the rocket punch has reached its maximum range
-				if (x >= abs(other.x + other.ShrineGeneral_RocketPunch_MaxDist * image_xscale))
+				if (abs(point_distance(x, y, ShrineGeneral_RightArm.x, ShrineGeneral_RightArm.y)) >= ShrineGeneral_RocketPunch_MaxDist)
 				{
-					other.ShrineGeneral_RocketPunch_State = SHRINEGENERAL_ROCKETPUNCH_STATE.CROSS;
-				}//end reached max distance
+					ShrineGeneral_RocketPunch_State = SHRINEGENERAL_ROCKETPUNCH_STATE.CROSS;
+				}
 				
-			}//end access right arm
+			#endregion
 
 			break;//end jab stage
 			
