@@ -28,7 +28,7 @@
 				}
 		
 				/////Have the arms approach the main body
-				var _reattachSpeed = 5;
+				//var _reattachSpeed = 5;
 	
 				with (ShrineGeneral_LeftArm)
 				{
@@ -58,12 +58,14 @@
 					if (ShrineGeneral_PlayerRange > ShrineGeneral_RapidRange && ShrineGeneral_PlayerRange < ShrineGeneral_RocketRange)
 					{
 						ShrineGeneral_State_One = SHRINEGENERAL_STATE_ONE.ROCKET;
+						ShrineGeneral_StateChangeCounter = 0;
 					}//end in range of Rocket Punch
 			
 					//If the player is in range of Rapid Punch
 					else if (ShrineGeneral_PlayerRange <= ShrineGeneral_RapidRange)
 					{
 						ShrineGeneral_State_One = SHRINEGENERAL_STATE_ONE.RAPID;
+						ShrineGeneral_StateChangeCounter = 0;
 					}//end in range of Rapid 
 			
 				}//end SG attack
