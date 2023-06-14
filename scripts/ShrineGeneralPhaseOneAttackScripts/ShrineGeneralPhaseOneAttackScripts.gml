@@ -1,5 +1,4 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+// This function runs the Rocket Punch attack for the Shrine General
 function ShrineGeneralPhaseOne_RocketPunch(){
 
 	xSpeed = 0;
@@ -186,3 +185,63 @@ function ShrineGeneralPhaseOne_RocketPunch(){
 	}//end Rocket Punch state machine
 
 }//end ShrineGeneralPhaseOne_RocketPunch()
+	
+// This function runs the Rapid Punch attack for the Shrine General
+function ShrineGeneralPhaseOne_RapidPunches() {
+
+	switch(ShrineGeneral_RapidPunch_State)
+	{
+		
+		//The Windup State for the Rapid Punch
+		//This is where SG will pull back its arms to prepare
+		case SHRINEGENERAL_RAPIDPUNCH_STATE.WINDUP:
+			
+			xSpeed = 0;
+			
+			//Set the arms sprites to the wind up sprites, while making sure that the entire animation is played
+			if (ShrineGeneral_LeftArm.sprite_index != spr_ShrineGeneral_LeftArm_RapidPunchWindUp_PhaseOne)
+			{
+				image_index = 0;
+				ShrineGeneral_LeftArm.sprite_index = spr_ShrineGeneral_LeftArm_RapidPunchWindUp_PhaseOne;
+			}
+			if (ShrineGeneral_RightArm.sprite_index != spr_ShrineGeneral_RightArm_RapidPunchWindUp_PhaseOne)
+			{
+				image_index = 0;
+				ShrineGeneral_RightArm.sprite_index = spr_ShrineGeneral_RightArm_RapidPunchWindUp_PhaseOne;
+			}
+			
+			if (animation_end(spr_ShrineGeneral_LeftArm_RapidPunchWindUp_PhaseOne) || animation_end(spr_ShrineGeneral_RightArm_RapidPunchWindUp_PhaseOne))
+			{
+				ShrineGeneral_RapidPunch_State = SHRINEGENERAL_RAPIDPUNCH_STATE.FLURRY;
+			}
+			
+			break;//end Wind up State
+		
+		//The Flurry state for the Rapid Punches
+		//This is where SG will rapidly fire mirages of punches
+		case SHRINEGENERAL_RAPIDPUNCH_STATE.FLURRY:
+			
+			#region Flurry State
+			
+				#region Regular Arms
+				
+				//Temporarily deactivate the Shrine Generals left and right arms
+				instance_deactivate_object(ShrineGeneral_RightArm);
+				instance_deactivate_object(ShrineGeneral_LeftArm);
+				
+				#endregion 
+			
+				#region Mirage Arms
+				
+				
+					
+				#endregion
+			
+			#endregion 
+			
+			break;//end Flurry State
+	}
+	
+	
+
+}

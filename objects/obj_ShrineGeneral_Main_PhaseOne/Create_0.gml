@@ -65,13 +65,81 @@ ShrineGeneral_RocketPunch_StartTimer = 0;
 
 //The damage the rocket punch does
 ShrineGeneral_RocketPunch_Damage = 3;
-
-//How long the rocket punch stays still after reaching its max distance, as well as the timer
-ShrineGeneral_RocketPunch_HangTime = 10;
-ShrineGeneral_RocketPunch_StayTimer = 0;
-
 //The cooldown for after the rocket punch has been fired, as well as the timer
 ShrineGeneral_RocketPunch_TimeToCoolDown = 20;
 ShrineGeneral_RocketPunch_CooldownTimer = 0;
 
 //------------Rapid Punch variables----------------//
+
+//The states of the Rapid Punch
+enum SHRINEGENERAL_RAPIDPUNCH_STATE
+{
+	WINDUP,
+	FLURRY,
+	FINISH,
+	COOLDOWN
+}
+
+//Variables that tracks the state of the Rapid Punch
+ShrineGeneral_RapidPunch_State = SHRINEGENERAL_RAPIDPUNCH_STATE.WINDUP;
+
+//The time it takes to wind up the rapid punch
+ShrineGeneral_RapidPunch_TimeToWindUp = 20;
+//and the timer
+ShrineGeneral_RapidPunch_WindUpTimer = 0;
+
+//How long the rapid punches last
+ShrineGeneral_RapidPunch_FlurryLength = 50;
+//and the timer
+ShrineGeneral_RapidPunch_FlurryTimer = 0;
+
+//How long the finishing blow stays in place
+ShrineGeneral_RapidPunch_FinishHangTime = 20;
+//and the timer
+ShrineGeneral_RapidPunch_FinishTimer = 0;
+
+//How long it takes for the rapid punch state to revert to the Idle state
+ShrineGeneral_RapidPunch_TimeToCooldown = 30;
+//and the timer
+ShrineGeneral_RapidPunch_CooldownTimer = 0;
+
+//How much damage the flurry of punches do
+ShrineGeneral_RapidPunch_FlurryDamage = 0.1;
+//How much the finishing blow does
+ShrineGeneral_RapidPunch_FinishDamage = 2;
+
+//How often the punches are sent out
+ShrineGeneral_RapidPunch_FlurryRate = 2;
+//and the timer
+ShrineGeneral_RapidPunch_FlurryCounter = 0;
+
+//the function that creates the rapid punches
+ShrineGeneral_RapidPunch_FlurryCreate = function()
+{
+	//create and access a Rapid Punch
+	with(instance_create_depth(x, y, depth + choose(1, -1), obj_ShrineGeneral_RapidPunch))
+	{
+		
+		image_xscale = other.image_xscale;
+		switch(depth)
+		{
+			case other.depth + 1:
+				sprite_index = spr_ShrineGeneral_RightArm_RapidPunchFlurry_PhaseOne;
+				break;
+			
+			case other.depth - 1:
+				sprite_index = spr_ShrineGeneral_LeftArm_RapidPunchFlurry_PhaseOne;
+				break;
+				
+		}
+		
+		
+	}//end create and access Rapid Punch
+	
+}//end ShrineGeneral_RapidPunch_FlurryCreate()
+
+ShrineGeneral_RapidPunch_CreateTimer = time_source_create(time_source_game, ShrineGeneral_RapidPunch_FlurryRate, time_source_units_seconds, ShrineGeneral_RapidPunch_FlurryCreate, [], -1);
+
+
+
+

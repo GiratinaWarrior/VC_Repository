@@ -77,6 +77,8 @@
 		//if SG is in the rapid punch state
 		case SHRINEGENERAL_STATE_ONE.RAPID:
 		
+			ShrineGeneralPhaseOne_RapidPunches();
+		
 			break;//end rapid punch state
 		
 		//if SG is in the rocket punch state
