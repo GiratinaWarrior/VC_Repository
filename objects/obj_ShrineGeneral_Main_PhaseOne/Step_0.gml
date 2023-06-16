@@ -48,25 +48,25 @@
 				//Determine how close the player is from SG
 				if (instance_exists(obj_Player))
 				{
-					ShrineGeneral_PlayerRange = point_distance(x, y, obj_Player.x, obj_Player.y);
+					ShrineGeneral_PlayerRange = abs(obj_Player.x - x);
 				}
 		
 				//If its time for SG to attack
 				if (ShrineGeneral_StateChangeCounter++ > ShrineGeneral_StateChangeLimit)
 				{
+					//If the player is in range of Rapid Punch
+					if (ShrineGeneral_PlayerRange <= ShrineGeneral_RapidRange)
+					{
+					    ShrineGeneral_State_One = SHRINEGENERAL_STATE_ONE.RAPID;
+						ShrineGeneral_StateChangeCounter = 0;
+					}//end in range of Rapid Punch
+			
 					//If the player is in range of Rocket Punch
-					if (ShrineGeneral_PlayerRange > ShrineGeneral_RapidRange && ShrineGeneral_PlayerRange < ShrineGeneral_RocketRange)
+					else if (ShrineGeneral_PlayerRange <= ShrineGeneral_RocketRange)
 					{
 						ShrineGeneral_State_One = SHRINEGENERAL_STATE_ONE.ROCKET;
 						ShrineGeneral_StateChangeCounter = 0;
-					}//end in range of Rocket Punch
-			
-					//If the player is in range of Rapid Punch
-					else if (ShrineGeneral_PlayerRange <= ShrineGeneral_RapidRange)
-					{
-						ShrineGeneral_State_One = SHRINEGENERAL_STATE_ONE.RAPID;
-						ShrineGeneral_StateChangeCounter = 0;
-					}//end in range of Rapid 
+					}//end in range of Rocket Punch 
 			
 				}//end SG attack
 		

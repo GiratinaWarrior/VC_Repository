@@ -137,6 +137,8 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"PhaseOne","folderPath":"folders/Sprites/Bosses/ShrineGeneral/PhaseOne.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Idle","folderPath":"folders/Sprites/Bosses/ShrineGeneral/PhaseOne/Idle.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"RapidPunches","folderPath":"folders/Sprites/Bosses/ShrineGeneral/PhaseOne/RapidPunches.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Flurry","folderPath":"folders/Sprites/Bosses/ShrineGeneral/PhaseOne/RapidPunches/Flurry.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Windup","folderPath":"folders/Sprites/Bosses/ShrineGeneral/PhaseOne/RapidPunches/Windup.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"RocketPunch","folderPath":"folders/Sprites/Bosses/ShrineGeneral/PhaseOne/RocketPunch.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Attack","folderPath":"folders/Sprites/Bosses/ShrineGeneral/PhaseOne/RocketPunch/Attack.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"WindUp","folderPath":"folders/Sprites/Bosses/ShrineGeneral/PhaseOne/RocketPunch/WindUp.yy",},
@@ -210,8 +212,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Shrine","folderPath":"folders/Tile Sets/Shrine.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tundra","folderPath":"folders/Tile Sets/Tundra.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Flurry","folderPath":"folders/Sprites/Bosses/ShrineGeneral/PhaseOne/RapidPunches/Flurry.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Windup","folderPath":"folders/Sprites/Bosses/ShrineGeneral/PhaseOne/RapidPunches/Windup.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"FieldTiles(MatureTime).tset","CopyToMask":-1,"filePath":"datafiles",},

@@ -84,12 +84,12 @@ enum SHRINEGENERAL_RAPIDPUNCH_STATE
 ShrineGeneral_RapidPunch_State = SHRINEGENERAL_RAPIDPUNCH_STATE.WINDUP;
 
 //The time it takes to wind up the rapid punch
-ShrineGeneral_RapidPunch_TimeToWindUp = 20;
+ShrineGeneral_RapidPunch_TimeToWindUp = 50;
 //and the timer
 ShrineGeneral_RapidPunch_WindUpTimer = 0;
 
 //How long the rapid punches last
-ShrineGeneral_RapidPunch_FlurryLength = 50;
+ShrineGeneral_RapidPunch_FlurryLength = 150;
 //and the timer
 ShrineGeneral_RapidPunch_FlurryTimer = 0;
 
@@ -113,33 +113,59 @@ ShrineGeneral_RapidPunch_FlurryRate = 2;
 //and the timer
 ShrineGeneral_RapidPunch_FlurryCounter = 0;
 
+//How far the flurry extends for
+ShrineGeneral_RapidPunch_FlurryRange = ShrineGeneral_RapidRange * 0.75;
+
 //the function that creates the rapid punches
 ShrineGeneral_RapidPunch_FlurryCreate = function()
 {
 	//create and access a Rapid Punch
-	with(instance_create_depth(x, y, depth + choose(1, -1), obj_ShrineGeneral_RapidPunch))
+	with(instance_create_depth(x + (image_xscale * choose(-5, 20)), y + irandom_range(-1, 1) * 36, depth, obj_ShrineGeneral_RapidPunch))
 	{
 		
+		//Make the rapid punch face the right direction
 		image_xscale = other.image_xscale;
-		switch(depth)
+		
+		sprite_index = choose(spr_ShrineGeneral_LeftArm_RapidPunchFlurry_PhaseOne, spr_ShrineGeneral_RightArm_RapidPunchFlurry_PhaseOne)
+		
+		//Set the depth according to the depth
+		switch(sprite_index)
 		{
-			case other.depth + 1:
-				sprite_index = spr_ShrineGeneral_RightArm_RapidPunchFlurry_PhaseOne;
-				break;
 			
-			case other.depth - 1:
-				sprite_index = spr_ShrineGeneral_LeftArm_RapidPunchFlurry_PhaseOne;
+			case spr_ShrineGeneral_LeftArm_RapidPunchFlurry_PhaseOne:
+				depth = other.depth + 1;
 				break;
 				
-		}
+			case spr_ShrineGeneral_RightArm_RapidPunchFlurry_PhaseOne:
+				depth = other.depth - 1;
+				break;
+				
+		}//end set depth
 		
+		//Set the speed
+		speed = 8 * image_xscale;
+		
+		//Set the maximum 
+		RapidPunch_MaxDist = other.ShrineGeneral_RapidPunch_FlurryRange;
+		
+		//Identity the main body
+		RapidPunch_MainBody = other.id;
+		
+		//Set the damage
+		Damage = other.ShrineGeneral_RapidPunch_FlurryDamage;
+		
+		//set the image alpha
+		RapidPunch_StartFade = 0.5;
+		
+		//RapidPunch_CurveMax = 24;
+		
+		direction = random_range(0, 90) - 45;
+		
+		image_angle = direction;
 		
 	}//end create and access Rapid Punch
 	
 }//end ShrineGeneral_RapidPunch_FlurryCreate()
-
-ShrineGeneral_RapidPunch_CreateTimer = time_source_create(time_source_game, ShrineGeneral_RapidPunch_FlurryRate, time_source_units_seconds, ShrineGeneral_RapidPunch_FlurryCreate, [], -1);
-
 
 
 

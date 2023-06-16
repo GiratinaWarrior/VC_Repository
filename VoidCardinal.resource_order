@@ -113,6 +113,8 @@
     {"name":"PhaseOne","order":3,"path":"folders/Sprites/Bosses/ShrineGeneral/PhaseOne.yy",},
     {"name":"Idle","order":3,"path":"folders/Sprites/Bosses/ShrineGeneral/PhaseOne/Idle.yy",},
     {"name":"RapidPunches","order":6,"path":"folders/Sprites/Bosses/ShrineGeneral/PhaseOne/RapidPunches.yy",},
+    {"name":"Flurry","order":2,"path":"folders/Sprites/Bosses/ShrineGeneral/PhaseOne/RapidPunches/Flurry.yy",},
+    {"name":"Windup","order":3,"path":"folders/Sprites/Bosses/ShrineGeneral/PhaseOne/RapidPunches/Windup.yy",},
     {"name":"RocketPunch","order":5,"path":"folders/Sprites/Bosses/ShrineGeneral/PhaseOne/RocketPunch.yy",},
     {"name":"Attack","order":3,"path":"folders/Sprites/Bosses/ShrineGeneral/PhaseOne/RocketPunch/Attack.yy",},
     {"name":"WindUp","order":2,"path":"folders/Sprites/Bosses/ShrineGeneral/PhaseOne/RocketPunch/WindUp.yy",},
@@ -178,8 +180,6 @@
     {"name":"Shrine","order":11,"path":"folders/Tile Sets/Shrine.yy",},
     {"name":"Tundra","order":9,"path":"folders/Tile Sets/Tundra.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
-    {"name":"Flurry","order":2,"path":"folders/Sprites/Bosses/ShrineGeneral/PhaseOne/RapidPunches/Flurry.yy",},
-    {"name":"Windup","order":3,"path":"folders/Sprites/Bosses/ShrineGeneral/PhaseOne/RapidPunches/Windup.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"pt_Tundragon9","order":2,"path":"paths/pt_Tundragon9/pt_Tundragon9.yy",},

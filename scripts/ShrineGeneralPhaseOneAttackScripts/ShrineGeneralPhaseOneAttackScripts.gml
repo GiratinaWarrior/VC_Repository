@@ -189,6 +189,7 @@ function ShrineGeneralPhaseOne_RocketPunch(){
 // This function runs the Rapid Punch attack for the Shrine General
 function ShrineGeneralPhaseOne_RapidPunches() {
 
+	//State machine for the Rapid Punches
 	switch(ShrineGeneral_RapidPunch_State)
 	{
 		
@@ -196,52 +197,67 @@ function ShrineGeneralPhaseOne_RapidPunches() {
 		//This is where SG will pull back its arms to prepare
 		case SHRINEGENERAL_RAPIDPUNCH_STATE.WINDUP:
 			
-			xSpeed = 0;
+			#region Wind Up
 			
-			//Set the arms sprites to the wind up sprites, while making sure that the entire animation is played
-			if (ShrineGeneral_LeftArm.sprite_index != spr_ShrineGeneral_LeftArm_RapidPunchWindUp_PhaseOne)
-			{
-				image_index = 0;
+				xSpeed = 0;
+			
 				ShrineGeneral_LeftArm.sprite_index = spr_ShrineGeneral_LeftArm_RapidPunchWindUp_PhaseOne;
-			}
-			if (ShrineGeneral_RightArm.sprite_index != spr_ShrineGeneral_RightArm_RapidPunchWindUp_PhaseOne)
-			{
-				image_index = 0;
 				ShrineGeneral_RightArm.sprite_index = spr_ShrineGeneral_RightArm_RapidPunchWindUp_PhaseOne;
-			}
-			
-			if (animation_end(spr_ShrineGeneral_LeftArm_RapidPunchWindUp_PhaseOne) || animation_end(spr_ShrineGeneral_RightArm_RapidPunchWindUp_PhaseOne))
-			{
-				ShrineGeneral_RapidPunch_State = SHRINEGENERAL_RAPIDPUNCH_STATE.FLURRY;
-			}
-			
+				
+				if (ShrineGeneral_RapidPunch_WindUpTimer++ > ShrineGeneral_RapidPunch_TimeToWindUp)
+				{
+					ShrineGeneral_RapidPunch_State = SHRINEGENERAL_RAPIDPUNCH_STATE.FLURRY;
+				}
+				
+				show_debug_message("Wind Up State");
+				
+			#endregion
+				
 			break;//end Wind up State
 		
-		//The Flurry state for the Rapid Punches
+		//The Flurry state for the Rapid Punch
 		//This is where SG will rapidly fire mirages of punches
 		case SHRINEGENERAL_RAPIDPUNCH_STATE.FLURRY:
 			
 			#region Flurry State
 			
+				xSpeed = image_xscale = ShrineGeneral_Speed/10;
+				
 				#region Regular Arms
 				
-				//Temporarily deactivate the Shrine Generals left and right arms
-				instance_deactivate_object(ShrineGeneral_RightArm);
-				instance_deactivate_object(ShrineGeneral_LeftArm);
+					//Temporarily deactivate the Shrine Generals left and right arms
+					instance_deactivate_object(ShrineGeneral_RightArm);
+					instance_deactivate_object(ShrineGeneral_LeftArm);
 				
 				#endregion 
 			
 				#region Mirage Arms
-				
-				
+					
+					//Start creating the rapid punches
+					ShrineGeneral_RapidPunch_FlurryCreate();
+					
+					//if the flurry has gone on long enough, end it
+					if (ShrineGeneral_RapidPunch_FlurryTimer++ > ShrineGeneral_RapidPunch_FlurryLength)
+					{
+						
+						ShrineGeneral_RapidPunch_State = SHRINEGENERAL_RAPIDPUNCH_STATE.FINISH;
+						
+					}//end flurry
 					
 				#endregion
 			
 			#endregion 
 			
+			show_debug_message("Flurry State");
+			
 			break;//end Flurry State
-	}
+			
+		//The Finish state for the Rapid Punch
+		//This is where SG will do the finishing blow
+		case SHRINEGENERAL_RAPIDPUNCH_STATE.FINISH:
+		
+			break;
+			
+	}//end Rapid Punch State Machine
 	
-	
-
-}
+}//end ShrineGeneralPhaseOne_RapidPunches()
