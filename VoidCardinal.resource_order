@@ -180,6 +180,7 @@
     {"name":"Shrine","order":11,"path":"folders/Tile Sets/Shrine.yy",},
     {"name":"Tundra","order":9,"path":"folders/Tile Sets/Tundra.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
+    {"name":"Attacks","order":3,"path":"folders/Objects/Enemies/Bosses/ShrineGeneral/PhaseOne/Attacks.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"pt_Tundragon9","order":2,"path":"paths/pt_Tundragon9/pt_Tundragon9.yy",},
@@ -273,6 +274,7 @@
     {"name":"spr_BubbleBuddy","order":8,"path":"sprites/spr_BubbleBuddy/spr_BubbleBuddy.yy",},
     {"name":"pt_Tundragon10","order":3,"path":"paths/pt_Tundragon10/pt_Tundragon10.yy",},
     {"name":"spr_RuneTurretCorpse","order":1,"path":"sprites/spr_RuneTurretCorpse/spr_RuneTurretCorpse.yy",},
+    {"name":"obj_ShrineGeneral_RapidPunch_Finish","order":1,"path":"objects/obj_ShrineGeneral_RapidPunch_Finish/obj_ShrineGeneral_RapidPunch_Finish.yy",},
     {"name":"music_ShrineMemoryTheme","order":2,"path":"sounds/music_ShrineMemoryTheme/music_ShrineMemoryTheme.yy",},
     {"name":"spr_OceanTownTiles","order":3,"path":"sprites/spr_OceanTownTiles/spr_OceanTownTiles.yy",},
     {"name":"obj_EventStart","order":9,"path":"objects/obj_EventStart/obj_EventStart.yy",},
@@ -401,7 +403,6 @@
     {"name":"sound_FeralArrow","order":1,"path":"sounds/sound_FeralArrow/sound_FeralArrow.yy",},
     {"name":"obj_RuneTurretLaser","order":2,"path":"objects/obj_RuneTurretLaser/obj_RuneTurretLaser.yy",},
     {"name":"sound_SwordAttack2","order":3,"path":"sounds/sound_SwordAttack2/sound_SwordAttack2.yy",},
-    {"name":"obj_ShrineGeneral_RapidPunch","order":2,"path":"objects/obj_ShrineGeneral_RapidPunch/obj_ShrineGeneral_RapidPunch.yy",},
     {"name":"blanksprite","order":1,"path":"sprites/blanksprite/blanksprite.yy",},
     {"name":"spr_MissMusic","order":4,"path":"sprites/spr_MissMusic/spr_MissMusic.yy",},
     {"name":"ShrineSoldierScripts","order":1,"path":"scripts/ShrineSoldierScripts/ShrineSoldierScripts.yy",},

@@ -7,10 +7,14 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_EnemyAttack","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"propertyId":{"name":"InvincPower","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"value":"2",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_EnemyAttack","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"propertyId":{"name":"FlinchPower","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"value":"1",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_EnemyAttack","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"propertyId":{"name":"Damage","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"value":"0.05",},
+  ],
   "parent": {
-    "name": "PhaseOne",
-    "path": "folders/Objects/Enemies/Bosses/ShrineGeneral/PhaseOne.yy",
+    "name": "Attacks",
+    "path": "folders/Objects/Enemies/Bosses/ShrineGeneral/PhaseOne/Attacks.yy",
   },
   "parentObjectId": {
     "name": "parent_EnemyAttack",

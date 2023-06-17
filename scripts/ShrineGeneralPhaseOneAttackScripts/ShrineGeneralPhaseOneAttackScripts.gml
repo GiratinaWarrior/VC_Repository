@@ -208,8 +208,7 @@ function ShrineGeneralPhaseOne_RapidPunches() {
 				{
 					ShrineGeneral_RapidPunch_State = SHRINEGENERAL_RAPIDPUNCH_STATE.FLURRY;
 				}
-				
-				show_debug_message("Wind Up State");
+			
 				
 			#endregion
 				
@@ -233,29 +232,36 @@ function ShrineGeneralPhaseOne_RapidPunches() {
 			
 				#region Mirage Arms
 					
-					//Start creating the rapid punches
-					ShrineGeneral_RapidPunch_FlurryCreate();
+					
 					
 					//if the flurry has gone on long enough, end it
 					if (ShrineGeneral_RapidPunch_FlurryTimer++ > ShrineGeneral_RapidPunch_FlurryLength)
 					{
-						
-						ShrineGeneral_RapidPunch_State = SHRINEGENERAL_RAPIDPUNCH_STATE.FINISH;
-						
+						if (!instance_exists(obj_ShrineGeneral_RapidPunch))
+						{
+							ShrineGeneral_RapidPunch_State = SHRINEGENERAL_RAPIDPUNCH_STATE.FINISH;
+						}
 					}//end flurry
+					
+					else
+					{
+						//Start creating the rapid punches
+						ShrineGeneral_RapidPunch_FlurryCreate();
+					}
 					
 				#endregion
 			
 			#endregion 
 			
-			show_debug_message("Flurry State");
 			
 			break;//end Flurry State
 			
 		//The Finish state for the Rapid Punch
 		//This is where SG will do the finishing blow
 		case SHRINEGENERAL_RAPIDPUNCH_STATE.FINISH:
-		
+			
+			
+			
 			break;
 			
 	}//end Rapid Punch State Machine

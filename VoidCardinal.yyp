@@ -212,6 +212,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Shrine","folderPath":"folders/Tile Sets/Shrine.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tundra","folderPath":"folders/Tile Sets/Tundra.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Attacks","folderPath":"folders/Objects/Enemies/Bosses/ShrineGeneral/PhaseOne/Attacks.yy",},
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"FieldTiles(MatureTime).tset","CopyToMask":-1,"filePath":"datafiles",},
@@ -346,6 +347,7 @@
     {"id":{"name":"pt_Tundragon10","path":"paths/pt_Tundragon10/pt_Tundragon10.yy",},},
     {"id":{"name":"spr_RuneTurretCorpse","path":"sprites/spr_RuneTurretCorpse/spr_RuneTurretCorpse.yy",},},
     {"id":{"name":"spr_RestInTurmoil","path":"sprites/spr_RestInTurmoil/spr_RestInTurmoil.yy",},},
+    {"id":{"name":"obj_ShrineGeneral_RapidPunch_Finish","path":"objects/obj_ShrineGeneral_RapidPunch_Finish/obj_ShrineGeneral_RapidPunch_Finish.yy",},},
     {"id":{"name":"seq_PrologueCutscene","path":"sequences/seq_PrologueCutscene/seq_PrologueCutscene.yy",},},
     {"id":{"name":"music_ShrineMemoryTheme","path":"sounds/music_ShrineMemoryTheme/music_ShrineMemoryTheme.yy",},},
     {"id":{"name":"spr_OceanTownTiles","path":"sprites/spr_OceanTownTiles/spr_OceanTownTiles.yy",},},

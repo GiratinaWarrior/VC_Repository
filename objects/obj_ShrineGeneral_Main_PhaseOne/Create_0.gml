@@ -104,7 +104,7 @@ ShrineGeneral_RapidPunch_TimeToCooldown = 30;
 ShrineGeneral_RapidPunch_CooldownTimer = 0;
 
 //How much damage the flurry of punches do
-ShrineGeneral_RapidPunch_FlurryDamage = 0.1;
+ShrineGeneral_RapidPunch_FlurryDamage = 0.01;
 //How much the finishing blow does
 ShrineGeneral_RapidPunch_FinishDamage = 2;
 
@@ -152,7 +152,7 @@ ShrineGeneral_RapidPunch_FlurryCreate = function()
 		RapidPunch_MainBody = other.id;
 		
 		//Set the damage
-		Damage = other.ShrineGeneral_RapidPunch_FlurryDamage;
+		//Damage = other.ShrineGeneral_RapidPunch_FlurryDamage;
 		
 		//set the image alpha
 		RapidPunch_StartFade = 0.5;
