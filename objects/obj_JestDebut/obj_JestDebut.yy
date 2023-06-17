@@ -10,7 +10,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "JestDebut",
-    "path": "folders/Objects/Cutscenes/JestDebut.yy",
+    "path": "folders/Objects/Cutscenes/Opening/JestDebut.yy",
   },
   "parentObjectId": null,
   "persistent": false,

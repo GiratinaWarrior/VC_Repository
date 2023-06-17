@@ -11,7 +11,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Prologue",
-    "path": "folders/Objects/Cutscenes/Prologue.yy",
+    "path": "folders/Objects/Cutscenes/Opening/Prologue.yy",
   },
   "parentObjectId": null,
   "persistent": false,

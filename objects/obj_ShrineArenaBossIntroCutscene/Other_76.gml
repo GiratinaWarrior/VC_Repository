@@ -27,6 +27,9 @@ if (event_data[? "event_type"] == "sequence event")
 				x = 0;
 				y = 0;
 			}
+			
+			layer_set_visible("Floortiles_Closed", true);
+			
 			break;//end activate Shrine General
 			
 	}//end action from message

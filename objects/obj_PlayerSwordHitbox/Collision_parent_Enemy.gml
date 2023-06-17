@@ -2,14 +2,6 @@
 
 HitSomething = true;
 
-//Access the enemy instance
-with (other)
-{
-	
-//	Enemy_Stunned();
-			
-}//end access enemy
-
 with(obj_Player)
 {
 	//If the player attacked down, do a pogo jump

@@ -10,8 +10,10 @@ function ShrineGeneralPhaseOne_RocketPunch(){
 		case SHRINEGENERAL_ROCKETPUNCH_STATE.WINDUP:
 		
 			#region Wind Up Stage
-			
-				image_xscale = -sign(x - obj_Player.x);
+				
+				sprite_index = spr_ShrineGeneral_Body_RocketPunchWindUp_PhaseOne;
+				
+				if (instance_exists(obj_Player)) image_xscale = -sign(x - obj_Player.x);
 		
 				//Do stuff to the right arm
 				with (ShrineGeneral_RightArm)
@@ -41,9 +43,11 @@ function ShrineGeneralPhaseOne_RocketPunch(){
 		//The jab state for the rocket punch
 		case SHRINEGENERAL_ROCKETPUNCH_STATE.JAB:
 			
-			show_debug_message("Jab State")
+		//	show_debug_message("Jab State")
 			
 			#region Jab State
+				
+				sprite_index = spr_ShrineGeneral_Body_RocketPunchAttack_PhaseOne;
 				
 				#region Right Arm moves out to punch
 				
@@ -82,9 +86,11 @@ function ShrineGeneralPhaseOne_RocketPunch(){
 		//The cross state for the rocket punch
 		case SHRINEGENERAL_ROCKETPUNCH_STATE.CROSS:
 			
-			show_debug_message("Cross State")
+		//	show_debug_message("Cross State")
 		
 			#region Cross State
+				
+				sprite_index = spr_ShrineGeneral_Body_RocketPunchAttack_PhaseOne;
 				
 				#region Right Arm Returns to its original place
 					
@@ -142,7 +148,7 @@ function ShrineGeneralPhaseOne_RocketPunch(){
 			//for when its time to stop rocket punching
 		case SHRINEGENERAL_ROCKETPUNCH_STATE.COOLDOWN:
 		
-			show_debug_message("Cooldown State")
+		//	show_debug_message("Cooldown State")
 			
 			#region Cooldown State
 			
@@ -209,6 +215,7 @@ function ShrineGeneralPhaseOne_RapidPunches() {
 					ShrineGeneral_RapidPunch_State = SHRINEGENERAL_RAPIDPUNCH_STATE.FLURRY;
 				}
 			
+				if (instance_exists(obj_Player)) image_xscale = -sign(x - obj_Player.x);
 				
 			#endregion
 				
@@ -218,7 +225,7 @@ function ShrineGeneralPhaseOne_RapidPunches() {
 		//This is where SG will rapidly fire mirages of punches
 		case SHRINEGENERAL_RAPIDPUNCH_STATE.FLURRY:
 			
-			#region Flurry State
+			#region Flurry
 			
 				xSpeed = image_xscale = ShrineGeneral_Speed/10;
 				
@@ -231,8 +238,6 @@ function ShrineGeneralPhaseOne_RapidPunches() {
 				#endregion 
 			
 				#region Mirage Arms
-					
-					
 					
 					//if the flurry has gone on long enough, end it
 					if (ShrineGeneral_RapidPunch_FlurryTimer++ > ShrineGeneral_RapidPunch_FlurryLength)
@@ -251,8 +256,7 @@ function ShrineGeneralPhaseOne_RapidPunches() {
 					
 				#endregion
 			
-			#endregion 
-			
+			#endregion 	
 			
 			break;//end Flurry State
 			
@@ -260,8 +264,64 @@ function ShrineGeneralPhaseOne_RapidPunches() {
 		//This is where SG will do the finishing blow
 		case SHRINEGENERAL_RAPIDPUNCH_STATE.FINISH:
 			
+			#region Finish
 			
+				//If a Rapid Punch Finsih hasnt been created yet, create it
+				if (!instance_exists(obj_ShrineGeneral_RapidPunch_Finish))
+				{
 			
+					//Access the Finishing move
+					with (instance_create_depth(x, y, depth + 1, obj_ShrineGeneral_RapidPunch_Finish))
+					{
+						RapidPunchFinish_MainBody = other.id;
+					
+						RapidPunchFinish_MaxDist = other.ShrineGeneral_RapidPunch_FinishRange;
+				
+						image_xscale = other.image_xscale;
+				
+						speed = image_xscale * 7;
+					
+					}//end access finishing move
+					
+				}//end if Finish not created
+				
+			#endregion
+			
+			break;
+			
+		//The Cooldown state for Rapid Punch
+		//This is where SG will reactivate its arms
+		case SHRINEGENERAL_RAPIDPUNCH_STATE.COOLDOWN:
+		
+			#region Cooldown
+				
+				//Reactivte the Arms
+				instance_activate_object(ShrineGeneral_LeftArm);
+				instance_activate_object(ShrineGeneral_RightArm); 
+				
+				//Reset the sprites
+				ShrineGeneral_LeftArm.sprite_index = spr_ShrineGeneral_LeftArm_Idle_PhaseOne;
+				ShrineGeneral_RightArm.sprite_index = spr_ShrineGeneral_RightArm_Idle_PhaseOne;
+				
+				//Set the Shrine General to the Idle State
+				ShrineGeneral_State_One = SHRINEGENERAL_STATE_ONE.IDLE;
+				
+				//Reset the Rapid Punch state machine
+				ShrineGeneral_RapidPunch_State = SHRINEGENERAL_RAPIDPUNCH_STATE.WINDUP;
+				
+				//Reset the arms position
+				ShrineGeneral_LeftArm.x = x;
+				ShrineGeneral_RightArm.x = x;
+				
+				//Reset the speed of SG
+				xSpeed = ShrineGeneral_Speed * image_xscale;
+				
+				ShrineGeneral_RapidPunch_FlurryTimer = 0;
+				
+				ShrineGeneral_RapidPunch_WindUpTimer = 0;
+				
+			#endregion
+		
 			break;
 			
 	}//end Rapid Punch State Machine

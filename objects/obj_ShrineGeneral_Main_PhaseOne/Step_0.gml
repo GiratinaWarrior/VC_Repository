@@ -27,22 +27,23 @@
 					image_xscale = sign(xSpeed);
 				}
 		
-				/////Have the arms approach the main body
-				//var _reattachSpeed = 5;
+				sprite_index = spr_ShrineGeneral_Body_Idle_PhaseOne;
 	
 				with (ShrineGeneral_LeftArm)
 				{
-					x = other.x// Approach(x, other.x, _reattachSpeed);
-					y = other.y// Approach(y, other.y, _reattachSpeed);
+					x = other.x;
+					y = other.y;
 					image_xscale = other.image_xscale;
 					depth = other.depth - image_xscale;
+					sprite_index = spr_ShrineGeneral_LeftArm_Idle_PhaseOne;
 				}
 				with (ShrineGeneral_RightArm)
 				{
-					x = other.x//Approach(x, other.x, _reattachSpeed);
-					y = other.y//Approach(y, other.y, _reattachSpeed);
+					x = other.x;
+					y = other.y;
 					image_xscale = other.image_xscale;
 					depth = other.depth + image_xscale;
+					sprite_index = spr_ShrineGeneral_RightArm_Idle_PhaseOne;
 				}
 		
 				//Determine how close the player is from SG

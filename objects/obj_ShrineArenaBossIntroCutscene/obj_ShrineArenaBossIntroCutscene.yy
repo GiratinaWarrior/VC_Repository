@@ -11,7 +11,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "ShrineArenaBossIntro",
-    "path": "folders/Objects/Cutscenes/ShrineArenaBossIntro.yy",
+    "path": "folders/Objects/Cutscenes/Opening/ShrineArenaBossIntro.yy",
   },
   "parentObjectId": null,
   "persistent": false,

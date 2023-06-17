@@ -93,28 +93,11 @@ ShrineGeneral_RapidPunch_FlurryLength = 150;
 //and the timer
 ShrineGeneral_RapidPunch_FlurryTimer = 0;
 
-//How long the finishing blow stays in place
-ShrineGeneral_RapidPunch_FinishHangTime = 20;
-//and the timer
-ShrineGeneral_RapidPunch_FinishTimer = 0;
-
-//How long it takes for the rapid punch state to revert to the Idle state
-ShrineGeneral_RapidPunch_TimeToCooldown = 30;
-//and the timer
-ShrineGeneral_RapidPunch_CooldownTimer = 0;
-
-//How much damage the flurry of punches do
-ShrineGeneral_RapidPunch_FlurryDamage = 0.01;
-//How much the finishing blow does
-ShrineGeneral_RapidPunch_FinishDamage = 2;
-
-//How often the punches are sent out
-ShrineGeneral_RapidPunch_FlurryRate = 2;
-//and the timer
-ShrineGeneral_RapidPunch_FlurryCounter = 0;
-
 //How far the flurry extends for
 ShrineGeneral_RapidPunch_FlurryRange = ShrineGeneral_RapidRange * 0.75;
+
+//how far the finishing move extends for
+ShrineGeneral_RapidPunch_FinishRange = ShrineGeneral_RapidRange;
 
 //the function that creates the rapid punches
 ShrineGeneral_RapidPunch_FlurryCreate = function()
@@ -151,14 +134,9 @@ ShrineGeneral_RapidPunch_FlurryCreate = function()
 		//Identity the main body
 		RapidPunch_MainBody = other.id;
 		
-		//Set the damage
-		//Damage = other.ShrineGeneral_RapidPunch_FlurryDamage;
-		
 		//set the image alpha
 		RapidPunch_StartFade = 0.5;
-		
-		//RapidPunch_CurveMax = 24;
-		
+
 		direction = random_range(0, 90) - 45;
 		
 		image_angle = direction;
