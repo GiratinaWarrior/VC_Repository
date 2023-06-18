@@ -53,7 +53,7 @@ ShrineGeneral_RocketPunch_State = SHRINEGENERAL_ROCKETPUNCH_STATE.WINDUP;
 //The distance the rocket punch travels
 ShrineGeneral_RocketPunch_MaxDist = 200;
 //The time it takes for the punch to reach its max distance
-ShrineGeneral_RocketPunch_MaxTime = 20;
+ShrineGeneral_RocketPunch_MaxTime = 40;
 //The speed of the punch
 ShrineGeneral_RocketPunch_Speed = ShrineGeneral_RocketPunch_MaxDist/ShrineGeneral_RocketPunch_MaxTime; 
 
@@ -64,7 +64,7 @@ ShrineGeneral_RocketPunch_TimeToWindUp = 40;
 ShrineGeneral_RocketPunch_StartTimer = 0;
 
 //The damage the rocket punch does
-ShrineGeneral_RocketPunch_Damage = 3;
+ShrineGeneral_RocketPunch_Damage = 2;
 //The cooldown for after the rocket punch has been fired, as well as the timer
 ShrineGeneral_RocketPunch_TimeToCoolDown = 20;
 ShrineGeneral_RocketPunch_CooldownTimer = 0;

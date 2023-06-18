@@ -8,7 +8,6 @@ image_index = 0;
 speed = 0;
 image_speed = 0.25;
 ySpeed = 0.0001;
-//Gravity = 0.1;
 
 with (obj_PlayBGM)
 {

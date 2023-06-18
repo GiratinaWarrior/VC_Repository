@@ -53,7 +53,7 @@ switch(TurretState)
 				if (instance_exists(obj_Player))
 				{
 					//If RT has a clear shot
-					if (!collision_line(x, y, obj_Player.x, obj_Player.y, obj_WallPlatform, false, false))
+					if (!collision_line(x, y, obj_Player.x, obj_Player.y, obj_Wall, false, false))
 					{
 						TurretState = RUNETURRET_STATE.SHOOT;
 					}//end clear shot

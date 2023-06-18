@@ -12,8 +12,6 @@ function ShrineGeneralPhaseOne_RocketPunch(){
 			#region Wind Up Stage
 				
 				sprite_index = spr_ShrineGeneral_Body_RocketPunchWindUp_PhaseOne;
-				
-				if (instance_exists(obj_Player)) image_xscale = -sign(x - obj_Player.x);
 		
 				//Do stuff to the right arm
 				with (ShrineGeneral_RightArm)
@@ -57,6 +55,8 @@ function ShrineGeneralPhaseOne_RocketPunch(){
 					//Change the damage
 					ShrineGeneral_RightArm.Damage = ShrineGeneral_RocketPunch_Damage;
 				
+			
+					
 					//Adjust the direction depending on which way SG is facing
 					ShrineGeneral_RocketPunch_Dir = image_xscale;
 				
@@ -204,6 +204,8 @@ function ShrineGeneralPhaseOne_RapidPunches() {
 		case SHRINEGENERAL_RAPIDPUNCH_STATE.WINDUP:
 			
 			#region Wind Up
+				
+				sprite_index = spr_ShrineGeneral_Body_RapidPunchWindup_PhaseOne;
 			
 				xSpeed = 0;
 			
@@ -226,6 +228,8 @@ function ShrineGeneralPhaseOne_RapidPunches() {
 		case SHRINEGENERAL_RAPIDPUNCH_STATE.FLURRY:
 			
 			#region Flurry
+			
+				sprite_index = spr_ShrineGeneral_Body_RapidPunchFlurry_PhaseOne;
 			
 				xSpeed = image_xscale = ShrineGeneral_Speed/10;
 				
@@ -327,3 +331,4 @@ function ShrineGeneralPhaseOne_RapidPunches() {
 	}//end Rapid Punch State Machine
 	
 }//end ShrineGeneralPhaseOne_RapidPunches()
+	

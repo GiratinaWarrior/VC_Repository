@@ -25,3 +25,14 @@ function animation_end(){
 	return _image+_spd >= sprite_get_number(_sprite);
 
 }
+
+function AnimationStopAtEnd(_sprite = sprite_index)
+{
+	
+	if (animation_end(_sprite))
+	{
+		image_index = image_number - 1;
+		image_speed = 0;
+	}
+	
+}

@@ -6,6 +6,8 @@
   "managed": true,
   "overriddenProperties": [
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_EnemyAttack","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"propertyId":{"name":"Damage","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"value":"0",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_EnemyAttack","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"propertyId":{"name":"EnemyAttack_LaunchPower_H","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"value":"4",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_EnemyAttack","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"propertyId":{"name":"EnemyAttack_LaunchPower_V","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"value":"15",},
   ],
   "parent": {
     "name": "Body",

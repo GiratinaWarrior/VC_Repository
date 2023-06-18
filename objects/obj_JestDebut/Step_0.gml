@@ -91,7 +91,7 @@ switch(JestDebut_Stage)
 	
 		#region Enter Talk
 			
-			show_debug_message("Enter talk scene");
+			//show_debug_message("Enter talk scene");
 			
 			//Create the words Jest says to Rosey
 			var _text = 

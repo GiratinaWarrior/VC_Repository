@@ -37,7 +37,7 @@ function PlayerState_ClingToHope(){
 					ySpeed = -ClingToHope_JumpPowerY;
 				}
 				
-				if !(place_meeting(x + 1, y + ySpeed, obj_WallPlatform) || place_meeting(x - 1, y + ySpeed, obj_WallPlatform))
+				if !(place_meeting(x + 1, y + ySpeed, obj_Wall) || place_meeting(x - 1, y + ySpeed, obj_Wall))
 				{
 					image_yscale = 1;
 					PlayerState = PLAYERSTATE.NEUTRAL;

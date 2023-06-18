@@ -4,7 +4,7 @@
 if (instance_exists(obj_Player)) && (instance_exists(IceSpikeOrigin))
 {
 	//If the Player and the Tundragon are in attack range
-	if (point_distance(obj_Player.x, obj_Player.y, IceSpikeOrigin.x, IceSpikeOrigin.y) <= IceSpikeRange) && (!collision_line(obj_Player.x, obj_Player.y, IceSpikeOrigin.x, IceSpikeOrigin.y, obj_WallPlatform, false, false))
+	if (point_distance(obj_Player.x, obj_Player.y, IceSpikeOrigin.x, IceSpikeOrigin.y) <= IceSpikeRange) && (!collision_line(obj_Player.x, obj_Player.y, IceSpikeOrigin.x, IceSpikeOrigin.y, obj_Wall, false, false))
 	{
 		PlayerInProximity = true;
 	}

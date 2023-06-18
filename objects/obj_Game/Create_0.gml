@@ -63,6 +63,7 @@ global.TundraOrb = 0;
 global.DesertOrb = 0;
 
 global.JestDebut_Cutscene_Seen = false;
+global.ShrineGeneral_Defeated = false;
 
 
 

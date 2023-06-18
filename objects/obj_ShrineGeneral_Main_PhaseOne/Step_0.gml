@@ -59,6 +59,7 @@
 					if (ShrineGeneral_PlayerRange <= ShrineGeneral_RapidRange)
 					{
 					    ShrineGeneral_State_One = SHRINEGENERAL_STATE_ONE.RAPID;
+						if (instance_exists(obj_Player)) image_xscale = -sign(x - obj_Player.x);
 						ShrineGeneral_StateChangeCounter = 0;
 					}//end in range of Rapid Punch
 			
@@ -66,6 +67,7 @@
 					else if (ShrineGeneral_PlayerRange <= ShrineGeneral_RocketRange)
 					{
 						ShrineGeneral_State_One = SHRINEGENERAL_STATE_ONE.ROCKET;
+						if (instance_exists(obj_Player)) image_xscale = -sign(x - obj_Player.x);
 						ShrineGeneral_StateChangeCounter = 0;
 					}//end in range of Rocket Punch 
 			

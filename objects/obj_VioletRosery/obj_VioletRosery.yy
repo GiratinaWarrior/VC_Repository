@@ -20,8 +20,8 @@
     "path": "folders/Objects/Enemies/Bosses/VioletRosery/States.yy",
   },
   "parentObjectId": {
-    "name": "obj_BossEnemy",
-    "path": "objects/obj_BossEnemy/obj_BossEnemy.yy",
+    "name": "parent_BossEnemy",
+    "path": "objects/parent_BossEnemy/parent_BossEnemy.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

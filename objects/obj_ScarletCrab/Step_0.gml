@@ -6,14 +6,14 @@ ySpeed = ySpeed + Gravity;
 #region Contact
 
 //dont walk off and die
-if (!place_meeting(x + xSpeed + (sign(xSpeed) * 103), y + 10, obj_WallPlatform)) && (Grounded) && (AfraidOfHeights)
+if (!place_meeting(x + xSpeed + (sign(xSpeed) * 103), y + 10, obj_Wall)) && (Grounded) && (AfraidOfHeights)
 {
 	xSpeed *= -1;
 }
 
 
 
-if (!place_meeting(x, y + 10, obj_WallPlatform)) {
+if (!place_meeting(x, y + 10, obj_Wall)) {
 	
 	Grounded = false;
 }
@@ -27,9 +27,9 @@ else {
 
 #region Horizontal
 
-if (place_meeting(x + xSpeed, y, obj_WallPlatform)){
+if (place_meeting(x + xSpeed, y, obj_Wall)){
 	
-	while(!place_meeting(x + sign(xSpeed), y, obj_WallPlatform))
+	while(!place_meeting(x + sign(xSpeed), y, obj_Wall))
 	{
 		x = x + sign(xSpeed);
 	}
@@ -51,9 +51,9 @@ if (xSpeed != 0) image_xscale = -sign(xSpeed);
 #region Vertical
 
 //if the object is touching a platform
-if (place_meeting(x, y + ySpeed, obj_WallPlatform)){
+if (place_meeting(x, y + ySpeed, obj_Wall)){
 	
-	while(!place_meeting(x, y + sign(ySpeed), obj_WallPlatform))
+	while(!place_meeting(x, y + sign(ySpeed), obj_Wall))
 	{
 		y = y + sign(ySpeed);
 	}
@@ -78,7 +78,7 @@ if (CanShoot) && (instance_exists(obj_Player))
 	
 	var YDist = y - obj_Player.y;
 	
-	var ObstructShot = collision_line(x, y, obj_Player.x, obj_Player.y, obj_WallPlatform, false, false);
+	var ObstructShot = collision_line(x, y, obj_Player.x, obj_Player.y, obj_Wall, false, false);
 	
 	if (XDist <= global.xrange && (abs(YDist) <= 50) && !ObstructShot)
 	{

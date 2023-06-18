@@ -1,15 +1,18 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_WallPlatform",
+  "name": "parent_BossEnemy",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Parents",
+    "path": "folders/Objects/Enemies/Parents.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "parent_Enemy",
+    "path": "objects/parent_Enemy/parent_Enemy.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -23,12 +26,11 @@
   "physicsShape": 1,
   "physicsShapePoints": [],
   "physicsStartAwake": true,
-  "properties": [],
+  "properties": [
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"MaxHealth","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"Health","varType":0,},
+  ],
   "solid": false,
-  "spriteId": {
-    "name": "spr_WallPlatform",
-    "path": "sprites/spr_WallPlatform/spr_WallPlatform.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

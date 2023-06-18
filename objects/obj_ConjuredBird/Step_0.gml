@@ -4,9 +4,9 @@
 
 #region Wall Contact
 
-if (place_meeting(x + xSpeed, y, obj_WallPlatform)){
+if (place_meeting(x + xSpeed, y, obj_Wall)){
 	
-	while(!place_meeting(x + sign(xSpeed), y, obj_WallPlatform))
+	while(!place_meeting(x + sign(xSpeed), y, obj_Wall))
 	{
 		x = x + sign(xSpeed);
 	}

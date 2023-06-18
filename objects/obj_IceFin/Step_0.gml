@@ -2,9 +2,9 @@
 ySpeed += Gravity;
 
 //if the ice is touching a platform, and it's not the super one
-if (place_meeting(x, y + ySpeed, obj_WallPlatform) && room != Room_OceanBoss){
+if (place_meeting(x, y + ySpeed, obj_Wall) && room != Room_OceanBoss){
 	
-	while(!place_meeting(x, y + sign(ySpeed), obj_WallPlatform))
+	while(!place_meeting(x, y + sign(ySpeed), obj_Wall))
 	{
 		y = y + sign(ySpeed);
 	}

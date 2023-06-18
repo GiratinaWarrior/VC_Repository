@@ -27,7 +27,7 @@ y += ySpeed;
 if (!Attacked)
 {
 	//If the Masked Mantis is on the ground
-	if (place_meeting(x, y + 1, obj_WallPlatform))
+	if (place_meeting(x, y + 1, obj_Wall))
 	{
 	
 		Grounded = true;
@@ -135,7 +135,7 @@ switch(MantisState)
 		xSpeed = -JumpPower/2 * image_xscale;
 		
 		
-		if (place_meeting(x, y + ySpeed, obj_WallPlatform))
+		if (place_meeting(x, y + ySpeed, obj_Wall))
 		{
 			ySpeed = 0;
 		}
@@ -156,7 +156,7 @@ switch(MantisState)
 		//Set the sprite to the falling sprite
 		sprite_index = spr_MaskMantisFalling;
 		
-		if (place_meeting(x, y + ySpeed + 1, obj_WallPlatform))
+		if (place_meeting(x, y + ySpeed + 1, obj_Wall))
 		{
 			xSpeed = MantisSpeed * image_xscale;
 		}

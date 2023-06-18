@@ -1,5 +1,5 @@
 /// @description When it hits a wall
-if (place_meeting(x, y, obj_WallPlatform) && room != Room_OceanBoss)
+if (place_meeting(x, y, obj_Wall) && room != Room_OceanBoss)
 {
 	instance_destroy();	
 }

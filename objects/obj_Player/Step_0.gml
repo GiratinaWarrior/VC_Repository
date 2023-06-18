@@ -56,7 +56,7 @@ if (PlayerJump <= 0)
 }
 
 //If the player is on land and not in water
-if (place_meeting(x, y + 1, obj_WallPlatform) && (!place_meeting(x, y, obj_WaterBody)))
+if (place_meeting(x, y + 1, obj_Wall) && (!place_meeting(x, y, obj_WaterBody)))
 {
 	PlayerNeutralState = PLAYERSTATE_NEUTRAL.GROUND;
 	PlayerJump = MaxCoyoteJump;
@@ -144,7 +144,7 @@ switch(PlayerState)
 		
 		PlayerMovement();
 		
-		ClingToHope_Usable = place_meeting(x + 1, y, obj_WallPlatform) - place_meeting(x - 1, y, obj_WallPlatform);
+		ClingToHope_Usable = place_meeting(x + 1, y, obj_Wall) - place_meeting(x - 1, y, obj_Wall);
 		
 		//The player's neutral state machine
 		switch(PlayerNeutralState)
@@ -257,7 +257,7 @@ switch(PlayerState)
 				
 				ySpeed = lerp(ySpeed, 0, 0.1);
 				
-				if (key_down && !place_meeting(x, y + 1, obj_WallPlatform))
+				if (key_down && !place_meeting(x, y + 1, obj_Wall))
 				{
 						ySpeed = JumpPower / SwimPower;
 				}
@@ -434,7 +434,7 @@ switch(PlayerState)
 				case PLAYERSTATE_NEUTRAL.WATER:
 					Gravity = Gravity_Swim;
 					//ySpeed = lerp(ySpeed, 0, 0.1);
-					if (key_down && !place_meeting(x, y + 1, obj_WallPlatform))
+					if (key_down && !place_meeting(x, y + 1, obj_Wall))
 					{
 						ySpeed = JumpPower / SwimPower;
 					}

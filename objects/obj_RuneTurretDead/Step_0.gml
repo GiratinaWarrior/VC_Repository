@@ -6,7 +6,7 @@ if (Done == 0){
 
 
 	//if the object is touching a platform
-	if (place_meeting(x, y + ySpeed, obj_WallPlatform)){
+	if (place_meeting(x, y + ySpeed, obj_Wall)){
 	
 		Damage = 0;
 	
@@ -15,7 +15,7 @@ if (Done == 0){
 		}
 		sprite_index = spr_RuneTurretFallenCorpse
 	
-		while(!place_meeting(x, y + sign(ySpeed), obj_WallPlatform))
+		while(!place_meeting(x, y + sign(ySpeed), obj_Wall))
 		{
 			y = y + sign(ySpeed);
 		}
@@ -27,9 +27,9 @@ if (Done == 0){
 	y = y + ySpeed;
 
 
-	if (place_meeting(x + xSpeed, y, obj_WallPlatform)){
+	if (place_meeting(x + xSpeed, y, obj_Wall)){
 			
-		while(!place_meeting(x + sign(xSpeed), y, obj_WallPlatform))
+		while(!place_meeting(x + sign(xSpeed), y, obj_Wall))
 		{
 			x = x + sign(xSpeed);
 		}

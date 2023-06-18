@@ -21,9 +21,28 @@ function PlayerState_Hurt(){
 
 	var _inv;
 	var _flinch;
+	
+	var _knockbackH;
+	var _knockbackV;
 
 	if (instance_exists(AttackerID))
 	{
+		
+		if (object_get_parent(AttackerID.object_index) == parent_EnemyAttack)
+		{
+			_flinch = AttackerID.FlinchPower;
+			_inv = AttackerID.InvincPower;
+			_knockbackH = AttackerID.EnemyAttack_LaunchPower_H;
+			_knockbackV = AttackerID.EnemyAttack_LaunchPower_V;
+		}
+		else
+		{
+			_flinch = 20;
+			_inv = 20;
+			_knockbackH = 2;
+			_knockbackV = 5;
+		}
+		
 		
 		if (!Invincible)
 		{	
@@ -39,21 +58,11 @@ function PlayerState_Hurt(){
 				_knockdir = 180;
 			}
 			
-			Knockback(2, _knockdir, 0);
-			ySpeed = -5;
+			Knockback(2, _knockdir, 5);
+			//ySpeed = -5;
 			Invincible = true;
 		}
 		
-		if (object_get_parent(AttackerID.object_index) == parent_EnemyAttack)
-		{
-			_flinch = AttackerID.FlinchPower;
-			_inv = AttackerID.InvincPower;
-		}
-		else
-		{
-			_flinch = 20;
-			_inv = 20;
-		}
 		
 		
 		
@@ -67,13 +76,13 @@ function PlayerState_Hurt(){
 	
 	InvincTimer = time_source_create(time_source_game, _inv, time_source_units_frames, _vulnerable);
 	
-	if (place_meeting(x, y + ySpeed, obj_WallPlatform) || DamagedTimer++ > _flinch)
+	if (place_meeting(x, y + ySpeed, obj_Wall) || DamagedTimer++ > _flinch)
 	{
 		hascontrol = true;
 		PlayerState = PLAYERSTATE.NEUTRAL;
 		DamagedTimer = 0;
 		time_source_start(InvincTimer);
-		show_debug_message("InvincibleLength: {0} \n FlinchLength: {1}", _inv, _flinch)
+		//show_debug_message("InvincibleLength: {0} \n FlinchLength: {1}", _inv, _flinch)
 	}
 	
 	
