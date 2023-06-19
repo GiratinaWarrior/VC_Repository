@@ -1,2 +1,2 @@
 /// @description
-WallDoor_DestroyConditionMet = false;
+WallDoor_DestroyConditionMet = function(){return false};

@@ -1,4 +1,11 @@
 target = Room_ShrineArena;
-WarpX = 1344;
 WarpY = 416;
-targetIsCutScene = true;
+if (!global.ShrineGeneral_Defeated)
+{
+	targetIsCutScene = true;
+	WarpX = 1312;
+}
+else
+{
+	WarpX = 1248;
+}

@@ -11,3 +11,5 @@ with (obj_Player)
 	move = 0;
 	image_xscale = sign(other.x - x);
 }
+
+ShrineGeneralDeath_EventRun = false;

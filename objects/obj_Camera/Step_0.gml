@@ -7,7 +7,8 @@ if (instance_exists(follow))
 {
 	xTo = follow.x;
 	yTo = follow.y;
-
+	//show_debug_message("Camera X = {0}", x);
+	//show_debug_message("Camera Follow = {0}", object_get_name(follow));
 }
 
 //Update object position
@@ -28,111 +29,115 @@ view_h_half = camera_get_view_height(cam) / 2;
 
 #endregion 
 
-/*
-The following code checks if a parallax background exists
-and adjust its position relative to the camera
+#region PARALLAX
 
-the greater the number x is divided by, the farther it appears
-*/
+	/*
+	The following code checks if a parallax background exists
+	and adjust its position relative to the camera
 
-#region Nox City Parallax
+	the greater the number x is divided by, the farther it appears
+	*/
 
-	if (layer_exists(NoxCityBackLayer))
-	{
-		layer_x(NoxCityBackLayer, x/8);
-	}
+	#region Nox City Parallax
+
+		if (layer_exists(NoxCityBackLayer))
+		{
+			layer_x(NoxCityBackLayer, x/8);
+		}
 	
-	if (layer_exists(NoxCityMidLayer))
-	{
-		layer_x(NoxCityMidLayer, x/6);
-	}
+		if (layer_exists(NoxCityMidLayer))
+		{
+			layer_x(NoxCityMidLayer, x/6);
+		}
 	
-	if (layer_exists(NoxCityForeLayer))
-	{
-		layer_x(NoxCityForeLayer, x/4);
-	}
+		if (layer_exists(NoxCityForeLayer))
+		{
+			layer_x(NoxCityForeLayer, x/4);
+		}
 	
-#endregion
+	#endregion
 
-#region Forest Parallax
+	#region Forest Parallax
 
-	#region Trees
+		#region Trees
 
-	if (layer_exists(TreeLayer3))
-	{
-		layer_x(TreeLayer3, x/3);
-	}
+		if (layer_exists(TreeLayer3))
+		{
+			layer_x(TreeLayer3, x/3);
+		}
 
-	if (layer_exists(TreeLayer2))
-	{
-		layer_x(TreeLayer2, x/4);
-	}
+		if (layer_exists(TreeLayer2))
+		{
+			layer_x(TreeLayer2, x/4);
+		}
 
-	if (layer_exists(TreeLayer))
-	{
-		layer_x(TreeLayer, x/5);
-	}
+		if (layer_exists(TreeLayer))
+		{
+			layer_x(TreeLayer, x/5);
+		}
 
-	#endregion Trees
+		#endregion Trees
  
-#endregion Field Parallax
+	#endregion Field Parallax
 
-#region Ocean Parallax
+	#region Ocean Parallax
 
-switch(room)
-{
-	case Room_Ocean1:
-		OceanSpeed = 2;
-		break;
+	switch(room)
+	{
+		case Room_Ocean1:
+			OceanSpeed = 2;
+			break;
 		
-	case Room_Ocean2:
-		OceanSpeed = 4;
-		break;
+		case Room_Ocean2:
+			OceanSpeed = 4;
+			break;
 		
-	case Room_Ocean3:
-		OceanSpeed = 8;
-		break;
+		case Room_Ocean3:
+			OceanSpeed = 8;
+			break;
 		
-	default:
-		OceanSpeed = 2;
-		break;
-}
+		default:
+			OceanSpeed = 2;
+			break;
+	}
 
-if (layer_exists(OceanLayer2))
-{
-	OceanLayerX1 += OceanSpeed/2;
-	layer_x(OceanLayer2, OceanLayerX1);
-}
+	if (layer_exists(OceanLayer2))
+	{
+		OceanLayerX1 += OceanSpeed/2;
+		layer_x(OceanLayer2, OceanLayerX1);
+	}
 
-if (layer_exists(OceanLayer))
-{
-	OceanLayerX2 += OceanSpeed;
-	layer_x(OceanLayer, OceanLayerX2);
-}
+	if (layer_exists(OceanLayer))
+	{
+		OceanLayerX2 += OceanSpeed;
+		layer_x(OceanLayer, OceanLayerX2);
+	}
 
 
 
-#endregion
+	#endregion
 
-#region Tundra Parallax
+	#region Tundra Parallax
 
-	#region Mountains
+		#region Mountains
 
-		if (layer_exists(MountainLayer3))
-		{
-			layer_x(MountainLayer3, x/1);
-		}
+			if (layer_exists(MountainLayer3))
+			{
+				layer_x(MountainLayer3, x/1);
+			}
 
-		if (layer_exists(MountainLayer2))
-		{
-			layer_x(MountainLayer2, x/1.5);
-		}
+			if (layer_exists(MountainLayer2))
+			{
+				layer_x(MountainLayer2, x/1.5);
+			}
 
-		if (layer_exists(MountainLayer))
-		{
-			layer_x(MountainLayer, x/2);
-		}
+			if (layer_exists(MountainLayer))
+			{
+				layer_x(MountainLayer, x/2);
+			}
 
-		#endregion Mountains
+			#endregion Mountains
 
+	#endregion
+	
 #endregion

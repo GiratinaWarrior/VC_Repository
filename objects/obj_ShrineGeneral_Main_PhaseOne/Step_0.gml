@@ -9,6 +9,8 @@
 	x += xSpeed;
 	
 	y += ySpeed;
+	
+	x = clamp(x, 138, 832);
 
 #endregion Movement
 

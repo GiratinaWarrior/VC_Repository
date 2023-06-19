@@ -15,6 +15,11 @@ function SummonPlayer(_x = x, _y = y){
 	{
 
 		instance_create_layer(_x, _y, _layer, obj_Player);
+		
+		with (obj_Camera)
+		{
+			follow = obj_Player;
+		}
 			
 	}
 }

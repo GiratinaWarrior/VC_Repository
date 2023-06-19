@@ -236,6 +236,7 @@ switch(JestDebut_Stage)
 						hascontrol = true;
 					}
 					global.JestDebut_Cutscene_Seen = true;
+					SaveGame();
 					instance_destroy();	
 				}//end sequence finished
 			}
