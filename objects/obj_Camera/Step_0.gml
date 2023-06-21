@@ -7,17 +7,13 @@ if (instance_exists(follow))
 {
 	xTo = follow.x;
 	yTo = follow.y;
+	//Update object position
+	x += (xTo - x)/25;
+	y += (yTo - y)/25;
 	//show_debug_message("Camera X = {0}", x);
 	//show_debug_message("Camera Follow = {0}", object_get_name(follow));
 }
 
-//Update object position
-x += (xTo - x)/25;
-y += (yTo - y)/25;
-
-//var CamSpeed = 5;
-//x = Approach(x, xTo, CamSpeed);
-//y = Approach(y, yTo, CamSpeed);
 
 x = clamp(x, view_w_half, room_width - view_w_half);
 y = clamp(y, view_h_half, room_height - view_h_half);

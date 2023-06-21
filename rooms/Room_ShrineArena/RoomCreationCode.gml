@@ -12,7 +12,7 @@ if (!global.ShrineGeneral_Defeated)
 }
 
 //If the Shrine General has been defeated
-else
+else if (global.ShrineGeneral_Defeated)
 {
 
 	if (instance_exists(obj_ShrineArenaBossIntroCutscene))
