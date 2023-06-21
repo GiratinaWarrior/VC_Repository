@@ -9,7 +9,7 @@ if (!global.MidTransition)
 	//Play the cutscene
 	layer_sequence_play(ShrineArenaBossCutsceneSequenceID);
 	
-	if (ShrineArena_CamMoveCounter++ > 7)
+	if (ShrineArena_CamMoveCounter++ > 129)
 	{
 		//Access camera object and set the cameras movement
 		with (obj_Camera)
