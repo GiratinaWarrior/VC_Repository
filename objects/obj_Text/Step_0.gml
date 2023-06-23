@@ -1,7 +1,7 @@
 /// @description If the talk button is pressed
 
 //If the talk button is pressed
-if (mouse_check_button_pressed(mb_right))
+if (global.Key_Talk)
 {
 	//If the text has finished typing itself
 	if (TextBox_CharCount >= string_length(TextBox_Text[TextBox_Page]))

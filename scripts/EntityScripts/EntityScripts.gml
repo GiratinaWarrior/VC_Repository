@@ -62,7 +62,7 @@ function EntityTextBox()
 		{
 	
 			//If the player talks to the NPC with the talk button
-			if (mouse_check_button_pressed(mb_right)){
+			if (global.Key_Talk){
 		
 				//If a textbox hasn't been created yet
 				if (myTextbox = noone)

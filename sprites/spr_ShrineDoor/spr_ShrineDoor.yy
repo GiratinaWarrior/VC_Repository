@@ -1,8 +1,8 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_RoseRoom_ChessTile",
-  "bbox_bottom": 63,
+  "name": "spr_ShrineDoor",
+  "bbox_bottom": 95,
   "bbox_left": 0,
   "bbox_right": 63,
   "bbox_top": 0,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9c5ce27a-c9bf-4033-b7ae-0ddac378eeaf",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f5215bb5-01f1-4ccb-87f4-4acec3e3f21d",},
   ],
-  "gridX": 32,
-  "gridY": 32,
-  "height": 64,
+  "gridX": 0,
+  "gridY": 0,
+  "height": 96,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"7ac9d173-3fed-46be-b587-cd393ee06e9c","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"3c429cb7-612d-4019-b59e-d6311ae29e96","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -32,7 +32,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "spr_RoseRoom_ChessTile",
+    "name": "spr_ShrineDoor",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9c5ce27a-c9bf-4033-b7ae-0ddac378eeaf","path":"sprites/spr_RoseRoom_ChessTile/spr_RoseRoom_ChessTile.yy",},},},"Disabled":false,"id":"ab9aaf64-5e8a-4064-a77f-319e491c4e0d","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f5215bb5-01f1-4ccb-87f4-4acec3e3f21d","path":"sprites/spr_ShrineDoor/spr_ShrineDoor.yy",},},},"Disabled":false,"id":"d93bfdeb-51e6-45a0-b783-7aba730b7bee","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

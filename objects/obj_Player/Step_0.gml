@@ -10,17 +10,17 @@ if (Invincible == true) {
 	if (hascontrol == true) {
 
 		//player input controls
-		key_left = keyboard_check(vk_left) || keyboard_check(ord("A"));
-		key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
-		key_up = keyboard_check(vk_up) || keyboard_check(ord("W"));
-		key_down = keyboard_check(vk_down) || keyboard_check(ord("S"));
-		key_jump =  key_up;
-		key_starjump = keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"));
-		key_wall = keyboard_check_pressed(vk_space);
-		key_sword = mouse_check_button_pressed(mb_left);
-		key_moon = keyboard_check(ord("Q"));
-		key_dash = keyboard_check_pressed(vk_shift);
-		key_heal = keyboard_check(ord("F"));
+		key_left = global.Key_Left;
+		key_right = global.Key_Right;
+		key_up = global.Key_Up;
+		key_down = global.Key_Down;
+		key_jump = global.Key_Jump;
+		key_starjump = global.Key_Starjump;
+		key_wall = global.Key_Wall;
+		key_sword = global.Key_Sword;
+		key_moon = global.Key_Cannon;
+		key_dash = global.Key_Dash;
+		key_heal = global.Key_Heal;
 		
 		move = key_right - key_left;
 

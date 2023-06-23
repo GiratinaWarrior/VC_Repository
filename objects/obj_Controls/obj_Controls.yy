@@ -1,20 +1,17 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_DoorWarp",
+  "name": "obj_Controls",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_Player","path":"objects/obj_Player/obj_Player.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "RoomShift",
-    "path": "folders/Objects/Operators/RoomShift.yy",
+    "name": "Other",
+    "path": "folders/Objects/PlayerStuff/Mechanics/Other.yy",
   },
-  "parentObjectId": {
-    "name": "obj_RoomWarp",
-    "path": "objects/obj_RoomWarp/obj_RoomWarp.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -30,10 +27,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_TriggerMore",
-    "path": "sprites/spr_TriggerMore/spr_TriggerMore.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

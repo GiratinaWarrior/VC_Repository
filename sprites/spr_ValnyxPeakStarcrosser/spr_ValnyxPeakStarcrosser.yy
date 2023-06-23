@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Shrine",
-    "path": "folders/Sprites/Textures/Shrine.yy",
+    "name": "ShrineTextures",
+    "path": "folders/Sprites/Textures/ShrineTextures.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

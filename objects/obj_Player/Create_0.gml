@@ -170,14 +170,6 @@ DamagedTimer = 0;
 //The ID of the object that attacked the player
 AttackerID = noone;
 
-DefaultFlinchLength = 20;
-
-FlinchLength = DefaultFlinchLength;
-
-DefaultInvincibleLength = 100;
-
-InvincibleLength = DefaultInvincibleLength;
-
 #endregion
 
 #region Room Transition
