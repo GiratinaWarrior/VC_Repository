@@ -1,17 +1,13 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_ShrineArenaBossIntroCutscene",
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":1,"eventType":3,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":76,"eventType":7,"isDnD":false,},
-  ],
+  "name": "obj_CardinalFamilyCongratsCutscene",
+  "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "3_ShrineArenaBossIntro",
-    "path": "folders/Objects/Cutscenes/Opening/3_ShrineArenaBossIntro.yy",
+    "name": "4_CardinalFamilyCongrats",
+    "path": "folders/Objects/Cutscenes/Opening/4_CardinalFamilyCongrats.yy",
   },
   "parentObjectId": null,
   "persistent": false,

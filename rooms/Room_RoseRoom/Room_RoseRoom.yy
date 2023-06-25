@@ -134,7 +134,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_36F9DEE1","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Entity","path":"objects/obj_Entity/obj_Entity.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":384.0,"y":160.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"RoseBackdrop","depth":400,"effectEnabled":true,"effectType":"_filter_tintfilter","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
-        {"name":"g_TintCol","type":1,"value":"#FF7C7C7C",},
+        {"name":"g_TintCol","type":1,"value":"#FF550066",},
       ],"tiles":{"SerialiseHeight":17,"SerialiseWidth":30,"TileCompressedData":[
 -72,-2147483648,1,0,-7,-2147483648,-2,0,-28,-2147483648,-5,0,-23,-2147483648,-8,0,-22,-2147483648,-11,0,1,-2147483648,-17,20,1,36,-11,0,1,42,
 -17,47,1,24,-4,0,1,34,-6,20,1,26,-17,47,1,24,-4,0,1,16,-6,47,1,24,-17,47,1,24,-4,0,

@@ -24,8 +24,8 @@
     "Keyframes": [],
   },
   "parent": {
-    "name": "JestDebutShrine",
-    "path": "folders/Sequences/Cutscenes/OpeningAct/JestDebutShrine.yy",
+    "name": "2_JestDebutShrine",
+    "path": "folders/Sequences/Cutscenes/OpeningAct/2_JestDebutShrine.yy",
   },
   "playback": 0,
   "playbackSpeed": 60.0,

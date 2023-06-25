@@ -12,7 +12,7 @@ if (!global.ShrineGeneral_Defeated)
 			case "ShrineGeneralActivate":
 				//Set the music
 				SetRoomAudio(music_ShrineGeneralTheme);
-			
+				
 				//Bring in the player character
 				with (obj_Player)
 				{
@@ -20,7 +20,6 @@ if (!global.ShrineGeneral_Defeated)
 					x = 224 + 640;
 					y = 162 + 270;
 				}
-			
 			
 				if (!ShrineArena_DoorsCreated)
 				{

@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Prologue",
-    "path": "folders/Objects/Cutscenes/Opening/Prologue.yy",
+    "name": "1_Prologue",
+    "path": "folders/Objects/Cutscenes/Opening/1_Prologue.yy",
   },
   "parentObjectId": null,
   "persistent": false,

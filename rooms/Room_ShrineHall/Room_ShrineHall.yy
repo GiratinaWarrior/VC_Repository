@@ -198,7 +198,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_75B671BD","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_RoomWarp","path":"objects/obj_RoomWarp/obj_RoomWarp.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-96.0,"y":608.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"BackShrineTiles","depth":300,"effectEnabled":true,"effectType":"_filter_tintfilter","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
-        {"name":"g_TintCol","type":1,"value":"#FF9B9B9B",},
+        {"name":"g_TintCol","type":1,"value":"#FF4C7F7B",},
       ],"tiles":{"SerialiseHeight":24,"SerialiseWidth":62,"TileCompressedData":[
 -483,-2147483648,-6,0,-3,-2147483648,-4,0,-48,-2147483648,-14,0,-5,-2147483648,-11,0,-14,-2147483648,-4,0,-13,-2147483648,-15,0,-3,20,1,36,-13,0,1,34,-9,20,1,36,-6,0,1,34,-9,20,2,21,45,-16,0,-3,47,1,24,-13,0,1,16,-9,47,1,24,-6,0,1,
 16,-9,47,1,24,-17,0,-3,47,1,24,-13,0,1,16,-9,47,1,24,-4,0,3,46,0,16,-9,47,1,24,-17,0,-3,47,1,24,-12,0,2,34,1,-9,47,1,24,-5,0,2,34,1,-9,47,1,24,-17,0,-3,47,1,24,-12,0,1,

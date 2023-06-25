@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "JestDebut",
-    "path": "folders/Objects/Cutscenes/Opening/JestDebut.yy",
+    "name": "2_JestDebut",
+    "path": "folders/Objects/Cutscenes/Opening/2_JestDebut.yy",
   },
   "parentObjectId": null,
   "persistent": false,
