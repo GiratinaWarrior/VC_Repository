@@ -28,8 +28,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Important",
-    "path": "folders/Sprites/NPC's/Important.yy",
+    "name": "Jest",
+    "path": "folders/Sprites/NPC's/Important/Jest.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

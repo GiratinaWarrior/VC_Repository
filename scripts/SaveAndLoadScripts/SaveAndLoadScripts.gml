@@ -23,7 +23,8 @@ function SaveGame()
 		UnlockedNightNight : global.AbilityUnlocked_NightNight,
 		OrbsCollected : global.OrbsCollected,
 		SeenJestDebutCutscene : global.JestDebut_Cutscene_Seen,
-		DefeatedShrineGeneral : global.ShrineGeneral_Defeated
+		DefeatedShrineGeneral : global.ShrineGeneral_Defeated,
+		FamilyCongratsCardinal : global.CardinalCongratulation_Family
 	}
 	
 	var _dataString = json_stringify(_saveVar);
@@ -67,6 +68,7 @@ function LoadSave()
 		global.OrbsCollected = _loadData.OrbsCollected;
 		global.JestDebut_Cutscene_Seen = _loadData.SeenJestDebutCutscene;
 		global.ShrineGeneral_Defeated = _loadData.DefeatedShrineGeneral;
+		global.CardinalCongratulation_Family = _loadData.FamilyCongratsCardinal;
 		
 	} 
 
