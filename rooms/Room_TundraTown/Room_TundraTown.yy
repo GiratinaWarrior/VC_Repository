@@ -432,7 +432,7 @@
   ],
   "parent": {
     "name": "VistrustalianKingdom",
-    "path": "folders/Rooms/0_Towns/VistrustalianKingdom.yy",
+    "path": "folders/Rooms/1_Towns/VistrustalianKingdom.yy",
   },
   "parentRoom": null,
   "physicsSettings": {

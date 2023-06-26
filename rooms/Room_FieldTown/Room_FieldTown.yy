@@ -1168,7 +1168,7 @@
   ],
   "parent": {
     "name": "MysticasiaTown",
-    "path": "folders/Rooms/0_Towns/MysticasiaTown.yy",
+    "path": "folders/Rooms/1_Towns/MysticasiaTown.yy",
   },
   "parentRoom": null,
   "physicsSettings": {

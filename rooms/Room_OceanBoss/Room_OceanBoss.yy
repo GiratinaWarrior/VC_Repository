@@ -93,8 +93,8 @@
       ],"spriteId":{"name":"spr_OceanBossScenery","path":"sprites/spr_OceanBossScenery/spr_OceanBossScenery.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":50.0,"vtiled":true,"x":0,"y":0,},
   ],
   "parent": {
-    "name": "2_Ocean",
-    "path": "folders/Rooms/2_Ocean.yy",
+    "name": "3_Ocean",
+    "path": "folders/Rooms/3_Ocean.yy",
   },
   "parentRoom": null,
   "physicsSettings": {

@@ -465,7 +465,7 @@
   ],
   "parent": {
     "name": "SermarianSettlement",
-    "path": "folders/Rooms/0_Towns/SermarianSettlement.yy",
+    "path": "folders/Rooms/1_Towns/SermarianSettlement.yy",
   },
   "parentRoom": null,
   "physicsSettings": {

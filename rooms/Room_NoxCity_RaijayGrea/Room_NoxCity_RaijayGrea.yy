@@ -664,7 +664,7 @@
   ],
   "parent": {
     "name": "NoxCity",
-    "path": "folders/Rooms/0_Towns/NoxCity.yy",
+    "path": "folders/Rooms/1_Towns/NoxCity.yy",
   },
   "parentRoom": {
     "name": "Room_NoxCity_NasiNadiolo",
