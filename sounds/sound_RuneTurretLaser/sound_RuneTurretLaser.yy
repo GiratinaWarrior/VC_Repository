@@ -13,7 +13,7 @@
   "duration": 2.270917,
   "parent": {
     "name": "Field",
-    "path": "folders/Sounds/Sound Effects/EnemyAttacks/Common/Field.yy",
+    "path": "folders/Sounds/Sound Effects/Enemy/EnemyAttacks/Common/Field.yy",
   },
   "preload": false,
   "sampleRate": 44100,

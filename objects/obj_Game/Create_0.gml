@@ -25,7 +25,7 @@ global.Name = "Rose";
 
 //The range our player can see
 global.xrange = RES_W/2;
-//global.yrange = 172;
+global.yrange = RES_H/2;
 
 //Music and sound effects
 global.FieldTheme = music_FieldTheme;

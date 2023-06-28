@@ -7,7 +7,6 @@
   "inheritCreationOrder": false,
   "inheritLayers": false,
   "instanceCreationOrder": [
-    {"name":"inst_7CCF390F","path":"rooms/Room_RoseRoom/Room_RoseRoom.yy",},
     {"name":"inst_A631580","path":"rooms/Room_RoseRoom/Room_RoseRoom.yy",},
     {"name":"inst_4A43F31D","path":"rooms/Room_RoseRoom/Room_RoseRoom.yy",},
     {"name":"inst_73ACE369","path":"rooms/Room_RoseRoom/Room_RoseRoom.yy",},
@@ -129,7 +128,6 @@
 32,0,0,32,-2147483648,-2147483648,32,-4,-2147483648,1,32,-8,-2147483648,17,43,27,-2147483648,-2147483648,44,-2147483648,0,44,0,-2147483648,41,45,-2147483648,32,-2147483648,-2147483648,
 44,-4,-2147483648,1,32,-9,-2147483648,1,44,-11,-2147483648,1,44,-7,-2147483648,1,44,-127,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"tiles_RoseRoomTileSet","path":"tilesets/tiles_RoseRoomTileSet/tiles_RoseRoomTileSet.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Player","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7CCF390F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Camera","path":"objects/obj_Camera/obj_Camera.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":288.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3B209CD7","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_RoomWarp","path":"objects/obj_RoomWarp/obj_RoomWarp.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.5,"x":-96.0,"y":304.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_36F9DEE1","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Entity","path":"objects/obj_Entity/obj_Entity.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":384.0,"y":160.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},

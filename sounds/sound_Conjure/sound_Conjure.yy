@@ -13,7 +13,7 @@
   "duration": 1.004312,
   "parent": {
     "name": "KingChimarine",
-    "path": "folders/Sounds/Sound Effects/EnemyAttacks/Boss/KingChimarine.yy",
+    "path": "folders/Sounds/Sound Effects/Enemy/EnemyAttacks/Boss/KingChimarine.yy",
   },
   "preload": false,
   "sampleRate": 44100,

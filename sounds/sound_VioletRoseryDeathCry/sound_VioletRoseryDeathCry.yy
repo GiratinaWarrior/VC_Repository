@@ -13,7 +13,7 @@
   "duration": 2.115918,
   "parent": {
     "name": "Death Cries",
-    "path": "folders/Sounds/Sound Effects/Death Cries.yy",
+    "path": "folders/Sounds/Sound Effects/Enemy/Death Cries.yy",
   },
   "preload": false,
   "sampleRate": 44100,

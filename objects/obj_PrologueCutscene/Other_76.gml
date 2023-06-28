@@ -1,5 +1,7 @@
 /// @description Act Upon message recieving
 
+/*
+
 //Check if the message came from a sequence
 if (event_data[? "event_type"] == "sequence event")
 {
@@ -49,3 +51,5 @@ if (event_data[? "event_type"] == "sequence event")
 	}//end what message
 	
 }//end if message came from sequence
+
+*/

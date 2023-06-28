@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSequence",
   "resourceVersion": "1.4",
-  "name": "seq_PrologueCutscene",
+  "name": "seq_PrologueCutscene_Old",
   "autoRecord": true,
   "backdropHeight": 540,
   "backdropImageOpacity": 0.5,
@@ -171,7 +171,7 @@
                             {"th0":0.0,"th1":0.09981178,"tv0":0.0,"tv1":0.0,"x":0.0,"y":-16.0,},
                             {"th0":-0.09457141,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":1.0,"y":-16.0,},
                           ],"visible":true,},
-                      ],"function":2,},"RealValue":0.0,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":{"resourceType":"GMAnimCurve","resourceVersion":"1.2","name":"Position","channels":[
+                      ],"function":2,},"RealValue":0.0,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":{"resourceType":"GMAnimCurve","resourceVersion":"1.2","name":"","channels":[
                         {"resourceType":"GMAnimCurveChannel","resourceVersion":"1.0","name":"x","colour":4290799884,"points":[
                             {"th0":0.0,"th1":0.09981178,"tv0":0.0,"tv1":0.0,"x":0.0,"y":534.0,},
                             {"th0":-0.10179055,"th1":0.0006181598,"tv0":7.455063,"tv1":-0.3638153,"x":0.5,"y":-221.61574,},

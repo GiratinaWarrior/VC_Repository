@@ -9,6 +9,7 @@ function TransitionSequence(_type){
 
 	if (layer_exists("transition")) layer_destroy("transition");
 	var _lay = layer_create(-9999, "transition");
+	
 	layer_sequence_create(_lay, 0, 0, _type);
 
 }
@@ -29,8 +30,6 @@ function TransitionStart(_roomTarget, _typeOut, _typeIn)
 		TransitionSequence(_typeIn); //target a different room, and create a transition sequence
 		layer_reset_target_room(); //reset the target room
 		
-		//show_debug_message("Transition Started");
-		
 	}
 	
 }
@@ -47,7 +46,6 @@ function TransitionFinished()
 {
 	layer_sequence_destroy(self.elementID);
 	global.MidTransition = false;
-	//show_debug_message("TransitionFinished Called");
 }
 
 //This function warps the player to another room when it touches a warp object

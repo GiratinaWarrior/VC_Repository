@@ -13,7 +13,7 @@
   "duration": 1.541224,
   "parent": {
     "name": "Ocean",
-    "path": "folders/Sounds/Sound Effects/EnemyAttacks/Common/Ocean.yy",
+    "path": "folders/Sounds/Sound Effects/Enemy/EnemyAttacks/Common/Ocean.yy",
   },
   "preload": false,
   "sampleRate": 44100,

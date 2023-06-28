@@ -1,8 +1,10 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Variables
+
+//-----------------------------Stages of the Cutscene------------------//
 enum CARVALINEORBINTROCUTSCENE
 {
-	START,
+	START_TALK,
+	START_STORY,
 	STORY,
 	STORY_END,
 	LAVENDER_TALK,
@@ -13,5 +15,13 @@ enum CARVALINEORBINTROCUTSCENE_LAVENDERSPEECH
 {
 	INTRO,
 	APPROACH_PEDESTAL,
-	EXPLAIN_CARDINAL
+	EXPLAIN_CARDINAL,
+	APPROACH_EXIT,
+	EXIT_TALK
 }
+
+CarvalineOrbIntroCutscene_Stage = 0;
+CarvalineOrbIntroCutscene_LavenderSpeech_Stage = 0;
+
+//------------------------Initiation Stage-----------------//
+CarvalineOrbIntroCutscene_Start_TextCreated = false;

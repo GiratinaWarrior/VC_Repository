@@ -13,7 +13,7 @@
   "duration": 1.1515,
   "parent": {
     "name": "Tundra",
-    "path": "folders/Sounds/Sound Effects/EnemyAttacks/Common/Tundra.yy",
+    "path": "folders/Sounds/Sound Effects/Enemy/EnemyAttacks/Common/Tundra.yy",
   },
   "preload": false,
   "sampleRate": 44100,

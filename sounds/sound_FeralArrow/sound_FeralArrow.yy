@@ -13,7 +13,7 @@
   "duration": 0.617302,
   "parent": {
     "name": "VioletRosery",
-    "path": "folders/Sounds/Sound Effects/EnemyAttacks/Boss/VioletRosery.yy",
+    "path": "folders/Sounds/Sound Effects/Enemy/EnemyAttacks/Boss/VioletRosery.yy",
   },
   "preload": false,
   "sampleRate": 44100,

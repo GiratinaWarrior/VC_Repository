@@ -167,18 +167,28 @@ switch(PlayerState)
 				
 				CrescentBlitz_Usable = true;
 				
-			
 				
 				
 				//If the player just landed on the ground, play the landing sound
 				if (sprite_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.JUMP]) {
-					audio_play_sound(sound_Landing, 40, false);
+					audio_play_sound(sound_Landing, 100, false);
 				}//end landed
 				
 				//If the player is moving horizontally, play the running animation
-				if (xSpeed != 0) sprite_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.RUN];
+				if (xSpeed != 0) 
+				{
+					sprite_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.RUN];
+					if (animation_end(sprite_index))
+					{
+						audio_play_sound(choose(sound_Footstep1, sound_Footstep2, sound_Footstep3, sound_Footstep4), 50, false);
+					}
+				}
+				
 				//If the player is not moving horizontally, play the idle animation
-				else sprite_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.IDLE];
+				else 
+				{
+					sprite_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.IDLE];
+				}
 				
 				mask_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.IDLE];
 				

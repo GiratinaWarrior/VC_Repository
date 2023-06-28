@@ -1,7 +1,7 @@
 /// @description
 var _emptyfunc = function()
 {
-	
+	audio_play_sound(sound_ShrineSoldierAttacked, 20, false);
 }
 
 var _recoverfunc = function()

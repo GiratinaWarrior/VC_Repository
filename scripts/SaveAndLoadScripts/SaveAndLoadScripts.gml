@@ -24,7 +24,8 @@ function SaveGame()
 		OrbsCollected : global.OrbsCollected,
 		SeenJestDebutCutscene : global.JestDebut_Cutscene_Seen,
 		DefeatedShrineGeneral : global.ShrineGeneral_Defeated,
-		FamilyCongratsCardinal : global.CardinalCongratulation_Family
+		FamilyCongratsCardinal : global.CardinalCongratulation_Family,
+		CarvalineOrbCutscene : global.CarvalineOrb_Cutscene_Seen
 	}
 	
 	var _dataString = json_stringify(_saveVar);
@@ -69,7 +70,7 @@ function LoadSave()
 		global.JestDebut_Cutscene_Seen = _loadData.SeenJestDebutCutscene;
 		global.ShrineGeneral_Defeated = _loadData.DefeatedShrineGeneral;
 		global.CardinalCongratulation_Family = _loadData.FamilyCongratsCardinal;
-		
+		global.CarvalineOrb_Cutscene_Seen = _loadData.CarvalineOrbCutscene;
 	} 
 
 }

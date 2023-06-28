@@ -65,8 +65,6 @@ switch(CardinalFamilyCongrats_Stage)
 	//Fly Exit Stage: Lavender flies in the direction of the basement
 	case CARDINALFAMILYCONGRATSCUTSCENE_STAGE.LAVENDER_FLY_EXIT:
 		
-		
-		
 		//Create the exit sequence
 		if (!CardinalFamilyCongrats_ExitSequenceCreated)
 		{

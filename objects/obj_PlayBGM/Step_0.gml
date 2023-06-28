@@ -14,7 +14,7 @@ if (CurrentBGM != NextBGM && NextBGM != undefined && CurrentBGM != undefined)
         audio_sound_gain(CurrentBGM, 1, 0); //Reset Gain
         CurrentBGM = NextBGM; //Assign New Song
         NextBGM = undefined; //Empty Variable
-        audio_play_sound(CurrentBGM, 1000, true); //Play New Song
+        audio_play_sound(CurrentBGM, 500, true); //Play New Song
 		audio_sound_gain(CurrentBGM, 0, 0);
 		audio_sound_gain(CurrentBGM, 0.5, 1000);
     }

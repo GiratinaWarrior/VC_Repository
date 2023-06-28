@@ -49,7 +49,11 @@ switch(SoldierState)
 		
 		image_speed = 1;
 		
-		if (xSpeed != 0) image_xscale = sign(xSpeed);
+		if (xSpeed != 0) 
+		{
+			image_xscale = sign(xSpeed);
+			
+		}
 		
 		if (PlayerInRange)
 		{
