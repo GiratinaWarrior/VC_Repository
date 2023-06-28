@@ -16,6 +16,11 @@ switch (TextBox_UIPosition)
 	case TEXTBOX_POS.BOTTOM:
 		TextBox_Y = WINDOW_HEIGHT - TextBox_Height - TextBox_EdgeMargin;
 		break;//end bottom of screen
+		
+	//If the tex box is specified to be placed elsewhere
+	default:
+		TextBox_Y = TextBox_UIPosition;
+		break;
 	
 }//end textbox position
 

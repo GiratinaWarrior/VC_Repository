@@ -291,11 +291,11 @@
 -2147483648,-2147483648,40,28,8,-6,47,1,24,-26,-2147483648,-15,47,3,24,0,0,-5,47,6,2,20,36,-2147483648,-2147483648,16,-6,47,1,24,-26,-2147483648,-25,47,4,24,-2147483648,-2147483648,16,-6,47,1,24,-26,-2147483648,-25,47,4,2,20,20,1,-6,47,1,24,-26,-2147483648,-35,47,1,24,
 -26,-2147483648,-35,47,1,24,-26,-2147483648,-13,47,4,4,28,28,8,-18,47,1,24,-26,-2147483648,-13,47,6,24,-2147483648,-2147483648,40,28,8,-16,47,1,24,-26,-2147483648,-13,47,1,24,-4,-2147483648,1,16,-16,47,1,24,-26,-2147483648,-13,28,1,38,-4,-2147483648,1,16,-16,47,1,24,
 -44,-2147483648,1,16,-16,47,1,24,-44,-2147483648,1,16,-16,47,1,24,-44,-2147483648,1,16,-16,47,1,24,-44,-2147483648,1,16,-16,47,1,24,-44,-2147483648,1,40,-16,28,1,38,-88,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"tiles_ShrineLobbyTileSet","path":"tilesets/tiles_ShrineLobbyTileSet/tiles_ShrineLobbyTileSet.yy",},"userdefinedDepth":false,"visible":false,"x":0,"y":0,},
-    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"spr_RoseRoom_LavenderEyes","path":"sprites/spr_RoseRoom_LavenderEyes/spr_RoseRoom_LavenderEyes.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
+    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"spr_ShrineBrickYellow","path":"sprites/spr_ShrineBrickYellow/spr_ShrineBrickYellow.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
   ],
   "parent": {
-    "name": "0_ShrineIntro",
-    "path": "folders/Rooms/0_ShrineIntro.yy",
+    "name": "Tutorial",
+    "path": "folders/Rooms/0_ShrineIntro/Tutorial.yy",
   },
   "parentRoom": null,
   "physicsSettings": {
@@ -313,7 +313,7 @@
   },
   "sequenceId": null,
   "views": [
-    {"hborder":32,"hport":1080,"hspeed":-1,"hview":540,"inherit":false,"objectId":null,"vborder":32,"visible":true,"vspeed":-1,"wport":1980,"wview":990,"xport":0,"xview":0,"yport":0,"yview":0,},
+    {"hborder":32,"hport":1080,"hspeed":-1,"hview":540,"inherit":false,"objectId":null,"vborder":32,"visible":true,"vspeed":-1,"wport":1980,"wview":960,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":1080,"hspeed":-1,"hview":1080,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1980,"wview":1980,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":1080,"hspeed":-1,"hview":1080,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1980,"wview":1980,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":1080,"hspeed":-1,"hview":1080,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1980,"wview":1980,"xport":0,"xview":0,"yport":0,"yview":0,},

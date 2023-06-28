@@ -65,7 +65,7 @@ global.DesertOrb = 0;
 global.JestDebut_Cutscene_Seen = false;
 global.ShrineGeneral_Defeated = false;
 global.CardinalCongratulation_Family = false;
-
+global.CarvalineOrb_Cutscene_Seen = false;
 
 
 

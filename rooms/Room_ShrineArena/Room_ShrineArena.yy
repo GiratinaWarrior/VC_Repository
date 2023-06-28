@@ -156,11 +156,11 @@
         {"resourceType":"GMRSequenceGraphic","resourceVersion":"1.0","name":"graphic_2874661B","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"sequenceId":{"name":"seq_ShrineArenaBossCutscene","path":"sequences/seq_ShrineArenaBossCutscene/seq_ShrineArenaBossCutscene.yy",},"x":0.0,"y":0.0,},
         {"resourceType":"GMRSpriteGraphic","resourceVersion":"1.0","name":"graphic_4C12E6E1","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_ShrineGeneral_Body_Idle_PhaseOne","path":"sprites/spr_ShrineGeneral_Body_Idle_PhaseOne/spr_ShrineGeneral_Body_Idle_PhaseOne.yy",},"x":240.0,"y":388.0,},
       ],"depth":700,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"userdefinedDepth":false,"visible":false,},
-    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":800,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"spr_RoseRoom_GreyBrick","path":"sprites/spr_RoseRoom_GreyBrick/spr_RoseRoom_GreyBrick.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
+    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4285361517,"depth":800,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"spr_RoseRoom_LavenderEyes","path":"sprites/spr_RoseRoom_LavenderEyes/spr_RoseRoom_LavenderEyes.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
   ],
   "parent": {
-    "name": "0_ShrineIntro",
-    "path": "folders/Rooms/0_ShrineIntro.yy",
+    "name": "Tutorial",
+    "path": "folders/Rooms/0_ShrineIntro/Tutorial.yy",
   },
   "parentRoom": null,
   "physicsSettings": {

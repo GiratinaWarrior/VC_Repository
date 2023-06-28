@@ -60,7 +60,11 @@
     "backdropWidth": 1366,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
+    "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[
+        {"resourceType":"Keyframe<MessageEventKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"MessageEventKeyframe","resourceVersion":"1.0","Events":[
+                "ShrineSoldierStartAttack",
+              ],},},"Disabled":false,"id":"ca966e16-9246-42cb-9b76-2a44d9ecb6c8","IsCreationKey":false,"Key":13.0,"Length":1.0,"Stretch":false,},
+      ],},
     "eventStubScript": null,
     "eventToFunction": {},
     "length": 21.0,

@@ -1,0 +1,17 @@
+/// @description Insert description here
+// You can write your code in this editor
+enum CARVALINEORBINTROCUTSCENE
+{
+	START,
+	STORY,
+	STORY_END,
+	LAVENDER_TALK,
+	LAVENDER_EXIT
+}
+
+enum CARVALINEORBINTROCUTSCENE_LAVENDERSPEECH
+{
+	INTRO,
+	APPROACH_PEDESTAL,
+	EXPLAIN_CARDINAL
+}

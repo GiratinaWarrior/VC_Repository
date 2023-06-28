@@ -77,8 +77,8 @@
       ],"spriteId":{"name":"spr_RoseRoom_LavenderEyes","path":"sprites/spr_RoseRoom_LavenderEyes/spr_RoseRoom_LavenderEyes.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
   ],
   "parent": {
-    "name": "0_ShrineIntro",
-    "path": "folders/Rooms/0_ShrineIntro.yy",
+    "name": "Tutorial",
+    "path": "folders/Rooms/0_ShrineIntro/Tutorial.yy",
   },
   "parentRoom": null,
   "physicsSettings": {

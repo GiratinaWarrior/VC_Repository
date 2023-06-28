@@ -1,14 +1,18 @@
 /// This function manages the Shrine Soldier's state while their attacking the player
 function ShrineSoldierState_Attack(){
 	
+	//If SS hasnt started attacking, attack
 	if (sprite_index != spr_ShrineSoldierAttack)
 	{
+		//Change the sprite
 		image_speed = 1;
 		image_index = 0;
 		image_xscale = sign(obj_Player.x - x);
 		sprite_index = spr_ShrineSoldierAttack;
+		//Stop moving
 		xSpeed = 0;
 		
+		//Create a hitbox
 		ShrineSoldierAttackHitbox = instance_create_depth(x, y, depth + 1, parent_EnemyMeleeHitbox);
 		
 	}

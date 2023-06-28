@@ -74,6 +74,7 @@ else
 	PlayerJump--;
 }
 
+
 //Collision with walls when falling and running
 Wall_FallOn();
 Wall_StopRun();
@@ -83,6 +84,7 @@ Wall_StopRun();
 x += xSpeed;
 
 y += ySpeed;
+
 
 #endregion
 
@@ -164,6 +166,9 @@ switch(PlayerState)
 				StarJump_Usable = true;
 				
 				CrescentBlitz_Usable = true;
+				
+			
+				
 				
 				//If the player just landed on the ground, play the landing sound
 				if (sprite_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.JUMP]) {

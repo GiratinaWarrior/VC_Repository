@@ -61,6 +61,7 @@ function PlayerState_Hurt(){
 			Knockback(2, _knockdir, 5);
 			//ySpeed = -5;
 			Invincible = true;
+			audio_play_sound(sound_PlayerDamage, 10, false);
 		}
 		
 		
