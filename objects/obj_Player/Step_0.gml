@@ -180,7 +180,7 @@ switch(PlayerState)
 					sprite_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.RUN];
 					if (animation_end(sprite_index))
 					{
-						audio_play_sound(choose(sound_Footstep1, sound_Footstep2, sound_Footstep3, sound_Footstep4), 50, false);
+						PlayerFootsteps()
 					}
 				}
 				

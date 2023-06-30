@@ -212,12 +212,13 @@ function ShrineGeneralPhaseOne_RapidPunches() {
 				ShrineGeneral_LeftArm.sprite_index = spr_ShrineGeneral_LeftArm_RapidPunchWindUp_PhaseOne;
 				ShrineGeneral_RightArm.sprite_index = spr_ShrineGeneral_RightArm_RapidPunchWindUp_PhaseOne;
 				
+				ShrineGeneral_LeftArm.image_index = image_index;
+				ShrineGeneral_RightArm.image_index = image_index;
+				
 				if (ShrineGeneral_RapidPunch_WindUpTimer++ > ShrineGeneral_RapidPunch_TimeToWindUp)
 				{
 					ShrineGeneral_RapidPunch_State = SHRINEGENERAL_RAPIDPUNCH_STATE.FLURRY;
 				}
-			
-				if (instance_exists(obj_Player)) image_xscale = -sign(x - obj_Player.x);
 				
 			#endregion
 				
@@ -325,7 +326,7 @@ function ShrineGeneralPhaseOne_RapidPunches() {
 				ShrineGeneral_RapidPunch_WindUpTimer = 0;
 				
 			#endregion
-		
+			
 			break;
 			
 	}//end Rapid Punch State Machine

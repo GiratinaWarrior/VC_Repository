@@ -19,4 +19,6 @@ else
 	
 	ShrineArena_CamMoveCounter = 0;
 
+	ShrineArena_FootstepCounter = 0;
+
 }

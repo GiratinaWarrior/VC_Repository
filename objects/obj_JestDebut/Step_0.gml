@@ -1,9 +1,5 @@
 /// @description The different stages for Jest
 
-//y = clamp(y, 0, room_height);
-
-//show_debug_message("speed: {0}", speed);
-
 //Do things based on what stage the Jest Cutscene is at
 switch(JestDebut_Stage)
 {
@@ -50,8 +46,14 @@ switch(JestDebut_Stage)
 				follow = other.id;
 			}
 			
+			
+			
 			if (!JestDebut_EnterSequenceCreated)
 			{
+				
+				//Turn off the room music
+				SetRoomAudio(blanksound);
+				
 				//Create the sequence element and id
 				 JestDebut_EnterSequenceElm = layer_sequence_create(layer, x, y, seq_JestDebut_Enter);
 				 JestDebut_EnterSequenceId = layer_sequence_get_instance(JestDebut_EnterSequenceElm);
@@ -68,7 +70,7 @@ switch(JestDebut_Stage)
 				{
 
 					layer_sequence_destroy(JestDebut_EnterSequenceElm);
-					//sequence_destroy(JestDebut_EnterSequenceId);
+					SetRoomAudio(music_JestEncounterTheme, blanksound, 0);
 					JestDebut_Stage = JESTDEBUTCUTSCENE_STAGE.ENTER_TALK;
 				}//end sequence finished
 			}
@@ -209,37 +211,42 @@ switch(JestDebut_Stage)
 	//When Jest starts leaving
 	case JESTDEBUTCUTSCENE_STAGE.EXIT:
 	
-		if (!JestDebut_ExitSequenceCreated)
-			{
-				//Create the sequence element and id
-				 JestDebut_ExitSequenceElm = layer_sequence_create(layer, x, y, seq_JestDebut_Exit);
-				 JestDebut_ExitSequenceId = layer_sequence_get_instance(JestDebut_ExitSequenceElm);
-				 //Sequence overrides object
-				sequence_instance_override_object(JestDebut_ExitSequenceId, object_index, instance_find(object_index, 0));
-				JestDebut_ExitSequenceCreated = true;
-			}
-
-			else
-			{
+		#region Exit
 		
-				//If the sequence has finished playing
-				if (layer_sequence_is_finished(JestDebut_ExitSequenceElm))
+			if (!JestDebut_ExitSequenceCreated)
 				{
+					//Create the sequence element and id
+					 JestDebut_ExitSequenceElm = layer_sequence_create(layer, x, y, seq_JestDebut_Exit);
+					 JestDebut_ExitSequenceId = layer_sequence_get_instance(JestDebut_ExitSequenceElm);
+					 //Sequence overrides object
+					sequence_instance_override_object(JestDebut_ExitSequenceId, object_index, instance_find(object_index, 0));
+					JestDebut_ExitSequenceCreated = true;
+				}
+		
+			else
+				{
+		
+					//If the sequence has finished playing
+					if (layer_sequence_is_finished(JestDebut_ExitSequenceElm))
+					{
 
-					layer_sequence_destroy(JestDebut_ExitSequenceElm);
-					with (obj_Camera)
-					{
-						follow = obj_Player;
-					}
-					with (obj_Player)
-					{
-						hascontrol = true;
-					}
-					global.JestDebut_Cutscene_Seen = true;
-					SaveGame();
-					instance_destroy();	
-				}//end sequence finished
-			}
+						layer_sequence_destroy(JestDebut_ExitSequenceElm);
+						with (obj_Camera)
+						{
+							follow = obj_Player;
+						}
+						with (obj_Player)
+						{
+							hascontrol = true;
+						}
+						global.JestDebut_Cutscene_Seen = true;
+						SetRoomAudio(music_ShrinePeacefulTheme);
+						SaveGame();
+						instance_destroy();	
+					}//end sequence finished
+				}
+			
+		#endregion
 	
 		break;//end Jest exit
 	

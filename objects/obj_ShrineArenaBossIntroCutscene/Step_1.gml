@@ -1,7 +1,7 @@
 /// @description
 
 //show_debug_message("Camera Follow: {0}", object_get_name(obj_Camera.follow));
-show_debug_message("Camera X: {0}", obj_Camera.x);
+//show_debug_message("Camera X: {0}", obj_Camera.x);
 
 //If a room transition is not occuring
 if (!global.MidTransition)
@@ -17,6 +17,12 @@ if (!global.MidTransition)
 			follow = noone;
 			x -= (432/195);
 		}//end access camera
+		
+	}
+	
+	if (ShrineArena_FootstepCounter++ < 195)
+	{
+		PlayerFootsteps();
 	}
 	
 }//end room transition finished
