@@ -1,4 +1,1 @@
-with (obj_PlayBGM)
-{
-	NextBGM = music_StoryCutsceneTheme;
-}
+SetRoomAudio_Music(music_ShrineMemoryTheme);

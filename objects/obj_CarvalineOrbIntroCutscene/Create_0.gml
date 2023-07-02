@@ -23,5 +23,34 @@ enum CARVALINEORBINTROCUTSCENE_LAVENDERSPEECH
 CarvalineOrbIntroCutscene_Stage = 0;
 CarvalineOrbIntroCutscene_LavenderSpeech_Stage = 0;
 
-//------------------------Initiation Stage-----------------//
+//------------------------Start Talk Stage-----------------//
 CarvalineOrbIntroCutscene_Start_TextCreated = false;
+
+//------------------------Start Story Stage----------------//
+CarvalineorbIntroCutscene_StartStory_Sequence = noone;
+CarvalineorbIntroCutscene_StartStory_SequenceCreated = false;
+
+//------------------------Story Stage----------------------//
+CarvalineOrbIntroCutscene_Story_Sequence = noone;
+CarvalineOrbIntroCutscene_Story_SequenceCreated = false;
+
+//-----------------------Story End Stage-------------------//
+CarvalineOrbIntroCutscene_StoryEnd_Sequence = noone;
+CarvalineOrbIntroCutscene_StoryEnd_SequenceCreated = false;
+
+//-----------------------Lavender Talk Stage---------------//
+CarvalineOrbIntroCutscene_LavenderTalk_LavenderSprite = noone;
+
+CarvalineOrbIntroCutscene_LavenderTalk_Intro_TalkStarted = false;
+
+CarvalineOrbIntroCutscene_LavenderTalk_ApproachPedestal_Sequence = noone;
+CarvalineOrbIntroCutscene_LavenderTalk_ApproachPedestal_SequenceCreated = false;
+
+
+
+
+
+
+
+
+

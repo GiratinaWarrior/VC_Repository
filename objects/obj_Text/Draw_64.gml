@@ -9,20 +9,21 @@ switch (TextBox_UIPosition)
 	
 	//If the text box should be at the top of the screen
 	case TEXTBOX_POS.TOP:
-		TextBox_Y = TextBox_EdgeMargin;
+		TextBox_Y = TextBox_Pos_TopPlacement;
 		break;//end top of screen
 		
 	//If the text box should be at the bottom of the screen
 	case TEXTBOX_POS.BOTTOM:
-		TextBox_Y = WINDOW_HEIGHT - TextBox_Height - TextBox_EdgeMargin;
+		TextBox_Y = TextBox_Pos_BottomPlacement;
 		break;//end bottom of screen
 		
-	//If the tex box is specified to be placed elsewhere
 	default:
 		TextBox_Y = TextBox_UIPosition;
 		break;
 	
 }//end textbox position
+
+//show_debug_message("TextBox_UIPosition: {0}", TextBox_UIPosition);
 
 //Draw the text box to the screen
 draw_sprite_stretched(TextBox_BoxSprite, 0, TextBox_X, TextBox_Y, TextBox_Width, TextBox_Height); 

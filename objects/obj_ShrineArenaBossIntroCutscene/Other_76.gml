@@ -11,7 +11,7 @@ if (!global.ShrineGeneral_Defeated)
 			//If the Shrine General has started moving
 			case "ShrineGeneralActivate":
 				//Set the music
-				SetRoomAudio(music_ShrineGeneralTheme, blanksound, 0);
+				SetRoomAudio_Music(music_ShrineGeneralTheme, 0.3, 0);
 				
 				//Bring in the player character
 				with (obj_Player)

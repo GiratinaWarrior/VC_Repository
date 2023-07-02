@@ -3,7 +3,7 @@
 ySpeed = 0;
 Gravity = 0.3;
 
-SetRoomAudio(blanksound);
+SetRoomAudio_Music(blanksound);
 
 with (obj_Player)
 {

@@ -3,7 +3,7 @@
 if (!global.ShrineGeneral_Defeated)
 {
 	instance_create_layer(0, 0, "Cutscene", obj_ShrineArenaBossIntroCutscene);
-	SetRoomAudio();
+	SetRoomAudio_Music();
 	SetSpawnpoint(32, 160, Room_ShrineArenaEntrance);
 	with (obj_Camera)
 	{
@@ -19,7 +19,8 @@ else if (global.ShrineGeneral_Defeated)
 	{
 		instance_destroy(obj_ShrineArenaBossIntroCutscene);
 	}
-	SetRoomAudio(music_ShrinePeacefulTheme);
+	
+	SetRoomAudio_Music(music_ShrinePeacefulTheme, 0.5);
 	with (obj_Camera)
 	{
 		follow = obj_Player;

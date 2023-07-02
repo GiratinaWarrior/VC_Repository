@@ -52,7 +52,7 @@ switch(JestDebut_Stage)
 			{
 				
 				//Turn off the room music
-				SetRoomAudio(blanksound);
+				SetRoomAudio_Music(blanksound);
 				
 				//Create the sequence element and id
 				 JestDebut_EnterSequenceElm = layer_sequence_create(layer, x, y, seq_JestDebut_Enter);
@@ -70,7 +70,7 @@ switch(JestDebut_Stage)
 				{
 
 					layer_sequence_destroy(JestDebut_EnterSequenceElm);
-					SetRoomAudio(music_JestEncounterTheme, blanksound, 0);
+					SetRoomAudio_Music(music_JestEncounterTheme, 0.3, 0);
 					JestDebut_Stage = JESTDEBUTCUTSCENE_STAGE.ENTER_TALK;
 				}//end sequence finished
 			}
@@ -240,7 +240,7 @@ switch(JestDebut_Stage)
 							hascontrol = true;
 						}
 						global.JestDebut_Cutscene_Seen = true;
-						SetRoomAudio(music_ShrinePeacefulTheme);
+						SetRoomAudio_Music(music_ShrinePeacefulTheme, 0.5);
 						SaveGame();
 						instance_destroy();	
 					}//end sequence finished

@@ -33,13 +33,16 @@ TextBox_BoxSprite = spr_TextBox;
 TextBox_TextColor = c_black;
 TextBox_Font = ft_NPC;
 
+TextBox_Pos_TopPlacement = TextBox_EdgeMargin;
+//ft_Silver: 1040;
+TextBox_Pos_BottomPlacement = WINDOW_HEIGHT - TextBox_Height - TextBox_EdgeMargin;
+
 enum TEXTBOX_POS
 {
 	TOP,
 	BOTTOM
 }
 
-TextBox_UIPosition = TEXTBOX_POS.BOTTOM;
-
+TextBox_UIPosition = TEXTBOX_POS.TOP;
 
 TextBox_Cutscene = false;

@@ -1,0 +1,1 @@
+Text("I am the strongest soldier, you have succeeded me, wonderful")

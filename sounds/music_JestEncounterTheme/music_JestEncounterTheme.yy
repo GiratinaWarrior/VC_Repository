@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 112.24816,
   "parent": {
-    "name": "Music",
-    "path": "folders/Sounds/Music.yy",
+    "name": "CharacterThemes",
+    "path": "folders/Sounds/Music/CharacterThemes.yy",
   },
   "preload": false,
   "sampleRate": 44100,

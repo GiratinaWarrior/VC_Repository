@@ -20,5 +20,7 @@ else
 	ShrineArena_CamMoveCounter = 0;
 
 	ShrineArena_FootstepCounter = 0;
+	
+	ShrineArena_FootstepRate = 0;
 
 }

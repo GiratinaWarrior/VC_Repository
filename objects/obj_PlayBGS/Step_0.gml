@@ -16,6 +16,6 @@ if (CurrentBGS != NextBGS && NextBGS != undefined && CurrentBGS != undefined)
 	    NextBGS = undefined; //Empty Variable
 	    audio_play_sound(CurrentBGS, 1000, true); //Play New Song
 		audio_sound_gain(CurrentBGS, 0, 0);
-		audio_sound_gain(CurrentBGS, 0.5, BGS_GainRate);
+		audio_sound_gain(CurrentBGS, BGS_Volume, BGS_GainRate);
 	}
 }

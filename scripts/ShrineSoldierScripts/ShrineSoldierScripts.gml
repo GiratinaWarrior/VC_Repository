@@ -55,6 +55,8 @@ function ShrineSoldierState_Defeat(){
 	
 	Damage = 0;
 	
+	var _createOne = false;
+	
 	//show_debug_message("Shrine Soldier Image Index: {0}", image_index);
 	
 	//If the Shrine Soldier hasnt changed their sprite to the defeated one, do so
@@ -76,15 +78,24 @@ function ShrineSoldierState_Defeat(){
 			image_index = image_number - 1;
 			image_speed = 0;
 			
-			
-			with (instance_create_depth(x, y, depth, obj_NPC))
+			//If an NPC hasnt been made
+			if (!_createOne)
 			{
-				sprite_index = spr_ShrineSoldierDefeated;
-				image_xscale = other.image_xscale;
-				image_index = image_number - 1;
-				image_speed = 0;
-				TextBox_Text = other.TextBox_Text;
-				Name = other.Name;
+			
+				//Turn into an NPC
+				with (instance_create_depth(x, y, depth, obj_NPC))
+				{
+					sprite_index = spr_ShrineSoldierDefeated;
+					image_xscale = other.image_xscale;
+					image_index = image_number - 1;
+					image_speed = 0;
+					TextBox_Text = other.TextBox_Text;
+					TextBox_UIPosition = TEXTBOX_POS.TOP;
+					Name = other.Name;
+				}
+				
+				_createOne = true;
+				
 			}
 			
 			instance_destroy();

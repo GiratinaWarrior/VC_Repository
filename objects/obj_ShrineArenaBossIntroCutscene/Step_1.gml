@@ -22,7 +22,11 @@ if (!global.MidTransition)
 	
 	if (ShrineArena_FootstepCounter++ < 195)
 	{
-		PlayerFootsteps();
+		if (ShrineArena_FootstepRate++ > 4)
+		{
+			PlayerFootsteps();
+			ShrineArena_FootstepRate = 0;
+		}
 	}
 	
 }//end room transition finished

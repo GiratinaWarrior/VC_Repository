@@ -1,11 +1,4 @@
-with (obj_PlayBGM)
-{
-	NextBGM = music_GameOverTheme;
-}
+SetRoomAudio_Music(music_GameOverTheme, 0.5);
+SetRoomAudio_Sounds(blanksound);
 
 global.Health = global.MaxHealth;
-
-with (obj_PlayBGS)
-{
-	NextBGS = blanksound;
-}

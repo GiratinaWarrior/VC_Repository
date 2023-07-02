@@ -13,7 +13,7 @@ function PlayerMovement(){
 		{
 			ySpeed = -JumpPower; //Jump
 			PlayerJump = 0; //Reset the coyote jump timer
-			audio_sound_gain(sound_Jump, 0.05, 0)
+			audio_sound_gain(sound_Jump, 0, 0)
 			audio_play_sound(sound_Jump, 5, false);
 		}//end player can jump
 		

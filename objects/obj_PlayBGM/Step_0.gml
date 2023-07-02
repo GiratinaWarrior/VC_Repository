@@ -18,6 +18,6 @@ if (CurrentBGM != NextBGM && NextBGM != undefined && CurrentBGM != undefined)
         NextBGM = undefined; //Empty Variable
         audio_play_sound(CurrentBGM, 500, true); //Play New Song
 		audio_sound_gain(CurrentBGM, 0, 0);
-		audio_sound_gain(CurrentBGM, 0.5, BGM_GainRate);
+		audio_sound_gain(CurrentBGM, BGM_Volume, BGM_GainRate);
     }
 }
