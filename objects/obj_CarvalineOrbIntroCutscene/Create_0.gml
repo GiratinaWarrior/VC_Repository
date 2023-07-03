@@ -16,6 +16,7 @@ enum CARVALINEORBINTROCUTSCENE_LAVENDERSPEECH
 	INTRO,
 	APPROACH_PEDESTAL,
 	EXPLAIN_CARDINAL,
+	EXPLAIN_CARDINAL_MORE,
 	APPROACH_EXIT,
 	EXIT_TALK
 }
@@ -46,11 +47,16 @@ CarvalineOrbIntroCutscene_LavenderTalk_Intro_TalkStarted = false;
 CarvalineOrbIntroCutscene_LavenderTalk_ApproachPedestal_Sequence = noone;
 CarvalineOrbIntroCutscene_LavenderTalk_ApproachPedestal_SequenceCreated = false;
 
+CarvalineOrbIntroCutscene_LavenderTalk_ExplainCardinal_StartedTalk = false;
 
+CarvalineOrbIntroCutscene_LavenderTalk_ExplainCardinalMore_StartedTalk = false;
 
+CarvalineOrbIntroCutscene_LavenderTalk_ApproachExit_Sequence = noone;
+CarvalineOrbIntroCutscene_LavenderTalk_ApproachExit_SequenceCreated = false;
 
+CarvalineOrbIntroCutscene_LavenderTalk_ExitTalk_TalkStarted = false;
 
-
-
-
+//---------------------Lavender Exit Stage-----------------//
+CarvalineOrbIntroCutscene_LavenderExit_Sequence = noone;
+CarvalineOrbIntroCutscene_LavenderExit_SequenceCreated = false;
 

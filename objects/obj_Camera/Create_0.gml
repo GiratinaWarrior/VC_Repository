@@ -1,9 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
-cam = view_camera[0];
+
+#macro WINDOW_WIDTH 1920
+#macro WINDOW_HEIGHT 1080
+
+#macro RES_W 960
+#macro RES_H 540
+
+camera = view_camera[0];
 follow = obj_Player;
-view_w_half = camera_get_view_width(cam) / 2;
-view_h_half = camera_get_view_height(cam) / 2;
+view_w_half = camera_get_view_width(camera) / 2;
+view_h_half = camera_get_view_height(camera) / 2;
 
 xTo = xstart;
 yTo = ystart;

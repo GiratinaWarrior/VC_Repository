@@ -1,6 +1,6 @@
 /// @description Reconfigure the camera view
-view_w_half = camera_get_view_width(cam) / 2;
-view_h_half = camera_get_view_height(cam) / 2;
+view_w_half = camera_get_view_width(camera) / 2;
+view_h_half = camera_get_view_height(camera) / 2;
 
 global.xrange = view_w_half;
 global.yrange = view_w_half;

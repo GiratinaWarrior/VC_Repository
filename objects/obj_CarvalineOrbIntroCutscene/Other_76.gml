@@ -78,6 +78,26 @@ if (event_data [? "event_type"] == "sequence event")
 			
 			break;//end crowned
 			
+		//Lavender passes by Rose while talking
+		case "CarvalineOrbIntro_LavenderPassesRose":
+		
+			with (obj_Player)
+			{
+				image_xscale = 1;
+			}
+		
+			break;//end Lavender passes by
+			
+		//Lavender passes by Rose while leaving
+		case "CarvalineOrbIntro_LavenderPassesRose_Again":
+		
+			with (obj_Player)
+			{
+				image_xscale = -1;
+			}
+		
+			break;//end Lavender passes by
+			
 	}//end do thing based on message
 	
 }//end access messages

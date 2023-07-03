@@ -1,17 +1,17 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_WallSlope",
+  "name": "obj_EventStart_Stay",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Events",
+    "path": "folders/Objects/Operators/Events.yy",
   },
   "parentObjectId": {
-    "name": "obj_Wall",
-    "path": "objects/obj_Wall/obj_Wall.yy",
+    "name": "obj_EventStart_OneTime",
+    "path": "objects/obj_EventStart_OneTime/obj_EventStart_OneTime.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_WallSlope",
-    "path": "sprites/spr_WallSlope/spr_WallSlope.yy",
+    "name": "spr_EventTrigger_Multi",
+    "path": "sprites/spr_EventTrigger_Multi/spr_EventTrigger_Multi.yy",
   },
   "spriteMaskId": null,
   "visible": true,

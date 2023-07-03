@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-show_debug_message("Carvaline Cutscene Stage: {0}", CarvalineOrbIntroCutscene_Stage);
+//show_debug_message("Carvaline Cutscene Stage: {0}", CarvalineOrbIntroCutscene_Stage);
 
 //The different stages of this cutscene
 switch(CarvalineOrbIntroCutscene_Stage)
@@ -11,7 +11,7 @@ switch(CarvalineOrbIntroCutscene_Stage)
 	
 		#region Start Speak
 	
-			SetRoomAudio_Music(blanksound);
+			//SetRoomAudio_Music(blanksound);
 	
 			//The text the Carvaline Pedestal
 			var _text = 
@@ -75,14 +75,17 @@ switch(CarvalineOrbIntroCutscene_Stage)
 			//Create a the story sequence
 			if (!CarvalineOrbIntroCutscene_Story_SequenceCreated)
 			{
+				//Create the sequence for the story
 				CarvalineOrbIntroCutscene_Story_Sequence = layer_sequence_create(layer_get_id("CarvalineStory"), obj_Camera.x, obj_Camera.y, seq_CarvalineOrbIntro_Story_PartOne); 
+				//Create the story end sequence, keep it paused
+				CarvalineOrbIntroCutscene_StoryEnd_Sequence = layer_sequence_create(layer_get_id("WhiteFlash"), 0, 0, seq_CarvalineOrbIntro_EndStory);
+				layer_sequence_pause(CarvalineOrbIntroCutscene_StoryEnd_Sequence);
+				
 				CarvalineOrbIntroCutscene_Story_SequenceCreated = true;
 			}
 			//Move on to the next stage once the sequence is finished
 			else if (layer_sequence_is_finished(CarvalineOrbIntroCutscene_Story_Sequence))
 			{
-				//layer_sequence_play(CarvalineOrbIntroCutscene_Story_Sequence);
-				//layer_sequence_destroy(CarvalineOrbIntroCutscene_Story_Sequence);
 				CarvalineOrbIntroCutscene_Stage = CARVALINEORBINTROCUTSCENE.STORY_END;	
 			}
 			//If the sequence exists and is progressing
@@ -122,8 +125,11 @@ switch(CarvalineOrbIntroCutscene_Stage)
 					y = 448;
 					image_xscale = 1;
 				}
+				//Create the sprite
 				CarvalineOrbIntroCutscene_LavenderTalk_LavenderSprite = layer_sprite_create(layer_get_id("Lavender"), 1088, 448, spr_Lavender_Idle);			
-				CarvalineOrbIntroCutscene_StoryEnd_Sequence = layer_sequence_create(layer_get_id("WhiteFlash"), 0, 0, seq_CarvalineOrbIntro_EndStory);
+				//Create the story end cutscene
+				/////// CarvalineOrbIntroCutscene_StoryEnd_Sequence = layer_sequence_create(layer_get_id("WhiteFlash"), 0, 0, seq_CarvalineOrbIntro_EndStory);
+				layer_sequence_play(CarvalineOrbIntroCutscene_StoryEnd_Sequence);
 				layer_sequence_destroy(CarvalineOrbIntroCutscene_Story_Sequence);
 				SetRoomAudio_Music(blanksound);
 				CarvalineOrbIntroCutscene_StoryEnd_SequenceCreated = true;
@@ -155,12 +161,14 @@ switch(CarvalineOrbIntroCutscene_Stage)
 					
 						var _text = 
 						[
-							"Hello again Rose-darling, I do make for a great story-teller, do I not?",
-							"I have always dreamed of being a writer, and now that you have my title of Valnyx Shrine Cardinal, I can still reach it",
-							"I am particularily fond of historical texts, because the way they portray events of the past fascinate me, whether by glorification of certian sections, or the likes",
-							"I would take good care to make sure that such absurb stories like that never enter the literature battlefield, that story is an insult to the amazing history of Nox",
-							"But the number one thing that brings the 'History of Valnyx Shrine' to the ground..."
-						]
+							"Ahahaha, Hello again Rose-darling, I do make for a great story-teller, do I not?",
+							"I have always dreamed of being a writer, and now that you have my title of Valnyx Shrine Cardinal, I can still reach it.",
+							"I am particularily fond of historical texts, because the way they portray events of the past fascinate me, whether by glorification or erasing certain details.",
+							"The story I just told, 'Dawn of Nox', describes the events that led to the society of Nox as we know it, including the origins of vallen.",
+							"Once I start my writing career as an editor, I would take good care to make sure that such absurb stories like that never enter the literature battlefield, that story is an insult to the amazing history of Nox.",
+							"Aside from the fact that it is a complete abomination from a literary perspective, I have come to the conclusion that 'Dawn of Nox' is a fabrication, and an attempt to cover up the truth.",
+							"A wild statement, but of all the piles of evidence I have to support this, the crutch of my argument..."
+						];
 					
 						if !(CarvalineOrbIntroCutscene_LavenderTalk_Intro_TalkStarted)
 						{
@@ -212,21 +220,169 @@ switch(CarvalineOrbIntroCutscene_Stage)
 						var _text = 
 						[
 							"Is the very existence of THIS, the Carvaline Pedestal, specifically, the Carvaline Orbs wedged inside them.",
-							"These things completely perplexes me. What are they? Where did they come from? Who created them? And for what purpose?",
+							"These things completely perplex me. What are they? Where did they come from? Who created them? And for what purpose?",
 							"The only thing I know is that they hold tremendous power, and that it is the duty of Cardinal to guard them.",
 							"...",
-							"Of course, I hate perfect happy endings, so I spend my time trying to uncover the rest of the story, hoping for something sad or even bittersweet to happen",
-							"I "
-						]
+						];
+						
+						//Have Lavender start talking
+						if !(CarvalineOrbIntroCutscene_LavenderTalk_ExplainCardinal_StartedTalk)
+						{
+							CutsceneText(_text, "Lavender", TEXTBOX_POS.TOP, ft_Silver);
+							CarvalineOrbIntroCutscene_LavenderTalk_ExplainCardinal_StartedTalk = true;
+						}
+						
+						//If Lavender has finished talking
+						else if (!instance_exists(obj_Text))
+						{
+							//the function to run after a certain amount of itme
+							var _func = function()
+							{
+								
+								//Have Lavender turn around
+								layer_sprite_xscale(CarvalineOrbIntroCutscene_LavenderTalk_LavenderSprite, -1);
+								
+								//The function to run after a specified amount of time
+								var _newFunc = function()
+								{
+									CarvalineOrbIntroCutscene_LavenderSpeech_Stage = CARVALINEORBINTROCUTSCENE_LAVENDERSPEECH.EXPLAIN_CARDINAL_MORE;
+								}
+								
+								//After a specified amount, activate the above tunction
+								TimeSourceCreateAndStart(60, _newFunc);
+							}
+							
+							//Activate a function after a certain amount of time
+							TimeSourceCreateAndStart(60, _func);
+							
+							
+						}//end Lavender done talking
 						
 					#endregion
 					
-					break;//end Approach Pedesta
+					break;//end Approach Pedestal Stage
+					
+				//Explain Cardinal More: Lavender continues to talk, this time facing Rose
+				case CARVALINEORBINTROCUTSCENE_LAVENDERSPEECH.EXPLAIN_CARDINAL_MORE:
+					
+					#region Explain Cardinal More
+					
+						var _text =
+	 					[
+							"Of course, I am no fan of happy endings, I prefer anything between bittersweet to tragic, so I spend my time uncovering the truth.",
+							"History truly is fascinating is it not?",
+							"The idea of discovering the past myself excites me, it makes me feel like a child exploring their backyard."
+						];
+					
+						if !(CarvalineOrbIntroCutscene_LavenderTalk_ExplainCardinalMore_StartedTalk)
+						{
+							CutsceneText(_text, "Lavender", TEXTBOX_POS.TOP, ft_Silver);
+							CarvalineOrbIntroCutscene_LavenderTalk_ExplainCardinalMore_StartedTalk = true;
+						}
+						else if !(instance_exists(obj_Text))
+						{
+							CarvalineOrbIntroCutscene_LavenderSpeech_Stage = CARVALINEORBINTROCUTSCENE_LAVENDERSPEECH.APPROACH_EXIT;
+						}
+						
+					#endregion
+					
+					break;//end Explain Cardinal More Stage
+					
+				//Approach Exit Stage: Lavender makes her way to the exit to leave
+				case CARVALINEORBINTROCUTSCENE_LAVENDERSPEECH.APPROACH_EXIT:
+				
+					#region Approach Exit
+					
+						if !(CarvalineOrbIntroCutscene_LavenderTalk_ApproachExit_SequenceCreated)
+						{
+							CarvalineOrbIntroCutscene_LavenderTalk_ApproachExit_Sequence = layer_sequence_create(layer_get_id("Lavender"), layer_sprite_get_x(CarvalineOrbIntroCutscene_LavenderTalk_LavenderSprite), layer_sprite_get_y(CarvalineOrbIntroCutscene_LavenderTalk_LavenderSprite), seq_CarvalineOrbIntro_LavenderTalk_ApproachExit); 
+							layer_sprite_alpha(CarvalineOrbIntroCutscene_LavenderTalk_LavenderSprite, 0);
+							CarvalineOrbIntroCutscene_LavenderTalk_ApproachExit_SequenceCreated = true;
+						} 
+						else if (layer_sequence_is_finished(CarvalineOrbIntroCutscene_LavenderTalk_ApproachExit_Sequence))
+						{
+							layer_sprite_alpha(CarvalineOrbIntroCutscene_LavenderTalk_LavenderSprite, 1);
+							layer_sprite_x(CarvalineOrbIntroCutscene_LavenderTalk_LavenderSprite, 1024);
+							layer_sequence_destroy(CarvalineOrbIntroCutscene_LavenderTalk_ApproachExit_Sequence);
+							CarvalineOrbIntroCutscene_LavenderSpeech_Stage = CARVALINEORBINTROCUTSCENE_LAVENDERSPEECH.EXIT_TALK;
+						}
+					
+					#endregion
+					
+					break;//end Approach Exit Stage
+					
+				//Exit Talk Stage: Lavender says her parting words before leaving for Noctis City
+				case CARVALINEORBINTROCUTSCENE_LAVENDERSPEECH.EXIT_TALK:
+				
+					#region Exit Talk
+					
+						var _text = 
+						[
+							"Moving on from the plot/lore important stuff, we must return to the surface at once.",
+							"We can no way let you get away with becoming Cardinal without a nice ceremony can me now?",
+							"The ceremony will be in Noctis City, to get there, go back to the main floor, and head left.",
+							"We are going to have one heaven of a time, so take care not to be tardy!"
+						]
+					
+						if !(CarvalineOrbIntroCutscene_LavenderTalk_ExitTalk_TalkStarted)
+						{
+							CutsceneText(_text, "Lavender", TEXTBOX_POS.TOP, ft_Silver);
+							CarvalineOrbIntroCutscene_LavenderTalk_ExitTalk_TalkStarted = true;
+						}
+						else if (!instance_exists(obj_Text))
+						{
+							CarvalineOrbIntroCutscene_Stage = CARVALINEORBINTROCUTSCENE.LAVENDER_EXIT;
+						}
+					
+					#endregion
+					
+					break;//end Exit Talk Stage
 				
 			}//end Lavender Speech stage machine
 		
 		#endregion 		
 		
 		break;//end Lavender Talk Stage
+	
+	//Lavender Exit Stage: Lavender exits the Pedestal Room, and the game goes back to normal
+	case CARVALINEORBINTROCUTSCENE.LAVENDER_EXIT:
+		
+		#region Lavender Exit
+		
+			//Have Lavender start leaving
+			if !(CarvalineOrbIntroCutscene_LavenderExit_SequenceCreated)
+			{
+				CarvalineOrbIntroCutscene_LavenderExit_Sequence = layer_sequence_create(layer_get_id("Lavender"), layer_sprite_get_x(CarvalineOrbIntroCutscene_LavenderTalk_LavenderSprite), layer_sprite_get_y(CarvalineOrbIntroCutscene_LavenderTalk_LavenderSprite), seq_CarvalineOrbIntro_LavenderExit); 
+				layer_sprite_destroy(CarvalineOrbIntroCutscene_LavenderTalk_LavenderSprite);
+				CarvalineOrbIntroCutscene_LavenderExit_SequenceCreated = true;
+			} 
+			//Once Lavender has left
+			else if (layer_sequence_is_finished(CarvalineOrbIntroCutscene_LavenderExit_Sequence))
+			{
+				//destroy the lavender leave sequence
+				layer_sequence_destroy(CarvalineOrbIntroCutscene_LavenderExit_Sequence);
+				//Reset the music
+				SetRoomAudio_Music(music_ShrineBasementTheme, 0.5, 1000);
+				//have the player start moving again
+				with (obj_Player)
+				{
+					hascontrol = true;
+				}
+				//Set the global flag for seeing that story
+				global.CarvalineOrb_Cutscene_Seen = true;
+				SaveGame();
+				
+				with (obj_CarvalinePedestal)
+				{
+					Text("The Carvaline Pedestal. It looks really old");
+					Text("The Carvaline Orbs look fresh as new, you feel a divine power emanating from it");
+				}
+				
+				instance_destroy();
+			}
+			
+		#endregion
+		
+		break;//end Lavender Exit Stage
 
 }//end Stage machine
