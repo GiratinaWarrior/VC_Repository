@@ -9,7 +9,7 @@ if (!global.MidTransition)
 	//Play the cutscene
 	layer_sequence_play(ShrineArenaBossCutsceneSequenceID);
 	
-	if (ShrineArena_CamMoveCounter++ > 129)
+	if (ShrineArena_CamMoveCounter++ > 129 - 29)
 	{
 		//Access camera object and set the cameras movement
 		with (obj_Camera)
@@ -27,6 +27,11 @@ if (!global.MidTransition)
 			PlayerFootsteps();
 			ShrineArena_FootstepRate = 0;
 		}
+	}
+	
+	if (ShrineArena_AppearSoundCounter++ > 270 && ShrineArena_AppearSoundCounter <= 273 && !audio_is_playing(sound_ShrineGeneral_Appear))
+	{
+		audio_play_sound(sound_ShrineGeneral_Appear, 50, false);
 	}
 	
 }//end room transition finished

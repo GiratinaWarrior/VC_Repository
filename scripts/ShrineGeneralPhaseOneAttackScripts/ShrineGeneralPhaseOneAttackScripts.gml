@@ -49,14 +49,18 @@ function ShrineGeneralPhaseOne_RocketPunch(){
 				
 				#region Right Arm moves out to punch
 				
-					//Change the sprite
-					ShrineGeneral_RightArm.sprite_index = spr_ShrineGeneral_RightArm_RocketPunchAttack_PhaseOne;
+					if (ShrineGeneral_RightArm.sprite_index != spr_ShrineGeneral_RightArm_RocketPunchAttack_PhaseOne)
+					{
+						//Change the sprite
+						ShrineGeneral_RightArm.sprite_index = spr_ShrineGeneral_RightArm_RocketPunchAttack_PhaseOne;
+						
+						//Play the sound effect
+						audio_play_sound(sound_ShrineGeneral_RocketPunch, 80, false);
+					}
 				
 					//Change the damage
 					ShrineGeneral_RightArm.Damage = ShrineGeneral_RocketPunch_Damage;
 				
-			
-					
 					//Adjust the direction depending on which way SG is facing
 					ShrineGeneral_RocketPunch_Dir = image_xscale;
 				
@@ -93,7 +97,7 @@ function ShrineGeneralPhaseOne_RocketPunch(){
 				sprite_index = spr_ShrineGeneral_Body_RocketPunchAttack_PhaseOne;
 				
 				#region Right Arm Returns to its original place
-					
+						
 					//if the right arm is not at its original position, place it there
 					if (abs(ShrineGeneral_RightArm.x - x) <= 10)
 					{
@@ -112,8 +116,13 @@ function ShrineGeneralPhaseOne_RocketPunch(){
 				
 				#region Left Arm moves to attack
 					
-					//Change the sprite
-					ShrineGeneral_LeftArm.sprite_index = spr_ShrineGeneral_LeftArm_RocketPunchAttack_PhaseOne;
+					if (ShrineGeneral_LeftArm.sprite_index != spr_ShrineGeneral_LeftArm_RocketPunchAttack_PhaseOne)
+					{
+						//Change the sprite
+						ShrineGeneral_LeftArm.sprite_index = spr_ShrineGeneral_LeftArm_RocketPunchAttack_PhaseOne;
+						//play the sound effect
+						audio_play_sound(sound_ShrineGeneral_RocketPunch, 80, false);
+					}
 				
 					//Change the damage
 					ShrineGeneral_LeftArm.Damage = ShrineGeneral_RocketPunch_Damage;
@@ -257,6 +266,12 @@ function ShrineGeneralPhaseOne_RapidPunches() {
 					{
 						//Start creating the rapid punches
 						ShrineGeneral_RapidPunch_FlurryCreate();
+						
+						if (!audio_is_playing(sound_ShrineGeneral_RapidPunch))
+						{
+							audio_play_sound(sound_ShrineGeneral_RapidPunch, 60, false);
+						}
+						
 					}
 					
 				#endregion

@@ -29,7 +29,7 @@
   "origin": 4,
   "parent": {
     "name": "Jest",
-    "path": "folders/Sprites/NPC's/Important/Jest.yy",
+    "path": "folders/Sprites/NPC's/Story/Jest.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

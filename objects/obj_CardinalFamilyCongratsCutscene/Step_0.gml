@@ -5,6 +5,8 @@ switch(CardinalFamilyCongrats_Stage)
 	//Enter Stage: Lavender will fly from above and land in front of Rose
 	case CARDINALFAMILYCONGRATSCUTSCENE_STAGE.LAVENDER_ENTER:
 		
+		SetRoomAudio_Music();
+		
 		//If an entrance sequence hasnt been created, create it
 		if (!CardinalFamilyCongrats_EnterSequenceCreated)
 		{
@@ -28,11 +30,12 @@ switch(CardinalFamilyCongrats_Stage)
 	//Talk Stage: Lavender will congratulate Rose for becoming Cardinal
 	case CARDINALFAMILYCONGRATSCUTSCENE_STAGE.LAVENDER_TALK:
 		
+		SetRoomAudio_Music(music_LavenderEncounterTheme, 0.4);
+		
 		if (layer_sequence_exists(layer, CardinalFamilyCongrats_EnterSequenceElm))
 		{
 			layer_sequence_destroy(CardinalFamilyCongrats_EnterSequenceElm);
 		}
-		
 		
 		//Lavenders speech
 		var _text = 
@@ -141,8 +144,11 @@ switch(CardinalFamilyCongrats_Stage)
 		}
 	
 		break;//end Walk Exit Stage
-		
+	
+	//End Stage: The cutscene is over, reset everything
 	case CARDINALFAMILYCONGRATSCUTSCENE_STAGE.END:
+	
+		SetRoomAudio_Music(music_ShrinePeacefulTheme);
 	
 		//destroy the previous sequence
 		if (layer_sequence_exists(layer, CardinalFamilyCongrats_WalkExitSequenceElm))
@@ -158,7 +164,7 @@ switch(CardinalFamilyCongrats_Stage)
 		global.CardinalCongratulation_Family = true;
 		SaveGame();
 	
-		break;
+		break;//end End Stage
 		
 		
 		

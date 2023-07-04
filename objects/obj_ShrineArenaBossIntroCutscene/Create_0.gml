@@ -18,6 +18,8 @@ else
 	ShrineArena_DoorsCreated = false;
 	
 	ShrineArena_CamMoveCounter = 0;
+	
+	ShrineArena_AppearSoundCounter = 0;
 
 	ShrineArena_FootstepCounter = 0;
 	

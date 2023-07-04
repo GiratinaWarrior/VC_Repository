@@ -26,7 +26,7 @@
   "origin": 4,
   "parent": {
     "name": "Unimportant",
-    "path": "folders/Sprites/NPC's/Ruin/Unimportant.yy",
+    "path": "folders/Sprites/NPC's/NoctisCity/Unimportant.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

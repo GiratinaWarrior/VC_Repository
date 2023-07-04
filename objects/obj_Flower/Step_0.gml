@@ -25,3 +25,8 @@ if (instance_exists(obj_Player))
 		//Flower_HitByPlayer = false;
 	}
 }//end player is present
+
+//Fall to the ground if not on the ground
+ySpeed += Gravity;
+Wall_FallOn();
+y += ySpeed;

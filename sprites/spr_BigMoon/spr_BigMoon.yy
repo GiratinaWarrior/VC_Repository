@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "TitleTextures",
-    "path": "folders/Sprites/Textures/GeneralTextures/TitleTextures.yy",
+    "name": "GeneralTextures",
+    "path": "folders/Sprites/Textures/GeneralTextures.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
