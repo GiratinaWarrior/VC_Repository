@@ -32,8 +32,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "ShrineEnemies",
-    "path": "folders/Sprites/Enemies/ShrineEnemies.yy",
+    "name": "ShrineSoldier",
+    "path": "folders/Sprites/Enemies/ShrineEnemies/ShrineSoldier.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -11,11 +11,6 @@ function PlayerState_SeleneSword(argument0, argument1, argument2){
 	
 	var _newHitBox = noone;
 
-	if (PlayerNeutralState == PLAYERSTATE_NEUTRAL.GROUND)
-	{
-		//xSpeed *= 0.9;
-	}
-
 	if (sprite_index != _attacksprite)
 	{
 		sprite_index = _attacksprite;
@@ -40,7 +35,7 @@ function PlayerState_SeleneSword(argument0, argument1, argument2){
 
 		_SeleneSwordHitboxsprite = _attackhitbox;
 		
-		_newHitBox = instance_create_layer(x + _offsetx, y + _offsety, layer, obj_PlayerSwordHitbox);
+		_newHitBox = instance_create_layer(x + _offsetx + xSpeed, y + _offsety + ySpeed, layer, obj_PlayerSwordHitbox);
 		
 		_newHitBox.sprite_index = _SeleneSwordHitboxsprite;
 		
@@ -50,6 +45,9 @@ function PlayerState_SeleneSword(argument0, argument1, argument2){
 	//Check if the hitbox still exists
 	if (instance_exists(_newHitBox))
 	{
+		_newHitBox.x = x + _offsetx + xSpeed;
+		_newHitBox.y = y + _offsety + ySpeed;
+		
 		//Check if the hitbox hit something
 		if (_newHitBox.HitSomething)
 		{
@@ -66,6 +64,8 @@ function PlayerState_SeleneSword(argument0, argument1, argument2){
 			}//end stop jump
 			
 		}//end if hit something
+		
+		
 		
 	}//end hitbox exists
 

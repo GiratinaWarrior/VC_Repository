@@ -58,7 +58,8 @@
     {"name":"inst_76A3B18","path":"rooms/Room_RoseRoom/Room_RoseRoom.yy",},
     {"name":"inst_482B5E2A","path":"rooms/Room_RoseRoom/Room_RoseRoom.yy",},
     {"name":"inst_44E781C0","path":"rooms/Room_RoseRoom/Room_RoseRoom.yy",},
-    {"name":"inst_36F9DEE1","path":"rooms/Room_RoseRoom/Room_RoseRoom.yy",},
+    {"name":"Teach_Talk","path":"rooms/Room_RoseRoom/Room_RoseRoom.yy",},
+    {"name":"Entity_LavenderLetter","path":"rooms/Room_RoseRoom/Room_RoseRoom.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -114,31 +115,38 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_482B5E2A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Wall","path":"objects/obj_Wall/obj_Wall.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":384.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_44E781C0","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Wall","path":"objects/obj_Wall/obj_Wall.yy",},"properties":[],"rotation":0.0,"scaleX":0.5,"scaleY":1.0,"x":-48.0,"y":384.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":false,},
-    {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"RoseFloor","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":17,"SerialiseWidth":30,"TileCompressedData":[
+    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Controls","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"Teach_Talk","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_TeachControls","path":"objects/obj_TeachControls/obj_TeachControls.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":432.0,"y":96.0,},
+      ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
+    {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"RoseFloor","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":17,"SerialiseWidth":30,"TileCompressedData":[
 -31,47,1,4,-27,28,3,8,47,24,-27,0,3,16,47,24,-27,0,3,16,47,24,-27,0,3,16,47,24,-27,0,
 3,16,47,2,-15,20,1,36,-11,0,19,16,28,28,12,28,28,12,28,28,12,28,28,12,28,28,12,28,28,25,
 -4,0,1,34,-6,20,19,1,0,0,32,0,0,32,0,0,32,0,0,32,0,0,32,0,0,32,-4,0,1,18,
 -6,28,19,8,0,0,32,0,0,32,0,0,32,0,0,32,0,0,32,0,0,32,-4,0,1,32,-6,0,19,16,
 0,0,32,0,0,32,0,0,32,0,0,32,0,0,32,0,0,32,-4,0,1,32,-6,0,19,16,20,20,3,20,
 20,3,20,20,3,20,20,3,20,20,3,20,20,3,-4,20,1,3,-6,20,1,1,-150,47,],"TileDataFormat":1,},"tilesetId":{"name":"tiles_RoseRoomTileSet","path":"tilesets/tiles_RoseRoomTileSet/tiles_RoseRoomTileSet.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
-    {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"RosePillar","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":17,"SerialiseWidth":30,"TileCompressedData":[
+    {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"RosePillar","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":17,"SerialiseWidth":30,"TileCompressedData":[
 -202,-2147483648,1,0,-8,-2147483648,17,43,37,-2147483648,-2147483648,42,-2147483648,-2147483648,35,45,-2147483648,42,-2147483648,0,42,-2147483648,-2147483648,42,-4,-2147483648,2,35,45,-7,
 -2147483648,17,0,32,-2147483648,-2147483648,32,-2147483648,-2147483648,32,0,-2147483648,32,-2147483648,0,32,-2147483648,-2147483648,32,-4,-2147483648,1,32,-8,-2147483648,17,0,32,-2147483648,-2147483648,
 32,-2147483648,-2147483648,32,0,-2147483648,32,-2147483648,0,32,-2147483648,-2147483648,32,-4,-2147483648,1,32,-8,-2147483648,17,0,32,-2147483648,-2147483648,32,-2147483648,-2147483648,32,0,-2147483648,
 32,0,0,32,-2147483648,-2147483648,32,-4,-2147483648,1,32,-8,-2147483648,17,43,27,-2147483648,-2147483648,44,-2147483648,0,44,0,-2147483648,41,45,-2147483648,32,-2147483648,-2147483648,
 44,-4,-2147483648,1,32,-9,-2147483648,1,44,-11,-2147483648,1,44,-7,-2147483648,1,44,-127,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"tiles_RoseRoomTileSet","path":"tilesets/tiles_RoseRoomTileSet/tiles_RoseRoomTileSet.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
-    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Player","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Player","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3B209CD7","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_RoomWarp","path":"objects/obj_RoomWarp/obj_RoomWarp.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.5,"x":-96.0,"y":304.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_36F9DEE1","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Entity","path":"objects/obj_Entity/obj_Entity.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":384.0,"y":160.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
-    {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"RoseBackdrop","depth":400,"effectEnabled":true,"effectType":"_filter_tintfilter","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
+    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"LavenderLetter","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"Entity_LavenderLetter","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Entity","path":"objects/obj_Entity/obj_Entity.yy",},"properties":[
+            {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_Entity","path":"objects/obj_Entity/obj_Entity.yy",},"propertyId":{"name":"TextBox_UIPosition","path":"objects/obj_Entity/obj_Entity.yy",},"value":"TEXTBOX_POS.BOTTOM",},
+          ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":448.0,"y":160.0,},
+      ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
+    {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"RoseBackdrop","depth":600,"effectEnabled":true,"effectType":"_filter_tintfilter","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
         {"name":"g_TintCol","type":1,"value":"#FF550066",},
       ],"tiles":{"SerialiseHeight":17,"SerialiseWidth":30,"TileCompressedData":[
 -72,-2147483648,1,0,-7,-2147483648,-2,0,-28,-2147483648,-5,0,-23,-2147483648,-8,0,-22,-2147483648,-11,0,1,-2147483648,-17,20,1,36,-11,0,1,42,
 -17,47,1,24,-4,0,1,34,-6,20,1,26,-17,47,1,24,-4,0,1,16,-6,47,1,24,-17,47,1,24,-4,0,
 1,16,-6,47,1,24,-17,47,1,24,-4,0,1,16,-6,47,4,24,28,8,4,-14,28,6,30,45,-2147483648,34,21,29,
 -6,28,4,38,-2147483648,16,24,-17,-2147483648,2,16,24,-9,-2147483648,2,40,38,-17,-2147483648,2,40,38,-98,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"tiles_RoseRoomTileSet","path":"tilesets/tiles_RoseRoomTileSet/tiles_RoseRoomTileSet.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
-    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Backgrounds","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"spr_RoseRoom_LavenderEyes","path":"sprites/spr_RoseRoom_LavenderEyes/spr_RoseRoom_LavenderEyes.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
+    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Backgrounds","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":700,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"spr_RoseRoom_LavenderEyes","path":"sprites/spr_RoseRoom_LavenderEyes/spr_RoseRoom_LavenderEyes.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
   ],
   "parent": {
     "name": "Tutorial",

@@ -16,8 +16,8 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_Enemy","path":"objects/parent_Enemy/parent_Enemy.yy",},"propertyId":{"name":"Damage","path":"objects/parent_Enemy/parent_Enemy.yy",},"value":"1",},
   ],
   "parent": {
-    "name": "Shrine",
-    "path": "folders/Objects/Enemies/Shrine.yy",
+    "name": "ShrineSoldier",
+    "path": "folders/Objects/Enemies/Shrine/ShrineSoldier.yy",
   },
   "parentObjectId": {
     "name": "parent_Enemy",

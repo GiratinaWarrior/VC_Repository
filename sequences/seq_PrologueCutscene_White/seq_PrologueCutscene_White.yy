@@ -14,14 +14,21 @@
     "resourceVersion": "1.0",
     "Keyframes": [],
   },
-  "eventStubScript": null,
+  "eventStubScript": {
+    "name": "seq_PrologueCutscene_White_Events",
+    "path": "scripts/seq_PrologueCutscene_White_Events/seq_PrologueCutscene_White_Events.yy",
+  },
   "eventToFunction": {},
   "length": 750.0,
   "lockOrigin": false,
   "moments": {
     "resourceType": "KeyframeStore<MomentsEventKeyframe>",
     "resourceVersion": "1.0",
-    "Keyframes": [],
+    "Keyframes": [
+      {"resourceType":"Keyframe<MomentsEventKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"MomentsEventKeyframe","resourceVersion":"1.0","Events":[
+              "seq_PrologueCutscene_White_Moment",
+            ],},},"Disabled":false,"id":"7efece7b-935e-43dc-a9f9-00297b63e82e","IsCreationKey":false,"Key":600.0,"Length":1.0,"Stretch":false,},
+    ],
   },
   "parent": {
     "name": "1_Prologue",
@@ -58,8 +65,8 @@
                   {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":0.0,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":0.0,},},"Disabled":false,"id":"6b349d58-2848-46ae-b697-9424b1538f44","IsCreationKey":true,"Key":200.0,"Length":1.0,"Stretch":false,},
                 ],},"modifiers":[],"trackColour":4284106994,"tracks":[],"traits":0,},
             {"resourceType":"GMRealTrack","resourceVersion":"1.0","name":"position","builtinName":14,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<RealKeyframe>","resourceVersion":"1.0","Keyframes":[
-                  {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":-465.0,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":-113.5,},},"Disabled":false,"id":"e8c4f646-ffcd-49c2-b719-0dfc797672de","IsCreationKey":false,"Key":200.0,"Length":1.0,"Stretch":false,},
-                  {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":-479.0,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":-113.5,},},"Disabled":false,"id":"8f5bbb4c-051a-46a6-bf04-4a40799f975e","IsCreationKey":false,"Key":382.0,"Length":1.0,"Stretch":false,},
+                  {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":-480.0,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":-113.5,},},"Disabled":false,"id":"e8c4f646-ffcd-49c2-b719-0dfc797672de","IsCreationKey":false,"Key":200.0,"Length":1.0,"Stretch":false,},
+                  {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":-480.0,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":-113.5,},},"Disabled":false,"id":"8f5bbb4c-051a-46a6-bf04-4a40799f975e","IsCreationKey":false,"Key":382.0,"Length":1.0,"Stretch":false,},
                 ],},"modifiers":[],"trackColour":4284106994,"tracks":[],"traits":0,},
             {"resourceType":"GMRealTrack","resourceVersion":"1.0","name":"rotation","builtinName":8,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":true,"keyframes":{"resourceType":"KeyframeStore<RealKeyframe>","resourceVersion":"1.0","Keyframes":[
                   {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":0.0,},},"Disabled":false,"id":"fa102bfa-da69-437a-8c3a-ad45f0d011a9","IsCreationKey":false,"Key":200.0,"Length":1.0,"Stretch":false,},

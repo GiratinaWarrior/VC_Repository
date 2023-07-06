@@ -7,7 +7,7 @@ enum SWORD_V_DIR
 	DOWN = 1
 }
 
-alarm[0] = 7;
+alarm[0] = 10;
 
 HitSomething = false;
 

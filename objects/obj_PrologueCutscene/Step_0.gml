@@ -114,6 +114,11 @@ switch (PrologueCutscene_Stage)
 	//Star Approach Stage: The wierd star rapidly gets closer as the screen fades to white
 	case PROLOGUECUTSCENE.STAR_APPROACH:
 		
+		PrologueCutscene_Function_StopMusic = function()
+		{
+			SetRoomAudio_Music(blanksound, 0, 0);
+		}
+		
 		//Create the sequences
 		if !(PrologueCutscene_StarApproachSequencesCreated)
 		{

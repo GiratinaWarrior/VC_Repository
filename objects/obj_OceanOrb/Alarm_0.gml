@@ -7,6 +7,5 @@ with (obj_Player)
 	hascontrol = true;
 }
 
-SlideTransition(TRANS_MODE.GOTO, Room_NoxCity);
 global.WarpTargetX = 904;
 global.WarpTargetY = 228;

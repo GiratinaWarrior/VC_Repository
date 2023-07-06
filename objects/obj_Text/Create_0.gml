@@ -43,6 +43,6 @@ enum TEXTBOX_POS
 	BOTTOM
 }
 
-TextBox_UIPosition = TEXTBOX_POS.TOP;
+TextBox_UIPosition = TEXTBOX_POS.BOTTOM;
 
 TextBox_Cutscene = false;

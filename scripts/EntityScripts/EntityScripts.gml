@@ -87,8 +87,8 @@ function EntityTextBox()
 								TextBox_Text[n] = other.Name + ": " + TextBox_Text[n];
 							}
 							other.NameInserted = true;
-							TextBox_UIPosition = other.TextBox_UIPosition;
 						}
+						TextBox_UIPosition = other.TextBox_UIPosition;
 					}//end access myTextbox
 				
 				

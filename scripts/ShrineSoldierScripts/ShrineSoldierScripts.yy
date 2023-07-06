@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Shrine",
-    "path": "folders/Objects/Enemies/Shrine.yy",
+    "name": "ShrineSoldier",
+    "path": "folders/Objects/Enemies/Shrine/ShrineSoldier.yy",
   },
 }
