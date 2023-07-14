@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Tundra",
-    "path": "folders/Sprites/NPC's/Tundra.yy",
+    "name": "3_VitrustalianKingdom",
+    "path": "folders/Sprites/NPC's/3_VitrustalianKingdom.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

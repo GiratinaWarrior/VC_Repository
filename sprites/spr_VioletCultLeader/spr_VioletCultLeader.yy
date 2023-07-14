@@ -36,8 +36,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Field",
-    "path": "folders/Sprites/NPC's/Field.yy",
+    "name": "1_MysticasiaTown",
+    "path": "folders/Sprites/NPC's/1_MysticasiaTown.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

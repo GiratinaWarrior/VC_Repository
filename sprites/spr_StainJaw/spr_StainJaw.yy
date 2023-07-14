@@ -27,8 +27,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Ocean",
-    "path": "folders/Sprites/NPC's/Ocean.yy",
+    "name": "2_SermarianSettlement",
+    "path": "folders/Sprites/NPC's/2_SermarianSettlement.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

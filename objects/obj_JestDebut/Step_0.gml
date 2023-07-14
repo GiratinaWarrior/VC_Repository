@@ -47,7 +47,6 @@ switch(JestDebut_Stage)
 			}
 			
 			
-			
 			if (!JestDebut_EnterSequenceCreated)
 			{
 				

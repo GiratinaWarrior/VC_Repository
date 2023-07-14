@@ -35,7 +35,7 @@
   "origin": 4,
   "parent": {
     "name": "Lavender",
-    "path": "folders/Sprites/NPC's/Story/Lavender.yy",
+    "path": "folders/Sprites/NPC's/0_Story/Lavender.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
