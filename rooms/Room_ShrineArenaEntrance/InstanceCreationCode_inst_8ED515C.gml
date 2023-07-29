@@ -5,8 +5,8 @@ if (global.JestDebut_Cutscene_Seen)
 
 eventFunc = function()
 {
-	with (instance_find(obj_JestDebut, 0))
+	if (!instance_exists(obj_JestDebut))
 	{
-		JestDebut_Stage = JESTDEBUTCUTSCENE_STAGE.OFFSCREEN;
-	}
+		instance_create_layer(-64, 231, layer, obj_JestDebut);
+	}	
 }

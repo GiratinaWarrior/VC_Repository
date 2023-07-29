@@ -28,6 +28,9 @@ switch (TextBox_UIPosition)
 //Draw the text box to the screen
 draw_sprite_stretched(TextBox_BoxSprite, 0, TextBox_X, TextBox_Y, TextBox_Width, TextBox_Height); 
 
+//The height of the text
+TextBox_TextHeight = string_height(TextBox_Text) * 1.2;
+
 //Set the text just right
 DrawSetText(TextBox_TextColor, TextBox_Font, fa_left, fa_top);
 

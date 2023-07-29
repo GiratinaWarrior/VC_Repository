@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "sound_MoonShoot.ogg",
   "type": 0,
-  "volume": 0.05,
+  "volume": 0.25,
 }

@@ -34,7 +34,7 @@ ShrineGeneral_RightArm = instance_create_depth(x, y, depth + 1, obj_ShrineGenera
 //How far away the player is from SG
 ShrineGeneral_PlayerRange = 0;
 //The range the player needs to be in for SG to use Rapid Punches
-ShrineGeneral_RapidRange = 100;
+ShrineGeneral_RapidRange = 200;
 //The range the player needs to be in for SG to use Rocket Punch, must not be within range of Rapid Punch
 ShrineGeneral_RocketRange = 1000;
 

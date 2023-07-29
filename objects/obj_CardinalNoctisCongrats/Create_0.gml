@@ -21,6 +21,8 @@ enum CARDINALNOCTISCONGRATS
 
 CardinalNoctisCongrats_State = 0;
 
+CardinalNoctisCongrats_LavenderSprite = noone;
+
 //-----------------Lavender Greeting Stage------------------//
 CardinalNoctisCongrats_LavenderGreeting_TalkStarted = false;
 

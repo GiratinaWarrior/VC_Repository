@@ -39,6 +39,8 @@ if (image_speed == 0)
 				//Tell the game that the Shrine General has been defeated
 				global.ShrineGeneral_Defeated = true;
 				
+				SetRoomAudio_Music(music_ShrinePeacefulTheme);
+				
 				SaveGame();
 			
 				//Acces the player regrant the ability to move again, and have the camera follow

@@ -27,3 +27,71 @@ function SetRoomAudio_Sounds(_roomsounds = blanksound, _soundsVolume = 0.05, _so
 	}
 
 }
+	
+/////This function sets the room audio, and uses the default settings for them
+function SetRoomAudio_Music_Default(_music = blanksound){
+	
+	with (obj_PlayBGM)
+	{
+		NextBGM = _music;
+	}
+	
+	//Set the music settings depending on the track
+	switch(_music)
+	{
+		//If no music is playing
+		case blanksound:
+		
+			with (obj_PlayBGM)
+			{
+				BGM_Volume = 0.05;
+				BGM_GainRate = 1000;
+			}
+			
+			break;//end no music
+		
+		//If the Valnyx Shrine theme
+		case music_ShrinePeacefulTheme:
+			
+			with (obj_PlayBGM)
+			{
+				BGM_Volume = 0.5;
+				BGM_GainRate = 1000;
+			}
+			
+			break;//end Valnyx Shrine
+			
+		case music_JestEncounterTheme:
+		
+			with (obj_PlayBGM)
+			{
+				BGM_Volume = 0.3;
+				BGM_GainRate = 0;
+			}
+		
+			break;
+			
+		case music_LavenderEncounterTheme:
+		
+			with (obj_PlayBGM)
+			{
+				BGM_Volume = 0.4;
+				BGM_GainRate = 1000;
+			}
+			
+			break;
+			
+		case music_ShrineBasementTheme:
+		
+			with (obj_PlayBGM)
+			{
+				BGM_Volume = 0.5;
+				BGM_GainRate = 0;
+			}
+			
+			break;
+			
+			
+	}
+	
+}

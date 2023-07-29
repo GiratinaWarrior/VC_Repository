@@ -60,7 +60,7 @@ if (mouse_check_button_pressed(mb_right))
 		with (obj_NPC)
 		{
 			alarm[1] = 1;
-			CanFloat = PauseFloat;
+			NPC_CanFloat = PauseFloat;
 			walkspeed = PauseRun;
 			TalkedTo++;
 		}
@@ -152,7 +152,7 @@ if (instance_exists(obj_Player))
 			obj_Player.hascontrol = true;
 		}
 	
-		CanFloat = PauseFloat;
+		NPC_CanFloat = PauseFloat;
 	
 	}
 

@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_NoctisCityTiles",
-  "bbox_bottom": 191,
-  "bbox_left": 0,
-  "bbox_right": 255,
+  "bbox_bottom": 95,
+  "bbox_left": 16,
+  "bbox_right": 143,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1ae29e53-4563-4261-8bba-04e28c34e702",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4aff95a2-d9fa-4d56-8605-2240f897bb00",},
   ],
   "gridX": 32,
   "gridY": 32,
-  "height": 192,
+  "height": 96,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"80cf07a7-b20c-4a32-a06f-086d1a0b2150","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"1ae56fbc-e086-4096-b3ef-8afc4d22a841","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1ae29e53-4563-4261-8bba-04e28c34e702","path":"sprites/spr_NoctisCityTiles/spr_NoctisCityTiles.yy",},},},"Disabled":false,"id":"73d3d121-f18e-45c7-8a42-e7bbc7279a89","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4aff95a2-d9fa-4d56-8605-2240f897bb00","path":"sprites/spr_NoctisCityTiles/spr_NoctisCityTiles.yy",},},},"Disabled":false,"id":"64f2b3ef-972c-4ac0-9833-30c036d4e485","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 256,
+  "width": 144,
 }

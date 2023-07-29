@@ -257,7 +257,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.6.0.89",
+    "IDEVersion": "2023.6.0.92",
   },
   "resources": [
     {"id":{"name":"spr_Controls_WASDarrows","path":"sprites/spr_Controls_WASDarrows/spr_Controls_WASDarrows.yy",},},

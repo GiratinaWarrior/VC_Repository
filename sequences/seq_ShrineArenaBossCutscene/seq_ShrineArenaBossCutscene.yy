@@ -15,7 +15,7 @@
     "Keyframes": [
       {"resourceType":"Keyframe<MessageEventKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"MessageEventKeyframe","resourceVersion":"1.0","Events":[
               "ShrineGeneralActivate",
-            ],},},"Disabled":false,"id":"830ef839-06f6-4144-9983-aca53d7fec27","IsCreationKey":false,"Key":402.0,"Length":1.0,"Stretch":false,},
+            ],},},"Disabled":false,"id":"d7ddc110-9260-46d6-b1e8-20db255937c3","IsCreationKey":false,"Key":449.9999,"Length":1.0,"Stretch":false,},
     ],
   },
   "eventStubScript": null,
@@ -28,7 +28,7 @@
     "5": "",
     "6": "",
   },
-  "length": 404.0,
+  "length": 450.0,
   "lockOrigin": false,
   "moments": {
     "resourceType": "KeyframeStore<MomentsEventKeyframe>",
@@ -107,7 +107,7 @@
   ],
   "visibleRange": {
     "x": 0.0,
-    "y": 403.0,
+    "y": 449.9999,
   },
   "volume": 1.0,
   "xorigin": -640,

@@ -17,8 +17,8 @@ function PlayerState_SeleneSword(argument0, argument1, argument2){
 		image_index = 0;
 		image_speed = 1;
 		var SwordSFX = choose(sound_SwordAttack,sound_SwordAttack2, sound_SwordAttack3, sound_SwordAttack4);
-		audio_sound_gain(SwordSFX, 0.05, 0);
-		audio_play_sound(SwordSFX, 5000, false);
+		audio_sound_gain(SwordSFX, 0.25, 0);
+		audio_play_sound(SwordSFX, 5, false);
 		
 		var _offsetmax = 48;
 	

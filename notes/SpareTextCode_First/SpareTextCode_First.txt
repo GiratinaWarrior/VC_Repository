@@ -19,7 +19,7 @@
 				if (myTextbox = noone)
 				{
 			
-					CanFloat = 0;
+					NPC_CanFloat = 0;
 					walkspeed = 0;
 			
 					TextBoxWidth = sprite_get_width(spr_NPCTextBox);
@@ -55,7 +55,7 @@
 				obj_Player.hascontrol = true;
 			}
 	
-			CanFloat = PauseFloat;
+			NPC_CanFloat = PauseFloat;
 	
 		}
 
@@ -101,7 +101,7 @@
 			obj_Camera.follow = obj_Player;
 			with (obj_NPC)
 			{
-				CanFloat = PauseFloat;
+				NPC_CanFloat = PauseFloat;
 				walkspeed = PauseRun;
 				TalkedTo++;
 			}

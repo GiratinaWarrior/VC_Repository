@@ -2,6 +2,8 @@
 
 //--------------Variables for the Stages of Jest's Debut----------------//
 
+//x -= 300;
+
 //The the different stages
 enum JESTDEBUTCUTSCENE_STAGE
 {
@@ -15,32 +17,30 @@ enum JESTDEBUTCUTSCENE_STAGE
 }
 
 //The Stage that the cutscene is currently on
-JestDebut_Stage = JESTDEBUTCUTSCENE_STAGE.INACTIVE;
+JestDebut_Stage = JESTDEBUTCUTSCENE_STAGE.OFFSCREEN;
+
+JestDebut_Sprite = noone;
 
 //------------Variables for the Offscreen Stage-------------------//
 JestDebut_StartedOffscreenTalk = false;
-JestDebut_FinishedOffscreenTalk = false;
 
 //------------Variables for the Enter Stage-------------------//
 JestDebut_EnterSequenceCreated = false;
-JestDebut_EnterSequenceElm = noone;
-JestDebut_EnterSequenceId = noone;
+JestDebut_EnterSequence = noone
 
 //------------Variables for the Enter Talk Stage-------------------//
-JestDebut_StartedEnterTalk = false;
+JestDebut_EnterTalkStarted = false;
 
 //------------Variables for the Dance Stage-------------------//
 JestDebut_DanceSequenceCreated = false;
-JestDebut_DanceSequenceElm = noone;
-JestDebut_DanceSequenceId = noone;
+JestDebut_DanceSequence = noone;
 
 //------------Variables for the Exit Talk Stage-------------------//
 JestDebut_StartedExitTalk = false;
 
 //------------Variables for the Exit Stage-------------------//
 JestDebut_ExitSequenceCreated = false;
-JestDebut_ExitSequenceElm = noone;
-JestDebut_ExitSequenceId = noone;
+JestDebut_ExitSequence = noone;
 
 
 

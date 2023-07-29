@@ -30,7 +30,7 @@ switch(CardinalFamilyCongrats_Stage)
 	//Talk Stage: Lavender will congratulate Rose for becoming Cardinal
 	case CARDINALFAMILYCONGRATSCUTSCENE_STAGE.LAVENDER_TALK:
 		
-		SetRoomAudio_Music(music_LavenderEncounterTheme, 0.4);
+		SetRoomAudio_Music_Default(music_LavenderEncounterTheme);
 		
 		if (layer_sequence_exists(layer, CardinalFamilyCongrats_EnterSequenceElm))
 		{
@@ -148,7 +148,7 @@ switch(CardinalFamilyCongrats_Stage)
 	//End Stage: The cutscene is over, reset everything
 	case CARDINALFAMILYCONGRATSCUTSCENE_STAGE.END:
 	
-		SetRoomAudio_Music(music_ShrinePeacefulTheme);
+		SetRoomAudio_Music_Default(music_ShrinePeacefulTheme);
 	
 		//destroy the previous sequence
 		if (layer_sequence_exists(layer, CardinalFamilyCongrats_WalkExitSequenceElm))

@@ -1,6 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+//show_debug_message("Lavender X: {0}", Lavender_NoctisCity_Podium.x);
+
+with (Lavender_NoctisCity_Podium)
+{
+	x = floor(x);
+	y = floor(y);
+}
+
 //The Stages of the Cardinal Ceremony
 switch(CardinalNoctisCongrats_State)
 {
@@ -36,32 +44,30 @@ switch(CardinalNoctisCongrats_State)
 		
 			if (!CardinalNoctisCongrats_LavenderAscend_SequenceCreated)
 			{
-				with (obj_Camera)
-				{
-					follow = noone;
-				}
-				CardinalNoctisCongrats_LavenderAscend_Sequence = layer_sequence_create(layer, Lavender_NoctisCity_Podium.x, Lavender_NoctisCity_Podium.y, seq_CardinalNoctisCongrats_LavenderAscend);
+				CardinalNoctisCongrats_LavenderAscend_Sequence = layer_sequence_create(layer, 416, 578, seq_CardinalNoctisCongrats_LavenderAscend);
 				Lavender_NoctisCity_Podium.visible = false;
 				CardinalNoctisCongrats_LavenderAscend_SequenceCreated = true;
 			}
 		
 			else if (layer_sequence_is_finished(CardinalNoctisCongrats_LavenderAscend_Sequence))
 			{
+				//CardinalNoctisCongrats_LavenderSprite = layer_sprite_create(layer, 352, 320, spr_Lavender_Idle);
+				Lavender_NoctisCity_Podium.visible = true;
 				Lavender_NoctisCity_Podium.x = 352;
 				Lavender_NoctisCity_Podium.y = 320;
-				Lavender_NoctisCity_Podium.visible = true;
 				layer_sequence_destroy(CardinalNoctisCongrats_LavenderAscend_Sequence);
-				CardinalNoctisCongrats_State = CARDINALNOCTISCONGRATS.LAVENDER_CALL_ASSEMBLY;
+				CardinalNoctisCongrats_State = CARDINALNOCTISCONGRATS.LAVENDER_CALL_ASSEMBLY
 			}
-		
 			else
 			{
 				with (obj_Camera)
 				{
+					follow = noone;
 					xTo = 495;
 					yTo = 526;
 				}
 			}
+			
 			
 		#endregion
 		
@@ -77,7 +83,7 @@ switch(CardinalNoctisCongrats_State)
 				"Attention, all Residents of Noctis City, come forth for it is time",
 				"It is time to begin",
 				"The Cardinal Inauguration Ceremony"
-			]
+			];
 		
 			if (!CardinalNoctisCongrats_LavenderCallAssembly_TalkStarted)
 			{

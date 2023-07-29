@@ -1,3 +1,3 @@
-SetRoomAudio_Music(music_ShrineBasementTheme);
+SetRoomAudio_Music_Default(music_ShrineBasementTheme);
 SetSpawnpoint();
 SaveGame();

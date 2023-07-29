@@ -9,18 +9,16 @@ function NPC_Movement(){
 	Wall_FallOn();
 	Wall_SwitchRun();
 
-	x = Wave(middlepoint + distlimit, middlepoint - distlimit, 0.1, 1)
-	
-	//show_debug_message("NPC Coordinates: ( x = {0} , y = {1} )", x, y);
+	x += xSpeed;
 
 	if (xSpeed != 0)
 	{
 		image_xscale = -sign(xSpeed);
 	}
 
-	if (CanFloat == 1)
+	if (NPC_CanFloat == true)
 	{	
-		y = Wave(amplitude, -amplitude, bouncespeed);
+		y = Wave(ystart + NPC_Amplitude, ystart - NPC_Amplitude, NPC_BounceSpeed);
 	}
 	else
 	{
@@ -30,6 +28,8 @@ function NPC_Movement(){
 	image_angle += SpinSpeed;
 
 #endregion
+	
+	TextBox_Text = Speech;
 
 }
 
