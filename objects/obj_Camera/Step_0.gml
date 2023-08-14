@@ -14,13 +14,18 @@ x += (xTo - x)/25;
 y += (yTo - y)/25;
 
 
-x = clamp(x, view_w_half, room_width - view_w_half);
-y = clamp(y, view_h_half, room_height - view_h_half);
+x = clamp(x, view_w_half + ScreenShake_Buffer, room_width - view_w_half - ScreenShake_Buffer);
+y = clamp(y, view_h_half + ScreenShake_Buffer, room_height - view_h_half - ScreenShake_Buffer);
 
 camera_set_view_pos(camera, x - view_w_half, y - view_h_half);
 
 view_w_half = camera_get_view_width(camera) / 2;
 view_h_half = camera_get_view_height(camera) / 2;
+
+x += random_range(-ScreenShake_Remain, ScreenShake_Remain);
+y += random_range(-ScreenShake_Remain, ScreenShake_Remain);
+ScreenShake_Remain = max(0, ScreenShake_Remain - ((1/ScreenShake_Length) * ScreenShake_Magnitude));
+
 
 #endregion 
 

@@ -55,6 +55,8 @@ function ShrineSoldierState_Defeat(){
 	
 	Damage = 0;
 	
+	var _text = TextBox_Text;
+	
 	var _createOne = false;
 	
 	//show_debug_message("Shrine Soldier Image Index: {0}", image_index);
@@ -89,7 +91,7 @@ function ShrineSoldierState_Defeat(){
 					image_xscale = other.image_xscale;
 					image_index = image_number - 1;
 					image_speed = 0;
-					TextBox_Text = other.TextBox_Text;
+					Speech = _text;
 					TextBox_UIPosition = TEXTBOX_POS.TOP;
 					Name = other.Name;
 				}

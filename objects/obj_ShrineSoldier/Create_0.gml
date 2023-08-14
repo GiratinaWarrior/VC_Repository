@@ -19,6 +19,7 @@ PlayerInRange = 0;
 
 ShrineSoldierAttackHitbox = noone;
 
+
 TextBox_Text[0] = "";
 TextBox_PageNumber = 0;
 TextBox_UIPosition = TEXTBOX_POS.TOP;

@@ -13,10 +13,13 @@ enum CARDINALNOCTISCONGRATS
 	LAVENDER_END_SPEECH, //Lavender calls for a party to start, and is cut off
 	SHRINE_EXPLOSION, //Valnyx Shrine is attacked, and the shockwave is felt in Noctis City
 	AUDIENCE_PANIC, //The Noxians panic
-	LAVENDER_ORDERS, //Lavender orders the civillians to calm down, and to take refuge underground
-	LAVENDER_DESCEND, //Lavenders descends from the podium
-	LAVENDER_LAST_SPEECH, //Lavender says she will head to Valnyx Shrine, and orders Rose and Jest to follow her
-	LAVENDER_LEAVE //Lavender and Jest leave with a headstart, leaving Rose to follow suit
+	LAVENDER_ORDERS, //Lavender orders the civilians to calm down, and has Jest protect them and take refuge underground
+	JEST_CONFIRM, //Jest accepts his task
+	AUDIENCE_RETREAT, //Jest and the Noxians retreat underground
+	LAVENDER_DESCEND, //Lavender descends from the top
+	LAVENDER_ORDERS_FAMILY, //Lavender orders Rose to follow her to Valnyx Shrine 
+	LAVENDER_EXIT, //Lavender leaves for Valnyx Shrine
+	CUTSCENE_END //The cutscene is over and everything is reset
 }
 
 CardinalNoctisCongrats_State = 0;
@@ -45,3 +48,29 @@ CardinalNoctisCongrats_AudienceCheer_TalkStarted = false;
 //----------------Lavender End Speech Stage-----------------//
 CardinalNoctisCongrats_LavenderEndSpeech_TalkStarted = false;
 
+//----------------Shrine Explosion Stage--------------------//
+CardinalNoctisCongrats_ShrineExplosion_Shaken = false;
+
+//---------------Audience Panic Stage-----------------------//
+CardinalNoctisCongrats_AudiencePanic_TalkStarted = false;
+
+//---------------Lavender Orders Stage----------------------//
+CardinalNoctisCongrats_LavenderOrders_TalkStarted = false;
+
+//---------------Jest Confirm Stage-------------------------//
+CardinalNoctisCongrats_JestConfirm_TalkStarted = false;
+
+//---------------Audience Retreat Stage--------------------//
+CardinalNoctisCongrats_AudienceRetreat_Sequence = noone;
+CardinalNoctisCongrats_AudienceRetreat_SequenceCreated = false;
+
+//-----------------Lavender Descend Stage--------------------//
+CardinalNoctisCongrats_LavenderDescend_Sequence = noone;
+CardinalNoctisCongrats_LavenderDescend_SequenceCreated = false;
+
+//----------------Lavender Orders Family Stage---------------//
+CardinalNoctisCongrats_LavenderOrdersFamily_TalkStarted = false;
+
+//----------------Lavender Exit Stage------------------------//
+CardinalNoctisCongrats_LavenderExit_Sequence = noone;
+CardinalNoctisCongrats_LavenderExit_SequenceCreated = false;

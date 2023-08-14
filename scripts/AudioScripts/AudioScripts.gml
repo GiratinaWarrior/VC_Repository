@@ -91,6 +91,25 @@ function SetRoomAudio_Music_Default(_music = blanksound){
 			
 			break;
 			
+		case music_NoctisCityTheme:
+		
+			with (obj_PlayBGM)
+			{
+				BGM_Volume = 0.5;
+				BGM_GainRate = 0;
+			}
+		
+			break;
+			
+		case music_HighStakesPanic:
+		
+			with (obj_PlayBGM)
+			{
+				BGM_Volume = 0.25;
+				BGM_GainRate = 0;
+			}
+			
+			break;
 			
 	}
 	

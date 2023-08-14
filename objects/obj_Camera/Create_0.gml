@@ -15,6 +15,13 @@ view_h_half = camera_get_view_height(camera) / 2;
 xTo = xstart;
 yTo = ystart;
 
+ScreenShake_Length = 0;
+ScreenShake_Magnitude = 0;
+ScreenShake_Remain = ScreenShake_Magnitude;
+ScreenShake_Buffer = 0;
+
+#region Layers for Parallax
+
 NoxCityForeLayer = layer_get_id("ForeCity");
 NoxCityMidLayer = layer_get_id("MidCity");
 NoxCityBackLayer = layer_get_id("BackCity");
@@ -33,6 +40,6 @@ OceanLayer2 = layer_get_id("Ocean2");
 OceanLayerX1 = x/1.5;
 OceanLayerX2 = x/3;
 
-
+#endregion
 
 

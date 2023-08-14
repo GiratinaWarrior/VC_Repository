@@ -7,4 +7,4 @@ Flower_MoveFromRightSprite = spr_Rose_MoveFromRight;
 Flower_MoveFromLeftSprite = spr_Rose_MoveFromLeft;
 
 ySpeed = 0;
-Gravity = 0.1;
+Gravity = 1;

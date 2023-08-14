@@ -3,6 +3,21 @@
 //The location of the text box on the GUI
 TextBox_X = TextBox_EdgeMargin;
 
+
+switch(TextBox_Font)
+{
+	case ft_NPC:
+		TextBox_TextHeightModifier = 1.2;
+		break;
+	
+	case ft_Silver:
+		TextBox_TextHeightModifier = 1;
+		break;
+	
+}
+
+TextBox_TextHeight = string_height(TextBox_Text) * TextBox_TextHeightModifier;
+
 //Decide where the should be positioned on the screen
 switch (TextBox_UIPosition)
 {

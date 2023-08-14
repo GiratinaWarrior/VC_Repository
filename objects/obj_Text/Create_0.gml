@@ -8,10 +8,13 @@ TextBox_Width = WINDOW_WIDTH - TextBox_EdgeMargin * 2;
 TextBox_Height = WINDOW_HEIGHT/3 - TextBox_EdgeMargin; 
 
 //The Text displayed by the textbox
-TextBox_Text = "default";
+TextBox_Text = "DEFAULT";
 
 //The height of the text
-TextBox_TextHeight = string_height(TextBox_Text) * 1.2;
+TextBox_TextHeightModifier = 1.2;
+
+//The height of the text
+TextBox_TextHeight = string_height(TextBox_Text) * TextBox_TextHeightModifier;
 
 //The page the text is on
 TextBox_Page = 0;

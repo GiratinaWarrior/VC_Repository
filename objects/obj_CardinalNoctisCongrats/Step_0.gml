@@ -17,6 +17,15 @@ switch(CardinalNoctisCongrats_State)
 			if (!CardinalNoctisCongrats_LavenderGreeting_TalkStarted)
 			{
 				CutsceneText(_text, "Lavender", TEXTBOX_POS.BOTTOM, ft_Silver);
+				
+				with (obj_NPC)
+				{
+					if (Name != "Lavender")
+					{
+						visible = false;
+					}
+				}
+				
 				CardinalNoctisCongrats_LavenderGreeting_TalkStarted = true;
 			}
 			else if (!instance_exists(obj_Text))
@@ -36,15 +45,15 @@ switch(CardinalNoctisCongrats_State)
 			if (!CardinalNoctisCongrats_LavenderAscend_SequenceCreated)
 			{
 				CardinalNoctisCongrats_LavenderAscend_Sequence = layer_sequence_create(layer, 416, 578, seq_CardinalNoctisCongrats_LavenderAscend);
-				Lavender_NoctisCity_Podium.visible = false;
 				CardinalNoctisCongrats_LavenderAscend_SequenceCreated = true;
+				Lavender_NoctisCity_Podium.visible = false;
 			}
 		
 			else if (layer_sequence_is_finished(CardinalNoctisCongrats_LavenderAscend_Sequence))
 			{
 				//CardinalNoctisCongrats_LavenderSprite = layer_sprite_create(layer, 352, 320, spr_Lavender_Idle);
 				Lavender_NoctisCity_Podium.visible = true;
-				Lavender_NoctisCity_Podium.x = 352;
+				Lavender_NoctisCity_Podium.x = 351;
 				Lavender_NoctisCity_Podium.y = 320;
 				layer_sequence_destroy(CardinalNoctisCongrats_LavenderAscend_Sequence);
 				CardinalNoctisCongrats_State = CARDINALNOCTISCONGRATS.LAVENDER_CALL_ASSEMBLY
@@ -54,8 +63,8 @@ switch(CardinalNoctisCongrats_State)
 				with (obj_Camera)
 				{
 					follow = noone;
-					xTo = 0;
-					yTo = 526;
+					xTo = 0 + RES_W/2; //RES_W/2 = 480
+					yTo = 256 + RES_H/2; //RES_H/2 = 270
 				}
 			}
 			
@@ -97,7 +106,7 @@ switch(CardinalNoctisCongrats_State)
 		
 			if !(CardinalNoctisCongrats_AudienceAssemble_SequenceCreated)
 			{
-				CardinalNoctisCongrats_AudienceAssemble_Sequence = layer_sequence_create("Residents", 560, 530, seq_CardinalNoctisCongrats_AudienceAssemble);	
+				CardinalNoctisCongrats_AudienceAssemble_Sequence = layer_sequence_create("Residents", 656, 530, seq_CardinalNoctisCongrats_AudienceAssemble);	
 				obj_Player.image_xscale = 1;
 				CardinalNoctisCongrats_AudienceAssemble_SequenceCreated = true;
 			} 
@@ -106,7 +115,7 @@ switch(CardinalNoctisCongrats_State)
 				layer_sequence_destroy(CardinalNoctisCongrats_AudienceAssemble_Sequence);
 				if (CardinalNoctisCongrats_AudienceIdleSequence == noone) 
 					{
-						CardinalNoctisCongrats_AudienceIdleSequence = layer_sequence_create("Residents", 560, 530, seq_CardinalNoctisCongrats_AudienceIdle);
+						CardinalNoctisCongrats_AudienceIdleSequence = layer_sequence_create("Residents", 656, 530, seq_CardinalNoctisCongrats_AudienceIdle);
 					}
 				CardinalNoctisCongrats_State = CARDINALNOCTISCONGRATS.LAVENDER_SPEECH;
 			}
@@ -129,7 +138,6 @@ switch(CardinalNoctisCongrats_State)
 				"Rose!", 
 				"She who stands before you has successfully completed our onerous tests, and is ready to succeed the will of me and my predecessors",
 				"I ask you to welcome my beautiful daughter as your new guardian figure, but much more importantly, as our friend"
-
 			];
 		
 			if (!CardinalNoctisCongrats_LavenderSpeech_TalkStarted)
@@ -179,7 +187,8 @@ switch(CardinalNoctisCongrats_State)
 		
 			var _text = 
 			[
-				"Ahem, now that my thesaurus-petting speech is finished, it is time for us to"	
+				"Ahem, now that my thesaurus-petting speech is finished",
+				"It is about time w-"
 			];
 		
 			if (!CardinalNoctisCongrats_LavenderEndSpeech_TalkStarted)
@@ -195,8 +204,9 @@ switch(CardinalNoctisCongrats_State)
 			{
 				with (obj_Text)
 				{
-					if (TextBox_CharCount >= string_length(TextBox_Text[TextBox_Page]))
+					if (TextBox_CharCount >= string_length(TextBox_Text[TextBox_Page]) && !(TextBox_Page + 1 < array_length(TextBox_Text)))
 					{
+						instance_destroy(obj_Text);
 						other.CardinalNoctisCongrats_State = CARDINALNOCTISCONGRATS.SHRINE_EXPLOSION;
 					}
 				}
@@ -210,11 +220,247 @@ switch(CardinalNoctisCongrats_State)
 	case CARDINALNOCTISCONGRATS.SHRINE_EXPLOSION:
 	
 		#region Shrine Explosion
-		
+			
+			//If the explosion hasn't started
+			if !(CardinalNoctisCongrats_ShrineExplosion_Shaken)
+			{
+				//Earthquake time
+				ScreenShake(64, 5 * 60);
+				SetRoomAudio_Music();
+				audio_play_sound(sound_ShrineExplosion, 1000, false);
+				CardinalNoctisCongrats_ShrineExplosion_Shaken = true;
+			}
+			//If the earthquake is finished
+			else if (obj_Camera.ScreenShake_Remain <= 0)
+			{
+				SetRoomAudio_Sounds();
+				SetRoomAudio_Music_Default(music_HighStakesPanic);
+				CardinalNoctisCongrats_State = CARDINALNOCTISCONGRATS.AUDIENCE_PANIC;
+			}
+			//If the earthquake is ongoing
+			else
+			{
+				SetRoomAudio_Sounds(sound_Earthquake, 0.5, 0);
+			}
+			
 		#endregion
 		
 		break;//end Shrine Explosion Stage
 		
+	//Audience Panic Stage
+	case CARDINALNOCTISCONGRATS.AUDIENCE_PANIC:
+		
+		#region Audience Panic
+		
+			var _text = 
+			[
+				"WHAT WAS THAT!?",
+				"IT CAME FROM THE SHRINE",
+				"THE SHRINE! THE SHRINE! THE SHRINE JUST EXPLODED!",
+				"WHATS HAPPENING?!"
+			];
+		
+			if (!CardinalNoctisCongrats_AudiencePanic_TalkStarted)
+			{
+				CutsceneText(_text, "Noxians", TEXTBOX_POS.BOTTOM, ft_NPC);
+				CardinalNoctisCongrats_AudiencePanic_TalkStarted = true;
+			}
+			else if (!instance_exists(obj_Text))
+			{
+				CardinalNoctisCongrats_State = CARDINALNOCTISCONGRATS.LAVENDER_ORDERS;
+			}
+		
+		#endregion
+		
+		break;//end Audience Panic Stage
+		
+	//Lavender Orders Stage
+	case CARDINALNOCTISCONGRATS.LAVENDER_ORDERS:
+		
+		#region Lavender Orders
+		
+			var _text = 
+			[
+				"PEOPLE OF NOX!",
+				"Calm yourselves this instant, panic breeds chaos.",
+				"There is no need to fear, a formal Cardinal such as I will not permit any injuries for anyone",
+				"Nasi, Nadiolo, Fanna, Grela, Raijay!", 
+				"You 5 will retreat underground to safety, I cannot have you all in danger.",
+				"Jest! You will be in charge of leading them underground and protecting them from external threats."
+			];
+		
+			if (!CardinalNoctisCongrats_LavenderOrders_TalkStarted)
+			{
+				CutsceneText(_text, "Lavender", TEXTBOX_POS.BOTTOM, ft_Silver);
+				CardinalNoctisCongrats_LavenderOrders_TalkStarted = true;
+			}
+			else if (!instance_exists(obj_Text))
+			{
+				CardinalNoctisCongrats_State = CARDINALNOCTISCONGRATS.JEST_CONFIRM;
+			}
+		
+		#endregion
+		
+		break;//end Lavender Orders Stage
+		
+	//Jest Confirm Stage
+	case CARDINALNOCTISCONGRATS.JEST_CONFIRM:
+		
+		#region Jest Confirm
+		
+			var _text = 
+			[
+				"Righty-o Mother",
+				"Don't you worry little and big ones",
+				"You're all safe with me and fun!"
+			];
+		
+			if (!CardinalNoctisCongrats_JestConfirm_TalkStarted)
+			{
+				CutsceneText(_text, "Jest", TEXTBOX_POS.BOTTOM, ft_NPC);
+				CardinalNoctisCongrats_JestConfirm_TalkStarted = true;
+			}
+			else if (!instance_exists(obj_Text))
+			{
+				CardinalNoctisCongrats_State = CARDINALNOCTISCONGRATS.AUDIENCE_RETREAT;
+			}
+		
+		#endregion
+		
+		break;//end Jest Confirm Stage
+		
+	//Audience Retreat Stage
+	case CARDINALNOCTISCONGRATS.AUDIENCE_RETREAT:
+	
+		#region Audience Retreat Stage
+			
+			if !(CardinalNoctisCongrats_AudienceRetreat_SequenceCreated)
+			{
+				layer_sequence_destroy(CardinalNoctisCongrats_AudienceIdleSequence);
+				CardinalNoctisCongrats_AudienceRetreat_Sequence = layer_sequence_create("Residents", 656, 530, seq_CardinalNoctisCongrats_AudienceRetreat);
+				CardinalNoctisCongrats_AudienceRetreat_SequenceCreated = true;
+			}
+			else if (layer_sequence_is_finished(CardinalNoctisCongrats_AudienceRetreat_Sequence))
+			{
+				layer_sequence_destroy(CardinalNoctisCongrats_AudienceRetreat_Sequence);
+				CardinalNoctisCongrats_State = CARDINALNOCTISCONGRATS.LAVENDER_DESCEND;
+			}
+			
+		#endregion
+	
+		break;//end Audience Retreat Stage
+		
+	//Lavender Descend Stage
+	case CARDINALNOCTISCONGRATS.LAVENDER_DESCEND:
+	
+		#region Lavender Descend Stage
+			
+			if (!CardinalNoctisCongrats_LavenderDescend_SequenceCreated)
+			{
+				CardinalNoctisCongrats_LavenderDescend_Sequence = layer_sequence_create(layer, 416, 578, seq_CardinalNoctisCongrats_LavenderDescend);
+				Lavender_NoctisCity_Podium.visible = false;
+				CardinalNoctisCongrats_LavenderDescend_SequenceCreated = true;
+			}
+		
+			else if (layer_sequence_is_finished(CardinalNoctisCongrats_LavenderDescend_Sequence))
+			{
+				//CardinalNoctisCongrats_LavenderSprite = layer_sprite_create(layer, 352, 320, spr_Lavender_Idle);
+				Lavender_NoctisCity_Podium.visible = true;
+				Lavender_NoctisCity_Podium.x = 352 + 256;
+				Lavender_NoctisCity_Podium.y = 576;
+				layer_sequence_destroy(CardinalNoctisCongrats_LavenderDescend_Sequence);
+				CardinalNoctisCongrats_State = CARDINALNOCTISCONGRATS.LAVENDER_ORDERS_FAMILY;
+			}
+			else
+			{
+				with (obj_Camera)
+				{
+					follow = noone;
+					xTo = 0 + RES_W/2; //RES_W/2 = 480
+					yTo = obj_Player.y// + RES_H/2; //RES_H/2 = 270
+				}
+			}
+			
+		#endregion
+	
+		break;//end Lavender Descend Stage
+		
+	//Lavender Orders Stage
+	case CARDINALNOCTISCONGRATS.LAVENDER_ORDERS_FAMILY:
+		
+		#region Lavender Orders
+		
+			var _text = 
+			[
+				"Rose! You and I will head for Valnyx Shrine, the source",
+				"That explosion came from a Vallen Spell, in other words...",
+				"Valnyx Shrine is under attack!",
+				"I refuse to accept that this is the work of that insulting story, but I cannot ignore the possibility",
+				"Onwards my little warrior, haste makes no waste!"
+			];
+		
+			if (!CardinalNoctisCongrats_LavenderOrdersFamily_TalkStarted)
+			{
+				CutsceneText(_text, "Lavender", TEXTBOX_POS.BOTTOM, ft_Silver);
+				CardinalNoctisCongrats_LavenderOrdersFamily_TalkStarted = true;
+			}
+			else if (!instance_exists(obj_Text))
+			{
+				CardinalNoctisCongrats_State = CARDINALNOCTISCONGRATS.LAVENDER_EXIT;
+			}
+		
+		#endregion
+		
+		break;//end Lavender Orders Stage
+		
+	//Lavender Exit Stage
+	case CARDINALNOCTISCONGRATS.LAVENDER_EXIT:
+	
+		#region Lavender Exit Stage
+			
+			if !(CardinalNoctisCongrats_LavenderExit_SequenceCreated)
+			{
+				Lavender_NoctisCity_Podium.visible = false;
+				CardinalNoctisCongrats_LavenderExit_Sequence = layer_sequence_create("Residents", Lavender_NoctisCity_Podium.x, Lavender_NoctisCity_Podium.y, seq_CardinalNoctisCongrats_LavenderExit);
+				CardinalNoctisCongrats_LavenderExit_SequenceCreated = true;
+			}
+			else if (layer_sequence_is_finished(CardinalNoctisCongrats_LavenderExit_Sequence))
+			{
+				layer_sequence_destroy(CardinalNoctisCongrats_LavenderExit_Sequence);
+				CardinalNoctisCongrats_State = CARDINALNOCTISCONGRATS.CUTSCENE_END;
+			}
+			
+		#endregion
+	
+		break;//end Lavender Exit Stage
+	
+	//Cutscene End Stage
+	case CARDINALNOCTISCONGRATS.CUTSCENE_END:
+		
+		#region Cutscene Exit
+		
+			with (obj_Camera)
+			{
+				follow = obj_Player;
+			}
+			
+			instance_destroy(obj_NPC);
+			
+			SetRoomAudio_Music_Default(music_NoctisCityTheme);
+			
+			with (obj_Player)
+			{
+				hascontrol = true;
+				global.Health = global.MaxHealth;
+			}
+			
+			global.CardinalNoctisCongrats_Cutscene_Seen = true;
+			SaveGame();
+
+		#endregion
+		
+		break;//end Cutscene End Stage
+	
 }//end Cardinal Ceremony Stage machine
 
 
