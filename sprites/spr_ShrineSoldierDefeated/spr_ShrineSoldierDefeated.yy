@@ -39,7 +39,7 @@
   "origin": 4,
   "parent": {
     "name": "ShrineSoldier",
-    "path": "folders/Sprites/Enemies/ShrineEnemies/ShrineSoldier.yy",
+    "path": "folders/Sprites/Enemies/ShrineEnemies/LightShrine/ShrineSoldier.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -17,12 +17,16 @@ switch(CarvalineOrbIntroCutscene_Stage)
 			var _text = 
 			[
 				"A strange light emerged from the structure"
-			]
-		
+			];
+			
 			//Create the text
 			if !(CarvalineOrbIntroCutscene_Start_TextCreated)
 			{
 				CutsceneText(_text, "", TEXTBOX_POS.TOP);
+				with (obj_Text)
+				{
+					TextBox_TextHeight = string_height(_text) * 1.3;
+				}
 				CarvalineOrbIntroCutscene_Start_TextCreated = true;
 			}
 			//If the text has beeen read, move on

@@ -20,7 +20,7 @@ if (event_data [? "event_type"] == "sequence event")
 				"Despite this darkness, the sisters were kind, and did good deeds for the planets inhabitants"
 			]
 			
-			CutsceneText(_text, "", TEXTBOX_POS.BOTTOM, _textFont, _textCol, blanksprite);
+			CutsceneText(_text, "", TEXTBOX_POS.BOTTOM, _textFont, _textCol, blanksprite, false);
 			
 			break;//end sisters intro
 			
@@ -36,7 +36,7 @@ if (event_data [? "event_type"] == "sequence event")
 				"''Children...my children...fear not...come in peace...for you niceness...gift to you''"
 			]
 			
-			CutsceneText(_text, "", 800, _textFont, _textCol, blanksprite);
+			CutsceneText(_text, "", 800, _textFont, _textCol, blanksprite, false);
 		
 			break;//end meet god
 			
@@ -49,7 +49,7 @@ if (event_data [? "event_type"] == "sequence event")
 				"They realized that a special power awakened within them, and decided to call it 'vallen'",
 			]
 			
-			CutsceneText(_text, "", 700, _textFont, _textCol, blanksprite);
+			CutsceneText(_text, "", 700, _textFont, _textCol, blanksprite, false);
 			
 			break;//end gained power
 			
@@ -61,7 +61,7 @@ if (event_data [? "event_type"] == "sequence event")
 				"Cardinia and Valiana decided to use their new powers to make the world a better place",
 				"The eternal dark world of Nox had found itself two new stars" 
 			]
-			CutsceneText(_text, "", 800, _textFont, _textCol, blanksprite);
+			CutsceneText(_text, "", 800, _textFont, _textCol, blanksprite, false);
 		
 			break;//end use power
 			
@@ -74,7 +74,7 @@ if (event_data [? "event_type"] == "sequence event")
 				"Eventually, the sisters had the respect of the Noxians, who viewed them as angels",
 				"Cardinia and Valiana were crowned as the Queens of Nox, and lived their lives luxuriously and happily"
 			]
-			CutsceneText(_text, "", 800, _textFont, _textCol, blanksprite);
+			CutsceneText(_text, "", 800, _textFont, _textCol, blanksprite, false);
 			
 			break;//end crowned
 			

@@ -26,7 +26,7 @@
   "origin": 7,
   "parent": {
     "name": "ShrineDummy",
-    "path": "folders/Sprites/Enemies/ShrineEnemies/ShrineDummy.yy",
+    "path": "folders/Sprites/Enemies/ShrineEnemies/LightShrine/ShrineDummy.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

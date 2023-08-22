@@ -47,7 +47,7 @@ if (global.Key_Talk)
 	}//end text done typing
 	
 	//If the text hasn't finished typing itself
-	else if (TextBox_CharCount > 1)
+	else if (TextBox_CharCount > 1) && (TextBox_TextSkippable)
 	{
 		TextBox_CharCount = string_length(TextBox_Text[TextBox_Page]);
 	}

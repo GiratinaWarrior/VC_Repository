@@ -40,8 +40,11 @@ switch (TextBox_UIPosition)
 
 //show_debug_message("TextBox_UIPosition: {0}", TextBox_UIPosition);
 
-//Draw the text box to the screen
-draw_sprite_stretched(TextBox_BoxSprite, 0, TextBox_X, TextBox_Y, TextBox_Width, TextBox_Height); 
+if (TextBox_BoxSprite != blanksprite)
+{
+	//Draw the text box to the screen
+	draw_sprite_stretched(TextBox_BoxSprite, 0, TextBox_X, TextBox_Y, TextBox_Width, TextBox_Height); 
+}
 
 //Set the text just right
 DrawSetText(TextBox_TextColor, TextBox_Font, fa_left, fa_top);

@@ -5,7 +5,7 @@
 /// @param font is the font choice of the text
 /// @param color is the color of the text
 /// @param box is the sprite of the textbox
-function CutsceneText(_text = [""], _name = "" , _pos = TEXTBOX_POS.BOTTOM, _font = ft_NPC, _color = c_black , _box = spr_TextBox){
+function CutsceneText(_text = [""], _name = "" , _pos = TEXTBOX_POS.BOTTOM, _font = ft_NPC, _color = c_black , _box = spr_TextBox, _skippable = true){
 	
 //	var _textObj = instance_create_depth(x, y, -99, obj_Text);
 	
@@ -26,6 +26,8 @@ function CutsceneText(_text = [""], _name = "" , _pos = TEXTBOX_POS.BOTTOM, _fon
 		TextBox_UIPosition = _pos;
 		
 		TextBox_Cutscene = true;
+		
+		TextBox_TextSkippable = _skippable;
 		
 	}
 	

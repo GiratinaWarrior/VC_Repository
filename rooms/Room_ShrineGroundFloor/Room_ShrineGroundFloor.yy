@@ -203,8 +203,8 @@
       ],"spriteId":{"name":"spr_ShrineBrickYellow","path":"sprites/spr_ShrineBrickYellow/spr_ShrineBrickYellow.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":3,"y":3,},
   ],
   "parent": {
-    "name": "0_ShrineIntro",
-    "path": "folders/Rooms/0_ShrineIntro.yy",
+    "name": "ShrineOutside",
+    "path": "folders/Rooms/0_ShrineIntro/ShrineOutside.yy",
   },
   "parentRoom": null,
   "physicsSettings": {

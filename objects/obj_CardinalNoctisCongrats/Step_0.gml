@@ -455,6 +455,9 @@ switch(CardinalNoctisCongrats_State)
 			}
 			
 			global.CardinalNoctisCongrats_Cutscene_Seen = true;
+			
+			global.ValnyxShrineUnderAttack_Active = true;
+			
 			SaveGame();
 
 		#endregion
