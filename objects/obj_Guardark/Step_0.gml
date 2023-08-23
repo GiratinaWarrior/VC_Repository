@@ -17,7 +17,7 @@ y += ySpeed;
 
 if (instance_exists(obj_Player))
 {
-	PlayerInRange = (abs(x - obj_Player.x) < 100 && abs(y - obj_Player.y) < 32);
+	PlayerInRange = (abs(x - obj_Player.x) < 500 && abs(y - obj_Player.y) < 32);
 }
 else
 {
@@ -43,9 +43,14 @@ switch (Guardark_State)
 	
 		image_speed = 1;
 		
+		if (xSpeed != 0)
+		{
+			Guardark_Dir = sign(xSpeed);
+		}
+		
 		if (PlayerInRange)
 		{
-			//Guardark_State = GUARDARK_STATE.SHOOT;
+			Guardark_State = GUARDARK_STATE.SHOOT;
 		}
 		
 		break;//end Guardark patrol
@@ -60,7 +65,13 @@ switch (Guardark_State)
 	//The Guardark takes damage
 	case GUARDARK_STATE.HURT:
 		
-		GuardarkState_Hurt();
+		sprite_index = spr_Guardark_Idle;
+		
+		image_speed = 0;
+		
+		xSpeed = lengthdir_x(Guardark_Speed, HitFrom);
+	
+		x += xSpeed;
 		
 		break;//end Guardark hurt
 	

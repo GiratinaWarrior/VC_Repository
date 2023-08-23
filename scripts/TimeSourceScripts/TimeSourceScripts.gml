@@ -14,7 +14,7 @@ function TimeSourceCreate(_period, _func, _args = [], _reps = 1){
 ///@param Period is how long it takes the time source to activate
 ///@param Function is the function that is called
 ///@param Arguments are the arguments for the function
-///@param Repetitions is the number of times the time source is repeated
+///@param Repetitions is the number of times the time source is repeated, default is once, -1 is infinite
 function TimeSourceCreateAndStart(_period, _func, _args = [], _reps = 1)
 {
 	var _newTimeSource = TimeSourceCreate(_period, _func, _args, _reps);
