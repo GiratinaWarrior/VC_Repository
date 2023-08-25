@@ -1,3 +1,12 @@
 target = Room_DarkShrineBasementPedestal;
-WarpX = 32;
 WarpY = 448;
+
+if (!global.DefeatedByVoizatia)
+{
+	WarpX = -32;
+	targetIsCutScene = true;
+}
+else
+{
+	WarpX = 32;
+}

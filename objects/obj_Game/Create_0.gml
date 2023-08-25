@@ -62,6 +62,7 @@ global.CardinalCongratulation_Family = false;
 global.CarvalineOrb_Cutscene_Seen = false;
 global.CardinalNoctisCongrats_Cutscene_Seen = false;
 global.ValnyxShrineUnderAttack_Active = false;
+global.DefeatedByVoizatia = false;
 
 
 //SetGlobalArray();
