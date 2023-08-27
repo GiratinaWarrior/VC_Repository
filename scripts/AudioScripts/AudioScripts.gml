@@ -96,7 +96,7 @@ function SetRoomAudio_Music_Default(_music = blanksound){
 			with (obj_PlayBGM)
 			{
 				BGM_Volume = 0.5;
-				BGM_GainRate = 100;
+				BGM_GainRate = 1000;
 			}
 		
 			break;
@@ -109,6 +109,16 @@ function SetRoomAudio_Music_Default(_music = blanksound){
 				BGM_GainRate = 0;
 			}
 			
+			break;
+			
+		case music_DarkShrineBasementTheme:
+		
+			with (obj_PlayBGM)
+			{
+				BGM_Volume = 0.2;
+				BGM_GainRate = 100;
+			}
+		
 			break;
 			
 	}

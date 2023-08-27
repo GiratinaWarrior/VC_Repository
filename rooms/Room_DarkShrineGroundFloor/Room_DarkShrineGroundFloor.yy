@@ -2,8 +2,8 @@
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
   "name": "Room_DarkShrineGroundFloor",
-  "creationCodeFile": "rooms/Room_ShrineGroundFloor/RoomCreationCode.gml",
-  "inheritCode": true,
+  "creationCodeFile": "rooms/Room_DarkShrineGroundFloor/RoomCreationCode.gml",
+  "inheritCode": false,
   "inheritCreationOrder": true,
   "inheritLayers": false,
   "instanceCreationOrder": [
@@ -82,7 +82,6 @@
     {"name":"inst_392F71DD","path":"rooms/Room_DarkShrineGroundFloor/Room_DarkShrineGroundFloor.yy",},
     {"name":"inst_C1E55A4","path":"rooms/Room_DarkShrineGroundFloor/Room_DarkShrineGroundFloor.yy",},
     {"name":"inst_ABC9FD2","path":"rooms/Room_DarkShrineGroundFloor/Room_DarkShrineGroundFloor.yy",},
-    {"name":"inst_44ED9CD3","path":"rooms/Room_DarkShrineGroundFloor/Room_DarkShrineGroundFloor.yy",},
     {"name":"RoomWarp_ShrineGroundFloor_To_ShrineArena","path":"rooms/Room_DarkShrineGroundFloor/Room_DarkShrineGroundFloor.yy",},
     {"name":"RoomWarp_DarkShrineGroundFloor_To_DarkBasement","path":"rooms/Room_DarkShrineGroundFloor/Room_DarkShrineGroundFloor.yy",},
     {"name":"RoomWarp_DarkShrineGroundFloor_To_DarkShrineMainEntrance","path":"rooms/Room_DarkShrineGroundFloor/Room_DarkShrineGroundFloor.yy",},
@@ -169,8 +168,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3E3C4FB8","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":true,"inheritedItemId":{"name":"inst_3E3C4FB8","path":"rooms/Room_ShrineGroundFloor/Room_ShrineGroundFloor.yy",},"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Wall","path":"objects/obj_Wall/obj_Wall.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1120.0,"y":128.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_392F71DD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":true,"inheritedItemId":{"name":"inst_392F71DD","path":"rooms/Room_ShrineGroundFloor/Room_ShrineGroundFloor.yy",},"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Wall","path":"objects/obj_Wall/obj_Wall.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1056.0,"y":96.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_C1E55A4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":true,"inheritedItemId":{"name":"inst_C1E55A4","path":"rooms/Room_ShrineGroundFloor/Room_ShrineGroundFloor.yy",},"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Wall","path":"objects/obj_Wall/obj_Wall.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":992.0,"y":96.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_ABC9FD2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":true,"inheritedItemId":{"name":"inst_ABC9FD2","path":"rooms/Room_ShrineGroundFloor/Room_ShrineGroundFloor.yy",},"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Wall","path":"objects/obj_Wall/obj_Wall.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":544.0,"y":320.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_44ED9CD3","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":true,"inheritedItemId":{"name":"inst_44ED9CD3","path":"rooms/Room_ShrineGroundFloor/Room_ShrineGroundFloor.yy",},"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Wall","path":"objects/obj_Wall/obj_Wall.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":3.0,"x":544.0,"y":208.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_ABC9FD2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":true,"inheritedItemId":{"name":"inst_ABC9FD2","path":"rooms/Room_ShrineGroundFloor/Room_ShrineGroundFloor.yy",},"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Wall","path":"objects/obj_Wall/obj_Wall.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":3.5,"x":544.0,"y":240.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":false,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Floor_MainDoorClosed","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":true,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":17,"SerialiseWidth":30,"TileCompressedData":[
 -90,47,-16,28,1,8,-13,47,-16,0,1,16,-13,47,-16,0,1,16,-13,47,-16,0,1,16,-13,47,-16,0,1,16,

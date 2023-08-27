@@ -2,7 +2,7 @@
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
   "name": "Room_DarkShrineBasementFloor1",
-  "creationCodeFile": "",
+  "creationCodeFile": "rooms/Room_DarkShrineBasementFloor1/RoomCreationCode.gml",
   "inheritCode": false,
   "inheritCreationOrder": false,
   "inheritLayers": false,

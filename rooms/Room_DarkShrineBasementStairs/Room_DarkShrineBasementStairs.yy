@@ -2,8 +2,8 @@
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
   "name": "Room_DarkShrineBasementStairs",
-  "creationCodeFile": "rooms/Room_ShrineBasementStairs/RoomCreationCode.gml",
-  "inheritCode": true,
+  "creationCodeFile": "rooms/Room_DarkShrineBasementStairs/RoomCreationCode.gml",
+  "inheritCode": false,
   "inheritCreationOrder": true,
   "inheritLayers": false,
   "instanceCreationOrder": [
@@ -444,7 +444,7 @@
       ],"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Player","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":true,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"RoomWarp_DarkShrineBasementStairs_To_DarkShrineBasementEntrance","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":{"name":"RoomWarp_ShrineBasementStairs_To_ShrineBasementEntrance","path":"rooms/Room_ShrineBasementStairs/Room_ShrineBasementStairs.yy",},"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_RoomWarp","path":"objects/obj_RoomWarp/obj_RoomWarp.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":2.0,"x":2016.0,"y":64.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"RoomWarp_DarkShrineBasementStairs_To_DarkShrineBasementFloor1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":true,"inheritedItemId":{"name":"inst_1400DECB","path":"rooms/Room_ShrineBasementStairs/Room_ShrineBasementStairs.yy",},"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_RoomWarp","path":"objects/obj_RoomWarp/obj_RoomWarp.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-96.0,"y":1824.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"RoomWarp_DarkShrineBasementStairs_To_DarkShrineBasementFloor1","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":{"name":"inst_1400DECB","path":"rooms/Room_ShrineBasementStairs/Room_ShrineBasementStairs.yy",},"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_RoomWarp","path":"objects/obj_RoomWarp/obj_RoomWarp.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-96.0,"y":1824.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"RoomWarp_DarkShrineBasementFloor2","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":{"name":"RoomWarp_ShrineBasementStairs_To_ShrineBasementPedestal","path":"rooms/Room_ShrineBasementStairs/Room_ShrineBasementStairs.yy",},"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_RoomWarp","path":"objects/obj_RoomWarp/obj_RoomWarp.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":3.0,"x":2016.0,"y":1760.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"RoomWarp_DarkShrineBasementStairs_To_DarkShrineBasementFloor3","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_RoomWarp","path":"objects/obj_RoomWarp/obj_RoomWarp.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1696.0,"y":1952.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
@@ -920,8 +920,8 @@
 28,1,8,-7,47,3,4,28,28,-44,-2147483648,6,16,24,0,-2147483648,-2147483648,16,-7,47,3,24,-2147483648,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"tiles_DarkShrineMainTileSet","path":"tilesets/tiles_DarkShrineMainTileSet/tiles_DarkShrineMainTileSet.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"resourceType":"GMREffectLayer","resourceVersion":"1.0","name":"Grayscale","depth":600,"effectEnabled":true,"effectType":"_filter_greyscale","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
         {"name":"g_Intensity","type":0,"value":"1",},
-      ],"userdefinedDepth":false,"visible":true,},
-    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":true,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"spr_ShrineBrickYellowBasement","path":"sprites/spr_ShrineBrickYellowBasement/spr_ShrineBrickYellowBasement.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
+      ],"userdefinedDepth":true,"visible":false,},
+    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":true,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"spr_DarkShrineBrickYellowBasement","path":"sprites/spr_DarkShrineBrickYellowBasement/spr_DarkShrineBrickYellowBasement.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
   ],
   "parent": {
     "name": "DarkBasement",
