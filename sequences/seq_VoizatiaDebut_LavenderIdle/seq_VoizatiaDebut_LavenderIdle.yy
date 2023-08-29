@@ -24,8 +24,8 @@
     "Keyframes": [],
   },
   "parent": {
-    "name": "7_VoizatiaDebut",
-    "path": "folders/Sequences/Cutscenes/OpeningAct/7_VoizatiaDebut.yy",
+    "name": "Lavender",
+    "path": "folders/Sequences/Cutscenes/OpeningAct/7_VoizatiaDebut/Lavender.yy",
   },
   "playback": 1,
   "playbackSpeed": 60.0,
@@ -70,7 +70,6 @@
             ],},"modifiers":[],"trackColour":4294104392,"tracks":[],"traits":0,},
         {"resourceType":"GMRealTrack","resourceVersion":"1.0","name":"position","builtinName":14,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<RealKeyframe>","resourceVersion":"1.0","Keyframes":[
               {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":178.0,},"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":470.0,},},"Disabled":false,"id":"e16ec70c-2f7a-4b78-8071-8c01ccfb11c4","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-              {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":470.0,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":174.0,},},"Disabled":false,"id":"6191cb9f-9ed4-49e8-8133-a84e3c1260eb","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
             ],},"modifiers":[],"trackColour":4294104392,"tracks":[],"traits":0,},
         {"resourceType":"GMRealTrack","resourceVersion":"1.0","name":"rotation","builtinName":8,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":true,"keyframes":{"resourceType":"KeyframeStore<RealKeyframe>","resourceVersion":"1.0","Keyframes":[
               {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":0.0,},},"Disabled":false,"id":"fc41aac3-a802-4f24-b339-37fa2fb466ec","IsCreationKey":true,"Key":0.0,"Length":1.0,"Stretch":false,},

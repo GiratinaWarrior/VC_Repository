@@ -28,8 +28,8 @@
     ],
   },
   "parent": {
-    "name": "Transitions",
-    "path": "folders/Sequences/Transitions.yy",
+    "name": "Fade",
+    "path": "folders/Sequences/Transitions/Fade.yy",
   },
   "playback": 0,
   "playbackSpeed": 60.0,

@@ -2,7 +2,7 @@
 
 var _VoizatiaFont = ft_Voizatia;
 
-var _MalvaliaFont = ft_Malvalia
+var _MalvaliaFont = ft_Malvalia;
 
 //Voizatia Debut Cutscene State machine
 switch(VoizatiaDebut_State)
@@ -14,6 +14,7 @@ switch(VoizatiaDebut_State)
 		
 			if !(VoizatiaDebut_RoseEnter_SequenceCreated)
 			{
+				obj_Camera.follow = noone;
 				VoizatiaDebut_RoseEnter_Sequence = layer_sequence_create(layer, 0, 0, seq_VoizatiaDebut_RoseEnter);
 				VoizatiaDebut_LavenderIdle_Sequence = layer_sequence_create(layer, 0, 0, seq_VoizatiaDebut_LavenderIdle);
 				VoizatiaDebut_VoizatiaIdle_Sequence = layer_sequence_create(layer, 0, 0, seq_VoizatiaDebut_VoizatiaIdle);
@@ -21,11 +22,13 @@ switch(VoizatiaDebut_State)
 			}
 			else if (layer_sequence_is_finished(VoizatiaDebut_RoseEnter_Sequence))
 			{
-				obj_Player.x = 256 + 960;
-				obj_Player.y = 190 + 270;
+				obj_Player.x = 256 + RES_W;
+				obj_Player.y = 464//190 + RES_H/2;
 				layer_sequence_destroy(VoizatiaDebut_RoseEnter_Sequence);
 				VoizatiaDebut_State = VOIZATIADEBUT.VOIZATIA_TALK_FIRST;
 			}
+			
+			obj_Camera.xTo = 3000;
 		
 		#endregion
 		
@@ -35,7 +38,9 @@ switch(VoizatiaDebut_State)
 	case VOIZATIADEBUT.VOIZATIA_TALK_FIRST:
 	
 		#region Voizatia Talk First
-		
+			
+			SetRoomAudio_Music_Default(music_VoizatiaEncounterTheme);
+			
 			var _text = 
 			[
 				"Intriguing. So these are the Carvaline Orbs.",
@@ -50,7 +55,7 @@ switch(VoizatiaDebut_State)
 				CutsceneText(_text, "???", TEXTBOX_POS.TOP, _VoizatiaFont);
 				VoizatiaDebut_VoizatiaTalkFirst_TalkStarted = true;
 			}
-			else if (instance_exists(obj_Text))
+			else if !(instance_exists(obj_Text))
 			{	
 				VoizatiaDebut_State = VOIZATIADEBUT.LAVENDER_RESPOND_FIRST;
 			}
@@ -105,7 +110,7 @@ switch(VoizatiaDebut_State)
 				CutsceneText(_text, "???", TEXTBOX_POS.TOP, _VoizatiaFont);
 				VoizatiaDebut_VoizatiaRespondSecond_TalkStarted = true;
 			}
-			else if (instance_exists(obj_Text))
+			else if !(instance_exists(obj_Text))
 			{	
 				VoizatiaDebut_State = VOIZATIADEBUT.VOIZATIA_FLY;
 			}
@@ -157,10 +162,6 @@ switch(VoizatiaDebut_State)
 			else if !(instance_exists(obj_Text))
 			{
 				VoizatiaDebut_State = VOIZATIADEBUT.MALVALIA_ENTER;
-			}
-			else
-			{
-				//layer_sequence_x(VoizatiaDebut_VoizatiaIdle_Sequence, layer_sequence_get_x(VoizatiaDebut_VoizatiaIdle_Sequence) + Wave(-25, 25, 3));
 			}
 		
 		#endregion
@@ -240,7 +241,213 @@ switch(VoizatiaDebut_State)
 		#endregion
 		
 		break;//end Voizatia Respond Third Stage
+
+	//Voizatia Exit Stage
+	case VOIZATIADEBUT.VOIZATIA_EXIT:
 		
+		#region Voizatia Exit
+			
+			if !(VoizatiaDebut_VoizatiaExit_SequenceCreated) && (VoizatiaDebut_VoizatiaExit_FloatEnd)
+			{
+				layer_sequence_destroy(VoizatiaDebut_VoizatiaIdle_Sequence);
+				VoizatiaDebut_VoizatiaExit_Sequence = layer_sequence_create(layer, 0, 0, seq_VoizatiaDebut_VoizatiaExit);
+				VoizatiaDebut_VoizatiaExit_SequenceCreated = true;
+			}
+			else if (layer_sequence_is_finished(VoizatiaDebut_VoizatiaExit_Sequence))
+			{
+				layer_sequence_destroy(VoizatiaDebut_VoizatiaExit_Sequence);
+				VoizatiaDebut_State = VOIZATIADEBUT.LAVENDER_MOVE;
+			}
+			
+		#endregion
+		
+		break;//end Voizatia Exit Stage
+	
+	//Lavender Move Stage
+	case VOIZATIADEBUT.LAVENDER_MOVE:
+	
+		#region Lavender Move
+		
+			if !(VoizatiaDebut_LavenderMove_SequenceCreated)
+			{
+				layer_sequence_destroy(VoizatiaDebut_LavenderIdle_Sequence);
+				VoizatiaDebut_LavenderMove_Sequence = layer_sequence_create(layer, 0, 0, seq_VoizatiaDebut_LavenderMove);
+				VoizatiaDebut_LavenderMove_SequenceCreated = true;
+			}
+			else if (layer_sequence_is_finished(VoizatiaDebut_LavenderMove_Sequence))
+			{
+				layer_sequence_destroy(VoizatiaDebut_LavenderMove_Sequence);
+				VoizatiaDebut_LavenderIdle_Sequence = layer_sequence_create(layer, 0, 0, seq_VoizatiaDebut_LavenderIdleMoved);
+			}
+			
+		#endregion
+	
+		break;//end Lavender Move Stage
+	
+	//Lavender Exit Talk Stage
+	case VOIZATIADEBUT.LAVENDER_EXIT_TALK:
+	
+		#region Lavender Exit Talk
+		
+			var _text = 
+			[
+				"Rose-darling, listen to me carefully",
+				"That Malvalia is stronger than she appears. Do not let your guard down for a second",
+				"And above all else, do not fight Voizatia, you will not win",
+				"Have faith in your old little mother"
+			];
+		
+			if !(VoizatiaDebut_LavenderExitTalk_TalkStarted)
+			{
+				CutsceneText(_text, "Lavender", TEXTBOX_POS.TOP, ft_Silver);
+				VoizatiaDebut_LavenderExitTalk_TalkStarted = true;
+			}
+			else if !(instance_exists(obj_Text))
+			{
+				VoizatiaDebut_State = VOIZATIADEBUT.LAVENDER_EXIT;
+			}
+		
+		#endregion
+	
+		break;//end Lavender Exit Talk Stage
+		
+	//Lavender Exit Stage
+	case VOIZATIADEBUT.LAVENDER_EXIT:
+		
+		#region Lavender Exit
+		
+			if !(VoizatiaDebut_LavenderExit_SequenceCreated)
+			{
+				layer_sequence_destroy(VoizatiaDebut_LavenderIdle_Sequence);
+				VoizatiaDebut_LavenderExit_Sequence = layer_sequence_create(layer, 0, 0, seq_VoizatiaDebut_LavenderExit);
+				VoizatiaDebut_LavenderExit_SequenceCreated = true;
+			}
+			else if (layer_sequence_is_finished(VoizatiaDebut_LavenderExit_Sequence))
+			{
+				layer_sequence_destroy(VoizatiaDebut_LavenderExit_Sequence);
+				VoizatiaDebut_State = VOIZATIADEBUT.MALVALIA_CHALLENGE;
+			}
+		
+		#endregion
+		
+		break;//end Lavender Exit Stage
+		
+	//Malvalia Challenge Stage
+	case VOIZATIADEBUT.MALVALIA_CHALLENGE:
+		
+		#region Malvalia Challenge
+			
+			var _text = 
+			[
+				"Hahahhahaaaaaaa",
+				"You're seriously wanna do this? I'll let ya go if you get on your knees by yourself, how about it my little doll?",
+				"...",
+				"Tch, alright then, you asked for it",
+				"COME FORTH! SHADOW REALM GATE!"
+			];
+		
+			if !(VoizatiaDebut_MalvaliaChallenge_TalkStarted)
+			{
+				CutsceneText(_text, "Malvalia", TEXTBOX_POS.TOP, _MalvaliaFont);
+				VoizatiaDebut_MalvaliaChallenge_TalkStarted = true;
+			}
+			else if !(instance_exists(obj_Text))
+			{
+				VoizatiaDebut_State = VOIZATIADEBUT.MALVALIA_SUMMON_SHADOWS;
+			}
+		
+		#endregion
+		
+		break;//end Malvalia Challenge Stage
+	
+	//Malvalia Summon Shadows Stage
+	case VOIZATIADEBUT.MALVALIA_SUMMON_SHADOWS:
+	
+		#region Malvalia Summon Shadows
+			
+			if !(VoizatiaDebut_MalvaliaSummonShadows_GateCreated)
+			{
+				VoizatiaDebut_MalvaliaSummonShadows_Gate = part_system_create(ps_MalvaliaShadowRealmGate);
+				part_system_position(VoizatiaDebut_MalvaliaSummonShadows_Gate, 1296, 448);
+				
+				VoizatiaDebut_MalvaliaSummonShadows_GateCreated = true;
+			}
+			else if (VoizatiaDebut_MalvaliaSummonShadows_Timer++ > VoizatiaDebut_MalvaliaSummonShadows_TimerLimit)
+			{
+				VoizatiaDebut_State = VOIZATIADEBUT.MALVALIA_EXIT_TALK
+			}
+			
+		#endregion
+	
+		break;//end Malvalia Summon Shadows Stage
+	
+	//Malvalia Exit Talk Stage
+	case VOIZATIADEBUT.MALVALIA_EXIT_TALK:
+		
+		#region Malvalia Exit Talk
+		
+			var _text = 
+			[
+				"This shabby place is a gross place to fight, I don't want dirt in my hair, so we'll fight somewhere else",
+				"In my world, the Shadow Realm",
+				"Follow me, my little doll..."
+			];
+		
+			if !(VoizatiaDebut_MalvaliaExitTalk_TalkStarted)
+			{
+				CutsceneText(_text, "Malvalia", TEXTBOX_POS.TOP, _MalvaliaFont);
+				VoizatiaDebut_MalvaliaExitTalk_TalkStarted = true;
+			} 
+			else if !(instance_exists(obj_Text))
+			{
+				VoizatiaDebut_State = VOIZATIADEBUT.MALVALIA_EXIT;
+			}
+		
+		#endregion
+		
+		break;//end Malvalia Exit Talk Stage
+	
+	//Malvalia Exit Stage
+	case VOIZATIADEBUT.MALVALIA_EXIT:
+	
+		#region Malvalia Exit
+		
+			if !(VoizatiaDebut_MalvaliaExit_SequenceCreated) && (VoizatiaDebut_MalvaliaExit_FloatEnd)
+			{
+				VoizatiaDebut_MalvaliaExit_Sequence = layer_sequence_create(layer, 0, 0, seq_VoizatiaDebut_MalvaliaExit);
+				VoizatiaDebut_MalvaliaExit_SequenceCreated = true;
+			}
+			else if (layer_sequence_is_finished(VoizatiaDebut_MalvaliaExit_Sequence))
+			{
+				layer_sequence_destroy(VoizatiaDebut_MalvaliaExit_Sequence);
+				VoizatiaDebut_State = VOIZATIADEBUT.CUTSCENE_END;
+			}
+		
+		#endregion
+		
+		break;//end Malvalia Exit Stage
+	
+	//Cutscene End Stage
+	case VOIZATIADEBUT.CUTSCENE_END:
+	
+		#region Cutscene End 
+			
+			global.VoizatiaDebuted = true;
+			
+			obj_Player.hascontrol = true;
+			
+			obj_Camera.follow = obj_Player;
+			
+			SetSpawnpoint();
+			
+			SaveGame();
+			
+			instance_destroy();
+			
+		#endregion
+	
+		break;//end Cutscene End Stage
+	
 }//end Voizatia Debut State Machine
 
 

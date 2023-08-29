@@ -2,32 +2,32 @@
 
 #region Movement
 
-ySpeed += Gravity;
+	ySpeed += Gravity;
 
-Wall_FallOn();
-Wall_LedgeTurn();
-Wall_SwitchRun();
+	Wall_FallOn();
+	Wall_LedgeTurn();
+	Wall_SwitchRun();
 
-x += xSpeed;
-y += ySpeed;
+	x += xSpeed;
+	y += ySpeed;
 
 #endregion
 
 #region State Transition
 
-if (instance_exists(obj_Player))
-{
-	PlayerInRange = (abs(x - obj_Player.x) < 500 && abs(y - obj_Player.y) < 32);
-}
-else
-{
-	PlayerInRange = false;
-}
+	if (instance_exists(obj_Player))
+	{
+		PlayerInRange = (abs(x - obj_Player.x) < 500 && abs(y - obj_Player.y) < 32);
+	}
+	else
+	{
+		PlayerInRange = false;
+	}
 
-if (Attacked)
-{
-	Guardark_State = GUARDARK_STATE.HURT;
-}
+	if (Attacked)
+	{
+		Guardark_State = GUARDARK_STATE.HURT;
+	}
 
 #endregion
 

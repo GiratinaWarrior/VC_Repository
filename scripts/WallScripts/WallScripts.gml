@@ -74,3 +74,21 @@ function Wall_SwitchRun(){
 
 }
 
+// @description Wall_BounceOn()
+// When an entity is about to fly into a wall, change directions vertically
+function Wall_BounceOn()
+{
+	//If the entity will fly into a  wall next step
+	if (place_meeting(x, y + ySpeed, obj_Wall)){
+	
+		//If the entity will not touch a wall next step, move them by one pixel
+		while(!place_meeting(x, y + sign(ySpeed), obj_Wall))
+		{
+			y += sign(ySpeed);
+		}
+
+		//If the entity will touch a wall next step, switch direction horizontally
+		ySpeed *=- 1;
+
+	}
+}

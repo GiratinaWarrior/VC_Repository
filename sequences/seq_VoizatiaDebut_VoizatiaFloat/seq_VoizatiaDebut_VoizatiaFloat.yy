@@ -12,7 +12,17 @@
   "events": {
     "resourceType": "KeyframeStore<MessageEventKeyframe>",
     "resourceVersion": "1.0",
-    "Keyframes": [],
+    "Keyframes": [
+      {"resourceType":"Keyframe<MessageEventKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"MessageEventKeyframe","resourceVersion":"1.0","Events":[
+              "VoizatiaDebut_FloatEnd",
+            ],},},"Disabled":false,"id":"3f44a2f4-523b-413a-bfb3-bf85dbf630e2","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+      {"resourceType":"Keyframe<MessageEventKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"MessageEventKeyframe","resourceVersion":"1.0","Events":[
+              "VoizatiaDebut_FloatEnd",
+            ],},},"Disabled":false,"id":"8cce6481-fdf8-44bf-a0dc-37b851c9f002","IsCreationKey":false,"Key":72.0,"Length":1.0,"Stretch":false,},
+      {"resourceType":"Keyframe<MessageEventKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"MessageEventKeyframe","resourceVersion":"1.0","Events":[
+              "VoizatiaDebut_FloatEnd",
+            ],},},"Disabled":false,"id":"57a50e4c-ec03-4a61-be32-e0b7de7a5031","IsCreationKey":false,"Key":143.9999,"Length":1.0,"Stretch":false,},
+    ],
   },
   "eventStubScript": null,
   "eventToFunction": {},
@@ -24,8 +34,8 @@
     "Keyframes": [],
   },
   "parent": {
-    "name": "7_VoizatiaDebut",
-    "path": "folders/Sequences/Cutscenes/OpeningAct/7_VoizatiaDebut.yy",
+    "name": "Voizatia",
+    "path": "folders/Sequences/Cutscenes/OpeningAct/7_VoizatiaDebut/Voizatia.yy",
   },
   "playback": 1,
   "playbackSpeed": 60.0,
@@ -57,7 +67,7 @@
                             {"th0":-0.05,"th1":0.04999986,"tv0":0.0,"tv1":0.0,"x":0.7421447,"y":144.77193,},
                             {"th0":-0.04999986,"th1":0.0,"tv0":0.0,"tv1":0.0,"x":0.9999993,"y":150.0,},
                           ],"visible":true,},
-                      ],"function":1,},"RealValue":0.0,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":{"resourceType":"GMAnimCurve","resourceVersion":"1.2","name":"Position","channels":[
+                      ],"function":1,},"RealValue":0.0,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":{"resourceType":"GMAnimCurve","resourceVersion":"1.2","name":"","channels":[
                         {"resourceType":"GMAnimCurveChannel","resourceVersion":"1.0","name":"x","colour":4290799884,"points":[
                             {"th0":0.0,"th1":0.05,"tv0":0.0,"tv1":0.0,"x":0.0,"y":610.0,},
                             {"th0":-0.05,"th1":0.05,"tv0":0.0,"tv1":0.0,"x":0.25,"y":610.0,},

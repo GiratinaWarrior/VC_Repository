@@ -115,10 +115,20 @@ function SetRoomAudio_Music_Default(_music = blanksound){
 		
 			with (obj_PlayBGM)
 			{
-				BGM_Volume = 0.2;
+				BGM_Volume = 0.3;
 				BGM_GainRate = 100;
 			}
 		
+			break;
+			
+		case music_VoizatiaEncounterTheme:
+		
+			with (obj_PlayBGM)
+			{
+				BGM_Volume = 0.7;
+				BGM_GainRate = 100;
+			}
+			
 			break;
 			
 	}
