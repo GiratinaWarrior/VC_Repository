@@ -11,5 +11,8 @@ function MalvaliaBossBattle_Teleport()
 
 function MalvaliaBossBattle_BlackGeyser(_x, _y)
 {
-	show_debug_message("GEYSER")
+	
+	instance_create_layer(_x, room_height, "Black_Geyser", obj_BlackGeyser);
+	
+	//show_debug_message("GEYSER");
 }

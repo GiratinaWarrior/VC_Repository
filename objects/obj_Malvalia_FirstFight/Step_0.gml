@@ -16,6 +16,8 @@ switch(Malvalia_FirstFight_CurrentState)
 		
 		#region Idle
 			
+			sprite_index = spr_Malvalia_Fly;
+			
 			//After the teleport timer is finished, change to the teleport state
 			if  (Malvalia_FirstFight_Teleport_Timer++ > Malvalia_FirstFight_Teleport_TimerLimit)
 			{
@@ -26,7 +28,8 @@ switch(Malvalia_FirstFight_CurrentState)
 			//If the attack state timer is finished, change to an attacking state
 			else if (Malvalia_FirstFight_Idle_StateChangeTimer++ > Malvalia_FirstFight_Idle_StateChangeTimerLimit)
 			{
-				Malvalia_FirstFight_CurrentState = MALVALIA_FIRSTFIGHT_STATE.BLACK_GEYSER;
+				Malvalia_FirstFight_Idle_StateChangeTimer = 0; 
+				Malvalia_FirstFight_CurrentState = Malvalia_FirstFight_NextState;
 			}
 			
 			
@@ -95,17 +98,25 @@ switch(Malvalia_FirstFight_CurrentState)
 					{
 						
 						//Create a Black Geyser Conjurer
-						var _createBlackGeyserX = irandom_range(128, 832);
+						var _createBlackGeyserX = obj_Player.x + floor(random_range(1, -1) * 128)// irandom_range(128, 832);
 						var _createBlackGeyserY = 476;
 						Malvalia_FirstFight_BlackGeyser_ConjureParticle = CreateParticleSystem(ps_Malvalia_BlackGeyser_Charge, "Black_Geyser", _createBlackGeyserX, _createBlackGeyserY, false);
 						
 						//Create a Black Geyser
-						TimeSourceCreateAndStart(60, MalvaliaBossBattle_BlackGeyser, [_createBlackGeyserX, _createBlackGeyserY], 1);
+						TimeSourceCreateAndStart(Malvalia_FirstFight_BlackGeyser_ConjureTime, MalvaliaBossBattle_BlackGeyser, [_createBlackGeyserX, _createBlackGeyserY], 1);
 						
 						Malvalia_FirstFight_BlackGeyser_CreateTimer = 0;
 					}
 				
 				}//end state not finished
+				
+				//If its time to stop summoning Black Geysers
+				else
+				{
+					Malvalia_FirstFight_CurrentState = MALVALIA_FIRSTFIGHT_STATE.IDLE;
+					Malvalia_FirstFight_BlackGeyser_StateTimer = 0;
+					Malvalia_FirstFight_BlackGeyser_CreateTimer = 0;
+				}
 				
 			}//end current sprite attacking
 		

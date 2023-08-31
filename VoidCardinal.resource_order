@@ -244,6 +244,8 @@
     {"name":"Malvalia","order":3,"path":"folders/Particle Systems/Attacks/Malvalia.yy",},
     {"name":"MalvaliaSprites","order":4,"path":"folders/Sprites/Bosses/Malvalia/MalvaliaSprites.yy",},
     {"name":"BlackGeyser","order":5,"path":"folders/Sprites/Bosses/Malvalia/BlackGeyser.yy",},
+    {"name":"BlackGeyser","order":2,"path":"folders/Objects/Enemies/Bosses/Malvalia_DarkShrine/BlackGeyser.yy",},
+    {"name":"Malvalia","order":2,"path":"folders/Sounds/Sound Effects/Enemy/EnemyAttacks/Boss/Malvalia.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"Room_DarkShrineBasementFloor3","order":4,"path":"rooms/Room_DarkShrineBasementFloor3/Room_DarkShrineBasementFloor3.yy",},

@@ -34,9 +34,10 @@ Malvalia_FirstFight_BlackGeyser_StateTimerLimit = 1000;
 //Variable the holds the geyser warning particles
 Malvalia_FirstFight_BlackGeyser_ConjureParticle = noone;
 
-
+//How long it takes for a Black Geyser to be created after the warning
+Malvalia_FirstFight_BlackGeyser_ConjureTime = 60;
 
 //Timer for the interval between when the Black Geysers are summoned
-Malvalia_FirstFight_BlackGeyser_CreateTimerLimit = 100;
+Malvalia_FirstFight_BlackGeyser_CreateTimerLimit = 80;
 Malvalia_FirstFight_BlackGeyser_CreateTimer = Malvalia_FirstFight_BlackGeyser_CreateTimerLimit;
 
