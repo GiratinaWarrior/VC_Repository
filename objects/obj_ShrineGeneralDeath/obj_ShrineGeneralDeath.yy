@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "PhaseOne",
-    "path": "folders/Objects/Enemies/Bosses/ShrineGeneral/PhaseOne.yy",
+    "name": "ShrineGeneral",
+    "path": "folders/Objects/Enemies/Bosses/ShrineGeneral.yy",
   },
   "parentObjectId": null,
   "persistent": false,

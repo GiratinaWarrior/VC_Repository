@@ -4,7 +4,9 @@
   "name": "parent_BossEnemy",
   "eventList": [],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_Enemy","path":"objects/parent_Enemy/parent_Enemy.yy",},"propertyId":{"name":"Health","path":"objects/parent_Enemy/parent_Enemy.yy",},"value":"100",},
+  ],
   "parent": {
     "name": "Parents",
     "path": "folders/Objects/Enemies/Parents.yy",

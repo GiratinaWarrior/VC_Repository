@@ -105,7 +105,7 @@ switch(CardinalFamilyCongrats_Stage)
 		//If Lavender hasn't started talking, TALK
 		if (!CardinalFamilyCongrats_ExitTalkStarted)
 		{
-			CutsceneText(_text, "Lavender", TEXTBOX_POS.TOP);
+			CutsceneText(_text, "Lavender", TEXTBOX_POS.TOP, ft_Silver);
 			layer_sprite_x(CardinalFamilyCongrats_TalkLavenderSprite, x);
 			layer_sprite_y(CardinalFamilyCongrats_TalkLavenderSprite, y + 176);
 			layer_sprite_xscale(CardinalFamilyCongrats_TalkLavenderSprite, -1);

@@ -39,7 +39,7 @@ if (image_speed == 0)
 				//Tell the game that the Shrine General has been defeated
 				global.ShrineGeneral_Defeated = true;
 				
-				SetRoomAudio_Music(music_ShrinePeacefulTheme);
+				SetRoomAudio_Music_Default(music_ShrinePeacefulTheme);
 				
 				SaveGame();
 			

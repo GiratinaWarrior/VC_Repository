@@ -43,7 +43,7 @@ switch(CarvalineOrbIntroCutscene_Stage)
 	case CARVALINEORBINTROCUTSCENE.START_STORY:
 		
 		#region Start Story
-		
+			
 			with (obj_Player)
 			{
 				hascontrol = false;
@@ -72,7 +72,16 @@ switch(CarvalineOrbIntroCutscene_Stage)
 	case CARVALINEORBINTROCUTSCENE.STORY:
 	
 		#region Story
-	
+			
+			//Set the players position to the right one
+			with (obj_Player)
+			{
+				x = 1504;
+				y = 448;
+				image_xscale = 1;
+				hascontrol = false;
+			}
+			
 			//Turn on the music
 			SetRoomAudio_Music(music_StoryCutsceneTheme, 0.5, 0);
 		

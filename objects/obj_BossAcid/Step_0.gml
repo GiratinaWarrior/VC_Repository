@@ -4,7 +4,7 @@
 with (obj_Player)
 {
 	//Check if the player is in water
-	if (FreeState == FREE.WATER)
+	if (PlayerNeutralState == PLAYERSPRITE_NEUTRAL.SWIM_H || PlayerNeutralState == PLAYERSPRITE_NEUTRAL.SWIM_V)
 	{
 		//Lets make the poison bubbles
 		var PoisonCloud = part_system_create(ps_PoisonDamage);

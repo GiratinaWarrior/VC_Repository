@@ -89,6 +89,7 @@ function EntityTextBox()
 							other.NameInserted = true;
 						}
 						TextBox_UIPosition = other.TextBox_UIPosition;
+						TextBox_Font = other.TextBox_Font;
 					}//end access myTextbox
 				
 				

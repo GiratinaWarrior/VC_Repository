@@ -15,7 +15,7 @@ switch(VoizatiaDebut_State)
 			if !(VoizatiaDebut_RoseEnter_SequenceCreated)
 			{
 				obj_Camera.follow = noone;
-				VoizatiaDebut_RoseEnter_Sequence = layer_sequence_create(layer, 0, 0, seq_VoizatiaDebut_RoseEnter);
+				VoizatiaDebut_RoseEnter_Sequence = layer_sequence_create(layer, 0, 4, seq_VoizatiaDebut_RoseEnter);
 				VoizatiaDebut_LavenderIdle_Sequence = layer_sequence_create(layer, 0, 0, seq_VoizatiaDebut_LavenderIdle);
 				VoizatiaDebut_VoizatiaIdle_Sequence = layer_sequence_create(layer, 0, 0, seq_VoizatiaDebut_VoizatiaIdle);
 				VoizatiaDebut_RoseEnter_SequenceCreated = true;
@@ -134,6 +134,7 @@ switch(VoizatiaDebut_State)
 			else if (layer_sequence_is_finished(VoizatiaDebut_VoizatiaFly_Sequence))
 			{
 				layer_sequence_destroy(VoizatiaDebut_VoizatiaFly_Sequence);
+				VoizatiaDebut_VoizatiaIdle_Sequence = layer_sequence_create(layer, 0, 0, seq_VoizatiaDebut_VoizatiaFloat);
 				VoizatiaDebut_State = VOIZATIADEBUT.VOIZATIA_SUMMON_MALVALIA;
 			}
 			
@@ -156,7 +157,7 @@ switch(VoizatiaDebut_State)
 			if !(VoizatiaDebut_VoizatiaSummonMalvalia_TalkStarted)
 			{
 				CutsceneText(_text, "Voizatia", TEXTBOX_POS.TOP, _VoizatiaFont);
-				VoizatiaDebut_VoizatiaIdle_Sequence = layer_sequence_create(layer, 0, 0, seq_VoizatiaDebut_VoizatiaFloat);
+				
 				VoizatiaDebut_VoizatiaSummonMalvalia_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))
@@ -278,6 +279,7 @@ switch(VoizatiaDebut_State)
 			{
 				layer_sequence_destroy(VoizatiaDebut_LavenderMove_Sequence);
 				VoizatiaDebut_LavenderIdle_Sequence = layer_sequence_create(layer, 0, 0, seq_VoizatiaDebut_LavenderIdleMoved);
+				VoizatiaDebut_State = VOIZATIADEBUT.LAVENDER_EXIT_TALK;
 			}
 			
 		#endregion
@@ -340,7 +342,7 @@ switch(VoizatiaDebut_State)
 			var _text = 
 			[
 				"Hahahhahaaaaaaa",
-				"You're seriously wanna do this? I'll let ya go if you get on your knees by yourself, how about it my little doll?",
+				"You seriously wanna do this? I'll let ya go if you get on your knees by yourself, how about it my little doll?",
 				"...",
 				"Tch, alright then, you asked for it",
 				"COME FORTH! SHADOW REALM GATE!"
@@ -367,14 +369,20 @@ switch(VoizatiaDebut_State)
 			
 			if !(VoizatiaDebut_MalvaliaSummonShadows_GateCreated)
 			{
-				VoizatiaDebut_MalvaliaSummonShadows_Gate = part_system_create(ps_MalvaliaShadowRealmGate);
-				part_system_position(VoizatiaDebut_MalvaliaSummonShadows_Gate, 1296, 448);
-				
+				layer_set_visible("ShadowPortalCutscene", true);
+				VoizatiaDebut_MalvaliaSummonShadows_Gate = layer_sprite_create("ShadowPortalCutscene", 1294, 480, spr_MalvaliaShadowRealmGate);
+				layer_sprite_alpha(VoizatiaDebut_MalvaliaSummonShadows_Gate, 0);
 				VoizatiaDebut_MalvaliaSummonShadows_GateCreated = true;
 			}
-			else if (VoizatiaDebut_MalvaliaSummonShadows_Timer++ > VoizatiaDebut_MalvaliaSummonShadows_TimerLimit)
+			else if (VoizatiaDebut_MalvaliaSummonShadows_GateAlpha > 1)
 			{
-				VoizatiaDebut_State = VOIZATIADEBUT.MALVALIA_EXIT_TALK
+				VoizatiaDebut_State = VOIZATIADEBUT.MALVALIA_EXIT_TALK;
+				layer_sprite_alpha(VoizatiaDebut_MalvaliaSummonShadows_Gate, 1);
+			}
+			else
+			{
+				layer_sprite_alpha(VoizatiaDebut_MalvaliaSummonShadows_Gate, VoizatiaDebut_MalvaliaSummonShadows_GateAlpha);
+				VoizatiaDebut_MalvaliaSummonShadows_GateAlpha+=0.01;
 			}
 			
 		#endregion
@@ -414,6 +422,7 @@ switch(VoizatiaDebut_State)
 		
 			if !(VoizatiaDebut_MalvaliaExit_SequenceCreated) && (VoizatiaDebut_MalvaliaExit_FloatEnd)
 			{
+				layer_sequence_destroy(VoizatiaDebut_MalvaliaIdle_Sequence);
 				VoizatiaDebut_MalvaliaExit_Sequence = layer_sequence_create(layer, 0, 0, seq_VoizatiaDebut_MalvaliaExit);
 				VoizatiaDebut_MalvaliaExit_SequenceCreated = true;
 			}
@@ -438,7 +447,9 @@ switch(VoizatiaDebut_State)
 			
 			obj_Camera.follow = obj_Player;
 			
-			SetSpawnpoint();
+			SetRoomAudio_Music_Default(music_DarkShrineBasementTheme);
+			
+			SetSpawnpoint(256 + 960, 190 + 270, Room_DarkShrineBasementPedestal);
 			
 			SaveGame();
 			

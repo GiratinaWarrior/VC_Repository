@@ -8,3 +8,5 @@ TextBox_Text[0] = "";
 TextBox_PageNumber = 0;
 
 TextBox_UIPosition = TEXTBOX_POS.BOTTOM;
+
+TextBox_Font = ft_NPC;

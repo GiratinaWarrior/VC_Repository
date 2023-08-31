@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "music_NightfallKnightTheme.mp3",
   "type": 0,
-  "volume": 0.03,
+  "volume": 0.1,
 }

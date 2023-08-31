@@ -1,4 +1,6 @@
 
+TextBox_Font = ft_Silver;
+
 TextBox_Text = 
 [
 	"Dear Rose-darling", 

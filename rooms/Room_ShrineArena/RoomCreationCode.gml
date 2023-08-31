@@ -20,7 +20,7 @@ else if (global.ShrineGeneral_Defeated)
 		instance_destroy(obj_ShrineArenaBossIntroCutscene);
 	}
 	
-	SetRoomAudio_Music(music_ShrinePeacefulTheme, 0.5);
+	SetRoomAudio_Music_Default(music_ShrinePeacefulTheme);
 	with (obj_Camera)
 	{
 		follow = obj_Player;

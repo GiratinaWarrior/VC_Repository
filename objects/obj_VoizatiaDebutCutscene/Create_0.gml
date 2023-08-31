@@ -80,8 +80,9 @@ VoizatiaDebut_MalvaliaChallenge_TalkStarted = false;
 //----------Malvalia Summon Shadows Stage------//
 VoizatiaDebut_MalvaliaSummonShadows_Gate = noone;
 VoizatiaDebut_MalvaliaSummonShadows_GateCreated = false;
-VoizatiaDebut_MalvaliaSummonShadows_Timer = 0;
-VoizatiaDebut_MalvaliaSummonShadows_TimerLimit = 50;
+VoizatiaDebut_MalvaliaSummonShadows_GateAlpha = 0;
+//VoizatiaDebut_MalvaliaSummonShadows_Timer = 0;
+//VoizatiaDebut_MalvaliaSummonShadows_TimerLimit = 50;
 
 //----------Malvalia Exit Talk Stage-----------//
 VoizatiaDebut_MalvaliaExitTalk_TalkStarted = false;

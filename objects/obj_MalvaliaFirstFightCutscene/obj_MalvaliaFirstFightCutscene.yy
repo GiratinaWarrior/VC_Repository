@@ -1,15 +1,16 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_Malvalia_Intro",
+  "name": "obj_MalvaliaFirstFightCutscene",
   "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Malvalia_DarkShrine",
-    "path": "folders/Objects/Enemies/Bosses/Malvalia_DarkShrine.yy",
+    "name": "8_MalvaliaFirstFight",
+    "path": "folders/Objects/Cutscenes/Opening/8_MalvaliaFirstFight.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -27,10 +28,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_Malvalia_Fly",
-    "path": "sprites/spr_Malvalia_Fly/spr_Malvalia_Fly.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

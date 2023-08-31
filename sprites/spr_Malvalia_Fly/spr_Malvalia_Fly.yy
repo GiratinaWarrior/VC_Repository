@@ -3,10 +3,10 @@
   "resourceVersion": "1.0",
   "name": "spr_Malvalia_Fly",
   "bbox_bottom": 39,
-  "bbox_left": 5,
+  "bbox_left": 0,
   "bbox_right": 39,
   "bbox_top": 0,
-  "bboxMode": 0,
+  "bboxMode": 1,
   "collisionKind": 1,
   "collisionTolerance": 0,
   "DynamicTexturePage": false,
@@ -30,8 +30,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Malvalia",
-    "path": "folders/Sprites/NPC's/0_Story/Malvalia.yy",
+    "name": "MalvaliaSprites",
+    "path": "folders/Sprites/Bosses/Malvalia/MalvaliaSprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

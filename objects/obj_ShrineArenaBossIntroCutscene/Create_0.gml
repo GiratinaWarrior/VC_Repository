@@ -12,7 +12,8 @@ else
 	with (obj_Camera)
 	{
 		follow = noone;
-		x = 1280;
+		xTo = -1280;
+		x = -1280;
 	}
 
 	ShrineArena_DoorsCreated = false;
