@@ -26,8 +26,8 @@
     "resourceVersion": "1.0",
     "Keyframes": [
       {"resourceType":"Keyframe<MomentsEventKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"MomentsEventKeyframe","resourceVersion":"1.0","Events":[
-              "MalvaliaBossBattle_Teleport",
-            ],},},"Disabled":false,"id":"b273dcf9-09ea-4c6b-b375-4fd8ce2e15a5","IsCreationKey":false,"Key":60.0,"Length":1.0,"Stretch":false,},
+              "SequenceFunction_MalvaliaBossBattle_Teleport",
+            ],},},"Disabled":false,"id":"b57a8a97-d62a-4845-83b1-35f3e1ce5cfe","IsCreationKey":false,"Key":60.0,"Length":1.0,"Stretch":false,},
     ],
   },
   "parent": {

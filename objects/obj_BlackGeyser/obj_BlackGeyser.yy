@@ -8,13 +8,13 @@
   ],
   "managed": true,
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_EnemyAttack","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"propertyId":{"name":"Damage","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"value":"0.2",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_EnemyAttack","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"propertyId":{"name":"Damage","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"value":"0.3",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_EnemyAttack","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"propertyId":{"name":"FlinchPower","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"value":"1",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_EnemyAttack","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"propertyId":{"name":"InvincPower","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"value":"2",},
   ],
   "parent": {
-    "name": "BlackGeyser",
-    "path": "folders/Objects/Enemies/Bosses/Malvalia_DarkShrine/BlackGeyser.yy",
+    "name": "Attacks",
+    "path": "folders/Objects/Enemies/Bosses/Malvalia_DarkShrine/Attacks.yy",
   },
   "parentObjectId": {
     "name": "parent_EnemyAttack",

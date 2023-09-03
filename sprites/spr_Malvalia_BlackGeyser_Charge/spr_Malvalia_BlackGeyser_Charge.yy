@@ -34,8 +34,8 @@
   "nineSlice": null,
   "origin": 9,
   "parent": {
-    "name": "MalvaliaSprites",
-    "path": "folders/Sprites/Bosses/Malvalia/MalvaliaSprites.yy",
+    "name": "BlackGeyser",
+    "path": "folders/Sprites/Bosses/Malvalia/BlackGeyser.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

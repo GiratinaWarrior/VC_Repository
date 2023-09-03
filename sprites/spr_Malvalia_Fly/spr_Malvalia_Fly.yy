@@ -30,8 +30,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "MalvaliaSprites",
-    "path": "folders/Sprites/Bosses/Malvalia/MalvaliaSprites.yy",
+    "name": "Default",
+    "path": "folders/Sprites/Bosses/Malvalia/Default.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
