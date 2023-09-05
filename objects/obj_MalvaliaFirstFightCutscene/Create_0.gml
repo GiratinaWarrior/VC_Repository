@@ -10,10 +10,8 @@ enum MALVALIAFIRSTFIGHTCUTSCENE
 	BATTLE_START, //set up the battle
 	IN_BATTLE, //while the battle is happening
 	MALVALIA_DEFEATED_TALK, //Malvalia is shocked at her defeat
-	SHADOW_REALM_GATE, //Malvalia summons a gate to the normal world
-	MALVALIA_DISMISS, //Malvalia tells Rose to hurry up and get lost already
-	MALVALIA_EXIT, //Malvalia fades into the Shadow realm
-	CUTSCENE_END //Rose leaves through the exit
+	MALVALIA_EXIT, //Malvalia fades away
+	SHADOW_REALM_COLLAPSE, //The shadow realm collapses, Returning Rose to the Dark Shrine Pedestal
 }
 
 //------------Malvalia Enter Stage-------------//
@@ -30,18 +28,11 @@ MalvaliaFirstFightCutscene_BattleStart_MalvaliaCreated = false;
 //------------Malvalia Defeated Talk Stage-----//
 MalvaliaFirstFightCutscene_MalvaliaDefeatedTalk_TalkStarted = false;
 
-//------------Shadow Realm Gate Stage----------//
-MalvaliaFirstFightCutscene_ShadowRealmGate_Gate = noone;
-MalvaliaFirstFightCutscene_ShadowRealmGate_GateAlpha = 0;
-MalvaliaFirstFightCutscene_ShadowRealmGate_GateCreated = false;
-
 //------------Malvalia Exit Stage--------------//
 MalvaliaFirstFightCutscene_MalvaliaExit_Sequence = noone;
 MalvaliaFirstFightCutscene_MalvaliaExit_SequenceCreated = false;
 
-//------------Malvalia Dismiss Stage-----------//
-MalvaliaFirstFightCutscene_MalvaliaDismiss_TalkStarted = false;
-
+//------------
 
 
 

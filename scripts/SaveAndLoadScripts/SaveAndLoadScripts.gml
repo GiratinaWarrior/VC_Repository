@@ -28,7 +28,8 @@ function SaveGame()
 		CarvalineOrbCutscene : global.CarvalineOrb_Cutscene_Seen,
 		CardinalNoctisCongratsCutscene : global.CardinalNoctisCongrats_Cutscene_Seen,
 		ShrineUnderAttack : global.ValnyxShrineUnderAttack_Active,
-		VoizatiaDebuted : global.VoizatiaDebuted
+		VoizatiaDebuted : global.VoizatiaDebuted,
+		VoizatiaLavenderAftermath : global.VoizatiaLavenderAftermath_Cutscene_Seen
 	}
 	
 	var _dataString = json_stringify(_saveVar);
@@ -77,6 +78,7 @@ function LoadSave()
 		global.CardinalNoctisCongrats_Cutscene_Seen = _loadData.CardinalNoctisCongratsCutscene;
 		global.ValnyxShrineUnderAttack_Active = _loadData.ShrineUnderAttack;
 		global.VoizatiaDebuted = _loadData.VoizatiaDebuted;
+		global.VoizatiaLavenderAftermath_Cutscene_Seen = _loadData.VoizatiaLavenderAftermath;
 	} 
 
 }

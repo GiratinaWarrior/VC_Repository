@@ -64,6 +64,6 @@ global.CardinalNoctisCongrats_Cutscene_Seen = false;
 global.ValnyxShrineUnderAttack_Active = false;
 global.VoizatiaDebuted = false;
 global.MalvaliaDefeated = false;
-
+global.VoizatiaLavenderAftermath_Cutscene_Seen = false;
 
 //SetGlobalArray();

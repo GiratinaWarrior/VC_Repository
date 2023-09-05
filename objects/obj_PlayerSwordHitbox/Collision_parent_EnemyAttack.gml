@@ -19,5 +19,12 @@ with(obj_Player)
 
 with (other)
 {
-	speed *= -1;
+	if (Reflectable) && !(Reflected)
+	{
+		//speed *= -1;
+		direction = direction + 180;
+		image_angle = direction;
+		Reflected = true;
+	}
+	
 }

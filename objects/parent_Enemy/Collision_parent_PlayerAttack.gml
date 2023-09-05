@@ -1,2 +1,5 @@
 /// @description
-Enemy_Stunned();
+if !(Attacked)
+{
+	Enemy_Stunned();
+}

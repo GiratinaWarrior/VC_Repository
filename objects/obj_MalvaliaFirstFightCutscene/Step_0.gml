@@ -88,6 +88,8 @@ switch (MalvaliaFirstFightCutscene_State)
 		
 		#region Malvalia Defeated Talk
 			
+			obj_Player.hascontrol = false;
+			
 			var _text = 
 			[
 				"*pant*...*pant*...damn...it...",
@@ -105,111 +107,61 @@ switch (MalvaliaFirstFightCutscene_State)
 			}
 			else if !(instance_exists(obj_Text))
 			{
-				obj_Player.hascontrol = true;
-				MalvaliaFirstFightCutscene_State = MALVALIAFIRSTFIGHTCUTSCENE.SHADOW_REALM_GATE;
+				show_debug_message("NEXT STAGE");
+				MalvaliaFirstFightCutscene_State = MALVALIAFIRSTFIGHTCUTSCENE.MALVALIA_EXIT;
+				show_debug_message("NEXT STAGE");
 			}
 			
 		#endregion
 		
 		break;//end Malvalia Defeated Talk Stage
 	
-	//Shadow Realm Gate Stage
-	case MALVALIAFIRSTFIGHTCUTSCENE.SHADOW_REALM_GATE:	
-		
-		#region Shadow Realm Gate
-			
-			if !(MalvaliaFirstFightCutscene_ShadowRealmGate_GateCreated)
-			{
-				//Create a Shadow Gate
-				layer_set_visible("ShadowGateCutscene", true);
-				MalvaliaFirstFightCutscene_ShadowRealmGate_Gate = layer_sprite_create("ShadowGateCutscene", 32, 480, spr_MalvaliaShadowRealmGate);
-				layer_sprite_alpha(MalvaliaFirstFightCutscene_ShadowRealmGate_Gate, 0);
-				
-				//Get rid of the wall
-				instance_destroy(Wall_ShadowGate_FirstFight);
-				
-				MalvaliaFirstFightCutscene_ShadowRealmGate_GateCreated = true;
-			}
-			else if (MalvaliaFirstFightCutscene_ShadowRealmGate_GateAlpha > 1)
-			{
-				layer_sprite_alpha(MalvaliaFirstFightCutscene_ShadowRealmGate_Gate, 1);
-				MalvaliaFirstFightCutscene_State = MALVALIAFIRSTFIGHTCUTSCENE.MALVALIA_DISMISS;
-			}
-			else
-			{
-				layer_sprite_alpha(MalvaliaFirstFightCutscene_ShadowRealmGate_Gate, MalvaliaFirstFightCutscene_ShadowRealmGate_GateAlpha);
-				MalvaliaFirstFightCutscene_ShadowRealmGate_GateAlpha+=0.1;
-			}
-		
-		#endregion
-		
-		break;//end Shadow Realm Gate Stage
-		
-	//Malvalia Dismiss Stage
-	case MALVALIAFIRSTFIGHTCUTSCENE.MALVALIA_DISMISS:
-	
-		#region Malvalia Dismiss
-			
-			var _text = 
-			[
-				"...get out of my sight...",
-				"...that emotionless face...gets on my nerves..."
-			];
-			
-			if !(MalvaliaFirstFightCutscene_MalvaliaDismiss_TalkStarted)
-			{
-				CutsceneText(_text, "Malvalia", TEXTBOX_POS.TOP, ft_Malvalia);
-				MalvaliaFirstFightCutscene_MalvaliaDismiss_TalkStarted = true;
-			}
-			else if !(instance_exists(obj_Text))
-			{
-				MalvaliaFirstFightCutscene_State = MALVALIAFIRSTFIGHTCUTSCENE.MALVALIA_EXIT;
-			}
-			
-		#endregion
-		
-		break;//end Malvalia Dismiss Stage
-
 	//Malvalia Exit Stage
 	case MALVALIAFIRSTFIGHTCUTSCENE.MALVALIA_EXIT:
 	
 		#region Malvalia Exit
 			
+			show_debug_message("NEXT STAGE");
+			
 			if !(MalvaliaFirstFightCutscene_MalvaliaExit_SequenceCreated)
 			{
-				MalvaliaFirstFightCutscene_MalvaliaExit_Sequence = layer_sequence_create("Malvalia", obj_Malvalia_FirstFight.x, obj_Malvalia_FirstFight.y, seq_MalvaliaFirstFight_MalvaliaExit);
-				instance_destroy(obj_Malvalia_FirstFight);
+				MalvaliaFirstFightCutscene_MalvaliaExit_Sequence = layer_sequence_create("Malvalia", obj_Malvalia_FirstFight_Defeated.x, obj_Malvalia_FirstFight_Defeated.y, seq_MalvaliaFirstFight_MalvaliaExit);
+				instance_destroy(obj_Malvalia_FirstFight_Defeated);
 				MalvaliaFirstFightCutscene_MalvaliaExit_SequenceCreated = true;
 			}
 			else if (layer_sequence_is_finished(MalvaliaFirstFightCutscene_MalvaliaExit_Sequence))
 			{
-				MalvaliaFirstFightCutscene_State = MALVALIAFIRSTFIGHTCUTSCENE.CUTSCENE_END;
+				MalvaliaFirstFightCutscene_State = MALVALIAFIRSTFIGHTCUTSCENE.SHADOW_REALM_COLLAPSE;
 				layer_sequence_destroy(MalvaliaFirstFightCutscene_MalvaliaExit_Sequence);
 			}
 			
 		#endregion
 		
 		break;//end Malvalia Exit Stage
-
-	//Cutscene End Stage
-	case MALVALIAFIRSTFIGHTCUTSCENE.CUTSCENE_END:
+		
+	//Shadow Realm Collapse Stage
+	case MALVALIAFIRSTFIGHTCUTSCENE.SHADOW_REALM_COLLAPSE:
 	
-		#region Cutscene End
-			
-			obj_Player.hascontrol = true;
+		#region Shadow Realm Collapse
+		
+			with (instance_create_layer(obj_Player.x, obj_Player.y, "Player", obj_RoomWarp))
+			{
+				target = Room_DarkShrineBasementPedestal;
+				WarpX = 1216;
+				WarpY = 448;
+				ExitSequence = seq_MalvaliaBattleOut;
+				EnterSequence = seq_MalvaliaBattleIn;
+			}
 			
 			global.MalvaliaDefeated = true;
 			
-			with (obj_Player)
-			{
-				SetSpawnpoint();
-			}
+			SetSpawnpoint(1216, 448, Room_DarkShrineBasementPedestal);
 			
-		//	SaveGame();
-			
+			SaveGame();
+		
 		#endregion
 		
-		break;//end Cutscene End Stage
+		break;//end Shadow Realm Collapse Stage
 
 }//end Malvalia First Fight State machine
 

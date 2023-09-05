@@ -154,7 +154,7 @@ switch(Malvalia_FirstFight_CurrentState)
 				{
 					Malvalia_FirstFight_RedNeedles_TeleportedToCenter = true;
 				}
-				MalvaliaBossBattle_Teleport(room_width/2, room_height/2, _func);
+				MalvaliaBossBattle_Teleport(room_width/2, room_height/4, _func);
 			}
 			
 			else if (Malvalia_FirstFight_RedNeedles_TeleportedToCenter)
@@ -199,7 +199,7 @@ switch(Malvalia_FirstFight_CurrentState)
 						{
 						
 							
-							var _NeedleDir = _AngleFromPlayer + (random_range(1, -1) * 45);
+							var _NeedleDir = _AngleFromPlayer + (random_range(1, -1) * 20);
 						
 							MalvaliaBossBattle_RedNeedles(_NeedleDir, 5);
 						

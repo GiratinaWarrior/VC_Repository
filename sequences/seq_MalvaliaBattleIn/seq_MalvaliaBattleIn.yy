@@ -34,7 +34,7 @@
   "playback": 0,
   "playbackSpeed": 60.0,
   "playbackSpeedType": 0,
-  "showBackdrop": true,
+  "showBackdrop": false,
   "showBackdropImage": false,
   "spriteId": null,
   "timeUnits": 1,

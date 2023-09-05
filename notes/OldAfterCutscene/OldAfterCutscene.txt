@@ -1,0 +1,114 @@
+//--------------------------------Variabbles--------------------//
+
+//------------Shadow Realm Gate Stage----------//
+MalvaliaFirstFightCutscene_ShadowRealmGate_Gate = noone;
+MalvaliaFirstFightCutscene_ShadowRealmGate_GateAlpha = 0;
+MalvaliaFirstFightCutscene_ShadowRealmGate_GateCreated = false;
+
+//------------Malvalia Exit Stage--------------//
+MalvaliaFirstFightCutscene_MalvaliaExit_Sequence = noone;
+MalvaliaFirstFightCutscene_MalvaliaExit_SequenceCreated = false;
+
+//------------Malvalia Dismiss Stage-----------//
+MalvaliaFirstFightCutscene_MalvaliaDismiss_TalkStarted = false;
+	
+	
+//---------------------------------Code------------------------//	
+	
+	//Shadow Realm Gate Stage
+	case MALVALIAFIRSTFIGHTCUTSCENE.SHADOW_REALM_GATE:	
+		
+		#region Shadow Realm Gate
+			
+			if !(MalvaliaFirstFightCutscene_ShadowRealmGate_GateCreated)
+			{
+				//Create a Shadow Gate
+				layer_set_visible("ShadowGateCutscene", true);
+				MalvaliaFirstFightCutscene_ShadowRealmGate_Gate = layer_sprite_create("ShadowGateCutscene", 32, 480, spr_MalvaliaShadowRealmGate);
+				layer_sprite_alpha(MalvaliaFirstFightCutscene_ShadowRealmGate_Gate, 0);
+				
+				//Get rid of the wall
+				instance_destroy(Wall_ShadowGate_FirstFight);
+				
+				MalvaliaFirstFightCutscene_ShadowRealmGate_GateCreated = true;
+			}
+			else if (MalvaliaFirstFightCutscene_ShadowRealmGate_GateAlpha > 1)
+			{
+				layer_sprite_alpha(MalvaliaFirstFightCutscene_ShadowRealmGate_Gate, 1);
+				MalvaliaFirstFightCutscene_State = MALVALIAFIRSTFIGHTCUTSCENE.MALVALIA_DISMISS;
+			}
+			else
+			{
+				layer_sprite_alpha(MalvaliaFirstFightCutscene_ShadowRealmGate_Gate, MalvaliaFirstFightCutscene_ShadowRealmGate_GateAlpha);
+				MalvaliaFirstFightCutscene_ShadowRealmGate_GateAlpha+=0.1;
+			}
+		
+		#endregion
+		
+		break;//end Shadow Realm Gate Stage
+		
+	//Malvalia Dismiss Stage
+	case MALVALIAFIRSTFIGHTCUTSCENE.MALVALIA_DISMISS:
+	
+		#region Malvalia Dismiss
+			
+			var _text = 
+			[
+				"...get out of my sight...",
+				"...that emotionless face...gets on my nerves..."
+			];
+			
+			if !(MalvaliaFirstFightCutscene_MalvaliaDismiss_TalkStarted)
+			{
+				CutsceneText(_text, "Malvalia", TEXTBOX_POS.TOP, ft_Malvalia);
+				MalvaliaFirstFightCutscene_MalvaliaDismiss_TalkStarted = true;
+			}
+			else if !(instance_exists(obj_Text))
+			{
+				MalvaliaFirstFightCutscene_State = MALVALIAFIRSTFIGHTCUTSCENE.MALVALIA_EXIT;
+			}
+			
+		#endregion
+		
+		break;//end Malvalia Dismiss Stage
+
+	//Malvalia Exit Stage
+	case MALVALIAFIRSTFIGHTCUTSCENE.MALVALIA_EXIT:
+	
+		#region Malvalia Exit
+			
+			if !(MalvaliaFirstFightCutscene_MalvaliaExit_SequenceCreated)
+			{
+				MalvaliaFirstFightCutscene_MalvaliaExit_Sequence = layer_sequence_create("Malvalia", obj_Malvalia_FirstFight.x, obj_Malvalia_FirstFight.y, seq_MalvaliaFirstFight_MalvaliaExit);
+				instance_destroy(obj_Malvalia_FirstFight_Defeated);
+				MalvaliaFirstFightCutscene_MalvaliaExit_SequenceCreated = true;
+			}
+			else if (layer_sequence_is_finished(MalvaliaFirstFightCutscene_MalvaliaExit_Sequence))
+			{
+				MalvaliaFirstFightCutscene_State = MALVALIAFIRSTFIGHTCUTSCENE.CUTSCENE_END;
+				layer_sequence_destroy(MalvaliaFirstFightCutscene_MalvaliaExit_Sequence);
+			}
+			
+		#endregion
+		
+		break;//end Malvalia Exit Stage
+
+	//Cutscene End Stage
+	case MALVALIAFIRSTFIGHTCUTSCENE.CUTSCENE_END:
+	
+		#region Cutscene End
+			
+			obj_Player.hascontrol = true;
+			
+			global.MalvaliaDefeated = true;
+			
+			with (obj_Player)
+			{
+				SetSpawnpoint();
+			}
+			
+		//	SaveGame();
+			
+		#endregion
+		
+		break;//end Cutscene End Stage

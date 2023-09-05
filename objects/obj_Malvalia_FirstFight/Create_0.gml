@@ -40,7 +40,7 @@ Malvalia_FirstFight_Teleport_TargetY = 0;
 
 //The variables for how long the Black Geysers will be conjured
 Malvalia_FirstFight_BlackGeyser_StateTimer = 0;
-Malvalia_FirstFight_BlackGeyser_StateTimerLimit = 800;
+Malvalia_FirstFight_BlackGeyser_StateTimerLimit = 600;
 
 //Variable the holds the geyser warning particles
 Malvalia_FirstFight_BlackGeyser_ConjureParticle = noone;
@@ -66,4 +66,4 @@ Malvalia_FirstFight_RedNeedles_StateTimerLimit = 400;
 
 //The variables for the frequency the Red Needles shoot at
 Malvalia_FirstFight_RedNeedles_ShootTimer = 0;
-Malvalia_FirstFight_RedNeedles_ShootTimerLimit = 10;
+Malvalia_FirstFight_RedNeedles_ShootTimerLimit = 8;
