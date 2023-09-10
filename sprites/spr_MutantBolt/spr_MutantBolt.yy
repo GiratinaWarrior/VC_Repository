@@ -26,7 +26,7 @@
   "origin": 1,
   "parent": {
     "name": "Lightning",
-    "path": "folders/Sprites/Bosses/KingChimarine/Lightning.yy",
+    "path": "folders/Sprites/Enemies/Bosses/KingChimarine/Lightning.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

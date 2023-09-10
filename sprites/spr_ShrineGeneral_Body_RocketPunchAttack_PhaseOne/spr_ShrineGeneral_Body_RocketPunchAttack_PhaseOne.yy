@@ -42,7 +42,7 @@
   "origin": 4,
   "parent": {
     "name": "Attack",
-    "path": "folders/Sprites/Bosses/ShrineGeneral/PhaseOne/RocketPunch/Attack.yy",
+    "path": "folders/Sprites/Enemies/Bosses/ShrineGeneral/PhaseOne/RocketPunch/Attack.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

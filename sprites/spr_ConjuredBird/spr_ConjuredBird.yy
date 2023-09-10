@@ -31,7 +31,7 @@
   "origin": 4,
   "parent": {
     "name": "Bird",
-    "path": "folders/Sprites/Bosses/KingChimarine/Conjure/Bird.yy",
+    "path": "folders/Sprites/Enemies/Bosses/KingChimarine/Conjure/Bird.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

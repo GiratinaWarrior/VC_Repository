@@ -29,6 +29,7 @@ function SaveGame()
 		CardinalNoctisCongratsCutscene : global.CardinalNoctisCongrats_Cutscene_Seen,
 		ShrineUnderAttack : global.ValnyxShrineUnderAttack_Active,
 		VoizatiaDebuted : global.VoizatiaDebuted,
+		MalvaliaDefeated : global.MalvaliaDefeated = false,
 		VoizatiaLavenderAftermath : global.VoizatiaLavenderAftermath_Cutscene_Seen
 	}
 	
@@ -78,6 +79,7 @@ function LoadSave()
 		global.CardinalNoctisCongrats_Cutscene_Seen = _loadData.CardinalNoctisCongratsCutscene;
 		global.ValnyxShrineUnderAttack_Active = _loadData.ShrineUnderAttack;
 		global.VoizatiaDebuted = _loadData.VoizatiaDebuted;
+		global.MalvaliaDefeated = _loadData.MalvaliaDefeated;
 		global.VoizatiaLavenderAftermath_Cutscene_Seen = _loadData.VoizatiaLavenderAftermath;
 	} 
 

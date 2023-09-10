@@ -49,7 +49,7 @@
   "origin": 4,
   "parent": {
     "name": "Idle",
-    "path": "folders/Sprites/Bosses/ShrineGeneral/PhaseOne/Idle.yy",
+    "path": "folders/Sprites/Enemies/Bosses/ShrineGeneral/PhaseOne/Idle.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

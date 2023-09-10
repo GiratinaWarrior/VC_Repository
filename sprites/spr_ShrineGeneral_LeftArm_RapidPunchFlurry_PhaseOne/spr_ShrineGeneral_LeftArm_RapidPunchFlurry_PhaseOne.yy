@@ -26,7 +26,7 @@
   "origin": 3,
   "parent": {
     "name": "Flurry",
-    "path": "folders/Sprites/Bosses/ShrineGeneral/PhaseOne/RapidPunches/Flurry.yy",
+    "path": "folders/Sprites/Enemies/Bosses/ShrineGeneral/PhaseOne/RapidPunches/Flurry.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

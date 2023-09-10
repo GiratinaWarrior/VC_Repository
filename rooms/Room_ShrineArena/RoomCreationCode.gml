@@ -8,6 +8,8 @@ if (!global.ShrineGeneral_Defeated)
 	with (obj_Camera)
 	{
 		follow = noone;
+		xTo = -1280;
+		x = -1280;
 	}
 }
 

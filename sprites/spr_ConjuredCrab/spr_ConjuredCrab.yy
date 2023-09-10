@@ -34,7 +34,7 @@
   "origin": 4,
   "parent": {
     "name": "Crab",
-    "path": "folders/Sprites/Bosses/KingChimarine/Conjure/Crab.yy",
+    "path": "folders/Sprites/Enemies/Bosses/KingChimarine/Conjure/Crab.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

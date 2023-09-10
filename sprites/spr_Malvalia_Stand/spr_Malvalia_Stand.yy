@@ -30,7 +30,7 @@
   "origin": 4,
   "parent": {
     "name": "Default",
-    "path": "folders/Sprites/Bosses/Malvalia/Default.yy",
+    "path": "folders/Sprites/Enemies/Bosses/Malvalia/Default.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -33,7 +33,7 @@
   "origin": 4,
   "parent": {
     "name": "Frenzy",
-    "path": "folders/Sprites/Bosses/VioletRosery/Frenzy.yy",
+    "path": "folders/Sprites/Enemies/Bosses/VioletRosery/Frenzy.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -41,7 +41,7 @@
   "origin": 4,
   "parent": {
     "name": "WindUp",
-    "path": "folders/Sprites/Bosses/ShrineGeneral/PhaseOne/RocketPunch/WindUp.yy",
+    "path": "folders/Sprites/Enemies/Bosses/ShrineGeneral/PhaseOne/RocketPunch/WindUp.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

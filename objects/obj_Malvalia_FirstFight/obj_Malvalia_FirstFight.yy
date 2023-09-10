@@ -11,7 +11,7 @@
   ],
   "managed": true,
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_Enemy","path":"objects/parent_Enemy/parent_Enemy.yy",},"propertyId":{"name":"Health","path":"objects/parent_Enemy/parent_Enemy.yy",},"value":"200",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_Enemy","path":"objects/parent_Enemy/parent_Enemy.yy",},"propertyId":{"name":"Health","path":"objects/parent_Enemy/parent_Enemy.yy",},"value":"75",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_Enemy","path":"objects/parent_Enemy/parent_Enemy.yy",},"propertyId":{"name":"Damage","path":"objects/parent_Enemy/parent_Enemy.yy",},"value":"0",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_Enemy","path":"objects/parent_Enemy/parent_Enemy.yy",},"propertyId":{"name":"FlashLength","path":"objects/parent_Enemy/parent_Enemy.yy",},"value":"4",},
   ],
@@ -42,6 +42,9 @@
     "name": "spr_Malvalia_Fly",
     "path": "sprites/spr_Malvalia_Fly/spr_Malvalia_Fly.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "spr_Malvalia_Fly",
+    "path": "sprites/spr_Malvalia_Fly/spr_Malvalia_Fly.yy",
+  },
   "visible": true,
 }

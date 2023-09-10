@@ -29,7 +29,7 @@
   "origin": 9,
   "parent": {
     "name": "Arrow",
-    "path": "folders/Sprites/Bosses/VioletRosery/Arrow.yy",
+    "path": "folders/Sprites/Enemies/Bosses/VioletRosery/Arrow.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

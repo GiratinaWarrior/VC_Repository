@@ -26,7 +26,7 @@
   "origin": 3,
   "parent": {
     "name": "RedNeedles",
-    "path": "folders/Sprites/Bosses/Malvalia/RedNeedles.yy",
+    "path": "folders/Sprites/Enemies/Bosses/Malvalia/RedNeedles.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

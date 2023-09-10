@@ -12,7 +12,7 @@ switch (VoizatiaLavenderAftermath_State)
 			if !(VoizatiaLavenderAftermath_IdleCreated)
 			{
 				VoizatiaLavenderAftermath_VoizatiaIdle = layer_sequence_create(layer, 0, 0, seq_VoizatiaLavenderAftermath_VoizatiaIdle);
-				VoizatiaLavenderAftermath_LavenderIdle = layer_sprite_create(layer, room_width - 126, room_height + 16, spr_Lavender_Down);
+				VoizatiaLavenderAftermath_LavenderIdle = layer_sprite_create(layer, 832, 352, spr_Lavender_Down_RougeSpear);
 				VoizatiaLavenderAftermath_IdleCreated = true;
 			}
 		
@@ -33,10 +33,13 @@ switch (VoizatiaLavenderAftermath_State)
 				xTo = _cameraTargetX;
 			}
 			
-			if (obj_Camera.x == _cameraTargetX)
+			var _func = function()
 			{
 				VoizatiaLavenderAftermath_State = VOIZATIALAVENDERAFTERMATHCUTSCENE.VOIZATIA_TALK_LAVENDER;
 			}
+			
+			TimeSourceCreateAndStart(110, _func, [], 1);
+			
 		
 		#endregion
 	
@@ -46,6 +49,8 @@ switch (VoizatiaLavenderAftermath_State)
 	case VOIZATIALAVENDERAFTERMATHCUTSCENE.VOIZATIA_TALK_LAVENDER:
 		
 		#region Voizatia Talk Lavender
+			
+			SetRoomAudio_Music_Default(music_VoizatiaEncounterTheme);
 			
 			var _text = 
 			[
@@ -66,7 +71,7 @@ switch (VoizatiaLavenderAftermath_State)
 					VoizatiaLavenderAftermath_State = VOIZATIALAVENDERAFTERMATHCUTSCENE.VOIZATIA_TELEPORT_ROSE;
 				}
 				
-				TimeSourceCreateAndStart(60, _func, [], 1);
+				TimeSourceCreateAndStart(30, _func, [], 1);
 			}
 		
 		#endregion
@@ -81,14 +86,15 @@ switch (VoizatiaLavenderAftermath_State)
 			if !(VoizatiaLavenderAftermath_VoizatiaTeleportRose_SequenceCreated)
 			{
 				VoizatiaLavenderAftermath_VoizatiaTeleportRose_Sequence = layer_sequence_create("VoizatiaTeleport", 0, 0, seq_VoizatiaLavenderAftermath_VoizatiaTeleport)
-				layer_sequence_x(VoizatiaLavenderAftermath_VoizatiaIdle, 256);
+				//layer_sequence_x(VoizatiaLavenderAftermath_VoizatiaIdle, 256);
 				VoizatiaLavenderAftermath_VoizatiaTeleportRose_SequenceCreated = true;
 			}
 			else if (layer_sequence_is_finished(VoizatiaLavenderAftermath_VoizatiaTeleportRose_Sequence))
 			{
-				layer_sequence_destroy(VoizatiaLavenderAftermath_VoizatiaTeleportRose_Sequence);
-				VoizatiaLavenderAftermath_VoizatiaTeleportRose_Sequence = noone;
+				show_debug_message("Voizatia Teleported");
 				VoizatiaLavenderAftermath_State = VOIZATIALAVENDERAFTERMATHCUTSCENE.VOIZATIA_TALK_ROSE;
+				layer_sequence_x(VoizatiaLavenderAftermath_VoizatiaIdle, 256);
+				show_debug_message("Voizatia Teleported");
 			}
 		
 		#endregion
@@ -110,7 +116,9 @@ switch (VoizatiaLavenderAftermath_State)
 			
 			if !(VoizatiaLavenderAftermath_VoizatiaTalkRose_TalkStarted)
 			{
+				layer_sequence_destroy(VoizatiaLavenderAftermath_VoizatiaTeleportRose_Sequence);
 				CutsceneText(_text, "Voizatia", TEXTBOX_POS.BOTTOM, ft_Voizatia);
+				//obj_Player.image_xscale = 1;
 				VoizatiaLavenderAftermath_VoizatiaTalkRose_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))
@@ -119,7 +127,7 @@ switch (VoizatiaLavenderAftermath_State)
 				{
 					VoizatiaLavenderAftermath_State = VOIZATIALAVENDERAFTERMATHCUTSCENE.VOIZATIA_PROPOSAL;
 				}
-				TimeSourceCreateAndStart(60, _func, [], 1);
+				TimeSourceCreateAndStart(120, _func, [], 1);
 			}
 		
 		#endregion
@@ -186,23 +194,249 @@ switch (VoizatiaLavenderAftermath_State)
 			[
 				"I've given the Carvaline Orbs to my comrades, one orb for each of them.",
 				"They're likely going around Nox having fun with the new power they've been granted.",
-				"You will hunt and kill them, growing stronger as you go.",
-				"Then you will come back when you're strong enough to fight me"
+				"You will attempt to track down and kill them, growing stronger as you go.",
+				"Then you will come back when you're strong enough to fight me.",
+				"You WILL do this.",
+				"Or do you prefer you and your mother dying right here and right now?"
 			];
 		
 			if !(VoizatiaLavenderAftermath_VoizatiaThreatenLavender_TalkStarted)
 			{
 				CutsceneText(_text, "Voizatia", TEXTBOX_POS.BOTTOM, ft_Voizatia);
+				obj_Player.image_xscale = -1;
 				VoizatiaLavenderAftermath_VoizatiaThreatenLavender_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))
 			{
-				
+				var _func = function()
+				{
+					VoizatiaLavenderAftermath_State = VOIZATIALAVENDERAFTERMATHCUTSCENE.VOIZATIA_CHALLENGE_ROSE;
+				}
+				TimeSourceCreateAndStart(90, _func, [], 1);
 			}
 		
 		#endregion
 	
 		break;//end Voizatia Threaten Lavender
+		
+	//Voizatia Challenge Rose Stage
+	case VOIZATIALAVENDERAFTERMATHCUTSCENE.VOIZATIA_CHALLENGE_ROSE:
+		
+		#region Voizatia Challenge Rose
+		
+			var _text = 
+			[
+				"That's what I thought.",
+				"Or so I would say, but I bet you're thinking that you're hot stuff just because you're Cardinal and all, don't ya?",
+				"You think that you can fight me on equal footing, even defeat me don't ya?",
+				"Defeating me here will solve all of your problems won't it? There's no point in my deal is there?",
+				"Then how about this?",
+				"COME AT ME!"
+			];
+		
+			if !(VoizatiaLavenderAftermath_VoizatiaChallengeRose_TalkStarted)
+			{
+				CutsceneText(_text, "Voizatia", TEXTBOX_POS.BOTTOM, ft_Voizatia);
+				VoizatiaLavenderAftermath_VoizatiaChallengeRose_TalkStarted = true;
+			}
+			else if !(instance_exists(obj_Text))
+			{
+				VoizatiaLavenderAftermath_State = VOIZATIALAVENDERAFTERMATHCUTSCENE.PLAYER_FREE;
+			}
+		
+		#endregion
+		
+		break;//end Voizatia Challenge Rose
+	
+	//Player Free Stage
+	case VOIZATIALAVENDERAFTERMATHCUTSCENE.PLAYER_FREE:
+		
+		#region Player Free
+		
+			obj_Player.hascontrol = true;
+		
+			if !(VoizatiaLavenderAftermath_PlayerFree_PlayerMoved)
+			{
+				if (obj_Player.xSpeed != 0 || obj_Player.ySpeed != 0)
+				{
+					var _func = function()
+					{
+						VoizatiaLavenderAftermath_State = VOIZATIALAVENDERAFTERMATHCUTSCENE.VOIZATIA_STRIKE;
+					}
+					TimeSourceCreateAndStart(1, _func, [], 1);
+					VoizatiaLavenderAftermath_PlayerFree_PlayerMoved = true;
+				}
+			}
+		
+		
+		#endregion
+		
+		break;//end Player Free Stage
+	
+	//Voizatia Strike Stage
+	case VOIZATIALAVENDERAFTERMATHCUTSCENE.VOIZATIA_STRIKE:
+		
+		#region Voizatia Strike
+		
+			if !(VoizatiaLavenderAftermath_VoizatiaStrike_SequenceCreated)
+			{
+				VoizatiaLavenderAftermath_VoizatiaStrike_Sequence = layer_sequence_create("VoizatiaTeleport", -0, 0, seq_VoizatiaLavenderAftermath_VoizatiaStrike);
+				with (obj_Player)
+				{
+					hascontrol = false;
+					if (instance_exists(obj_LunarCannon))
+					{
+						instance_destroy(obj_LunarCannon);
+					}
+					PlayerState = PLAYERSTATE.NEUTRAL;
+					PlayerNeutralState = PLAYERSTATE_NEUTRAL.GROUND;
+					x = 1152;
+					y = 338;
+					image_xscale = -1;
+				}
+				VoizatiaLavenderAftermath_VoizatiaStrike_SequenceCreated = true;
+			}
+			else if (layer_sequence_is_finished(VoizatiaLavenderAftermath_VoizatiaStrike_Sequence))
+			{
+				VoizatiaLavenderAftermath_State = VOIZATIALAVENDERAFTERMATHCUTSCENE.VOIZATIA_MOCK;
+			}
+		
+		#endregion
+		
+		break;//end Voizatia Strike Stage
+		
+	//Voizatia Mock Stage
+	case VOIZATIALAVENDERAFTERMATHCUTSCENE.VOIZATIA_MOCK:
+	
+		#region Voizatia Mock
+		
+			var _text = 
+			[
+				"HAH! The look on your face makes taunting you worth it. What a loser!",
+				"*Ahem*",
+				"Moving on now that we are on the same page of 'Defying me means Death'",
+				"I will repeat your orders.",
+				"Go and hunt down my comrades who possess the Carvaline Orbs",
+				"Once you do so, come back in order to be killed gloriously by me.",
+				"What? It's better than the death thats inches in front of you."
+			];
+		
+			if !(VoizatiaLavenderAftermath_VoizatiaMock_TalkStarted)
+			{
+				CutsceneText(_text, "Voizatia", TEXTBOX_POS.BOTTOM, ft_Voizatia);
+				VoizatiaLavenderAftermath_SpearsIdle = layer_sequence_create("VoizatiaLavenderCutscene", 0, 0, seq_VoizatiaLavenderAftermath_SpearIdle);
+				layer_sequence_destroy(VoizatiaLavenderAftermath_VoizatiaStrike_Sequence);
+				VoizatiaLavenderAftermath_VoizatiaMock_TalkStarted = true;
+			}
+			else if !(instance_exists(obj_Text))
+			{
+				VoizatiaLavenderAftermath_State = VOIZATIALAVENDERAFTERMATHCUTSCENE.VOIZATIA_FLY;
+			}
+		
+		#endregion
+	
+		break;//end Voizatia Mock Stage
+		
+	//Voizatia Fly Stage
+	case VOIZATIALAVENDERAFTERMATHCUTSCENE.VOIZATIA_FLY:
+	
+		#region Voizatia Fly
+		
+			if !(VoizatiaLavenderAftermath_VoizatiaFly_SequenceCreated)
+			{
+				VoizatiaLavenderAftermath_VoizatiaFly_Sequence = layer_sequence_create("VoizatiaLavenderCutscene", 0, 0, seq_VoizatiaLavenderAftermath_VoizatiaRise);
+				layer_sequence_destroy(VoizatiaLavenderAftermath_VoizatiaIdle);
+				VoizatiaLavenderAftermath_VoizatiaFly_SequenceCreated = true;
+			}
+			else if (layer_sequence_is_finished(VoizatiaLavenderAftermath_VoizatiaFly_Sequence))
+			{
+				layer_sequence_destroy(VoizatiaLavenderAftermath_VoizatiaFly_Sequence);
+				VoizatiaLavenderAftermath_VoizatiaIdle = noone;
+				VoizatiaLavenderAftermath_State = VOIZATIALAVENDERAFTERMATHCUTSCENE.VOIZATIA_FLY_TALK;
+			}
+		
+		#endregion
+		
+		break;//end Voizatia Fly Stage
+		
+	//Voizatia Fly Exit Stage
+	case VOIZATIALAVENDERAFTERMATHCUTSCENE.VOIZATIA_FLY_TALK:
+		
+		#region Voizatia Fly Exit
+		
+			var _text = 
+			[
+				"I think I like my renovation of your shrine, so I'll be staying here",
+				"Oh, and since you're Cardinal, you don't need your mothers wonderful wisdom do you?",
+				"She'll be useful in making sure you don't run away",
+				"Have a nice rest of your life!"
+			];
+			
+			if !(VoizatiaLavenderAftermath_VoizatiaFlyTalk_TalkStarted)
+			{
+				CutsceneText(_text, "Voizatia", TEXTBOX_POS.BOTTOM, ft_Voizatia);
+				VoizatiaLavenderAftermath_VoizatiaIdle = layer_sequence_create(layer, 0, 0, seq_VoizatiaLavenderAftermath_VoizatiaFloat);
+				VoizatiaLavenderAftermath_VoizatiaFlyTalk_TalkStarted = true;
+			}
+			else if !(instance_exists(obj_Text))
+			{
+				var _func = function()
+				{
+					VoizatiaLavenderAftermath_State = VOIZATIALAVENDERAFTERMATHCUTSCENE.VOIZATIA_EXIT;
+				}
+				TimeSourceCreateAndStart(50, _func, [], 1);
+			}	
+		
+		#endregion
+		
+		break;//end Voizatia Fly Exit Stage
+		
+	//Voizatia Exit Stage
+	case VOIZATIALAVENDERAFTERMATHCUTSCENE.VOIZATIA_EXIT:
+	
+		#region Voizatia Exit
+		
+			if !(VoizatiaLavenderAftermath_VoizatiaExit_SequenceCreated)
+			{
+				VoizatiaLavenderAftermath_VoizatiaExit_Sequence = layer_sequence_create("VoizatiaTeleport", 0, 0, seq_VoizatiaLavenderAftermath_VoizatiaExit);
+				layer_sequence_destroy(VoizatiaLavenderAftermath_SpearsIdle);
+				layer_sequence_destroy(VoizatiaLavenderAftermath_VoizatiaIdle);
+				layer_sprite_destroy(VoizatiaLavenderAftermath_LavenderIdle);
+				VoizatiaLavenderAftermath_VoizatiaExit_SequenceCreated = true;
+			}
+			else if (layer_sequence_is_finished(VoizatiaLavenderAftermath_VoizatiaExit_Sequence))
+			{
+				var _func = function()
+				{
+					VoizatiaLavenderAftermath_State = VOIZATIALAVENDERAFTERMATHCUTSCENE.CUTSCENE_END;
+				}
+				TimeSourceCreateAndStart(50, _func, [], 1);
+			}
+		
+		#endregion
+		
+		break;//end Voizatia Exit Stage
+		
+	//Cutscene End Stage
+	case VOIZATIALAVENDERAFTERMATHCUTSCENE.CUTSCENE_END:
+	
+		#region Cutscene End
+			
+			global.VoizatiaLavenderAftermath_Cutscene_Seen = true;
+			global.ValnyxShrineUnderAttack_Active = false;
+			
+			SetSpawnpoint();
+			
+			SaveGame();
+			
+			//Transition to the credits
+			TransitionStart(Room_Credits_PrologueChapter, seq_FadeOut, seq_FadeIn);
+			
+		
+		#endregion
+	
+		break;//end Cutscene End Stage
+	
 	
 }//end Stage machine
 

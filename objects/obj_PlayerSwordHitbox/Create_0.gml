@@ -7,8 +7,11 @@ enum SWORD_V_DIR
 	DOWN = 1
 }
 
-alarm[0] = 10;
+alarm[0] = 15;
 
 HitSomething = false;
+
+xSpeed = 0;
+ySpeed = 0;
 
 //hitBySeleneSword = ds_list_create();

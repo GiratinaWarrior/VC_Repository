@@ -41,7 +41,7 @@
   "origin": 4,
   "parent": {
     "name": "Windup",
-    "path": "folders/Sprites/Bosses/ShrineGeneral/PhaseOne/RapidPunches/Windup.yy",
+    "path": "folders/Sprites/Enemies/Bosses/ShrineGeneral/PhaseOne/RapidPunches/Windup.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

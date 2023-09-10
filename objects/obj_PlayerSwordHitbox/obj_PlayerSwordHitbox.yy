@@ -7,11 +7,12 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"parent_Enemy","path":"objects/parent_Enemy/parent_Enemy.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"parent_EnemyAttack","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_PlayerAttack","path":"objects/parent_PlayerAttack/parent_PlayerAttack.yy",},"propertyId":{"name":"CanPhase_Wall","path":"objects/parent_PlayerAttack/parent_PlayerAttack.yy",},"value":"True",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_PlayerAttack","path":"objects/parent_PlayerAttack/parent_PlayerAttack.yy",},"propertyId":{"name":"CanPhase_Enemy","path":"objects/parent_PlayerAttack/parent_PlayerAttack.yy",},"value":"True",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_PlayerAttack","path":"objects/parent_PlayerAttack/parent_PlayerAttack.yy",},"propertyId":{"name":"CanPhase_Enemy","path":"objects/parent_PlayerAttack/parent_PlayerAttack.yy",},"value":"False",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_PlayerAttack","path":"objects/parent_PlayerAttack/parent_PlayerAttack.yy",},"propertyId":{"name":"PlayerAttackDamage","path":"objects/parent_PlayerAttack/parent_PlayerAttack.yy",},"value":"2",},
   ],
   "parent": {

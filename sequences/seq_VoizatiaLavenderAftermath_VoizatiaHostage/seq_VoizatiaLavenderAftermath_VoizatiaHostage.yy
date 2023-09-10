@@ -14,14 +14,21 @@
     "resourceVersion": "1.0",
     "Keyframes": [],
   },
-  "eventStubScript": null,
+  "eventStubScript": {
+    "name": "seq_VoizatiaLavenderAftermath_VoizatiaHostage_Events",
+    "path": "scripts/seq_VoizatiaLavenderAftermath_VoizatiaHostage_Events/seq_VoizatiaLavenderAftermath_VoizatiaHostage_Events.yy",
+  },
   "eventToFunction": {},
   "length": 106.0,
   "lockOrigin": false,
   "moments": {
     "resourceType": "KeyframeStore<MomentsEventKeyframe>",
     "resourceVersion": "1.0",
-    "Keyframes": [],
+    "Keyframes": [
+      {"resourceType":"Keyframe<MomentsEventKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"MomentsEventKeyframe","resourceVersion":"1.0","Events":[
+              "seq_VoizatiaLavenderAftermath_VoizatiaHostage_Moment",
+            ],},},"Disabled":false,"id":"e9067bed-fff7-45e3-91f7-0634f6b2de11","IsCreationKey":false,"Key":18.0,"Length":1.0,"Stretch":false,},
+    ],
   },
   "parent": {
     "name": "9_VoizatiaLavenderAftermath",
@@ -54,7 +61,7 @@
               {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":30.0,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":9.5,},},"Disabled":false,"id":"d123fd10-8636-4605-adfd-ca6a48914718","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
             ],},"modifiers":[],"trackColour":4294068324,"tracks":[],"traits":0,},
       ],"traits":0,},
-    {"resourceType":"GMGroupTrack","resourceVersion":"1.0","name":"Malvalia","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"modifiers":[],"trackColour":4287580402,"tracks":[
+    {"resourceType":"GMGroupTrack","resourceVersion":"1.0","name":"Voizatia","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"modifiers":[],"trackColour":4287580402,"tracks":[
         {"resourceType":"GMRealTrack","resourceVersion":"1.0","name":"position","builtinName":14,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":true,"keyframes":{"resourceType":"KeyframeStore<RealKeyframe>","resourceVersion":"1.0","Keyframes":[
               {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":0.0,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":0.0,},},"Disabled":false,"id":"481ba1f0-347d-4e99-b22b-ce542ad65894","IsCreationKey":true,"Key":0.0,"Length":1.0,"Stretch":false,},
             ],},"modifiers":[],"trackColour":4287580402,"tracks":[],"traits":0,},

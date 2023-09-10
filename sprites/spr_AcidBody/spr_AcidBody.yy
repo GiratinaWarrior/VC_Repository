@@ -26,7 +26,7 @@
   "origin": 4,
   "parent": {
     "name": "Acidic",
-    "path": "folders/Sprites/Bosses/KingChimarine/Acidic.yy",
+    "path": "folders/Sprites/Enemies/Bosses/KingChimarine/Acidic.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -32,7 +32,7 @@
   "origin": 4,
   "parent": {
     "name": "Neutral",
-    "path": "folders/Sprites/Bosses/VioletRosery/Neutral.yy",
+    "path": "folders/Sprites/Enemies/Bosses/VioletRosery/Neutral.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

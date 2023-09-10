@@ -28,7 +28,7 @@
   "origin": 9,
   "parent": {
     "name": "Turmoil",
-    "path": "folders/Sprites/Bosses/VioletRosery/Turmoil.yy",
+    "path": "folders/Sprites/Enemies/Bosses/VioletRosery/Turmoil.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

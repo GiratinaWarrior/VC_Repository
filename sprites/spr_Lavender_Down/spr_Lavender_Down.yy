@@ -23,7 +23,7 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6a57f395-9be7-4fac-9120-de1c583e111e","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 4,
+  "origin": 7,
   "parent": {
     "name": "Lavender",
     "path": "folders/Sprites/NPC's/0_Story/Lavender.yy",
@@ -60,7 +60,7 @@
     "visibleRange": null,
     "volume": 1.0,
     "xorigin": 32,
-    "yorigin": 32,
+    "yorigin": 64,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

@@ -33,7 +33,7 @@
   "origin": 4,
   "parent": {
     "name": "BossHimself",
-    "path": "folders/Sprites/Bosses/KingChimarine/BossHimself.yy",
+    "path": "folders/Sprites/Enemies/Bosses/KingChimarine/BossHimself.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

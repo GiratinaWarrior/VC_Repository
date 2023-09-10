@@ -56,7 +56,7 @@
   "origin": 7,
   "parent": {
     "name": "BlackGeyser",
-    "path": "folders/Sprites/Bosses/Malvalia/BlackGeyser.yy",
+    "path": "folders/Sprites/Enemies/Bosses/Malvalia/BlackGeyser.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
