@@ -1,0 +1,2 @@
+SetRoomAudio_Music_Default(music_Credits);
+instance_destroy(obj_Player);

@@ -4,7 +4,7 @@ Name = "Nasi";
 
 Speech = 
 [
-	"I-I-I LOVE YOU!",
-	"...",
-	"s-s-s-s-sorry"
+	"WAAAAAAAAAAAAAAAAAAH!",
+	"I DON'T WANNA DIIIIIIIEEEEEEEEE!",
+	"SAVE ME CARNAL!"
 ];

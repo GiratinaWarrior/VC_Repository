@@ -4,8 +4,7 @@ Name = "Grela";
 
 Speech = 
 [
-	"Heeheehear dear, I see that you're our new Cardinal. ",
-	"You look so much like your predecessor, yet so different.",
-	"Is it the eyes? Or the hair? Or the clothes?",
-	"Definitely the clothes."
+	"...What a disaster...",
+	"Rose, I truly am glad that you are safe, even if your situation is undesirable",
+	"Don't worry, your mother is strong, she won't die that easily"
 ];

@@ -81,7 +81,7 @@
     {"name":"inst_50F498E","path":"rooms/Room_NewMoonGarden/Room_NewMoonGarden.yy",},
     {"name":"inst_5A5AF1C5","path":"rooms/Room_NewMoonGarden/Room_NewMoonGarden.yy",},
     {"name":"RoomWarp_NewMoonGarden_To_ShrineMainEntrance","path":"rooms/Room_NewMoonGarden/Room_NewMoonGarden.yy",},
-    {"name":"inst_1FEB0EFB","path":"rooms/Room_NewMoonGarden/Room_NewMoonGarden.yy",},
+    {"name":"RoomWarp_NewMoonGarden_To_NoctisCityPrologue","path":"rooms/Room_NewMoonGarden/Room_NewMoonGarden.yy",},
     {"name":"inst_2A95F0E7","path":"rooms/Room_NewMoonGarden/Room_NewMoonGarden.yy",},
     {"name":"inst_58EA0328","path":"rooms/Room_NewMoonGarden/Room_NewMoonGarden.yy",},
     {"name":"inst_7253DFA0","path":"rooms/Room_NewMoonGarden/Room_NewMoonGarden.yy",},
@@ -723,7 +723,7 @@
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Player","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"RoomWarp_NewMoonGarden_To_ShrineMainEntrance","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_RoomWarp","path":"objects/obj_RoomWarp/obj_RoomWarp.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":8.0,"x":2016.0,"y":160.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1FEB0EFB","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_RoomWarp","path":"objects/obj_RoomWarp/obj_RoomWarp.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":8.0,"x":-96.0,"y":160.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"RoomWarp_NewMoonGarden_To_NoctisCityPrologue","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_RoomWarp","path":"objects/obj_RoomWarp/obj_RoomWarp.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":8.0,"x":-96.0,"y":160.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"BackFlowers","depth":300,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6F6FA58","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Flower","path":"objects/obj_Flower/obj_Flower.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":751.0,"y":280.0,},

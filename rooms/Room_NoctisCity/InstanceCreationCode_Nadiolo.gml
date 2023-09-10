@@ -4,8 +4,8 @@ Name = "Nadiolo";
 
 Speech = 
 [
-	"Yo, what do you think of this sweater? Amazing isn't it",
-	"My sweater is a true work of art",
-	"It's comfy, looks amazing, and it was made by Jest himself",
-	"He always knits cloths for us, what a nice dude"
+	"Don't worry Nasi.",
+	"We're safe underground",
+	"And even if we're not.",
+	"Your big brother will protect you."
 ];

@@ -4,6 +4,7 @@ Name = "Raijay";
 
 Speech = 
 [
-	"Hmph, so you're this new Cardinal-whatever eh?",
-	"This ceremony or whatever better got booze, or I'm outta this dump",
+	"Hm-hmhmmhm-ffffffff",
+	"Whata ya here for, kernel",
+	"Nuh-uh I dowant whata, I want boosh, boosh ah saaaaaaaaaaa"
 ]

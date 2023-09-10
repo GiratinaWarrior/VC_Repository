@@ -195,7 +195,7 @@ switch (VoizatiaLavenderAftermath_State)
 				"I've given the Carvaline Orbs to my comrades, one orb for each of them.",
 				"They're likely going around Nox having fun with the new power they've been granted.",
 				"You will attempt to track down and kill them, growing stronger as you go.",
-				"Then you will come back when you're strong enough to fight me.",
+				"Then you will come back to Valnyx Shrine when you're strong enough to fight me.",
 				"You WILL do this.",
 				"Or do you prefer you and your mother dying right here and right now?"
 			];
@@ -366,10 +366,8 @@ switch (VoizatiaLavenderAftermath_State)
 		
 			var _text = 
 			[
-				"I think I like my renovation of your shrine, so I'll be staying here",
-				"Oh, and since you're Cardinal, you don't need your mothers wonderful wisdom do you?",
-				"She'll be useful in making sure you don't run away",
-				"Have a nice rest of your life!"
+				"I sure can't wait for the next time we meet.",
+				"We're going to have one hell of a time",
 			];
 			
 			if !(VoizatiaLavenderAftermath_VoizatiaFlyTalk_TalkStarted)
@@ -396,6 +394,8 @@ switch (VoizatiaLavenderAftermath_State)
 	
 		#region Voizatia Exit
 		
+			SetRoomAudio_Music_Default(blanksound);
+		
 			if !(VoizatiaLavenderAftermath_VoizatiaExit_SequenceCreated)
 			{
 				VoizatiaLavenderAftermath_VoizatiaExit_Sequence = layer_sequence_create("VoizatiaTeleport", 0, 0, seq_VoizatiaLavenderAftermath_VoizatiaExit);
@@ -410,7 +410,7 @@ switch (VoizatiaLavenderAftermath_State)
 				{
 					VoizatiaLavenderAftermath_State = VOIZATIALAVENDERAFTERMATHCUTSCENE.CUTSCENE_END;
 				}
-				TimeSourceCreateAndStart(50, _func, [], 1);
+				TimeSourceCreateAndStart(100, _func, [], 1);
 			}
 		
 		#endregion
@@ -429,9 +429,8 @@ switch (VoizatiaLavenderAftermath_State)
 			
 			SaveGame();
 			
-			//Transition to the credits
-			TransitionStart(Room_Credits_PrologueChapter, seq_FadeOut, seq_FadeIn);
-			
+			obj_Player.hascontrol = true;
+			obj_Camera.follow = obj_Player;
 		
 		#endregion
 	
