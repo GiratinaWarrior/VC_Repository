@@ -64,7 +64,7 @@ switch (PrologueCutscene_Stage)
 		//Lavender's speech
 		var _text = 
 		[
-			"If God spoke my tongue, everything would be so much easier, but alas, cryptics I'm stuck with.",
+			"If God spoke my tongue, everything would be so much easier, but alas, I have been left with cryptics.",
 			"Let's see, 'love becomes life' probably means I need to hurry up and get a family started.",
 			"........",
 			"I guess not, huh",

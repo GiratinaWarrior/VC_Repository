@@ -1,15 +1,26 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-// if oPlayer exists and is close to the sign, do the next step
-if (instance_exists(obj_Player)) && (point_in_circle(obj_Player.x,obj_Player.y,x,y,64))
+if (instance_exists(Creator)) && (instance_exists(obj_Player))
 {
- // image transparency is either 1 or increases by +0.05 every frame, whichever value is smaller.
- image_alpha = min(1,image_alpha+0.05)
+	
+	TalkRange = Creator.TalkRange;
+	
+	// If the Player exists and is close to the sign, make itself visible
+	if (point_in_circle(obj_Player.x, obj_Player.y, Creator.x, Creator.y, TalkRange)) 
+	{
+		 image_alpha = min(1,image_alpha + 0.05)
+	}
+
+	else
+	{
+	
+		 image_alpha = max(0, image_alpha - 0.05);
+	}
 }
-// if image transparency is more than 0, oPlayer exists and oPlayer isn't close to the sign, do the next step
-if (image_alpha > 0) && (instance_exists(obj_Player)) &&  (!point_in_circle(obj_Player.x,obj_Player.y,x,y,64))
+else 
 {
- // image transparency reduces by 0.05 every frame
- image_alpha -= 0.05
+	//instance_destroy();
 }
+
+show_debug_message("Sign marker locate: x = {0}, y = {1}", x, y);

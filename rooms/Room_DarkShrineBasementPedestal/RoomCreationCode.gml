@@ -1,11 +1,11 @@
-if (!global.VoizatiaDebuted)
+if (!global.VoizatiaDebuted) && !(global.MalvaliaDefeated)
 {
 	SetRoomAudio_Music_Default(blanksound);
 	SetSpawnpoint(1888, 1840, Room_DarkShrineBasementStairs);
 	instance_create_layer(0, 0, "Voizatia", obj_VoizatiaDebutCutscene);
 	layer_set_visible("ShadowPortal", false);
 }
-else if !(global.MalvaliaDefeated)
+else if (global.VoizatiaDebuted) && !(global.MalvaliaDefeated)
 {
 	layer_set_visible("ShadowPortal", true);
 	SetRoomAudio_Music_Default(music_DarkShrineBasementTheme);

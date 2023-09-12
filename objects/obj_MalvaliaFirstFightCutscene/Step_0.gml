@@ -144,6 +144,8 @@ switch (MalvaliaFirstFightCutscene_State)
 	
 		#region Shadow Realm Collapse
 		
+			global.MalvaliaDefeated = true;
+		
 			with (instance_create_layer(obj_Player.x, obj_Player.y, "Player", obj_RoomWarp))
 			{
 				target = Room_DarkShrineBasementPedestal;
@@ -152,8 +154,6 @@ switch (MalvaliaFirstFightCutscene_State)
 				ExitSequence = seq_MalvaliaBattleOut;
 				EnterSequence = seq_MalvaliaBattleIn;
 			}
-			
-			global.MalvaliaDefeated = true;
 			
 			SetSpawnpoint(1216, 448, Room_DarkShrineBasementPedestal);
 			

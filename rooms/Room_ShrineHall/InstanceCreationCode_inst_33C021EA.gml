@@ -1,1 +1,0 @@
-Text("Hold the jump button for extra height")

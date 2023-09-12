@@ -1,1 +1,1 @@
-sprite_index = spr_Controls_RightClick;
+sprite_index = spr_Controls_SpaceBar;

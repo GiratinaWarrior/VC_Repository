@@ -5,6 +5,8 @@ Name = "Grela";
 Speech = 
 [
 	"...What a disaster...",
-	"Rose, I truly am glad that you are safe, even if your situation is undesirable",
-	"Don't worry, your mother is strong, she won't die that easily"
+	"Oh...Rose...ROSE!", 
+	"I truly am glad that you are safe, even if your situation is undesirable",
+	"Don't worry, we Noxians never go down without a fight, so we'll be fine",
+	"Wherever you go, please be safe"
 ];

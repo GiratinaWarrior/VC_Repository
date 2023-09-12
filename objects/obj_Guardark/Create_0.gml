@@ -19,4 +19,4 @@ Guardark_State = 0;
 PlayerInRange = false;
 
 Guardark_Shoot_Timer = 0;
-Guardark_Shoot_Rate = 20;
+Guardark_Shoot_Rate = 60;

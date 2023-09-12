@@ -5,5 +5,10 @@ if (global.JestTalkedTo_PrologueChapterAftermath)
 
 eventFunc = function()
 {
-		instance_create_layer(1568, 1504, "JestAftermath_Cutscene", obj_JestAftermathCutscene);
+
+	with (instance_create_layer(1568, 1503, layer, obj_JestAftermathCutscene))
+	{
+		
+	}
+	
 }

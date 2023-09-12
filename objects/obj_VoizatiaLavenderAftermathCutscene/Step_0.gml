@@ -291,7 +291,7 @@ switch (VoizatiaLavenderAftermath_State)
 					PlayerState = PLAYERSTATE.NEUTRAL;
 					PlayerNeutralState = PLAYERSTATE_NEUTRAL.GROUND;
 					x = 1152;
-					y = 338;
+					y = 337;
 					image_xscale = -1;
 				}
 				VoizatiaLavenderAftermath_VoizatiaStrike_SequenceCreated = true;
@@ -394,7 +394,7 @@ switch (VoizatiaLavenderAftermath_State)
 	
 		#region Voizatia Exit
 		
-			SetRoomAudio_Music_Default(blanksound);
+			SetRoomAudio_Music(blanksound, 0, 500);
 		
 			if !(VoizatiaLavenderAftermath_VoizatiaExit_SequenceCreated)
 			{
@@ -406,6 +406,7 @@ switch (VoizatiaLavenderAftermath_State)
 			}
 			else if (layer_sequence_is_finished(VoizatiaLavenderAftermath_VoizatiaExit_Sequence))
 			{
+				layer_sequence_destroy(VoizatiaLavenderAftermath_VoizatiaExit_Sequence);
 				var _func = function()
 				{
 					VoizatiaLavenderAftermath_State = VOIZATIALAVENDERAFTERMATHCUTSCENE.CUTSCENE_END;

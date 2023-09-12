@@ -11,7 +11,7 @@ TitleMenu_NewGame = function()
 TitleMenu_Continue = function()
 {
 
-		#region New Load Save Mechanic
+	#region New Load Save Mechanic
 		
 		LoadSave();
 	
@@ -19,7 +19,8 @@ TitleMenu_Continue = function()
 		SummonPlayer(global.SpawnX, global.SpawnY);
 		global.WarpTargetX = global.SpawnX;
 		global.WarpTargetY = global.SpawnY;
-		#endregion
+		
+	#endregion
 		
 	
 } 
@@ -36,4 +37,4 @@ MenuOptions_2DArray =
 	["Quit", TitleMenu_Quit]
 ]
 
-Menu(room_width/2 + 200, room_height/2, MenuOptions_2DArray, -1 ,ft_TitleScreen);
+Menu(room_width/2 + 200, room_height/2, MenuOptions_2DArray, -1 , ft_TitleScreen);

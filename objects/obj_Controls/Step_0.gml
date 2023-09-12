@@ -30,4 +30,4 @@ global.Key_Dash = keyboard_check_pressed(vk_shift);
 global.Key_Heal = keyboard_check(ord("F"));
 
 //Interating with stuff
-global.Key_Talk = mouse_check_button_pressed(mb_right);
+global.Key_Talk = keyboard_check_pressed(vk_space) || mouse_check_button_pressed(mb_right);

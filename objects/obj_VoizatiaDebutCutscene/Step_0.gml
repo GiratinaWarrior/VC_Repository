@@ -251,7 +251,7 @@ switch(VoizatiaDebut_State)
 			if !(VoizatiaDebut_VoizatiaExit_SequenceCreated) && (VoizatiaDebut_VoizatiaExit_FloatEnd)
 			{
 				layer_sequence_destroy(VoizatiaDebut_VoizatiaIdle_Sequence);
-				VoizatiaDebut_VoizatiaExit_Sequence = layer_sequence_create(layer, 0, 0, seq_VoizatiaDebut_VoizatiaExit);
+				VoizatiaDebut_VoizatiaExit_Sequence = layer_sequence_create("VoizatiaTeleport", 0, 0, seq_VoizatiaDebut_VoizatiaExit);
 				VoizatiaDebut_VoizatiaExit_SequenceCreated = true;
 			}
 			else if (layer_sequence_is_finished(VoizatiaDebut_VoizatiaExit_Sequence))

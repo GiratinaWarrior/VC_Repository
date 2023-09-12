@@ -124,3 +124,14 @@ function EntityTextBox()
 	#endregion
 	
 }
+
+/// @description ScrollSignBounce()
+/*
+This function makes the sign move up and down
+*/
+function ScrollSignBounce()
+{
+	var _bouncerange = 5;
+	var _bouncespeed = 1;
+	y = Wave(ystart + _bouncerange, ystart - _bouncerange, _bouncespeed);
+}

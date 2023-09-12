@@ -10,3 +10,9 @@ TextBox_PageNumber = 0;
 TextBox_UIPosition = TEXTBOX_POS.BOTTOM;
 
 TextBox_Font = ft_NPC;
+
+with(instance_create_layer(x, y - sprite_yoffset - 10, layer, obj_RightClickMarker))
+{
+	Creator = other;
+	TalkRange = other.TalkRange;
+}

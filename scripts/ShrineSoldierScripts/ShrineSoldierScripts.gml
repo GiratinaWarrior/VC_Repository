@@ -69,8 +69,6 @@ function ShrineSoldierState_Defeat(){
 		sprite_index = spr_ShrineSoldierDefeated;
 	}//end sprite change not happened
 	
-	
-	
 	//If the Shrine Soldier has changed their sprite
 	else
 	{
@@ -94,6 +92,11 @@ function ShrineSoldierState_Defeat(){
 					Speech = _text;
 					TextBox_UIPosition = TEXTBOX_POS.TOP;
 					Name = other.Name;
+					with(instance_create_layer(x - (image_xscale * 11), y - sprite_yoffset - 0, "Soldiers", obj_RightClickMarker))
+					{
+						Creator = other;
+						TalkRange = other.TalkRange;
+					}
 				}
 				
 				_createOne = true;

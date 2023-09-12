@@ -1,4 +1,3 @@
-
 TextBox_Font = ft_Silver;
 
 TextBox_Text = 

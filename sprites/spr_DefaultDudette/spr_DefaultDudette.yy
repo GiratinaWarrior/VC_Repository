@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "NPC's",
-    "path": "folders/Sprites/NPC's.yy",
+    "name": "Unimportant",
+    "path": "folders/Sprites/NPC's/NoctisCity/Unimportant.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
