@@ -145,7 +145,7 @@ function SetRoomAudio_Music_Default(_music = blanksound){
 		
 			with (obj_PlayBGM)
 			{
-				BGM_Volume = 0.5;
+				BGM_Volume = 1;
 				BGM_GainRate = 0;
 			}
 			

@@ -97,7 +97,7 @@ switch (MalvaliaFirstFightCutscene_State)
 				"you're...just...a...doll...",
 				"...no...",
 				"we're not done........",
-				"one day...I'll...drag...you...to.......HELL!"
+				"one day...I'll...drag...you...down...to.......HELL!"
 			];
 			
 			if !(MalvaliaFirstFightCutscene_MalvaliaDefeatedTalk_TalkStarted)

@@ -29,8 +29,9 @@ function SaveGame()
 		CardinalNoctisCongratsCutscene : global.CardinalNoctisCongrats_Cutscene_Seen,
 		ShrineUnderAttack : global.ValnyxShrineUnderAttack_Active,
 		VoizatiaDebuted : global.VoizatiaDebuted,
-		MalvaliaDefeated : global.MalvaliaDefeated = false,
-		VoizatiaLavenderAftermath : global.VoizatiaLavenderAftermath_Cutscene_Seen
+		MalvaliaDefeated : global.MalvaliaDefeated,
+		VoizatiaLavenderAftermath : global.VoizatiaLavenderAftermath_Cutscene_Seen,
+		JestPrologueAftermath : global.JestTalkedTo_PrologueChapterAftermath
 	}
 	
 	var _dataString = json_stringify(_saveVar);
@@ -80,6 +81,7 @@ function LoadSave()
 		global.VoizatiaDebuted = _loadData.VoizatiaDebuted;
 		global.MalvaliaDefeated = _loadData.MalvaliaDefeated;
 		global.VoizatiaLavenderAftermath_Cutscene_Seen = _loadData.VoizatiaLavenderAftermath;
+		global.JestTalkedTo_PrologueChapterAftermath = _loadData.JestPrologueAftermath;
 	} 
 
 }

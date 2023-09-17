@@ -23,4 +23,4 @@ else
 	//instance_destroy();
 }
 
-show_debug_message("Sign marker locate: x = {0}, y = {1}", x, y);
+//show_debug_message("Sign marker locate: x = {0}, y = {1}", x, y);

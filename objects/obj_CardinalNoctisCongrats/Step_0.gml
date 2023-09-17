@@ -317,7 +317,7 @@ switch(CardinalNoctisCongrats_State)
 		
 			if (!CardinalNoctisCongrats_JestConfirm_TalkStarted)
 			{
-				CutsceneText(_text, "Jest", TEXTBOX_POS.BOTTOM, ft_NPC);
+				CutsceneText(_text, "Jest", TEXTBOX_POS.BOTTOM, ft_Jest);
 				CardinalNoctisCongrats_JestConfirm_TalkStarted = true;
 			}
 			else if (!instance_exists(obj_Text))

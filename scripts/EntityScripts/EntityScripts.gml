@@ -6,28 +6,30 @@ function NPC_Movement(){
 
 	#region Movement
 
-	Wall_FallOn();
-	Wall_SwitchRun();
+		ySpeed += Gravity;
 
-	x += xSpeed;
+		Wall_FallOn();
+		Wall_SwitchRun();
 
-	if (xSpeed != 0)
-	{
-		image_xscale = -sign(xSpeed);
-	}
+		x += xSpeed;
 
-	if (NPC_CanFloat == true)
-	{	
-		y = Wave(ystart + NPC_Amplitude, ystart - NPC_Amplitude, NPC_BounceSpeed);
-	}
-	else
-	{
-		y += ySpeed;
-	}
+		if (xSpeed != 0)
+		{
+			image_xscale = -sign(xSpeed);
+		}
 
-	image_angle += SpinSpeed;
+		if (NPC_CanFloat == true)
+		{	
+			y = Wave(ystart + NPC_Amplitude, ystart - NPC_Amplitude, NPC_BounceSpeed);
+		}
+		else
+		{
+			y += ySpeed;
+		}
 
-#endregion
+	
+
+	#endregion
 	
 	TextBox_Text = Speech;
 

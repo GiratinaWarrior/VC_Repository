@@ -15,7 +15,7 @@ switch(JestDebut_Stage)
 	
 		if !(JestDebut_StartedOffscreenTalk)
 		{
-			CutsceneText(_text, "???");
+			CutsceneText(_text, "???", TEXTBOX_POS.BOTTOM, ft_Jest);
 			JestDebut_StartedOffscreenTalk = true;
 		}
 		
@@ -61,7 +61,7 @@ switch(JestDebut_Stage)
 		//If Jest hasn't started talking
 		if !(JestDebut_EnterTalkStarted)
 		{
-			CutsceneText(_text, "Jest");
+			CutsceneText(_text, "Jest", TEXTBOX_POS.BOTTOM, ft_Jest);
 			JestDebut_EnterTalkStarted = true;
 		}
 	
@@ -121,7 +121,7 @@ switch(JestDebut_Stage)
 		//If Jest hasn't started talking
 		if !(JestDebut_StartedExitTalk)
 		{
-			CutsceneText(_text, "Jest");
+			CutsceneText(_text, "Jest", TEXTBOX_POS.BOTTOM, ft_Jest);
 			JestDebut_StartedExitTalk = true;
 		}
 	

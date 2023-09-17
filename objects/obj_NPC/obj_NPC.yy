@@ -40,6 +40,7 @@
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"xSpeed","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0","varType":0,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"middlepoint","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"xstart","varType":0,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"distlimit","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0.1","varType":0,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"Gravity","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0.3","varType":0,},
   ],
   "solid": false,
   "spriteId": {
