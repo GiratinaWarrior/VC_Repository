@@ -57,6 +57,8 @@
 	
 	LunarCannonCooldown = 0;
 	
+	LunarCannon_VallenUse = 2;
+	
 	/////Crescent Blitz Variables
 	CrescentBlitz_Usable = false; //If the player can dash or not
 	
@@ -87,6 +89,11 @@
 	ClingToHope_State = CLINGTOHOPE_STATE.CLIMB;
 	ClingToHope_JumpMomentum = 0;
 	ClingToHope_MaxMomentum = 15;
+	
+	////NightNight
+	NightNight_HealAmount = 4;
+	NightNight_VallenUse = 4;
+	NightNight_Started = false;
 	
 	
 #endregion
@@ -181,11 +188,21 @@ RoomIsCutscene = false;
 
 #endregion
 
-#region Health
+#region Health and Vallen
 
 HealthBarWidth = 200; 
 HealthBarHeight = HealthBarWidth/10;
 HealthBarX = 10;
 HealthBarY = 10;
 
+VallenBarWidth = 150;
+VallenBarHeight = VallenBarWidth/10;
+VallenBarX = HealthBarX;
+VallenBarY = HealthBarY + HealthBarHeight + 5;
+
+VallenRestoreTimerLimit = 500;
+VallenRestoreTimer = 0;
+
 #endregion
+
+

@@ -5,7 +5,7 @@ if (event_data [? "event_type"] == "sequence event")
 {
 	
 	var _textCol = c_white;
-	var _textFont = ft_Silver;
+	var _textFont = ft_Lavender;
 	
 	//Do things based on the message
 	switch(event_data [? "message"])
@@ -20,7 +20,9 @@ if (event_data [? "event_type"] == "sequence event")
 				"Despite this darkness, the sisters were kind, and did good deeds for the planets inhabitants"
 			]
 			
-			CutsceneText(_text, "", TEXTBOX_POS.BOTTOM, _textFont, _textCol, blanksprite, false);
+			var LongAgoText = CutsceneText(_text, "", TEXTBOX_POS.BOTTOM, _textFont, _textCol, blanksprite, false);
+			
+			LongAgoText.TextBox_CharIncrease = 0.5;
 			
 			break;//end sisters intro
 			
@@ -33,7 +35,7 @@ if (event_data [? "event_type"] == "sequence event")
 			[
 				"One night, the sisters shared a strange dream. A red figure appeared before them",
 				"The sisters were startled, but the red figure spoke to them",
-				"''Children...my children...fear not...come in peace...for you niceness...gift to you''"
+				"''Childs...me childs...fear no...come for peace...for you niceness...gift...'"
 			]
 			
 			CutsceneText(_text, "", 800, _textFont, _textCol, blanksprite, false);
@@ -45,8 +47,8 @@ if (event_data [? "event_type"] == "sequence event")
 			
 			var _text = 
 			[
-				"The sisters woke up from the dream feeling strange, and discussed it with each other",
-				"They realized that a special power awakened within them, and decided to call it 'vallen'",
+				"When the sisters awakened, they possessed a mystical power within themselves",
+				"This is what they called vallen"
 			]
 			
 			CutsceneText(_text, "", 700, _textFont, _textCol, blanksprite, false);
@@ -58,7 +60,7 @@ if (event_data [? "event_type"] == "sequence event")
 		
 			var _text = 
 			[
-				"Cardinia and Valiana decided to use their new powers to make the world a better place",
+				"Cardinia and Valiana used the power of vallen to make the world a better place",
 				"The eternal dark world of Nox had found itself two new stars" 
 			]
 			CutsceneText(_text, "", 800, _textFont, _textCol, blanksprite, false);

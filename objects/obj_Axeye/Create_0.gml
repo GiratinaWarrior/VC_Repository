@@ -35,8 +35,11 @@ Axeye_Idle_Timer = Axeye_Idle_TimerLimit;
 //--------Charge State----------//
 
 Axeye_TargetAngle = 0;
-Axeye_MaxAngle = 359;
-Axeye_RotateSpeed = 4;
+Axeye_RotationMultiplier = 10;
+Axeye_MaxAngle = 359 * Axeye_RotationMultiplier;
+Axeye_RotateSpeed = 4 * Axeye_RotationMultiplier;
+Axeye_ChargeSoundMax = 0.3;
+Axeye_ChargeSound = Axeye_ChargeSoundMax;
 
 //-------Attack State-----------//
 

@@ -2,6 +2,8 @@
 
 FirstPlayerRoom = Room_OpeningCutscene;
 
+TestPlayerRoom = Room_Testing;
+
 TitleMenu_NewGame = function()
 {
 	DeleteSave()
@@ -30,11 +32,18 @@ TitleMenu_Quit = function()
 	game_end(); 
 }
 
+TitleMenu_Testing = function()
+{
+	TransitionStart(TestPlayerRoom, seq_FadeOut, seq_FadeIn);
+	SummonPlayer(960, 790);
+}
+
 MenuOptions_2DArray = 
 [
 	["Continue", TitleMenu_Continue],
 	["New Game", TitleMenu_NewGame],
-	["Quit", TitleMenu_Quit]
+	["Quit", TitleMenu_Quit],
+	["TESTING_ONLY", TitleMenu_Testing]
 ]
 
 Menu(room_width/2 + 200, room_height/2, MenuOptions_2DArray, -1 , ft_TitleScreen);

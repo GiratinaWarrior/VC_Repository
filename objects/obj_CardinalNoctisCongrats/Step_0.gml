@@ -16,7 +16,7 @@ switch(CardinalNoctisCongrats_State)
 		
 			if (!CardinalNoctisCongrats_LavenderGreeting_TalkStarted)
 			{
-				CutsceneText(_text, "Lavender", TEXTBOX_POS.BOTTOM, ft_Silver);
+				CutsceneText(_text, "Lavender", TEXTBOX_POS.BOTTOM, ft_Lavender);
 				
 				with (obj_NPC)
 				{
@@ -87,7 +87,7 @@ switch(CardinalNoctisCongrats_State)
 		
 			if (!CardinalNoctisCongrats_LavenderCallAssembly_TalkStarted)
 			{
-				CutsceneText(_text, "Lavender", TEXTBOX_POS.BOTTOM, ft_Silver);
+				CutsceneText(_text, "Lavender", TEXTBOX_POS.BOTTOM, ft_Lavender);
 				CardinalNoctisCongrats_LavenderCallAssembly_TalkStarted = true;
 			}
 			else if (!instance_exists(obj_Text))
@@ -142,7 +142,7 @@ switch(CardinalNoctisCongrats_State)
 		
 			if (!CardinalNoctisCongrats_LavenderSpeech_TalkStarted)
 			{
-				CutsceneText(_text, "Lavender", TEXTBOX_POS.BOTTOM, ft_Silver);
+				CutsceneText(_text, "Lavender", TEXTBOX_POS.BOTTOM, ft_Lavender);
 				CardinalNoctisCongrats_LavenderSpeech_TalkStarted = true;
 			}
 			else if (!instance_exists(obj_Text))
@@ -193,7 +193,7 @@ switch(CardinalNoctisCongrats_State)
 		
 			if (!CardinalNoctisCongrats_LavenderEndSpeech_TalkStarted)
 			{
-				CutsceneText(_text, "Lavender", TEXTBOX_POS.BOTTOM, ft_Silver);
+				CutsceneText(_text, "Lavender", TEXTBOX_POS.BOTTOM, ft_Lavender);
 				CardinalNoctisCongrats_LavenderEndSpeech_TalkStarted = true;
 			}
 			else if (!instance_exists(obj_Text))
@@ -291,7 +291,7 @@ switch(CardinalNoctisCongrats_State)
 		
 			if (!CardinalNoctisCongrats_LavenderOrders_TalkStarted)
 			{
-				CutsceneText(_text, "Lavender", TEXTBOX_POS.BOTTOM, ft_Silver);
+				CutsceneText(_text, "Lavender", TEXTBOX_POS.BOTTOM, ft_Lavender);
 				CardinalNoctisCongrats_LavenderOrders_TalkStarted = true;
 			}
 			else if (!instance_exists(obj_Text))
@@ -401,7 +401,7 @@ switch(CardinalNoctisCongrats_State)
 		
 			if (!CardinalNoctisCongrats_LavenderOrdersFamily_TalkStarted)
 			{
-				CutsceneText(_text, "Lavender", TEXTBOX_POS.BOTTOM, ft_Silver);
+				CutsceneText(_text, "Lavender", TEXTBOX_POS.BOTTOM, ft_Lavender);
 				CardinalNoctisCongrats_LavenderOrdersFamily_TalkStarted = true;
 			}
 			else if (!instance_exists(obj_Text))

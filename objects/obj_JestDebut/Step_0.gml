@@ -174,6 +174,8 @@ switch(JestDebut_Stage)
 			
 			SetRoomAudio_Music_Default(music_ShrinePeacefulTheme);
 			
+			PlayerHeal();
+			
 			SaveGame();
 			
 			instance_destroy();	

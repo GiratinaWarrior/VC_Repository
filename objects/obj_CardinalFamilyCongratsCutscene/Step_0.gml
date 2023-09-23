@@ -62,7 +62,7 @@ switch(CardinalFamilyCongrats_Stage)
 			//If Lavender hasn't started talking, TALK
 			if (!CardinalFamilyCongrats_TalkStarted)
 			{
-				CutsceneText(_text, "Lavender", TEXTBOX_POS.BOTTOM, ft_Silver);
+				CutsceneText(_text, "Lavender", TEXTBOX_POS.BOTTOM, ft_Lavender);
 				CardinalFamilyCongrats_TalkLavenderSprite = layer_sprite_create(layer, x + 145, y - 16, spr_Lavender_Idle);
 				CardinalFamilyCongrats_TalkStarted = true;
 			}
@@ -123,7 +123,7 @@ switch(CardinalFamilyCongrats_Stage)
 			//If Lavender hasn't started talking, TALK
 			if (!CardinalFamilyCongrats_ExitTalkStarted)
 			{
-				CutsceneText(_text, "Lavender", TEXTBOX_POS.TOP, ft_Silver);
+				CutsceneText(_text, "Lavender", TEXTBOX_POS.TOP, ft_Lavender);
 				layer_sprite_x(CardinalFamilyCongrats_TalkLavenderSprite, x);
 				layer_sprite_y(CardinalFamilyCongrats_TalkLavenderSprite, y + 176);
 				layer_sprite_xscale(CardinalFamilyCongrats_TalkLavenderSprite, -1);
@@ -186,7 +186,10 @@ switch(CardinalFamilyCongrats_Stage)
 				hascontrol = true;
 			}
 		
-			global.CardinalCongratulation_Family = true;
+			global.CardinalCongratulation_Family = true
+			
+			PlayerHeal();
+			
 			SaveGame();
 		
 		#endregion

@@ -22,7 +22,8 @@ switch(CarvalineOrbIntroCutscene_Stage)
 			//Create the text
 			if !(CarvalineOrbIntroCutscene_Start_TextCreated)
 			{
-				CutsceneText(_text, "", TEXTBOX_POS.TOP);
+				var NewText = CutsceneText(_text, "", TEXTBOX_POS.TOP);
+				NewText.TextBox_TextHeightModifier = 1.3;
 				with (obj_Text)
 				{
 					TextBox_TextHeight = string_height(_text) * 1.3;
@@ -185,7 +186,7 @@ switch(CarvalineOrbIntroCutscene_Stage)
 					
 						if !(CarvalineOrbIntroCutscene_LavenderTalk_Intro_TalkStarted)
 						{
-							CutsceneText(_text, "Lavender", TEXTBOX_POS.TOP, ft_Silver);
+							CutsceneText(_text, "Lavender", TEXTBOX_POS.TOP, ft_Lavender);
 							with (obj_Player)
 							{
 								image_xscale = -1;
@@ -241,7 +242,7 @@ switch(CarvalineOrbIntroCutscene_Stage)
 						//Have Lavender start talking
 						if !(CarvalineOrbIntroCutscene_LavenderTalk_ExplainCardinal_StartedTalk)
 						{
-							CutsceneText(_text, "Lavender", TEXTBOX_POS.TOP, ft_Silver);
+							CutsceneText(_text, "Lavender", TEXTBOX_POS.TOP, ft_Lavender);
 							CarvalineOrbIntroCutscene_LavenderTalk_ExplainCardinal_StartedTalk = true;
 						}
 						
@@ -289,7 +290,7 @@ switch(CarvalineOrbIntroCutscene_Stage)
 					
 						if !(CarvalineOrbIntroCutscene_LavenderTalk_ExplainCardinalMore_StartedTalk)
 						{
-							CutsceneText(_text, "Lavender", TEXTBOX_POS.TOP, ft_Silver);
+							CutsceneText(_text, "Lavender", TEXTBOX_POS.TOP, ft_Lavender);
 							CarvalineOrbIntroCutscene_LavenderTalk_ExplainCardinalMore_StartedTalk = true;
 						}
 						else if !(instance_exists(obj_Text))
@@ -339,7 +340,7 @@ switch(CarvalineOrbIntroCutscene_Stage)
 					
 						if !(CarvalineOrbIntroCutscene_LavenderTalk_ExitTalk_TalkStarted)
 						{
-							CutsceneText(_text, "Lavender", TEXTBOX_POS.TOP, ft_Silver);
+							CutsceneText(_text, "Lavender", TEXTBOX_POS.TOP, ft_Lavender);
 							CarvalineOrbIntroCutscene_LavenderTalk_ExitTalk_TalkStarted = true;
 						}
 						else if (!instance_exists(obj_Text))

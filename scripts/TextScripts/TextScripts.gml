@@ -7,9 +7,9 @@
 /// @param box is the sprite of the textbox
 function CutsceneText(_text = [""], _name = "" , _pos = TEXTBOX_POS.BOTTOM, _font = ft_NPC, _color = c_black , _box = spr_TextBox, _skippable = true){
 	
-//	var _textObj = instance_create_depth(x, y, -99, obj_Text);
+	var _textObj = instance_create_depth(x, y, -99, obj_Text);
 	
-	with(instance_create_depth(x, y, -99, obj_Text))
+	with(_textObj)
 	{
 		TextBox_Text = _text;
 		if (_name != "")
@@ -31,7 +31,7 @@ function CutsceneText(_text = [""], _name = "" , _pos = TEXTBOX_POS.BOTTOM, _fon
 		
 	}
 	
-	//return _textObj;
+	return _textObj;
 	
 }
 	

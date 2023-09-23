@@ -2,8 +2,21 @@
 
 HitSomething = true;
 
+with (other)
+{
+	if !(other.PlayerHealed)
+	{
+		if (EnemyVallenDropChance > random_range(0, 1))
+		{
+			PlayerRestoreVallen(EnemyVallenDropAmount);
+		}
+		other.PlayerHealed = true;	
+	}
+}
+
 with(obj_Player)
 {
+	
 	//If the player attacked down, do a pogo jump
 	if (sprite_index == spr_PlayerAirJumpDown_SeleneSword)
 	{

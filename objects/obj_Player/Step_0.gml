@@ -1,5 +1,19 @@
 /// @description Stuff
 
+global.Health = clamp(global.Health, 0, global.MaxHealth);
+
+global.Health = round(global.Health);
+
+global.Vallen = clamp(global.Vallen, 0, global.MaxVallen);
+
+global.Vallen = round(global.Vallen);
+
+if (VallenRestoreTimer++ > VallenRestoreTimerLimit)
+{
+	global.Vallen++;
+	VallenRestoreTimer = 0;
+}
+
 if (Invincible == true) {
 	image_alpha = Wave(0, 1, 0.1, 1);
 }
@@ -125,6 +139,11 @@ else if (key_dash)
 	}//end dash usable
 }
 
+else if (key_heal)
+{
+	PlayerState = PLAYERSTATE.HEAL;
+}
+
 if (PlayerState != PLAYERSTATE.WALL)
 {
 	image_yscale = 1;
@@ -142,9 +161,13 @@ switch(PlayerState)
 	
 		#region Neutral State
 	
+		image_alpha = 1;
+	
 		if (sign(xSpeed) != 0) image_xscale = sign(xSpeed);
 		
 		PlayerMovement();
+		
+		NightNight_Started = false;
 		
 		ClingToHope_Usable = place_meeting(x + 1, y, obj_Wall) - place_meeting(x - 1, y, obj_Wall);
 		
@@ -167,21 +190,47 @@ switch(PlayerState)
 				
 				CrescentBlitz_Usable = true;
 				
-				
-				
 				//If the player just landed on the ground, play the landing sound
 				if (sprite_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.JUMP]) {
-					audio_play_sound(sound_Landing, 100, false);
+					audio_play_sound(sound_Landing, 100, false, 1);
+					for (var i = 0; i < 5; i++)
+					{
+						with (instance_create_depth(x + (random_range(-1, 1) * 5), y + 15, depth + 1, obj_PlayerMoveParticles))
+						{
+							image_alpha = 0.7;
+							ySpeed = -random_range(0.3, 2);
+							Gravity = -0.2;
+							xSpeed = choose(-1, 1) * 2;
+							sprite_index = spr_PlayerMoveParticle;
+							PlayerMoveParticle_FadeRate = random_range(0.01, 0.05);
+							PlayerMoveParticle_ShrinkRate = 0.05;
+						}
+					}
 				}//end landed
 				
 				//If the player is moving horizontally, play the running animation
 				if (xSpeed != 0) 
 				{
+					
+					var _dustPart = function()
+					{
+						with (instance_create_depth(x - (image_xscale * 0), y + 15, depth + 1, obj_PlayerMoveParticles))
+						{
+							image_alpha = 0.7;
+							xSpeed = 0;
+							ySpeed = -random_range(0.5, 2);
+							sprite_index = spr_PlayerMoveParticle;
+							PlayerMoveParticle_FadeRate = random_range(0.05, 0.1)
+						}
+					}
+					
+					TimeSourceCreateAndStart(5, _dustPart, [], 1);
+					
 					sprite_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.RUN];
 					if (animation_end(sprite_index))
 					{
-						PlayerFootsteps()
-					}
+						PlayerFootsteps();
+						}
 				}
 				
 				//If the player is not moving horizontally, play the idle animation
@@ -306,6 +355,8 @@ switch(PlayerState)
 	case PLAYERSTATE.SWORD:
 		
 		#region Selene Sword State
+		
+		image_alpha = 1;
 		
 		image_speed = 1;
 		
@@ -490,6 +541,12 @@ switch(PlayerState)
 		PlayerState_Hurt();
 		
 		break;//end hurt
+		
+	case PLAYERSTATE.HEAL:
+	
+		PlayerState_NightNight();
+		
+		break;
 		
 }//end PLayer State Machine
 

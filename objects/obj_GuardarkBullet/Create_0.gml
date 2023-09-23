@@ -8,3 +8,5 @@ xSpeed = GuardarkBullet_HorizontalSpeed;
 ySpeed = 0;
 
 GuardarkBullet_MaxDistance = 500;
+
+audio_play_sound(sound_GuardarkBullet, 100, false, 0.2);

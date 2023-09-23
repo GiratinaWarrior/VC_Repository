@@ -39,7 +39,7 @@ switch (PrologueCutscene_Stage)
 			layer_sequence_destroy(PrologueCutscene_EnterSequence);
 			
 			//Cutscene Text
-			CutsceneText(_text, "???", TEXTBOX_POS.BOTTOM, ft_Silver, c_red);
+			CutsceneText(_text, "???", TEXTBOX_POS.BOTTOM, ft_Lavender, c_red);
 			
 			//Display Lavender's idle sprite
 			PrologueCutscene_LavenderSprite = layer_sprite_create(layer, room_width/2 - 222, room_height/2 - 14, spr_Lavender_Idle);
@@ -75,7 +75,7 @@ switch (PrologueCutscene_Stage)
 		//Start Lavenders deciphering of the prophecy
 		if !(PrologueCutscene_ProphecyDecipherStarted)
 		{
-			CutsceneText(_text, "???", TEXTBOX_POS.BOTTOM, ft_Silver);
+			CutsceneText(_text, "???", TEXTBOX_POS.BOTTOM, ft_Lavender);
 			PrologueCutscene_ProphecyDecipherStarted = true;
 		}
 		//When lavender is finsihed talking
@@ -100,7 +100,7 @@ switch (PrologueCutscene_Stage)
 		//Start Lavenders deciphering of the prophecy
 		if !(PrologueCutscene_StarNoticeStarted)
 		{
-			CutsceneText(_text, "???", TEXTBOX_POS.BOTTOM, ft_Silver);
+			CutsceneText(_text, "???", TEXTBOX_POS.BOTTOM, ft_Lavender);
 			PrologueCutscene_StarNoticeStarted = true;
 		}
 		//When Lavender is finished talking

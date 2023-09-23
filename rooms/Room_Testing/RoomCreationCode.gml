@@ -1,15 +1,11 @@
-with (obj_Player)
+SetRoomAudio_Music_Default(music_ShrinePeacefulTheme);
+SetSpawnpoint();
+
+var _unlocked = true;
+
+if (_unlocked)
 {
-	//instance_change(obj_Player, true);
-	with (obj_Camera)
-	{
-	//	follow = obj_Player
-	}
-}
-
-
-
-with (obj_PlayBGM)
-{
-	NextBGM = music_StoryCutsceneTheme;
+	global.AbilityUnlocked_StarJump = true;
+	global.AbilityUnlocked_CrescentBlitz = true;
+	global.AbilityUnlocked_ClingToHope = true;
 }

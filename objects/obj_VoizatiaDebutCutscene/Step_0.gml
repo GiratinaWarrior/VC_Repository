@@ -77,7 +77,7 @@ switch(VoizatiaDebut_State)
 		
 			if !(VoizatiaDebut_LavenderRespondFirst_TalkStarted)
 			{
-				CutsceneText(_text, "Lavender", TEXTBOX_POS.TOP, ft_Silver);
+				CutsceneText(_text, "Lavender", TEXTBOX_POS.TOP, ft_Lavender);
 				VoizatiaDebut_LavenderRespondFirst_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))
@@ -301,7 +301,7 @@ switch(VoizatiaDebut_State)
 		
 			if !(VoizatiaDebut_LavenderExitTalk_TalkStarted)
 			{
-				CutsceneText(_text, "Lavender", TEXTBOX_POS.TOP, ft_Silver);
+				CutsceneText(_text, "Lavender", TEXTBOX_POS.TOP, ft_Lavender);
 				VoizatiaDebut_LavenderExitTalk_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))
@@ -448,6 +448,8 @@ switch(VoizatiaDebut_State)
 			obj_Camera.follow = obj_Player;
 			
 			SetRoomAudio_Music_Default(music_DarkShrineBasementTheme);
+			
+			PlayerHeal();
 			
 			SetSpawnpoint(256 + 960, 190 + 270, Room_DarkShrineBasementPedestal);
 			

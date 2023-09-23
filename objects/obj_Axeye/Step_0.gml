@@ -2,8 +2,11 @@
 
 //show_debug_message("Axeye State: {0}", Axeye_State)
 
+//audio_play_sound(sound_AxeyeCharge, 1, false);
+
 #region Movement
 
+/*
 	if (Axeye_State == AXEYE_STATE.ATTACK)
 	{
 		Wall_FallOn();
@@ -14,6 +17,10 @@
 		Wall_BounceOn();
 		Wall_SwitchRun();
 	}
+*/
+
+	Wall_BounceOn();
+	Wall_SwitchRun();
 	
 	x += xSpeed;
 	y += ySpeed;
@@ -30,11 +37,12 @@
 	{
 		PlayerInRange = false;
 	}
-
-	if (Attacked)
+	
+	if (Axeye_State != AXEYE_STATE.CHARGE)
 	{
-		//Axeye_State = AXEYE_STATE.HURT;
+		Axeye_ChargeSound = 0;
 	}
+
 
 #endregion
 
@@ -48,6 +56,8 @@
 	
 			#region Idle
 
+			//	audio_stop_sound(sound_AxeyeCharge);
+				
 				Damage = 1;
 								
 				sprite_index = spr_Axeye_Idle;
@@ -76,6 +86,8 @@
 				{
 					Axeye_TargetAngle = Axeye_MaxAngle * (sign(obj_Player.x - x));
 					Axeye_State = AXEYE_STATE.CHARGE;
+					Axeye_ChargeSound = Axeye_ChargeSoundMax;
+					audio_play_sound(sound_AxeyeCharge, 100, false, Axeye_ChargeSound);
 				}
 			
 			#endregion
@@ -86,6 +98,7 @@
 		case AXEYE_STATE.CHARGE:
 		
 			#region Charge 
+
 				
 				Damage = 0;
 				
@@ -117,6 +130,7 @@
 					}
 					
 					Axeye_State = AXEYE_STATE.ATTACK;
+					audio_play_sound(sound_AxeyeAttack, 50, false, 0.3)
 				}
 				
 			#endregion
@@ -139,8 +153,32 @@
 				
 				if (place_meeting(x + xSpeed, y + ySpeed, obj_Wall))
 				{
-					xSpeed *= 0.3;
-					ySpeed *= 0.3;
+					
+					var _hitWallAction = 0;
+					
+					switch(_hitWallAction)
+					{
+						//Slow down until speed is 0
+						case 0:
+							xSpeed *= 0.3;
+							ySpeed *= 0.3;
+							break;
+							
+						//Bounce back
+						case 1:
+							if (place_meeting(x + xSpeed + sign(xSpeed), y, obj_Wall))
+							{
+								xSpeed *= -0.3;
+							}
+					
+							if (place_meeting(x, y + ySpeed + sign(ySpeed), obj_Wall))
+							{
+								xSpeed *= -0.3;
+							}
+							break;
+						
+					}
+					
 					Axeye_State = AXEYE_STATE.IDLE;
 				}
 				

@@ -1,5 +1,5 @@
 /// @description
-if (!Indestructible) && (other.Reflected)
+if (!Indestructible) && (Reflected)
 {
 	instance_destroy();
 }

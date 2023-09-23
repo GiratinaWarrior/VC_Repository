@@ -22,9 +22,16 @@ with (other)
 	if (Reflectable) && !(Reflected)
 	{
 		//speed *= -1;
-		direction = direction + 180;
+		direction += 180;
 		image_angle = direction;
 		Reflected = true;
+		
+		if !(xSpeed == 0 && ySpeed == 0)
+		{
+			xSpeed *= -1;
+			ySpeed *= -1;
+		}
+		
 	}
 	
 }

@@ -15,7 +15,7 @@ function GuardarkState_Shoot(){
 	
 	if (Guardark_Shoot_Timer++ > Guardark_Shoot_Rate)
 	{
-		with (instance_create_depth(x + (Guardark_Dir * 32), y + (random_range(-1, 1) * 32), depth - 1, obj_GuardarkBullet))
+		with (instance_create_depth(x + (Guardark_Dir * 32), y + (random_range(-10, 20)), depth - 1, obj_GuardarkBullet))
 		{
 			xSpeed = GuardarkBullet_HorizontalSpeed * other.Guardark_Dir;
 		}

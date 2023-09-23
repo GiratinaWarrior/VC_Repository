@@ -9,9 +9,7 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":1,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
-  "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_Enemy","path":"objects/parent_Enemy/parent_Enemy.yy",},"propertyId":{"name":"HealthDrop","path":"objects/parent_Enemy/parent_Enemy.yy",},"value":"-1",},
-  ],
+  "overriddenProperties": [],
   "parent": {
     "name": "States",
     "path": "folders/Objects/Enemies/Bosses/KingChimarine/States.yy",

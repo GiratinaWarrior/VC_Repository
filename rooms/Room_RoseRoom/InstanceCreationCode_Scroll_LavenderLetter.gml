@@ -1,4 +1,4 @@
-TextBox_Font = ft_Silver;
+TextBox_Font = ft_Lavender;
 
 TextBox_Text = 
 [

@@ -25,6 +25,8 @@ TextBox_CharCount = 0;
 //The rate the characters appear at
 TextBox_CharIncrease = 1;
 
+TextBox_TalkSpeed = 1;
+
 //The minimum distance the text can be from the textbox
 TextBox_BorderBuffer = 30;
 TextBox_BufferX = TextBox_BorderBuffer;
@@ -37,7 +39,7 @@ TextBox_TextColor = c_black;
 TextBox_Font = ft_NPC;
 
 TextBox_Pos_TopPlacement = TextBox_EdgeMargin;
-//ft_Silver: 1040;
+//ft_Lavender: 1040;
 TextBox_Pos_BottomPlacement = WINDOW_HEIGHT - TextBox_Height - TextBox_EdgeMargin;
 
 enum TEXTBOX_POS

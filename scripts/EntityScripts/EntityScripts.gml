@@ -137,3 +137,27 @@ function ScrollSignBounce()
 	var _bouncespeed = 1;
 	y = Wave(ystart + _bouncerange, ystart - _bouncerange, _bouncespeed);
 }
+
+function FadeAndDestroy(_fadeRate = 0.1)
+{
+	image_alpha -= _fadeRate;
+	
+	if (image_alpha <= 0)
+	{
+		instance_destroy();
+	}
+	
+}
+
+function ShrinkAndDestroy(_shrinkRate = 0.1)
+{
+	image_xscale -= _shrinkRate;
+	image_yscale -= _shrinkRate;
+	
+	
+	if (image_xscale <= 0 || image_yscale <= 0)
+	{
+		instance_destroy();
+	}
+	
+}

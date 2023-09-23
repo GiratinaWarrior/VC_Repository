@@ -3,6 +3,7 @@
 //The location of the text box on the GUI
 TextBox_X = TextBox_EdgeMargin;
 
+TextBox_TextHeight = string_height(TextBox_Text) * TextBox_TextHeightModifier;
 
 switch(TextBox_Font)
 {
@@ -10,7 +11,7 @@ switch(TextBox_Font)
 		TextBox_TextHeightModifier = 1.2;
 		break;
 	
-	case ft_Silver:
+	case ft_Lavender:
 		TextBox_TextHeightModifier = 1;
 		break;
 	
@@ -38,7 +39,7 @@ switch (TextBox_UIPosition)
 	
 }//end textbox position
 
-//show_debug_message("TextBox_UIPosition: {0}", TextBox_UIPosition);
+TextBox_TextHeight = string_height(TextBox_Text) * TextBox_TextHeightModifier;
 
 if (TextBox_BoxSprite != blanksprite)
 {
@@ -57,6 +58,8 @@ if (TextBox_CharCount < string_length(TextBox_Text[TextBox_Page]))
 
 //The section of the text to be displayed
 TextBox_TextSect = string_copy(TextBox_Text[TextBox_Page], 1, TextBox_CharCount); 
+
+TextBox_TextHeight = string_height(TextBox_Text) * TextBox_TextHeightModifier;
 
 //Draw the text to the screen
 draw_text_ext(TextBox_X + TextBox_BufferX, TextBox_Y + TextBox_BufferY, TextBox_TextSect, TextBox_TextHeight, TextBox_TextWidth);
