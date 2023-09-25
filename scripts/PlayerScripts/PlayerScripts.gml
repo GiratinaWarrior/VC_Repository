@@ -463,12 +463,28 @@ function PlayerTakenDamage(){
 
 function PlayerHeal(_healAmount = global.MaxHealth - global.Health)
 {
-	global.Health += _healAmount;	
+	if (global.Health + _healAmount < global.MaxHealth)
+	{
+		global.Health += _healAmount;	
+	
+	}
+	else
+	{
+		global.Health = global.MaxHealth;
+	}
 }
 
 function PlayerRestoreVallen(_restoreAmount = global.MaxVallen - global.Vallen)
 {
-	global.Vallen += _restoreAmount;
+	if (global.Vallen + _restoreAmount < global.MaxVallen)
+	{
+		global.Vallen += _restoreAmount;	
+	
+	}
+	else
+	{
+		global.Vallen = global.MaxVallen;
+	}
 }
 	
 function PlayerDepleteVallen(_depleteAmount)

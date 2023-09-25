@@ -21,7 +21,7 @@ global.Key_Wall = keyboard_check_pressed(vk_space);
 global.Key_Sword = mouse_check_button_pressed(mb_left);
 
 //Using the Lunar Cannon
-global.Key_Cannon = keyboard_check(ord("Q"));
+global.Key_Cannon = keyboard_check_pressed(ord("Q"));
 
 //Using the Crescent Blitz
 global.Key_Dash = keyboard_check_pressed(vk_shift);

@@ -1,1 +1,1 @@
-Text("I am the strongest soldier, you have succeeded me, wonderful")
+Text("I am the strongest soldier, and you have succeeded me! You have grown strong, Lady Rose.")

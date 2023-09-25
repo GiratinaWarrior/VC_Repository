@@ -1000,6 +1000,7 @@
     {"id":{"name":"seq_VoizatiaDebut_MalvaliaEnter","path":"sequences/seq_VoizatiaDebut_MalvaliaEnter/seq_VoizatiaDebut_MalvaliaEnter.yy",},},
     {"id":{"name":"spr_PlayerNightNight_Close","path":"sprites/spr_PlayerNightNight_Close/spr_PlayerNightNight_Close.yy",},},
     {"id":{"name":"spr_OceanBossTiles","path":"sprites/spr_OceanBossTiles/spr_OceanBossTiles.yy",},},
+    {"id":{"name":"spr_Controls_NightNight","path":"sprites/spr_Controls_NightNight/spr_Controls_NightNight.yy",},},
     {"id":{"name":"sound_Footstep3","path":"sounds/sound_Footstep3/sound_Footstep3.yy",},},
     {"id":{"name":"spr_PlayerRun","path":"sprites/spr_PlayerRun/spr_PlayerRun.yy",},},
     {"id":{"name":"spr_Pixel","path":"sprites/spr_Pixel/spr_Pixel.yy",},},

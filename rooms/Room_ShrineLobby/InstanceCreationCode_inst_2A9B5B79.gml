@@ -1,1 +1,1 @@
-Text("Yikes, you're strong");
+Text("Yikes, just expected of My Lady, you're strong");

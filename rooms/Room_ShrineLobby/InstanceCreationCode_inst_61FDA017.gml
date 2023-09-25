@@ -1,1 +1,1 @@
-Text("Tch, I thought I had a chance");
+Text("(To think I thought I had a chance, how arrogant of me)");

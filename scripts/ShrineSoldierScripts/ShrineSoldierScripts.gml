@@ -83,7 +83,7 @@ function ShrineSoldierState_Defeat(){
 			{
 			
 				//Turn into an NPC
-				with (instance_create_depth(x, y, depth, obj_NPC))
+				with (instance_create_layer(x, y, layer, obj_NPC))
 				{
 					sprite_index = spr_ShrineSoldierDefeated;
 					image_xscale = other.image_xscale;
@@ -92,11 +92,15 @@ function ShrineSoldierState_Defeat(){
 					Speech = _text;
 					TextBox_UIPosition = TEXTBOX_POS.TOP;
 					Name = other.Name;
-					with(instance_create_layer(x - (image_xscale * 11), y - sprite_yoffset - 0, "Soldiers", obj_RightClickMarker))
+					Entity_Marker.x = x - (image_xscale * 10);
+					/*
+					with(instance_create_layer((image_xscale * 5), y - sprite_yoffset, layer, obj_RightClickMarker))
 					{
+						show_debug_message("Marker Coordinate = ({0}, {1})", x, y);
 						Creator = other;
 						TalkRange = other.TalkRange;
 					}
+					*/
 				}
 				
 				_createOne = true;

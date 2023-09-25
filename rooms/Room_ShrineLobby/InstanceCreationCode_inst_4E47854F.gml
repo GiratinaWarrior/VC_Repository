@@ -1,1 +1,2 @@
-Text("So you've arrived here, but I bet you can't reach that ledge up there");
+Text("So you have arrived here My Lady, although that ledge up there is unfortunately beyond you");
+Text("I am in despair that I cannot assist you, please forgive my lack of utility.");
