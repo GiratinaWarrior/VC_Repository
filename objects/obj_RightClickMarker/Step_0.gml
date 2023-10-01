@@ -6,8 +6,12 @@ if (instance_exists(Creator)) && (instance_exists(obj_Player))
 	
 	TalkRange = Creator.TalkRange;
 	
+//	show_debug_message("CarvalinePedestal Talk Range: {0}", TalkRange);
+	
+//	point_in_rectangle(obj_Player.x, obj_Player.y, Creator.x + TalkRange * 2, Creator.y + TalkRange * 2, Creator.x - TalkRange * 2, Creator.y - TalkRange * 2)
+	
 	// If the Player exists and is close to the sign, make itself visible
-	if (point_in_circle(obj_Player.x, obj_Player.y, Creator.x, Creator.y, TalkRange)) 
+	if (abs(Creator.x - obj_Player.x) < TalkRange)
 	{
 		 image_alpha = min(1,image_alpha + 0.05)
 	}
@@ -18,9 +22,10 @@ if (instance_exists(Creator)) && (instance_exists(obj_Player))
 		 image_alpha = max(0, image_alpha - 0.05);
 	}
 }
+
 else 
 {
-	//instance_destroy();
+	instance_destroy();
 }
 
 //show_debug_message("Sign marker locate: x = {0}, y = {1}", x, y);

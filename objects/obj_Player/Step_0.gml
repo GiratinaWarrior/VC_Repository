@@ -2,15 +2,16 @@
 
 global.Health = clamp(global.Health, 0, global.MaxHealth);
 
-global.Health = round(global.Health);
-
 global.Vallen = clamp(global.Vallen, 0, global.MaxVallen);
 
 global.Vallen = round(global.Vallen);
 
+x = round(x);
+y = round(y);
+
 if (VallenRestoreTimer++ > VallenRestoreTimerLimit)
 {
-	global.Vallen++;
+	//global.Vallen++;
 	VallenRestoreTimer = 0;
 }
 
@@ -141,7 +142,7 @@ else if (key_dash)
 
 else if (key_heal)
 {
-	PlayerState = PLAYERSTATE.HEAL;
+	if (global.Vallen >= NightNight_VallenUse) PlayerState = PLAYERSTATE.HEAL;
 }
 
 if (PlayerState != PLAYERSTATE.WALL)

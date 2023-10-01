@@ -131,6 +131,16 @@ function SetRoomAudio_Music_Default(_music = blanksound){
 			
 			break;
 			
+		case music_VoizatiaEncounterThemeV2:
+		
+			with (obj_PlayBGM)
+			{
+				BGM_Volume = 0.2;
+				BGM_GainRate = 100;
+			}
+			
+			break;
+			
 		case music_NightfallKnightTheme:
 		
 			with (obj_PlayBGM)

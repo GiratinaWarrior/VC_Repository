@@ -50,7 +50,7 @@ switch (VoizatiaLavenderAftermath_State)
 		
 		#region Voizatia Talk Lavender
 			
-			SetRoomAudio_Music_Default(music_VoizatiaEncounterTheme);
+			SetRoomAudio_Music_Default(music_VoizatiaEncounterThemeV2);
 			
 			var _text = 
 			[

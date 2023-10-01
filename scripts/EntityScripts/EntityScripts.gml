@@ -4,34 +4,43 @@ This function runs the movement code for the NPCs, where they will move around a
 */
 function NPC_Movement(){
 
-	#region Movement
+	if (myTextbox == noone)
+	{
 
-		ySpeed += Gravity;
+		#region Movement
 
-		Wall_FallOn();
-		Wall_SwitchRun();
+			ySpeed += Gravity;
 
-		x += xSpeed;
+			Wall_FallOn();
+			Wall_SwitchRun();
 
-		if (xSpeed != 0)
-		{
-			image_xscale = -sign(xSpeed);
-		}
+			x += xSpeed * NPC_MoveSpeed;
 
-		if (NPC_CanFloat == true)
-		{	
-			y = Wave(ystart + NPC_Amplitude, ystart - NPC_Amplitude, NPC_BounceSpeed);
-		}
-		else
-		{
-			y += ySpeed;
-		}
+			if (xSpeed != 0)
+			{
+				image_xscale = -sign(xSpeed);
+			}
 
+
+			if (NPC_CanFloat == true)
+			{	
+				NPC_360Count += NPC_MoveSpeed;
+				y = ystart + NPC_BounceDistance * sin(NPC_360Count / NPC_BounceTime);
+			}
+			else
+			{
+				y += ySpeed * NPC_MoveSpeed;
+			}
+			
+			
+			x = clamp(x, 0, room_width);
+			y = clamp(y, 0, room_height);
+
+		#endregion
 	
-
-	#endregion
-	
-	TextBox_Text = Speech;
+		TextBox_Text = Speech;
+		
+	}
 
 }
 
@@ -59,12 +68,14 @@ function EntityTextBox()
 	if (instance_exists(obj_Player))
 	{
 
+	// point_in_circle(obj_Player.x, obj_Player.y, x, y, TalkRange)
+
 		//If the player is within talking range
-		if (point_in_circle(obj_Player.x, obj_Player.y, x, y, TalkRange)) 
+		if (abs(x - obj_Player.x) <= TalkRange && abs(y - obj_Player.y) <= TalkRange) 
 		{
 	
 			//If the player talks to the NPC with the talk button
-			if (global.Key_Talk){
+			if (global.Key_Talk) && (!instance_exists(obj_Text)){
 		
 				//If a textbox hasn't been created yet
 				if (myTextbox = noone)
@@ -100,6 +111,12 @@ function EntityTextBox()
 					{
 						follow = other.id;
 					}
+					
+					if (object_index == obj_NPC)
+					{
+						NPC_MoveSpeed = 0;
+					}
+					
 				
 				}//if a textbox hasn't been created
 		
@@ -118,6 +135,12 @@ function EntityTextBox()
 				obj_Camera.follow = obj_Player;
 				obj_Player.hascontrol = true;
 			}//end if textbox exists
+	
+			if (object_index == obj_NPC)
+			{
+				NPC_MoveSpeed = 1;
+			}
+			
 	
 		}//end if not in talking range
 

@@ -176,17 +176,21 @@ switch(CarvalineOrbIntroCutscene_Stage)
 						var _text = 
 						[
 							"Ahahaha, Hello again Rose-darling, I do make for a great story-teller, do I not?",
+							"I hav- Oh dear, where are my manners! I forgot to give you your dialogue skipping permissions back!",
+							"There you go, now then, where was I?",
+							"Ah yes.",
 							"I have always dreamed of being a writer, and now that you have my title of Valnyx Shrine Cardinal, I can still reach it.",
 							"I am particularily fond of historical texts, because the way they portray events of the past fascinate me, whether by glorification or erasing certain details.",
-							"The story I just told, 'Dawn of Nox', describes the events that led to the society of Nox as we know it, including the origins of vallen.",
-							"Once I start my writing career as an editor, I would take good care to make sure that such absurb stories like that never enter the literature battlefield, that story is an insult to the amazing history of Nox.",
-							"Aside from the fact that it is a complete abomination from a literary perspective, I have come to the conclusion that 'Dawn of Nox' is a fabrication, and an attempt to cover up the truth.",
-							"A wild statement, but of all the piles of evidence I have to support this, the crutch of my argument..."
+							"The story I just told and have just recently named 'Dawn of Nox', describes the events that led to the society of Nox as we know it, including the origins of vallen.",
+							"Once I start my writing career as an editor, I would take good care to make sure that such absurb stories like that never be permitted into any form of library, that story is an insult to the amazing history of Nox.",
+							"Aside from the fact that it is a complete abomination from a literary perspective, 'Dawn of Nox' is a fabrication.",
+							"Quite a wild statement to make, but the original story has a gaping plothole that renders it susceptible to suspicious .",
+							"And that plothole..."
 						];
 					
 						if !(CarvalineOrbIntroCutscene_LavenderTalk_Intro_TalkStarted)
 						{
-							CutsceneText(_text, "Lavender", TEXTBOX_POS.TOP, ft_Lavender);
+							CarvalineOrbIntroCutscene_LavenderSpeech = CutsceneText(_text, "Lavender", TEXTBOX_POS.TOP, ft_Lavender);
 							with (obj_Player)
 							{
 								image_xscale = -1;
@@ -197,6 +201,21 @@ switch(CarvalineOrbIntroCutscene_Stage)
 						else if (!instance_exists(obj_Text))
 						{
 							CarvalineOrbIntroCutscene_LavenderSpeech_Stage = CARVALINEORBINTROCUTSCENE_LAVENDERSPEECH.APPROACH_PEDESTAL;
+						}
+						
+						else 
+						{
+							if (CarvalineOrbIntroCutscene_LavenderSpeech.TextBox_Page >= 0 && CarvalineOrbIntroCutscene_LavenderSpeech.TextBox_Page < 2)
+							{
+								CarvalineOrbIntroCutscene_LavenderSpeech.TextBox_TextSkippable = false;
+								CarvalineOrbIntroCutscene_LavenderSpeech.TextBox_CharIncrease = 0.5;
+							}
+							else
+							{
+								CarvalineOrbIntroCutscene_LavenderSpeech.TextBox_TextSkippable = true;
+								CarvalineOrbIntroCutscene_LavenderSpeech.TextBox_CharIncrease = 1;
+							}
+							
 						}
 						
 					#endregion
@@ -219,6 +238,12 @@ switch(CarvalineOrbIntroCutscene_Stage)
 							layer_sprite_alpha(CarvalineOrbIntroCutscene_LavenderTalk_LavenderSprite, 1);
 							layer_sprite_x(CarvalineOrbIntroCutscene_LavenderTalk_LavenderSprite, 1600);
 							layer_sequence_destroy(CarvalineOrbIntroCutscene_LavenderTalk_ApproachPedestal_Sequence);
+							with (obj_CarvalinePedestal)
+							{
+							//	sprite_index = spr_CarvalinePedestal_FlashOrbs;
+							}
+							
+							CreateParticleSystem(ps_CarvalineOrbFlash, "Shine", 1696, 352);
 							CarvalineOrbIntroCutscene_LavenderSpeech_Stage = CARVALINEORBINTROCUTSCENE_LAVENDERSPEECH.EXPLAIN_CARDINAL;
 						}
 					
@@ -233,10 +258,15 @@ switch(CarvalineOrbIntroCutscene_Stage)
 					
 						var _text = 
 						[
-							"Is the very existence of THIS, the Carvaline Pedestal, specifically, the Carvaline Orbs wedged inside them.",
-							"These things completely perplex me. What are they? Where did they come from? Who created them? And for what purpose?",
-							"The only thing I know is that they hold tremendous power, and that it is the duty of Cardinal to guard them.",
-							"...",
+							"Is the very existence of THESE. The 'Carvaline Orbs' that are wedged into the 'Carvaline Pedestal'.",
+							"Out of all of the previous Cardinals within the past millenia, not a single one in recorded history has a concrete idea of what these objects are",
+							"They did not know what they were, where they came from, who made them, and nor for what purpose",
+							"All that is certain is that it is the Cardinals duty to guard these things.",
+							"The power of the orbs can also be felt throughout Valnyx Shrine, as if its attempting to impose its will onto us.",
+							"A scary thought isn't it?",
+							"That your thoughts may not be your own",
+							"I believe there is nothing more horrifying in this world than that.",
+							"Yes...nothing else..."
 						];
 						
 						//Have Lavender start talking
@@ -283,9 +313,10 @@ switch(CarvalineOrbIntroCutscene_Stage)
 					
 						var _text =
 	 					[
-							"Of course, I am no fan of happy endings, I prefer anything between bittersweet to tragic, so I spend my time uncovering the truth.",
+							"Since over 18 years ago, I have spent my time uncovering the true ending, I am no fan of happy endings afterall", 
+							"I prefer anything between bittersweet to tragic",
 							"History truly is fascinating is it not?",
-							"The idea of discovering the past myself excites me, it makes me feel like a child exploring their backyard."
+							"The idea of discovering the past myself excited me, it made me feel like a child exploring their backyard."
 						];
 					
 						if !(CarvalineOrbIntroCutscene_LavenderTalk_ExplainCardinalMore_StartedTalk)
@@ -332,7 +363,7 @@ switch(CarvalineOrbIntroCutscene_Stage)
 					
 						var _text = 
 						[
-							"Moving on from the plot/lore important stuff, we must return to the surface at once.",
+							"Moving on from the...'plot' important stuff, we must return to the surface at once.",
 							"We can no way let you get away with becoming Cardinal without a nice ceremony can me now?",
 							"The ceremony will be in Noctis City, to get there, go back to the main floor, and head left.",
 							"We are going to have one heaven of a time, so take care not to be tardy!"

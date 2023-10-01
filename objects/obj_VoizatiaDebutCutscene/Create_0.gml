@@ -1,5 +1,8 @@
 /// @description
 
+SetSpawnpoint(1888, 1782, Room_DarkShrineBasementStairs);
+SaveGame();
+
 enum VOIZATIADEBUT 
 {
 	ROSE_ENTER, //Rose enters the scene

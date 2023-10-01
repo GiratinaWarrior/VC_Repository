@@ -166,7 +166,7 @@
                 {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_NPC","path":"objects/obj_NPC/obj_NPC.yy",},"propertyId":{"name":"NPC_CanFloat","path":"objects/obj_NPC/obj_NPC.yy",},"value":"True",},
                 {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_NPC","path":"objects/obj_NPC/obj_NPC.yy",},"propertyId":{"name":"ySpeed","path":"objects/obj_NPC/obj_NPC.yy",},"value":"0",},
                 {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_NPC","path":"objects/obj_NPC/obj_NPC.yy",},"propertyId":{"name":"NPC_BounceSpeed","path":"objects/obj_NPC/obj_NPC.yy",},"value":"0.5",},
-                {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_NPC","path":"objects/obj_NPC/obj_NPC.yy",},"propertyId":{"name":"NPC_Amplitude","path":"objects/obj_NPC/obj_NPC.yy",},"value":"50",},
+                {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_NPC","path":"objects/obj_NPC/obj_NPC.yy",},"propertyId":{"name":"NPC_BounceDistance","path":"objects/obj_NPC/obj_NPC.yy",},"value":"50",},
                 {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_NPC","path":"objects/obj_NPC/obj_NPC.yy",},"propertyId":{"name":"SpinSpeed","path":"objects/obj_NPC/obj_NPC.yy",},"value":"5",},
               ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":832.0,"y":640.0,},
           ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},

@@ -39,7 +39,7 @@ switch(VoizatiaDebut_State)
 	
 		#region Voizatia Talk First
 			
-			SetRoomAudio_Music_Default(music_VoizatiaEncounterTheme);
+			SetRoomAudio_Music_Default(music_VoizatiaEncounterThemeV2);
 			
 			var _text = 
 			[
@@ -256,6 +256,10 @@ switch(VoizatiaDebut_State)
 			}
 			else if (layer_sequence_is_finished(VoizatiaDebut_VoizatiaExit_Sequence))
 			{
+				with (obj_CarvalinePedestal)
+				{
+					sprite_index = spr_CarvalinePedestal_Empty;
+				}
 				layer_sequence_destroy(VoizatiaDebut_VoizatiaExit_Sequence);
 				VoizatiaDebut_State = VOIZATIADEBUT.LAVENDER_MOVE;
 			}
@@ -449,7 +453,7 @@ switch(VoizatiaDebut_State)
 			
 			SetRoomAudio_Music_Default(music_DarkShrineBasementTheme);
 			
-			PlayerHeal();
+			PlayerFullHeal();
 			
 			SetSpawnpoint(256 + 960, 190 + 270, Room_DarkShrineBasementPedestal);
 			

@@ -46,6 +46,13 @@ function TransitionFinished()
 {
 	layer_sequence_destroy(self.elementID);
 	global.MidTransition = false;
+	with (obj_Player)
+	{
+		if !(RoomIsCutscene)
+		{
+			hascontrol = true;
+		}
+	}
 }
 
 //This function warps the player to another room when it touches a warp object
@@ -55,7 +62,7 @@ function TransitionFinished()
 ///@param ExitSequence
 ///@param EnterSequence
 ///@param RoomIsCutscene
-function PlayerTransition(_targetRoom, _targetX, _targetY, _exitSeq, _enterSeq, _roomIsCutscene = false)
+function PlayerTransition(_targetRoom, _targetX, _targetY, _exitSeq, _enterSeq, _roomIsCutscene = false, _movingUp = false)
 {
 	//Access the player object
 	with (obj_Player)
@@ -68,6 +75,11 @@ function PlayerTransition(_targetRoom, _targetX, _targetY, _exitSeq, _enterSeq, 
 		
 		//Check if the next room is a cutscene
 		RoomIsCutscene = _roomIsCutscene;
+		
+		if (_movingUp && !global.MidTransition)
+		{
+			y += 1000;
+		}
 		
 	}//end access player
 	

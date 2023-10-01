@@ -22,3 +22,11 @@ else
 	SetSpawnpoint();
 	SaveGame();
 }
+
+if (global.VoizatiaDebuted)
+{
+	with (obj_CarvalinePedestal)
+	{
+		sprite_index = spr_CarvalinePedestal_Empty;
+	}
+}

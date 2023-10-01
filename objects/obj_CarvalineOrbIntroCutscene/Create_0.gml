@@ -23,6 +23,7 @@ enum CARVALINEORBINTROCUTSCENE_LAVENDERSPEECH
 
 CarvalineOrbIntroCutscene_Stage = 0;
 CarvalineOrbIntroCutscene_LavenderSpeech_Stage = 0;
+CarvalineOrbIntroCutscene_LavenderSpeech = noone;
 
 //------------------------Start Talk Stage-----------------//
 CarvalineOrbIntroCutscene_Start_TextCreated = false;

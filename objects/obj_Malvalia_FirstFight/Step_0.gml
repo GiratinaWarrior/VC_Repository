@@ -118,6 +118,7 @@ switch(Malvalia_FirstFight_CurrentState)
 						
 						var _createBlackGeyserY = 476;
 						Malvalia_FirstFight_BlackGeyser_ConjureParticle = CreateParticleSystem(ps_Malvalia_BlackGeyser_Charge, "Black_Geyser", _createBlackGeyserX, _createBlackGeyserY, false);
+						audio_play_sound(sound_BlackGeyser_Charge, 100, false);
 						
 						//Create a Black Geyser
 						TimeSourceCreateAndStart(Malvalia_FirstFight_BlackGeyser_ConjureTime, MalvaliaBossBattle_BlackGeyser, [_createBlackGeyserX, _createBlackGeyserY], 1);

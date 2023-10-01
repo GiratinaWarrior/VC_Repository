@@ -22,6 +22,7 @@ CardinalFamilyCongrats_EnterSequenceElm = noone;
 //------------------Talk Stage VARIABLES------------------//
 CardinalFamilyCongrats_TalkStarted = false;
 CardinalFamilyCongrats_TalkLavenderSprite = noone;
+CardinalFamilyCongrats_Speech = noone;
 
 //------------------Fly Exit Stage VARIABLES--------------//
 CardinalFamilyCongrats_ExitSequenceCreated = false;

@@ -3,3 +3,4 @@
 targetIsCutScene = false;
 ExitSequence = seq_FadeOut;
 EnterSequence = seq_FadeIn;
+RoomWarp_MovingUp = false;

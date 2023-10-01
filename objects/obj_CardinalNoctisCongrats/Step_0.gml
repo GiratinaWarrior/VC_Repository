@@ -108,6 +108,17 @@ switch(CardinalNoctisCongrats_State)
 			{
 				CardinalNoctisCongrats_AudienceAssemble_Sequence = layer_sequence_create("Residents", 656, 530, seq_CardinalNoctisCongrats_AudienceAssemble);	
 				obj_Player.image_xscale = 1;
+				with (obj_Player)
+				{
+					x = round(x);
+					y = round(y);
+					image_xscale = round(image_xscale);
+				}
+				with (obj_Camera)
+				{
+					x = round(x);
+					y = round(y);
+				}
 				CardinalNoctisCongrats_AudienceAssemble_SequenceCreated = true;
 			} 
 			else if (layer_sequence_is_finished(CardinalNoctisCongrats_AudienceAssemble_Sequence))
@@ -395,7 +406,7 @@ switch(CardinalNoctisCongrats_State)
 				"Rose! You and I will head for Valnyx Shrine, the source",
 				"That explosion came from a Vallen Spell, in other words...",
 				"Valnyx Shrine is under attack!",
-				"I refuse to accept that this is the work of that insulting story, but I cannot ignore the possibility",
+				"And the one time that it is unguarded, how skeptical...",
 				"Onwards my little warrior, haste makes no waste!"
 			];
 		
@@ -457,6 +468,8 @@ switch(CardinalNoctisCongrats_State)
 			global.CardinalNoctisCongrats_Cutscene_Seen = true;
 			
 			global.ValnyxShrineUnderAttack_Active = true;
+			
+			SetSpawnpoint(obj_Player.x, obj_Player.y);
 			
 			SaveGame();
 

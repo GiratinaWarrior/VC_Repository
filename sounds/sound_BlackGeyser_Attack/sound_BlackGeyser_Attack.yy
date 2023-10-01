@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 2.498312,
+  "duration": 1.831167,
   "parent": {
     "name": "Malvalia",
     "path": "folders/Sounds/Sound Effects/Enemy/EnemyAttacks/Boss/Malvalia.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "sound_BlackGeyser_Attack.ogg",
+  "soundFile": "sound_BlackGeyser_Attack.wav",
   "type": 0,
-  "volume": 0.3,
+  "volume": 0.5,
 }

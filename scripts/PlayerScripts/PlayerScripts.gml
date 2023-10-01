@@ -311,6 +311,7 @@ function PlayerState_NightNight(){
 		{
 			xSpeed = 0;
 			image_index = 0;
+			image_speed = 1;
 			sprite_index = spr_PlayerNightNight_Close;
 			NightNight_Started = true;
 		}
@@ -490,4 +491,10 @@ function PlayerRestoreVallen(_restoreAmount = global.MaxVallen - global.Vallen)
 function PlayerDepleteVallen(_depleteAmount)
 {
 	global.Vallen -= _depleteAmount;
+}
+
+function PlayerFullHeal()
+{
+	global.Health = global.MaxHealth;
+	global.Vallen = global.MaxVallen;
 }

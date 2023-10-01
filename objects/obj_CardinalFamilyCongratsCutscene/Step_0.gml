@@ -43,6 +43,8 @@ switch(CardinalFamilyCongrats_Stage)
 				layer_sequence_destroy(CardinalFamilyCongrats_EnterSequenceElm);
 			}
 		
+			
+			
 			//Lavenders speech
 			var _text = 
 			[
@@ -51,9 +53,8 @@ switch(CardinalFamilyCongrats_Stage)
 				"So congratulations Rose-darling, you are now officially the Cardinal of Nox.",
 				"As for what you do, I'll explain that right now.",
 				"And for the record, you may not 'skip my dialogue' or however you word it, this is very important.",
-				"Do not",
-				"...",
-				"You are doing it right now are you not?",
+				"Do not.",
+				"I will be taking away your skip dialogue priviledges now.",
 				"Rose-darling. Listen.",
 				"The duty of a Cardinal, is to act as a guardian to the Noxians, protecting them, and guiding them.",
 				"At least, that's what everyone outside of this shrine knows, but there is one more thing that a Cardinal is responsible for",
@@ -62,7 +63,7 @@ switch(CardinalFamilyCongrats_Stage)
 			//If Lavender hasn't started talking, TALK
 			if (!CardinalFamilyCongrats_TalkStarted)
 			{
-				CutsceneText(_text, "Lavender", TEXTBOX_POS.BOTTOM, ft_Lavender);
+				CardinalFamilyCongrats_Speech = CutsceneText(_text, "Lavender", TEXTBOX_POS.BOTTOM, ft_Lavender);
 				CardinalFamilyCongrats_TalkLavenderSprite = layer_sprite_create(layer, x + 145, y - 16, spr_Lavender_Idle);
 				CardinalFamilyCongrats_TalkStarted = true;
 			}
@@ -71,6 +72,12 @@ switch(CardinalFamilyCongrats_Stage)
 			{
 				//Move on to the fly away stage
 				CardinalFamilyCongrats_Stage = CARDINALFAMILYCONGRATSCUTSCENE_STAGE.LAVENDER_FLY_EXIT;
+			}
+			
+			else if (CardinalFamilyCongrats_Speech.TextBox_Page >= 4)
+			{
+				CardinalFamilyCongrats_Speech.TextBox_TextSkippable = false;
+				CardinalFamilyCongrats_Speech.TextBox_CharIncrease = 0.5;
 			}
 			
 		#endregion
@@ -188,7 +195,7 @@ switch(CardinalFamilyCongrats_Stage)
 		
 			global.CardinalCongratulation_Family = true
 			
-			PlayerHeal();
+			PlayerFullHeal();
 			
 			SaveGame();
 		

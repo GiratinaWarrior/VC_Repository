@@ -12,7 +12,7 @@ switch (JestAftermathCutscene_State)
 		
 		#region Jest Talk Self
 		
-		//	SetRoomAudio_Music_Default(blanksound);
+			SetRoomAudio_Music_Default(blanksound);
 		
 			var _text = 
 			[
@@ -74,7 +74,7 @@ switch (JestAftermathCutscene_State)
 			
 		#region Jest Talk First
 		
-		//	SetRoomAudio_Music_Default(music_JestEncounterTheme);
+			SetRoomAudio_Music_Default(music_JestEncounterTheme);
 		
 			var _text = 
 			[	
@@ -122,6 +122,8 @@ switch (JestAftermathCutscene_State)
 	case JESTAFTERMATHCUTSCENE.JEST_UNDERSTAND_SITUATION:
 		
 		#region Jest Understand Situation
+			
+			SetRoomAudio_Music_Default(blanksound);
 			
 			var _text = 
 			[	
@@ -203,6 +205,8 @@ switch (JestAftermathCutscene_State)
 		
 		#region Jest Good Luck
 			
+			SetRoomAudio_Music_Default(music_JestEncounterTheme);
+			
 			var _text = 
 			[
 				"I would love to have myself an amazing adventure with you",
@@ -238,6 +242,8 @@ switch (JestAftermathCutscene_State)
 			obj_Player.hascontrol = true;
 			
 			global.JestTalkedTo_PrologueChapterAftermath = true;
+			
+			SetRoomAudio_Music_Default(music_NoctisCityTheme);
 			
 			SetSpawnpoint(1776, 1728);
 			

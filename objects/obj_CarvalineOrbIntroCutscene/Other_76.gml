@@ -35,10 +35,12 @@ if (event_data [? "event_type"] == "sequence event")
 			[
 				"One night, the sisters shared a strange dream. A red figure appeared before them",
 				"The sisters were startled, but the red figure spoke to them",
-				"''Childs...me childs...fear no...come for peace...for you niceness...gift...'"
+				"'Childs...me childs...fear no...come for peace...for you niceness...gift...'"
 			]
 			
-			CutsceneText(_text, "", 800, _textFont, _textCol, blanksprite, false);
+			var LongAgoText = CutsceneText(_text, "", 800, _textFont, _textCol, blanksprite, false);
+			
+			LongAgoText.TextBox_CharIncrease = 0.5;
 		
 			break;//end meet god
 			
@@ -51,7 +53,9 @@ if (event_data [? "event_type"] == "sequence event")
 				"This is what they called vallen"
 			]
 			
-			CutsceneText(_text, "", 700, _textFont, _textCol, blanksprite, false);
+			var LongAgoText = CutsceneText(_text, "", 700, _textFont, _textCol, blanksprite, false);
+			
+			LongAgoText.TextBox_CharIncrease = 0.5;
 			
 			break;//end gained power
 			
@@ -63,7 +67,10 @@ if (event_data [? "event_type"] == "sequence event")
 				"Cardinia and Valiana used the power of vallen to make the world a better place",
 				"The eternal dark world of Nox had found itself two new stars" 
 			]
-			CutsceneText(_text, "", 800, _textFont, _textCol, blanksprite, false);
+			
+			var LongAgoText = CutsceneText(_text, "", 800, _textFont, _textCol, blanksprite, false);
+			
+			LongAgoText.TextBox_CharIncrease = 0.5;
 		
 			break;//end use power
 			
@@ -76,7 +83,10 @@ if (event_data [? "event_type"] == "sequence event")
 				"Eventually, the sisters had the respect of the Noxians, who viewed them as angels",
 				"Cardinia and Valiana were crowned as the Queens of Nox, and lived their lives luxuriously and happily"
 			]
-			CutsceneText(_text, "", 800, _textFont, _textCol, blanksprite, false);
+			
+			var LongAgoText = CutsceneText(_text, "", 800, _textFont, _textCol, blanksprite, false);
+			
+			LongAgoText.TextBox_CharIncrease = 0.5;
 			
 			break;//end crowned
 			

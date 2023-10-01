@@ -34,6 +34,10 @@
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"TextBox_UIPosition","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"TEXTBOX_POS.TOP","varType":0,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"myTextbox","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"noone","varType":5,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"EntityAdditionFunc","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"EmptyFunction","varType":0,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"TextMarker_OffsetX","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0","varType":0,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"TextMarker_OffsetY","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"-sprite_yoffset - 10","varType":0,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"TextBox_Font","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"ft_NPC","varType":5,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"Name","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"\"\"","varType":2,},
   ],
   "solid": false,
   "spriteId": {

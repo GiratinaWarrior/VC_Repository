@@ -92,7 +92,8 @@ function ShrineSoldierState_Defeat(){
 					Speech = _text;
 					TextBox_UIPosition = TEXTBOX_POS.TOP;
 					Name = other.Name;
-					Entity_Marker.x = x - (image_xscale * 10);
+					Entity_Marker.Marker_OffsetX = image_xscale * -10;
+					TalkRange = 100;
 					/*
 					with(instance_create_layer((image_xscale * 5), y - sprite_yoffset, layer, obj_RightClickMarker))
 					{

@@ -11,6 +11,7 @@ function SaveGame()
 		SpawnX : global.SpawnX,
 		SpawnY : global.SpawnY,
 		PlayerHealth : global.Health,
+		PlayerVallen : global.Vallen,
 		FieldOrbCollected : global.FieldOrb,
 		OceanOrbCollected : global.OceanOrb,
 		TundraOrbCollected : global.TundraOrb,
@@ -61,6 +62,7 @@ function LoadSave()
 		global.SpawnX = _loadData.SpawnX;
 		global.SpawnY = _loadData.SpawnY;
 		global.Health = _loadData.PlayerHealth;
+		global.Vallen = _loadData.PlayerVallen;
 		global.FieldOrb = _loadData.FieldOrbCollected;
 		global.OceanOrb = _loadData.OceanOrbCollected;
 		global.TundraOrb = _loadData.TundraOrbCollected;

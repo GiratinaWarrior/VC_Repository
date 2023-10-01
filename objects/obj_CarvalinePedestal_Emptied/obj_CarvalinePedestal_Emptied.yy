@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_CarvalinePedestal_Empty",
-    "path": "sprites/spr_CarvalinePedestal_Empty/spr_CarvalinePedestal_Empty.yy",
+    "name": "spr_CarvalinePedestal_Full",
+    "path": "sprites/spr_CarvalinePedestal_Full/spr_CarvalinePedestal_Full.yy",
   },
   "spriteMaskId": null,
   "visible": true,

@@ -117,8 +117,9 @@
     {"name":"ShrineSoldierSign_Taunt","path":"rooms/Room_ShrineTutorial_VallenHeal/Room_ShrineTutorial_VallenHeal.yy",},
     {"name":"inst_19C329FE","path":"rooms/Room_ShrineTutorial_VallenHeal/Room_ShrineTutorial_VallenHeal.yy",},
     {"name":"inst_41B23DD9","path":"rooms/Room_ShrineTutorial_VallenHeal/Room_ShrineTutorial_VallenHeal.yy",},
-    {"name":"inst_4952A11F","path":"rooms/Room_ShrineTutorial_VallenHeal/Room_ShrineTutorial_VallenHeal.yy",},
     {"name":"Controls_TeachHeal","path":"rooms/Room_ShrineTutorial_VallenHeal/Room_ShrineTutorial_VallenHeal.yy",},
+    {"name":"Teach_NightNight","path":"rooms/Room_ShrineTutorial_VallenHeal/Room_ShrineTutorial_VallenHeal.yy",},
+    {"name":"ScrollSign_JestAssist","path":"rooms/Room_ShrineTutorial_VallenHeal/Room_ShrineTutorial_VallenHeal.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -244,8 +245,9 @@
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Signs","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"ShrineSoldierSign_Taunt","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_ScrollSign","path":"objects/obj_ScrollSign/obj_ScrollSign.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1536.0,"y":256.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4952A11F","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Entity","path":"objects/obj_Entity/obj_Entity.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":544.0,"y":256.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"Controls_TeachHeal","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_TeachControls","path":"objects/obj_TeachControls/obj_TeachControls.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":224.0,"y":96.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"Controls_TeachHeal","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_TeachControls","path":"objects/obj_TeachControls/obj_TeachControls.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":160.0,"y":96.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"Teach_NightNight","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_ScrollSign","path":"objects/obj_ScrollSign/obj_ScrollSign.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":192.0,"y":192.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"ScrollSign_JestAssist","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_ScrollSign","path":"objects/obj_ScrollSign/obj_ScrollSign.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":512.0,"y":256.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"BackShrineTutorialTiles","depth":500,"effectEnabled":true,"effectType":"_filter_tintfilter","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
         {"name":"g_TintCol","type":1,"value":"#FF4C7F7B",},

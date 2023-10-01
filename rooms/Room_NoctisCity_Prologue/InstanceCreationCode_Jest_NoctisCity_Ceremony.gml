@@ -1,4 +1,4 @@
-sprite_index = spr_Jest_Idle;
+TextBox_Font = ft_Jest;
 
 Name = "Jest";
 
