@@ -26,7 +26,7 @@
   "origin": 4,
   "parent": {
     "name": "TitleTextures",
-    "path": "folders/Sprites/Textures/GeneralTextures/TitleTextures.yy",
+    "path": "folders/Sprites/PhysicalEntities/General/TitleTextures.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

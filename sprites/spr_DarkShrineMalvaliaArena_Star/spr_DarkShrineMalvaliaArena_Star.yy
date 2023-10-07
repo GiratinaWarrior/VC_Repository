@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Walls",
-    "path": "folders/Sprites/Textures/ShrineTextures/Walls.yy",
+    "path": "folders/Sprites/PhysicalEntities/Shrine/Walls.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -329,6 +329,7 @@ switch(CardinalNoctisCongrats_State)
 			if (!CardinalNoctisCongrats_JestConfirm_TalkStarted)
 			{
 				CutsceneText(_text, "Jest", TEXTBOX_POS.BOTTOM, ft_Jest);
+				audio_play_sound(sound_JestLaugh, 300, false);
 				CardinalNoctisCongrats_JestConfirm_TalkStarted = true;
 			}
 			else if (!instance_exists(obj_Text))

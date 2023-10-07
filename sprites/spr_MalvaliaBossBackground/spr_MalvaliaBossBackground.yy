@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "BattleTextures",
-    "path": "folders/Sprites/Textures/BattleTextures.yy",
+    "name": "Battle",
+    "path": "folders/Sprites/PhysicalEntities/Battle.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

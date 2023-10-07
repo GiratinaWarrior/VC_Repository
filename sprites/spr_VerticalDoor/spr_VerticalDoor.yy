@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "MysticasiaTown",
-    "path": "folders/Sprites/Textures/TownTextures/MysticasiaTown.yy",
+    "path": "folders/Sprites/PhysicalEntities/Town/MysticasiaTown.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

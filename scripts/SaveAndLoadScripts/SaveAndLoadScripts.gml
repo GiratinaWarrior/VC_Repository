@@ -49,7 +49,7 @@ function SaveGame()
 function LoadSave()
 {
 
-	if (file_exists("SaveGame.save"))
+	if (SaveExists())
 	{
 		//Get the save data
 		var _buffer = buffer_load("SaveGame.save");
@@ -92,8 +92,22 @@ function LoadSave()
 // This function deletes a save file
 function DeleteSave()
 {
-	if (file_exists("SaveGame.save"))
+	if (SaveExists())
 	{
 		file_delete("SaveGame.save");
+	}
+}
+
+/// SaveExists()
+/// this function searches for a savefile, and returns true if it exists, and false if it doesnt
+function SaveExists()
+{
+	if (file_exists("SaveGame.save"))
+	{
+		return true;
+	}
+	else
+	{
+		return false;
 	}
 }

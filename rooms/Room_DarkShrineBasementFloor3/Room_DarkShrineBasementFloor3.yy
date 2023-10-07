@@ -189,7 +189,16 @@
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Backtiles","depth":700,"effectEnabled":true,"effectType":"_filter_tintfilter","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":true,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
         {"name":"g_TintCol","type":1,"value":"#FF7F7F7F",},
       ],"tiles":{"SerialiseHeight":17,"SerialiseWidth":30,"TileCompressedData":[
--510,0,],"TileDataFormat":1,},"tilesetId":{"name":"tiles_DarkShrineMainTileSet","path":"tilesets/tiles_DarkShrineMainTileSet/tiles_DarkShrineMainTileSet.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+-4,0,1,32,-17,0,2,40,8,-4,47,1,24,-5,0,1,32,-11,0,2,35,45,-5,0,2,40,8,-3,47,1,
+24,-5,0,1,32,-10,0,2,35,39,-7,0,5,40,8,47,47,24,-5,0,1,32,-9,0,2,35,39,-9,0,4,
+16,47,4,38,-5,0,1,32,-8,0,2,34,26,-9,0,4,34,1,4,38,-6,0,1,32,-7,0,6,34,1,2,
+20,20,36,-5,0,4,34,1,4,38,-7,0,1,32,-5,0,3,34,20,5,-3,28,10,8,2,20,36,0,0,34,
+1,47,24,-8,0,1,32,-5,0,3,16,4,38,-3,0,10,40,8,47,2,20,20,1,47,4,38,-4,0,5,20,
+36,0,0,32,-4,0,3,34,5,38,-5,0,1,16,-5,47,2,4,38,-5,0,5,47,24,0,0,32,-3,0,3,
+34,1,24,-6,0,1,16,-4,47,2,4,38,-6,0,5,47,2,20,20,3,-3,20,3,1,47,2,-6,20,1,1,
+-3,47,2,4,38,-7,0,-14,47,3,4,28,8,-4,47,1,24,-8,0,-6,47,1,4,-7,28,3,38,0,40,-4,
+28,1,38,-8,0,-4,47,3,4,28,25,-23,0,-4,47,5,24,0,41,33,45,-21,0,6,47,4,28,28,30,45,
+-24,0,2,47,24,-28,0,],"TileDataFormat":1,},"tilesetId":{"name":"tiles_DarkShrineMainTileSet","path":"tilesets/tiles_DarkShrineMainTileSet/tiles_DarkShrineMainTileSet.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":800,"effectEnabled":true,"effectType":"_filter_greyscale","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":true,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
         {"name":"g_Intensity","type":0,"value":"1",},
       ],"spriteId":{"name":"spr_ShrineBrickYellowBasement","path":"sprites/spr_ShrineBrickYellowBasement/spr_ShrineBrickYellowBasement.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},

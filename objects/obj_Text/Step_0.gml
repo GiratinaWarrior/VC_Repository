@@ -8,6 +8,7 @@ if (global.Key_Talk)
 	//If the text has finished typing itself
 	if (TextBox_CharCount >= string_length(TextBox_Text[TextBox_Page]))
 	{
+		
 		//If there is another page of text to display, move to the next page	
 		if (TextBox_Page + 1 < array_length(TextBox_Text)){
 			TextBox_Page++;

@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "OceanTextures",
-    "path": "folders/Sprites/Textures/OceanTextures.yy",
+    "name": "Ocean",
+    "path": "folders/Sprites/PhysicalEntities/Ocean.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

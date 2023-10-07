@@ -56,6 +56,11 @@ if (TextBox_CharCount < string_length(TextBox_Text[TextBox_Page]))
 	TextBox_CharCount += TextBox_CharIncrease;
 }//end increase characters displayed
 
+if (TextBox_CharCount <= 1)
+{
+	audio_play_sound(sound_Select, 200, false);
+}
+
 //The section of the text to be displayed
 TextBox_TextSect = string_copy(TextBox_Text[TextBox_Page], 1, TextBox_CharCount); 
 

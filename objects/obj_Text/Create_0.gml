@@ -25,8 +25,6 @@ TextBox_CharCount = 0;
 //The rate the characters appear at
 TextBox_CharIncrease = 1;
 
-TextBox_TalkSpeed = 1;
-
 //The minimum distance the text can be from the textbox
 TextBox_BorderBuffer = 30;
 TextBox_BufferX = TextBox_BorderBuffer;

@@ -5,7 +5,7 @@
   "eventList": [],
   "managed": true,
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_Entity","path":"objects/obj_Entity/obj_Entity.yy",},"propertyId":{"name":"EntityAdditionFunc","path":"objects/obj_Entity/obj_Entity.yy",},"value":"ScrollSignBounce",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_Entity","path":"objects/obj_Entity/obj_Entity.yy",},"propertyId":{"name":"EntityAdditionFunc","path":"objects/obj_Entity/obj_Entity.yy",},"value":"ScrollSignReading",},
   ],
   "parent": {
     "name": "Sign",
@@ -37,8 +37,8 @@
   ],
   "solid": false,
   "spriteId": {
-    "name": "spr_SignPost",
-    "path": "sprites/spr_SignPost/spr_SignPost.yy",
+    "name": "spr_FlowerySignPost",
+    "path": "sprites/spr_FlowerySignPost/spr_FlowerySignPost.yy",
   },
   "spriteMaskId": null,
   "visible": true,

@@ -1,5 +1,6 @@
 GameOverMenu_Strive = function()
 {
+	audio_play_sound(sound_TitleScreenSelect, 400, false);
 	TransitionStart(global.Spawnpoint, seq_FadeOut, seq_FadeIn);
 	global.Health = global.MaxHealth;
 	SummonPlayer(global.SpawnX, global.SpawnY);
@@ -9,7 +10,7 @@ GameOverMenu_Strive = function()
 
 GameOverMenu_Surrender = function()
 {
-	game_end();
+	TransitionStart(Room_GameEnd, seq_FadeOut, seq_FadeIn);
 }
 
 MenuOptions_2DArray =

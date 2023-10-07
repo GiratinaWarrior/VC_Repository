@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Prologue",
-    "path": "folders/Sprites/Textures/ShrineTextures/Prologue.yy",
+    "path": "folders/Sprites/PhysicalEntities/Shrine/Prologue.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

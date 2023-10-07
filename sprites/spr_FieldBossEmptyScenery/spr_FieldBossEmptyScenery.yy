@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "FieldTextures",
-    "path": "folders/Sprites/Textures/FieldTextures.yy",
+    "name": "Field",
+    "path": "folders/Sprites/PhysicalEntities/Field.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

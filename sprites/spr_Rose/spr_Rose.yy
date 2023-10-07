@@ -26,7 +26,7 @@
   "origin": 7,
   "parent": {
     "name": "Flowers",
-    "path": "folders/Sprites/Textures/ShrineTextures/Flowers.yy",
+    "path": "folders/Sprites/PhysicalEntities/Shrine/Flowers.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

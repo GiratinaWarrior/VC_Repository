@@ -66,8 +66,8 @@
     "path": "folders/Tile Sets/Shrine/LightShrine.yy",
   },
   "spriteId": {
-    "name": "spr_ShrineHallTiles",
-    "path": "sprites/spr_ShrineHallTiles/spr_ShrineHallTiles.yy",
+    "name": "spr_ShrineBlueTiles",
+    "path": "sprites/spr_ShrineBlueTiles/spr_ShrineBlueTiles.yy",
   },
   "spriteNoExport": true,
   "textureGroupId": {

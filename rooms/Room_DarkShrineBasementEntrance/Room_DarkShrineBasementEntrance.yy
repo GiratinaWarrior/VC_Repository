@@ -107,7 +107,7 @@
 0,32,0,2,20,3,20,3,20,3,20,3,20,3,20,3,20,3,20,3,20,3,20,3,20,3,20,3,20,3,
 20,3,20,-90,47,],"TileDataFormat":1,},"tilesetId":{"name":"tiles_DarkShrineMainTileSet","path":"tilesets/tiles_DarkShrineMainTileSet/tiles_DarkShrineMainTileSet.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"resourceType":"GMRAssetLayer","resourceVersion":"1.0","name":"Door","assets":[
-        {"resourceType":"GMRSpriteGraphic","resourceVersion":"1.0","name":"graphic_4F9FF2F4","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":{"name":"graphic_4F9FF2F4","path":"rooms/Room_ShrineBasementEntrance/Room_ShrineBasementEntrance.yy",},"inheritItemSettings":false,"rotation":0.0,"scaleX":2.0,"scaleY":2.0,"spriteId":{"name":"spr_DarkShrineDoor","path":"sprites/spr_DarkShrineDoor/spr_DarkShrineDoor.yy",},"x":32.0,"y":224.0,},
+        {"resourceType":"GMRSpriteGraphic","resourceVersion":"1.0","name":"graphic_4F9FF2F4","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":{"name":"graphic_4F9FF2F4","path":"rooms/Room_ShrineBasementEntrance/Room_ShrineBasementEntrance.yy",},"inheritItemSettings":false,"rotation":0.0,"scaleX":2.0,"scaleY":2.0,"spriteId":{"name":"spr_DarkShrineBasementDoor","path":"sprites/spr_DarkShrineBasementDoor/spr_DarkShrineBasementDoor.yy",},"x":32.0,"y":224.0,},
       ],"depth":300,"effectEnabled":true,"effectType":"_filter_greyscale","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":true,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
         {"name":"g_Intensity","type":0,"value":"1",},
       ],"userdefinedDepth":false,"visible":true,},

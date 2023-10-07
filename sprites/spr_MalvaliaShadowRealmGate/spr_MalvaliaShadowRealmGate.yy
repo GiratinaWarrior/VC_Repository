@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 7,
   "parent": {
-    "name": "DoorsEtc",
-    "path": "folders/Sprites/Textures/ShrineTextures/DoorsEtc.yy",
+    "name": "Bosses",
+    "path": "folders/Sprites/Enemies/Bosses.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

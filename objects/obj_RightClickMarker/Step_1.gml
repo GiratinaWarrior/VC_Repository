@@ -7,6 +7,8 @@ if (!instance_exists(Creator) || Creator == noone)
 }
 else
 {
+	Marker_OffsetX = Creator.TextMarker_OffsetX;
+	Marker_OffsetY = Creator.TextMarker_OffsetY;
 	x = Creator.x + Marker_OffsetX;
 	y = Creator.y + Marker_OffsetY; 
 }

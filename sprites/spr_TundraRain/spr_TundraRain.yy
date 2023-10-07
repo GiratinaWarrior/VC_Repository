@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "TundraTextures",
-    "path": "folders/Sprites/Textures/TundraTextures.yy",
+    "name": "Tundra",
+    "path": "folders/Sprites/PhysicalEntities/Tundra.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

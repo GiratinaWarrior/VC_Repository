@@ -8,7 +8,9 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_Enemy","path":"objects/parent_Enemy/parent_Enemy.yy",},"propertyId":{"name":"EnemyVallenDropChance","path":"objects/parent_Enemy/parent_Enemy.yy",},"value":"1/3",},
+  ],
   "parent": {
     "name": "ShrineDummy",
     "path": "folders/Objects/Enemies/Shrine/ShrineDummy.yy",

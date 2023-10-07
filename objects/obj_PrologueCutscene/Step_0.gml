@@ -141,7 +141,9 @@ switch (PrologueCutscene_Stage)
 	
 	//End Stage: The room transitions to Roses's Room
 	case PROLOGUECUTSCENE.END:
-	
+		
+		SummonPlayer(128, 176);
+		
 		TransitionStart(Room_RoseRoom, seq_FadeOut, seq_FadeIn);
 		
 		break;

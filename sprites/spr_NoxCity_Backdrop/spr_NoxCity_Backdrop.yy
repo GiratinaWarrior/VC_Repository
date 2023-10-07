@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "BackdropAshes",
-    "path": "folders/Sprites/Textures/TownTextures/NoxCity/BackdropAshes.yy",
+    "path": "folders/Sprites/PhysicalEntities/Town/NoxCity/BackdropAshes.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

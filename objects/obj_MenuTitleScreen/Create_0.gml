@@ -7,6 +7,7 @@ TestPlayerRoom = Room_Testing;
 TitleMenu_NewGame = function()
 {
 	DeleteSave()
+	audio_play_sound(sound_TitleScreenSelect, 400, false);
 	TransitionStart(FirstPlayerRoom, seq_FadeOut, seq_FadeIn);
 }
 
@@ -15,12 +16,22 @@ TitleMenu_Continue = function()
 
 	#region New Load Save Mechanic
 		
+		audio_play_sound(sound_TitleScreenSelect, 400, false);
+		
 		LoadSave();
 	
-		TransitionStart(global.Spawnpoint, seq_FadeOut, seq_FadeIn);
-		SummonPlayer(global.SpawnX, global.SpawnY);
-		global.WarpTargetX = global.SpawnX;
-		global.WarpTargetY = global.SpawnY;
+		if (SaveExists())
+		{
+			TransitionStart(global.Spawnpoint, seq_FadeOut, seq_FadeIn);
+			SummonPlayer(global.SpawnX, global.SpawnY);
+			global.WarpTargetX = global.SpawnX;
+			global.WarpTargetY = global.SpawnY;
+		}
+		else
+		{
+			TransitionStart(FirstPlayerRoom, seq_FadeOut, seq_FadeIn);
+		}
+		
 		
 	#endregion
 		
@@ -29,7 +40,7 @@ TitleMenu_Continue = function()
 
 TitleMenu_Quit = function()
 {
-	game_end(); 
+	TransitionStart(Room_GameEnd, seq_FadeOut, seq_FadeIn);
 }
 
 TitleMenu_Testing = function()

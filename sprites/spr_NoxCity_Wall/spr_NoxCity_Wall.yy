@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Houseparts",
-    "path": "folders/Sprites/Textures/TownTextures/NoxCity/Houseparts.yy",
+    "path": "folders/Sprites/PhysicalEntities/Town/NoxCity/Houseparts.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

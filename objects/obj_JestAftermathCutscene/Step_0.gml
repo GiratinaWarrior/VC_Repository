@@ -12,7 +12,7 @@ switch (JestAftermathCutscene_State)
 		
 		#region Jest Talk Self
 		
-			SetRoomAudio_Music_Default(blanksound);
+		//	SetRoomAudio_Music_Default(blanksound);
 		
 			var _text = 
 			[
@@ -74,7 +74,7 @@ switch (JestAftermathCutscene_State)
 			
 		#region Jest Talk First
 		
-			SetRoomAudio_Music_Default(music_JestEncounterTheme);
+		//	SetRoomAudio_Music_Default(music_TitleTheme_Peaceful);
 		
 			var _text = 
 			[	
@@ -87,6 +87,7 @@ switch (JestAftermathCutscene_State)
 			if !(JestAftermathCutscene_JestTalkFirst_TalkStarted)
 			{
 				CutsceneText(_text, "Jest", _pos, _font);
+				audio_play_sound(sound_JestHuhuhu, 300, false);
 				JestAftermathCutscene_JestTalkFirst_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))
@@ -123,7 +124,7 @@ switch (JestAftermathCutscene_State)
 		
 		#region Jest Understand Situation
 			
-			SetRoomAudio_Music_Default(blanksound);
+	//		SetRoomAudio_Music_Default(blanksound);
 			
 			var _text = 
 			[	
@@ -205,7 +206,7 @@ switch (JestAftermathCutscene_State)
 		
 		#region Jest Good Luck
 			
-			SetRoomAudio_Music_Default(music_JestEncounterTheme);
+		//	SetRoomAudio_Music_Default(music_JestEncounterTheme);
 			
 			var _text = 
 			[
@@ -223,6 +224,7 @@ switch (JestAftermathCutscene_State)
 			if !(JestAftermathCutscene_JestGoodLuck_TalkStarted)
 			{
 				CutsceneText(_text, "Jest", _pos, _font);
+				audio_play_sound(sound_JestHuhuhu, 300, false);
 				JestAftermathCutscene_JestGoodLuck_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))

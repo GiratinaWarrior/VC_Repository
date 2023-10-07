@@ -16,6 +16,7 @@ switch(JestDebut_Stage)
 		if !(JestDebut_StartedOffscreenTalk)
 		{
 			CutsceneText(_text, "???", TEXTBOX_POS.BOTTOM, ft_Jest);
+			audio_play_sound(sound_JestHuhuhu, 300, false);
 			JestDebut_StartedOffscreenTalk = true;
 		}
 		
@@ -62,6 +63,7 @@ switch(JestDebut_Stage)
 		if !(JestDebut_EnterTalkStarted)
 		{
 			CutsceneText(_text, "Jest", TEXTBOX_POS.BOTTOM, ft_Jest);
+			audio_play_sound(sound_JestLaugh, 300, false);
 			JestDebut_EnterTalkStarted = true;
 		}
 	
@@ -122,6 +124,7 @@ switch(JestDebut_Stage)
 		if !(JestDebut_StartedExitTalk)
 		{
 			CutsceneText(_text, "Jest", TEXTBOX_POS.BOTTOM, ft_Jest);
+			audio_play_sound(sound_JestLaugh, 300, false);
 			JestDebut_StartedExitTalk = true;
 		}
 	
