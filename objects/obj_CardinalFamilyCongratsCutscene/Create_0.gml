@@ -2,6 +2,8 @@
 
 y += 4;
 
+obj_Player.hascontrol = false;
+
 //--------------------Stages of the Cutscene----------------//
 enum CARDINALFAMILYCONGRATSCUTSCENE_STAGE
 {

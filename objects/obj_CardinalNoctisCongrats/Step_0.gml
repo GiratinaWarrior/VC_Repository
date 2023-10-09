@@ -77,7 +77,9 @@ switch(CardinalNoctisCongrats_State)
 	case CARDINALNOCTISCONGRATS.LAVENDER_CALL_ASSEMBLY:
 	
 		#region Lavender Call Assembly
-	
+
+			SetRoomAudio_Music_Default(blanksound);
+
 			var _text = 
 			[
 				"Attention, all Residents of Noctis City, come forth for it is time",
@@ -139,7 +141,9 @@ switch(CardinalNoctisCongrats_State)
 	case CARDINALNOCTISCONGRATS.LAVENDER_SPEECH:
 	
 		#region Lavender Speech
-		
+			
+			SetRoomAudio_Music_Default(music_Credits);
+			
 			var _text = 
 			[
 				"My children of Nox, during my time as Cardinal, our life together has been wonderful and filled with peace", 
@@ -329,7 +333,7 @@ switch(CardinalNoctisCongrats_State)
 			if (!CardinalNoctisCongrats_JestConfirm_TalkStarted)
 			{
 				CutsceneText(_text, "Jest", TEXTBOX_POS.BOTTOM, ft_Jest);
-				audio_play_sound(sound_JestLaugh, 300, false);
+				//audio_play_sound(sound_JestLaugh, 300, false);
 				CardinalNoctisCongrats_JestConfirm_TalkStarted = true;
 			}
 			else if (!instance_exists(obj_Text))

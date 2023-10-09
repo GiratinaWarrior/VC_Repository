@@ -10,7 +10,7 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 204.98286,
+  "duration": 204.59102,
   "parent": {
     "name": "Battle",
     "path": "folders/Sounds/Music/Battle.yy",
@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "music_NightfallKnightTheme.mp3",
   "type": 0,
-  "volume": 0.5,
+  "volume": 0.7,
 }

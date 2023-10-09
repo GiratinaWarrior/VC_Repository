@@ -1,5 +1,7 @@
 /// @description Stages of the Cutscene
 
+obj_Player.hascontrol = false;
+
 switch(CardinalFamilyCongrats_Stage)
 {
 	//Enter Stage: Lavender will fly from above and land in front of Rose

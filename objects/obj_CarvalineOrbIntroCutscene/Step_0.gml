@@ -11,7 +11,7 @@ switch(CarvalineOrbIntroCutscene_Stage)
 	
 		#region Start Speak
 	
-			//SetRoomAudio_Music(blanksound);
+			obj_Player.hascontrol = false;
 	
 			//The text the Carvaline Pedestal
 			var _text = 
@@ -347,7 +347,7 @@ switch(CarvalineOrbIntroCutscene_Stage)
 						else if (layer_sequence_is_finished(CarvalineOrbIntroCutscene_LavenderTalk_ApproachExit_Sequence))
 						{
 							layer_sprite_alpha(CarvalineOrbIntroCutscene_LavenderTalk_LavenderSprite, 1);
-							layer_sprite_x(CarvalineOrbIntroCutscene_LavenderTalk_LavenderSprite, 1024);
+							layer_sprite_x(CarvalineOrbIntroCutscene_LavenderTalk_LavenderSprite, 1056);
 							layer_sequence_destroy(CarvalineOrbIntroCutscene_LavenderTalk_ApproachExit_Sequence);
 							CarvalineOrbIntroCutscene_LavenderSpeech_Stage = CARVALINEORBINTROCUTSCENE_LAVENDERSPEECH.EXIT_TALK;
 						}

@@ -151,9 +151,9 @@
 1,24,-4,0,14,32,0,0,34,1,4,28,12,28,8,47,0,40,25,-6,0,9,18,28,25,0,0,32,0,0,16,-3,47,4,2,20,20,1,-19,47,1,24,-4,0,14,17,20,20,5,28,25,0,44,0,40,28,0,0,44,-6,
 0,9,32,0,17,20,20,26,0,0,16,-26,47,1,24,-3,0,7,34,1,47,47,24,0,44,-14,0,9,17,20,1,47,47,2,20,20,1,-26,47,10,24,0,34,20,1,47,4,28,30,37,-15,0,3,40,28,8,-32,47,3,2,
 20,1,-3,47,5,24,0,0,41,45,-16,0,1,16,-38,47,1,24,-19,0,7,43,29,28,28,8,47,4,-33,28,1,38,-23,0,3,40,28,38,-403,0,],"TileDataFormat":1,},"tilesetId":{"name":"tiles_DarkShrineMainTileSet","path":"tilesets/tiles_DarkShrineMainTileSet/tiles_DarkShrineMainTileSet.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
-    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":800,"effectEnabled":true,"effectType":"_filter_greyscale","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":true,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
+    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":800,"effectEnabled":true,"effectType":"_filter_greyscale","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":true,"inheritLayerSettings":true,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
         {"name":"g_Intensity","type":0,"value":"1",},
-      ],"spriteId":{"name":"spr_ShrineBrickYellowBasement","path":"sprites/spr_ShrineBrickYellowBasement/spr_ShrineBrickYellowBasement.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
+      ],"spriteId":{"name":"spr_DarkShrineBrickYellowBasement","path":"sprites/spr_DarkShrineBrickYellowBasement/spr_DarkShrineBrickYellowBasement.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
   ],
   "parent": {
     "name": "DarkBasement",

@@ -325,19 +325,26 @@ function PlayerState_NightNight(){
 		if (sprite_index == spr_PlayerNightNight_Activate && image_index >= image_number - 1)
 		{
 			image_index = 0;
-			PlayerHeal(4);
-			PlayerDepleteVallen(4);
+			PlayerHeal(NightNight_HealAmount);
+			PlayerDepleteVallen(NightNight_VallenUse);
 			audio_play_sound(sound_Heal, 300, false, 1);
 			sprite_index = spr_PlayerNightNight_Open;
 		}
 		
 		if (sprite_index == spr_PlayerNightNight_Open)
 		{
+			y-=0.1;
 			PlayerState = PLAYERSTATE.NEUTRAL;
 		}
 		
 	}//end if Health is less than Max Health
-
+	
+	else
+	{
+		y-=0.1;
+		PlayerState = PLAYERSTATE.NEUTRAL;
+	}
+	
 }//end PlayerState_NightNight()
 
 //function for the players hurt state
@@ -464,6 +471,9 @@ function PlayerTakenDamage(){
 
 function PlayerHeal(_healAmount = global.MaxHealth - global.Health)
 {
+	
+	CreateParticleSystem(ps_PlayerHeal, layer, x, y + 16);
+	
 	if (global.Health + _healAmount < global.MaxHealth)
 	{
 		global.Health += _healAmount;	
@@ -477,6 +487,15 @@ function PlayerHeal(_healAmount = global.MaxHealth - global.Health)
 
 function PlayerRestoreVallen(_restoreAmount = global.MaxVallen - global.Vallen)
 {
+	
+	if (global.Vallen < global.MaxVallen)
+	{
+		with (obj_Player)
+		{
+			VallenParticles = CreateParticleSystem(ps_PlayerRestoreVallen, layer, x, y);
+		}	
+	}
+	
 	if (global.Vallen + _restoreAmount < global.MaxVallen)
 	{
 		global.Vallen += _restoreAmount;	

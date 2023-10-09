@@ -8,6 +8,8 @@ switch(JestDebut_Stage)
 	//While Jest is inactive
 	case JESTDEBUTCUTSCENE_STAGE.OFFSCREEN:
 	
+		SetRoomAudio_Music(blanksound);
+	
 		var _text = 
 		[
 			"Huhuhuuu...."
@@ -16,7 +18,7 @@ switch(JestDebut_Stage)
 		if !(JestDebut_StartedOffscreenTalk)
 		{
 			CutsceneText(_text, "???", TEXTBOX_POS.BOTTOM, ft_Jest);
-			audio_play_sound(sound_JestHuhuhu, 300, false);
+	//		audio_play_sound(sound_JestHuhuhu, 300, false);
 			JestDebut_StartedOffscreenTalk = true;
 		}
 		
@@ -35,7 +37,6 @@ switch(JestDebut_Stage)
 		{
 			JestDebut_EnterSequence = layer_sequence_create(layer, x, y, seq_JestDebut_Enter);
 			//Turn off the room music
-			SetRoomAudio_Music(blanksound);
 			JestDebut_EnterSequenceCreated = true;
 		}
 		else if (layer_sequence_is_finished(JestDebut_EnterSequence))
@@ -63,7 +64,7 @@ switch(JestDebut_Stage)
 		if !(JestDebut_EnterTalkStarted)
 		{
 			CutsceneText(_text, "Jest", TEXTBOX_POS.BOTTOM, ft_Jest);
-			audio_play_sound(sound_JestLaugh, 300, false);
+			//audio_play_sound(sound_JestLaugh, 300, false);
 			JestDebut_EnterTalkStarted = true;
 		}
 	

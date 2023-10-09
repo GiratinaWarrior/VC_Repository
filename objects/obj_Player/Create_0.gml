@@ -203,6 +203,8 @@ VallenBarY = HealthBarY + HealthBarHeight + 5;
 VallenRestoreTimerLimit = 500;
 VallenRestoreTimer = 0;
 
+VallenParticles = noone;
+
 #endregion
 
 

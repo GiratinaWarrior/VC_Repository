@@ -430,6 +430,8 @@ switch (VoizatiaLavenderAftermath_State)
 			
 			SaveGame();
 			
+			obj_Player.y-=0.1;
+			
 			obj_Player.hascontrol = true;
 			obj_Camera.follow = obj_Player;
 		

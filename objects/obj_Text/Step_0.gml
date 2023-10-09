@@ -1,7 +1,5 @@
 /// @description If the talk button is pressed
 
-
-
 //If the talk button is pressed
 if (global.Key_Talk)
 {
@@ -20,7 +18,7 @@ if (global.Key_Talk)
 		{
 			instance_destroy(); //Destroy the text object
 			
-			//If this textbox was created for a cutscene
+			//If this textbox was not created for a cutscene
 			if (!TextBox_Cutscene)
 			{
 				//Give the player control back

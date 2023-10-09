@@ -29,7 +29,7 @@ function EntityTextBox()
 		{
 	
 			//If the player talks to the NPC with the talk button
-			if (global.Key_Talk) && (!instance_exists(obj_Text)){
+			if (global.Key_Talk) && (!instance_exists(obj_Text)) {
 		
 				//If a textbox hasn't been created yet
 				if (myTextbox = noone)

@@ -199,9 +199,9 @@
 -3,47,2,4,38,-7,0,-14,47,3,4,28,8,-4,47,1,24,-8,0,-6,47,1,4,-7,28,3,38,0,40,-4,
 28,1,38,-8,0,-4,47,3,4,28,25,-23,0,-4,47,5,24,0,41,33,45,-21,0,6,47,4,28,28,30,45,
 -24,0,2,47,24,-28,0,],"TileDataFormat":1,},"tilesetId":{"name":"tiles_DarkShrineMainTileSet","path":"tilesets/tiles_DarkShrineMainTileSet/tiles_DarkShrineMainTileSet.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
-    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":800,"effectEnabled":true,"effectType":"_filter_greyscale","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":true,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
+    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":800,"effectEnabled":true,"effectType":"_filter_greyscale","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":true,"inheritLayerSettings":true,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
         {"name":"g_Intensity","type":0,"value":"1",},
-      ],"spriteId":{"name":"spr_ShrineBrickYellowBasement","path":"sprites/spr_ShrineBrickYellowBasement/spr_ShrineBrickYellowBasement.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
+      ],"spriteId":{"name":"spr_DarkShrineBrickYellowBasement","path":"sprites/spr_DarkShrineBrickYellowBasement/spr_DarkShrineBrickYellowBasement.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
   ],
   "parent": {
     "name": "DarkBasement",

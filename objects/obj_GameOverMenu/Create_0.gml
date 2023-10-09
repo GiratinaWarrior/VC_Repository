@@ -1,8 +1,9 @@
+
 GameOverMenu_Strive = function()
 {
 	audio_play_sound(sound_TitleScreenSelect, 400, false);
 	TransitionStart(global.Spawnpoint, seq_FadeOut, seq_FadeIn);
-	global.Health = global.MaxHealth;
+	PlayerFullHeal();
 	SummonPlayer(global.SpawnX, global.SpawnY);
 	global.WarpTargetX = global.SpawnX;
 	global.WarpTargetY = global.SpawnY;

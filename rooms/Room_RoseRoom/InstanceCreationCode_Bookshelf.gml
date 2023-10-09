@@ -53,7 +53,7 @@ EntityAdditionFunc = function()
 			[
 				"It's 'Flower Handbook'", 
 				"Ooh, our families names are in here",
-				"Escept Brother, but he already had a name"
+				"Except Brother, but he already had a name"
 			];
 			
 			TextBox_Text = array_concat(RoseRoomBookShelf_MainTextArray, _flowerHandbook);

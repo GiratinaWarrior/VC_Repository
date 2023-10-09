@@ -13,7 +13,7 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_EnemyAttack","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"propertyId":{"name":"Indestructible","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"value":"True",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_EnemyAttack","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"propertyId":{"name":"FlinchPower","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"value":"5",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_EnemyAttack","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"propertyId":{"name":"InvincPower","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"value":"5",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_EnemyAttack","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"propertyId":{"name":"Reflectable","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"value":"False",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_EnemyAttack","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"propertyId":{"name":"Reflectable","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"value":"True",},
   ],
   "parent": {
     "name": "Attacks",

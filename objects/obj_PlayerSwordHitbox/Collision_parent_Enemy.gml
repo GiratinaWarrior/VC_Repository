@@ -8,7 +8,10 @@ with (other)
 	{
 		if (EnemyVallenDropChance > random_range(0, 1))
 		{
-			PlayerRestoreVallen(EnemyVallenDropAmount);
+			with (obj_Player)
+			{
+				PlayerRestoreVallen(EnemyVallenDropAmount);
+			}
 		}
 		other.PlayerHealed = true;	
 	}

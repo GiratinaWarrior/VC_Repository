@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 7,
   "parent": {
-    "name": "Bosses",
-    "path": "folders/Sprites/Enemies/Bosses.yy",
+    "name": "Malvalia",
+    "path": "folders/Sprites/Enemies/Bosses/Malvalia.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
