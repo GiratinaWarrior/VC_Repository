@@ -16,7 +16,7 @@
   ],
   "parent": {
     "name": "Guardark",
-    "path": "folders/Objects/Enemies/Shrine/Guardark.yy",
+    "path": "folders/Objects/Enemies/Shrine/Dark/Guardark.yy",
   },
   "parentObjectId": {
     "name": "parent_EnemyAttack",

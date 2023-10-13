@@ -2,15 +2,18 @@
 
 HitSomething = true;
 
+//Access the enemy
 with (other)
 {
+	//If the sword has not recoverd the player yet
 	if !(other.PlayerHealed)
 	{
+		//
 		if (EnemyVallenDropChance > random_range(0, 1))
 		{
 			with (obj_Player)
 			{
-				PlayerRestoreVallen(EnemyVallenDropAmount);
+				PlayerRestoreVallen(other.EnemyVallenDropAmount);
 			}
 		}
 		other.PlayerHealed = true;	

@@ -414,7 +414,7 @@ function PlayerState_Hurt(){
 			}
 			
 			//Knock back the player
-			Knockback(2, _knockdir, 5);
+			Knockback(_knockbackH, _knockdir, _knockbackV);
 			
 			//Make the user invincible
 			Invincible = true;
@@ -472,7 +472,7 @@ function PlayerTakenDamage(){
 function PlayerHeal(_healAmount = global.MaxHealth - global.Health)
 {
 	
-	CreateParticleSystem(ps_PlayerHeal, layer, x, y + 16);
+	HealthParticles = CreateParticleSystem(ps_PlayerHeal, layer, x, y + 16);
 	
 	if (global.Health + _healAmount < global.MaxHealth)
 	{

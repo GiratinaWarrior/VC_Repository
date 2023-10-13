@@ -10,7 +10,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Axeye",
-    "path": "folders/Objects/Enemies/Shrine/Axeye.yy",
+    "path": "folders/Objects/Enemies/Shrine/Dark/Axeye.yy",
   },
   "parentObjectId": null,
   "persistent": false,

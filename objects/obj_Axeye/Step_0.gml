@@ -6,21 +6,10 @@
 
 #region Movement
 
-/*
-	if (Axeye_State == AXEYE_STATE.ATTACK)
-	{
-		Wall_FallOn();
-		Wall_StopRun();
-	}
-	else
-	{
-		Wall_BounceOn();
-		Wall_SwitchRun();
-	}
-*/
-
 	Wall_BounceOn();
 	Wall_SwitchRun();
+	Boundary_SwitchRun();
+	Boundary_BounceOn();
 	
 	x += xSpeed;
 	y += ySpeed;

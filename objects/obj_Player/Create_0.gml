@@ -195,6 +195,8 @@ HealthBarHeight = HealthBarWidth/10;
 HealthBarX = 10;
 HealthBarY = 10;
 
+HealthParticles = noone;
+
 VallenBarWidth = 150;
 VallenBarHeight = VallenBarWidth/10;
 VallenBarX = HealthBarX;

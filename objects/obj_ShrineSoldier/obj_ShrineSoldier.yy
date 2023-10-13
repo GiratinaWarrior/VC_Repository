@@ -19,7 +19,7 @@
   ],
   "parent": {
     "name": "ShrineSoldier",
-    "path": "folders/Objects/Enemies/Shrine/ShrineSoldier.yy",
+    "path": "folders/Objects/Enemies/Shrine/Light/ShrineSoldier.yy",
   },
   "parentObjectId": {
     "name": "parent_Enemy",

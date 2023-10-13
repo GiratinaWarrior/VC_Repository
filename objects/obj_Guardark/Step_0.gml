@@ -7,6 +7,7 @@
 	Wall_FallOn();
 	Wall_LedgeTurn();
 	Wall_SwitchRun();
+	Boundary_SwitchRun();
 
 	x += xSpeed;
 	y += ySpeed;

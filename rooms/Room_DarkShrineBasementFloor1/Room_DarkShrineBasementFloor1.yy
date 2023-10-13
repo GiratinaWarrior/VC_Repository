@@ -235,7 +235,7 @@
     {"name":"inst_6105CD8E","path":"rooms/Room_DarkShrineBasementFloor1/Room_DarkShrineBasementFloor1.yy",},
     {"name":"inst_668BD509","path":"rooms/Room_DarkShrineBasementFloor1/Room_DarkShrineBasementFloor1.yy",},
     {"name":"RoomWarp_DarkShrineBasementFloor1_To_DarkShrineBasementStairs","path":"rooms/Room_DarkShrineBasementFloor1/Room_DarkShrineBasementFloor1.yy",},
-    {"name":"RoomWarp_DarkShrineBasementFloor1_To_DarkShrineBasementFloor2","path":"rooms/Room_DarkShrineBasementFloor1/Room_DarkShrineBasementFloor1.yy",},
+    {"name":"RoomWarp_DarkShrineBasementFloor1_To_DarkShrineBasementFloor11","path":"rooms/Room_DarkShrineBasementFloor1/Room_DarkShrineBasementFloor1.yy",},
     {"name":"inst_24EDC036","path":"rooms/Room_DarkShrineBasementFloor1/Room_DarkShrineBasementFloor1.yy",},
     {"name":"inst_73EFF2D5","path":"rooms/Room_DarkShrineBasementFloor1/Room_DarkShrineBasementFloor1.yy",},
     {"name":"inst_2C6A9F96","path":"rooms/Room_DarkShrineBasementFloor1/Room_DarkShrineBasementFloor1.yy",},
@@ -250,7 +250,7 @@
   "layers": [
     {"resourceType":"GMREffectLayer","resourceVersion":"1.0","name":"Shadow","depth":0,"effectEnabled":true,"effectType":"_filter_tintfilter","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
         {"name":"g_TintCol","type":1,"value":"#FF4C4C4C",},
-      ],"userdefinedDepth":false,"visible":true,},
+      ],"userdefinedDepth":false,"visible":false,},
     {"resourceType":"GMRAssetLayer","resourceVersion":"1.0","name":"Clouds","assets":[
         {"resourceType":"GMRParticleSystem","resourceVersion":"1.0","name":"particle_6FA75D02","colour":4294967295,"frozen":false,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"particleSystemId":{"name":"ps_DarkClouds","path":"particles/ps_DarkClouds/ps_DarkClouds.yy",},"rotation":0.0,"scaleX":1.0,"scaleY":1.366672,"x":791.0,"y":523.8302,},
       ],"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
@@ -486,7 +486,7 @@
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":false,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Player","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"RoomWarp_DarkShrineBasementFloor1_To_DarkShrineBasementStairs","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_RoomWarp","path":"objects/obj_RoomWarp/obj_RoomWarp.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":2.0,"x":2016.0,"y":128.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"RoomWarp_DarkShrineBasementFloor1_To_DarkShrineBasementFloor2","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_RoomWarp","path":"objects/obj_RoomWarp/obj_RoomWarp.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":2.0,"x":2016.0,"y":960.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"RoomWarp_DarkShrineBasementFloor1_To_DarkShrineBasementFloor11","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_RoomWarp","path":"objects/obj_RoomWarp/obj_RoomWarp.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":2.0,"x":2016.0,"y":960.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Guardark","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4F19ED53","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Guardark","path":"objects/obj_Guardark/obj_Guardark.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":672.0,"y":96.0,},

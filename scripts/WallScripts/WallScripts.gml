@@ -92,3 +92,25 @@ function Wall_BounceOn()
 
 	}
 }
+
+function Boundary_SwitchRun()
+{
+	//If the entity will touch a wall next step
+	if (x + xSpeed >= room_width || x + xSpeed <= 0){
+
+		//If the entity will touch a wall next step, switch direction horizontally
+		xSpeed *=- 1;
+
+	}
+}
+
+function Boundary_BounceOn()
+{
+	//If the entity will touch a wall next step
+	if (y + ySpeed >= room_height || y + ySpeed <= 0){
+
+		//If the entity will touch a wall next step, switch direction horizontally
+		ySpeed *=- 1;
+
+	}
+}

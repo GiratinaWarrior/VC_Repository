@@ -10,7 +10,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "ShrineDummy",
-    "path": "folders/Objects/Enemies/Shrine/ShrineDummy.yy",
+    "path": "folders/Objects/Enemies/Shrine/Light/ShrineDummy.yy",
   },
   "parentObjectId": {
     "name": "parent_Enemy",
