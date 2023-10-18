@@ -128,7 +128,7 @@
     {"lower":9647,"upper":9647,},
   ],
   "regenerateBitmap": false,
-  "sampleText": "Hello",
+  "sampleText": "v",
   "sdfSpread": 8,
   "size": 24.0,
   "styleName": "Regular",

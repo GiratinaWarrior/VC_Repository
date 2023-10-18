@@ -24,8 +24,8 @@
     "Keyframes": [],
   },
   "parent": {
-    "name": "6_CardinalNoctisCongrats",
-    "path": "folders/Sequences/Cutscenes/OpeningAct/6_CardinalNoctisCongrats.yy",
+    "name": "7_CardinalNoctisCongrats",
+    "path": "folders/Sequences/Cutscenes/OpeningAct/7_CardinalNoctisCongrats.yy",
   },
   "playback": 1,
   "playbackSpeed": 60.0,

@@ -1,3 +1,3 @@
-target = Room_DarkShrineBasementFloor3;
+target = Room_DarkShrineBasementFloor21;
 WarpX = 32;
-WarpY = 446;
+WarpY = 352;

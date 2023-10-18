@@ -1,4 +1,5 @@
-SetRoomAudio_Music(blanksound, 0.5, 100);
+//SetRoomAudio_Music(blanksound, 0.5, 100);
+SetRoomAudio_Music_Default(music_ShrinePeacefulTheme);
 SetSpawnpoint();
 SaveGame();	
 

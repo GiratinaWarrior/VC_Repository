@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "9_VoizatiaLavenderAftermath",
-    "path": "folders/Objects/Cutscenes/Opening/9_VoizatiaLavenderAftermath.yy",
+    "name": "10_VoizatiaLavenderAftermath",
+    "path": "folders/Objects/Cutscenes/Opening/10_VoizatiaLavenderAftermath.yy",
   },
 }

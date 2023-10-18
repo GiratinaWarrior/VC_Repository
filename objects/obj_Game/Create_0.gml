@@ -60,16 +60,43 @@ global.OceanOrb = 0;
 global.TundraOrb = 0;
 global.DesertOrb = 0;
 
-//Cutscenes
+//--------------Cutscenes---------------//
+
+/////Main Shrine
+
+//Jests first appearence 
 global.JestDebut_Cutscene_Seen = false;
+
+//Shrine General has been defeated by the player
 global.ShrineGeneral_Defeated = false;
+
+//Lavender comes to congratulate Rose
 global.CardinalCongratulation_Family = false;
+
+//The Carvaline Orb story is shown to the player
 global.CarvalineOrb_Cutscene_Seen = false;
+
+//Lavender has been defeated by Rose
+global.Lavender_Defeated_Prologue = false;
+
+//The Noxians celebrate Rose
 global.CardinalNoctisCongrats_Cutscene_Seen = false;
+
+/////Dark Shrine
+
+//Valnyx Shrine comes under attack
 global.ValnyxShrineUnderAttack_Active = false;
+
+//Voizatia is first shown in front of the Carvaline Pedestal
 global.VoizatiaDebuted = false;
+
+//Malvalia is defeated by Rose
 global.MalvaliaDefeated = false;
-global.VoizatiaLavenderAftermath_Cutscene_Seen = false
+
+//The aftermath of Lavender and Voizatias fight is shown
+global.VoizatiaLavenderAftermath_Cutscene_Seen = false;
+
+//Regrouping with Jest in the Aftermath
 global.JestTalkedTo_PrologueChapterAftermath = false;
 
 //SetGlobalArray();

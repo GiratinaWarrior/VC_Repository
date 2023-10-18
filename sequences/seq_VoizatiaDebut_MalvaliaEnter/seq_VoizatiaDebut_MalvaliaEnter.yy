@@ -25,7 +25,7 @@
   },
   "parent": {
     "name": "Malvalia",
-    "path": "folders/Sequences/Cutscenes/OpeningAct/7_VoizatiaDebut/Malvalia.yy",
+    "path": "folders/Sequences/Cutscenes/OpeningAct/8_VoizatiaDebut/Malvalia.yy",
   },
   "playback": 0,
   "playbackSpeed": 60.0,

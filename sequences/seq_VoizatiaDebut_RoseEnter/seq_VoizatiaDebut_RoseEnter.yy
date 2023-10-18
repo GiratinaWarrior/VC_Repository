@@ -24,8 +24,8 @@
     "Keyframes": [],
   },
   "parent": {
-    "name": "7_VoizatiaDebut",
-    "path": "folders/Sequences/Cutscenes/OpeningAct/7_VoizatiaDebut.yy",
+    "name": "8_VoizatiaDebut",
+    "path": "folders/Sequences/Cutscenes/OpeningAct/8_VoizatiaDebut.yy",
   },
   "playback": 0,
   "playbackSpeed": 60.0,

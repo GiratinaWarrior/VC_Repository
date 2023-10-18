@@ -199,7 +199,10 @@ switch(CardinalFamilyCongrats_Stage)
 			
 			PlayerFullHeal();
 			
+			SetSpawnpoint(obj_Player.x, obj_Player.y);
 			SaveGame();
+			
+			instance_destroy();
 		
 		#endregion
 	

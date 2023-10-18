@@ -160,6 +160,16 @@ function SetRoomAudio_Music_Default(_music = blanksound){
 			}
 			
 			break;
+			
+		case music_LavenderBattleTheme:
+			
+			with (obj_PlayBGM)
+			{
+				BGM_Volume = 0.2;
+				BGM_GainRate = 1000;
+			}
+			
+			break;
 		
 	}
 	

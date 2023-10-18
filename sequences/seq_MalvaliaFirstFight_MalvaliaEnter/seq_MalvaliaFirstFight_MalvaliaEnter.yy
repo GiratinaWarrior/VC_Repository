@@ -24,8 +24,8 @@
     "Keyframes": [],
   },
   "parent": {
-    "name": "8_MalvaliaFirstFight",
-    "path": "folders/Sequences/Cutscenes/OpeningAct/8_MalvaliaFirstFight.yy",
+    "name": "9_MalvaliaFirstFight",
+    "path": "folders/Sequences/Cutscenes/OpeningAct/9_MalvaliaFirstFight.yy",
   },
   "playback": 0,
   "playbackSpeed": 60.0,

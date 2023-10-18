@@ -192,8 +192,8 @@
       ],"spriteId":{"name":"spr_DarkShrineBrickYellow","path":"sprites/spr_DarkShrineBrickYellow/spr_DarkShrineBrickYellow.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":3,"y":3,},
   ],
   "parent": {
-    "name": "Aftermath",
-    "path": "folders/Rooms/0_ShrineIntro/OutsideDarkShrine/Aftermath.yy",
+    "name": "InvasionAftermath",
+    "path": "folders/Rooms/0_ShrineIntro/InvasionAftermath.yy",
   },
   "parentRoom": {
     "name": "Room_DarkShrineGroundFloor",

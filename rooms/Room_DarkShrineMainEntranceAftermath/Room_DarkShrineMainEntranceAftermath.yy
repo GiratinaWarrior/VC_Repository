@@ -236,13 +236,13 @@
 -2147483648,1,34,-7,20,1,1,-47,47,-8,-2147483648,1,16,-55,47,-8,20,1,1,-119,47,],"TileDataFormat":1,},"tilesetId":{"name":"tiles_DarkValnyxShrinePeakTileSet","path":"tilesets/tiles_DarkValnyxShrinePeakTileSet/tiles_DarkValnyxShrinePeakTileSet.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"resourceType":"GMRAssetLayer","resourceVersion":"1.0","name":"NightSky","assets":[
         {"resourceType":"GMRParticleSystem","resourceVersion":"1.0","name":"particle_297506A3","colour":4294967295,"frozen":false,"ignore":true,"inheritedItemId":{"name":"particle_297506A3","path":"rooms/Room_ShrineMainEntrance/Room_ShrineMainEntrance.yy",},"inheritItemSettings":true,"particleSystemId":{"name":"ps_StarrySky","path":"particles/ps_StarrySky/ps_StarrySky.yy",},"rotation":0.0,"scaleX":2.1333334,"scaleY":2.133333,"x":1024.0,"y":420.0,},
-        {"resourceType":"GMRSpriteGraphic","resourceVersion":"1.0","name":"graphic_58F1C379","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":{"name":"graphic_58F1C379","path":"rooms/Room_ShrineMainEntrance/Room_ShrineMainEntrance.yy",},"inheritItemSettings":true,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_BigMoon","path":"sprites/spr_BigMoon/spr_BigMoon.yy",},"x":192.0,"y":160.0,},
+        {"resourceType":"GMRSpriteGraphic","resourceVersion":"1.0","name":"graphic_58F1C379","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":{"name":"graphic_58F1C379","path":"rooms/Room_ShrineMainEntrance/Room_ShrineMainEntrance.yy",},"inheritItemSettings":true,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_BigMoon","path":"sprites/spr_BigMoon/spr_BigMoon.yy",},"x":352.0,"y":320.0,},
       ],"depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":true,"inheritLayerSettings":true,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"userdefinedDepth":false,"visible":false,},
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":true,"inheritLayerSettings":true,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"spr_NightSky","path":"sprites/spr_NightSky/spr_NightSky.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
   ],
   "parent": {
-    "name": "Aftermath",
-    "path": "folders/Rooms/0_ShrineIntro/OutsideDarkShrine/Aftermath.yy",
+    "name": "InvasionAftermath",
+    "path": "folders/Rooms/0_ShrineIntro/InvasionAftermath.yy",
   },
   "parentRoom": {
     "name": "Room_DarkShrineMainEntrance",

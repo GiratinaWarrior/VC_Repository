@@ -24,8 +24,8 @@
     "Keyframes": [],
   },
   "parent": {
-    "name": "11_PrologueEnd",
-    "path": "folders/Sequences/Cutscenes/OpeningAct/11_PrologueEnd.yy",
+    "name": "12_PrologueEnd",
+    "path": "folders/Sequences/Cutscenes/OpeningAct/12_PrologueEnd.yy",
   },
   "playback": 1,
   "playbackSpeed": 60.0,

@@ -107,9 +107,9 @@ switch (MalvaliaFirstFightCutscene_State)
 			}
 			else if !(instance_exists(obj_Text))
 			{
-				show_debug_message("NEXT STAGE");
+			//	show_debug_message("NEXT STAGE");
 				MalvaliaFirstFightCutscene_State = MALVALIAFIRSTFIGHTCUTSCENE.MALVALIA_EXIT;
-				show_debug_message("NEXT STAGE");
+			//	show_debug_message("NEXT STAGE");
 			}
 			
 		#endregion

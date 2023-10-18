@@ -25,7 +25,7 @@
   },
   "parent": {
     "name": "Lavender",
-    "path": "folders/Sequences/Cutscenes/OpeningAct/7_VoizatiaDebut/Lavender.yy",
+    "path": "folders/Sequences/Cutscenes/OpeningAct/8_VoizatiaDebut/Lavender.yy",
   },
   "playback": 1,
   "playbackSpeed": 60.0,

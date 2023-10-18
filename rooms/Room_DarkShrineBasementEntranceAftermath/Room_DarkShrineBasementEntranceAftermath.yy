@@ -123,8 +123,8 @@
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":true,"inheritLayerSettings":true,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"spr_ShrineBrickYellow","path":"sprites/spr_ShrineBrickYellow/spr_ShrineBrickYellow.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":5,"y":5,},
   ],
   "parent": {
-    "name": "Aftermath",
-    "path": "folders/Rooms/0_ShrineIntro/DarkBasement/Aftermath.yy",
+    "name": "InvasionAftermath",
+    "path": "folders/Rooms/0_ShrineIntro/InvasionAftermath.yy",
   },
   "parentRoom": {
     "name": "Room_DarkShrineBasementEntrance",

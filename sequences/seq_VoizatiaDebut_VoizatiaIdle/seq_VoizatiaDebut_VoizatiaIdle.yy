@@ -25,7 +25,7 @@
   },
   "parent": {
     "name": "Voizatia",
-    "path": "folders/Sequences/Cutscenes/OpeningAct/7_VoizatiaDebut/Voizatia.yy",
+    "path": "folders/Sequences/Cutscenes/OpeningAct/8_VoizatiaDebut/Voizatia.yy",
   },
   "playback": 1,
   "playbackSpeed": 60.0,

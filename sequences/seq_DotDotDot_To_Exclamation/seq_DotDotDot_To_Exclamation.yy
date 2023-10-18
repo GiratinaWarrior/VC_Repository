@@ -24,8 +24,8 @@
     "Keyframes": [],
   },
   "parent": {
-    "name": "10_JestAftermath",
-    "path": "folders/Sequences/Cutscenes/OpeningAct/10_JestAftermath.yy",
+    "name": "11_JestAftermath",
+    "path": "folders/Sequences/Cutscenes/OpeningAct/11_JestAftermath.yy",
   },
   "playback": 0,
   "playbackSpeed": 1.0,

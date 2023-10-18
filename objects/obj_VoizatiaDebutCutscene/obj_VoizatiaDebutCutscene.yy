@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "7_VoizatiaDebut",
-    "path": "folders/Objects/Cutscenes/Opening/7_VoizatiaDebut.yy",
+    "name": "8_VoizatiaDebut",
+    "path": "folders/Objects/Cutscenes/Opening/8_VoizatiaDebut.yy",
   },
   "parentObjectId": null,
   "persistent": false,

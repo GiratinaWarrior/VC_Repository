@@ -24,8 +24,8 @@
     "Keyframes": [],
   },
   "parent": {
-    "name": "9_VoizatiaLavenderAftermath",
-    "path": "folders/Sequences/Cutscenes/OpeningAct/9_VoizatiaLavenderAftermath.yy",
+    "name": "10_VoizatiaLavenderAftermath",
+    "path": "folders/Sequences/Cutscenes/OpeningAct/10_VoizatiaLavenderAftermath.yy",
   },
   "playback": 2,
   "playbackSpeed": 60.0,
