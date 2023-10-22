@@ -1,5 +1,12 @@
 /// @description Set yourself up at the start of the room
 
+if (Player_FrontLayer == noone)
+{
+	Player_FrontLayer = layer_create(-9999, "PlayerDeath");
+}
+
+
+
 //Set the players coordinates accordingly
 x = global.WarpTargetX;
 y = global.WarpTargetY;

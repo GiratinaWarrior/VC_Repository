@@ -9,7 +9,7 @@
 ///@param OutlineOffset
 function BossHealthBar(_maxhealth, _health, _bossname, _barcolor = c_white, _maintextcolor = c_white, _textoutlinecolor = c_black, _outlineoffset = 1){
 	
-	var _barwidth = 500
+	var _barwidth = 500;
 	var _x = WINDOW_WIDTH/2 - _barwidth/2;
 	var _y = 20;
 	var _barheight = _barwidth/10;

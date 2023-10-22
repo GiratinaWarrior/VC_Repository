@@ -35,8 +35,8 @@ LavenderBossIntroPrologue_LavenderTurn_SequenceCreated = noone;
 LavenderBossIntroPrologue_LavenderExplain_TalkStarted = false;
 LavenderBossIntroPrologue_LavenderExplain_Talk = noone;
 
-
-
+LavenderBossIntroPrologue_LavenderCharge_SequenceCreated = false;
+LavenderBossIntroPrologue_LavenderCharge_Sequence = noone;
 
 LavenderBossIntroPrologue_LavenderChallenge_TalkStarted = false;
 LavenderBossIntroPrologue_LavenderChallenge_Talk = noone;

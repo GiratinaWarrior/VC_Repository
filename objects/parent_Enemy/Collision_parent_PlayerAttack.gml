@@ -1,5 +1,5 @@
 /// @description
-if !(Attacked) && !(Enemy_Invicible)
+if !(Attacked) && !(Enemy_Invincible)
 {
 	Enemy_Stunned();
 }

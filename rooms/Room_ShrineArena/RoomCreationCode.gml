@@ -5,6 +5,7 @@ if (!global.ShrineGeneral_Defeated)
 	instance_create_layer(0, 0, "Cutscene", obj_ShrineArenaBossIntroCutscene);
 	SetRoomAudio_Music();
 	SetSpawnpoint(32, 160, Room_ShrineArenaEntrance);
+	
 	with (obj_Camera)
 	{
 		follow = noone;

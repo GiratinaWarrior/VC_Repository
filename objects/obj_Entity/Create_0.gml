@@ -12,7 +12,9 @@ TextBox_UIPosition = TEXTBOX_POS.BOTTOM;
 //TextMarker_OffsetX = 0;
 //TextMarker_OffsetY = -sprite_yoffset - 10;
 
-Entity_Marker = instance_create_layer(x + TextMarker_OffsetX, y + TextMarker_OffsetY, layer, obj_RightClickMarker);
+Entity_Marker = //instance_create_layer(x + TextMarker_OffsetX, y + TextMarker_OffsetY, layer, obj_RightClickMarker);
+
+instance_create_depth(x + TextMarker_OffsetX, y + TextMarker_OffsetY, depth - 1, obj_RightClickMarker);
 
 with (Entity_Marker)
 {

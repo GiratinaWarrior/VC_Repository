@@ -29,6 +29,7 @@ switch(LavenderBossIntroPrologue_State)
 			{
 				follow = noone;
 				xTo = _cameraTargetX;
+				yTo = 270;
 			}
 			
 			var _func = function()
@@ -96,7 +97,7 @@ switch(LavenderBossIntroPrologue_State)
 			else if (layer_sequence_is_finished(LavenderBossIntroPrologue_LavenderIdle))
 			{
 				layer_sequence_destroy(LavenderBossIntroPrologue_LavenderIdle);
-				if (LavenderBossIntroPrologue_LavenderIdle == noone) LavenderBossIntroPrologue_LavenderIdle = layer_sequence_create(layer, 0, 0, seq_LavenderBossIntro_LavenderIdle);
+				LavenderBossIntroPrologue_LavenderIdle = layer_sequence_create(layer, 0, 0, seq_LavenderBossIntro_LavenderIdle);
 				LavenderBossIntroPrologue_State = LAVENDERBOSSINTROPROLOGUE_STATE.LAVENDER_EXPLAIN;
 			}
 		
@@ -136,18 +137,32 @@ switch(LavenderBossIntroPrologue_State)
 	
 		#region Lavender Charge
 			
-			if (LavenderBossIntroPrologue_FlowerParticles == noone)
+			if (!LavenderBossIntroPrologue_LavenderCharge_SequenceCreated)
 			{
-				LavenderBossIntroPrologue_FlowerParticles = CreateParticleSystem(ps_LavenderBossFightFlowers, "LavenderFlowers", 0, 0);
+				
+				//Create the new charge movement
+				layer_sequence_destroy(LavenderBossIntroPrologue_LavenderIdle);
+				LavenderBossIntroPrologue_LavenderCharge_Sequence = layer_sequence_create(layer, 0, 0, seq_LavenderBossIntro_LavenderCharge);
+				
+				//Create the flower particles
+				var _dist = 100;
+				//LavenderBossIntroPrologue_FlowerParticles = CreateParticleSystem(ps_LavenderBossFightFlowers, "LavenderFlowers", 480 - _dist, -_dist);
+			
+				//end this section of code
+				LavenderBossIntroPrologue_LavenderCharge_SequenceCreated = true;
 			}
-			else
+			else if (layer_sequence_is_finished(LavenderBossIntroPrologue_LavenderCharge_Sequence))
 			{
+				
+				layer_sequence_destroy(LavenderBossIntroPrologue_LavenderCharge_Sequence);
+				LavenderBossIntroPrologue_LavenderIdle = layer_sequence_create(layer, 0, 0, seq_LavenderBossIntro_LavenderFly);
+					
 				var _func = function()
 				{
 					LavenderBossIntroPrologue_State = LAVENDERBOSSINTROPROLOGUE_STATE.LAVENDER_CHALLENGE;
 				}
 				
-				TimeSourceCreateAndStart(180, _func);
+				TimeSourceCreateAndStart(0, _func);
 			}
 			
 		#endregion
@@ -158,6 +173,9 @@ switch(LavenderBossIntroPrologue_State)
 	case LAVENDERBOSSINTROPROLOGUE_STATE.LAVENDER_CHALLENGE:
 		
 		#region Lavender Challenge
+		
+			//Set the music
+			SetRoomAudio_Music_Default(music_LavenderBattleTheme);	
 		
 			var _text = 
 			[
@@ -188,14 +206,11 @@ switch(LavenderBossIntroPrologue_State)
 	case LAVENDERBOSSINTROPROLOGUE_STATE.BATTLE_START:
 		
 		#region Battle Start
-		
-			//Set the music
-			SetRoomAudio_Music_Default(music_LavenderBattleTheme);	
 			
 			if (LavenderBossIntroPrologue_LavenderBoss == noone)
 			{	
 				LavenderBossIntroPrologue_LavenderBoss 
-				= instance_create_layer(960 - 204, 270 + 16, layer, obj_LavenderBossBattle_Prologue);
+				= instance_create_layer(756, 204, layer, obj_LavenderBossBattle_Prologue);
 			}
 			
 			obj_Player.hascontrol = true;
@@ -208,11 +223,9 @@ switch(LavenderBossIntroPrologue_State)
 		
 	case LAVENDERBOSSINTROPROLOGUE_STATE.IN_BATTLE:
 		
-		with (obj_Player)
+		with (obj_Player) 
 		{
-			var _mar = 16;
-			x = clamp(x, obj_Camera.x - obj_Camera.view_w_half + _mar, obj_Camera.x + obj_Camera.view_w_half - _mar);
-			y = clamp(y, obj_Camera.y - obj_Camera.view_h_half + _mar, obj_Camera.y + obj_Camera.view_h_half - _mar);
+			LockEntityInSight();
 		}
 		
 		break;

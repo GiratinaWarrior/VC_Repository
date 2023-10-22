@@ -1,5 +1,11 @@
 /// @description Camera follow player
 
+if (instance_exists(follow))
+{
+	show_debug_message("Target: {0}", follow);
+	show_debug_message("Target Coordinates: x = {0}, y = {1}", follow.x, follow.y);
+}
+
 #region Camera follows player
 
 //Update destination 

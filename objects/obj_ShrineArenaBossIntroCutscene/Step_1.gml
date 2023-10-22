@@ -44,7 +44,7 @@ else
 	//Access camera object and freeze the camera
 	with (obj_Camera)
 	{
-		x = room_width;
+	//	x = room_width;
 		follow = noone;
 	}//end access camera
 	

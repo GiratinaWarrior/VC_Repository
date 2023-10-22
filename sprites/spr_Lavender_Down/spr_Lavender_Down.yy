@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 7,
   "parent": {
-    "name": "Lavender",
-    "path": "folders/Sprites/NPC's/0_Story/Lavender.yy",
+    "name": "Cutscene",
+    "path": "folders/Sprites/NPC's/0_Story/Lavender/Cutscene.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

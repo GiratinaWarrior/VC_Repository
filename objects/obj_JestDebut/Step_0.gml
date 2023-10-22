@@ -125,7 +125,7 @@ switch(JestDebut_Stage)
 		if !(JestDebut_StartedExitTalk)
 		{
 			CutsceneText(_text, "Jest", TEXTBOX_POS.BOTTOM, ft_Jest);
-			audio_play_sound(sound_JestLaugh, 300, false);
+			//audio_play_sound(sound_JestLaugh, 300, false);
 			JestDebut_StartedExitTalk = true;
 		}
 	
@@ -179,6 +179,8 @@ switch(JestDebut_Stage)
 			SetRoomAudio_Music_Default(music_ShrinePeacefulTheme);
 			
 			PlayerFullHeal();
+			
+			SetSpawnpoint(obj_Player.x, obj_Player.y);
 			
 			SaveGame();
 			

@@ -1,12 +1,12 @@
 
 GameOverMenu_Strive = function()
 {
-	audio_play_sound(sound_TitleScreenSelect, 400, false);
+	LoadSave();
 	TransitionStart(global.Spawnpoint, seq_FadeOut, seq_FadeIn);
-	PlayerFullHeal();
 	SummonPlayer(global.SpawnX, global.SpawnY);
 	global.WarpTargetX = global.SpawnX;
 	global.WarpTargetY = global.SpawnY;
+	PlayerFullHeal();
 }
 
 GameOverMenu_Surrender = function()

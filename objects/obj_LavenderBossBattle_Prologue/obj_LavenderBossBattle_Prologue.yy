@@ -5,9 +5,13 @@
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_Enemy","path":"objects/parent_Enemy/parent_Enemy.yy",},"propertyId":{"name":"Health","path":"objects/parent_Enemy/parent_Enemy.yy",},"value":"100",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_Enemy","path":"objects/parent_Enemy/parent_Enemy.yy",},"propertyId":{"name":"Enemy_Invincible","path":"objects/parent_Enemy/parent_Enemy.yy",},"value":"False",},
+  ],
   "parent": {
     "name": "Lavender_Prologue",
     "path": "folders/Objects/Enemies/Bosses/Lavender_Prologue.yy",
@@ -32,8 +36,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_Lavender_Idle",
-    "path": "sprites/spr_Lavender_Idle/spr_Lavender_Idle.yy",
+    "name": "spr_Lavender_Levitate",
+    "path": "sprites/spr_Lavender_Levitate/spr_Lavender_Levitate.yy",
   },
   "spriteMaskId": null,
   "visible": true,

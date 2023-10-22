@@ -89,7 +89,9 @@ switch (PrologueCutscene_Stage)
 		
 	//Star Notice Stage: Lavender notices the odd star in the sky
 	case PROLOGUECUTSCENE.STAR_NOTICE:
-	
+		
+		SetRoomAudio_Music_Default();
+		
 		//Lavender's speech
 		var _text = 
 		[
@@ -106,6 +108,7 @@ switch (PrologueCutscene_Stage)
 		//When Lavender is finished talking
 		else if (!instance_exists(obj_Text))
 		{
+			audio_play_sound(sound_Starcrosser, 100, false);
 			PrologueCutscene_Stage = PROLOGUECUTSCENE.STAR_APPROACH;
 		}
 		
@@ -114,27 +117,32 @@ switch (PrologueCutscene_Stage)
 	//Star Approach Stage: The wierd star rapidly gets closer as the screen fades to white
 	case PROLOGUECUTSCENE.STAR_APPROACH:
 		
-		PrologueCutscene_Function_StopMusic = function()
-		{
-			SetRoomAudio_Music(blanksound, 0, 0);
-		}
-		
 		//Create the sequences
 		if !(PrologueCutscene_StarApproachSequencesCreated)
 		{
 			
 			PrologueCutscene_StarApproach_StarSequence = layer_sequence_create(layer_get_id("StarPod"), 480, room_height/2 - 14, seq_PrologueCutscene_Star);
-			PrologueCutscene_StarApproach_WhiteSequence = layer_sequence_create(layer_get_id("PrologueEnd"), 480, room_height/2 - 14, seq_PrologueCutscene_White);
+			
+			var _func = function()
+			{
+				PrologueCutscene_StarApproach_WhiteSequence = layer_sequence_create(layer_get_id("PrologueEnd"), 480, room_height/2 - 14, seq_PrologueCutscene_White);
+			}
+			TimeSourceCreateAndStart(70, _func);
 			
 			PrologueCutscene_StarApproachSequencesCreated = true;
 		}
 		
+		else if (layer_sequence_is_finished(PrologueCutscene_StarApproach_WhiteSequence))
+		{
+			PrologueCutscene_Stage = PROLOGUECUTSCENE.END;
+		}
 		else
 		{
-			if (layer_sequence_is_finished(PrologueCutscene_StarApproach_WhiteSequence))
-			{
-				PrologueCutscene_Stage = PROLOGUECUTSCENE.END;
-			}
+			var _shake = 1;	
+		
+			layer_sequence_x(PrologueCutscene_StarApproach_StarSequence, layer_sequence_get_x(PrologueCutscene_StarApproach_StarSequence) + (irandom_range(1, -1) * _shake));
+			layer_sequence_y(PrologueCutscene_StarApproach_StarSequence, layer_sequence_get_y(PrologueCutscene_StarApproach_StarSequence) + (irandom_range(1, -1) * _shake));
+			
 		}
 		
 		break;//end Star Approach Stage

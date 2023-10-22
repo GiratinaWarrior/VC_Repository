@@ -4,6 +4,6 @@
 part_system_destroy(VallenParticles);
 part_system_destroy(HealthParticles);
 
-
+layer_destroy(Player_FrontLayer);
 
 

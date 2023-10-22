@@ -144,3 +144,12 @@ function ShrinkAndDestroy(_shrinkRate = 0.1)
 	}
 	
 }
+
+function LockEntityInSight (_entity = id, _width = sprite_width, _height = sprite_height)
+{
+	with (_entity)
+	{
+		x = clamp(x, obj_Camera.x - obj_Camera.view_w_half + _width + sprite_xoffset, obj_Camera.x + obj_Camera.view_w_half - _width - sprite_xoffset);
+		y = clamp(y, obj_Camera.y - obj_Camera.view_h_half + _height + sprite_yoffset, obj_Camera.y + obj_Camera.view_h_half - _height - sprite_yoffset);
+	}
+}

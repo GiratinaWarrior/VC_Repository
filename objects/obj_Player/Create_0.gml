@@ -1,5 +1,7 @@
 /// @description Creation Code
 
+Player_FrontLayer = noone;
+
 #region Movement
 
 	//The speeds and gravity
