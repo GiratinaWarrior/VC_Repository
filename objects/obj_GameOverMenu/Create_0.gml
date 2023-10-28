@@ -1,4 +1,7 @@
 
+
+//---------Menu--------------//
+
 GameOverMenu_Strive = function()
 {
 	LoadSave();
@@ -20,6 +23,6 @@ MenuOptions_2DArray =
 	["Surrender", GameOverMenu_Surrender]
 ]
 
+//Menu(x, y, MenuOptions_2DArray, -1, ft_TitleScreen, blanksprite, c_white, c_yellow);
+Menu(896, 800, MenuOptions_2DArray, -1 , ft_TitleScreen);
 
-
-Menu(room_width/2, room_height/2, MenuOptions_2DArray, -1, ft_TitleScreen, blanksprite, c_white, c_yellow);

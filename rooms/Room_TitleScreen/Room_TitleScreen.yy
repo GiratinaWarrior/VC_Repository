@@ -12,6 +12,7 @@
     {"name":"inst_11E6360B","path":"rooms/Room_TitleScreen/Room_TitleScreen.yy",},
     {"name":"inst_6FD78AFB","path":"rooms/Room_TitleScreen/Room_TitleScreen.yy",},
     {"name":"inst_5376F333","path":"rooms/Room_TitleScreen/Room_TitleScreen.yy",},
+    {"name":"inst_200EDC6C","path":"rooms/Room_TitleScreen/Room_TitleScreen.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -39,6 +40,7 @@
           ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
         {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Menu","depth":800,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
             {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3247DCC5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_MenuTitleScreen","path":"objects/obj_MenuTitleScreen/obj_MenuTitleScreen.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":771.0,"y":638.0,},
+            {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_200EDC6C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":true,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_MenuTips","path":"objects/obj_MenuTips/obj_MenuTips.yy",},"properties":[],"rotation":0.0,"scaleX":5.0,"scaleY":5.0,"x":896.0,"y":512.0,},
           ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
       ],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Backgrounds","animationFPS":30.0,"animationSpeedType":0,"colour":4278190080,"depth":900,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"spr_TitleScreenBackground","path":"sprites/spr_TitleScreenBackground/spr_TitleScreenBackground.yy",},"stretch":true,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},

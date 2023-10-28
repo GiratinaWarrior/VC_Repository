@@ -1,10 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+#region Sword Range
+
 if (instance_exists(obj_Player))
 {
 	
-	var _closeRange = 64;
+	var _closeRange = 80;
 	var _longRange = 128;
 	
 	//show_debug_message("X-Dist: {0}", abs(x - obj_Player.x))
@@ -41,6 +43,10 @@ else
 {
 	LavenderBossBattlePrologue_InRangeSword = false;
 }
+
+#endregion
+
+#region State Machine
 
 //State machine for Lavender
 switch (LavenderBossBattlePrologue_CurrentState)
@@ -90,7 +96,7 @@ switch (LavenderBossBattlePrologue_CurrentState)
 									//If the player is about to use Selene Sword
 									if (obj_Player.PlayerState == PLAYERSTATE.SWORD)
 									{
-										if (Chance(1)) LavenderBossBattlePrologue_IdleState = LAVENDERBOSSBATTLE_PROLOGUE_IDLESTATE.DODGE;
+										if (Chance(LavenderBossBattlePrologue_Dodge_Chance)) LavenderBossBattlePrologue_IdleState = LAVENDERBOSSBATTLE_PROLOGUE_IDLESTATE.DODGE;
 									}//end player using sword
 									
 								}//end camera boundary
@@ -101,7 +107,9 @@ switch (LavenderBossBattlePrologue_CurrentState)
 						
 						if (LavenderBossBattlePrologue_StateChangeTimer++ > LavenderBossBattlePrologue_StateChangeTimerLimit)
 						{
+							LavenderBossBattlePrologue_StateChangeTimer = 0;
 							LavenderBossBattlePrologue_CurrentState = LavenderBossBattlePrologue_NextState;
+							LavenderBossBattlePrologue_StateChangeTimer = 0;
 						}
 					
 					#endregion
@@ -116,7 +124,14 @@ switch (LavenderBossBattlePrologue_CurrentState)
 						//Set the sprite
 						sprite_index = spr_Lavender_Dodge;
 						
-						x -= LavenderBossBattlePrologue_Dodge_Speed * image_xscale;
+						if 
+							(
+								x + LavenderBossBattlePrologue_Dodge_Speed < (obj_Camera.x + (RES_W/2) - (sprite_width/2)) &&
+								x - LavenderBossBattlePrologue_Dodge_Speed > (obj_Camera.x - (RES_W/2) + (sprite_width/2))
+							) 
+						{
+							x -= LavenderBossBattlePrologue_Dodge_Speed * image_xscale;
+						}
 						
 						if !(LavenderBossBattlePrologue_InRangeSword) LavenderBossBattlePrologue_IdleState = LAVENDERBOSSBATTLE_PROLOGUE_IDLESTATE.FLOAT;
 
@@ -135,12 +150,99 @@ switch (LavenderBossBattlePrologue_CurrentState)
 		
 		#region Blood Petal
 		
+			//Lavender faces the player
+			if (instance_exists(obj_Player))
+			{
+	
+				image_xscale = -sign(x - obj_Player.x);
+	
+			}//end face player
+			
+			if (LavenderBossBattlePrologue_BloodPetals_ParticleCreated == false)
+			{
+				Enemy_Invincible = true;
+				audio_play_sound(sound_BloodPetalSignal, 200, false);
+				
+				
+				if (sprite_index != spr_Lavender_BloodPetal_Charge)
+				{
+					image_index = 0;
+					sprite_index = spr_Lavender_BloodPetal_Charge;
+				}
+				
+				if (animation_end(spr_Lavender_BloodPetal_Charge))
+				{
+					LavenderBossBattlePrologue_BloodPetals_ParticleCreated = true;	
+				}
+			}
+			
+			else
+			{
+				
+				if (sprite_index == spr_Lavender_BloodPetal_Charge)
+				{
+					if (animation_end())
+					{
+						sprite_index = spr_Lavender_BloodPetal;
+						image_index = 0;
+					}
+				}
 		
-		
+				if (LavenderBossBattlePrologue_MaxPetalTimer++ < LavenderBossBattlePrologue_MaxPetalTimerLimit)
+				{
+					Enemy_Invincible = true;
+					if (LavenderBossBattlePrologue_PetalTimer++ > LavenderBossBattlePrologue_PetalRate)
+					{
+						LavenderBossBattle_Prologue_BloodPetals();
+						LavenderBossBattlePrologue_PetalTimer = 0;
+					}	
+				}
+				else
+				{
+					if (sprite_index == spr_Lavender_BloodPetal)
+					{
+						image_index = 0;
+						sprite_index = spr_Lavender_BloodPetal_Decharge;
+					}
+					else if (animation_end(spr_Lavender_BloodPetal_Decharge))
+					{
+						sprite_index = spr_Lavender_Levitate;
+						LavenderBossBattlePrologue_CurrentState = LAVENDERBOSSBATTLE_PROLOGUE_STATE.IDLE;
+						LavenderBossBattlePrologue_NextState = LAVENDERBOSSBATTLE_PROLOGUE_STATE.POISON_GARDEN;
+						LavenderBossBattlePrologue_PetalTimer = 0;
+						LavenderBossBattlePrologue_MaxPetalTimer = 0;
+						Enemy_Invincible = false;
+						LavenderBossBattlePrologue_BloodPetals_Particle = noone;
+						LavenderBossBattlePrologue_BloodPetals_ParticleCreated = false;
+					}
+					
+				}
+				
+			}
+			
 		#endregion
 		
 		break;//end Blood Petal State
 	
+	case LAVENDERBOSSBATTLE_PROLOGUE_STATE.POISON_GARDEN:
+	
+		#region Poison Graden
+		
+			//Lavender faces the player
+			if (instance_exists(obj_Player))
+			{
+	
+				image_xscale = -sign(x - obj_Player.x);
+	
+			}//end face player
+			
+			
+		
+		
+		#endregion
+	
+		break;//end Poison Graden State
+	
 }//end State Machine
 
-
+#endregion

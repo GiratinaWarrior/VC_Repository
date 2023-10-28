@@ -30,7 +30,7 @@
   "origin": 4,
   "parent": {
     "name": "MainBody",
-    "path": "folders/Sprites/NPC's/0_Story/Lavender/Battle/MainBody.yy",
+    "path": "folders/Sprites/Enemies/Bosses/Lavender/Battle/MainBody.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

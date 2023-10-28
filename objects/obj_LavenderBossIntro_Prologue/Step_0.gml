@@ -137,16 +137,15 @@ switch(LavenderBossIntroPrologue_State)
 	
 		#region Lavender Charge
 			
+			//Set the music
+//			SetRoomAudio_Music_Default(music_LavenderBattleTheme);
+			
 			if (!LavenderBossIntroPrologue_LavenderCharge_SequenceCreated)
 			{
 				
 				//Create the new charge movement
 				layer_sequence_destroy(LavenderBossIntroPrologue_LavenderIdle);
 				LavenderBossIntroPrologue_LavenderCharge_Sequence = layer_sequence_create(layer, 0, 0, seq_LavenderBossIntro_LavenderCharge);
-				
-				//Create the flower particles
-				var _dist = 100;
-				//LavenderBossIntroPrologue_FlowerParticles = CreateParticleSystem(ps_LavenderBossFightFlowers, "LavenderFlowers", 480 - _dist, -_dist);
 			
 				//end this section of code
 				LavenderBossIntroPrologue_LavenderCharge_SequenceCreated = true;
@@ -162,8 +161,9 @@ switch(LavenderBossIntroPrologue_State)
 					LavenderBossIntroPrologue_State = LAVENDERBOSSINTROPROLOGUE_STATE.LAVENDER_CHALLENGE;
 				}
 				
-				TimeSourceCreateAndStart(0, _func);
+				TimeSourceCreateAndStart(1, _func);
 			}
+			
 			
 		#endregion
 	
@@ -227,6 +227,9 @@ switch(LavenderBossIntroPrologue_State)
 		{
 			LockEntityInSight();
 		}
+		
+		obj_Camera.x = 960;
+		obj_Camera.y = 270;
 		
 		break;
 		

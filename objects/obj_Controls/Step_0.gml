@@ -18,7 +18,7 @@ global.Key_Starjump = keyboard_check_pressed(vk_up) || keyboard_check_pressed(or
 global.Key_Wall = keyboard_check_pressed(vk_space);
 
 //Using the Selene Sword
-global.Key_Sword = mouse_check_button_pressed(mb_left);
+global.Key_Sword = mouse_check_button_pressed(mb_left) || keyboard_check_pressed(ord("E"));
 
 //Using the Lunar Cannon
 global.Key_Cannon = keyboard_check_pressed(ord("Q"));

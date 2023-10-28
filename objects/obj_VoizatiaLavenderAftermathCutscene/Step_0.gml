@@ -91,10 +91,10 @@ switch (VoizatiaLavenderAftermath_State)
 			}
 			else if (layer_sequence_is_finished(VoizatiaLavenderAftermath_VoizatiaTeleportRose_Sequence))
 			{
-				show_debug_message("Voizatia Teleported");
+				//show_debug_message("Voizatia Teleported");
 				VoizatiaLavenderAftermath_State = VOIZATIALAVENDERAFTERMATHCUTSCENE.VOIZATIA_TALK_ROSE;
 				layer_sequence_x(VoizatiaLavenderAftermath_VoizatiaIdle, 256);
-				show_debug_message("Voizatia Teleported");
+				//show_debug_message("Voizatia Teleported");
 			}
 		
 		#endregion

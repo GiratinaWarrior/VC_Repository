@@ -6,6 +6,8 @@ draw_sprite_stretched(Menu_Box, 0, x - Menu_Margin, y - Menu_Margin, Menu_FullWi
 //set the text
 DrawSetText(Menu_TextColor, Menu_Font, fa_left, fa_top);
 
+draw_set_alpha(1);
+
 //create a description check variable
 var _desc = !(Menu_Desc == -1);
 

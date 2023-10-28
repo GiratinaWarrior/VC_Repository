@@ -57,4 +57,4 @@ MenuOptions_2DArray =
 	["TESTING_ONLY", TitleMenu_Testing]
 ]
 
-Menu(room_width/2 + 200, room_height/2, MenuOptions_2DArray, -1 , ft_TitleScreen);
+Menu(x, y, MenuOptions_2DArray, -1, ft_TitleScreen);

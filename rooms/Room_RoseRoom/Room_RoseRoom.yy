@@ -64,6 +64,7 @@
     {"name":"FamilyPortrait","path":"rooms/Room_RoseRoom/Room_RoseRoom.yy",},
     {"name":"Bookshelf","path":"rooms/Room_RoseRoom/Room_RoseRoom.yy",},
     {"name":"RoseBed","path":"rooms/Room_RoseRoom/Room_RoseRoom.yy",},
+    {"name":"inst_6BB66099","path":"rooms/Room_RoseRoom/Room_RoseRoom.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -135,6 +136,7 @@
 1,-2147483648,-3,0,2,-2147483648,0,-23,-2147483648,-3,0,-101,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"tiles_RoseRoomTileSet","path":"tilesets/tiles_RoseRoomTileSet/tiles_RoseRoomTileSet.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Player","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3B209CD7","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_RoomWarp","path":"objects/obj_RoomWarp/obj_RoomWarp.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.5,"x":-96.0,"y":304.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6BB66099","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_ShrineSoldier","path":"objects/obj_ShrineSoldier/obj_ShrineSoldier.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":768.0,"y":160.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Furniture","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"FamilyPortrait","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Entity","path":"objects/obj_Entity/obj_Entity.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":832.0,"y":160.0,},

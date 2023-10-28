@@ -21,7 +21,7 @@
 function Menu(_x, _y, _options, _description = -1, _font = ft_TitleScreen, _box = blanksprite, _textcolor = c_white, _textcolorchosen = c_yellow){
 	
 	//Create Menu object instance
-	with (instance_create_depth(x, y, -999, obj_Menu))
+	with (instance_create_depth(_x, _y, -999, obj_Menu))
 	{
 		
 		Menu_Hover = 0;

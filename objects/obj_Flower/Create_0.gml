@@ -12,3 +12,5 @@ ySpeed = 0;
 Gravity = 1;
 
 Flower_IsCut = false;
+
+//instance_destroy();

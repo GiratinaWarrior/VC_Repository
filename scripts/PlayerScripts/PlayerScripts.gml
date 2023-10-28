@@ -172,7 +172,6 @@ function PlayerState_LunarCannon(){
 			sprite_index = spr_RoseLunarCannon;
 		}
 	
-	
 		if (image_index > 3 && LunarCannon_VallenUse <= global.Vallen)
 		{
 			var _knockdir;
@@ -472,7 +471,7 @@ function PlayerTakenDamage(){
 function PlayerHeal(_healAmount = global.MaxHealth - global.Health)
 {
 	
-	HealthParticles = CreateParticleSystem(ps_PlayerHeal, layer, x, y + 16);
+//	HealthParticles = CreateParticleSystem(ps_PlayerHeal, layer, x, y + 16);
 	
 	if (global.Health + _healAmount < global.MaxHealth)
 	{
@@ -492,7 +491,7 @@ function PlayerRestoreVallen(_restoreAmount = global.MaxVallen - global.Vallen)
 	{
 		with (obj_Player)
 		{
-			VallenParticles = CreateParticleSystem(ps_PlayerRestoreVallen, layer, x, y);
+//			VallenParticles = part_system_create_layer(layer, false)//CreateParticleSystem(ps_PlayerRestoreVallen, layer, x, y);
 		}	
 	}
 	

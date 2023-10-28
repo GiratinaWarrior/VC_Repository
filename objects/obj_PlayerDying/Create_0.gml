@@ -6,10 +6,14 @@ Done = 0;
 
 layer = layer_create(-9998, "PlayerDeath");
 
-PlayerDeathParticles = CreateParticleSystem(ps_PlayerDeath, layer, x, y);
+//PlayerDeathParticles = CreateParticleSystem(ps_PlayerDeath, layer, x, y);
+
+/*
+PlayerDeathParticles = part_system_create_layer(layer, false, ps_PlayerDeath);
+part_system_position(PlayerDeathParticles, x, y);
+*/
 
 PlayerDeathFade = layer_sprite_create(layer, x, y, spr_DeathFade);
-
 
 depth = -999;
 

@@ -121,7 +121,7 @@ switch (MalvaliaFirstFightCutscene_State)
 	
 		#region Malvalia Exit
 			
-			show_debug_message("NEXT STAGE");
+			//show_debug_message("NEXT STAGE");
 			
 			if !(MalvaliaFirstFightCutscene_MalvaliaExit_SequenceCreated)
 			{
