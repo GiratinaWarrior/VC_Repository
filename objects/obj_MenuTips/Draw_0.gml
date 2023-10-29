@@ -27,5 +27,5 @@ else if (TipFade < -0.5 && TipFadeChange < 0)
 	CurrentTip = NextTip;
 }
 
-show_debug_message("Tip Fade: {0}", TipFade);
-show_debug_message("Tip Change: {0}", TipFadeChange);
+//show_debug_message("Tip Fade: {0}", TipFade);
+//show_debug_message("Tip Change: {0}", TipFadeChange);

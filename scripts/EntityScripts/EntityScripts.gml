@@ -145,11 +145,22 @@ function ShrinkAndDestroy(_shrinkRate = 0.1)
 	
 }
 
-function LockEntityInSight (_entity = id, _width = sprite_width, _height = sprite_height)
+function AnimateAndDestroy(_spr = sprite_index)
+{
+	sprite_index = _spr;
+	
+	if (image_index >= image_number - 1)
+	{
+		instance_destroy();
+	}
+	
+}
+
+function LockEntityInSight (_entity = id, _width = sprite_width, _height = sprite_height, _xOffset = sprite_xoffset, _yOffset = sprite_yoffset)
 {
 	with (_entity)
 	{
-		x = clamp(x, obj_Camera.x - obj_Camera.view_w_half + _width + sprite_xoffset, obj_Camera.x + obj_Camera.view_w_half - _width - sprite_xoffset);
-		y = clamp(y, obj_Camera.y - obj_Camera.view_h_half + _height + sprite_yoffset, obj_Camera.y + obj_Camera.view_h_half - _height - sprite_yoffset);
+		x = clamp(x, obj_Camera.x - obj_Camera.view_w_half + _width - _xOffset, obj_Camera.x + obj_Camera.view_w_half - _width + _xOffset);
+		y = clamp(y, obj_Camera.y - obj_Camera.view_h_half + _yOffset, obj_Camera.y + obj_Camera.view_h_half - _height + _yOffset);
 	}
 }

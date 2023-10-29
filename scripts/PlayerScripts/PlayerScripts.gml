@@ -114,7 +114,7 @@ function PlayerState_SeleneSword(argument0, argument1, argument2){
 		Gravity_Normal = Gravity_Jump;
 		if (!key_jump)
 		{
-			//ySpeed = 0;
+			ySpeed = 0;
 		}
 	}
 	

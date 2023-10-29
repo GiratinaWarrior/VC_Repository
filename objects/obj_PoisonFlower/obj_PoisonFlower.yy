@@ -5,18 +5,20 @@
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":1,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_EnemyAttack","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"propertyId":{"name":"Damage","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"value":"0",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_Enemy","path":"objects/parent_Enemy/parent_Enemy.yy",},"propertyId":{"name":"Health","path":"objects/parent_Enemy/parent_Enemy.yy",},"value":"7",},
   ],
   "parent": {
     "name": "PoisonGarden",
     "path": "folders/Objects/Enemies/Bosses/Lavender_Prologue/Attacks/PoisonGarden.yy",
   },
   "parentObjectId": {
-    "name": "parent_EnemyAttack",
-    "path": "objects/parent_EnemyAttack/parent_EnemyAttack.yy",
+    "name": "parent_Enemy",
+    "path": "objects/parent_Enemy/parent_Enemy.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -34,8 +36,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_PoisonFlower",
-    "path": "sprites/spr_PoisonFlower/spr_PoisonFlower.yy",
+    "name": "spr_PoisonFlower_Rise",
+    "path": "sprites/spr_PoisonFlower_Rise/spr_PoisonFlower_Rise.yy",
   },
   "spriteMaskId": null,
   "visible": true,

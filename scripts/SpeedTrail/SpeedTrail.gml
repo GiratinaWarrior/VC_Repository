@@ -1,4 +1,4 @@
-/// @description SpeedTrail(<image_blend>, <FadeRate> , <image_alpha>)
+/// @description SpeedTrail
 /// @param color
 /// @oaram fadeOut
 /// @param fadeStart

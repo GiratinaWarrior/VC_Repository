@@ -19,11 +19,14 @@ enum LAVENDERBOSSINTROPROLOGUE_STATE
 
 	BATTLE_START, //Set up the boss fight
 	IN_BATTLE, //The battle is ongoing until Lavender is defeated
+
+////Post Battle
+	BATTLE_END,
+	LAVENDER_DEFEATED_TALK
+
 }
 
 LavenderBossIntroPrologue_LavenderBoss = noone;
-
-LavenderBossIntroPrologue_FlowerParticles = noone;
 
 LavenderBossIntroPrologue_LavenderIdle = noone;
 
@@ -40,4 +43,6 @@ LavenderBossIntroPrologue_LavenderCharge_Sequence = noone;
 
 LavenderBossIntroPrologue_LavenderChallenge_TalkStarted = false;
 LavenderBossIntroPrologue_LavenderChallenge_Talk = noone;
+
+LavenderBossIntroPrologue_BattleEnd_Lavender = noone;
 

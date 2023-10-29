@@ -202,7 +202,7 @@ switch(LavenderBossIntroPrologue_State)
 		
 		break;//end Lavender Challenge Stage
 	
-	//Battle Start Stage: 
+	//Battle Start Stage: The set up for the battle
 	case LAVENDERBOSSINTROPROLOGUE_STATE.BATTLE_START:
 		
 		#region Battle Start
@@ -221,17 +221,73 @@ switch(LavenderBossIntroPrologue_State)
 		
 		break;//end Battle Start Stage
 		
+	//In Battle Stage: The battle is currently ongoing
 	case LAVENDERBOSSINTROPROLOGUE_STATE.IN_BATTLE:
 		
-		with (obj_Player) 
-		{
-			LockEntityInSight();
-		}
+		#region In Battle
 		
-		obj_Camera.x = 960;
-		obj_Camera.y = 270;
+			with (obj_Player) 
+			{
+				LockEntityInSight(id, 32, 32, 16, 16);
+			}
 		
-		break;
+			obj_Camera.x = 960;
+			obj_Camera.y = 270;
+		
+		#endregion
+		
+		break;//end In Battle Stage
+	
+	//Battle End Stage: The fight is over, and lavender descends
+	case LAVENDERBOSSINTROPROLOGUE_STATE.BATTLE_END:
+		
+		#region Battle End
+		
+			SetRoomAudio_Music_Default();
+		
+			with (obj_Player)
+			{
+				hascontrol = false;
+				image_xscale = -sign(x - LavenderBossIntroPrologue_BattleEnd_Lavender.x);
+			}
+			
+			with(LavenderBossIntroPrologue_BattleEnd_Lavender)
+			{
+								
+				y = min(204, y + 2);
+				
+				image_xscale = sign(x - obj_Player.x);
+				
+				if (x < 960)
+				{
+					x = min(960, x + map(x, x, 960, 5, 0));
+				}
+				else if (x > 960)
+				{
+					x = max(960, x - map(x, 960, x, 0, 5));
+				}
+				else if (x == 960 && y == 204)
+				{
+					other.LavenderBossIntroPrologue_BattleEnd_Lavender = LAVENDERBOSSINTROPROLOGUE_STATE.LAVENDER_DEFEATED_TALK;
+				}
+				
+			}
+			
+		
+		#endregion
+		
+		break;//end Battle End Stage
+		
+	//Lavender Defeated Talk Stage: Lavender congratulates Rose for her victory
+	case LAVENDERBOSSINTROPROLOGUE_STATE.LAVENDER_DEFEATED_TALK:
+	
+		#region Lavender Defeated Talk 
+		
+			
+		
+		#endregion
+	
+		break;//end Lavender Defeated Talk Stage
 		
 }//end Stage machine
 

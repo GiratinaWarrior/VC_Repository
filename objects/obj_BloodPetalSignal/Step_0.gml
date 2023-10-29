@@ -11,7 +11,7 @@ if (instance_exists(obj_LavenderBossBattle_Prologue))
 	}
 	else
 	{
-		image_alpha = min(image_alpha + BloodPetalSignal_FadeChange, 0.7);
+		image_alpha = min(image_alpha + BloodPetalSignal_FadeChange, 0.5);
 	}
 	
 	x = obj_LavenderBossBattle_Prologue.x + StartXOffset;

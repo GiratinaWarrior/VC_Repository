@@ -17,7 +17,7 @@ enum LAVENDERBOSSBATTLE_PROLOGUE_IDLESTATE
 	
 layer_create(depth - 2, "DivineArsenal");
 layer_create(depth - 2, "BloodPetal");
-layer_create(depth - 1, "PoisonGarden");
+layer_create(depth + 1, "PoisonGarden");
 	
 LavenderBossBattlePrologue_CurrentState = LAVENDERBOSSBATTLE_PROLOGUE_STATE.IDLE;
 
@@ -29,7 +29,7 @@ xSpeed = 0;
 ySpeed = 0;
 Gravity = 0;
 
-LavenderBossBattlePrologue_StateChangeTimer = 100;
+LavenderBossBattlePrologue_StateChangeTimer = 0;
 LavenderBossBattlePrologue_StateChangeTimerLimit = 200;
 
 //----------------Idle State----------------//
@@ -40,7 +40,7 @@ LavenderBossBattlePrologue_Idle_Speed = 5// LavenderBossBattlePrologue_Idle_Dist
 LavenderBossBattlePrologue_Idle_FloatTimer = 0;
 
 LavenderBossBattlePrologue_Dodge_Chance = 0.4;
-LavenderBossBattlePrologue_Dodge_Speed = 10;
+LavenderBossBattlePrologue_Dodge_Speed = 20;
 
 LavenderBossBattlePrologue_InRangeSword = false;
 
@@ -51,7 +51,7 @@ LavenderBossBattlePrologue_BloodPetals_Particle = noone;
 LavenderBossBattlePrologue_BloodPetals_ParticleCreated = false;
 //LavenderBossBattlePrologue_BloodPetals_ParticleInfo  = particle_get_info(ps_Lavender_BloodPetals);
 
-LavenderBossBattlePrologue_PetalRate = 15;
+LavenderBossBattlePrologue_PetalRate = 10;
 LavenderBossBattlePrologue_PetalTimer = 0;
 
 LavenderBossBattlePrologue_MaxPetalTimer = 0;
@@ -59,9 +59,23 @@ LavenderBossBattlePrologue_MaxPetalTimerLimit = 300;
 
 //-------------Poison Garden------------------//
 
+LavenderBossBattlePrologue_NumberOfPoison = 5;
+LavenderBossBattlePrologue_SeedsMade = 0;
 
+LavenderBossBattlePrologue_MaxPoison = 7;
+LavenderBossBattlePrologue_MinPoison = 3;
 
+LavenderBossBattlePrologue_SeedFireRate = 0;
+LavenderBossBattlePrologue_SeedCooldown = LavenderBossBattlePrologue_SeedFireRate;
+LavenderBossBattlePrologue_SeedsPlanted = false;
 
+//-------------Divine Arsenal-----------------//
+
+LavenderBossBattlePrologue_PortalCreated = false;
+LavenderBossBattlePrologue_Portal = noone;
+
+LavenderBossBattlePrologue_DivineArsenal_StateTimer = 0;
+LavenderBossBattlePrologue_DivineArsenal_StateTimerLimit = 300;
 
 
 
