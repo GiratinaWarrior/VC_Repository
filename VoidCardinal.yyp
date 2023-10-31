@@ -331,7 +331,7 @@
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"FieldTiles(MatureTime).tset","CopyToMask":-1,"filePath":"datafiles",},
-    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"Pokemon Rejuvenation OST - citamginE - gnileeF - Made with Clipchamp.mp4","CopyToMask":3035426170322551022,"filePath":"datafiles",},
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"Pokemon Rejuvenation OST - citamginE - gnileeF - Made with Clipchamp.mp4","CopyToMask":-1,"filePath":"datafiles",},
   ],
   "isEcma": false,
   "LibraryEmitters": [],
@@ -965,6 +965,7 @@
     {"id":{"name":"NPCScripts","path":"scripts/NPCScripts/NPCScripts.yy",},},
     {"id":{"name":"tiles_VoidShrineTileSet","path":"tilesets/tiles_VoidShrineTileSet/tiles_VoidShrineTileSet.yy",},},
     {"id":{"name":"obj_FrostickEgg","path":"objects/obj_FrostickEgg/obj_FrostickEgg.yy",},},
+    {"id":{"name":"spr_PoisonFlower_Wither","path":"sprites/spr_PoisonFlower_Wither/spr_PoisonFlower_Wither.yy",},},
     {"id":{"name":"MenuFunctions","path":"scripts/MenuFunctions/MenuFunctions.yy",},},
     {"id":{"name":"sound_MoonShoot","path":"sounds/sound_MoonShoot/sound_MoonShoot.yy",},},
     {"id":{"name":"seq_VoizatiaDebut_RoseEnter","path":"sequences/seq_VoizatiaDebut_RoseEnter/seq_VoizatiaDebut_RoseEnter.yy",},},

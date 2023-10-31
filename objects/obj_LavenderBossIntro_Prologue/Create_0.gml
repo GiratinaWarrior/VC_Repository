@@ -21,10 +21,14 @@ enum LAVENDERBOSSINTROPROLOGUE_STATE
 	IN_BATTLE, //The battle is ongoing until Lavender is defeated
 
 ////Post Battle
-	BATTLE_END,
-	LAVENDER_DEFEATED_TALK
+	BATTLE_END, //The battle is over and Lavender moves towards the center of the garden
+	LAVENDER_DEFEATED_TALK, //Lavender explains that she is proud of Rose and what she has become
+	LAVENDER_DESCEND, //Lavender descends to the ground
+	LAVENDER_EXIT_TALK, //Lavender tells Rose to come over to Nox City for a celebration
+	LAVENDER_EXIT, //Lavender leaves for Nox City
+	CUTSCENE_END //The cutscene ends
 
-}
+}//end enum
 
 LavenderBossIntroPrologue_LavenderBoss = noone;
 
@@ -46,3 +50,8 @@ LavenderBossIntroPrologue_LavenderChallenge_Talk = noone;
 
 LavenderBossIntroPrologue_BattleEnd_Lavender = noone;
 
+LavenderBossIntroPrologue_LavenderDefeated_TalkStarted = false;
+LavenderBossIntroPrologue_LavenderDefeated_Talk = noone;
+
+LavenderBossIntroPrologue_LavenderExitTalk_TalkStarted = false;
+LavenderBossIntroPrologue_LavenderExitTalk_Talk = noone;

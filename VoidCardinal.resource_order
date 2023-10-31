@@ -738,6 +738,7 @@
     {"name":"NPCScripts","order":3,"path":"scripts/NPCScripts/NPCScripts.yy",},
     {"name":"tiles_VoidShrineTileSet","order":1,"path":"tilesets/tiles_VoidShrineTileSet/tiles_VoidShrineTileSet.yy",},
     {"name":"obj_FrostickEgg","order":1,"path":"objects/obj_FrostickEgg/obj_FrostickEgg.yy",},
+    {"name":"spr_PoisonFlower_Wither","order":6,"path":"sprites/spr_PoisonFlower_Wither/spr_PoisonFlower_Wither.yy",},
     {"name":"MenuFunctions","order":3,"path":"scripts/MenuFunctions/MenuFunctions.yy",},
     {"name":"sound_MoonShoot","order":7,"path":"sounds/sound_MoonShoot/sound_MoonShoot.yy",},
     {"name":"spr_MaskMantisJumping","order":1,"path":"sprites/spr_MaskMantisJumping/spr_MaskMantisJumping.yy",},

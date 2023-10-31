@@ -114,8 +114,7 @@ switch(LavenderBossIntroPrologue_State)
 			[
 				"Hahaha, did you like my little poem, Rose-darling?",
 				"I think it is quite beautiful, if I do say so myself.",
-				"I am not the greatest at getting to the point, so before I let you have your lovely Cardinal party",
-				"I have one last test for you."
+				"I am not the greatest at getting to the point, so I will be doing so 'show do not tell'"
 			];
 			
 			if !(LavenderBossIntroPrologue_LavenderExplain_TalkStarted)
@@ -179,12 +178,11 @@ switch(LavenderBossIntroPrologue_State)
 		
 			var _text = 
 			[
-				"There is one last tradition that comes with naming a new Cardinal.",
-				"It is to defeat their predecessor in battle.",
 				"Rose!",
-				"Do not hold back. Go all out. I will do the same. ",
-				"Show me how my little flower has bloomed!",
-			
+				"The final test to become Cardinal is to surpass the previous Cardinal to justify your title",
+				"If you can defeat me in battle, you will be ready for anything the world throws at you",
+				"Do not hold back. Go all out. Show me all of your strength, as I will show you the power of the Former Cardinal.",
+				"Come forth! Show me how my little flower has bloomed!",
 			];
 			
 			if !(LavenderBossIntroPrologue_LavenderChallenge_TalkStarted)
@@ -234,6 +232,11 @@ switch(LavenderBossIntroPrologue_State)
 			obj_Camera.x = 960;
 			obj_Camera.y = 270;
 		
+			if !(instance_exists(obj_LavenderBossBattle_Prologue))
+			{
+				LavenderBossIntroPrologue_State = LAVENDERBOSSINTROPROLOGUE_STATE.BATTLE_END;
+			}
+			
 		#endregion
 		
 		break;//end In Battle Stage
@@ -243,12 +246,14 @@ switch(LavenderBossIntroPrologue_State)
 		
 		#region Battle End
 		
-			SetRoomAudio_Music_Default();
+			SetRoomAudio_Music_Default(blanksound);
 		
 			with (obj_Player)
 			{
 				hascontrol = false;
-				image_xscale = -sign(x - LavenderBossIntroPrologue_BattleEnd_Lavender.x);
+				
+				image_xscale = -sign(x - other.LavenderBossIntroPrologue_BattleEnd_Lavender.x);
+					
 			}
 			
 			with(LavenderBossIntroPrologue_BattleEnd_Lavender)
@@ -256,19 +261,33 @@ switch(LavenderBossIntroPrologue_State)
 								
 				y = min(204, y + 2);
 				
-				image_xscale = sign(x - obj_Player.x);
+				image_xscale = -sign(x - obj_Player.x);
+				
+			//	show_debug_message("X: {0}", x);
+			//	show_debug_message("Y: {0}", y);
+				
+				var _xSpe = 2;
 				
 				if (x < 960)
 				{
-					x = min(960, x + map(x, x, 960, 5, 0));
+					x = min(960, x + _xSpe);
 				}
 				else if (x > 960)
 				{
-					x = max(960, x - map(x, 960, x, 0, 5));
+					x = max(960, x - _xSpe);
 				}
 				else if (x == 960 && y == 204)
 				{
-					other.LavenderBossIntroPrologue_BattleEnd_Lavender = LAVENDERBOSSINTROPROLOGUE_STATE.LAVENDER_DEFEATED_TALK;
+					var _func = function()
+					{
+						with(obj_LavenderBossIntro_Prologue)
+						{
+							LavenderBossIntroPrologue_State = LAVENDERBOSSINTROPROLOGUE_STATE.LAVENDER_DEFEATED_TALK;
+						}
+					}
+					
+					TimeSourceCreateAndStart(100, _func);
+					//other.LavenderBossIntroPrologue_State = LAVENDERBOSSINTROPROLOGUE_STATE.LAVENDER_DEFEATED_TALK;
 				}
 				
 			}
@@ -283,11 +302,174 @@ switch(LavenderBossIntroPrologue_State)
 	
 		#region Lavender Defeated Talk 
 		
+			var _text = 
+			[
+				"Rose...",
+				"Rose-darling, you really have become strong, stronger than I ever could have predicted",
+				"I am truly proud to be able to call you my own daughter.",
+				"You are undoubtedly worthy of the title 'Cardinal of Nox'."
+			];
 			
-		
+			if !(LavenderBossIntroPrologue_LavenderDefeated_TalkStarted)
+			{
+				LavenderBossIntroPrologue_LavenderDefeated_Talk = CutsceneText(_text, n, p, f);
+				LavenderBossIntroPrologue_LavenderDefeated_TalkStarted = true;
+			}
+			
+			else if !(instance_exists(obj_Text))
+			{
+				var _func = function()
+				{
+					LavenderBossIntroPrologue_State = LAVENDERBOSSINTROPROLOGUE_STATE.LAVENDER_DESCEND;
+				}
+				
+				TimeSourceCreateAndStart(50, _func);
+			}
+			
 		#endregion
 	
 		break;//end Lavender Defeated Talk Stage
+	
+	//Lavender Descend Stage: Lavender descends to the ground
+	case LAVENDERBOSSINTROPROLOGUE_STATE.LAVENDER_DESCEND:
+	
+		#region Lavender Descend Stage
+			
+			//show_debug_message("DESCEND");	
+			
+			with (LavenderBossIntroPrologue_BattleEnd_Lavender)
+			{
+				y = min(320, y + 2);
+				
+				if (y == 320) && (sprite_index != spr_Lavender_Idle)
+				{
+					sprite_index = spr_Lavender_Charge;
+				}
+				
+				if (sprite_index == spr_Lavender_Charge)
+				{
+					var _func = function()
+					{
+						sprite_index = spr_Lavender_Idle;
+					}
+					TimeSourceCreateAndStart(30, _func);
+				}
+				
+				else if (sprite_index == spr_Lavender_Idle)
+				{
+					var _func = function()
+					{
+						with (obj_LavenderBossIntro_Prologue)
+						{
+							LavenderBossIntroPrologue_State = LAVENDERBOSSINTROPROLOGUE_STATE.LAVENDER_EXIT_TALK;	
+						}
+					}
+					TimeSourceCreateAndStart(60, _func);
+				}
+				
+			}
+			
+		#endregion
+		
+		break;//end Lavender Descend Stage
+		
+	//Lavender Exit Talk Stage: Lavender tells her that its now time to go for the festival
+	case LAVENDERBOSSINTROPROLOGUE_STATE.LAVENDER_EXIT_TALK:
+	
+		#region Lavender Exit Talk
+		
+			var _text = 
+			[
+				"Now that you gone up and taken my precious title, I believe it is about time everyone hears about this.",
+				"I have invited everyone in Noctis City to have ourselves a little ceremony for you.",
+				"Do not dawdle, Rose-darling, you can not be late to your own ceremony can you?",
+				"We are going to have one heaven of a time!"
+			];
+			
+			if !(LavenderBossIntroPrologue_LavenderExitTalk_TalkStarted)
+			{
+				LavenderBossIntroPrologue_LavenderExitTalk_Talk = CutsceneText(_text, n, p, f);
+				LavenderBossIntroPrologue_LavenderExitTalk_TalkStarted = true;
+			}
+			else if !(instance_exists(obj_Text))
+			{
+				var _func = function()
+				{
+					LavenderBossIntroPrologue_State = LAVENDERBOSSINTROPROLOGUE_STATE.LAVENDER_EXIT;
+				}
+				TimeSourceCreateAndStart(20, _func);
+			}
+		
+		#endregion
+	
+		break;//end Lavender Exit Talk Stage
+	
+	//Lavender Exit Stage: Lavender leaves for Noctis City
+	case LAVENDERBOSSINTROPROLOGUE_STATE.LAVENDER_EXIT:
+	
+		#region Lavender Exit
+		
+			with (LavenderBossIntroPrologue_BattleEnd_Lavender)
+			{
+				if (image_xscale == 1)
+				{
+					var _func = function()
+					{
+						image_xscale = -1;	
+					}
+					TimeSourceCreateAndStart(25, _func);
+				}
+				
+				else
+				{
+					
+					var _func = function()
+					{
+						sprite_index = spr_Lavender_Walk;
+					}
+					TimeSourceCreateAndStart(30, _func);
+					
+					if (sprite_index == spr_Lavender_Walk)
+					{
+						x -= 3;
+					}
+					
+					if (x <= 400)
+					{
+						other.LavenderBossIntroPrologue_State = LAVENDERBOSSINTROPROLOGUE_STATE.CUTSCENE_END;
+					}
+					
+				}
+			}
+		
+		#endregion
+		
+		break;//end Lavender Exit Stage
+		
+	//Cutscene End Stage: the cutscene is over and Rose regains control
+	case LAVENDERBOSSINTROPROLOGUE_STATE.CUTSCENE_END:
+	
+		#region Cutscene End Stage
+		
+			SetRoomAudio_Music_Default(music_ShrineMemoryTheme);
+		
+			instance_destroy(LavenderBossIntroPrologue_BattleEnd_Lavender);
+			
+			obj_Player.hascontrol = true;
+			
+			obj_Camera.follow = obj_Player;
+			
+			global.Lavender_Defeated_Prologue = true;
+			
+			SetSpawnpoint(obj_Player.x, obj_Player.y);
+			
+			SaveGame();
+			
+			instance_destroy();
+		
+		#endregion
+	
+		break;//end Cutscene End Stage
 		
 }//end Stage machine
 

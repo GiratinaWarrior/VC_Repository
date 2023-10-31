@@ -56,7 +56,7 @@ function SetRoomAudio_Music_Default(_music = blanksound){
 			with (obj_PlayBGM)
 			{
 				BGM_Volume = 0.5;
-				BGM_GainRate = 1000;
+				BGM_GainRate = 100;
 			}
 			
 			break;//end Valnyx Shrine

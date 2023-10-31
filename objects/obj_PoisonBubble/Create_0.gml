@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-PoisonBubble_Growth = 0.1;
+PoisonBubble_Growth = 0.05;
 
 PoisonBubble_Charged = false;
 

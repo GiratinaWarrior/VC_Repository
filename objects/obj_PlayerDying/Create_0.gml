@@ -23,7 +23,7 @@ image_alpha = 1;
 
 global.Health = global.MaxHealth;
 
-obj_Camera.follow = obj_PlayerDying;
+//obj_Camera.follow = obj_PlayerDying;
 
 SetRoomAudio_Music(blanksound, 0, 0);
 

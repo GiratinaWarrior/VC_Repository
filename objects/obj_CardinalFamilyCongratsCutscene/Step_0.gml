@@ -52,8 +52,8 @@ switch(CardinalFamilyCongrats_Stage)
 			[
 				"Greetings, Rose-darling, it sure took you long enough to make it here.",
 				"Although I suppose it is of no surprise, given the how difficult my trials were.",
-				"So congratulations Rose-darling, you are now officially the Cardinal of Nox.",
-				"As for what you do, I'll explain that right now.",
+				"So congratulations Rose-darling, you have completed the first of my difficult trials, and are ready for the final test.",
+				"But before you undergo the test, you must understand what it means to be the Cardinal of Nox.",
 				"And for the record, you may not 'skip my dialogue' or however you word it, this is very important.",
 				"Do not.",
 				"I will be taking away your skip dialogue priviledges now.",
@@ -75,9 +75,11 @@ switch(CardinalFamilyCongrats_Stage)
 				//Move on to the fly away stage
 				CardinalFamilyCongrats_Stage = CARDINALFAMILYCONGRATSCUTSCENE_STAGE.LAVENDER_FLY_EXIT;
 			}
-			
+			//If its time to take away your skip dialogue priviledges
 			else if (CardinalFamilyCongrats_Speech.TextBox_Page >= 4)
 			{
+				
+				
 				CardinalFamilyCongrats_Speech.TextBox_TextSkippable = false;
 				CardinalFamilyCongrats_Speech.TextBox_CharIncrease = 0.5;
 			}

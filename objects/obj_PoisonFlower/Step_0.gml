@@ -32,6 +32,11 @@ switch(PoisonFlower_State)
 			PoisonFlower_ShootTimer = PoisonFlower_ShootTimerCooldown;
 		}
 	
+		if (PoisonFlower_LifeCounter++ > PoisonFlower_MaxLife)
+		{
+			PoisonFlower_State = POISONFLOWER_STATE.WITHER;
+		}
+	
 		break;//end Idle State
 		
 	//Shoot State: The poison flower shoots an attack
@@ -76,7 +81,7 @@ switch(PoisonFlower_State)
 							
 							audio_play_sound(sound_PoisonBubble, 5, false, 0.2);
 							
-							with(instance_create_layer(x, y - sprite_height - 5, layer, obj_PoisonBubble))
+							with(instance_create_layer(x, y, layer, obj_PoisonBubble))
 							{
 								PoisonBubble_Wave = random(360);
 								image_xscale = 0;
@@ -121,6 +126,15 @@ switch(PoisonFlower_State)
 		AnimateAndDestroy(spr_PoisonFlower_Death);
 	
 		break;//end Die State
+		
+	//Wither State: the flower withers away after a certain amount of time
+	case POISONFLOWER_STATE.WITHER:
+		
+		image_speed = 1;
+		
+		AnimateAndDestroy(spr_PoisonFlower_Wither);
+		
+		break;//end Wither State
 		
 }//end state machine
 

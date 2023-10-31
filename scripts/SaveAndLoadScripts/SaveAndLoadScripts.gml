@@ -27,6 +27,7 @@ function SaveGame()
 		DefeatedShrineGeneral : global.ShrineGeneral_Defeated,
 		FamilyCongratsCardinal : global.CardinalCongratulation_Family,
 		CarvalineOrbCutscene : global.CarvalineOrb_Cutscene_Seen,
+		LavenderDefeated : global.Lavender_Defeated_Prologue,
 		CardinalNoctisCongratsCutscene : global.CardinalNoctisCongrats_Cutscene_Seen,
 		ShrineUnderAttack : global.ValnyxShrineUnderAttack_Active,
 		VoizatiaDebuted : global.VoizatiaDebuted,
@@ -78,6 +79,7 @@ function LoadSave()
 		global.ShrineGeneral_Defeated = _loadData.DefeatedShrineGeneral;
 		global.CardinalCongratulation_Family = _loadData.FamilyCongratsCardinal;
 		global.CarvalineOrb_Cutscene_Seen = _loadData.CarvalineOrbCutscene;
+		global.Lavender_Defeated_Prologue = _loadData.LavenderDefeated;
 		global.CardinalNoctisCongrats_Cutscene_Seen = _loadData.CardinalNoctisCongratsCutscene;
 		global.ValnyxShrineUnderAttack_Active = _loadData.ShrineUnderAttack;
 		global.VoizatiaDebuted = _loadData.VoizatiaDebuted;

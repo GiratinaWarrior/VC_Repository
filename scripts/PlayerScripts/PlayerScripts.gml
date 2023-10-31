@@ -112,7 +112,7 @@ function PlayerState_SeleneSword(argument0, argument1, argument2){
 	else 
 	{
 		Gravity_Normal = Gravity_Jump;
-		if (!key_jump)
+		if (!key_jump) && (sprite_index != spr_PlayerAirJumpDown_SeleneSword)
 		{
 			ySpeed = 0;
 		}

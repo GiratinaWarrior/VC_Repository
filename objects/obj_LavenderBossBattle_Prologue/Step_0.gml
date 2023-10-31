@@ -94,7 +94,12 @@ switch (LavenderBossBattlePrologue_CurrentState)
 									//If the player is about to use Selene Sword
 									if (obj_Player.PlayerState == PLAYERSTATE.SWORD)
 									{
-										if (Chance(LavenderBossBattlePrologue_Dodge_Chance)) LavenderBossBattlePrologue_IdleState = LAVENDERBOSSBATTLE_PROLOGUE_IDLESTATE.DODGE;
+										if (LavenderBossBattlePrologue_Dodge_Cooldown-- < 0) 
+										{	
+											LavenderBossBattlePrologue_Dodge_Cooldown = LavenderBossBattlePrologue_Dodge_Rate;
+											LavenderBossBattlePrologue_Dodge_Dir = sign(obj_Player.x - x);
+											LavenderBossBattlePrologue_IdleState = LAVENDERBOSSBATTLE_PROLOGUE_IDLESTATE.DODGE;
+										}
 									}//end player using sword
 									
 								}//end camera boundary
@@ -119,6 +124,17 @@ switch (LavenderBossBattlePrologue_CurrentState)
 					
 					#region Dodge
 						
+						//Lavender faces the player
+						if (instance_exists(obj_Player))
+						{
+	
+							image_xscale = -sign(x - obj_Player.x);
+	
+						}//end face player
+						
+						var _boundaryLeft = obj_Camera.x - (RES_W/2) + (sprite_width/2);
+						var _boundaryRight = obj_Camera.x + (RES_W/2) - (sprite_width/2);
+						
 						//Set the sprite
 						sprite_index = spr_Lavender_Dodge;
 						
@@ -126,18 +142,19 @@ switch (LavenderBossBattlePrologue_CurrentState)
 						
 						if 
 							(
-								x + LavenderBossBattlePrologue_Dodge_Speed <= (obj_Camera.x + (RES_W/2) - (sprite_width/2)) &&
-								x - LavenderBossBattlePrologue_Dodge_Speed >= (obj_Camera.x - (RES_W/2) + (sprite_width/2))
+								x + LavenderBossBattlePrologue_Dodge_Speed >= _boundaryRight &&
+								x - LavenderBossBattlePrologue_Dodge_Speed <= _boundaryLeft
 							) 
 						{
-							x -= LavenderBossBattlePrologue_Dodge_Speed * image_xscale;
-						}
-						else
-						{
-							x += LavenderBossBattlePrologue_Dodge_Speed * image_xscale;
+							LavenderBossBattlePrologue_Dodge_Dir = -LavenderBossBattlePrologue_Dodge_Dir;
 						}
 						
-						if !(LavenderBossBattlePrologue_InRangeSword) LavenderBossBattlePrologue_IdleState = LAVENDERBOSSBATTLE_PROLOGUE_IDLESTATE.FLOAT;
+						x += LavenderBossBattlePrologue_Dodge_Speed * LavenderBossBattlePrologue_Dodge_Dir;
+						
+						if !(LavenderBossBattlePrologue_InRangeSword) 
+						{
+							LavenderBossBattlePrologue_IdleState = LAVENDERBOSSBATTLE_PROLOGUE_IDLESTATE.FLOAT;
+						}
 
 					#endregion
 					

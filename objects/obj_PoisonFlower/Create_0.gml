@@ -11,7 +11,8 @@ enum POISONFLOWER_STATE
 	GROW,
 	IDLE,
 	SHOOT,
-	DIE
+	DIE,
+	WITHER
 }
 
 enum POISONFLOWER_STATE_SHOOT
@@ -33,3 +34,6 @@ PoisonFlower_FireTimer = PoisonFlower_FireRate;
 
 PoisonFlower_FireLength = 60;
 PoisonFlower_FireLengthTimer = 0;
+
+PoisonFlower_MaxLife = 400;
+PoisonFlower_LifeCounter = 0;

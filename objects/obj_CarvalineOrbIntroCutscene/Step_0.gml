@@ -363,10 +363,16 @@ switch(CarvalineOrbIntroCutscene_Stage)
 					
 						var _text = 
 						[
+							"Moving on from the lore stuff, it is time to undergo the last test to becoming Cardinal of Nox",
+							"New Moon Garden",
+							"The final test will be conducted there.",
+							"Come when you are ready."
+							/*
 							"Moving on from the...'plot' important stuff, we must return to the surface at once.",
 							"We can no way let you get away with becoming Cardinal without a nice ceremony can me now?",
 							"The ceremony will be in Noctis City, to get there, go back to the main floor, and head left.",
 							"We are going to have one heaven of a time, so take care not to be tardy!"
+							*/
 						]
 					
 						if !(CarvalineOrbIntroCutscene_LavenderTalk_ExitTalk_TalkStarted)
@@ -411,10 +417,14 @@ switch(CarvalineOrbIntroCutscene_Stage)
 				//have the player start moving again
 				with (obj_Player)
 				{
+					SetSpawnpoint(x, y);
 					hascontrol = true;
 				}
 				//Set the global flag for seeing that story
-				global.CarvalineOrb_Cutscene_Seen = true;
+				global.CarvalineOrb_Cutscene_Seen = true
+				
+				
+				
 				SaveGame();
 				
 				with (obj_CarvalinePedestal)

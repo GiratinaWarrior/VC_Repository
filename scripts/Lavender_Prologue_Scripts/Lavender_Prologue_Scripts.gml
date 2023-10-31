@@ -1,7 +1,22 @@
 ///Blood Petals
 function LavenderBossBattle_Prologue_BloodPetals()
 {
-	
+
+	var _fadeTarget = 0.5;
+
+	if (sprite_index == spr_Lavender_BloodPetal_Charge)
+	{
+		image_alpha = map(image_index, 0, image_number - 1, 1, _fadeTarget);
+	}
+	else if (sprite_index == spr_Lavender_BloodPetal)
+	{
+		image_alpha = _fadeTarget;
+	}
+	else if (sprite_index == spr_Lavender_BloodPetal_Decharge)
+	{
+		image_alpha = map(image_index, 0, image_number - 1, _fadeTarget, 1);	
+	}
+
 	//Lavender faces the player
 	if (instance_exists(obj_Player))
 	{
@@ -21,12 +36,13 @@ function LavenderBossBattle_Prologue_BloodPetals()
 			audio_play_sound(sound_BloodPetalSignal, 200, false);
 			sprite_index = spr_Lavender_BloodPetal_Charge;
 		}
-				
+			
 		else if (image_index == image_number - 1)
 		{
 			sprite_index = spr_Lavender_BloodPetal;
 			LavenderBossBattlePrologue_BloodPetals_ParticleCreated = true;	
 		}
+		
 	}
 			
 	else
@@ -34,6 +50,7 @@ function LavenderBossBattle_Prologue_BloodPetals()
 				
 		if (sprite_index == spr_Lavender_BloodPetal_Charge)
 		{
+			
 			if (animation_end())
 			{
 				sprite_index = spr_Lavender_BloodPetal;
@@ -57,6 +74,7 @@ function LavenderBossBattle_Prologue_BloodPetals()
 				LavenderBossBattlePrologue_PetalTimer = 0;
 			}	
 		}
+		
 		else
 		{
 			if (sprite_index == spr_Lavender_BloodPetal)
@@ -64,6 +82,7 @@ function LavenderBossBattle_Prologue_BloodPetals()
 				image_index = 0;
 				sprite_index = spr_Lavender_BloodPetal_Decharge;
 			}
+			
 			else if (animation_end(spr_Lavender_BloodPetal_Decharge))
 			{
 				sprite_index = spr_Lavender_Levitate;
@@ -75,6 +94,8 @@ function LavenderBossBattle_Prologue_BloodPetals()
 				LavenderBossBattlePrologue_BloodPetals_Particle = noone;
 				LavenderBossBattlePrologue_BloodPetals_ParticleCreated = false;
 			}
+			
+			
 					
 		}
 				
@@ -223,13 +244,16 @@ function LavenderBossBattle_Prologue_DivineArsenal()
 		{
 			x = max(_xTarget, x - _xSpe);
 		}
+		
 		else if (x < _xTarget)
 		{
 			x = min(_xTarget, x + _xSpe);
 		}
 			
+		
+			
 		//If the portal hasnt been made yet, make it
-		if !(LavenderBossBattlePrologue_PortalCreated)
+		if !(LavenderBossBattlePrologue_PortalCreated) && (x == _xTarget) && (y == _yTarget)
 		{
 			LavenderBossBattlePrologue_Portal = instance_create_layer(1440 - (0.5 * sprite_get_width(spr_DivineArsenal_Portal)), 352 - (0.5 * sprite_get_height(spr_DivineArsenal_Portal)), "DivineArsenal", obj_DivineArsenal_Portal);
 			LavenderBossBattlePrologue_PortalCreated = true;
@@ -237,6 +261,15 @@ function LavenderBossBattle_Prologue_DivineArsenal()
 		//If the portal has been created
 		else
 		{
+			
+			//Lavender faces the player
+			if (instance_exists(obj_Player))
+			{
+	
+				image_xscale = -sign(x - obj_Player.x);
+	
+			}//end face player
+			
 			//If this state is finished
 			if (LavenderBossBattlePrologue_DivineArsenal_StateTimer++ > LavenderBossBattlePrologue_DivineArsenal_StateTimerLimit)
 			{
@@ -281,7 +314,7 @@ function LavenderBossBattle_Prologue_DivineArsenal()
 		var _xTarget = 960;
 		
 		//rise up out of reach
-		y = max(_yTarget, y - _ySpe);
+		y = min(_yTarget, y + _ySpe);
 		
 		if (x > _xTarget)
 		{
