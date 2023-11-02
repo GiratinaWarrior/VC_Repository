@@ -1,0 +1,48 @@
+{
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_VoizatiaBoss_Prologue",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+  ],
+  "managed": true,
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_Enemy","path":"objects/parent_Enemy/parent_Enemy.yy",},"propertyId":{"name":"Health","path":"objects/parent_Enemy/parent_Enemy.yy",},"value":"1000",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_Enemy","path":"objects/parent_Enemy/parent_Enemy.yy",},"propertyId":{"name":"EnemyVallenDropChance","path":"objects/parent_Enemy/parent_Enemy.yy",},"value":"10/10",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_Enemy","path":"objects/parent_Enemy/parent_Enemy.yy",},"propertyId":{"name":"EnemyVallenDropAmount","path":"objects/parent_Enemy/parent_Enemy.yy",},"value":"6",},
+  ],
+  "parent": {
+    "name": "Voizatia_Prologue",
+    "path": "folders/Objects/Enemies/Bosses/Prologue/Voizatia_Prologue.yy",
+  },
+  "parentObjectId": {
+    "name": "parent_BossEnemy",
+    "path": "objects/parent_BossEnemy/parent_BossEnemy.yy",
+  },
+  "persistent": false,
+  "physicsAngularDamping": 0.1,
+  "physicsDensity": 0.5,
+  "physicsFriction": 0.2,
+  "physicsGroup": 1,
+  "physicsKinematic": false,
+  "physicsLinearDamping": 0.1,
+  "physicsObject": false,
+  "physicsRestitution": 0.1,
+  "physicsSensor": false,
+  "physicsShape": 1,
+  "physicsShapePoints": [],
+  "physicsStartAwake": true,
+  "properties": [],
+  "solid": false,
+  "spriteId": {
+    "name": "spr_Voizatia_Fly",
+    "path": "sprites/spr_Voizatia_Fly/spr_Voizatia_Fly.yy",
+  },
+  "spriteMaskId": {
+    "name": "spr_Voizatia_Fly_CheatHitbox",
+    "path": "sprites/spr_Voizatia_Fly_CheatHitbox/spr_Voizatia_Fly_CheatHitbox.yy",
+  },
+  "visible": true,
+}

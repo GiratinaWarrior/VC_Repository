@@ -463,6 +463,8 @@ switch(LavenderBossIntroPrologue_State)
 			
 			SetSpawnpoint(obj_Player.x, obj_Player.y);
 			
+			PlayerFullHeal();
+			
 			SaveGame();
 			
 			instance_destroy();

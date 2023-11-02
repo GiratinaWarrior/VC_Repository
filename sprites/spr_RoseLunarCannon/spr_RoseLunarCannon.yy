@@ -29,7 +29,7 @@
   "origin": 4,
   "parent": {
     "name": "LunarCannon",
-    "path": "folders/Sprites/Player/Animations/Player/VallenSpells/LunarCannon.yy",
+    "path": "folders/Sprites/Player/Animations/Player/VallenSpells/SeleneSword/LunarCannon.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

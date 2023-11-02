@@ -154,6 +154,7 @@ function PlayerState_LunarCannon(){
 						break;
 		
 				}//end player direction switch case
+			
 				PlayerDepleteVallen(LunarCannon_VallenUse);
 			}//end if user has enough vallen
 			

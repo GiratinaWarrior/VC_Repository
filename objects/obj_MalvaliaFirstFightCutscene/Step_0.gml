@@ -75,7 +75,7 @@ switch (MalvaliaFirstFightCutscene_State)
 				MalvaliaFirstFightCutscene_BattleStart_MalvaliaCreated = true;
 			}
 			
-			SetRoomAudio_Music_Default(music_NightfallKnightTheme);
+			SetRoomAudio_Music_Default(music_VlastelTheme);
 		
 			MalvaliaFirstFightCutscene_State = MALVALIAFIRSTFIGHTCUTSCENE.IN_BATTLE;
 		

@@ -88,8 +88,7 @@
 		
 			#region Charge 
 
-				
-				Damage = 0;
+				//Damage = 0;
 				
 				sprite_index = spr_Axeye_Attack;
 				

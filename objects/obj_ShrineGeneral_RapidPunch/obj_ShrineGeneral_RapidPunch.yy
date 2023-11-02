@@ -14,7 +14,7 @@
   ],
   "parent": {
     "name": "Attacks",
-    "path": "folders/Objects/Enemies/Bosses/ShrineGeneral/Attacks.yy",
+    "path": "folders/Objects/Enemies/Bosses/Prologue/ShrineGeneral/Attacks.yy",
   },
   "parentObjectId": {
     "name": "parent_EnemyAttack",

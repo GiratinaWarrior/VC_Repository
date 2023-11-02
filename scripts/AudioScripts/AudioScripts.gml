@@ -141,7 +141,7 @@ function SetRoomAudio_Music_Default(_music = blanksound){
 			
 			break;
 			
-		case music_NightfallKnightTheme:
+		case music_VlastelTheme:
 		
 			with (obj_PlayBGM)
 			{

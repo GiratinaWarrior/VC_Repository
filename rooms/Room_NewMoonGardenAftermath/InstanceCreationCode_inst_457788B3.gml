@@ -6,9 +6,9 @@ if (global.VoizatiaLavenderAftermath_Cutscene_Seen)
 eventFunc = function()
 {
 
-	with (obj_VoizatiaLavenderAftermathCutscene)
+	with (obj_VoizatiaBossIntroCutscene)
 	{
-		VoizatiaLavenderAftermath_State = VOIZATIALAVENDERAFTERMATHCUTSCENE.CAMERA_PAN;
+		VoizatiaBossIntro_State = VOIZATIABOSSINTRO.CAMERA_PAN;
 	}
 	
 }

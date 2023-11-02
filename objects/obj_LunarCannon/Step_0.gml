@@ -3,11 +3,7 @@
 
 if (LunarCannon_Fading)
 {
-	image_alpha -= 0.075;
-	if (image_alpha <= 0)
-	{
-		instance_destroy();
-	}
+	FadeAndDestroy(0.075);
 }
 
 var _func = function()

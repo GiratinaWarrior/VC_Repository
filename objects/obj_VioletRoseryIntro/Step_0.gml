@@ -11,7 +11,7 @@ if (image_alpha > 0)
 {
 	with (obj_PlayBGM)
 	{
-		NextBGM = music_NightfallKnightTheme;
+		NextBGM = music_VlastelTheme;
 	}
 }
 

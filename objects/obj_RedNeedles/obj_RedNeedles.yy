@@ -17,7 +17,7 @@
   ],
   "parent": {
     "name": "Attacks",
-    "path": "folders/Objects/Enemies/Bosses/Malvalia_DarkShrine/Attacks.yy",
+    "path": "folders/Objects/Enemies/Bosses/Prologue/Malvalia_DarkShrine/Attacks.yy",
   },
   "parentObjectId": {
     "name": "parent_EnemyAttack",

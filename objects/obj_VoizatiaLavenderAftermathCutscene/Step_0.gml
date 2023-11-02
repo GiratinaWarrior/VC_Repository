@@ -324,7 +324,7 @@ switch (VoizatiaLavenderAftermath_State)
 			if !(VoizatiaLavenderAftermath_VoizatiaMock_TalkStarted)
 			{
 				CutsceneText(_text, "Voizatia", TEXTBOX_POS.BOTTOM, ft_Voizatia);
-				VoizatiaLavenderAftermath_SpearsIdle = layer_sequence_create("VoizatiaLavenderCutscene", 0, 0, seq_VoizatiaLavenderAftermath_SpearIdle);
+				VoizatiaLavenderAftermath_SpearsIdle = layer_sequence_create(layer, 0, 0, seq_VoizatiaLavenderAftermath_SpearIdle);
 				layer_sequence_destroy(VoizatiaLavenderAftermath_VoizatiaStrike_Sequence);
 				VoizatiaLavenderAftermath_VoizatiaMock_TalkStarted = true;
 			}
@@ -344,7 +344,7 @@ switch (VoizatiaLavenderAftermath_State)
 		
 			if !(VoizatiaLavenderAftermath_VoizatiaFly_SequenceCreated)
 			{
-				VoizatiaLavenderAftermath_VoizatiaFly_Sequence = layer_sequence_create("VoizatiaLavenderCutscene", 0, 0, seq_VoizatiaLavenderAftermath_VoizatiaRise);
+				VoizatiaLavenderAftermath_VoizatiaFly_Sequence = layer_sequence_create(layer, 0, 0, seq_VoizatiaLavenderAftermath_VoizatiaRise);
 				layer_sequence_destroy(VoizatiaLavenderAftermath_VoizatiaIdle);
 				VoizatiaLavenderAftermath_VoizatiaFly_SequenceCreated = true;
 			}

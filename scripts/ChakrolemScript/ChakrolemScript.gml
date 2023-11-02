@@ -41,8 +41,6 @@ function ChakrolemState_Chase(){
 function ChakrolemState_Charge()
 {
 	
-	Enemy_Invicible = true;
-	
 	//Slow down Chakrolem
 	xSpeed = 0//Approach(xSpeed, 0, sign(xSpeed) * 2);
 	

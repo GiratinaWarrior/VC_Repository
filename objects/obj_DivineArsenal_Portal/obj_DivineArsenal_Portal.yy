@@ -12,7 +12,7 @@
   ],
   "parent": {
     "name": "DivineArsenal",
-    "path": "folders/Objects/Enemies/Bosses/Lavender_Prologue/Attacks/DivineArsenal.yy",
+    "path": "folders/Objects/Enemies/Bosses/Prologue/Lavender_Prologue/Attacks/DivineArsenal.yy",
   },
   "parentObjectId": {
     "name": "parent_EnemyAttack",

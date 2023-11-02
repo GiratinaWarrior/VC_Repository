@@ -2,6 +2,8 @@
 
 Player_FrontLayer = noone;
 
+Player_ForcedToLose = false;
+
 #region Movement
 
 	//The speeds and gravity

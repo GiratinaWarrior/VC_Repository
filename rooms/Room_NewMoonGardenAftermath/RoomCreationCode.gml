@@ -1,9 +1,9 @@
 //SetRoomAudio_Music(blanksound, 0.5, 100);
-SetRoomAudio_Music_Default(music_ShrinePeacefulTheme);
+SetRoomAudio_Music_Default(music_ShrineMemoryTheme);
 SetSpawnpoint();
 SaveGame();	
 
 if !(global.VoizatiaLavenderAftermath_Cutscene_Seen)
 {
-	instance_create_layer(0, 0, "VoizatiaLavenderCutscene", obj_VoizatiaLavenderAftermathCutscene);
+	instance_create_layer(0, 0, "VoizatiaBossIntroCutscene", obj_VoizatiaBossIntroCutscene);
 }

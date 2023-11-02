@@ -1,6 +1,6 @@
 //@description When the player dies
 
-if (global.Health <= 0)
+if (global.Health <= 0) && !(Player_ForcedToLose)
 {		
 	with(instance_create_depth(x, y, depth - 1, obj_PlayerDying))
 	{

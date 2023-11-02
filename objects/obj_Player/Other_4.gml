@@ -5,8 +5,6 @@ if (Player_FrontLayer == noone)
 	Player_FrontLayer = layer_create(-9999, "PlayerDeath");
 }
 
-
-
 //Set the players coordinates accordingly
 x = global.WarpTargetX;
 y = global.WarpTargetY;
@@ -19,7 +17,6 @@ if (layer_exists("Player"))
 {
 	layer = layer_get_id("Player");
 }
-
 /*
 	Give back the players ability to move when they switch rooms
 	If the room is not a cutscene room

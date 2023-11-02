@@ -7,7 +7,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Lavender_Prologue",
-    "path": "folders/Objects/Enemies/Bosses/Lavender_Prologue.yy",
+    "path": "folders/Objects/Enemies/Bosses/Prologue/Lavender_Prologue.yy",
   },
   "parentObjectId": null,
   "persistent": false,
