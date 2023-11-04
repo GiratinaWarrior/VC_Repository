@@ -121,7 +121,9 @@ switch (VoizatiaBossPrologue_CurrentState)
 	case VOIZATIABOSSPROLOGUE_STATE.SIN_ERUPTION:
 	
 		#region Sin Eruption
-		
+			
+			VoizatiaBossPrologue_SinEruption();
+			
 		#endregion
 	
 		break;//end Sin Eruption State

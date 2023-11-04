@@ -88,6 +88,7 @@ function VoizatiaBossPrologue_RougeSpear()
 	else
 	{
 		VoizatiaBossPrologue_CurrentState = VOIZATIABOSSPROLOGUE_STATE.IDLE;
+		VoizatiaBossPrologue_NextState = VOIZATIABOSSPROLOGUE_STATE.SIN_ERUPTION;
 		VoizatiaBossPrologue_RougeSpear_FireCooldown = 0;
 		VoizatiaBossPrologue_RougeSpear_SpearsThrown = 0;
 	}//end all spears thrown
@@ -97,4 +98,69 @@ function VoizatiaBossPrologue_RougeSpear()
 function VoizatiaBossPrologue_SinEruption()
 {
 	
-}
+	//If Voizatia is idle, start the charge stage
+	if (sprite_index == spr_Voizatia_Fly)
+	{
+		image_index = 0;
+		sprite_index = spr_Voizatia_SinEruption_Charge;
+	}
+	
+	//if Voizatia is charging, if the animation has ended, start the attack stage
+	else if (sprite_index == spr_Voizatia_SinEruption_Charge)
+	{
+		if (image_index >= image_number - 1)
+		{			
+			image_index = 0;
+			sprite_index = spr_Voizatia_SinEruption_Attack;
+		}
+	}
+	
+	//If Voizatia is currently attacking
+	else if (sprite_index == spr_Voizatia_SinEruption_Attack)
+	{
+	
+		//If the attack state is still ongoing
+		if (VoizatiaBossPrologue_SinEruption_StateTimer++ < VoizatiaBossPrologue_SinEruption_StateTimerLimit)
+		{
+			//If its time to summon a Sin Eruption
+			if (VoizatiaBossPrologue_SinEruption_AttackTimer++ > VoizatiaBossPrologue_SinEruption_AttackTimerLimit)
+			{
+				var _sinX = irandom_range(500, 1400);
+				var _sinY = 352;
+				
+				audio_play_sound(sound_SinEruptionWarning, 40, false, 0.3);
+					
+				VoizatiaBossPrologue_SinEruption_ConjureParticle = CreateParticleSystem(ps_SinEruptionWarning, "SinEruption", _sinX, 0);
+				
+				var _createSE = function(_startX, _startY)
+				{
+						
+					audio_play_sound(sound_SinEruption, 90, false, 0.5);
+						
+					instance_create_layer(_startX, _startY, "SinEruption", obj_SinEruption);
+				}
+				
+				TimeSourceCreateAndStart(VoizatiaBossPrologue_SinEruption_ConjureTimer, _createSE, [_sinX, _sinY], 1);
+				
+				
+				//VoizatiaBossPrologue_SinEruption_NumOfAttack++;
+				VoizatiaBossPrologue_SinEruption_AttackTimer = 0;
+			}//end summon SE
+			
+		}//end attack state ongoing
+		
+		//if its time to stop the attack
+		else
+		{
+			VoizatiaBossPrologue_CurrentState = VOIZATIABOSSPROLOGUE_STATE.IDLE;
+			VoizatiaBossPrologue_NextState = VOIZATIABOSSPROLOGUE_STATE.ROUGE_SPEAR;
+			VoizatiaBossPrologue_SinEruption_AttackTimer = 0;
+			VoizatiaBossPrologue_SinEruption_StateTimer = 0;
+			VoizatiaBossPrologue_SinEruption_NumOfAttack = 0;
+			part_particles_clear(VoizatiaBossPrologue_SinEruption_ConjureParticle);
+		}//end stop attack state
+		
+		
+	}//end Voizatia attacking
+	
+}//end function()

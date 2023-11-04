@@ -30,8 +30,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Default",
-    "path": "folders/Sprites/Enemies/Bosses/Voizatia/Default.yy",
+    "name": "Regular",
+    "path": "folders/Sprites/Enemies/Bosses/Voizatia/Default/Attack/Regular.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
