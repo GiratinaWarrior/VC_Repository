@@ -29,9 +29,11 @@ enum VOIZATIABOSSINTRO
 //Post-Battle
 
 	VOIZATIA_MOCK, //Voizatia mocks Rose for her weakness and foolishness
+	VOIZATIA_ORDERS, //Voizatia repeats your orders
 	VOIZATIA_FLY, //Voizatia flies up, ready to leave
 	VOIZATIA_FLY_TALK, //Voizatia says goodbye to Rose
 	VOIZATIA_EXIT, //Voizatia leaves the scene
+	PLAYER_AWAKEN, //Rose reawakens
 	CUTSCENE_END, //The cutscene is over
 	
 }//end enum
@@ -73,4 +75,15 @@ VoizatiaBossIntro_VoizatiaProvoke_TalkStarted = false;
 //------------Battle Start Stage-------------------//
 VoizatiaBossIntro_VoizatiaBoss = noone;
 
+//------------Voizatia Mock Stage------------------//
+VoizatiaBossIntro_VoizatiaMock_TalkStarted = false;
 
+//------------Voizatia Orders Stage----------------//
+VoizatiaBossIntro_VoizatiaOrders_TalkStarted = false;
+
+//------------Voizatia Fly Talk Stage--------------//
+VoizatiaBossIntro_VoizatiaFlyTalk_TalkStarted = false;
+
+//------------Player Awaken Stage------------------//
+VoizatiaBossIntro_PlayerAwaken_Timer = 0;
+VoizatiaBossIntro_PlayerAwaken_TimerLimit = 150;

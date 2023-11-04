@@ -5,14 +5,13 @@ layer_create(layer_get_depth("VoizatiaBossIntroCutscene_Voizatia"), "RougeSpear"
 layer_create(layer_get_depth("BackFlowers") + 10, "SinEruption");
 
 VoizatiaBossPrologue_CurrentState = VOIZATIABOSSPROLOGUE_STATE.IDLE;
-VoizatiaBossPrologue_NextState = VOIZATIABOSSPROLOGUE_STATE.SIN_ERUPTION;
+VoizatiaBossPrologue_NextState = VOIZATIABOSSPROLOGUE_STATE.ROUGE_SPEAR;
 
 enum VOIZATIABOSSPROLOGUE_STATE
 {
 	IDLE,
 	ROUGE_SPEAR,
 	SIN_ERUPTION,
-	BLACK_HOLE
 }
 
 xSpeed = 0;
@@ -20,7 +19,7 @@ ySpeed = 0;
 Gravity = 0;
 
 VoizatiaBossPrologue_StateChangeTimer = 0;
-VoizatiaBossPrologue_StateChangeTimerLimit = 100;
+VoizatiaBossPrologue_StateChangeTimerLimit = 50;
 
 //----------------Idle State----------------//
 
@@ -37,7 +36,7 @@ VoizatiaBossPrologue_Teleport_YDist = 0;
 
 //The settings for the rouge spear
 VoizatiaBossPrologue_RougeSpear_Direction = 0;
-VoizatiaBossPrologue_RougeSpear_Speed = 6;
+VoizatiaBossPrologue_RougeSpear_Speed = 9;
 VoizatiaBossPrologue_RougeSpear_InitialDistance = 200;
 
 //Counting the number of spears thrown

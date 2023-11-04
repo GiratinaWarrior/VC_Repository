@@ -12,12 +12,12 @@ switch (JestAftermathCutscene_State)
 		
 		#region Jest Talk Self
 		
-		//	SetRoomAudio_Music_Default(blanksound);
+			SetRoomAudio_Music_Default(blanksound);
 		
 			var _text = 
 			[
 				"...",
-				"Jest what is going on at our house..?"
+				"Just what is going on at our house..?"
 			];
 		
 			if !(JestAftermathCutscene_JestTalkSelf_TalkStarted)
@@ -74,20 +74,20 @@ switch (JestAftermathCutscene_State)
 			
 		#region Jest Talk First
 		
-		//	SetRoomAudio_Music_Default(music_TitleTheme_Peaceful);
+			//SetRoomAudio_Music_Default(music_TitleTheme_Peaceful);
 		
 			var _text = 
 			[	
 				"Huhuhello Rosey-darling, fancy seeing you here!",
 				"I would say that you being huhuhere means that everything is alright, but that thing I saw flying away from our house says otherwise...",
-				"Rosey-darling. I'm prepared, so tell me", 
+				"Rosey-darling. I'm prepared, so tell me.", 
 				"What happened? and why is Mother not with you?",
 			];
 		
 			if !(JestAftermathCutscene_JestTalkFirst_TalkStarted)
 			{
 				CutsceneText(_text, "Jest", _pos, _font);
-				audio_play_sound(sound_JestHuhuhu, 300, false);
+				//audio_play_sound(sound_JestHuhuhu, 300, false);
 				JestAftermathCutscene_JestTalkFirst_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))
@@ -123,8 +123,6 @@ switch (JestAftermathCutscene_State)
 	case JESTAFTERMATHCUTSCENE.JEST_UNDERSTAND_SITUATION:
 		
 		#region Jest Understand Situation
-			
-	//		SetRoomAudio_Music_Default(blanksound);
 			
 			var _text = 
 			[	
@@ -206,7 +204,7 @@ switch (JestAftermathCutscene_State)
 		
 		#region Jest Good Luck
 			
-		//	SetRoomAudio_Music_Default(music_JestEncounterTheme);
+			SetRoomAudio_Music_Default(music_TitleTheme_Peaceful);
 			
 			var _text = 
 			[
@@ -224,7 +222,7 @@ switch (JestAftermathCutscene_State)
 			if !(JestAftermathCutscene_JestGoodLuck_TalkStarted)
 			{
 				CutsceneText(_text, "Jest", _pos, _font);
-				audio_play_sound(sound_JestHuhuhu, 300, false);
+				//audio_play_sound(sound_JestHuhuhu, 300, false);
 				JestAftermathCutscene_JestGoodLuck_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))

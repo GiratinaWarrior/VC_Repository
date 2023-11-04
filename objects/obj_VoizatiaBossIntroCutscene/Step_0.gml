@@ -347,7 +347,9 @@ switch(VoizatiaBossIntro_State)
 	case VOIZATIABOSSINTRO.IN_BATTLE:
 	
 		#region In Battle
-	
+		
+			//show_debug_message("IN BATTLE");
+		
 			with (obj_Player) 
 			{
 				LockEntityInSight(id, 32, 32, 16, 16);
@@ -356,9 +358,268 @@ switch(VoizatiaBossIntro_State)
 			obj_Camera.x = 960;
 			obj_Camera.y = 270;
 			
+			if (PlayerDefeated(false))
+			{
+				SetRoomAudio_Music_Default();
+				with (VoizatiaBossIntro_VoizatiaBoss)
+				{
+					instance_destroy(parent_EnemyAttack);
+					part_system_destroy(VoizatiaBossPrologue_SinEruption_ConjureParticle);
+					instance_change(obj_VoizatiaUndefeated, true);
+					if (obj_PlayerDefeated.image_index == obj_PlayerDefeated.image_number - 1)
+					{
+						other.VoizatiaBossIntro_State = VOIZATIABOSSINTRO.BATTLE_END;
+					}
+				}
+			}
+			
+			
+			
+			
 		#endregion
 	
 		break;//end In Battle
+		
+	//Battle End Stage
+	case VOIZATIABOSSINTRO.BATTLE_END:
+		
+		#region Battle End
+			
+			//show_debug_message("END BATTLE");
+			
+			obj_Camera.sprite_index = spr_BlackScreen;
+			
+			VoizatiaBossIntro_VoizatiaBoss.x = 905;
+			VoizatiaBossIntro_VoizatiaBoss.y = 204;
+			
+			var _func = function()
+			{
+				obj_Camera.sprite_index = noone;
+				VoizatiaBossIntro_State = VOIZATIABOSSINTRO.VOIZATIA_MOCK;
+			}
+			
+			TimeSourceCreateAndStart(75, _func);
+		
+		#endregion
+	
+		break;//end Battle End
+		
+	//Voizatia Mock Stage
+	case VOIZATIABOSSINTRO.VOIZATIA_MOCK:
+		
+		#region Voizatia Mock
+		
+			SetRoomAudio_Music_Default(music_VoizatiaEncounterThemeV2);
+			
+			var _text = 
+			[
+				"Heh",
+				"Hehe",
+				"Hehehe",
+				"HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAAAAAAAAAAAAAAAAAAAAAAAA!",
+				"THIS IS JUST TOO MUCH!",
+				"YOUR FACE! YOUR FACE LOOKED SO STUPID! LIKE YOU JUST REGRETTED YOUR ENTIRE LIFE UNTIL NOW!",
+				"HAHAHAH! YOU MAKE A BETTER CLOWN THAN THAT KID THAT WISHES HE WAS ONE!",
+				"Haaaa, man."
+			];
+			
+			if !(VoizatiaBossIntro_VoizatiaMock_TalkStarted)
+			{
+				CutsceneText(_text, "Voizatia", TEXTBOX_POS.BOTTOM, ft_Voizatia);
+				VoizatiaBossIntro_VoizatiaMock_TalkStarted = true;
+			}
+			else if !(instance_exists(obj_Text))
+			{
+				var _func = function()
+				{
+					VoizatiaBossIntro_State = VOIZATIABOSSINTRO.VOIZATIA_ORDERS;
+				}
+				TimeSourceCreateAndStart(40, _func);
+			}
+		
+		#endregion
+		
+		break;//end Voizatia Mock
+	
+	//Voizatia Orders Stage
+	case VOIZATIABOSSINTRO.VOIZATIA_ORDERS:
+		
+		#region Voizatia Orders
+		
+			var _text = 
+			[
+				"I will repeat your orders.",
+				"Go and hunt down my comrades who possess the Carvaline Orbs",
+				"Once you do so, come back in order to be killed gloriously by me.",
+				"What? It's better than the death thats inches in front of you."
+			];
+		
+			if !(VoizatiaBossIntro_VoizatiaOrders_TalkStarted)
+			{
+				CutsceneText(_text, "Voizatia", TEXTBOX_POS.BOTTOM, ft_Voizatia);
+				VoizatiaBossIntro_VoizatiaOrders_TalkStarted = true;
+			}
+			else if !(instance_exists(obj_Text))
+			{
+				var _func = function()
+				{
+					VoizatiaBossIntro_State = VOIZATIABOSSINTRO.VOIZATIA_FLY;	
+				}
+				TimeSourceCreateAndStart(30, _func);
+			}
+			
+		#endregion
+	
+		break;//end Voizatia Orders Stage
+	
+	//Voizatia Fly Stage
+	case VOIZATIABOSSINTRO.VOIZATIA_FLY:
+		
+		#region Voizatia Fly
+			
+			with (VoizatiaBossIntro_VoizatiaBoss)
+			{
+				y = max(100, y - 2);
+			
+				if (y == 100)
+				{
+					with (other)
+					{
+						var _func = function()
+						{
+							VoizatiaBossIntro_State = VOIZATIABOSSINTRO.VOIZATIA_FLY_TALK;
+						}
+						TimeSourceCreateAndStart(30, _func);
+					}
+				}
+			
+			}	
+		
+		#endregion
+		
+		break;//end Voizatia Fly
+		
+	//Voizatia Fly Talk Stage
+	case VOIZATIABOSSINTRO.VOIZATIA_FLY_TALK:
+		
+		#region Voizatia Fly Talk
+			
+			var _text =
+			[
+				"I sure can't wait for the next time we meet.",
+				"We're going to have one hell of a time",
+			]
+				
+			if !(VoizatiaBossIntro_VoizatiaFlyTalk_TalkStarted)
+			{
+				CutsceneText(_text, "Voizatia", TEXTBOX_POS.BOTTOM, ft_Voizatia);
+				VoizatiaBossIntro_VoizatiaFlyTalk_TalkStarted = true;
+			}
+			else if !(instance_exists(obj_Text))
+			{
+				VoizatiaBossIntro_State = VOIZATIABOSSINTRO.VOIZATIA_EXIT;
+			}
+		
+		#endregion
+		
+		break;//end Voizatia Fly Talk Stage
+		
+	//Voizatia Exit Stage
+	case VOIZATIABOSSINTRO.VOIZATIA_EXIT:
+		
+		#region Voizatia Exit
+			
+			SetRoomAudio_Music_Default();
+			
+			obj_Camera.sprite_index = spr_BlackScreen;
+			
+			instance_destroy(VoizatiaBossIntro_VoizatiaBoss);
+			layer_sequence_destroy(VoizatiaBossIntro_LavenderIdle);
+			
+			var _func = function()
+			{
+				obj_Camera.sprite_index = noone;
+				obj_Camera.follow = obj_PlayerDefeated;
+				VoizatiaBossIntro_State = VOIZATIABOSSINTRO.PLAYER_AWAKEN;
+			}
+			
+			TimeSourceCreateAndStart(40, _func);
+			
+		#endregion
+		
+		break;//end Voizatia Exit Stage
+	
+	//Player Awaken Stage
+	case VOIZATIABOSSINTRO.PLAYER_AWAKEN:
+	
+		#region Player Awaken
+		
+			PlayerFullHeal();
+		
+			//round(obj_Camera.x) == (obj_Camera.follow).x && round(obj_Camera.y) == (obj_Camera.follow).y
+		
+			if (VoizatiaBossIntro_PlayerAwaken_Timer++ > VoizatiaBossIntro_PlayerAwaken_TimerLimit) 
+			{
+				
+				//show_debug_message("Arise Player");
+				
+				with (obj_PlayerDefeated)
+				{
+					//show_debug_message("Access Defeated Player");
+						
+					with (instance_create_layer(obj_PlayerDefeated.x, obj_PlayerDefeated.y, "Player", obj_PlayerRise))
+					{
+						//show_debug_message("Create Player Rise");
+						image_index = 0;
+						image_speed = 1;
+						image_xscale = other.image_xscale;
+						obj_Camera.follow = id;
+					}
+					instance_destroy(obj_PlayerDefeated);
+				}
+				
+				if (PlayerAlive())
+				{
+					obj_Player.hascontrol = false;
+					
+					var _func = function()
+					{
+						VoizatiaBossIntro_State = VOIZATIABOSSINTRO.CUTSCENE_END;
+					}
+					
+					TimeSourceCreateAndStart(20, _func);
+					
+					
+				}
+				
+			}
+			
+			
+			
+		#endregion
+		
+		break;//end Player Awaken Stage
+	
+	//Cutscene End Stage
+	case VOIZATIABOSSINTRO.CUTSCENE_END:
+		
+		#region Cutscene End
+		
+			obj_Player.hascontrol = true;
+		
+			SetRoomAudio_Music_Default(music_ShrineMemoryTheme);
+		
+			global.VoizatiaLavenderAftermath_Cutscene_Seen = true;
+		
+			SetSpawnpoint(obj_Player.x, obj_Player.y);
+		
+			SaveGame();
+		
+			instance_destroy();
+		
+		#endregion
+		
+		break;//end Cutscene End Stage
 	
 }//end stage machine
 

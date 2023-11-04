@@ -14,21 +14,14 @@
     "resourceVersion": "1.0",
     "Keyframes": [],
   },
-  "eventStubScript": {
-    "name": "seq_VoizatiaLavenderAftermath_VoizatiaHostage_Events",
-    "path": "scripts/seq_VoizatiaLavenderAftermath_VoizatiaHostage_Events/seq_VoizatiaLavenderAftermath_VoizatiaHostage_Events.yy",
-  },
+  "eventStubScript": null,
   "eventToFunction": {},
   "length": 106.0,
   "lockOrigin": false,
   "moments": {
     "resourceType": "KeyframeStore<MomentsEventKeyframe>",
     "resourceVersion": "1.0",
-    "Keyframes": [
-      {"resourceType":"Keyframe<MomentsEventKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"MomentsEventKeyframe","resourceVersion":"1.0","Events":[
-              "seq_VoizatiaLavenderAftermath_VoizatiaHostage_Moment",
-            ],},},"Disabled":false,"id":"e9067bed-fff7-45e3-91f7-0634f6b2de11","IsCreationKey":false,"Key":18.0,"Length":1.0,"Stretch":false,},
-    ],
+    "Keyframes": [],
   },
   "parent": {
     "name": "Main",

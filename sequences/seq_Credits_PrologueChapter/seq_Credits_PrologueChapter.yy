@@ -28,7 +28,7 @@
     "path": "folders/Sequences.yy",
   },
   "playback": 0,
-  "playbackSpeed": 30.0,
+  "playbackSpeed": 20.0,
   "playbackSpeedType": 0,
   "showBackdrop": true,
   "showBackdropImage": false,
@@ -172,7 +172,7 @@
                     ],},"modifiers":[],"trackColour":4294089288,"tracks":[],"traits":0,},
               ],"traits":0,},
             {"resourceType":"GMTextTrack","resourceVersion":"1.0","name":"Not Mine Again","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<AssetTextKeyframe>","resourceVersion":"1.0","Keyframes":[
-                  {"resourceType":"Keyframe<AssetTextKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"AssetTextKeyframe","resourceVersion":"1.0","Alignment":1,"Id":{"name":"ft_TitleScreen","path":"fonts/ft_TitleScreen/ft_TitleScreen.yy",},"Text":"Noctis City: Pokemon Rejuvenation - Gearen City\r\nPanic: Pokemon Reborn - Pyrous Mountain\r\nDark Valnyx Shrine: Pokemon Rejuvenation - 3rd HQ\r\nVoizatia Encounter Theme: Pokemon Reborn - Sinister Rising\r\nCredits Theme: Pokemon Insurgence - Main Theme","Wrap":true,},},"Disabled":false,"id":"ee815c2f-ae07-4aaa-a5ea-c41b0069f0c8","IsCreationKey":false,"Key":475.0,"Length":100.0,"Stretch":false,},
+                  {"resourceType":"Keyframe<AssetTextKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"AssetTextKeyframe","resourceVersion":"1.0","Alignment":1,"Id":{"name":"ft_TitleScreen","path":"fonts/ft_TitleScreen/ft_TitleScreen.yy",},"Text":"Lavender Battle: Pokemon Xenoverse: The Song of Memory\r\nNoctis City: Pokemon Rejuvenation - Gearen City\r\nPanic: Pokemon Reborn - Pyrous Mountain\r\nDark Valnyx Shrine: Pokemon Rejuvenation - 3rd HQ\r\nVoizatia Encounter Theme: Pokemon Reborn - Sinister Rising\r\nCredits Theme: Pokemon Insurgence - Main Theme","Wrap":true,},},"Disabled":false,"id":"ee815c2f-ae07-4aaa-a5ea-c41b0069f0c8","IsCreationKey":false,"Key":475.0,"Length":100.0,"Stretch":false,},
                 ],},"modifiers":[],"trackColour":4294089288,"tracks":[
                 {"resourceType":"GMRealTrack","resourceVersion":"1.0","name":"frameSize","builtinName":20,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<RealKeyframe>","resourceVersion":"1.0","Keyframes":[
                       {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":960.0,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":291.1033,},},"Disabled":false,"id":"f14433e1-ff14-433c-b6ac-90623f124281","IsCreationKey":false,"Key":475.0,"Length":1.0,"Stretch":false,},
@@ -221,7 +221,7 @@
                     ],},"modifiers":[],"trackColour":4294089288,"tracks":[],"traits":0,},
               ],"traits":0,},
             {"resourceType":"GMTextTrack","resourceVersion":"1.0","name":"Mine","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<AssetTextKeyframe>","resourceVersion":"1.0","Keyframes":[
-                  {"resourceType":"Keyframe<AssetTextKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"AssetTextKeyframe","resourceVersion":"1.0","Alignment":257,"Id":{"name":"ft_TitleScreen","path":"fonts/ft_TitleScreen/ft_TitleScreen.yy",},"Text":"Malvalia Battle Theme \r\n-\r\n Made by the great Danny Haile","Wrap":true,},},"Disabled":false,"id":"6dde907a-19f3-41c8-8c4f-47f3bbd14206","IsCreationKey":false,"Key":600.0,"Length":202.0,"Stretch":false,},
+                  {"resourceType":"Keyframe<AssetTextKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"AssetTextKeyframe","resourceVersion":"1.0","Alignment":257,"Id":{"name":"ft_TitleScreen","path":"fonts/ft_TitleScreen/ft_TitleScreen.yy",},"Text":"Malvalia and Voizatia\r\n Battle Theme \r\n-\r\n Made by the great Danny Haile","Wrap":true,},},"Disabled":false,"id":"6dde907a-19f3-41c8-8c4f-47f3bbd14206","IsCreationKey":false,"Key":600.0,"Length":202.0,"Stretch":false,},
                 ],},"modifiers":[],"trackColour":4294089288,"tracks":[
                 {"resourceType":"GMRealTrack","resourceVersion":"1.0","name":"frameSize","builtinName":20,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<RealKeyframe>","resourceVersion":"1.0","Keyframes":[
                       {"resourceType":"Keyframe<RealKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":413.3246,},"1":{"resourceType":"RealKeyframe","resourceVersion":"1.0","AnimCurveId":null,"EmbeddedAnimCurve":null,"RealValue":183.7143,},},"Disabled":false,"id":"2825d76b-faa4-4eb1-a0a7-85f70b8d5af7","IsCreationKey":false,"Key":600.0,"Length":1.0,"Stretch":false,},

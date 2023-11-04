@@ -39,6 +39,18 @@ function SetRoomAudio_Music_Default(_music = blanksound){
 	//Set the music settings depending on the track
 	switch(_music)
 	{
+		
+		//If the title theme is playing
+		case music_TitleTheme_Peaceful:
+		
+			with (obj_PlayBGM)
+			{
+				BGM_Volume = 0.5;
+				BGM_GainRate = 0;
+			}
+		
+			break;
+		
 		//If no music is playing
 		case blanksound:
 		

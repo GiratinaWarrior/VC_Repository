@@ -1,16 +1,15 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_VoizatiaLavenderAftermathCutscene",
+  "name": "obj_PlayerRise",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "10_VoizatiaLavenderAftermath",
-    "path": "folders/Objects/Cutscenes/Opening/10_VoizatiaLavenderAftermath.yy",
+    "name": "Main",
+    "path": "folders/Objects/PlayerStuff/Player/Main.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -28,7 +27,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_PlayerAwaken_A",
+    "path": "sprites/spr_PlayerAwaken_A/spr_PlayerAwaken_A.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

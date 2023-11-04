@@ -10,11 +10,15 @@ switch (PrologueEndCutscene_Stage)
 	case PROLOGUE_END_CUTSCENE.OFF:
 		
 		#region Off
-		
+			
 			if (!global.MidTransition)
 			{
-				TimeSourceCreateAndStart(60, function() {PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.VOIZATIA_ENTER});
-			}	
+				var _func = function()
+				{
+					PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.VOIZATIA_ENTER;
+				}
+				TimeSourceCreateAndStart(60, _func);
+			}
 		
 		#endregion
 		
@@ -211,6 +215,7 @@ switch (PrologueEndCutscene_Stage)
 	
 		#region Malvalia Question
 		
+			SetRoomAudio_Music_Default();
 			
 			var _text = 
 			[
@@ -246,8 +251,7 @@ switch (PrologueEndCutscene_Stage)
 				"Spot on. When I arrived on this planet, I found myself something of an ally.",
 				"She has the Carvaline Orbs that I want, and I have knowledge of their origins that she wants. A natural alliance.",
 				"Now then, since we're gonna be living here for a while, you might as well get to know her.",
-				"Come out an introduce yourself.",
-				"Cardinal Lavender."
+				"Come out an introduce yourself."
 			];
 			
 			if !(PrologueEndCutscene_VoizatiaTalkLavender_TalkStarted)

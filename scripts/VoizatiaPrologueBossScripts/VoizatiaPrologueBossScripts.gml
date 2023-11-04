@@ -125,8 +125,11 @@ function VoizatiaBossPrologue_SinEruption()
 			//If its time to summon a Sin Eruption
 			if (VoizatiaBossPrologue_SinEruption_AttackTimer++ > VoizatiaBossPrologue_SinEruption_AttackTimerLimit)
 			{
-				var _sinX = irandom_range(500, 1400);
+				var _sinX;//irandom_range(500, 1400);
 				var _sinY = 352;
+				
+				if (PlayerAlive()) _sinX = obj_Player.x;
+				else _sinX = irandom_range(500, 1400);
 				
 				audio_play_sound(sound_SinEruptionWarning, 40, false, 0.3);
 					

@@ -517,3 +517,31 @@ function PlayerFullHeal()
 	global.Health = global.MaxHealth;
 	global.Vallen = global.MaxVallen;
 }
+
+function PlayerAlive()
+{
+	return instance_exists(obj_Player);
+}
+
+function PlayerDefeated(_checkCollapse = true)
+{
+	if (instance_exists(obj_PlayerDefeated))
+	{
+		if (_checkCollapse)
+		{
+			if (obj_PlayerDefeated.image_index == image_number - 1)
+			{
+				return true;
+			}
+		}
+		else
+		{
+			return true;
+		}
+	}
+	else
+	{
+		return false;
+	}
+	
+}
