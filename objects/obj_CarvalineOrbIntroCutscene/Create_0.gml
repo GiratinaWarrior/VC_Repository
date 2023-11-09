@@ -21,6 +21,8 @@ enum CARVALINEORBINTROCUTSCENE_LAVENDERSPEECH
 	EXIT_TALK
 }
 
+CarvalineOrbIntroCutscene_TimeSource = noone;
+
 CarvalineOrbIntroCutscene_Stage = 0;
 CarvalineOrbIntroCutscene_LavenderSpeech_Stage = 0;
 CarvalineOrbIntroCutscene_LavenderSpeech = noone;

@@ -76,7 +76,7 @@ switch(PoisonFlower_State)
 					
 					if (PoisonFlower_FireLengthTimer++ < PoisonFlower_FireLength)
 					{
-						if (PoisonFlower_FireTimer-- < PoisonFlower_FireRate)
+						if (PoisonFlower_FireTimer-- < 0)
 						{
 							
 							audio_play_sound(sound_PoisonBubble, 5, false, 0.2);

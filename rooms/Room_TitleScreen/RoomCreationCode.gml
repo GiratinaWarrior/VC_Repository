@@ -1,1 +1,1 @@
-SetRoomAudio_Music(music_TitleTheme_Peaceful, 0.5);
+SetRoomAudio_Music_Default(music_TitleTheme_Peaceful);

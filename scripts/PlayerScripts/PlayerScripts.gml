@@ -472,13 +472,23 @@ function PlayerTakenDamage(){
 function PlayerHeal(_healAmount = global.MaxHealth - global.Health)
 {
 	
-//	HealthParticles = CreateParticleSystem(ps_PlayerHeal, layer, x, y + 16);
+	
+	for (var i = 0; i < 10; i++)
+	{
+		with (instance_create_depth(x + (random_range(-1, 1) * 16), y + (random_range(-1, -1) * -16), depth - 1, obj_PlayerHealthParticles))
+		{
+			xSpeed = 0;
+			ySpeed = random_range(0.1, 2) * -1;
+			Gravity = 0;
+		}
+	}
 	
 	if (global.Health + _healAmount < global.MaxHealth)
 	{
 		global.Health += _healAmount;	
 	
 	}
+	
 	else
 	{
 		global.Health = global.MaxHealth;
@@ -492,7 +502,15 @@ function PlayerRestoreVallen(_restoreAmount = global.MaxVallen - global.Vallen)
 	{
 		with (obj_Player)
 		{
-//			VallenParticles = part_system_create_layer(layer, false)//CreateParticleSystem(ps_PlayerRestoreVallen, layer, x, y);
+			for (var i = 0; i < 10; i++)
+			{
+				with (instance_create_depth(x + (random_range(-1, 1) * 16), y + (random_range(-1, 1) * 16), depth - 1, obj_PlayerHealthParticles))
+				{
+					sprite_index = spr_PlayerVallenParticle;
+					xSpeed = random_range(-1, 1) * 4;
+					ySpeed = random_range(-1, 1) * 4;
+				}
+			}
 		}	
 	}
 	
@@ -501,10 +519,12 @@ function PlayerRestoreVallen(_restoreAmount = global.MaxVallen - global.Vallen)
 		global.Vallen += _restoreAmount;	
 	
 	}
+	
 	else
 	{
 		global.Vallen = global.MaxVallen;
 	}
+	
 }
 	
 function PlayerDepleteVallen(_depleteAmount)

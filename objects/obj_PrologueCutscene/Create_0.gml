@@ -15,6 +15,9 @@ enum PROLOGUECUTSCENE
 
 PrologueCutscene_Stage = 0;
 
+PrologueCutscene_TimeSource = noone;
+PrologueCutscene_TimeSource2 = noone;
+
 PrologueCutscene_LavenderSprite = noone;
 
 //----------------Enter Stage------------------//

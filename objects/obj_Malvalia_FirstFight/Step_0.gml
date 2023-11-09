@@ -121,7 +121,7 @@ switch(Malvalia_FirstFight_CurrentState)
 						audio_play_sound(sound_BlackGeyser_Charge, 100, false);
 						
 						//Create a Black Geyser
-						TimeSourceCreateAndStart(Malvalia_FirstFight_BlackGeyser_ConjureTime, MalvaliaBossBattle_BlackGeyser, [_createBlackGeyserX, _createBlackGeyserY], 1);
+						if (Malvalia_FirstFight_BlackGeyser_TimeSource == noone) Malvalia_FirstFight_BlackGeyser_TimeSource = TimeSourceCreateAndStart(Malvalia_FirstFight_BlackGeyser_ConjureTime, MalvaliaBossBattle_BlackGeyser, [_createBlackGeyserX, _createBlackGeyserY], 1);
 						
 						Malvalia_FirstFight_BlackGeyser_CreateTimer = 0;
 					}
@@ -268,20 +268,10 @@ switch(Malvalia_FirstFight_CurrentState)
 			obj_Player.image_xscale = -sign(obj_Player.x - x);
 			
 			//If Malvalia hits the ground
-			if (place_meeting(x, y + ySpeed + 1, obj_Wall) && sprite_index != spr_Malvalia_Fell)
+			if (sprite_index != spr_Malvalia_Fell) && (place_meeting(x, y + ySpeed + 1, obj_Wall))
 			{
 				
-				var _contCutscene = function()
-				{
-					//Activate the next stage of the cutscene
-					with (obj_MalvaliaFirstFightCutscene)
-					{
-						MalvaliaFirstFightCutscene_State = MALVALIAFIRSTFIGHTCUTSCENE.MALVALIA_DEFEATED_TALK;
-					}
-				}
-				
-				//After a certain amount of time has passed, activate the next stage of the cutscene
-				TimeSourceCreateAndStart(80, _contCutscene, [], 1);
+				time_source_start(Malvalia_FirstFight_DefeatedTimeSource);
 				
 				//Change the sprite
 				sprite_index = spr_Malvalia_Fell;

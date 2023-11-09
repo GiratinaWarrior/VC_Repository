@@ -1,8 +1,8 @@
 /// @description Our global variables
 
-//The range our player can see
-global.xrange = RES_W/2;
-global.yrange = RES_H/2;
+show_debug_overlay(true);
+
+//---------------------Default Music (Unneeded)--------------//
 
 //Music and sound effects
 global.FieldTheme = music_FieldTheme;
@@ -14,7 +14,20 @@ global.OceanSound = sound_StormySeas;
 global.TundraTheme = music_TundraTheme;
 global.TundraSound = sound_Blizzard;
 
+
+//----------------------------Optimiation----------------------//
+
+if !gpu_get_alphatestenable()
+{
+    gpu_set_alphatestenable(true);
+	gpu_set_alphatestref(0);
+}
+
 //------------------------------------Player Variables---------------------------//
+
+//The range our player can see
+global.xrange = RES_W/2;
+global.yrange = RES_H/2;
 
 global.WarpTargetX = 128;
 global.WarpTargetY = 128;

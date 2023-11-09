@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+VoizatiaBossIntro_TimeSource = noone;
+
 VoizatiaBossIntro_State = 0;
 
 enum VOIZATIABOSSINTRO

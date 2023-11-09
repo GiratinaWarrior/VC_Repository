@@ -16,8 +16,10 @@ switch (PrologueEndCutscene_Stage)
 				var _func = function()
 				{
 					PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.VOIZATIA_ENTER;
+					time_source_destroy(PrologueEndCutscene_TimeSource);
+					PrologueEndCutscene_TimeSource = noone;
 				}
-				TimeSourceCreateAndStart(60, _func);
+				if (PrologueEndCutscene_TimeSource == noone) PrologueEndCutscene_TimeSource = TimeSourceCreateAndStart(60, _func);
 			}
 		
 		#endregion
@@ -68,7 +70,7 @@ switch (PrologueEndCutscene_Stage)
 			}
 			else if !(instance_exists(obj_Text))
 			{
-				TimeSourceCreateAndStart(60, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.VOIZATIA_NOTICE_MALVALIA;});
+				if (PrologueEndCutscene_TimeSource == noone) PrologueEndCutscene_TimeSource = TimeSourceCreateAndStart(60, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.VOIZATIA_NOTICE_MALVALIA; time_source_destroy(PrologueEndCutscene_TimeSource); PrologueEndCutscene_TimeSource = noone;});
 			}
 		
 		#endregion
@@ -143,7 +145,7 @@ switch (PrologueEndCutscene_Stage)
 			}
 			else if !(instance_exists(obj_Text))
 			{
-				TimeSourceCreateAndStart(20, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.VOIZATIA_CALM_MALVALIA;});
+				if (PrologueEndCutscene_TimeSource == noone) PrologueEndCutscene_TimeSource = TimeSourceCreateAndStart(20, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.VOIZATIA_CALM_MALVALIA; time_source_destroy(PrologueEndCutscene_TimeSource); PrologueEndCutscene_TimeSource = noone;});
 			}
 		
 		#endregion
@@ -172,7 +174,7 @@ switch (PrologueEndCutscene_Stage)
 			}
 			else if !(instance_exists(obj_Text))
 			{
-				TimeSourceCreateAndStart(60, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.MALVALIA_EXIT_TALK;});
+				if (PrologueEndCutscene_TimeSource == noone) PrologueEndCutscene_TimeSource = TimeSourceCreateAndStart(60, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.MALVALIA_EXIT_TALK; time_source_destroy(PrologueEndCutscene_TimeSource); PrologueEndCutscene_TimeSource = noone;});
 			}
 		
 		#endregion
@@ -203,7 +205,7 @@ switch (PrologueEndCutscene_Stage)
 			}
 			else if !(instance_exists(obj_Text))
 			{
-				TimeSourceCreateAndStart(100, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.MALVALIA_QUESTION;});
+				if (PrologueEndCutscene_TimeSource == noone) PrologueEndCutscene_TimeSource = TimeSourceCreateAndStart(100, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.MALVALIA_QUESTION; time_source_destroy(PrologueEndCutscene_TimeSource); PrologueEndCutscene_TimeSource = noone;});
 			}
 		
 		#endregion
@@ -233,7 +235,7 @@ switch (PrologueEndCutscene_Stage)
 			}
 			else if !(instance_exists(obj_Text))
 			{
-				TimeSourceCreateAndStart(80, function() {PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.VOIZATIA_TALK_LAVENDER;});
+				if (PrologueEndCutscene_TimeSource == noone) PrologueEndCutscene_TimeSource = TimeSourceCreateAndStart(80, function() {PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.VOIZATIA_TALK_LAVENDER; time_source_destroy(PrologueEndCutscene_TimeSource); PrologueEndCutscene_TimeSource = noone;});
 			}
 			
 		#endregion
@@ -282,7 +284,7 @@ switch (PrologueEndCutscene_Stage)
 			{
 				PrologueEndCutscene_LavenderIdle = layer_sequence_create(layer, x, y, seq_PrologueEndCutscene_LavenderIdle);
 				layer_sequence_destroy(PrologueEndCutscene_LavenderEnterSequence);
-				TimeSourceCreateAndStart(120, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.CUTSCENE_END;});
+				if (PrologueEndCutscene_TimeSource == noone) PrologueEndCutscene_TimeSource = TimeSourceCreateAndStart(120, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.CUTSCENE_END; time_source_destroy(PrologueEndCutscene_TimeSource); PrologueEndCutscene_TimeSource = noone;});
 			}
 		
 		#endregion
@@ -294,6 +296,8 @@ switch (PrologueEndCutscene_Stage)
 		#region Cutscene End
 				
 			TransitionStart(Room_Credits_PrologueChapter, seq_FadeOut, seq_FadeIn);
+			
+			instance_destroy();
 		
 		#endregion
 	

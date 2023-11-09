@@ -1,6 +1,4 @@
-SetRoomAudio_Music(music_ShrineMemoryTheme, 0.5, 100);
-
-//var e = CreateParticleSystem(ps_LavenderBossFightFlowers, "LavenderFlowers", 1920, 270);
+SetRoomAudio_Music_Default(music_ShrineMemoryTheme);
 
 if (global.Lavender_Defeated_Prologue == false)
 {

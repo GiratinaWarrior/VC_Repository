@@ -21,4 +21,6 @@ function TimeSourceCreateAndStart(_period, _func, _args = [], _reps = 1)
 	
 	time_source_start(_newTimeSource);
 	
+	return _newTimeSource;
+	
 }

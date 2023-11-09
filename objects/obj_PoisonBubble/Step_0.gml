@@ -15,6 +15,11 @@ image_yscale = image_xscale;
 
 ySpeed = -7;
 
+if (y < -40)
+{
+	instance_destroy();
+}
+
 if (image_xscale == 1) && !(PoisonBubble_Charged)
 {
 	PoisonBubble_Charged = true;

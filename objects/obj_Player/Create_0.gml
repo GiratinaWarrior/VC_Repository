@@ -30,6 +30,20 @@ Player_ForcedToLose = false;
 	//Check if the player can jump
 	PlayerJump = 0;
 	MaxCoyoteJump = 5;
+	
+	var _dustPart = function()
+	{
+		with (instance_create_depth(x - (image_xscale * 0), y + 15, depth + 1, obj_PlayerMoveParticles))
+		{
+			image_alpha = 1;
+			xSpeed = 0;
+			ySpeed = -random_range(0.5, 2);
+			sprite_index = spr_PlayerMoveParticle;
+			PlayerMoveParticle_FadeRate = random_range(0.05, 0.1)
+		}
+	}
+	
+	RunDustEffect_TimeSource = TimeSourceCreate(5, _dustPart, [], -1);
 
 #endregion
 
@@ -199,17 +213,11 @@ HealthBarHeight = HealthBarWidth/10;
 HealthBarX = 10;
 HealthBarY = 10;
 
-HealthParticles = noone;
 
 VallenBarWidth = 150;
 VallenBarHeight = VallenBarWidth/10;
 VallenBarX = HealthBarX;
 VallenBarY = HealthBarY + HealthBarHeight + 5;
-
-VallenRestoreTimerLimit = 500;
-VallenRestoreTimer = 0;
-
-VallenParticles = noone;
 
 #endregion
 

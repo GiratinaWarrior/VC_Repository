@@ -1,6 +1,9 @@
 /// @description
 
+
+
 JestAftermathCutscene_State = 0;
+JestAftermathCutscene_TimeSource = noone;
 
 enum JESTAFTERMATHCUTSCENE
 {

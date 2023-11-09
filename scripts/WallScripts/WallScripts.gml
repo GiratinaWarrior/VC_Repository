@@ -3,18 +3,18 @@
 /// When an entity is falling towards the ground, stop them when they hit the ground
 function Wall_FallOn(){
 
-	//If the entity will hit the ground in the next step
-	if (place_meeting(x, y + ySpeed, obj_Wall)){
+//If the entity will hit the ground in the next step
+if (place_meeting(x, y + ySpeed, obj_Wall)){
 	
-			//If they won't hit the ground in the next step, move them towards the ground by one pixel
-			while(!place_meeting(x, y + sign(ySpeed), obj_Wall))
-			{
-				y += sign(ySpeed);
-			}
-	
-			//If they'll hit the ground next step, stop moving
-			ySpeed = 0;
+		//If they won't hit the ground in the next step, move them towards the ground by one pixel
+		while(!place_meeting(x, y + sign(ySpeed), obj_Wall))
+		{
+			y += sign(ySpeed);
 		}
+	
+		//If they'll hit the ground next step, stop moving
+		ySpeed = 0;
+	}
 
 }//end Wall_FallOn()
 

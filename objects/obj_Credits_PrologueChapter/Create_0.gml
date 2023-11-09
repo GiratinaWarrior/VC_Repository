@@ -7,10 +7,12 @@ var _func = function()
 {
 	Credits_PrologueChapter_CreditSequence = layer_sequence_create(layer, 0, 0, seq_Credits_PrologueChapter);
 	SetRoomAudio_Music_Default(music_Credits);
-	Credits_PrologueChapter_CreditSequenceCreated = true;
+	Credits_PrologueChapter_CreditSequenceCreated = true
+	time_source_destroy(Credits_PrologueChapter_TimeSource);
+	Credits_PrologueChapter_TimeSource = noone;
 }
 
-TimeSourceCreateAndStart(200, _func, [], 1);
+Credits_PrologueChapter_TimeSource = TimeSourceCreateAndStart(200, _func, [], 1);
 
 
 

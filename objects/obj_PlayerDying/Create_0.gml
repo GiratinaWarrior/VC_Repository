@@ -13,6 +13,32 @@ PlayerDeathParticles = part_system_create_layer(layer, false, ps_PlayerDeath);
 part_system_position(PlayerDeathParticles, x, y);
 */
 
+for (var i = 0; i < 10; i++)
+{
+	with (instance_create_depth(x + (random_range(-1, 1) * 16), y + (random_range(-1, 1) * 16), depth - 1, obj_PlayerHealthParticles))
+	{
+		sprite_index = spr_PlayerDeathParticle_Blood;
+		xSpeed = random_range(-1, 1) * 1;
+		ySpeed = random_range(0, 1) * -7;
+		Gravity = 0.1;
+		PlayerParticle_FadeRate = 0.01;
+		PlayerParticle_SpinSpeed = 0;
+	}
+}
+
+for (var i = 0; i < 10; i++)
+{
+	with (instance_create_depth(x + (random_range(-1, 1) * 16), y + (random_range(-1, 1) * 16), depth - 1, obj_PlayerHealthParticles))
+	{
+		sprite_index = spr_PlayerDeathParticle_Moon;
+		xSpeed = random_range(-1, 1) * 1;
+		ySpeed = random_range(0, 1) * 2;
+		Gravity = -0.1;
+		PlayerParticle_FadeRate = 0.01;
+		PlayerParticle_SpinSpeed = 0;
+	}
+}
+
 PlayerDeathFade = layer_sprite_create(layer, x, y, spr_DeathFade);
 
 depth = -999;

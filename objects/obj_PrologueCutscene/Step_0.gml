@@ -52,8 +52,8 @@ switch (PrologueCutscene_Stage)
 		//If Lavender has finished talking
 		else if (!instance_exists(obj_Text))
 		{	
-			//In 50 frames, move on to the Star Approach Stage
-			TimeSourceCreateAndStart(90, function() {PrologueCutscene_Stage = PROLOGUECUTSCENE.PROPHECY_DECIPHER});
+			//Move on to the Star Approach Stage
+			if (PrologueCutscene_TimeSource == noone) PrologueCutscene_TimeSource = TimeSourceCreateAndStart(90, function() {PrologueCutscene_Stage = PROLOGUECUTSCENE.PROPHECY_DECIPHER; time_source_destroy(PrologueCutscene_TimeSource); PrologueCutscene_TimeSource = noone;});
 		}
 		
 		break;//end Prophecy Talk Stage
@@ -81,8 +81,8 @@ switch (PrologueCutscene_Stage)
 		//When lavender is finsihed talking
 		else if (!instance_exists(obj_Text))
 		{
-			TimeSourceCreateAndStart(30, function(){layer_sprite_xscale(PrologueCutscene_LavenderSprite, 1)})
-			TimeSourceCreateAndStart(90, function(){PrologueCutscene_Stage = PROLOGUECUTSCENE.STAR_NOTICE});
+			if (PrologueCutscene_TimeSource == noone) PrologueCutscene_TimeSource = TimeSourceCreateAndStart(30, function(){layer_sprite_xscale(PrologueCutscene_LavenderSprite, 1); time_source_destroy(PrologueCutscene_TimeSource); PrologueCutscene_TimeSource = noone})
+			if (PrologueCutscene_TimeSource2 == noone) PrologueCutscene_TimeSource2 = TimeSourceCreateAndStart(90, function(){PrologueCutscene_Stage = PROLOGUECUTSCENE.STAR_NOTICE; time_source_destroy(PrologueCutscene_TimeSource2); PrologueCutscene_TimeSource2 = noone});
 		}
 		
 		break;//end Prophecy Decipher Stage 
@@ -90,7 +90,7 @@ switch (PrologueCutscene_Stage)
 	//Star Notice Stage: Lavender notices the odd star in the sky
 	case PROLOGUECUTSCENE.STAR_NOTICE:
 		
-		SetRoomAudio_Music_Default();
+		//SetRoomAudio_Music_Default();
 		
 		//Lavender's speech
 		var _text = 
@@ -108,7 +108,7 @@ switch (PrologueCutscene_Stage)
 		//When Lavender is finished talking
 		else if (!instance_exists(obj_Text))
 		{
-			audio_play_sound(sound_Starcrosser, 100, false);
+			audio_play_sound(sound_Starcrosser, 10, false);
 			PrologueCutscene_Stage = PROLOGUECUTSCENE.STAR_APPROACH;
 		}
 		
@@ -126,8 +126,10 @@ switch (PrologueCutscene_Stage)
 			var _func = function()
 			{
 				PrologueCutscene_StarApproach_WhiteSequence = layer_sequence_create(layer_get_id("PrologueEnd"), 480, room_height/2 - 14, seq_PrologueCutscene_White);
+				time_source_destroy(PrologueCutscene_TimeSource);
+				PrologueCutscene_TimeSource = noone;
 			}
-			TimeSourceCreateAndStart(70, _func);
+			if (PrologueCutscene_TimeSource == noone) PrologueCutscene_TimeSource = TimeSourceCreateAndStart(70, _func);
 			
 			PrologueCutscene_StarApproachSequencesCreated = true;
 		}
@@ -138,7 +140,7 @@ switch (PrologueCutscene_Stage)
 		}
 		else
 		{
-			var _shake = 1;	
+			var _shake = 0.5;	
 		
 			layer_sequence_x(PrologueCutscene_StarApproach_StarSequence, layer_sequence_get_x(PrologueCutscene_StarApproach_StarSequence) + (irandom_range(1, -1) * _shake));
 			layer_sequence_y(PrologueCutscene_StarApproach_StarSequence, layer_sequence_get_y(PrologueCutscene_StarApproach_StarSequence) + (irandom_range(1, -1) * _shake));
@@ -153,6 +155,8 @@ switch (PrologueCutscene_Stage)
 		SummonPlayer(128, 176);
 		
 		TransitionStart(Room_RoseRoom, seq_FadeOut, seq_FadeIn);
+		
+		instance_destroy();
 		
 		break;
 		

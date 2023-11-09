@@ -27,7 +27,10 @@
     "Keyframes": [
       {"resourceType":"Keyframe<MomentsEventKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"MomentsEventKeyframe","resourceVersion":"1.0","Events":[
               "seq_PrologueCutscene_White_Moment",
-            ],},},"Disabled":false,"id":"7efece7b-935e-43dc-a9f9-00297b63e82e","IsCreationKey":false,"Key":600.0,"Length":1.0,"Stretch":false,},
+            ],},},"Disabled":false,"id":"486d6d43-7048-472c-ba17-e98a45a53df4","IsCreationKey":false,"Key":600.0,"Length":1.0,"Stretch":false,},
+      {"resourceType":"Keyframe<MomentsEventKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"MomentsEventKeyframe","resourceVersion":"1.0","Events":[
+              "seq_PrologueCutscene_White_Moment_1",
+            ],},},"Disabled":false,"id":"0a726436-5850-4e8b-b9d5-d0f1fc1b79f8","IsCreationKey":false,"Key":665.0,"Length":1.0,"Stretch":false,},
     ],
   },
   "parent": {

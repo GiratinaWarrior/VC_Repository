@@ -45,8 +45,6 @@ switch(CardinalFamilyCongrats_Stage)
 				layer_sequence_destroy(CardinalFamilyCongrats_EnterSequenceElm);
 			}
 		
-			
-			
 			//Lavenders speech
 			var _text = 
 			[
@@ -97,7 +95,7 @@ switch(CardinalFamilyCongrats_Stage)
 			if (!CardinalFamilyCongrats_ExitSequenceCreated)
 			{
 				CardinalFamilyCongrats_ExitSequenceElm = layer_sequence_create(layer, x, y, seq_CardinalFamilyCongratsCutscene_FlyExit);
-				TimeSourceCreateAndStart(5, function(){layer_sprite_alpha(CardinalFamilyCongrats_TalkLavenderSprite, 0)});
+				CardinalFamilyCongrats_TimeSource = TimeSourceCreateAndStart(5, function(){layer_sprite_alpha(CardinalFamilyCongrats_TalkLavenderSprite, 0); time_source_destroy(CardinalFamilyCongrats_TimeSource); CardinalFamilyCongrats_TimeSource = noone;});
 				CardinalFamilyCongrats_ExitSequenceCreated = true;
 			}
 		

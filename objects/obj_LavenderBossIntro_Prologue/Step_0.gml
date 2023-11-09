@@ -35,6 +35,8 @@ switch(LavenderBossIntroPrologue_State)
 			var _func = function()
 			{
 				LavenderBossIntroPrologue_State = LAVENDERBOSSINTROPROLOGUE_STATE.LAVENDER_TALK_FIRST;
+				time_source_destroy(LavenderBossIntroPrologue_TimeSource);
+				LavenderBossIntroPrologue_TimeSource = noone;
 			}
 			
 			with (obj_Player)
@@ -42,7 +44,7 @@ switch(LavenderBossIntroPrologue_State)
 				hascontrol = false;
 			}
 			
-			TimeSourceCreateAndStart(110, _func, [], 1);
+			if (LavenderBossIntroPrologue_TimeSource == noone) LavenderBossIntroPrologue_TimeSource =  TimeSourceCreateAndStart(110, _func);
 			
 		#endregion
 		
@@ -73,9 +75,11 @@ switch(LavenderBossIntroPrologue_State)
 				var _func = function()
 				{
 					LavenderBossIntroPrologue_State = LAVENDERBOSSINTROPROLOGUE_STATE.LAVENDER_TURN;
+					time_source_destroy(LavenderBossIntroPrologue_TimeSource);
+					LavenderBossIntroPrologue_TimeSource = noone;
 				}
 				
-				TimeSourceCreateAndStart(60, _func);
+				if (LavenderBossIntroPrologue_TimeSource == noone) LavenderBossIntroPrologue_TimeSource = TimeSourceCreateAndStart(60, _func);
 				
 			}
 		
@@ -155,12 +159,8 @@ switch(LavenderBossIntroPrologue_State)
 				layer_sequence_destroy(LavenderBossIntroPrologue_LavenderCharge_Sequence);
 				LavenderBossIntroPrologue_LavenderIdle = layer_sequence_create(layer, 0, 0, seq_LavenderBossIntro_LavenderFly);
 					
-				var _func = function()
-				{
-					LavenderBossIntroPrologue_State = LAVENDERBOSSINTROPROLOGUE_STATE.LAVENDER_CHALLENGE;
-				}
+				LavenderBossIntroPrologue_State = LAVENDERBOSSINTROPROLOGUE_STATE.LAVENDER_CHALLENGE;
 				
-				TimeSourceCreateAndStart(1, _func);
 			}
 			
 			
@@ -214,6 +214,8 @@ switch(LavenderBossIntroPrologue_State)
 			obj_Player.hascontrol = true;
 			
 			LavenderBossIntroPrologue_State = LAVENDERBOSSINTROPROLOGUE_STATE.IN_BATTLE;
+			
+			
 		
 		#endregion
 		
@@ -286,7 +288,7 @@ switch(LavenderBossIntroPrologue_State)
 						}
 					}
 					
-					TimeSourceCreateAndStart(100, _func);
+					if (LavenderBossIntroPrologue_TimeSource == noone) LavenderBossIntroPrologue_TimeSource = TimeSourceCreateAndStart(100, _func);
 					//other.LavenderBossIntroPrologue_State = LAVENDERBOSSINTROPROLOGUE_STATE.LAVENDER_DEFEATED_TALK;
 				}
 				
@@ -321,9 +323,11 @@ switch(LavenderBossIntroPrologue_State)
 				var _func = function()
 				{
 					LavenderBossIntroPrologue_State = LAVENDERBOSSINTROPROLOGUE_STATE.LAVENDER_DESCEND;
+					time_source_destroy(LavenderBossIntroPrologue_TimeSource);
+					LavenderBossIntroPrologue_TimeSource = noone;
 				}
 				
-				TimeSourceCreateAndStart(50, _func);
+				if (LavenderBossIntroPrologue_TimeSource == noone) LavenderBossIntroPrologue_TimeSource = TimeSourceCreateAndStart(50, _func);
 			}
 			
 		#endregion
@@ -351,8 +355,10 @@ switch(LavenderBossIntroPrologue_State)
 					var _func = function()
 					{
 						sprite_index = spr_Lavender_Idle;
+						time_source_destroy(LavenderBossIntroPrologue_TimeSource);
+						LavenderBossIntroPrologue_TimeSource = noone;
 					}
-					TimeSourceCreateAndStart(30, _func);
+					if (LavenderBossIntroPrologue_TimeSource == noone) LavenderBossIntroPrologue_TimeSource = TimeSourceCreateAndStart(30, _func);
 				}
 				
 				else if (sprite_index == spr_Lavender_Idle)
@@ -363,8 +369,10 @@ switch(LavenderBossIntroPrologue_State)
 						{
 							LavenderBossIntroPrologue_State = LAVENDERBOSSINTROPROLOGUE_STATE.LAVENDER_EXIT_TALK;	
 						}
+						time_source_destroy(LavenderBossIntroPrologue_TimeSource);
+						LavenderBossIntroPrologue_TimeSource = noone;
 					}
-					TimeSourceCreateAndStart(60, _func);
+					if (LavenderBossIntroPrologue_TimeSource == noone) LavenderBossIntroPrologue_TimeSource = TimeSourceCreateAndStart(60, _func);
 				}
 				
 			}
@@ -391,13 +399,16 @@ switch(LavenderBossIntroPrologue_State)
 				LavenderBossIntroPrologue_LavenderExitTalk_Talk = CutsceneText(_text, n, p, f);
 				LavenderBossIntroPrologue_LavenderExitTalk_TalkStarted = true;
 			}
+			
 			else if !(instance_exists(obj_Text))
 			{
 				var _func = function()
 				{
 					LavenderBossIntroPrologue_State = LAVENDERBOSSINTROPROLOGUE_STATE.LAVENDER_EXIT;
+					time_source_destroy(LavenderBossIntroPrologue_TimeSource);
+					LavenderBossIntroPrologue_TimeSource = noone;
 				}
-				TimeSourceCreateAndStart(20, _func);
+				if (LavenderBossIntroPrologue_TimeSource == noone) LavenderBossIntroPrologue_TimeSource = TimeSourceCreateAndStart(20, _func);
 			}
 		
 		#endregion
@@ -426,8 +437,10 @@ switch(LavenderBossIntroPrologue_State)
 					var _func = function()
 					{
 						sprite_index = spr_Lavender_Walk;
+						time_source_destroy(LavenderBossIntroPrologue_TimeSource);
+						LavenderBossIntroPrologue_TimeSource = noone;
 					}
-					TimeSourceCreateAndStart(30, _func);
+					if (LavenderBossIntroPrologue_TimeSource == noone) LavenderBossIntroPrologue_TimeSource = TimeSourceCreateAndStart(30, _func);
 					
 					if (sprite_index == spr_Lavender_Walk)
 					{

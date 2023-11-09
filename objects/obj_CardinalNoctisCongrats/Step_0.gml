@@ -477,6 +477,8 @@ switch(CardinalNoctisCongrats_State)
 			SetSpawnpoint(obj_Player.x, obj_Player.y);
 			
 			SaveGame();
+			
+			instance_destroy();
 
 		#endregion
 		

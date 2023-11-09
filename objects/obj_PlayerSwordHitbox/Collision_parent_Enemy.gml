@@ -39,9 +39,5 @@ with(obj_Player)
 //If the attack can't phase through enemies, destroy itself
 if (!CanPhase_Enemy)
 {
-	var _func = function()
-	{
-		instance_destroy();
-	}
-	TimeSourceCreateAndStart(3, _func);
+	alarm[0] = 3;
 }//end if can't phase through enemy

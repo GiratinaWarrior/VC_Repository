@@ -9,12 +9,6 @@ global.Vallen = round(global.Vallen);
 x = round(x);
 y = round(y);
 
-if (VallenRestoreTimer++ > VallenRestoreTimerLimit)
-{
-	//global.Vallen++;
-	VallenRestoreTimer = 0;
-}
-
 if (Invincible == true) {
 	image_alpha = Wave(0, 1, 0.1, 1);
 }
@@ -71,7 +65,7 @@ if (PlayerJump <= 0)
 }
 
 //If the player is on land and not in water
-if (place_meeting(x, y + 1, obj_Wall) && (!place_meeting(x, y, obj_WaterBody)))
+if !place_meeting(x, y, obj_WaterBody) && place_meeting(x, y + 1, obj_Wall)
 {
 	PlayerNeutralState = PLAYERSTATE_NEUTRAL.GROUND;
 	PlayerJump = MaxCoyoteJump;
@@ -100,7 +94,6 @@ x += xSpeed;
 
 y += ySpeed;
 
-
 #endregion
 
 #region State Transitions
@@ -127,7 +120,7 @@ else if (key_moon)
 else if (key_dash)
 {
 	//If the dash is usable
-	if (CrescentBlitz_Usable && global.AbilityUnlocked_CrescentBlitz) 
+	if (global.AbilityUnlocked_CrescentBlitz && CrescentBlitz_Usable) 
 	{
 		PlayerJump = 0;
 		CrescentBlitz_Usable = false;
@@ -170,7 +163,16 @@ switch(PlayerState)
 		
 		NightNight_Started = false;
 		
-		ClingToHope_Usable = place_meeting(x + 1, y, obj_Wall) - place_meeting(x - 1, y, obj_Wall);
+		
+		if (global.AbilityUnlocked_ClingToHope)
+		{
+			ClingToHope_Usable = place_meeting(x + 1, y, obj_Wall) - place_meeting(x - 1, y, obj_Wall);
+		}
+		
+		else
+		{
+			ClingToHope_Usable = 0;
+		}
 		
 		//The player's neutral state machine
 		switch(PlayerNeutralState)
@@ -213,31 +215,20 @@ switch(PlayerState)
 				if (xSpeed != 0) 
 				{
 					
-					var _dustPart = function()
-					{
-						with (instance_create_depth(x - (image_xscale * 0), y + 15, depth + 1, obj_PlayerMoveParticles))
-						{
-							image_alpha = 0.7;
-							xSpeed = 0;
-							ySpeed = -random_range(0.5, 2);
-							sprite_index = spr_PlayerMoveParticle;
-							PlayerMoveParticle_FadeRate = random_range(0.05, 0.1)
-						}
-					}
-					
-					TimeSourceCreateAndStart(5, _dustPart, [], 1);
+					time_source_start(RunDustEffect_TimeSource);
 					
 					sprite_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.RUN];
 					if (animation_end(sprite_index))
 					{
 						PlayerFootsteps();
-						}
+					}
 				}
 				
 				//If the player is not moving horizontally, play the idle animation
 				else 
 				{
 					sprite_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.IDLE];
+					time_source_pause(RunDustEffect_TimeSource)
 				}
 				
 				mask_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.IDLE];
@@ -250,6 +241,8 @@ switch(PlayerState)
 			case PLAYERSTATE_NEUTRAL.AIR:
 				
 				#region Jumping/Falling State
+
+				time_source_pause(RunDustEffect_TimeSource);
 
 				Gravity = Gravity_Normal; //Set the gravity back to normal
 
@@ -281,23 +274,23 @@ switch(PlayerState)
 				mask_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.IDLE];
 				
 				//If the player can use Star Jump
-				if (StarJump_Usable)
+				if (global.AbilityUnlocked_StarJump) && (StarJump_Usable)
 				{
 					//if the player presses the star jump button
-					if (key_starjump && global.AbilityUnlocked_StarJump)
+					if (key_starjump) && (global.AbilityUnlocked_StarJump)
 					{
 						ySpeed = -StarJump_Power;
 						StarJump_Usable = false;
 					}
 				}
 				
-				else if (ySpeed < 0)
+				else if (global.AbilityUnlocked_StarJump) && (ySpeed < 0)
 				{
 					//SpeedTrail(c_ltgrey);
 					ParticleTrail(spr_StarJumpParticles);
 				}
 				
-				if (ClingToHope_Usable != 0 && global.AbilityUnlocked_ClingToHope)
+				if (global.AbilityUnlocked_ClingToHope) && (ClingToHope_Usable != 0)
 				{
 					if (key_wall)
 					{

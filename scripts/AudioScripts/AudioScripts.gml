@@ -57,22 +57,33 @@ function SetRoomAudio_Music_Default(_music = blanksound){
 			with (obj_PlayBGM)
 			{
 				BGM_Volume = 0.05;
-				BGM_GainRate = 1000;
+				BGM_GainRate = 100;
 			}
 			
 			break;//end no music
 		
-		//If the Valnyx Shrine theme
+		case music_ShrineMemoryTheme:
+		
+			with (obj_PlayBGM)
+			{
+				BGM_Volume = 0.6;
+				BGM_GainRate = 50;
+			}
+		
+			break;
+		
+		//If the Valnyx Shrine theme is playing
 		case music_ShrinePeacefulTheme:
 			
 			with (obj_PlayBGM)
 			{
 				BGM_Volume = 0.5;
-				BGM_GainRate = 100;
+				BGM_GainRate = 0;
 			}
 			
-			break;//end Valnyx Shrine
+			break;//end Valnyx Shrine Theme
 			
+		//If the V
 		case music_JestEncounterTheme:
 		
 			with (obj_PlayBGM)
@@ -83,12 +94,22 @@ function SetRoomAudio_Music_Default(_music = blanksound){
 		
 			break;
 			
+		case music_ShrineGeneralTheme:
+		
+			with (obj_PlayBGM)
+			{
+				BGM_Volume = 0.4;
+				BGM_GainRate = 0;
+			}
+		
+			break;
+			
 		case music_LavenderEncounterTheme:
 		
 			with (obj_PlayBGM)
 			{
 				BGM_Volume = 0.4;
-				BGM_GainRate = 1000;
+				BGM_GainRate = 0;
 			}
 			
 			break;
@@ -103,12 +124,32 @@ function SetRoomAudio_Music_Default(_music = blanksound){
 			
 			break;
 			
+		case music_StoryCutsceneTheme:
+		
+			with (obj_PlayBGM)
+			{
+				BGM_Volume = 0.5;
+				BGM_GainRate = 0;
+			}
+		
+			break;
+			
+		case music_LavenderBattleTheme:
+			
+			with (obj_PlayBGM)
+			{
+				BGM_Volume = 0.2;
+				BGM_GainRate = 0;
+			}
+			
+			break;
+			
 		case music_NoctisCityTheme:
 		
 			with (obj_PlayBGM)
 			{
 				BGM_Volume = 0.5;
-				BGM_GainRate = 1000;
+				BGM_GainRate = 10;
 			}
 		
 			break;
@@ -128,7 +169,7 @@ function SetRoomAudio_Music_Default(_music = blanksound){
 			with (obj_PlayBGM)
 			{
 				BGM_Volume = 0.3;
-				BGM_GainRate = 500;
+				BGM_GainRate = 0;
 			}
 		
 			break;
@@ -148,7 +189,7 @@ function SetRoomAudio_Music_Default(_music = blanksound){
 			with (obj_PlayBGM)
 			{
 				BGM_Volume = 0.2;
-				BGM_GainRate = 100;
+				BGM_GainRate = 0;
 			}
 			
 			break;
@@ -173,14 +214,14 @@ function SetRoomAudio_Music_Default(_music = blanksound){
 			
 			break;
 			
-		case music_LavenderBattleTheme:
-			
+		default:
+		
 			with (obj_PlayBGM)
 			{
-				BGM_Volume = 0.2;
+				BGM_Volume = 1;
 				BGM_GainRate = 0;
 			}
-			
+		
 			break;
 		
 	}

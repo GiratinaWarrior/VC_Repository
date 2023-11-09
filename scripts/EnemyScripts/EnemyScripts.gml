@@ -42,7 +42,7 @@ function Enemy_Stunned(_morehurtfunc = function(){}, _morerecoverfunc = function
 function Instance_InView(_inst = id)
 {
 	//If the player is alive, check if the player can see the instance
-	if (abs(_inst.x - obj_Camera.x) <= global.xrange && abs(_inst.y - obj_Camera.y) <= global.yrange)
+	if (abs(_inst.x - obj_Camera.x) <= (RES_W/2) + 20 && abs(_inst.y - obj_Camera.y) <= (RES_H/2) + 20)
 	{
 		return true;
 	}

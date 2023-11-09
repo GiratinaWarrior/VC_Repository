@@ -139,7 +139,7 @@
 				
 				Damage = 3;
 				
-				if (place_meeting(x + xSpeed, y + ySpeed, obj_Wall))
+				if (place_meeting(x, y + ySpeed, obj_Wall) || place_meeting(x + xSpeed, y, obj_Wall))
 				{
 					
 					var _hitWallAction = 0;

@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (!instance_exists(Creator) || Creator == noone)
+if (Creator == noone) || !(instance_exists(Creator))
 {
 	instance_destroy();
 }

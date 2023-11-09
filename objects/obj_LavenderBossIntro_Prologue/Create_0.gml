@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+LavenderBossIntroPrologue_TimeSource = noone;
 
 LavenderBossIntroPrologue_State = 0;
 

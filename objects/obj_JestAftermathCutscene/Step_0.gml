@@ -31,8 +31,10 @@ switch (JestAftermathCutscene_State)
 				{
 					JestAftermathCutscene_State = JESTAFTERMATHCUTSCENE.JEST_TURN_ROSE;
 					Jest_NoctisCty.image_xscale = -1;
+					time_source_destroy(JestAftermathCutscene_TimeSource);
+					JestAftermathCutscene_TimeSource = noone;
 				}
-				TimeSourceCreateAndStart(50, _func);
+				if (JestAftermathCutscene_TimeSource == noone) JestAftermathCutscene_TimeSource = TimeSourceCreateAndStart(50, _func);
 			}
 		
 		#endregion
@@ -51,10 +53,11 @@ switch (JestAftermathCutscene_State)
 					JestAftermathCutscene_JestTurnRose_Sequence = layer_sequence_create(layer, Jest_NoctisCty.x, Jest_NoctisCty.y - sprite_yoffset - 30, seq_ExclamationMark);
 					JestAftermathCutscene_JestTurnRose_SequenceCreated = true;
 				}
-			
+				time_source_destroy(JestAftermathCutscene_TimeSource);
+				JestAftermathCutscene_TimeSource = noone;
 			}
 			
-			TimeSourceCreateAndStart(20, _func);
+			if (JestAftermathCutscene_TimeSource == noone) JestAftermathCutscene_TimeSource = TimeSourceCreateAndStart(20, _func);
 			
 			if (JestAftermathCutscene_JestTurnRose_SequenceCreated)
 			{
@@ -147,14 +150,18 @@ switch (JestAftermathCutscene_State)
 				var _func = function()
 				{
 					Jest_NoctisCty.image_xscale = 1;	
+					time_source_destroy(JestAftermathCutscene_TimeSource);
+					JestAftermathCutscene_TimeSource = noone;
 					var _anotherfunc = function()
 					{
 						JestAftermathCutscene_State = JESTAFTERMATHCUTSCENE.JEST_EXPLAIN_FOREST;
+						time_source_destroy(JestAftermathCutscene_TimeSource);
+						JestAftermathCutscene_TimeSource = noone;
 					}
-					TimeSourceCreateAndStart(50, _anotherfunc);
+					if (JestAftermathCutscene_TimeSource == noone) JestAftermathCutscene_TimeSource = TimeSourceCreateAndStart(50, _anotherfunc);
 				}
 				
-				TimeSourceCreateAndStart(50, _func);
+				if (JestAftermathCutscene_TimeSource == noone) JestAftermathCutscene_TimeSource = TimeSourceCreateAndStart(50, _func);
 				
 			}
 			
@@ -185,14 +192,18 @@ switch (JestAftermathCutscene_State)
 				var _func = function()
 				{
 					Jest_NoctisCty.image_xscale = -1;	
+					time_source_destroy(JestAftermathCutscene_TimeSource);
+					JestAftermathCutscene_TimeSource = noone;
 					var _anotherfunc = function()
 					{
 						JestAftermathCutscene_State = JESTAFTERMATHCUTSCENE.JEST_GOOD_LUCK;
+						time_source_destroy(JestAftermathCutscene_TimeSource);
+						JestAftermathCutscene_TimeSource = noone;
 					}
-					TimeSourceCreateAndStart(120, _anotherfunc);
+					if (JestAftermathCutscene_TimeSource == noone) JestAftermathCutscene_TimeSource = TimeSourceCreateAndStart(120, _anotherfunc);
 				}
 				
-				TimeSourceCreateAndStart(120, _func);
+				if (JestAftermathCutscene_TimeSource == noone) JestAftermathCutscene_TimeSource = TimeSourceCreateAndStart(120, _func);
 			}
 		
 		#endregion

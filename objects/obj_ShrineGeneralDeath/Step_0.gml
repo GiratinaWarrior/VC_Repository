@@ -21,6 +21,10 @@ if (image_speed == 0)
 		//Declare a function for opening the Shrine Arena Exit
 		var _newFunc = function()
 		{
+			
+			time_source_destroy(VoizatiaBossIntro_TimeSource);
+			VoizatiaBossIntro_TimeSource = noone;
+			
 			//Make the exit visible
 			layer_set_visible("Floortiles_FullOpen", true);
 			layer_set_visible("Floortiles_Closed", false);
@@ -60,11 +64,11 @@ if (image_speed == 0)
 			}//end open Shrine Arena Exit
 		
 			//start the event to give control back to the player
-			TimeSourceCreateAndStart(60, _otherNewFunc);
+			if (VoizatiaBossIntro_TimeSource == noone) VoizatiaBossIntro_TimeSource = TimeSourceCreateAndStart(60, _otherNewFunc);
 		}
 	
 		//Start the event to open the doors
-		TimeSourceCreateAndStart(60, _newFunc);
+		if (VoizatiaBossIntro_TimeSource == noone) VoizatiaBossIntro_TimeSource = TimeSourceCreateAndStart(60, _newFunc);
 		
 		ShrineGeneralDeath_EventRun = true;
 	}

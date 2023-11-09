@@ -1,1 +1,1 @@
-SetRoomAudio_Music(music_ShrineMemoryTheme, 0.3);
+SetRoomAudio_Music_Default(music_ShrineMemoryTheme);

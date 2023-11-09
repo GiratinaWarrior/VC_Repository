@@ -29,7 +29,7 @@ PoisonFlower_ShootTimer = PoisonFlower_ShootTimerCooldown;
 PoisonFlower_MaxSquish = 2;
 PoisonFlower_SquishRate = 0.05;
 
-PoisonFlower_FireRate = 90;
+PoisonFlower_FireRate = 5;
 PoisonFlower_FireTimer = PoisonFlower_FireRate;
 
 PoisonFlower_FireLength = 60;

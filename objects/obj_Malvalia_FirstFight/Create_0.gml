@@ -17,6 +17,20 @@ Gravity = 0;
 Malvalia_FirstFight_CurrentState = MALVALIA_FIRSTFIGHT_STATE.IDLE;
 Malvalia_FirstFight_NextState = MALVALIA_FIRSTFIGHT_STATE.BLACK_GEYSER;
 
+var _contCutscene = function()
+{
+	//Activate the next stage of the cutscene
+	with (obj_MalvaliaFirstFightCutscene)
+	{
+		MalvaliaFirstFightCutscene_State = MALVALIAFIRSTFIGHTCUTSCENE.MALVALIA_DEFEATED_TALK;
+	}
+	time_source_destroy(Malvalia_FirstFight_DefeatedTimeSource);
+	Malvalia_FirstFight_DefeatedTimeSource = noone;
+}
+				
+//After a certain amount of time has passed, activate the next stage of the cutscene
+Malvalia_FirstFight_DefeatedTimeSource = TimeSourceCreate(80, _contCutscene);
+
 //---------------------------Idle State----------------------------------//
 Malvalia_FirstFight_Idle_StateChangeTimer = 0;
 Malvalia_FirstFight_Idle_StateChangeTimerLimit = 150;
@@ -41,6 +55,8 @@ Malvalia_FirstFight_Teleport_TargetY = 0;
 //The variables for how long the Black Geysers will be conjured
 Malvalia_FirstFight_BlackGeyser_StateTimer = 0;
 Malvalia_FirstFight_BlackGeyser_StateTimerLimit = 600;
+
+Malvalia_FirstFight_BlackGeyser_TimeSource = noone;
 
 //Variable the holds the geyser warning particles
 Malvalia_FirstFight_BlackGeyser_ConjureParticle = noone;

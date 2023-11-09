@@ -22,7 +22,9 @@ enum PROLOGUE_END_CUTSCENE
 	CUTSCENE_END //The cutscene is over
 }
 
-PrologueEndCutscene_Stage = 0;
+PrologueEndCutscene_Stage = 0
+
+PrologueEndCutscene_TimeSource = noone;
 
 PrologueEndCutscene_VoizatiaIdle = noone;
 PrologueEndCutscene_MalvaliaIdle = noone;

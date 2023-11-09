@@ -47,6 +47,7 @@ switch(CarvalineOrbIntroCutscene_Stage)
 			
 			with (obj_Player)
 			{
+				global.Key_Talk = 1;
 				hascontrol = false;
 			}
 			
@@ -84,7 +85,7 @@ switch(CarvalineOrbIntroCutscene_Stage)
 			}
 			
 			//Turn on the music
-			SetRoomAudio_Music(music_StoryCutsceneTheme, 0.5, 0);
+			SetRoomAudio_Music_Default(music_StoryCutsceneTheme);
 		
 			//Create a the story sequence
 			if (!CarvalineOrbIntroCutscene_Story_SequenceCreated)
@@ -163,7 +164,7 @@ switch(CarvalineOrbIntroCutscene_Stage)
 		
 		#region Lavender Talk
 			
-			SetRoomAudio_Music(music_LavenderEncounterTheme, 0.5);
+			SetRoomAudio_Music_Default(music_LavenderEncounterTheme);
 			
 			//The different stages of Lavender's Speech
 			switch(CarvalineOrbIntroCutscene_LavenderSpeech_Stage)
@@ -286,18 +287,23 @@ switch(CarvalineOrbIntroCutscene_Stage)
 								//Have Lavender turn around
 								layer_sprite_xscale(CarvalineOrbIntroCutscene_LavenderTalk_LavenderSprite, -1);
 								
+								time_source_destroy(CarvalineOrbIntroCutscene_TimeSource);
+								CarvalineOrbIntroCutscene_TimeSource = noone;
+								
 								//The function to run after a specified amount of time
 								var _newFunc = function()
 								{
 									CarvalineOrbIntroCutscene_LavenderSpeech_Stage = CARVALINEORBINTROCUTSCENE_LAVENDERSPEECH.EXPLAIN_CARDINAL_MORE;
+									time_source_destroy(CarvalineOrbIntroCutscene_TimeSource);
+									CarvalineOrbIntroCutscene_TimeSource = noone;
 								}
 								
 								//After a specified amount, activate the above tunction
-								TimeSourceCreateAndStart(60, _newFunc);
+								if (CarvalineOrbIntroCutscene_TimeSource == noone) CarvalineOrbIntroCutscene_TimeSource = TimeSourceCreateAndStart(60, _newFunc);
 							}
 							
 							//Activate a function after a certain amount of time
-							TimeSourceCreateAndStart(60, _func);
+							if (CarvalineOrbIntroCutscene_TimeSource == noone) CarvalineOrbIntroCutscene_TimeSource = TimeSourceCreateAndStart(60, _func);
 							
 							
 						}//end Lavender done talking
@@ -413,7 +419,7 @@ switch(CarvalineOrbIntroCutscene_Stage)
 				//destroy the lavender leave sequence
 				layer_sequence_destroy(CarvalineOrbIntroCutscene_LavenderExit_Sequence);
 				//Reset the music
-				SetRoomAudio_Music(music_ShrineBasementTheme, 0.5, 1000);
+				SetRoomAudio_Music_Default(music_ShrineBasementTheme);
 				//have the player start moving again
 				with (obj_Player)
 				{

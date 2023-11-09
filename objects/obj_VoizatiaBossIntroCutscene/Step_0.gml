@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-var _skippable = true;
+var _skippable = false;
 
 var _skipButton = keyboard_check_pressed(ord("C"));
 
@@ -54,11 +54,13 @@ switch(VoizatiaBossIntro_State)
 				if (VoizatiaBossIntro_State < VOIZATIABOSSINTRO.BATTLE_START)
 				{
 					VoizatiaBossIntro_State = VOIZATIABOSSINTRO.VOIZATIA_TALK_LAVENDER;
+					time_source_destroy(VoizatiaBossIntro_TimeSource);
+					VoizatiaBossIntro_TimeSource = noone;
 				}
 				
 			}
 			
-			TimeSourceCreateAndStart(110, _func, [], 1);
+			if (VoizatiaBossIntro_TimeSource == noone) VoizatiaBossIntro_TimeSource = TimeSourceCreateAndStart(110, _func, [], 1);
 			
 			if (_skippable) && (_skipButton)
 			{
@@ -78,7 +80,7 @@ switch(VoizatiaBossIntro_State)
 			
 			var _text = 
 			[
-				"This is the maximum power level that the Noxians are capable of?",
+				"Is this really as strong as the Noxians get?",
 				"Thats one hell of a low bar, it's a miracle that no ones tripped over it yet.",
 				"Wouldn't you agree Rose?",
 			];
@@ -88,14 +90,17 @@ switch(VoizatiaBossIntro_State)
 				CutsceneText(_text, "Voziatia", TEXTBOX_POS.BOTTOM, ft_Voizatia);
 				VoizatiaBossIntro_VoizatiaTalkLavender_TalkStarted = true;
 			}
+			
 			else if !(instance_exists(obj_Text))
 			{
 				var _func = function()
 				{
 					VoizatiaBossIntro_State = VOIZATIABOSSINTRO.VOIZATIA_TELEPORT_ROSE;
+					time_source_destroy(VoizatiaBossIntro_TimeSource);
+					VoizatiaBossIntro_TimeSource = noone;
 				}
 				
-				TimeSourceCreateAndStart(30, _func, [], 1);
+				if (VoizatiaBossIntro_TimeSource == noone) VoizatiaBossIntro_TimeSource = TimeSourceCreateAndStart(30, _func, [], 1);
 			}
 
 
@@ -152,8 +157,10 @@ switch(VoizatiaBossIntro_State)
 				var _func = function()
 				{
 					VoizatiaBossIntro_State = VOIZATIABOSSINTRO.VOIZATIA_PROPOSAL;
+					time_source_destroy(VoizatiaBossIntro_TimeSource);
+					VoizatiaBossIntro_TimeSource = noone;
 				}
-				TimeSourceCreateAndStart(120, _func, [], 1);
+				if (VoizatiaBossIntro_TimeSource == noone) VoizatiaBossIntro_TimeSource = TimeSourceCreateAndStart(120, _func, [], 1);
 			}
 		
 		#endregion
@@ -238,8 +245,10 @@ switch(VoizatiaBossIntro_State)
 				var _func = function()
 				{
 					VoizatiaBossIntro_State = VOIZATIABOSSINTRO.VOIZATIA_CHALLENGE_ROSE;
+					time_source_destroy(VoizatiaBossIntro_TimeSource);
+					VoizatiaBossIntro_TimeSource = noone;
 				}
-				TimeSourceCreateAndStart(90, _func, [], 1);
+				if (VoizatiaBossIntro_TimeSource == noone) VoizatiaBossIntro_TimeSource = TimeSourceCreateAndStart(90, _func, [], 1);
 			}
 		
 		#endregion
@@ -396,9 +405,11 @@ switch(VoizatiaBossIntro_State)
 			{
 				obj_Camera.sprite_index = noone;
 				VoizatiaBossIntro_State = VOIZATIABOSSINTRO.VOIZATIA_MOCK;
+				time_source_destroy(VoizatiaBossIntro_TimeSource);
+				VoizatiaBossIntro_TimeSource = noone;
 			}
 			
-			TimeSourceCreateAndStart(75, _func);
+			if (VoizatiaBossIntro_TimeSource == noone) VoizatiaBossIntro_TimeSource = TimeSourceCreateAndStart(75, _func);
 		
 		#endregion
 	
@@ -433,8 +444,10 @@ switch(VoizatiaBossIntro_State)
 				var _func = function()
 				{
 					VoizatiaBossIntro_State = VOIZATIABOSSINTRO.VOIZATIA_ORDERS;
+					time_source_destroy(VoizatiaBossIntro_TimeSource);
+					VoizatiaBossIntro_TimeSource = noone;
 				}
-				TimeSourceCreateAndStart(40, _func);
+				if (VoizatiaBossIntro_TimeSource == noone) VoizatiaBossIntro_TimeSource = TimeSourceCreateAndStart(40, _func);
 			}
 		
 		#endregion
@@ -464,8 +477,10 @@ switch(VoizatiaBossIntro_State)
 				var _func = function()
 				{
 					VoizatiaBossIntro_State = VOIZATIABOSSINTRO.VOIZATIA_FLY;	
+					time_source_destroy(VoizatiaBossIntro_TimeSource);
+					VoizatiaBossIntro_TimeSource = noone;
 				}
-				TimeSourceCreateAndStart(30, _func);
+				if (VoizatiaBossIntro_TimeSource == noone) VoizatiaBossIntro_TimeSource = TimeSourceCreateAndStart(30, _func);
 			}
 			
 		#endregion
@@ -488,8 +503,10 @@ switch(VoizatiaBossIntro_State)
 						var _func = function()
 						{
 							VoizatiaBossIntro_State = VOIZATIABOSSINTRO.VOIZATIA_FLY_TALK;
+							time_source_destroy(VoizatiaBossIntro_TimeSource);
+							VoizatiaBossIntro_TimeSource = noone;
 						}
-						TimeSourceCreateAndStart(30, _func);
+						if (VoizatiaBossIntro_TimeSource == noone) VoizatiaBossIntro_TimeSource = TimeSourceCreateAndStart(30, _func);
 					}
 				}
 			
@@ -541,9 +558,11 @@ switch(VoizatiaBossIntro_State)
 				obj_Camera.sprite_index = noone;
 				obj_Camera.follow = obj_PlayerDefeated;
 				VoizatiaBossIntro_State = VOIZATIABOSSINTRO.PLAYER_AWAKEN;
+				time_source_destroy(VoizatiaBossIntro_TimeSource);
+				VoizatiaBossIntro_TimeSource = noone;
 			}
 			
-			TimeSourceCreateAndStart(40, _func);
+			if (VoizatiaBossIntro_TimeSource == noone) VoizatiaBossIntro_TimeSource = TimeSourceCreateAndStart(40, _func);
 			
 		#endregion
 		
@@ -585,9 +604,11 @@ switch(VoizatiaBossIntro_State)
 					var _func = function()
 					{
 						VoizatiaBossIntro_State = VOIZATIABOSSINTRO.CUTSCENE_END;
+						time_source_destroy(VoizatiaBossIntro_TimeSource);
+						VoizatiaBossIntro_TimeSource = noone;
 					}
 					
-					TimeSourceCreateAndStart(20, _func);
+					if (VoizatiaBossIntro_TimeSource == noone) VoizatiaBossIntro_TimeSource = TimeSourceCreateAndStart(20, _func);
 					
 					
 				}

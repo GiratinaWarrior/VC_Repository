@@ -1,14 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (instance_exists(Creator)) && (instance_exists(obj_Player))
+if (Creator != noone) && (instance_exists(Creator)) && (PlayerAlive())
 {
 	
 	TalkRange = Creator.TalkRange;
-	
-//	show_debug_message("CarvalinePedestal Talk Range: {0}", TalkRange);
-	
-//	point_in_rectangle(obj_Player.x, obj_Player.y, Creator.x + TalkRange * 2, Creator.y + TalkRange * 2, Creator.x - TalkRange * 2, Creator.y - TalkRange * 2)
 	
 	// If the Player exists and is close to the sign, make itself visible
 	if (abs(Creator.x - obj_Player.x) < TalkRange && abs(Creator.y - obj_Player.y) < TalkRange)
