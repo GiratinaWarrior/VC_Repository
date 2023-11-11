@@ -19,22 +19,22 @@ switch (JestAftermathCutscene_State)
 				"...",
 				"Just what is going on at our house..?"
 			];
+			
+			var _voice = 
+			[
+				blanksound,
+				sound_Jest_Serious_Shabarura
+			]
 		
 			if !(JestAftermathCutscene_JestTalkSelf_TalkStarted)
 			{
 				CutsceneText(_text, "Jest", _pos, _font);
+				obj_Text.TextBox_Voices = _voice;
 				JestAftermathCutscene_JestTalkSelf_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))
 			{
-				var _func = function()
-				{
-					JestAftermathCutscene_State = JESTAFTERMATHCUTSCENE.JEST_TURN_ROSE;
-					Jest_NoctisCty.image_xscale = -1;
-					time_source_destroy(JestAftermathCutscene_TimeSource);
-					JestAftermathCutscene_TimeSource = noone;
-				}
-				if (JestAftermathCutscene_TimeSource == noone) JestAftermathCutscene_TimeSource = TimeSourceCreateAndStart(50, _func);
+				time_source_start(JestAftermathCutscene_JestTalkSelf_TimeSource);
 			}
 		
 		#endregion
@@ -86,11 +86,19 @@ switch (JestAftermathCutscene_State)
 				"Rosey-darling. I'm prepared, so tell me.", 
 				"What happened? and why is Mother not with you?",
 			];
+			
+			var _voice = 
+			[
+				sound_Jest_Talk_Huh,
+				sound_Jest_Serious_Varazhanovezhibidi,
+				sound_Jest_Dark_Rilakanazhi,
+				sound_Jest_Serious_Shabarura,
+			]
 		
 			if !(JestAftermathCutscene_JestTalkFirst_TalkStarted)
 			{
 				CutsceneText(_text, "Jest", _pos, _font);
-				//audio_play_sound(sound_JestHuhuhu, 300, false);
+				obj_Text.TextBox_Voices = _voice;
 				JestAftermathCutscene_JestTalkFirst_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))
@@ -135,34 +143,33 @@ switch (JestAftermathCutscene_State)
 				"...",
 				"I guess not huh",
 				"Then we truly have no choice but to go along with his stage play",
+				"...",
 				"Don't worry Rosey-darling, you're the protagonist of this play, and the heroic protagonist always defeats the villain in the end",
 				"Now as for how this play will play out"
 			];
+			
+			var _voice = 
+			[
+				sound_Jest_Talk_Huh,
+				sound_Jest_Serious_Shabarura,
+				sound_Jest_Serious_Harakenizuburana,
+				blanksound,
+				sound_Jest_Dark_Vishkana,
+				sound_Jest_Dark_Harakivabaja,
+				blanksound,
+				sound_Jest_Laugh_Hah,
+				sound_Jest_Talk_haleKIzena,
+			]
 		
 			if !(JestAftermathCutscene_JestUnderstandSituation_TalkStarted)
 			{
 				CutsceneText(_text, "Jest", _pos, _font);
+				obj_Text.TextBox_Voices = _voice;
 				JestAftermathCutscene_JestUnderstandSituation_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))
 			{
-				
-				var _func = function()
-				{
-					Jest_NoctisCty.image_xscale = 1;	
-					time_source_destroy(JestAftermathCutscene_TimeSource);
-					JestAftermathCutscene_TimeSource = noone;
-					var _anotherfunc = function()
-					{
-						JestAftermathCutscene_State = JESTAFTERMATHCUTSCENE.JEST_EXPLAIN_FOREST;
-						time_source_destroy(JestAftermathCutscene_TimeSource);
-						JestAftermathCutscene_TimeSource = noone;
-					}
-					if (JestAftermathCutscene_TimeSource == noone) JestAftermathCutscene_TimeSource = TimeSourceCreateAndStart(50, _anotherfunc);
-				}
-				
-				if (JestAftermathCutscene_TimeSource == noone) JestAftermathCutscene_TimeSource = TimeSourceCreateAndStart(50, _func);
-				
+				time_source_start(JestAftermathCutscene_JestUnderstandSituation_TimeSource);
 			}
 			
 		#endregion
@@ -182,9 +189,18 @@ switch (JestAftermathCutscene_State)
 				"And if mother says its haunted, its haunted. She only ever scared us with slightly exaggerated truths"
 			];
 			
+			var _voice = 
+			[
+				sound_Jest_Serious_Shabarura,
+				sound_Jest_Serious_Varazhanovezhibidi,
+				sound_Jest_Talk_halezaDIZEna,
+				sound_Jest_Talk_Volapachi_Halaka
+			]
+			
 			if !(JestAftermathCutscene_JestExplainForest_TalkStarted)
 			{
 				CutsceneText(_text, "Jest", _pos, _font);
+				obj_Text.TextBox_Voices = _voice;
 				JestAftermathCutscene_JestExplainForest_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))
@@ -230,10 +246,23 @@ switch (JestAftermathCutscene_State)
 				"I know you can do it, so get going, the play does not wait for its actors does it?"
 			];
 			
+			var _voice = 
+			[
+				sound_Jest_Laugh_HAhaha,
+				sound_Jest_Talk_haleKIzena,
+				sound_Jest_Serious_Varazhanovezhibidi,
+				sound_Jest_Talk_Huh,
+				sound_Jest_Serious_Harakenizuburana,
+				sound_Jest_Serious_Shabarura,
+				sound_Jest_Talk_Volapachi_Halaka,
+				sound_Jest_Talk_halezaDIZEna,
+				sound_Jest_Talk_jaravajikaraZHAna
+			];
+			
 			if !(JestAftermathCutscene_JestGoodLuck_TalkStarted)
 			{
 				CutsceneText(_text, "Jest", _pos, _font);
-				//audio_play_sound(sound_JestHuhuhu, 300, false);
+				obj_Text.TextBox_Voices = _voice;
 				JestAftermathCutscene_JestGoodLuck_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))

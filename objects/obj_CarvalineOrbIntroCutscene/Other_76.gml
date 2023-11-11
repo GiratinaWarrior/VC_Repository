@@ -35,10 +35,16 @@ if (event_data [? "event_type"] == "sequence event")
 			[
 				"One night, the sisters shared a strange dream. A red figure appeared before them",
 				"The sisters were startled, but the red figure spoke to them",
-				"'Childs...me childs...fear no...come for peace...for you niceness...gift...'"
+				"Children of the Night. Children of the Night. The strings of fate have chosen you.",
+				"Children of the Night. Children of the Night. You shall become angels, You shall become queens"
 			]
 			
 			var LongAgoText = CutsceneText(_text, "", 800, _textFont, _textCol, blanksprite, false);
+			
+			if (LongAgoText.TextBox_Page > 1)
+			{
+				LongAgoText.TextBox_Font = ft_Xenezeatherisix;
+			}
 			
 			LongAgoText.TextBox_CharIncrease = 0.5;
 		

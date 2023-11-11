@@ -5,7 +5,7 @@ Gravity = 0.5;
 xSpeed = 0;
 ySpeed = 0;
 
-Chakrolem_ChaseSpeed = 6;
+Chakrolem_ChaseSpeed = 9;
 
 enum CHAKROLEM_STATE
 {

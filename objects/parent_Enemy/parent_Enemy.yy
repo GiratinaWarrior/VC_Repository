@@ -14,10 +14,7 @@
     "name": "Parents",
     "path": "folders/Objects/Enemies/Parents.yy",
   },
-  "parentObjectId": {
-    "name": "parent_Deactivatable",
-    "path": "objects/parent_Deactivatable/parent_Deactivatable.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

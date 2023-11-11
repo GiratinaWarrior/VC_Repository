@@ -64,5 +64,22 @@ VoizatiaBossPrologue_SinEruption_AttackTimerLimit = 30;
 VoizatiaBossPrologue_SinEruption_ConjureTimer = VoizatiaBossPrologue_SinEruption_AttackTimerLimit + 40;
 VoizatiaBossPrologue_SinEruption_ConjureParticle = noone;
 
+//The number of Sin Eruptions to use at a time
 VoizatiaBossPrologue_SinEruption_NumOfAttack = 4;
+
+VoizatiaBossPrologue_SinEruption_X = 0;
+VoizatiaBossPrologue_SinEruption_Y = 352;
+
+var _createSE = function(_startX, _startY)
+{
+						
+	audio_play_sound(sound_SinEruption, 90, false, 0.5);
+						
+	instance_create_layer(_startX, _startY, "SinEruption", obj_SinEruption);
+}
+
+VoizatiaBossPrologue_SinEruption_TimeSource 
+= TimeSourceCreate(VoizatiaBossPrologue_SinEruption_ConjureTimer, _createSE, [VoizatiaBossPrologue_SinEruption_X, VoizatiaBossPrologue_SinEruption_Y], -1);
+
+
 

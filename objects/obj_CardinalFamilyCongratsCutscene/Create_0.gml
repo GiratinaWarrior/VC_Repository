@@ -4,6 +4,32 @@ y += 4;
 
 obj_Player.hascontrol = false;
 
+CardinalFamilyCongrats_skippable = true;
+
+CardinalFamilyCongrats_skipFunc = function()
+{
+	CardinalFamilyCongrats_Stage = CARDINALFAMILYCONGRATSCUTSCENE_STAGE.END;
+	instance_destroy(obj_Text);
+	
+	SetRoomAudio_Music_Default(music_ShrinePeacefulTheme);
+	
+	if (layer_sprite_exists(layer, CardinalFamilyCongrats_TalkLavenderSprite))
+	{
+		layer_sprite_destroy(CardinalFamilyCongrats_TalkLavenderSprite);
+	}
+	
+	if layer_sequence_exists(layer, CardinalFamilyCongrats_EnterSequenceElm)
+	{	
+		layer_sequence_destroy(CardinalFamilyCongrats_EnterSequenceElm)
+	}
+	
+	if layer_sequence_exists(layer, CardinalFamilyCongrats_ExitSequenceElm)
+	{	
+		layer_sequence_destroy(CardinalFamilyCongrats_ExitSequenceElm)
+	}
+	
+}
+
 //--------------------Stages of the Cutscene----------------//
 enum CARDINALFAMILYCONGRATSCUTSCENE_STAGE
 {

@@ -3,7 +3,7 @@
 
 var _skippable = false;
 
-var _skipButton = keyboard_check_pressed(ord("C"));
+var _skipButton = global.Key_Skip;
 
 var _skipFunction = function()
 {

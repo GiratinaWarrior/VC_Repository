@@ -24,8 +24,8 @@
     "Keyframes": [],
   },
   "parent": {
-    "name": "5_CarvalineOrbIntro",
-    "path": "folders/Sequences/Cutscenes/OpeningAct/5_CarvalineOrbIntro.yy",
+    "name": "OutOfStory",
+    "path": "folders/Sequences/Cutscenes/OpeningAct/5_CarvalineOrbIntro/OutOfStory.yy",
   },
   "playback": 0,
   "playbackSpeed": 60.0,

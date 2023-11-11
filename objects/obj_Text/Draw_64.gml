@@ -1,5 +1,7 @@
 /// @description Display the text
 
+//array_resize(TextBox_Voices, array_length(TextBox_Text));
+
 //The location of the text box on the GUI
 TextBox_X = TextBox_EdgeMargin;
 
@@ -59,6 +61,9 @@ if (TextBox_CharCount < string_length(TextBox_Text[TextBox_Page]))
 if (TextBox_CharCount <= 1)
 {
 	audio_play_sound(sound_Select, 200, false);
+	var _currentSound = TextBox_Voices[TextBox_Page];
+//	show_debug_message("Current Sound: {0} ", _currentSound);
+	audio_play_sound(_currentSound, 200, false);
 }
 
 //The section of the text to be displayed

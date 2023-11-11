@@ -24,13 +24,20 @@ enum PROLOGUE_END_CUTSCENE
 
 PrologueEndCutscene_Stage = 0
 
-PrologueEndCutscene_TimeSource = noone;
-
 PrologueEndCutscene_VoizatiaIdle = noone;
 PrologueEndCutscene_MalvaliaIdle = noone;
 PrologueEndCutscene_LavenderIdle = noone;
 
 //--------------Voizatia Section------------------//
+
+//Off Stage
+var _func = function()
+{
+	PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.VOIZATIA_ENTER;
+	time_source_destroy(PrologueEndCutscene_Off_TimeSource);
+	PrologueEndCutscene_Off_TimeSource = noone;
+}
+PrologueEndCutscene_Off_TimeSource = TimeSourceCreate(60, _func); 
 
 //Voizatia Enter Stage
 PrologueEndCutscene_VoizatiaEnter_Sequence = noone;
@@ -39,6 +46,8 @@ PrologueEndCutscene_VoizatiaEnter_SequenceCreated = false;
 //Voizatia Enter Talk Stage
 PrologueEndCutscene_VoizatiaEnterTalk_TalkStarted = false;
 PrologueEndCutscene_VoizatiaEnterTalk_Talk = noone;
+
+PrologueEndCutscene_VoizatiaEnterTalk_TimeSource = TimeSourceCreate(60, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.VOIZATIA_NOTICE_MALVALIA; time_source_destroy(PrologueEndCutscene_VoizatiaEnterTalk_TimeSource); PrologueEndCutscene_VoizatiaEnterTalk_TimeSource = noone;});
 
 //Voizatia Notice Malvalia Stage
 PrologueEndCutscene_VoizatiaNoticeMalvalia_TalkStarted = false;
@@ -54,6 +63,8 @@ PrologueEndCutscene_MalvaliaEnter_SequenceCreated = false;
 PrologueEndCutscene_MalvaliaEnterTalk_TalkStarted = false;
 PrologueEndCutscene_MalvaliaEnterTalk_Talk = noone;
 
+PrologueEndCutscene_MalvaliaEnterTalk_TimeSource = TimeSourceCreate(20, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.VOIZATIA_CALM_MALVALIA; time_source_destroy(PrologueEndCutscene_MalvaliaEnterTalk_TimeSource); PrologueEndCutscene_MalvaliaEnterTalk_TimeSource = noone;});
+
 //Voizatia Calm Malvalia Stage
 PrologueEndCutscene_VoizatiaCalmMalvalia_TalkStarted = false;
 PrologueEndCutscene_VoizatiaCalmMalvalia_Talk = noone;
@@ -62,9 +73,13 @@ PrologueEndCutscene_VoizatiaCalmMalvalia_Talk = noone;
 PrologueEndCutscene_MalvaliaExitTalk_TalkStarted = false;
 PrologueEndCutscene_MalvaliaExitTalk_Talk = noone;
 
+PrologueEndCutscene_MalvaliaExitTalk_TimeSource = TimeSourceCreate(100, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.MALVALIA_QUESTION; time_source_destroy(PrologueEndCutscene_MalvaliaExitTalk_TimeSource); PrologueEndCutscene_MalvaliaExitTalk_TimeSource = noone;});
+
 //Malvalia Question Stage
 PrologueEndCutscene_MalvaliaQuestion_TalkStarted = false;
 PrologueEndCutscene_MalvaliaQuestion_Talk = noone;
+
+PrologueEndCutscene_MalvaliaQuestion_TimeSource = TimeSourceCreate(80, function() {PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.VOIZATIA_TALK_LAVENDER; time_source_destroy(PrologueEndCutscene_MalvaliaQuestion_TimeSource); PrologueEndCutscene_MalvaliaQuestion_TimeSource = noone;});
 
 //--------------Lavender Section--------------------//
 
@@ -75,4 +90,6 @@ PrologueEndCutscene_VoizatiaTalkLavender_Talk = noone;
 //Lavender Enter Stage
 PrologueEndCutscene_LavenderEnterSequence = noone;
 PrologueEndCutscene_LavenderEnterSequenceCreated = false;
+
+PrologueEndCutscene_LavenderEnter_TimeSource = TimeSourceCreate(120, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.CUTSCENE_END; time_source_destroy(PrologueEndCutscene_LavenderEnter_TimeSource); PrologueEndCutscene_LavenderEnter_TimeSource = noone;});
 

@@ -16,3 +16,16 @@ Speech =
 	"................",
 	"Unpause"
 ];
+
+TextBox_Voices = 
+[
+	sound_Jest_Laugh_HAhaha,
+	sound_Jest_Talk_halezaDIZEna,
+	sound_Jest_Talk_haleKIzena,
+	blanksound,
+	blanksound,
+	blanksound,
+	blanksound,
+	blanksound,
+	sound_Jest_Laugh_Hah,
+]

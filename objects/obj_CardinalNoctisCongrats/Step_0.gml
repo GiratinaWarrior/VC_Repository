@@ -329,11 +329,18 @@ switch(CardinalNoctisCongrats_State)
 				"Don't you worry little and big ones",
 				"You're all safe with me and fun!"
 			];
+			
+			var _voice = 
+			[
+				sound_Jest_Talk_haleKIzena,
+				sound_Jest_Talk_halezaDIZEna,
+				sound_Jest_Talk_jaravajikaraZHAna,
+			]
 		
 			if (!CardinalNoctisCongrats_JestConfirm_TalkStarted)
 			{
 				CutsceneText(_text, "Jest", TEXTBOX_POS.BOTTOM, ft_Jest);
-				//audio_play_sound(sound_JestLaugh, 300, false);
+				obj_Text.TextBox_Voices = _voice;
 				CardinalNoctisCongrats_JestConfirm_TalkStarted = true;
 			}
 			else if (!instance_exists(obj_Text))
@@ -462,7 +469,7 @@ switch(CardinalNoctisCongrats_State)
 			
 			instance_destroy(obj_NPC);
 			
-			SetRoomAudio_Music_Default(music_NoctisCityTheme);
+			//SetRoomAudio_Music_Default(music_NoctisCityTheme);
 			
 			with (obj_Player)
 			{

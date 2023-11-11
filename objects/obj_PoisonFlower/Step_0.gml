@@ -34,6 +34,8 @@ switch(PoisonFlower_State)
 	
 		if (PoisonFlower_LifeCounter++ > PoisonFlower_MaxLife)
 		{
+			image_index = 0;
+			image_speed = 1;
 			PoisonFlower_State = POISONFLOWER_STATE.WITHER;
 		}
 	

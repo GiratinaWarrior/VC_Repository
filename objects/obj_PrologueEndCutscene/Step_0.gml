@@ -13,13 +13,7 @@ switch (PrologueEndCutscene_Stage)
 			
 			if (!global.MidTransition)
 			{
-				var _func = function()
-				{
-					PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.VOIZATIA_ENTER;
-					time_source_destroy(PrologueEndCutscene_TimeSource);
-					PrologueEndCutscene_TimeSource = noone;
-				}
-				if (PrologueEndCutscene_TimeSource == noone) PrologueEndCutscene_TimeSource = TimeSourceCreateAndStart(60, _func);
+				time_source_start(PrologueEndCutscene_Off_TimeSource);
 			}
 		
 		#endregion
@@ -70,7 +64,7 @@ switch (PrologueEndCutscene_Stage)
 			}
 			else if !(instance_exists(obj_Text))
 			{
-				if (PrologueEndCutscene_TimeSource == noone) PrologueEndCutscene_TimeSource = TimeSourceCreateAndStart(60, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.VOIZATIA_NOTICE_MALVALIA; time_source_destroy(PrologueEndCutscene_TimeSource); PrologueEndCutscene_TimeSource = noone;});
+				time_source_start(PrologueEndCutscene_VoizatiaEnterTalk_TimeSource);
 			}
 		
 		#endregion
@@ -205,7 +199,7 @@ switch (PrologueEndCutscene_Stage)
 			}
 			else if !(instance_exists(obj_Text))
 			{
-				if (PrologueEndCutscene_TimeSource == noone) PrologueEndCutscene_TimeSource = TimeSourceCreateAndStart(100, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.MALVALIA_QUESTION; time_source_destroy(PrologueEndCutscene_TimeSource); PrologueEndCutscene_TimeSource = noone;});
+				time_source_start(PrologueEndCutscene_MalvaliaExitTalk_TimeSource);
 			}
 		
 		#endregion
@@ -233,9 +227,10 @@ switch (PrologueEndCutscene_Stage)
 				PrologueEndCutscene_MalvaliaQuestion_Talk = CutsceneText(_text, "Malvalia", p, ft_Malvalia);
 				PrologueEndCutscene_MalvaliaQuestion_TalkStarted = true;
 			}
+			
 			else if !(instance_exists(obj_Text))
 			{
-				if (PrologueEndCutscene_TimeSource == noone) PrologueEndCutscene_TimeSource = TimeSourceCreateAndStart(80, function() {PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.VOIZATIA_TALK_LAVENDER; time_source_destroy(PrologueEndCutscene_TimeSource); PrologueEndCutscene_TimeSource = noone;});
+				time_source_start(PrologueEndCutscene_MalvaliaQuestion_TimeSource);
 			}
 			
 		#endregion
@@ -284,7 +279,7 @@ switch (PrologueEndCutscene_Stage)
 			{
 				PrologueEndCutscene_LavenderIdle = layer_sequence_create(layer, x, y, seq_PrologueEndCutscene_LavenderIdle);
 				layer_sequence_destroy(PrologueEndCutscene_LavenderEnterSequence);
-				if (PrologueEndCutscene_TimeSource == noone) PrologueEndCutscene_TimeSource = TimeSourceCreateAndStart(120, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.CUTSCENE_END; time_source_destroy(PrologueEndCutscene_TimeSource); PrologueEndCutscene_TimeSource = noone;});
+				time_source_start(PrologueEndCutscene_LavenderEnter_TimeSource);
 			}
 		
 		#endregion

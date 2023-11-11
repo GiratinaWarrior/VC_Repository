@@ -21,11 +21,11 @@
 	if (instance_exists(obj_Player))
 	{
 		
-		if ((abs(x - obj_Player.x) < 250 && abs(y - obj_Player.y) < 32))
+		if abs(x - obj_Player.x) < 550 && abs(y - obj_Player.y) < 64
 		{
 			PlayerInRange = true;
 		}
-		else
+		else if abs(x - obj_Player.x) > 650 || abs(y - obj_Player.y) >= 64
 		{
 			PlayerInRange = false;
 		}
@@ -45,30 +45,41 @@
 
 #region State Machine
 
+//State Machine for Chakrolem
 switch (Chakrolem_State)
 {
+	//Idle State: Chakrolem waits in place
 	case CHAKROLEM_STATE.IDLE:
 		
-		sprite_index = spr_Chakrolem_Idle;
+		#region Idle
 		
-		xSpeed = 0;
+			sprite_index = spr_Chakrolem_Idle;
 		
-		image_speed = 1;
+			xSpeed = 0;
 		
-		if (PlayerInRange)
-		{
-			Chakrolem_State = CHAKROLEM_STATE.NOTICE;
-		}
+			image_speed = 1;
 		
-		break;
+			if (PlayerInRange)
+			{
+				Chakrolem_State = CHAKROLEM_STATE.NOTICE;
+			}
+			
+		#endregion
 		
+		break;//end Idle
+		
+	//Hurt State: Chakrolem gets hurt
 	case CHAKROLEM_STATE.HURT:
 		
-		sprite_index = spr_Chakrolem_Idle;
+		#region Hurt
 		
-		image_speed = 0;
+			sprite_index = spr_Chakrolem_Idle;
 		
-		break;
+			image_speed = 0;
+			
+		#endregion
+		
+		break;//end Hurt State
 	
 	case CHAKROLEM_STATE.NOTICE:
 	
@@ -76,6 +87,7 @@ switch (Chakrolem_State)
 		{
 			audio_play_sound(sound_EnemyAlert, 100, false);
 			Chakrolem_SurpriseSeq = layer_sequence_create(layer, x, y - 50, seq_ExclamationMark_Fast);
+			layer_sequence_speedscale(Chakrolem_SurpriseSeq, 1.5);
 		}
 		else if (layer_sequence_is_finished(Chakrolem_SurpriseSeq))
 		{

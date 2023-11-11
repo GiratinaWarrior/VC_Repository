@@ -8,3 +8,10 @@ Speech =
 	"Your lovely brother was entertaining our guests by being himself, huhuhuuu",
 	"Well well, hurry on, Mother is awaiting you over there, you don't want another lecture do you?",
 ]
+
+TextBox_Voices = 
+[
+	sound_Jest_Laugh_HAhaha,
+	sound_Jest_Talk_halezaDIZEna,
+	sound_Jest_Talk_jaravajikaraZHAna
+]

@@ -23,6 +23,8 @@ function CutsceneText(_text = [""], _name = "" , _pos = TEXTBOX_POS.BOTTOM, _fon
 		TextBox_BoxSprite = _box;
 		TextBox_TextColor = _color;
 		
+		TextBox_Voices = array_create(array_length(TextBox_Text), blanksound);
+		
 		TextBox_UIPosition = _pos;
 		
 		TextBox_Cutscene = true;

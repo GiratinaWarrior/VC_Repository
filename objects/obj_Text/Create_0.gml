@@ -8,7 +8,11 @@ TextBox_Width = WINDOW_WIDTH - TextBox_EdgeMargin * 2;
 TextBox_Height = WINDOW_HEIGHT/3 - TextBox_EdgeMargin; 
 
 //The Text displayed by the textbox
-TextBox_Text = "DEFAULT";
+TextBox_Text = array_create(1, "");
+
+TextBox_Voices = array_create(20, blanksound);
+
+//show_debug_message("TextBox_Voices[0] = {0}", TextBox_Voices[0]);
 
 //The height of the text
 TextBox_TextHeightModifier = 1.2;

@@ -125,26 +125,15 @@ function VoizatiaBossPrologue_SinEruption()
 			//If its time to summon a Sin Eruption
 			if (VoizatiaBossPrologue_SinEruption_AttackTimer++ > VoizatiaBossPrologue_SinEruption_AttackTimerLimit)
 			{
-				var _sinX;//irandom_range(500, 1400);
-				var _sinY = 352;
 				
-				if (PlayerAlive()) _sinX = obj_Player.x;
-				else _sinX = irandom_range(500, 1400);
+				if (PlayerAlive()) VoizatiaBossPrologue_SinEruption_X = obj_Player.x;
+				else VoizatiaBossPrologue_SinEruption_X = irandom_range(500, 1400);
 				
 				audio_play_sound(sound_SinEruptionWarning, 40, false, 0.3);
 					
-				VoizatiaBossPrologue_SinEruption_ConjureParticle = CreateParticleSystem(ps_SinEruptionWarning, "SinEruption", _sinX, 0);
+				VoizatiaBossPrologue_SinEruption_ConjureParticle = CreateParticleSystem(ps_SinEruptionWarning, "SinEruption", VoizatiaBossPrologue_SinEruption_X, 0);
 				
-				var _createSE = function(_startX, _startY)
-				{
-						
-					audio_play_sound(sound_SinEruption, 90, false, 0.5);
-						
-					instance_create_layer(_startX, _startY, "SinEruption", obj_SinEruption);
-				}
-				
-				TimeSourceCreateAndStart(VoizatiaBossPrologue_SinEruption_ConjureTimer, _createSE, [_sinX, _sinY], 1);
-				
+				time_source_start(VoizatiaBossPrologue_SinEruption_TimeSource);
 				
 				//VoizatiaBossPrologue_SinEruption_NumOfAttack++;
 				VoizatiaBossPrologue_SinEruption_AttackTimer = 0;
@@ -155,6 +144,7 @@ function VoizatiaBossPrologue_SinEruption()
 		//if its time to stop the attack
 		else
 		{
+			time_source_stop(VoizatiaBossPrologue_SinEruption_TimeSource);
 			VoizatiaBossPrologue_CurrentState = VOIZATIABOSSPROLOGUE_STATE.IDLE;
 			VoizatiaBossPrologue_NextState = VOIZATIABOSSPROLOGUE_STATE.ROUGE_SPEAR;
 			VoizatiaBossPrologue_SinEruption_AttackTimer = 0;

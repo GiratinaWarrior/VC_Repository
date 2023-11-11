@@ -1,5 +1,12 @@
 /// @description Stages of the Cutscene
 
+CardinalFamilyCongrats_skipButton = global.Key_Skip;
+
+if (CardinalFamilyCongrats_skippable) && (CardinalFamilyCongrats_skipButton)
+{
+	CardinalFamilyCongrats_skipFunc();
+}
+
 obj_Player.hascontrol = false;
 
 switch(CardinalFamilyCongrats_Stage)
@@ -200,7 +207,8 @@ switch(CardinalFamilyCongrats_Stage)
 			PlayerFullHeal();
 			
 			SetSpawnpoint(obj_Player.x, obj_Player.y);
-			SaveGame();
+			
+			//SaveGame();
 			
 			instance_destroy();
 		

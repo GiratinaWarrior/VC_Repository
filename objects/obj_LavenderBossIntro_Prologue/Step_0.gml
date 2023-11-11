@@ -285,11 +285,15 @@ switch(LavenderBossIntroPrologue_State)
 						with(obj_LavenderBossIntro_Prologue)
 						{
 							LavenderBossIntroPrologue_State = LAVENDERBOSSINTROPROLOGUE_STATE.LAVENDER_DEFEATED_TALK;
+							time_source_destroy(LavenderBossIntroPrologue_TimeSource);
+							LavenderBossIntroPrologue_TimeSource = noone;
 						}
 					}
 					
-					if (LavenderBossIntroPrologue_TimeSource == noone) LavenderBossIntroPrologue_TimeSource = TimeSourceCreateAndStart(100, _func);
-					//other.LavenderBossIntroPrologue_State = LAVENDERBOSSINTROPROLOGUE_STATE.LAVENDER_DEFEATED_TALK;
+					if (other.LavenderBossIntroPrologue_TimeSource == noone) 
+					{	
+						other.LavenderBossIntroPrologue_TimeSource = TimeSourceCreateAndStart(100, _func);
+					}
 				}
 				
 			}
@@ -355,10 +359,13 @@ switch(LavenderBossIntroPrologue_State)
 					var _func = function()
 					{
 						sprite_index = spr_Lavender_Idle;
-						time_source_destroy(LavenderBossIntroPrologue_TimeSource);
-						LavenderBossIntroPrologue_TimeSource = noone;
+						with (obj_LavenderBossIntro_Prologue)
+						{
+							time_source_destroy(LavenderBossIntroPrologue_TimeSource);
+							LavenderBossIntroPrologue_TimeSource = noone;
+						}
 					}
-					if (LavenderBossIntroPrologue_TimeSource == noone) LavenderBossIntroPrologue_TimeSource = TimeSourceCreateAndStart(30, _func);
+					if (other.LavenderBossIntroPrologue_TimeSource == noone) other.LavenderBossIntroPrologue_TimeSource = TimeSourceCreateAndStart(30, _func);
 				}
 				
 				else if (sprite_index == spr_Lavender_Idle)
@@ -368,11 +375,11 @@ switch(LavenderBossIntroPrologue_State)
 						with (obj_LavenderBossIntro_Prologue)
 						{
 							LavenderBossIntroPrologue_State = LAVENDERBOSSINTROPROLOGUE_STATE.LAVENDER_EXIT_TALK;	
+							time_source_destroy(LavenderBossIntroPrologue_TimeSource);
+							LavenderBossIntroPrologue_TimeSource = noone;
 						}
-						time_source_destroy(LavenderBossIntroPrologue_TimeSource);
-						LavenderBossIntroPrologue_TimeSource = noone;
 					}
-					if (LavenderBossIntroPrologue_TimeSource == noone) LavenderBossIntroPrologue_TimeSource = TimeSourceCreateAndStart(60, _func);
+					if (other.LavenderBossIntroPrologue_TimeSource == noone) other.LavenderBossIntroPrologue_TimeSource = TimeSourceCreateAndStart(60, _func);
 				}
 				
 			}
@@ -434,14 +441,19 @@ switch(LavenderBossIntroPrologue_State)
 				else
 				{
 					
-					var _func = function()
-					{
-						sprite_index = spr_Lavender_Walk;
-						time_source_destroy(LavenderBossIntroPrologue_TimeSource);
-						LavenderBossIntroPrologue_TimeSource = noone;
-					}
-					if (LavenderBossIntroPrologue_TimeSource == noone) LavenderBossIntroPrologue_TimeSource = TimeSourceCreateAndStart(30, _func);
-					
+						var _func = function()
+						{
+							sprite_index = spr_Lavender_Walk;
+							with (obj_LavenderBossIntro_Prologue)
+							{
+								time_source_destroy(LavenderBossIntroPrologue_TimeSource);
+								LavenderBossIntroPrologue_TimeSource = noone;
+							}
+						}
+						with (other)
+						{
+							if (LavenderBossIntroPrologue_TimeSource == noone) LavenderBossIntroPrologue_TimeSource = TimeSourceCreateAndStart(30, _func);
+						}
 					if (sprite_index == spr_Lavender_Walk)
 					{
 						x -= 3;

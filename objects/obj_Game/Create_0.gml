@@ -1,6 +1,6 @@
 /// @description Our global variables
 
-show_debug_overlay(true);
+//show_debug_overlay(true);
 
 //---------------------Default Music (Unneeded)--------------//
 
@@ -13,15 +13,6 @@ global.OceanSound = sound_StormySeas;
 
 global.TundraTheme = music_TundraTheme;
 global.TundraSound = sound_Blizzard;
-
-
-//----------------------------Optimiation----------------------//
-
-if !gpu_get_alphatestenable()
-{
-    gpu_set_alphatestenable(true);
-	gpu_set_alphatestref(0);
-}
 
 //------------------------------------Player Variables---------------------------//
 

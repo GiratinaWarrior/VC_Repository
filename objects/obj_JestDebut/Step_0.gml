@@ -15,10 +15,15 @@ switch(JestDebut_Stage)
 			"Huhuhuuu...."
 		]
 	
+		var _voice = 
+		[
+			sound_Jest_Laugh_HAhaha
+		]
+		
 		if !(JestDebut_StartedOffscreenTalk)
 		{
 			CutsceneText(_text, "???", TEXTBOX_POS.BOTTOM, ft_Jest);
-	//		audio_play_sound(sound_JestHuhuhu, 300, false);
+			//obj_Text.TextBox_Voices = _voice;
 			JestDebut_StartedOffscreenTalk = true;
 		}
 		
@@ -59,12 +64,20 @@ switch(JestDebut_Stage)
 			"Mother says it'll take blood and sweat to pass her tests, but look at you now!",
 			"Don't worry Rosey, your brother has got a more exciting trial awaiting you!"
 		]
+		
+		var _voice = 
+		[
+			sound_Jest_Laugh_HAhaha,
+			sound_Jest_Talk_halezaDIZEna,
+			sound_Jest_Talk_haleKIzena
+		]
+		
 	
 		//If Jest hasn't started talking
 		if !(JestDebut_EnterTalkStarted)
 		{
 			CutsceneText(_text, "Jest", TEXTBOX_POS.BOTTOM, ft_Jest);
-			//audio_play_sound(sound_JestLaugh, 300, false);
+			obj_Text.TextBox_Voices = _voice;
 			JestDebut_EnterTalkStarted = true;
 		}
 	
@@ -121,11 +134,18 @@ switch(JestDebut_Stage)
 			"Now then, I have to go make preparations, so I'll see you when you're Cardinal"
 		]
 	
+		var _voice = 
+		[
+			sound_Jest_Talk_Volapachi_Halaka,
+			sound_Jest_Talk_halezaDIZEna,
+			sound_Jest_Talk_jaravajikaraZHAna,
+		]
+	
 		//If Jest hasn't started talking
 		if !(JestDebut_StartedExitTalk)
 		{
 			CutsceneText(_text, "Jest", TEXTBOX_POS.BOTTOM, ft_Jest);
-			//audio_play_sound(sound_JestLaugh, 300, false);
+			obj_Text.TextBox_Voices = _voice;
 			JestDebut_StartedExitTalk = true;
 		}
 	

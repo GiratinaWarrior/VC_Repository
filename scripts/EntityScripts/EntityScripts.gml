@@ -29,7 +29,7 @@ function EntityTextBox()
 		{
 	
 			//If the player talks to the NPC with the talk button
-			if (global.Key_Talk) && (!instance_exists(obj_Text)) {
+			if (obj_Player.hascontrol) && (global.Key_Talk) && (!instance_exists(obj_Text)) {
 		
 				//If a textbox hasn't been created yet
 				if (myTextbox = noone)
@@ -47,6 +47,7 @@ function EntityTextBox()
 					with (myTextbox)
 					{
 						TextBox_Text = other.TextBox_Text;
+						TextBox_Voices = other.TextBox_Voices;
 						if (other.Name != "" && !other.NameInserted)
 						{
 							for (var n = 0; n < array_length(TextBox_Text); n++)

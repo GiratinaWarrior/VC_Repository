@@ -170,6 +170,8 @@
 					Axeye_State = AXEYE_STATE.IDLE;
 				}
 				
+				SpeedTrail();
+				
 			#endregion
 			
 			break;//end Attack Stage

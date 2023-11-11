@@ -91,35 +91,23 @@ switch(CarvalineOrbIntroCutscene_Stage)
 			if (!CarvalineOrbIntroCutscene_Story_SequenceCreated)
 			{
 				//Create the sequence for the story
-				CarvalineOrbIntroCutscene_Story_Sequence = layer_sequence_create(layer_get_id("CarvalineStory"), obj_Camera.x, obj_Camera.y, seq_CarvalineOrbIntro_Story_PartOne); 
-				//Create the story end sequence, keep it paused
-				CarvalineOrbIntroCutscene_StoryEnd_Sequence = layer_sequence_create(layer_get_id("WhiteFlash"), 0, 0, seq_CarvalineOrbIntro_EndStory);
-				layer_sequence_pause(CarvalineOrbIntroCutscene_StoryEnd_Sequence);
+				CarvalineOrbIntroCutscene_Story_Sequence = layer_sequence_create(layer_get_id("CarvalineStory"), obj_Camera.x, obj_Camera.y, seq_CarvalineOrbIntro_Story_Full); 
 				
 				CarvalineOrbIntroCutscene_Story_SequenceCreated = true;
 			}
 			//Move on to the next stage once the sequence is finished
 			else if (layer_sequence_is_finished(CarvalineOrbIntroCutscene_Story_Sequence))
 			{
+				
+				show_debug_message("Story Sequence Finished");
+				
+				//Create the story end sequence, keep it paused
+				CarvalineOrbIntroCutscene_StoryEnd_Sequence = layer_sequence_create(layer_get_id("WhiteFlash"), 0, 0, seq_CarvalineOrbIntro_EndStory);
+				layer_sequence_pause(CarvalineOrbIntroCutscene_StoryEnd_Sequence);
+				layer_sequence_destroy(CarvalineOrbIntroCutscene_Story_Sequence);
 				CarvalineOrbIntroCutscene_Stage = CARVALINEORBINTROCUTSCENE.STORY_END;	
 			}
-			//If the sequence exists and is progressing
-			else
-			{
 			
-				//If text is being displayed, pause the sequence
-				if (instance_exists(obj_Text))
-				{
-					layer_sequence_pause(CarvalineOrbIntroCutscene_Story_Sequence);
-				}
-			
-				//If text is not present, play the sequence
-				else
-				{
-					layer_sequence_play(CarvalineOrbIntroCutscene_Story_Sequence);				
-				}
-			
-			}
 			
 		#endregion
 		
@@ -133,6 +121,8 @@ switch(CarvalineOrbIntroCutscene_Stage)
 			//Create the fade out sequence, delete the previous story sequence
 			if (!CarvalineOrbIntroCutscene_StoryEnd_SequenceCreated)
 			{
+				
+				layer_sequence_destroy(CarvalineorbIntroCutscene_StartStory_Sequence);
 				//Set the players position to the right one
 				with (obj_Player)
 				{
@@ -143,15 +133,16 @@ switch(CarvalineOrbIntroCutscene_Stage)
 				//Create the sprite
 				CarvalineOrbIntroCutscene_LavenderTalk_LavenderSprite = layer_sprite_create(layer_get_id("Lavender"), 1088, 448, spr_Lavender_Idle);			
 				//Create the story end cutscene
-				/////// CarvalineOrbIntroCutscene_StoryEnd_Sequence = layer_sequence_create(layer_get_id("WhiteFlash"), 0, 0, seq_CarvalineOrbIntro_EndStory);
+				SetRoomAudio_Music_Default(blanksound);
 				layer_sequence_play(CarvalineOrbIntroCutscene_StoryEnd_Sequence);
-				layer_sequence_destroy(CarvalineOrbIntroCutscene_Story_Sequence);
-				SetRoomAudio_Music(blanksound);
 				CarvalineOrbIntroCutscene_StoryEnd_SequenceCreated = true;
 			}
 			//Move on to the next sequence after the current one is finished
 			else if (layer_sequence_is_finished(CarvalineOrbIntroCutscene_StoryEnd_Sequence))
 			{
+				
+				
+				layer_sequence_destroy(CarvalineOrbIntroCutscene_StoryEnd_Sequence);
 				CarvalineOrbIntroCutscene_Stage = CARVALINEORBINTROCUTSCENE.LAVENDER_TALK;
 			}
 		
@@ -163,6 +154,11 @@ switch(CarvalineOrbIntroCutscene_Stage)
 	case CARVALINEORBINTROCUTSCENE.LAVENDER_TALK:
 		
 		#region Lavender Talk
+			
+			if (layer_sequence_exists(layer_get_id("WhiteFlash"), CarvalineOrbIntroCutscene_StoryEnd_Sequence))
+			{
+				layer_sequence_destroy(CarvalineOrbIntroCutscene_StoryEnd_Sequence);
+			}
 			
 			SetRoomAudio_Music_Default(music_LavenderEncounterTheme);
 			
@@ -180,7 +176,7 @@ switch(CarvalineOrbIntroCutscene_Stage)
 							"I hav- Oh dear, where are my manners! I forgot to give you your dialogue skipping permissions back!",
 							"There you go, now then, where was I?",
 							"Ah yes.",
-							"I have always dreamed of being a writer, and now that you have my title of Valnyx Shrine Cardinal, I can still reach it.",
+							"I have always dreamed of being a writer, and now that you are almost ready to have my title of Valnyx Shrine Cardinal, I can still reach it.",
 							"I am particularily fond of historical texts, because the way they portray events of the past fascinate me, whether by glorification or erasing certain details.",
 							"The story I just told and have just recently named 'Dawn of Nox', describes the events that led to the society of Nox as we know it, including the origins of vallen.",
 							"Once I start my writing career as an editor, I would take good care to make sure that such absurb stories like that never be permitted into any form of library, that story is an insult to the amazing history of Nox.",
