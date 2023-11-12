@@ -142,7 +142,7 @@ switch(CardinalNoctisCongrats_State)
 	
 		#region Lavender Speech
 			
-			SetRoomAudio_Music_Default(music_Credits);
+			SetRoomAudio_Music_Default(music_StoryCutsceneTheme);
 			
 			var _text = 
 			[

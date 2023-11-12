@@ -1,11 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-layer_create(layer_get_depth("VoizatiaBossIntroCutscene_Voizatia"), "RougeSpear"); 
-layer_create(layer_get_depth("BackFlowers") + 10, "SinEruption");
+RougeSpear_Layer = layer_create(layer_get_depth("VoizatiaBossIntroCutscene_Voizatia"), "RougeSpear"); 
+SinEruption_Layer =  layer_create(layer_get_depth("BackFlowers") + 10, "SinEruption");
 
 VoizatiaBossPrologue_CurrentState = VOIZATIABOSSPROLOGUE_STATE.IDLE;
-VoizatiaBossPrologue_NextState = VOIZATIABOSSPROLOGUE_STATE.ROUGE_SPEAR;
+VoizatiaBossPrologue_NextState = VOIZATIABOSSPROLOGUE_STATE.SIN_ERUPTION;
 
 enum VOIZATIABOSSPROLOGUE_STATE
 {
@@ -61,7 +61,7 @@ VoizatiaBossPrologue_SinEruption_AttackTimer = 0;
 VoizatiaBossPrologue_SinEruption_AttackTimerLimit = 30;
 
 //how long it takes the Sin Eruption to appear after warning
-VoizatiaBossPrologue_SinEruption_ConjureTimer = VoizatiaBossPrologue_SinEruption_AttackTimerLimit + 40;
+VoizatiaBossPrologue_SinEruption_ConjureTimer = VoizatiaBossPrologue_SinEruption_AttackTimerLimit - 10;
 VoizatiaBossPrologue_SinEruption_ConjureParticle = noone;
 
 //The number of Sin Eruptions to use at a time
@@ -70,16 +70,13 @@ VoizatiaBossPrologue_SinEruption_NumOfAttack = 4;
 VoizatiaBossPrologue_SinEruption_X = 0;
 VoizatiaBossPrologue_SinEruption_Y = 352;
 
-var _createSE = function(_startX, _startY)
+VoizatiaBossPrologue_SinEruptionCreateFunction = function()
 {
-						
 	audio_play_sound(sound_SinEruption, 90, false, 0.5);
 						
-	instance_create_layer(_startX, _startY, "SinEruption", obj_SinEruption);
+	instance_create_layer(VoizatiaBossPrologue_SinEruption_X, VoizatiaBossPrologue_SinEruption_Y, SinEruption_Layer, obj_SinEruption);
 }
 
 VoizatiaBossPrologue_SinEruption_TimeSource 
-= TimeSourceCreate(VoizatiaBossPrologue_SinEruption_ConjureTimer, _createSE, [VoizatiaBossPrologue_SinEruption_X, VoizatiaBossPrologue_SinEruption_Y], -1);
-
-
+= TimeSourceCreate(VoizatiaBossPrologue_SinEruption_ConjureTimer, VoizatiaBossPrologue_SinEruptionCreateFunction, [], -1);
 

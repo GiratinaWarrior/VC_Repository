@@ -21,11 +21,11 @@
 	if (instance_exists(obj_Player))
 	{
 		
-		if abs(x - obj_Player.x) < 550 && abs(y - obj_Player.y) < 64
+		if abs(x - obj_Player.x) < 450 && abs(y - obj_Player.y) < 64
 		{
 			PlayerInRange = true;
 		}
-		else if abs(x - obj_Player.x) > 650 || abs(y - obj_Player.y) >= 64
+		else if abs(x - obj_Player.x) > 550 || abs(y - obj_Player.y) >= 64
 		{
 			PlayerInRange = false;
 		}
@@ -87,7 +87,6 @@ switch (Chakrolem_State)
 		{
 			audio_play_sound(sound_EnemyAlert, 100, false);
 			Chakrolem_SurpriseSeq = layer_sequence_create(layer, x, y - 50, seq_ExclamationMark_Fast);
-			layer_sequence_speedscale(Chakrolem_SurpriseSeq, 1.5);
 		}
 		else if (layer_sequence_is_finished(Chakrolem_SurpriseSeq))
 		{

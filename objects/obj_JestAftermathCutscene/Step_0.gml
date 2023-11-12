@@ -34,7 +34,14 @@ switch (JestAftermathCutscene_State)
 			}
 			else if !(instance_exists(obj_Text))
 			{
-				time_source_start(JestAftermathCutscene_JestTalkSelf_TimeSource);
+				var _func = function()
+				{
+					JestAftermathCutscene_State = JESTAFTERMATHCUTSCENE.JEST_TURN_ROSE;
+					Jest_NoctisCty.image_xscale = -1;
+					time_source_destroy(JestAftermathCutscene_TimeSource);
+					JestAftermathCutscene_TimeSource = noone;
+				}
+				if (JestAftermathCutscene_TimeSource == noone) JestAftermathCutscene_TimeSource = TimeSourceCreateAndStart(50, _func);
 			}
 		
 		#endregion
@@ -46,25 +53,22 @@ switch (JestAftermathCutscene_State)
 		
 		#region Jest Turn Rose
 			
-			var _func = function()
+			if !(JestAftermathCutscene_JestTurnRose_SequenceCreated)
 			{
-				if !(JestAftermathCutscene_JestTurnRose_SequenceCreated)
-				{
-					JestAftermathCutscene_JestTurnRose_Sequence = layer_sequence_create(layer, Jest_NoctisCty.x, Jest_NoctisCty.y - sprite_yoffset - 30, seq_ExclamationMark);
-					JestAftermathCutscene_JestTurnRose_SequenceCreated = true;
-				}
-				time_source_destroy(JestAftermathCutscene_TimeSource);
-				JestAftermathCutscene_TimeSource = noone;
+				JestAftermathCutscene_JestTurnRose_Sequence = layer_sequence_create(layer, Jest_NoctisCty.x, Jest_NoctisCty.y - sprite_yoffset - 30, seq_ExclamationMark);
+				JestAftermathCutscene_JestTurnRose_SequenceCreated = true;
 			}
 			
-			if (JestAftermathCutscene_TimeSource == noone) JestAftermathCutscene_TimeSource = TimeSourceCreateAndStart(20, _func);
-			
-			if (JestAftermathCutscene_JestTurnRose_SequenceCreated)
+			else if (layer_sequence_is_finished(JestAftermathCutscene_JestTurnRose_Sequence))
 			{
-				if (layer_sequence_is_finished(JestAftermathCutscene_JestTurnRose_Sequence))
+				var _func = function()
 				{
 					JestAftermathCutscene_State = JESTAFTERMATHCUTSCENE.JEST_TALK_FIRST;
+					time_source_destroy(JestAftermathCutscene_TimeSource);
+					JestAftermathCutscene_TimeSource = noone;
 				}
+				if (JestAftermathCutscene_TimeSource == noone) JestAftermathCutscene_TimeSource = TimeSourceCreateAndStart(50, _func);
+				
 			}
 			
 		
@@ -76,8 +80,6 @@ switch (JestAftermathCutscene_State)
 	case JESTAFTERMATHCUTSCENE.JEST_TALK_FIRST:
 			
 		#region Jest Talk First
-		
-			//SetRoomAudio_Music_Default(music_TitleTheme_Peaceful);
 		
 			var _text = 
 			[	
@@ -144,7 +146,8 @@ switch (JestAftermathCutscene_State)
 				"I guess not huh",
 				"Then we truly have no choice but to go along with his stage play",
 				"...",
-				"Don't worry Rosey-darling, you're the protagonist of this play, and the heroic protagonist always defeats the villain in the end",
+				"Don't worry Rosey-darling",
+				"You're the protagonist of this play, and the heroic protagonist always defeats the villain in the end",
 				"Now as for how this play will play out"
 			];
 			
@@ -159,6 +162,7 @@ switch (JestAftermathCutscene_State)
 				blanksound,
 				sound_Jest_Laugh_Hah,
 				sound_Jest_Talk_haleKIzena,
+				sound_Jest_Talk_halezaDIZEna,
 			]
 		
 			if !(JestAftermathCutscene_JestUnderstandSituation_TalkStarted)
@@ -169,7 +173,23 @@ switch (JestAftermathCutscene_State)
 			}
 			else if !(instance_exists(obj_Text))
 			{
-				time_source_start(JestAftermathCutscene_JestUnderstandSituation_TimeSource);
+				var _jestUS = function()
+				{
+					Jest_NoctisCty.image_xscale = 1;	
+					time_source_destroy(JestAftermathCutscene_TimeSource);
+					JestAftermathCutscene_TimeSource = noone;
+					
+					var _jestUS2 = function()
+					{
+						JestAftermathCutscene_State = JESTAFTERMATHCUTSCENE.JEST_EXPLAIN_FOREST;
+						time_source_destroy(JestAftermathCutscene_TimeSource);
+						JestAftermathCutscene_TimeSource = noone;
+					}
+					
+					if (JestAftermathCutscene_TimeSource == noone)JestAftermathCutscene_TimeSource = TimeSourceCreateAndStart(50, _jestUS2);
+					
+				}
+				if (JestAftermathCutscene_TimeSource == noone) JestAftermathCutscene_TimeSource = TimeSourceCreateAndStart(50, _jestUS);
 			}
 			
 		#endregion
@@ -231,7 +251,7 @@ switch (JestAftermathCutscene_State)
 		
 		#region Jest Good Luck
 			
-			SetRoomAudio_Music_Default(music_TitleTheme_Peaceful);
+			SetRoomAudio_Music_Default(music_StoryCutsceneTheme);
 			
 			var _text = 
 			[
@@ -283,7 +303,7 @@ switch (JestAftermathCutscene_State)
 			
 			global.JestTalkedTo_PrologueChapterAftermath = true;
 			
-			SetRoomAudio_Music_Default(music_NoctisCityTheme);
+			//SetRoomAudio_Music_Default(music_NoctisCityTheme);
 			
 			SetSpawnpoint(1776, 1728);
 			

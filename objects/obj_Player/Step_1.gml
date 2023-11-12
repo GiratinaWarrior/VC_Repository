@@ -14,6 +14,7 @@ if (global.Health <= 0)
 	{
 		with(instance_create_depth(x, y, depth - 1, obj_PlayerDefeated))
 		{
+			
 			image_xscale = other.image_xscale;
 		}
 		instance_destroy();

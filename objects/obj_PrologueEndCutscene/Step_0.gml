@@ -34,7 +34,16 @@ switch (PrologueEndCutscene_Stage)
 			{
 				PrologueEndCutscene_VoizatiaIdle = layer_sequence_create(layer, x, y, seq_PrologueEndCutscene_VoizatiaIdle);
 				layer_sequence_destroy(PrologueEndCutscene_VoizatiaEnter_Sequence);
-				PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.VOIZATIA_ENTER_TALK;
+				var _func = function()
+				{
+					PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.VOIZATIA_ENTER_TALK;
+					time_source_destroy(PrologueEndCutscene_TimeSource);
+					PrologueEndCutscene_TimeSource = noone;
+				}
+				if (PrologueEndCutscene_TimeSource == noone)
+				{
+					PrologueEndCutscene_TimeSource = TimeSourceCreateAndStart(30, _func);
+				}
 			}
 		
 		#endregion
@@ -62,9 +71,10 @@ switch (PrologueEndCutscene_Stage)
 				PrologueEndCutscene_VoizatiaEnterTalk_Talk = CutsceneText(_text, "Voizatia", p, ft_Voizatia);
 				PrologueEndCutscene_VoizatiaEnterTalk_TalkStarted = true;
 			}
+			
 			else if !(instance_exists(obj_Text))
 			{
-				time_source_start(PrologueEndCutscene_VoizatiaEnterTalk_TimeSource);
+				if (PrologueEndCutscene_TimeSource == noone) PrologueEndCutscene_TimeSource = TimeSourceCreateAndStart(60, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.VOIZATIA_NOTICE_MALVALIA; time_source_destroy(PrologueEndCutscene_TimeSource); PrologueEndCutscene_TimeSource = noone;});
 			}
 		
 		#endregion
@@ -137,6 +147,7 @@ switch (PrologueEndCutscene_Stage)
 				PrologueEndCutscene_MalvaliaEnterTalk_Talk = CutsceneText(_text, "Malvalia", p, ft_Malvalia);
 				PrologueEndCutscene_MalvaliaEnterTalk_TalkStarted = true;
 			}
+			
 			else if !(instance_exists(obj_Text))
 			{
 				if (PrologueEndCutscene_TimeSource == noone) PrologueEndCutscene_TimeSource = TimeSourceCreateAndStart(20, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.VOIZATIA_CALM_MALVALIA; time_source_destroy(PrologueEndCutscene_TimeSource); PrologueEndCutscene_TimeSource = noone;});
@@ -199,7 +210,7 @@ switch (PrologueEndCutscene_Stage)
 			}
 			else if !(instance_exists(obj_Text))
 			{
-				time_source_start(PrologueEndCutscene_MalvaliaExitTalk_TimeSource);
+				if (PrologueEndCutscene_TimeSource == noone) PrologueEndCutscene_TimeSource = TimeSourceCreateAndStart(100, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.MALVALIA_QUESTION; time_source_destroy(PrologueEndCutscene_TimeSource); PrologueEndCutscene_TimeSource = noone;});
 			}
 		
 		#endregion
@@ -216,10 +227,16 @@ switch (PrologueEndCutscene_Stage)
 			var _text = 
 			[
 				"Voizatia.",
+				"I've been thinking about this for a while...",
+				"But why was getting those Carvaline Orbs so easy?",
+				"I mean, we busted through the entrance just when it was unguarded, and took the path that went straight there",
+				"Isn't that all  too convenient?"
+				/*
 				"Our plot to attack the shrine, didn't it go a little too well?",
 				"I mean, the path you took led us straight to the Orbs.",
 				"And we just happened to do it on the day that it was practically begging to be attacked.",
 				"Isn't that all just a bit too convenient?"
+				*/
 			];
 			
 			if !(PrologueEndCutscene_MalvaliaQuestion_TalkStarted)
@@ -230,7 +247,7 @@ switch (PrologueEndCutscene_Stage)
 			
 			else if !(instance_exists(obj_Text))
 			{
-				time_source_start(PrologueEndCutscene_MalvaliaQuestion_TimeSource);
+				if (PrologueEndCutscene_TimeSource == noone) PrologueEndCutscene_TimeSource = TimeSourceCreateAndStart(80, function() {PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.VOIZATIA_TALK_LAVENDER; time_source_destroy(PrologueEndCutscene_TimeSource); PrologueEndCutscene_TimeSource = noone;});
 			}
 			
 		#endregion
@@ -244,9 +261,10 @@ switch (PrologueEndCutscene_Stage)
 			
 			var _text = 
 			[
-				"'Too convenient' huh? Your brain does a real 180 when you're calm, you know that?",
-				"Spot on. When I arrived on this planet, I found myself something of an ally.",
-				"She has the Carvaline Orbs that I want, and I have knowledge of their origins that she wants. A natural alliance.",
+				"'Too convenient' huh? You're a lot smarter than you act, you know that?",
+				"Spot on",
+				"His Majesty told me that I would find an ally on this planet, and as always, His Majesty was correct."
+				"She has the Carvaline Orbs that I want, and I have knowledge of their origins that she wants. A fated alliance.",
 				"Now then, since we're gonna be living here for a while, you might as well get to know her.",
 				"Come out an introduce yourself."
 			];
@@ -279,7 +297,7 @@ switch (PrologueEndCutscene_Stage)
 			{
 				PrologueEndCutscene_LavenderIdle = layer_sequence_create(layer, x, y, seq_PrologueEndCutscene_LavenderIdle);
 				layer_sequence_destroy(PrologueEndCutscene_LavenderEnterSequence);
-				time_source_start(PrologueEndCutscene_LavenderEnter_TimeSource);
+				if (PrologueEndCutscene_TimeSource == noone) PrologueEndCutscene_TimeSource = TimeSourceCreateAndStart(120, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.CUTSCENE_END; time_source_destroy(PrologueEndCutscene_TimeSource); PrologueEndCutscene_TimeSource = noone;});
 			}
 		
 		#endregion

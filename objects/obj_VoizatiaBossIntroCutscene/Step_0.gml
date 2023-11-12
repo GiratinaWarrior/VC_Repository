@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-var _skippable = false;
+var _skippable = true;
 
 var _skipButton = global.Key_Skip;
 
@@ -346,6 +346,8 @@ switch(VoizatiaBossIntro_State)
 			obj_Player.hascontrol = true;
 			obj_Player.Player_ForcedToLose = true;
 			
+			VoizatiaBossIntro_TimeSource = noone;
+			
 			VoizatiaBossIntro_State = VOIZATIABOSSINTRO.IN_BATTLE;
 		
 		#endregion
@@ -628,7 +630,7 @@ switch(VoizatiaBossIntro_State)
 		
 			obj_Player.hascontrol = true;
 		
-			SetRoomAudio_Music_Default(music_ShrineMemoryTheme);
+			//SetRoomAudio_Music_Default(music_ShrineMemoryTheme);
 		
 			global.VoizatiaLavenderAftermath_Cutscene_Seen = true;
 		

@@ -133,7 +133,7 @@ function VoizatiaBossPrologue_SinEruption()
 					
 				VoizatiaBossPrologue_SinEruption_ConjureParticle = CreateParticleSystem(ps_SinEruptionWarning, "SinEruption", VoizatiaBossPrologue_SinEruption_X, 0);
 				
-				time_source_start(VoizatiaBossPrologue_SinEruption_TimeSource);
+				time_source_start(VoizatiaBossPrologue_SinEruption_TimeSource)
 				
 				//VoizatiaBossPrologue_SinEruption_NumOfAttack++;
 				VoizatiaBossPrologue_SinEruption_AttackTimer = 0;

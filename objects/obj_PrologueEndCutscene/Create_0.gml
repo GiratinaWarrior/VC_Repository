@@ -28,6 +28,8 @@ PrologueEndCutscene_VoizatiaIdle = noone;
 PrologueEndCutscene_MalvaliaIdle = noone;
 PrologueEndCutscene_LavenderIdle = noone;
 
+PrologueEndCutscene_TimeSource = noone;
+
 //--------------Voizatia Section------------------//
 
 //Off Stage
@@ -63,7 +65,7 @@ PrologueEndCutscene_MalvaliaEnter_SequenceCreated = false;
 PrologueEndCutscene_MalvaliaEnterTalk_TalkStarted = false;
 PrologueEndCutscene_MalvaliaEnterTalk_Talk = noone;
 
-PrologueEndCutscene_MalvaliaEnterTalk_TimeSource = TimeSourceCreate(20, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.VOIZATIA_CALM_MALVALIA; time_source_destroy(PrologueEndCutscene_MalvaliaEnterTalk_TimeSource); PrologueEndCutscene_MalvaliaEnterTalk_TimeSource = noone;});
+//PrologueEndCutscene_MalvaliaEnterTalk_TimeSource = TimeSourceCreate(20, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.VOIZATIA_CALM_MALVALIA; time_source_destroy(PrologueEndCutscene_MalvaliaEnterTalk_TimeSource); PrologueEndCutscene_MalvaliaEnterTalk_TimeSource = noone;});
 
 //Voizatia Calm Malvalia Stage
 PrologueEndCutscene_VoizatiaCalmMalvalia_TalkStarted = false;
@@ -73,7 +75,7 @@ PrologueEndCutscene_VoizatiaCalmMalvalia_Talk = noone;
 PrologueEndCutscene_MalvaliaExitTalk_TalkStarted = false;
 PrologueEndCutscene_MalvaliaExitTalk_Talk = noone;
 
-PrologueEndCutscene_MalvaliaExitTalk_TimeSource = TimeSourceCreate(100, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.MALVALIA_QUESTION; time_source_destroy(PrologueEndCutscene_MalvaliaExitTalk_TimeSource); PrologueEndCutscene_MalvaliaExitTalk_TimeSource = noone;});
+//PrologueEndCutscene_MalvaliaExitTalk_TimeSource = TimeSourceCreate(100, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.MALVALIA_QUESTION; time_source_destroy(PrologueEndCutscene_MalvaliaExitTalk_TimeSource); PrologueEndCutscene_MalvaliaExitTalk_TimeSource = noone;});
 
 //Malvalia Question Stage
 PrologueEndCutscene_MalvaliaQuestion_TalkStarted = false;

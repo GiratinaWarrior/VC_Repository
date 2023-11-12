@@ -48,8 +48,11 @@ function MalvaliaBossBattle_BlackGeyser(_x, _y)
 	if (room == Room_DarkShrineMalvaliaArena && instance_exists(obj_Malvalia_FirstFight))
 	{
 		if (obj_Malvalia_FirstFight.Health > 0) instance_create_layer(_x, room_height, "Black_Geyser", obj_BlackGeyser);
-		time_source_destroy(Malvalia_FirstFight_BlackGeyser_TimeSource);
-		Malvalia_FirstFight_BlackGeyser_TimeSource = noone;
+		with (obj_Malvalia_FirstFight)
+		{
+			time_source_destroy(Malvalia_FirstFight_BlackGeyser_TimeSource);
+			Malvalia_FirstFight_BlackGeyser_TimeSource = noone;
+		}
 	}
 	//show_debug_message("GEYSER");
 }
