@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-var _skippable = true;
+var _skippable = false;
 
 var _skipButton = global.Key_Skip;
 
@@ -142,7 +142,7 @@ switch(VoizatiaBossIntro_State)
 				"You're different from these people aren't you? I can tell. There's something about you, something familiar.",
 				"I could tell the moment I saw you, and the fact that you're here means you beat Malvalia, as expected.",
 				"I hope you weren't to rough with her, she may be rude, reckless, and sassy, but she's still my little sister.",
-				"Though I guess I can't really ask that since I roughed up your 'mother'."
+				"Though I guess I can't really ask that since I roughed up your...mother."
 			];
 			
 			if !(VoizatiaBossIntro_VoizatiaTalkRose_TalkStarted)
@@ -176,8 +176,10 @@ switch(VoizatiaBossIntro_State)
 			[
 				"Say, winning this way is a bit anti-climactic don't ya think?",
 				"One thing I love more than anything is a good old battle to the death.",
-				"The fragility of life shows itself along with the blood, the power of vallen, and the story that it tells.",
-				"Everything about is wonderful, and it's something that our people instinctively desire.",
+				"The thrill of not knowing whether you'll die or not. ", 
+				"The sight of blood spilling and vallen spells being launched",
+				"The relief of a well-earned victory",
+				"Everything about is wonderful, and it's something we instinctively desire.",
 				"All I'm saying is that those Carvaline Orbs only feel earned after a strong fight, which I didn't get.",
 				"So here's the deal...",
 			];
@@ -525,6 +527,7 @@ switch(VoizatiaBossIntro_State)
 			
 			var _text =
 			[
+				"Oh, and I'll be taking this woman with me, can't have you running away can I?",
 				"I sure can't wait for the next time we meet.",
 				"We're going to have one hell of a time",
 			]

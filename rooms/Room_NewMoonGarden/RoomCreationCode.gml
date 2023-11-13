@@ -1,4 +1,4 @@
-SetRoomAudio_Music_Default(music_ShrineMemoryTheme);
+SetRoomAudio_Music_Default(blanksound);
 
 if (global.Lavender_Defeated_Prologue == false)
 {

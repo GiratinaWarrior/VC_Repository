@@ -41,15 +41,7 @@ function CutsceneText(_text = [""], _name = "" , _pos = TEXTBOX_POS.BOTTOM, _fon
 /// @param text
 function Text(_text)
 {
-	
 	TextBox_Text[TextBox_PageNumber] = _text;
 	TextBox_PageNumber++;
 
-}
-
-function Text_LineBreak()
-{	
-	TextBox_LineBreak_Pos[0, TextBox_PageNumber] = 999;
-	TextBox_LineBreak_Num[TextBox_PageNumber] = 0;
-	TextBox_LineBreak_Offset[TextBox_PageNumber] = 0;
 }

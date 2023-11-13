@@ -20,6 +20,16 @@ ScreenShake_Magnitude = 0;
 ScreenShake_Remain = ScreenShake_Magnitude;
 ScreenShake_Buffer = 0;
 
+Camera_PlayerFollowXTimer = 0;
+Camera_PlayerFollowXTimerLimit = 40;
+
+Camera_PlayerFollowYTimer = 0;
+Camera_PlayerFollowYTimerLimit = 1;
+
+Camera_PlayerAheadDist = 0;
+
+Camera_PlayerBelowDist = 0;
+
 #region Layers for Parallax
 
 NoxCityForeLayer = layer_get_id("ForeCity");

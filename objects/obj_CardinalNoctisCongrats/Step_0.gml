@@ -298,7 +298,7 @@ switch(CardinalNoctisCongrats_State)
 			[
 				"PEOPLE OF NOX!",
 				"Calm yourselves this instant, panic breeds chaos.",
-				"There is no need to fear, a formal Cardinal such as I will not permit any injuries for anyone",
+				"There is no need to fear, a former Cardinal such as I will not permit any injuries for anyone",
 				"Nasi, Nadiolo, Fanna, Grela, Raijay!", 
 				"You 5 will retreat underground to safety, I cannot have you all in danger.",
 				"Jest! You will be in charge of leading them underground and protecting them from external threats."

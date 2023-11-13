@@ -16,6 +16,4 @@ ySpeed = 0;
 
 PlayerHealed = false;
 
-KilledBySword = false;
-
 //hitBySeleneSword = ds_list_create();

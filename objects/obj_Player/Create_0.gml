@@ -9,6 +9,8 @@ Player_ForcedToLose = false;
 	//The speeds and gravity
 	xSpeed = 0;
 	ySpeed = 0;
+	
+	ySpeed_Max = 15;
 
 	//The gravity variables
 	Gravity_Jump = 0.3;

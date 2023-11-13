@@ -11,4 +11,7 @@ var _recoverfunc = function()
 }
 
 
-Enemy_Stunned(_hurtfunc, _recoverfunc);
+if !(Attacked)
+{
+	Enemy_Stunned(_hurtfunc, _recoverfunc);
+}

@@ -54,7 +54,7 @@ MenuOptions_2DArray =
 	["Continue", TitleMenu_Continue],
 	["New Game", TitleMenu_NewGame],
 	["Quit", TitleMenu_Quit],
-	["TESTING_ONLY", TitleMenu_Testing]
+	//"TESTING", TitleMenu_Testing]
 ]
 
 Menu(x, y, MenuOptions_2DArray, -1, ft_TitleScreen);

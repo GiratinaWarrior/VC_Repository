@@ -1,5 +1,8 @@
 /// @description Interact with the menu
 
+
+Menu_StartAlpha = min(1, Menu_StartAlpha + 0.01);
+
 if !(Menu_Chosen)
 {
 	Menu_Hover += keyboard_check_pressed(vk_down) - keyboard_check_pressed(vk_up);
@@ -14,7 +17,7 @@ if (Menu_Hover < 0)
 	Menu_Hover = 0;
 }
 
-if (global.Key_Talk && !global.MidTransition)
+if (global.Key_Talk && !global.MidTransition) && (Menu_StartAlpha == 1)
 {
 	Menu_Chosen = true;
 	if (array_length(Menu_Options[Menu_Hover]) == 2)

@@ -2,6 +2,8 @@
 
 HitSomething = true;
 
+//---------------Vallen Restore----------------//
+
 //Access the enemy
 with (other)
 {
@@ -20,11 +22,12 @@ with (other)
 	}
 }
 
+//-----------------Bounce Off Enemy----------------//
+
 if !(other.Enemy_Invincible)
 {
 	with(obj_Player)
 	{
-	
 	
 		//If the player attacked down, do a pogo jump
 		if (sprite_index == spr_PlayerAirJumpDown_SeleneSword)
@@ -44,5 +47,5 @@ if !(other.Enemy_Invincible)
 //If the attack can't phase through enemies, destroy itself
 if (!CanPhase_Enemy)
 {
-	alarm[0] = 3;
+//	alarm[0] = 3;
 }//end if can't phase through enemy

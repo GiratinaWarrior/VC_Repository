@@ -32,11 +32,13 @@ function Menu(_x, _y, _options, _description = -1, _font = ft_TitleScreen, _box 
 		
 		Menu_ChosenTextColor = _textcolorchosen;
 		
+		Menu_StartAlpha = -1;
+		
 		//Set the options and description
 		Menu_Options = _options;	
 		Menu_Desc = _description;
 		Menu_NumOfOptions = array_length(_options);
-		Menu_HoverMarker = "> ";
+		Menu_HoverMarker = "- ";
 		
 		//Set the font and text margin
 		Menu_Margin = TEXT_MARGIN;

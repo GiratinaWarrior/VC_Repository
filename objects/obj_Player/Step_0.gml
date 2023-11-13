@@ -9,6 +9,9 @@ global.Vallen = round(global.Vallen);
 x = round(x);
 y = round(y);
 
+ySpeed = clamp(ySpeed, -ySpeed_Max, ySpeed_Max);
+
+
 if (Invincible == true) {
 	image_alpha = Wave(0, 1, 0.1, 1);
 }
@@ -288,7 +291,13 @@ switch(PlayerState)
 				{
 					//SpeedTrail(c_ltgrey);
 					ParticleTrail(spr_StarJumpParticles);
+					image_alpha = 0;
 				}
+				else if (global.AbilityUnlocked_StarJump)
+				{
+					image_alpha = 1;
+				}
+				
 				
 				if (global.AbilityUnlocked_ClingToHope) && (ClingToHope_Usable != 0)
 				{
@@ -309,6 +318,8 @@ switch(PlayerState)
 			
 				#region Swimming State
 			
+				time_source_pause(RunDustEffect_TimeSource);
+				
 				Gravity = Gravity_Swim;
 				
 				image_speed = 1;

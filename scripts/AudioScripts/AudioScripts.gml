@@ -40,12 +40,23 @@ function SetRoomAudio_Music_Default(_music = blanksound){
 	switch(_music)
 	{
 		
-		//If the title theme is playing
-		case music_TitleTheme_Peaceful:
+		//If the title theme from insurgence is playing
+		case music_TitleTheme_Insurgence:
 		
 			with (obj_PlayBGM)
 			{
 				BGM_Volume = 0.5;
+				BGM_GainRate = 0;
+			}
+		
+			break;
+			
+		//If the title theme from rejuvenation is playing
+		case music_TitleTheme_Insurgence:
+		
+			with (obj_PlayBGM)
+			{
+				BGM_Volume = 0.4;
 				BGM_GainRate = 0;
 			}
 		
@@ -67,7 +78,7 @@ function SetRoomAudio_Music_Default(_music = blanksound){
 			with (obj_PlayBGM)
 			{
 				BGM_Volume = 0.6;
-				BGM_GainRate = 50;
+				BGM_GainRate = 200;
 			}
 		
 			break;
@@ -169,7 +180,7 @@ function SetRoomAudio_Music_Default(_music = blanksound){
 			with (obj_PlayBGM)
 			{
 				BGM_Volume = 0.3;
-				BGM_GainRate = 0;
+				BGM_GainRate = 100;
 			}
 		
 			break;

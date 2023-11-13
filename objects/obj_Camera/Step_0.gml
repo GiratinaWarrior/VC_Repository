@@ -11,9 +11,78 @@ if (instance_exists(follow))
 //Update destination 
 if (instance_exists(follow)) 
 {
-	xTo = follow.x;
-	yTo = follow.y;
-}
+
+	if (follow == obj_Player)
+	{
+		//move the camera infront of the player
+	
+		if (follow.xSpeed == 0)
+		{
+			Camera_PlayerFollowXTimer = 0;
+			Camera_PlayerAheadDist = 0;
+		}
+	
+		if (Camera_PlayerFollowXTimer++ > Camera_PlayerFollowXTimerLimit) && (follow.hascontrol)
+		{
+			Camera_PlayerAheadDist += 5;
+			xTo = follow.x + (sign(follow.xSpeed) * min(300, Camera_PlayerAheadDist));
+		}
+		else
+		{
+			xTo = follow.x;
+		}
+		
+		
+		
+		/*
+		if (follow.ySpeed < 1)
+		{
+			Camera_PlayerFollowYTimer = 0;
+		}
+	
+		if (Camera_PlayerFollowYTimer++ >= Camera_PlayerFollowYTimerLimit) && (follow.hascontrol)
+		{
+			Camera_PlayerBelowDist += 4;
+			yTo = follow.y + (sign(follow.ySpeed) * min(200, Camera_PlayerBelowDist));
+		}
+		else
+		{
+			Camera_PlayerBelowDist = 0;
+			yTo = follow.y;
+		}
+		*/
+		
+		if (follow.ySpeed <= 0.4)
+		{
+			Camera_PlayerFollowYTimer = 0;
+		//	Camera_PlayerBelowDist = 0;
+		}
+	
+		if (Camera_PlayerFollowYTimer++ > Camera_PlayerFollowYTimerLimit) && (follow.hascontrol)
+		{
+			Camera_PlayerBelowDist += 10;
+			yTo = follow.y + (sign(follow.ySpeed) * min(400, Camera_PlayerBelowDist));
+		}
+		else
+		{
+			yTo = follow.y;
+			Camera_PlayerBelowDist = 0;
+		}
+		
+		/*
+		if (follow.ySpeed > 3)
+		{
+			yTo = follow.y + (sign(follow.ySpeed) * 200);
+		}
+		else
+		{
+			yTo = follow.y;
+		}
+		*/
+		
+	}//end follow is player
+	
+}//end follow exists
 
 //Update object position
 x += (xTo - x)/25;

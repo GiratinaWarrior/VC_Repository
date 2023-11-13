@@ -4,7 +4,7 @@ y += 4;
 
 obj_Player.hascontrol = false;
 
-CardinalFamilyCongrats_skippable = true;
+CardinalFamilyCongrats_skippable = false;
 
 CardinalFamilyCongrats_skipFunc = function()
 {

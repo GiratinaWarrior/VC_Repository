@@ -118,7 +118,7 @@ switch(LavenderBossIntroPrologue_State)
 			[
 				"Hahaha, did you like my little poem, Rose-darling?",
 				"I think it is quite beautiful, if I do say so myself.",
-				"I am not the greatest at getting to the point, so I will be doing so 'show do not tell'"
+				"I am not the greatest at getting to the point, so I will be doing some 'show do not tell'"
 			];
 			
 			if !(LavenderBossIntroPrologue_LavenderExplain_TalkStarted)

@@ -5,7 +5,7 @@ RougeSpear_Layer = layer_create(layer_get_depth("VoizatiaBossIntroCutscene_Voiza
 SinEruption_Layer =  layer_create(layer_get_depth("BackFlowers") + 10, "SinEruption");
 
 VoizatiaBossPrologue_CurrentState = VOIZATIABOSSPROLOGUE_STATE.IDLE;
-VoizatiaBossPrologue_NextState = VOIZATIABOSSPROLOGUE_STATE.SIN_ERUPTION;
+VoizatiaBossPrologue_NextState = VOIZATIABOSSPROLOGUE_STATE.ROUGE_SPEAR;
 
 enum VOIZATIABOSSPROLOGUE_STATE
 {

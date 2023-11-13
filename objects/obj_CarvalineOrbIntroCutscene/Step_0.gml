@@ -260,10 +260,8 @@ switch(CarvalineOrbIntroCutscene_Stage)
 							"They did not know what they were, where they came from, who made them, and nor for what purpose",
 							"All that is certain is that it is the Cardinals duty to guard these things.",
 							"The power of the orbs can also be felt throughout Valnyx Shrine, as if its attempting to impose its will onto us.",
-							"A scary thought isn't it?",
-							"That your thoughts may not be your own",
-							"I believe there is nothing more horrifying in this world than that.",
-							"Yes...nothing else..."
+							"Strange is it not? Why is it that objects of such vast potential are not once mentioned in this story?",
+							"(...Despite being the cause of the sisters power and tyranny...)"
 						];
 						
 						//Have Lavender start talking
@@ -315,8 +313,8 @@ switch(CarvalineOrbIntroCutscene_Stage)
 					
 						var _text =
 	 					[
-							"Since over 18 years ago, I have spent my time uncovering the true ending, I am no fan of happy endings afterall", 
-							"I prefer anything between bittersweet to tragic",
+							"Since over 18 years ago, I have spent my time uncovering the true ending, I am no fan of happy endings afterall.", 
+							"I prefer anything between bittersweet to tragic.",
 							"History truly is fascinating is it not?",
 							"The idea of discovering the past myself excited me, it made me feel like a child exploring their backyard."
 						];

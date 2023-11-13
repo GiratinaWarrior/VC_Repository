@@ -11,5 +11,12 @@ var _hurtfunc = function()
 	
 }
 
+var _recoverfunc = function()
+{
+	Attacked = false;
+}
 
-Enemy_Stunned(_hurtfunc);
+if !(Attacked)
+{
+	Enemy_Stunned(_hurtfunc, _recoverfunc);
+}

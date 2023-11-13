@@ -263,7 +263,7 @@ switch (PrologueEndCutscene_Stage)
 			[
 				"'Too convenient' huh? You're a lot smarter than you act, you know that?",
 				"Spot on",
-				"His Majesty told me that I would find an ally on this planet, and as always, His Majesty was correct."
+				"His Majesty told me that I would find an ally on this planet, and as always, His Majesty was correct.",
 				"She has the Carvaline Orbs that I want, and I have knowledge of their origins that she wants. A fated alliance.",
 				"Now then, since we're gonna be living here for a while, you might as well get to know her.",
 				"Come out an introduce yourself."

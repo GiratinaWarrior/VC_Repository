@@ -66,7 +66,7 @@ EntityAdditionFunc = function()
 			var _mysteryBook = 
 			[
 				"Hmm?",
-				"There's a wierd book is hidden at the back of the shelf?",
+				"There's a wierd book hidden at the back of the shelf?",
 				"The cover's dusty, and the language isn't Noxian",
 				"Who exactly was reading this?"
 			];

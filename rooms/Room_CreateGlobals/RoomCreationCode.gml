@@ -1,3 +1,9 @@
-TransitionStart(Room_TitleScreen, seq_FadeOut, seq_FadeIn);
-//show_debug_message("NoctisCity RoomCode: {0}", Room_NoctisCity)
+
+var _func = function()
+{
+	TransitionStart(Room_TitleScreen, seq_FadeOut, seq_FadeIn);
+	time_source_destroy(TransToTitle);
+}
+TransToTitle = TimeSourceCreateAndStart(40, _func);
+
 randomize();
