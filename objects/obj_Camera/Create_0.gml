@@ -24,7 +24,7 @@ Camera_PlayerFollowXTimer = 0;
 Camera_PlayerFollowXTimerLimit = 40;
 
 Camera_PlayerFollowYTimer = 0;
-Camera_PlayerFollowYTimerLimit = 1;
+Camera_PlayerFollowYTimerLimit = 20;
 
 Camera_PlayerAheadDist = 0;
 

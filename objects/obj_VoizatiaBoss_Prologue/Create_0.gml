@@ -1,8 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-RougeSpear_Layer = layer_create(layer_get_depth("VoizatiaBossIntroCutscene_Voizatia"), "RougeSpear"); 
-SinEruption_Layer =  layer_create(layer_get_depth("BackFlowers") + 10, "SinEruption");
+RougeSpear_Layer = layer_create(layer_get_depth("VoizatiaBossIntroCutscene_Voizatia") - 1, "RougeSpear"); 
+SinEruption_Layer =  layer_create(layer_get_depth("VoizatiaBossIntroCutscene_Voizatia") - 1, "SinEruption");
 
 VoizatiaBossPrologue_CurrentState = VOIZATIABOSSPROLOGUE_STATE.IDLE;
 VoizatiaBossPrologue_NextState = VOIZATIABOSSPROLOGUE_STATE.ROUGE_SPEAR;

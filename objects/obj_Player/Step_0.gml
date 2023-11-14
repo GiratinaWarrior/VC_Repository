@@ -35,7 +35,27 @@ if (Invincible == true) {
 		key_heal = global.Key_Heal;
 		
 		move = key_right - key_left;
-
+		
+		/*
+		if (abs(gamepad_axis_value(0, gp_axislh)) > 0.2)
+		{
+			key_left = -sign(min(gamepad_axis_value(0, gp_axislh),0));
+			key_right = sign(max(gamepad_axis_value(0, gp_axislh), 0));
+			move = key_right - key_left;//move = sign(gamepad_axis_value(0, gp_axislh));			
+			global.UsingController = 1;
+		}
+		
+		if (abs(gamepad_axis_value(0, gp_axislv)) > 0.2)
+		{
+			key_up = -sign(min(gamepad_axis_value(0, gp_axislv),0));
+			key_down =  sign(max(gamepad_axis_value(0, gp_axislv),0));
+			global.UsingController = 1;
+		}
+		*/
+		
+		
+		
+	
 	}//end if player has control
 	
 	//if the player has control taken from them

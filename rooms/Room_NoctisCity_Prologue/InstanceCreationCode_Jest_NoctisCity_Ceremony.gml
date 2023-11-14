@@ -12,6 +12,6 @@ Speech =
 TextBox_Voices = 
 [
 	sound_Jest_Laugh_HAhaha,
-	sound_Jest_Talk_halezaDIZEna,
+	blanksound,
 	sound_Jest_Talk_jaravajikaraZHAna
 ]

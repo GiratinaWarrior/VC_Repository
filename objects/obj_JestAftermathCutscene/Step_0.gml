@@ -91,10 +91,10 @@ switch (JestAftermathCutscene_State)
 			
 			var _voice = 
 			[
-				sound_Jest_Talk_Huh,
-				sound_Jest_Serious_Varazhanovezhibidi,
 				sound_Jest_Dark_Rilakanazhi,
-				sound_Jest_Serious_Shabarura,
+				blanksound,
+				sound_Jest_Serious_Varazhanovezhibidi,
+				blanksound,
 			]
 		
 			if !(JestAftermathCutscene_JestTalkFirst_TalkStarted)
@@ -154,15 +154,15 @@ switch (JestAftermathCutscene_State)
 			var _voice = 
 			[
 				sound_Jest_Talk_Huh,
-				sound_Jest_Serious_Shabarura,
+				blanksound,
 				sound_Jest_Serious_Harakenizuburana,
 				blanksound,
 				sound_Jest_Dark_Vishkana,
-				sound_Jest_Dark_Harakivabaja,
+				blanksound,
 				blanksound,
 				sound_Jest_Laugh_Hah,
-				sound_Jest_Talk_haleKIzena,
-				sound_Jest_Talk_halezaDIZEna,
+				blanksound,
+				sound_Jest_Dark_Harakivabaja,
 			]
 		
 			if !(JestAftermathCutscene_JestUnderstandSituation_TalkStarted)
@@ -211,9 +211,9 @@ switch (JestAftermathCutscene_State)
 			
 			var _voice = 
 			[
-				sound_Jest_Serious_Shabarura,
-				sound_Jest_Serious_Varazhanovezhibidi,
 				sound_Jest_Talk_halezaDIZEna,
+				sound_Jest_Serious_Varazhanovezhibidi,
+				blanksound,
 				sound_Jest_Talk_Volapachi_Halaka
 			]
 			
@@ -269,13 +269,13 @@ switch (JestAftermathCutscene_State)
 			var _voice = 
 			[
 				sound_Jest_Laugh_HAhaha,
-				sound_Jest_Talk_haleKIzena,
+				blanksound,
 				sound_Jest_Serious_Varazhanovezhibidi,
-				sound_Jest_Talk_Huh,
+				blanksound,
 				sound_Jest_Serious_Harakenizuburana,
-				sound_Jest_Serious_Shabarura,
+				blanksound,
 				sound_Jest_Talk_Volapachi_Halaka,
-				sound_Jest_Talk_halezaDIZEna,
+				blanksound,
 				sound_Jest_Talk_jaravajikaraZHAna
 			];
 			

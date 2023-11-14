@@ -34,3 +34,81 @@ global.Key_Talk = keyboard_check_pressed(vk_space) || mouse_check_button_pressed
 
 //Skipping cutscenes
 global.Key_Skip = keyboard_check_pressed(ord("C"));
+
+//---------Controller--------//
+
+/*
+
+WASD arrows = joystick
+
+Talk = B
+
+Jump = A
+
+Sword = Rtrigger
+
+Cannon = Ltrigger
+
+Heal = X
+
+*/
+
+
+if global.Key_Left || global.Key_Right || global.Key_Up || global.Key_Down || global.Key_Sword || global.Key_Cannon || global.Key_Talk || global.Key_Heal
+{
+	global.UsingController = 0;
+}
+
+var _GPsens = 0.5;
+
+if abs(gamepad_axis_value(0, gp_axislh)) > _GPsens
+{
+
+	global.Key_Left = -sign(min(gamepad_axis_value(0, gp_axislh), 0));
+	global.Key_Right = sign(max(gamepad_axis_value(0, gp_axislh), 0));
+	global.UsingController = 1;
+}
+
+//If moving up and down
+if abs(gamepad_axis_value(0, gp_axislv)) > (_GPsens - 0.2)
+{
+	global.Key_Up = -sign(min(gamepad_axis_value(0, gp_axislv), 0));
+	global.Key_Down = sign(max(gamepad_axis_value(0, gp_axislv), 0));
+	global.UsingController = 1;
+}
+
+//if A is pressed
+if (gamepad_button_check(0, gp_face1))
+{
+	global.Key_Jump = 1;
+	global.UsingController = 1;
+}
+
+//if Y is pressed
+if (gamepad_button_check_pressed(0, gp_face4))
+{
+	global.Key_Talk = 1;
+	global.UsingController = 1;
+}
+
+//if B is pressed
+if (gamepad_button_check_pressed(0, gp_face2))
+{
+	global.Key_Heal = 1;
+	global.UsingController = 1;
+}
+
+//if Right Trigger or X is pressed
+if (gamepad_button_check_pressed(0, gp_shoulderrb)) || (gamepad_button_check_pressed(0, gp_face3))
+{
+	global.Key_Sword = 1;
+	global.UsingController = 1;
+}
+
+//if Left Trigger is pressed
+if (gamepad_button_check_pressed(0, gp_shoulderlb))
+{
+	global.Key_Cannon = 1;
+	global.UsingController = 1;
+}
+

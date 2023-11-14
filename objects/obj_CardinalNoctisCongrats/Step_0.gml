@@ -333,7 +333,7 @@ switch(CardinalNoctisCongrats_State)
 			var _voice = 
 			[
 				sound_Jest_Talk_haleKIzena,
-				sound_Jest_Talk_halezaDIZEna,
+				blanksound,
 				sound_Jest_Talk_jaravajikaraZHAna,
 			]
 		

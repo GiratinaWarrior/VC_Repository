@@ -208,7 +208,7 @@ switch(CardinalFamilyCongrats_Stage)
 			
 			SetSpawnpoint(obj_Player.x, obj_Player.y);
 			
-			//SaveGame();
+			SaveGame();
 			
 			instance_destroy();
 		

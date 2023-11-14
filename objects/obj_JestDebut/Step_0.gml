@@ -23,7 +23,7 @@ switch(JestDebut_Stage)
 		if !(JestDebut_StartedOffscreenTalk)
 		{
 			CutsceneText(_text, "???", TEXTBOX_POS.BOTTOM, ft_Jest);
-			//obj_Text.TextBox_Voices = _voice;
+			obj_Text.TextBox_Voices = _voice;
 			JestDebut_StartedOffscreenTalk = true;
 		}
 		
@@ -67,8 +67,8 @@ switch(JestDebut_Stage)
 		
 		var _voice = 
 		[
-			sound_Jest_Laugh_HAhaha,
 			sound_Jest_Talk_halezaDIZEna,
+			blanksound,
 			sound_Jest_Talk_haleKIzena
 		]
 		
@@ -137,7 +137,7 @@ switch(JestDebut_Stage)
 		var _voice = 
 		[
 			sound_Jest_Talk_Volapachi_Halaka,
-			sound_Jest_Talk_halezaDIZEna,
+			blanksound,
 			sound_Jest_Talk_jaravajikaraZHAna,
 		]
 	
