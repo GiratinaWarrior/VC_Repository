@@ -4,12 +4,13 @@
   "name": "obj_ShrineGeneral_RapidPunch_Finish",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
     "name": "Attacks",
-    "path": "folders/Objects/Enemies/Bosses/Prologue/ShrineGeneral/Attacks.yy",
+    "path": "folders/Objects/Enemies/Bosses/Prologue/1_ShrineGeneral/Attacks.yy",
   },
   "parentObjectId": {
     "name": "parent_EnemyAttack",

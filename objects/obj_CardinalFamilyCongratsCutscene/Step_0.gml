@@ -61,7 +61,7 @@ switch(CardinalFamilyCongrats_Stage)
 				"But before you undergo the test, you must understand what it means to be the Cardinal of Nox.",
 				"And for the record, you may not 'skip my dialogue' or however you word it, this is very important.",
 				"Do not.",
-				"I will be taking away your skip dialogue priviledges now.",
+				"I will be taking away your skip dialogue priviledges temporarily.",
 				"Rose-darling. Listen.",
 				"The duty of a Cardinal, is to act as a guardian to the Noxians, protecting them, and guiding them.",
 				"At least, that's what everyone outside of this shrine knows, but there is one more thing that a Cardinal is responsible for",

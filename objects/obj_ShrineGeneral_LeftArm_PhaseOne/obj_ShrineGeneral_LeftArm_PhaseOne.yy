@@ -2,18 +2,14 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_ShrineGeneral_LeftArm_PhaseOne",
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-  ],
+  "eventList": [],
   "managed": true,
   "overriddenProperties": [
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_EnemyAttack","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"propertyId":{"name":"Damage","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"value":"0",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_EnemyAttack","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"propertyId":{"name":"EnemyAttack_LaunchPower_H","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"value":"4",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_EnemyAttack","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"propertyId":{"name":"EnemyAttack_LaunchPower_V","path":"objects/parent_EnemyAttack/parent_EnemyAttack.yy",},"value":"15",},
   ],
   "parent": {
     "name": "Body",
-    "path": "folders/Objects/Enemies/Bosses/Prologue/ShrineGeneral/Body.yy",
+    "path": "folders/Objects/Enemies/Bosses/Prologue/1_ShrineGeneral/Body.yy",
   },
   "parentObjectId": {
     "name": "parent_EnemyAttack",

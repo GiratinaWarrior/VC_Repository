@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-var _skippable = false;
+var _skippable = true;
 
 var _skipButton = global.Key_Skip;
 
@@ -24,7 +24,7 @@ switch(VoizatiaBossIntro_State)
 			if !(VoizatiaBossIntro_IdleCreated)
 			{
 				VoizatiaBossIntro_VoizatiaIdle = layer_sequence_create("VoizatiaBossIntroCutscene_Voizatia", 0, 0, seq_VoizatiaBossIntro_VoizatiaIdle);
-				VoizatiaBossIntro_LavenderIdle = layer_sprite_create(layer, 832, 352, spr_Lavender_Down_RougeSpear);
+				VoizatiaBossIntro_LavenderIdle = instance_create_layer(832, 352, "Player", obj_LavenderDeathCutscene);//layer_sprite_create(layer, 832, 352, spr_Lavender_Down);
 				VoizatiaBossIntro_IdleCreated = true;
 			}
 		
@@ -179,8 +179,8 @@ switch(VoizatiaBossIntro_State)
 				"The thrill of not knowing whether you'll die or not. ", 
 				"The sight of blood spilling and vallen spells being launched",
 				"The relief of a well-earned victory",
-				"Everything about is wonderful, and it's something we instinctively desire.",
-				"All I'm saying is that those Carvaline Orbs only feel earned after a strong fight, which I didn't get.",
+				"Everything about is wonderful, and it's something I desire more than anything.",
+				"What I'm saying is that those Carvaline Orbs only feel earned after a strong fight, which I didn't get.",
 				"So here's the deal...",
 			];
 			
@@ -374,6 +374,7 @@ switch(VoizatiaBossIntro_State)
 			if (PlayerDefeated(false))
 			{
 				SetRoomAudio_Music_Default();
+				
 				with (VoizatiaBossIntro_VoizatiaBoss)
 				{
 					instance_destroy(parent_EnemyAttack);
@@ -381,12 +382,12 @@ switch(VoizatiaBossIntro_State)
 					instance_change(obj_VoizatiaUndefeated, true);
 					if (obj_PlayerDefeated.image_index == obj_PlayerDefeated.image_number - 1)
 					{
+						obj_PlayerDefeated.image_speed = 0;
+						obj_PlayerDefeated.image_index = obj_PlayerDefeated.image_number - 1
 						other.VoizatiaBossIntro_State = VOIZATIABOSSINTRO.BATTLE_END;
 					}
 				}
 			}
-			
-			
 			
 			
 		#endregion
@@ -407,13 +408,18 @@ switch(VoizatiaBossIntro_State)
 			
 			var _func = function()
 			{
+				with (obj_PlayerDefeated)
+				{
+					image_xscale = 1;
+					x = 640;
+				}
 				obj_Camera.sprite_index = noone;
 				VoizatiaBossIntro_State = VOIZATIABOSSINTRO.VOIZATIA_MOCK;
 				time_source_destroy(VoizatiaBossIntro_TimeSource);
 				VoizatiaBossIntro_TimeSource = noone;
 			}
 			
-			if (VoizatiaBossIntro_TimeSource == noone) VoizatiaBossIntro_TimeSource = TimeSourceCreateAndStart(75, _func);
+			if (VoizatiaBossIntro_TimeSource == noone) VoizatiaBossIntro_TimeSource = TimeSourceCreateAndStart(120, _func);
 		
 		#endregion
 	
@@ -424,7 +430,7 @@ switch(VoizatiaBossIntro_State)
 		
 		#region Voizatia Mock
 		
-			SetRoomAudio_Music_Default(music_VoizatiaEncounterThemeV2);
+		//	SetRoomAudio_Music_Default(music_VoizatiaEncounterThemeV2);
 			
 			var _text = 
 			[
@@ -433,8 +439,7 @@ switch(VoizatiaBossIntro_State)
 				"Hehehe",
 				"HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAAAAAAAAAAAAAAAAAAAAAAAA!",
 				"THIS IS JUST TOO MUCH!",
-				"YOUR FACE! YOUR FACE LOOKED SO STUPID! LIKE YOU JUST REGRETTED YOUR ENTIRE LIFE UNTIL NOW!",
-				"HAHAHAH! YOU MAKE A BETTER CLOWN THAN THAT KID THAT WISHES HE WAS ONE!",
+				"YOUR FACE! YOUR FACE LOOKED SO STUPID! LIKE YOU JUST REGRETTED YOUR ENTIRE WORTHLESS LIFE UNTIL NOW!",
 				"Haaaa, man."
 			];
 			
@@ -447,7 +452,7 @@ switch(VoizatiaBossIntro_State)
 			{
 				var _func = function()
 				{
-					VoizatiaBossIntro_State = VOIZATIABOSSINTRO.VOIZATIA_ORDERS;
+					VoizatiaBossIntro_State = VOIZATIABOSSINTRO.LAVENDER_DEATH_SEQUENCE;
 					time_source_destroy(VoizatiaBossIntro_TimeSource);
 					VoizatiaBossIntro_TimeSource = noone;
 				}
@@ -458,6 +463,25 @@ switch(VoizatiaBossIntro_State)
 		
 		break;//end Voizatia Mock
 	
+	//Lavender Death Sequence: This will contain a sequence of events leading to Lavender's death
+	case VOIZATIABOSSINTRO.LAVENDER_DEATH_SEQUENCE:
+		
+		#region Lavender Death Sequence
+			
+			if !(VoizatiaBossIntro_LavenderDeath_Activated)
+			{
+				VoizatiaBossIntro_LavenderIdle.LavenderDeathCutscene_State = LAVENDERDEATH_CUTSCENE.LAVENDER_RISE;
+				VoizatiaBossIntro_LavenderDeath_Activated = true;
+			}
+			else if !(instance_exists(VoizatiaBossIntro_LavenderIdle))
+			{
+				VoizatiaBossIntro_State = VOIZATIABOSSINTRO.VOIZATIA_ORDERS;
+			}
+			
+		#endregion
+		
+		break;//end Lavender Death Sequence
+	
 	//Voizatia Orders Stage
 	case VOIZATIABOSSINTRO.VOIZATIA_ORDERS:
 		
@@ -465,10 +489,12 @@ switch(VoizatiaBossIntro_State)
 		
 			var _text = 
 			[
+				"Now that that interruption has been dealt with...",
 				"I will repeat your orders.",
 				"Go and hunt down my comrades who possess the Carvaline Orbs",
 				"Once you do so, come back in order to be killed gloriously by me.",
-				"What? It's better than the death thats inches in front of you."
+				"What? It's better than the way your mother died."
+				
 			];
 		
 			if !(VoizatiaBossIntro_VoizatiaOrders_TalkStarted)
@@ -527,7 +553,10 @@ switch(VoizatiaBossIntro_State)
 			
 			var _text =
 			[
-				"Oh, and I'll be taking this woman with me, can't have you running away can I?",
+				"Rose.",
+				"Your mother raised you to be a pampered weakling.",
+				"I won't allow that. I will make sure you become strong.",
+				"Hahaha",
 				"I sure can't wait for the next time we meet.",
 				"We're going to have one hell of a time",
 			]
@@ -556,7 +585,7 @@ switch(VoizatiaBossIntro_State)
 			obj_Camera.sprite_index = spr_BlackScreen;
 			
 			instance_destroy(VoizatiaBossIntro_VoizatiaBoss);
-			layer_sequence_destroy(VoizatiaBossIntro_LavenderIdle);
+			//layer_sequence_destroy(VoizatiaBossIntro_LavenderIdle);
 			
 			var _func = function()
 			{
@@ -597,7 +626,7 @@ switch(VoizatiaBossIntro_State)
 						image_index = 0;
 						image_speed = 1;
 						image_xscale = other.image_xscale;
-						obj_Camera.follow = id;
+						obj_Camera.follow = obj_PlayerRise;
 					}
 					instance_destroy(obj_PlayerDefeated);
 				}

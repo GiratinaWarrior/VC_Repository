@@ -99,7 +99,7 @@ switch(CarvalineOrbIntroCutscene_Stage)
 			else if (layer_sequence_is_finished(CarvalineOrbIntroCutscene_Story_Sequence))
 			{
 				
-				show_debug_message("Story Sequence Finished");
+				//show_debug_message("Story Sequence Finished");
 				
 				//Create the story end sequence, keep it paused
 				CarvalineOrbIntroCutscene_StoryEnd_Sequence = layer_sequence_create(layer_get_id("WhiteFlash"), 0, 0, seq_CarvalineOrbIntro_EndStory);

@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Walls",
-    "path": "folders/Sprites/PhysicalEntities/Shrine/Walls.yy",
+    "name": "Basement",
+    "path": "folders/Sprites/PhysicalEntities/Shrine/Walls/Basement.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

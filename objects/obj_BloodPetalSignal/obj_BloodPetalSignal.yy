@@ -10,7 +10,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "BloodPetal",
-    "path": "folders/Objects/Enemies/Bosses/Prologue/Lavender_Prologue/Attacks/BloodPetal.yy",
+    "path": "folders/Objects/Enemies/Bosses/Prologue/2_Lavender_Prologue/Attacks/BloodPetal.yy",
   },
   "parentObjectId": null,
   "persistent": false,

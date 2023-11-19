@@ -1,3 +1,3 @@
 target = Room_ShrineArenaEntrance;
 WarpX = 32;
-WarpY = 160;
+WarpY = 220;

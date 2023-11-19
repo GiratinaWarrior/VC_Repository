@@ -246,8 +246,11 @@ function ShrineGeneralPhaseOne_RapidPunches() {
 				#region Regular Arms
 				
 					//Temporarily deactivate the Shrine Generals left and right arms
-					instance_deactivate_object(ShrineGeneral_RightArm);
-					instance_deactivate_object(ShrineGeneral_LeftArm);
+					//instance_deactivate_object(ShrineGeneral_RightArm);
+					//instance_deactivate_object(ShrineGeneral_LeftArm);
+					
+					//ShrineGeneral_RightArm.image_alpha = 0;
+					//ShrineGeneral_LeftArm.image_alpha = ShrineGeneral_RightArm.image_alpha;
 				
 				#endregion 
 			
@@ -258,7 +261,7 @@ function ShrineGeneralPhaseOne_RapidPunches() {
 					{
 						if (!instance_exists(obj_ShrineGeneral_RapidPunch))
 						{
-							ShrineGeneral_RapidPunch_State = SHRINEGENERAL_RAPIDPUNCH_STATE.FINISH;
+							ShrineGeneral_RapidPunch_State = SHRINEGENERAL_RAPIDPUNCH_STATE.COOLDOWN;
 						}
 					}//end flurry
 					
@@ -289,16 +292,20 @@ function ShrineGeneralPhaseOne_RapidPunches() {
 				//If a Rapid Punch Finsih hasnt been created yet, create it
 				if (!instance_exists(obj_ShrineGeneral_RapidPunch_Finish))
 				{
-			
+					
+					RapidPunchFinish_StartY = 0;
+					
 					//Access the Finishing move
-					with (instance_create_depth(x, y, depth + 1, obj_ShrineGeneral_RapidPunch_Finish))
+					with (instance_create_depth(x, y + RapidPunchFinish_StartY, depth + 1, obj_ShrineGeneral_RapidPunch_Finish))
 					{
 						RapidPunchFinish_MainBody = other.id;
 					
 						RapidPunchFinish_MaxDist = other.ShrineGeneral_RapidPunch_FinishRange;
-				
+						
+						//RapidPunchFinish_StartY = other.RapidPunchFinish_StartY;
+						
 						image_xscale = other.image_xscale;
-				
+						
 						speed = image_xscale * 7;
 					
 					}//end access finishing move
@@ -315,9 +322,11 @@ function ShrineGeneralPhaseOne_RapidPunches() {
 		
 			#region Cooldown
 				
+				audio_stop_sound(sound_ShrineGeneral_RapidPunch);
+				
 				//Reactivte the Arms
-				instance_activate_object(ShrineGeneral_LeftArm);
-				instance_activate_object(ShrineGeneral_RightArm); 
+			//	ShrineGeneral_RightArm.image_alpha = 1;
+			//	ShrineGeneral_LeftArm.image_alpha = ShrineGeneral_RightArm.image_alpha;
 				
 				//Reset the sprites
 				ShrineGeneral_LeftArm.sprite_index = spr_ShrineGeneral_LeftArm_Idle_PhaseOne;

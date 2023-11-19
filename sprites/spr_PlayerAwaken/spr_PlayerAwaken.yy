@@ -34,8 +34,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Neutral",
-    "path": "folders/Sprites/Player/Animations/Player/Neutral.yy",
+    "name": "Awaken",
+    "path": "folders/Sprites/Player/Animations/Player/Neutral/Awaken.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

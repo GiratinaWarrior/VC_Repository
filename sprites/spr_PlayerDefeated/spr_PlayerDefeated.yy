@@ -28,8 +28,8 @@
   "nineSlice": null,
   "origin": 9,
   "parent": {
-    "name": "Neutral",
-    "path": "folders/Sprites/Player/Animations/Player/Neutral.yy",
+    "name": "Defeated",
+    "path": "folders/Sprites/Player/Animations/Player/Neutral/Defeated.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

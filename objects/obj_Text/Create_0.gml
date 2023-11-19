@@ -20,6 +20,8 @@ TextBox_TextHeightModifier = 1.2;
 //The height of the text
 TextBox_TextHeight = string_height(TextBox_Text) * TextBox_TextHeightModifier;
 
+//show_debug_message("TextBox_TextHeight: {0}", TextBox_TextHeight);
+
 //The page the text is on
 TextBox_Page = 0;
 
@@ -28,6 +30,7 @@ TextBox_CharCount = 0;
 
 //The rate the characters appear at
 TextBox_CharIncrease = 1;
+TextBox_TalkSpeed = 1;
 
 //The minimum distance the text can be from the textbox
 TextBox_BorderBuffer = 30;
@@ -46,8 +49,8 @@ TextBox_Pos_BottomPlacement = WINDOW_HEIGHT - TextBox_Height - TextBox_EdgeMargi
 
 enum TEXTBOX_POS
 {
-	TOP,
-	BOTTOM
+	TOP = 10,
+	BOTTOM = 1023,
 }
 
 TextBox_UIPosition = TEXTBOX_POS.BOTTOM;

@@ -26,8 +26,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Neutral",
-    "path": "folders/Sprites/Player/Animations/Player/Neutral.yy",
+    "name": "NotGround",
+    "path": "folders/Sprites/Player/Animations/Player/Neutral/NotGround.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

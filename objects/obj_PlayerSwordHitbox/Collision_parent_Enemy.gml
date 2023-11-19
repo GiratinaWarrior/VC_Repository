@@ -47,5 +47,9 @@ if !(other.Enemy_Invincible)
 //If the attack can't phase through enemies, destroy itself
 if (!CanPhase_Enemy)
 {
-	if !(alarm[0]) alarm[0] = 3;
+	instance_destroy();
+	if !(alarm[0]) 
+	{
+		alarm[0] = 2;
+	}
 }//end if can't phase through enemy

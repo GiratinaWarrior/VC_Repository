@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Voizatia_Prologue",
-    "path": "folders/Objects/Enemies/Bosses/Prologue/Voizatia_Prologue.yy",
+    "name": "4_Voizatia_Prologue",
+    "path": "folders/Objects/Enemies/Bosses/Prologue/4_Voizatia_Prologue.yy",
   },
 }

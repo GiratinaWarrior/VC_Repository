@@ -12,7 +12,7 @@
   ],
   "parent": {
     "name": "Attacks",
-    "path": "folders/Objects/Enemies/Bosses/Prologue/Voizatia_Prologue/Attacks.yy",
+    "path": "folders/Objects/Enemies/Bosses/Prologue/4_Voizatia_Prologue/Attacks.yy",
   },
   "parentObjectId": {
     "name": "parent_EnemyAttack",

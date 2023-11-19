@@ -18,8 +18,8 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_Enemy","path":"objects/parent_Enemy/parent_Enemy.yy",},"propertyId":{"name":"EnemyVallenDropAmount","path":"objects/parent_Enemy/parent_Enemy.yy",},"value":"4",},
   ],
   "parent": {
-    "name": "Malvalia_DarkShrine",
-    "path": "folders/Objects/Enemies/Bosses/Prologue/Malvalia_DarkShrine.yy",
+    "name": "3_Malvalia_DarkShrine",
+    "path": "folders/Objects/Enemies/Bosses/Prologue/3_Malvalia_DarkShrine.yy",
   },
   "parentObjectId": {
     "name": "parent_BossEnemy",

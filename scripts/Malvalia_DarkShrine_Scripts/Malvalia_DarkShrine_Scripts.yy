@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Malvalia_DarkShrine",
-    "path": "folders/Objects/Enemies/Bosses/Prologue/Malvalia_DarkShrine.yy",
+    "name": "3_Malvalia_DarkShrine",
+    "path": "folders/Objects/Enemies/Bosses/Prologue/3_Malvalia_DarkShrine.yy",
   },
 }

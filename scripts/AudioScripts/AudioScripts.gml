@@ -39,6 +39,16 @@ function SetRoomAudio_Music_Default(_music = blanksound){
 	//Set the music settings depending on the track
 	switch(_music)
 	{
+		//The true main theme
+		case music_MainTheme:
+			
+			with (obj_PlayBGM)
+			{
+				BGM_Volume = 1;
+				BGM_GainRate = 0;
+			}
+			
+			break;
 		
 		//If the title theme from insurgence is playing
 		case music_TitleTheme_Insurgence:

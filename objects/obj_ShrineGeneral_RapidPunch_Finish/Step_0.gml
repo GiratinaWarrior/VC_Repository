@@ -1,6 +1,8 @@
 /// @description
 var _currentDist = abs(RapidPunchFinish_MainBody.x - x);
 
+#region Old Code
+
 //Do certain things based on what sprite the Finishing move is
 switch (sprite_index)
 {
@@ -33,3 +35,8 @@ switch (sprite_index)
 		break;//end Finish return
 
 }
+
+
+
+#endregion
+

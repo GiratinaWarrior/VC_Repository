@@ -1,1 +1,1 @@
-SetRoomAudio_Music_Default(music_TitleTheme_Rejuvenation);
+SetRoomAudio_Music_Default(music_MainTheme);

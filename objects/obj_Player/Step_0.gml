@@ -241,6 +241,7 @@ switch(PlayerState)
 					time_source_start(RunDustEffect_TimeSource);
 					
 					sprite_index = PlayerSpriteSet[PLAYERSPRITE_NEUTRAL.RUN];
+					
 					if (animation_end(sprite_index))
 					{
 						PlayerFootsteps();

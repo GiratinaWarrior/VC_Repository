@@ -1,0 +1,1 @@
+SetRoomAudio_Music_Default(music_ShrinePeacefulTheme);

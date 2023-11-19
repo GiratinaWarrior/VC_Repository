@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Neutral",
-    "path": "folders/Sprites/Player/Animations/Player/Neutral.yy",
+    "name": "DamDead",
+    "path": "folders/Sprites/Player/Animations/Player/Neutral/DamDead.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

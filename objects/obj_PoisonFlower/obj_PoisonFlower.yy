@@ -14,7 +14,7 @@
   ],
   "parent": {
     "name": "PoisonGarden",
-    "path": "folders/Objects/Enemies/Bosses/Prologue/Lavender_Prologue/Attacks/PoisonGarden.yy",
+    "path": "folders/Objects/Enemies/Bosses/Prologue/2_Lavender_Prologue/Attacks/PoisonGarden.yy",
   },
   "parentObjectId": {
     "name": "parent_Enemy",

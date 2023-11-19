@@ -3,7 +3,7 @@
 if (instance_exists(obj_Player))
 {
 	//If the player touches the flower
-	if (place_meeting(x, y, obj_Player) && !Flower_HitByPlayer && obj_Player.xSpeed != 0 && !Flower_IsCut)
+	if (!Flower_HitByPlayer && !Flower_IsCut && obj_Player.xSpeed != 0 && place_meeting(x, y, obj_Player))
 	{
 		//Sway in a direction depending on the players speed
 		if (obj_Player.xSpeed > 0)
@@ -27,7 +27,7 @@ if (instance_exists(obj_Player))
 
 if (instance_exists(obj_PlayerSwordHitbox))
 {
-	if (place_meeting(x, y, obj_PlayerSwordHitbox) && !Flower_IsCut)
+	if (!Flower_IsCut && place_meeting(x, y, obj_PlayerSwordHitbox))
 	{
 		sprite_index = Flower_DieSprite;
 		Flower_IsCut = true;

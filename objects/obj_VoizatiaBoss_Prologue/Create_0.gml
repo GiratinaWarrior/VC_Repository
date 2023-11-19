@@ -58,7 +58,7 @@ VoizatiaBossPrologue_SinEruption_StateTimerLimit = 400;
 
 //how often Sin Eruptions are foreshadowed
 VoizatiaBossPrologue_SinEruption_AttackTimer = 0;
-VoizatiaBossPrologue_SinEruption_AttackTimerLimit = 30;
+VoizatiaBossPrologue_SinEruption_AttackTimerLimit = 40;
 
 //how long it takes the Sin Eruption to appear after warning
 VoizatiaBossPrologue_SinEruption_ConjureTimer = VoizatiaBossPrologue_SinEruption_AttackTimerLimit - 10;

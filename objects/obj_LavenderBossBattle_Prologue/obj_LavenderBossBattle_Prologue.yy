@@ -14,8 +14,8 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_Enemy","path":"objects/parent_Enemy/parent_Enemy.yy",},"propertyId":{"name":"Enemy_Invincible","path":"objects/parent_Enemy/parent_Enemy.yy",},"value":"False",},
   ],
   "parent": {
-    "name": "Lavender_Prologue",
-    "path": "folders/Objects/Enemies/Bosses/Prologue/Lavender_Prologue.yy",
+    "name": "2_Lavender_Prologue",
+    "path": "folders/Objects/Enemies/Bosses/Prologue/2_Lavender_Prologue.yy",
   },
   "parentObjectId": {
     "name": "parent_BossEnemy",

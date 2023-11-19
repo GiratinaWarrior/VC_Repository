@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Scripts",
-    "path": "folders/Objects/Enemies/Bosses/Prologue/ShrineGeneral/Scripts.yy",
+    "path": "folders/Objects/Enemies/Bosses/Prologue/1_ShrineGeneral/Scripts.yy",
   },
 }

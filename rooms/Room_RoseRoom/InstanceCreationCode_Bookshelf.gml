@@ -62,6 +62,19 @@ EntityAdditionFunc = function()
 		
 		BookArray[3] = function()
 		{
+			var _shrineGeneralGuide = 
+			[
+				"It's 'How to Conjure the Greatest Servant Ever'",
+				"Is this the book mother used to create the Shrine General?",
+				"Did she not realize it was satire?",
+				"No wonder he turned out like that!"
+			]
+			
+			TextBox_Text = array_concat(RoseRoomBookShelf_MainTextArray, _shrineGeneralGuide);
+		}
+		
+		BookArray[4] = function()
+		{
 			
 			var _mysteryBook = 
 			[

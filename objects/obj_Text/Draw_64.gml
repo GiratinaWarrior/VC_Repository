@@ -55,15 +55,21 @@ DrawSetText(TextBox_TextColor, TextBox_Font, fa_left, fa_top);
 //Increase the number of characters displayed
 if (TextBox_CharCount < string_length(TextBox_Text[TextBox_Page]))
 {
-	TextBox_CharCount += TextBox_CharIncrease;
+	TextBox_CharCount += (TextBox_CharIncrease * TextBox_TalkSpeed);
 }//end increase characters displayed
 
-if (TextBox_CharCount <= 1)
+if (TextBox_CharCount <= TextBox_CharIncrease)
 {
 	audio_play_sound(sound_Select, 200, false);
 	var _currentSound = TextBox_Voices[TextBox_Page];
 //	show_debug_message("Current Sound: {0} ", _currentSound);
-	audio_play_sound(_currentSound, 1000, false, 1);
+	audio_play_sound(_currentSound, 1000, false, 5);
+	
+	if (TextBox_Page != 0) && (TextBox_Voices[TextBox_Page] != blanksound) && (TextBox_Voices[TextBox_Page - 1] != TextBox_Voices[TextBox_Page])
+	{
+		audio_stop_sound(TextBox_Voices[TextBox_Page - 1]);
+	}
+	
 }
 
 //The section of the text to be displayed

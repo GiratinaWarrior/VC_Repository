@@ -29,10 +29,10 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"5c60ce8c-39aa-4ba5-870a-2ba6fafba47b","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 4,
+  "origin": 9,
   "parent": {
-    "name": "Neutral",
-    "path": "folders/Sprites/Player/Animations/Player/Neutral.yy",
+    "name": "Awaken",
+    "path": "folders/Sprites/Player/Animations/Player/Neutral/Awaken.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -71,7 +71,7 @@
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 16,
+    "xorigin": 12,
     "yorigin": 16,
   },
   "swatchColours": null,

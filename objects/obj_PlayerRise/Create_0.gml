@@ -20,7 +20,7 @@ var _secondstandfunc = function()
 	global.WarpTargetX = x;
 	global.WarpTargetY = y;
 	SetSpawnpoint(x, y);
-	SummonPlayer(x, y);
+	SummonPlayer(x - (4 * image_xscale), y);
 	obj_Player.image_xscale = image_xscale;
 	time_source_destroy(PlayerRise_TimeSource2);
 	PlayerRise_TimeSource2 = noone;

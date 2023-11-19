@@ -16,7 +16,7 @@ if !(Menu_Chosen)
 		
 	Menu_Hover += Menu_Move;
 	
-	show_debug_message("MenuMove: {0}", Menu_Move);
+	//show_debug_message("MenuMove: {0}", Menu_Move);
 }
 
 Menu_Hover = clamp(Menu_Hover, 0, Menu_NumOfOptions - 1); 

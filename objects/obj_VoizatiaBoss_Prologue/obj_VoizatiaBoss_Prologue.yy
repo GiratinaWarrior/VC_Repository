@@ -15,8 +15,8 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"parent_Enemy","path":"objects/parent_Enemy/parent_Enemy.yy",},"propertyId":{"name":"EnemyVallenDropAmount","path":"objects/parent_Enemy/parent_Enemy.yy",},"value":"6",},
   ],
   "parent": {
-    "name": "Voizatia_Prologue",
-    "path": "folders/Objects/Enemies/Bosses/Prologue/Voizatia_Prologue.yy",
+    "name": "4_Voizatia_Prologue",
+    "path": "folders/Objects/Enemies/Bosses/Prologue/4_Voizatia_Prologue.yy",
   },
   "parentObjectId": {
     "name": "parent_BossEnemy",

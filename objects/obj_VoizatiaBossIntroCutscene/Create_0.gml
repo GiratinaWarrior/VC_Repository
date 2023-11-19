@@ -31,7 +31,14 @@ enum VOIZATIABOSSINTRO
 //Post-Battle
 
 	VOIZATIA_MOCK, //Voizatia mocks Rose for her weakness and foolishness
-	VOIZATIA_ORDERS, //Voizatia repeats your orders
+	
+//Lavender Death
+	
+	LAVENDER_DEATH_SEQUENCE,
+
+//Voizatia leave
+
+	VOIZATIA_ORDERS, //Voizatia repeats her orders to Rose
 	VOIZATIA_FLY, //Voizatia flies up, ready to leave
 	VOIZATIA_FLY_TALK, //Voizatia says goodbye to Rose
 	VOIZATIA_EXIT, //Voizatia leaves the scene
@@ -40,7 +47,7 @@ enum VOIZATIABOSSINTRO
 	
 }//end enum
 
-VoizatiaBossIntro_IdleCreated = false;
+VoizatiaBossIntro_IdleCreated  = false;
 VoizatiaBossIntro_VoizatiaIdle = noone;
 VoizatiaBossIntro_LavenderIdle = noone;
 
@@ -89,3 +96,8 @@ VoizatiaBossIntro_VoizatiaFlyTalk_TalkStarted = false;
 //------------Player Awaken Stage------------------//
 VoizatiaBossIntro_PlayerAwaken_Timer = 0;
 VoizatiaBossIntro_PlayerAwaken_TimerLimit = 150;
+
+//------------Lavender Death Sequence--------------//
+VoizatiaBossIntro_LavenderDeath_Activated = false;
+
+

@@ -51,8 +51,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "Neutral",
-    "path": "folders/Sprites/Player/Animations/Player/Neutral.yy",
+    "name": "Ground",
+    "path": "folders/Sprites/Player/Animations/Player/Neutral/Ground.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

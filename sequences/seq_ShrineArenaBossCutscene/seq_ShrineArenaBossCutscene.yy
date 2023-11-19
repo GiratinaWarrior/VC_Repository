@@ -36,8 +36,8 @@
     "Keyframes": [],
   },
   "parent": {
-    "name": "3_ShrineArenaBoss",
-    "path": "folders/Sequences/Cutscenes/OpeningAct/3_ShrineArenaBoss.yy",
+    "name": "Old",
+    "path": "folders/Sequences/Cutscenes/OpeningAct/3_ShrineArenaBoss/Old.yy",
   },
   "playback": 0,
   "playbackSpeed": 60.0,

@@ -2,16 +2,18 @@
 //If the Shrine General hasn't been defeated
 if (!global.ShrineGeneral_Defeated)
 {
-	instance_create_layer(0, 0, "Cutscene", obj_ShrineArenaBossIntroCutscene);
+	//instance_create_layer(0, 0, "Cutscene", obj_ShrineArenaBossIntroCutscene);
+	instance_create_layer(0, 0, "Cutscene", obj_ShrineGeneralBossIntro);
 	SetRoomAudio_Music();
 	SetSpawnpoint(32, 160, Room_ShrineArenaEntrance);
-	
+	/*
 	with (obj_Camera)
 	{
 		follow = noone;
 		xTo = -1280;
 		x = -1280;
 	}
+	*/
 }
 
 //If the Shrine General has been defeated

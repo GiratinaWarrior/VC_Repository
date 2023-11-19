@@ -1,5 +1,7 @@
 /// @description Camera follow player
 
+
+
 if (instance_exists(follow))
 {
 	//show_debug_message("Target: {0}", follow);

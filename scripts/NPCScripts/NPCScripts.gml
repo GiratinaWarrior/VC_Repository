@@ -52,7 +52,7 @@ function NPC_Jest_Function()
 	{
 		if (myTextbox.TextBox_CharCount == 0)
 		{
-			audio_play_sound(choose(sound_JestHuhuhu, sound_JestLaugh), 200, false);
+			//audio_play_sound(choose(sound_JestHuhuhu, sound_JestLaugh), 200, false);
 		}
 	}
 }

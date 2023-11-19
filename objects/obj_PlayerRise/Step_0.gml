@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+obj_Camera.follow = id;
+
 if (sprite_index == spr_PlayerAwaken_A)
 {
 	//show_debug_message("Awaken A: Playing");

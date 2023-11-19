@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Lavender_Prologue",
-    "path": "folders/Objects/Enemies/Bosses/Prologue/Lavender_Prologue.yy",
+    "name": "2_Lavender_Prologue",
+    "path": "folders/Objects/Enemies/Bosses/Prologue/2_Lavender_Prologue.yy",
   },
 }

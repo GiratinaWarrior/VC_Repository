@@ -7,5 +7,3 @@ if !(global.VoizatiaLavenderAftermath_Cutscene_Seen)
 {
 	instance_create_layer(0, 0, "VoizatiaBossIntroCutscene", obj_VoizatiaBossIntroCutscene);
 }
-
-layer_depth("BackFlowers", layer_get_depth("Player") + 1)

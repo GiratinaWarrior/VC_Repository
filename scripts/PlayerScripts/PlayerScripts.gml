@@ -30,7 +30,6 @@ function PlayerMovement(){
 //function for the sound of the players footsteps
 function PlayerFootsteps()
 {
-	
 	audio_play_sound(choose(sound_Footstep1, sound_Footstep2, sound_Footstep3, sound_Footstep4), 50, false, 1.5);
 }
 

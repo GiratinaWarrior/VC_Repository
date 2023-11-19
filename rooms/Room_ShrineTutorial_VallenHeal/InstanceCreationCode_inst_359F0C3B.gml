@@ -1,5 +1,7 @@
-Text("GAHAHAHAHA! Thee has't best'd me Lady Rose");
-Text("Forgive me for yond dithtathful letter yond wast written by this filthy handeth");
-Text("Lady Lavender did request yond I shouldst provideth motivation for thee");
-Text("If it be true I has't offend'd thee, reprimend me as thee seeth fiteth");
-Text("But thy requests that knoweth yond I existeth in thy service, and only for thy service");
+Text("So you have bested me Ro- Lady Rose!");
+Text("I'm- I am sorry that you were forced to read such a distasteful letter");
+Text("That General called me a newbie, but I have been in service for 3 years now!")
+Text("That one does not care about us!");
+Text("Lady Rose, forgive me for this abhorrent language...");
+Text("But I beg of you!");
+Text("Kick his ass!");

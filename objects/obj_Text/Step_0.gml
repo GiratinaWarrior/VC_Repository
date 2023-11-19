@@ -51,6 +51,16 @@ if (global.Key_Talk)
 	else if (TextBox_CharCount > 1) && (TextBox_TextSkippable)
 	{
 		TextBox_CharCount = string_length(TextBox_Text[TextBox_Page]);
+		//TextBox_TalkSpeed = 3;
+	}
+	else
+	{
+		//TextBox_TalkSpeed = 1;
 	}
 	
 }//end talk button pressed
+
+else
+{
+	TextBox_TalkSpeed = 1;
+}

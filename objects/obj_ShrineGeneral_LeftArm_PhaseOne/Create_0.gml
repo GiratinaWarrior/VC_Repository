@@ -1,1 +1,0 @@
-/// @description Set launch power
