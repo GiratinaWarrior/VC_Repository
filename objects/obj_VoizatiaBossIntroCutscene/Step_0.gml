@@ -493,6 +493,7 @@ switch(VoizatiaBossIntro_State)
 				"I will repeat your orders.",
 				"Go and hunt down my comrades who possess the Carvaline Orbs",
 				"Once you do so, come back in order to be killed gloriously by me.",
+				"You must do this alone, you may not accept help from anyone, not even your brother.",
 				"What? It's better than the way your mother died."
 				
 			];

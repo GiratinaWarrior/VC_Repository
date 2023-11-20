@@ -62,7 +62,8 @@ switch (PrologueEndCutscene_Stage)
 				"Now then, what to do now?",
 				"Rose should be on her way to where Escular is right about now, so I should find something to do.",
 				"Perhaps I should read some of this Shrines books.",
-				"Go on a little decimation rampage myself?",
+				"It's been a while, I wonder if they've updated their inventory.",
+				"Or maybe I could go on a decimation rampage in Noctis City, give Rose a little more motivation.",
 				"Or better yet..."
 			];
 		
@@ -164,10 +165,10 @@ switch (PrologueEndCutscene_Stage)
 			
 			var _text = 
 			[
-				"Now now, calm down. I know living with a loss is taboo, but blind rage isn't gonna get you anywhere, ya gotta be rational",
+				"Now now, calm down. I'm glad that you've inherited the ways of our people, but blind rage isn't gonna get you anywhere, ya gotta be rational",
 				"Think carefully of how you're gonna beat her, and what the 'most painful death' even looks like.",
 				"Only then will slaughtering her be satisfying.",
-				"That is the way of our people, the Vlastels.",
+				"That is who we, the Vlastels, truly are.",
 				"So until then.",
 				"Calm. Down."
 			]
@@ -200,7 +201,9 @@ switch (PrologueEndCutscene_Stage)
 				"I'm calm...",
 				"Yes, I can kill her if I just think a bit.",
 				"Haha, HAHAHAHA, HAHAHAHAHAHAHAHAHA",
-				"That's it! I could easily kill her if I had one of those Carvaline...Orbs...",
+				"That's it! I could easily kill her if I had one of those Carvaline Orbs!",
+				"HAHAHAHAHAHA! Just you wait you damn doll!",
+				"You're gonna get it real soon!"
 			];
 			
 			if !(PrologueEndCutscene_MalvaliaExitTalk_TalkStarted)
@@ -210,99 +213,86 @@ switch (PrologueEndCutscene_Stage)
 			}
 			else if !(instance_exists(obj_Text))
 			{
-				if (PrologueEndCutscene_TimeSource == noone) PrologueEndCutscene_TimeSource = TimeSourceCreateAndStart(100, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.MALVALIA_QUESTION; time_source_destroy(PrologueEndCutscene_TimeSource); PrologueEndCutscene_TimeSource = noone;});
+				if (PrologueEndCutscene_TimeSource == noone) PrologueEndCutscene_TimeSource = TimeSourceCreateAndStart(100, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.MALVALIA_EXIT; time_source_destroy(PrologueEndCutscene_TimeSource); PrologueEndCutscene_TimeSource = noone;});
 			}
 		
 		#endregion
 	
 		break;//end Malvalia Exit Talk Stage
 		
-	//Malvalia Question Stage
-	case PROLOGUE_END_CUTSCENE.MALVALIA_QUESTION:
-	
-		#region Malvalia Question
+	//Malvalia Exit Stage
+	case PROLOGUE_END_CUTSCENE.MALVALIA_EXIT:
 		
-			SetRoomAudio_Music_Default();
+		#region Malvalia Exit
+		
+			if !(PrologueEndCutscene_MalvaliaExit_SequenceCreated)
+			{
+				PrologueEndCutscene_MalvaliaExit_Sequence = layer_sequence_create(layer, x, y, seq_PrologueEndCutscene_MalvaliaExit);				
+				layer_sequence_destroy(PrologueEndCutscene_MalvaliaIdle);
+				PrologueEndCutscene_MalvaliaExit_SequenceCreated = true;
+			}	
+			else if (layer_sequence_is_finished(PrologueEndCutscene_MalvaliaExit_Sequence))
+			{
+				layer_sequence_destroy(PrologueEndCutscene_MalvaliaExit_Sequence);
+				
+				if (PrologueEndCutscene_TimeSource == noone)
+				{
+					var _func = function()
+					{
+						PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.VOIZATIA_LAST_TALK;
+						time_source_destroy(PrologueEndCutscene_TimeSource);
+						PrologueEndCutscene_TimeSource = noone;
+					}
+					PrologueEndCutscene_TimeSource = TimeSourceCreateAndStart(50, _func);
+				}
+			}
+		
+		#endregion
+		
+		break;//end Malvalia Exit Stage
+		
+	//Voizatia Last Talk Stage
+	case PROLOGUE_END_CUTSCENE.VOIZATIA_LAST_TALK:
+		
+		#region Voizatia Last Talk
 			
 			var _text = 
 			[
-				"Voizatia.",
-				"I've been thinking about this for a while...",
-				"But why was getting those Carvaline Orbs so easy?",
-				"I mean, we busted through the entrance just when it was unguarded, and took the path that went straight there",
-				"Isn't that all  too convenient?"
-				/*
-				"Our plot to attack the shrine, didn't it go a little too well?",
-				"I mean, the path you took led us straight to the Orbs.",
-				"And we just happened to do it on the day that it was practically begging to be attacked.",
-				"Isn't that all just a bit too convenient?"
-				*/
-			];
+				"And there she goes, sounds like she'll be having fun.",
+				"I guess that's my cue to go do something.",
+				"...",
+				"Ha",
+				"Hahahahaha",
+				"HAHAHAHAHAHAHAHAHA!",
+				"haaa...",
+				"Damn, when was the last time I was THIS excited, I feel like a kid that's stepped into their backyard for the first time!",
+				"I see now, this planet truly is interesting.",
+				"You were right about everything, just as expected from you...",
+				"Your Majesty!"
+			]
 			
-			if !(PrologueEndCutscene_MalvaliaQuestion_TalkStarted)
+			if !(PrologueEndCutscene_VoizatiaLastTalk_TalkStarted)
 			{
-				PrologueEndCutscene_MalvaliaQuestion_Talk = CutsceneText(_text, "Malvalia", p, ft_Malvalia);
-				PrologueEndCutscene_MalvaliaQuestion_TalkStarted = true;
-			}
-			
-			else if !(instance_exists(obj_Text))
-			{
-				if (PrologueEndCutscene_TimeSource == noone) PrologueEndCutscene_TimeSource = TimeSourceCreateAndStart(80, function() {PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.VOIZATIA_TALK_LAVENDER; time_source_destroy(PrologueEndCutscene_TimeSource); PrologueEndCutscene_TimeSource = noone;});
-			}
-			
-		#endregion
-	
-		break;//end Malvalia Question Stage
-		
-	//Voizatia Talk Lavender Stage
-	case PROLOGUE_END_CUTSCENE.VOIZATIA_TALK_LAVENDER:
-	
-		#region Voizatia Talk Lavender
-			
-			var _text = 
-			[
-				"'Too convenient' huh? You're a lot smarter than you act, you know that?",
-				"Spot on",
-				"His Majesty told me that I would find an ally on this planet, and as always, His Majesty was correct.",
-				"She has the Carvaline Orbs that I want, and I have knowledge of their origins that she wants. A fated alliance.",
-				"Now then, since we're gonna be living here for a while, you might as well get to know her.",
-				"Come out an introduce yourself."
-			];
-			
-			if !(PrologueEndCutscene_VoizatiaTalkLavender_TalkStarted)
-			{
-				PrologueEndCutscene_VoizatiaTalkLavender_Talk = CutsceneText(_text, "Voizatia", p, ft_Voizatia);
-				PrologueEndCutscene_VoizatiaTalkLavender_TalkStarted = true;
+				PrologueEndCutscene_VoizatiaLastTalk_Talk = CutsceneText(_text, "Voizatia", p, ft_Voizatia);
+				PrologueEndCutscene_VoizatiaLastTalk_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))
 			{
-				PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.LAVENDER_ENTER;
+				PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.CUTSCENE_END;
 			}
-		
-		#endregion
-		
-		break;//end Voizatia Talk Lavender Stage
-		
-	//Lavender Enter Stage
-	case PROLOGUE_END_CUTSCENE.LAVENDER_ENTER:
-	
-		#region Lavender Enter
-		
-			if !(PrologueEndCutscene_LavenderEnterSequenceCreated)
+			else if (PrologueEndCutscene_VoizatiaLastTalk_Talk.TextBox_Page >= array_length(_text) - 1)
 			{
-				PrologueEndCutscene_LavenderEnterSequence = layer_sequence_create(layer, x, y, seq_PrologueEndCutscene_LavenderEnter);
-				PrologueEndCutscene_LavenderEnterSequenceCreated = true;
+				with (PrologueEndCutscene_VoizatiaLastTalk_Talk)
+				{
+					TextBox_TextColor = c_red;
+					TextBox_TextSkippable = false;
+					TextBox_CharIncrease = 0.2;
+				}
 			}
-			else if (layer_sequence_is_finished(PrologueEndCutscene_LavenderEnterSequence))
-			{
-				PrologueEndCutscene_LavenderIdle = layer_sequence_create(layer, x, y, seq_PrologueEndCutscene_LavenderIdle);
-				layer_sequence_destroy(PrologueEndCutscene_LavenderEnterSequence);
-				if (PrologueEndCutscene_TimeSource == noone) PrologueEndCutscene_TimeSource = TimeSourceCreateAndStart(120, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.CUTSCENE_END; time_source_destroy(PrologueEndCutscene_TimeSource); PrologueEndCutscene_TimeSource = noone;});
-			}
-		
+			
 		#endregion
-		
-		break;//end Lavender Enter Stage
+			
+		break;//end Voizatia Last Talk
 		
 	case PROLOGUE_END_CUTSCENE.CUTSCENE_END:
 	

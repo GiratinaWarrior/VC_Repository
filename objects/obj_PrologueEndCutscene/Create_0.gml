@@ -14,10 +14,8 @@ enum PROLOGUE_END_CUTSCENE
 	MALVALIA_ENTER_TALK, //Malvalia vents her frustrations
 	VOIZATIA_CALM_MALVALIA, //Voizatia tells Malvalia that there's always a next time
 	MALVALIA_EXIT_TALK, //Malvalia decides that she will get even stronger to defeat Rose
-	MALVALIA_QUESTION, //Malvalia asks Voizatia how he knew where the Carvaline Orbs were
-	
-	VOIZATIA_TALK_LAVENDER, //Voizatia answers by beckoning his accomplice to come out
-	LAVENDER_ENTER, //Lavender enters the scene
+	MALVALIA_EXIT, //Malvalia disappears away
+	VOIZATIA_LAST_TALK, //Voizatia beings talking to himself
 	
 	CUTSCENE_END //The cutscene is over
 }
@@ -26,7 +24,6 @@ PrologueEndCutscene_Stage = 0
 
 PrologueEndCutscene_VoizatiaIdle = noone;
 PrologueEndCutscene_MalvaliaIdle = noone;
-PrologueEndCutscene_LavenderIdle = noone;
 
 PrologueEndCutscene_TimeSource = noone;
 
@@ -75,23 +72,11 @@ PrologueEndCutscene_VoizatiaCalmMalvalia_Talk = noone;
 PrologueEndCutscene_MalvaliaExitTalk_TalkStarted = false;
 PrologueEndCutscene_MalvaliaExitTalk_Talk = noone;
 
-//PrologueEndCutscene_MalvaliaExitTalk_TimeSource = TimeSourceCreate(100, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.MALVALIA_QUESTION; time_source_destroy(PrologueEndCutscene_MalvaliaExitTalk_TimeSource); PrologueEndCutscene_MalvaliaExitTalk_TimeSource = noone;});
+//Malvalia Exit Stage
+PrologueEndCutscene_MalvaliaExit_Sequence = noone;
+PrologueEndCutscene_MalvaliaExit_SequenceCreated = false;
 
-//Malvalia Question Stage
-PrologueEndCutscene_MalvaliaQuestion_TalkStarted = false;
-PrologueEndCutscene_MalvaliaQuestion_Talk = noone;
-
-PrologueEndCutscene_MalvaliaQuestion_TimeSource = TimeSourceCreate(80, function() {PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.VOIZATIA_TALK_LAVENDER; time_source_destroy(PrologueEndCutscene_MalvaliaQuestion_TimeSource); PrologueEndCutscene_MalvaliaQuestion_TimeSource = noone;});
-
-//--------------Lavender Section--------------------//
-
-//Voizatia Talk Lavender Stage
-PrologueEndCutscene_VoizatiaTalkLavender_TalkStarted = false;
-PrologueEndCutscene_VoizatiaTalkLavender_Talk = noone;
-
-//Lavender Enter Stage
-PrologueEndCutscene_LavenderEnterSequence = noone;
-PrologueEndCutscene_LavenderEnterSequenceCreated = false;
-
-PrologueEndCutscene_LavenderEnter_TimeSource = TimeSourceCreate(120, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.CUTSCENE_END; time_source_destroy(PrologueEndCutscene_LavenderEnter_TimeSource); PrologueEndCutscene_LavenderEnter_TimeSource = noone;});
+//Voizatia Last Talk Stage
+PrologueEndCutscene_VoizatiaLastTalk_TalkStarted = false;
+PrologueEndCutscene_VoizatiaLastTalk_Talk = noone;
 

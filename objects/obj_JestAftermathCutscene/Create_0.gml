@@ -11,7 +11,8 @@ enum JESTAFTERMATHCUTSCENE
 	JEST_TURN_ROSE, //Jest turns around an notices Rose
 	JEST_TALK_FIRST, //Jest talks to Rose, asking what happened
 	JEST_LISTEN, //Jest listens 
-	JEST_UNDERSTAND_SITUATION, //After Rose explains the situation, Jest acknowledges this fact
+	JEST_DEPRESSED, //After Rose explains the situation, Jest acknowledges this fact
+	JEST_BACK_UP,
 	JEST_EXPLAIN_FOREST, //Jest explains that the Somnium Forest is up ahead
 	JEST_GOOD_LUCK, //Jest wishes Rose good luck on her journey while he stays and keeps watch of the Noxians and Valnyx Shrine
 	CUTSCENE_END, //The cutscene is over, and everything is reset

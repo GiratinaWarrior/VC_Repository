@@ -17,7 +17,7 @@ switch (JestAftermathCutscene_State)
 			var _text = 
 			[
 				"...",
-				"Just what is going on at our house..?"
+				"Hope Rose and Lavender are doing alright..."
 			];
 			
 			var _voice = 
@@ -84,17 +84,21 @@ switch (JestAftermathCutscene_State)
 			var _text = 
 			[	
 				"Huhuhello Rosey-darling, fancy seeing you here!",
-				"I would say that you being huhuhere means that everything is alright, but that thing I saw flying away from our house says otherwise...",
+				"I'd love to say that you being here means that everything is A-OK...",
+				"But you look the opposite.",
+				"...",
 				"Rosey-darling. I'm prepared, so tell me.", 
-				"What happened? and why is Mother not with you?",
+				"What happened? Why is Mother not with you?",
 			];
 			
 			var _voice = 
 			[
-				sound_Jest_Dark_Rilakanazhi,
+				sound_Jest_Talk_haleKIzena,
+				sound_Jest_Talk_halezaDIZEna,
+				sound_Jest_Dark_Vishkana,
 				blanksound,
-				sound_Jest_Serious_Varazhanovezhibidi,
-				blanksound,
+				sound_Jest_Dark_Harakivabaja,
+				sound_Jest_Dark_Rilakanazhi
 			]
 		
 			if !(JestAftermathCutscene_JestTalkFirst_TalkStarted)
@@ -106,6 +110,10 @@ switch (JestAftermathCutscene_State)
 			else if !(instance_exists(obj_Text))
 			{
 				JestAftermathCutscene_State = JESTAFTERMATHCUTSCENE.JEST_LISTEN;
+			}
+			else if (obj_Text.TextBox_Page >= 3)
+			{
+				Jest_NoctisCty.sprite_index = spr_Jest_Idle_Sad;
 			}
 			
 		#endregion
@@ -125,48 +133,122 @@ switch (JestAftermathCutscene_State)
 			else if (layer_sequence_is_finished(JestAftermathCutscene_JestListen_Sequence))
 			{
 				layer_sequence_destroy(JestAftermathCutscene_JestListen_Sequence);	
-				JestAftermathCutscene_State = JESTAFTERMATHCUTSCENE.JEST_UNDERSTAND_SITUATION;
+				JestAftermathCutscene_State = JESTAFTERMATHCUTSCENE.JEST_DEPRESSED;
 			}
 		
 		#endregion	
 			
 		break;//end Jest Surprised Stage
 		
-	//Jest Understand Situation Stage
-	case JESTAFTERMATHCUTSCENE.JEST_UNDERSTAND_SITUATION:
+	//Jest Depressed Stage
+	case JESTAFTERMATHCUTSCENE.JEST_DEPRESSED:
 		
-		#region Jest Understand Situation
+		#region Jest Depressed
+			
+			SetRoomAudio_Music_Default(music_LavenderDeathTheme);
 			
 			var _text = 
 			[	
-				"I see...",
-				"Say, Rosey-darling",
-				"Do you think that if we both attacked this Voizatia man, we could win?",
+				"No...",
+				"(Lavender...)",
 				"...",
-				"I guess not huh",
-				"Then we truly have no choice but to go along with his stage play",
+				"Mother's really gone...?",
 				"...",
-				"Don't worry Rosey-darling",
-				"You're the protagonist of this play, and the heroic protagonist always defeats the villain in the end",
-				"Now as for how this play will play out"
-			];
+				"Rosey...darling...",
+				"Do you really have no choice but to be a puppet?",
+				"...",
+				"No huh...",
+				"..."
+			]
 			
 			var _voice = 
 			[
-				sound_Jest_Talk_Huh,
+				sound_Jest_Serious_Shabarura,
 				blanksound,
+				blanksound,
+				sound_Jest_Dark_Rilakanazhi,
+				blanksound,
+				sound_Jest_Serious_Varazhanovezhibidi,
 				sound_Jest_Serious_Harakenizuburana,
 				blanksound,
 				sound_Jest_Dark_Vishkana,
-				blanksound,
-				blanksound,
-				sound_Jest_Laugh_Hah,
-				blanksound,
-				sound_Jest_Dark_Harakivabaja,
+				blanksound
 			]
 		
 			if !(JestAftermathCutscene_JestUnderstandSituation_TalkStarted)
 			{
+				CutsceneText(_text, "Jest", _pos, _font);
+				obj_Text.TextBox_Voices = _voice;
+				JestAftermathCutscene_JestUnderstandSituation_TalkStarted = true;
+			}
+			else if !(instance_exists(obj_Text))
+			{
+				var _jestUS = function()
+				{
+					time_source_destroy(JestAftermathCutscene_TimeSource);
+					JestAftermathCutscene_TimeSource = noone;
+					
+					var _jestUS2 = function()
+					{
+						Jest_NoctisCty.sprite_index = spr_Jest_Idle;
+						JestAftermathCutscene_JestUnderstandSituation_TalkStarted = false;
+						JestAftermathCutscene_State = JESTAFTERMATHCUTSCENE.JEST_BACK_UP;
+						time_source_destroy(JestAftermathCutscene_TimeSource);
+						JestAftermathCutscene_TimeSource = noone;
+					}
+					
+					if (JestAftermathCutscene_TimeSource == noone)JestAftermathCutscene_TimeSource = TimeSourceCreateAndStart(50, _jestUS2);
+					
+				}
+				if (JestAftermathCutscene_TimeSource == noone) JestAftermathCutscene_TimeSource = TimeSourceCreateAndStart(50, _jestUS);
+			}
+			
+		#endregion
+		
+		break;//end Jest Depressed Stage
+	
+	//Jest Back Up Stage
+	case JESTAFTERMATHCUTSCENE.JEST_BACK_UP:
+		
+		#region Jest Back Up 
+		
+			
+
+			var _text = 
+			[	
+				"WAIT!",
+				"I'M THE JESTER! I SHOULD BE PLAYING WITH PUPPETS!",
+				"Rosey-darling Rosey-darling. I just got a great idea",
+				"You should become MY puppet!",
+				"Follow my script! Not that mans!",
+				"Yes..that's it!",
+				"...",
+				"...(yeah)...",
+				"...",
+				"*ahem*",
+				"Now then Rosey-darling!",
+				"According to my script, your first destination..."
+			]
+			
+			var _voice = 
+			[
+				sound_Jest_Laugh_Hah,
+				sound_Jest_Talk_haleKIzena,
+				sound_Jest_Talk_halezaDIZEna,
+				sound_Jest_Talk_halakazanadi,
+				sound_Jest_Talk_Volapachi_Halaka,
+				sound_Jest_Dark_Vishkana,
+				blanksound,
+				blanksound,
+				blanksound,
+				blanksound,
+				sound_Jest_Dark_Rilakanazhi,
+				sound_Jest_Serious_Varazhanovezhibidi,
+			]
+		
+			if !(JestAftermathCutscene_JestUnderstandSituation_TalkStarted)
+			{
+				Jest_NoctisCty.sprite_index = spr_Jest_Idle;
 				CutsceneText(_text, "Jest", _pos, _font);
 				obj_Text.TextBox_Voices = _voice;
 				JestAftermathCutscene_JestUnderstandSituation_TalkStarted = true;
@@ -181,6 +263,7 @@ switch (JestAftermathCutscene_State)
 					
 					var _jestUS2 = function()
 					{
+						//JestAftermathCutscene_JestUnderstandSituation_TalkStarted = false;
 						JestAftermathCutscene_State = JESTAFTERMATHCUTSCENE.JEST_EXPLAIN_FOREST;
 						time_source_destroy(JestAftermathCutscene_TimeSource);
 						JestAftermathCutscene_TimeSource = noone;
@@ -192,10 +275,11 @@ switch (JestAftermathCutscene_State)
 				if (JestAftermathCutscene_TimeSource == noone) JestAftermathCutscene_TimeSource = TimeSourceCreateAndStart(50, _jestUS);
 			}
 			
+		
 		#endregion
 		
-		break;//end Jest Understand Situation Stage
-		
+		break;//end Jest Back Up Stage
+	
 	//Jest Explain Forest Stage
 	case JESTAFTERMATHCUTSCENE.JEST_EXPLAIN_FOREST:
 	
@@ -203,17 +287,17 @@ switch (JestAftermathCutscene_State)
 			
 			var _text = 
 			[
-				"Through this tunnel is the way to the Somnium Forest.",
-				"I saw something fly in that direction from our house, prolly one of our 'villains' comrades if I were to guess...",
+				"Will be through this way, to the Somnium Forest.",
+				"I saw something fly in that direction from our house, prolly one of that mans comrades if I were to guess...",
 				"Mother never let us go there since that place is huhuhaunted",
-				"And if mother says its haunted, its haunted. She only ever scared us with slightly exaggerated truths"
+				"And if mother said its haunted, its haunted. She only ever scared us with slightly exaggerated truths"
 			];
 			
 			var _voice = 
 			[
 				sound_Jest_Talk_halezaDIZEna,
-				sound_Jest_Serious_Varazhanovezhibidi,
-				blanksound,
+				sound_Jest_Serious_Shabarura,
+				sound_Jest_Talk_halakazanadi,
 				sound_Jest_Talk_Volapachi_Halaka
 			]
 			
@@ -228,6 +312,7 @@ switch (JestAftermathCutscene_State)
 				var _func = function()
 				{
 					Jest_NoctisCty.image_xscale = -1;	
+					Jest_NoctisCty.sprite_index = spr_Jest_Idle_Sad;
 					time_source_destroy(JestAftermathCutscene_TimeSource);
 					JestAftermathCutscene_TimeSource = noone;
 					var _anotherfunc = function()
@@ -251,31 +336,45 @@ switch (JestAftermathCutscene_State)
 		
 		#region Jest Good Luck
 			
-			SetRoomAudio_Music_Default(music_StoryCutsceneTheme);
+			//SetRoomAudio_Music_Default(music_StoryCutsceneTheme);
 			
 			var _text = 
 			[
-				"I would love to have myself an amazing adventure with you",
-				"BUUUUUUT, these Noxians need someone to keep their spirits and sanity up, and who else but huhuhilarious me?",
-				"Besides, it was the last order that Lavender gave me, so I'm entitled to follow it through.",
+				"I wish I was there to help you fight Voizatia.",
+				"I also wish I could've spoken to Mother one last time.",
+				"I also wish that you didn't have to do this alone, I would've wanted to travel with you.",
+				"But these people need me.",
+				"They need someone to protect them and keep their spirits up.",
+				"And who else but huhuhilarious me to handle that!",
+				"It was the last order that Mother gave me, so I'm entitled to follow through...",
+				"That's why I have to stay happy and lively, it's what she would have wanted...",
+				"So once you're done making clowns of the side acts, We'll fight Voizatia together!",
 				"Rosey-darling...",
-				"Mother taught us that the world is harsh and cruel, and it does not show mercy to its inhabitants, ",
-				"But no matter what, you're stronger than anything this world can throw at you",
-				"Ghosts, sea monsters, endless winters, unforgiving heat, and even the darkness of Nox itself",
-				"Rosey-darling, overcome it all, and become the Star of Nox",
-				"I know you can do it, so get going, the play does not wait for its actors does it?"
+				"Mother taught us that the world is a harsh and cruel place, and refuses to show mercy to it's inhabitants.",
+				"But Rosey-darling, I know that you're stronger than anything this world can throw at you.",
+				"Whether it be ghosts, sea monsters, endless winters, relentless heat, or even the very darkness of Nox itself.",
+				"I know that you can overcome it all. You can do it.",
+				"You can become the Star of Nox.",
+				"So get going already! It's time for the first act to start!"
 			];
 			
 			var _voice = 
 			[
-				sound_Jest_Laugh_HAhaha,
-				blanksound,
-				sound_Jest_Serious_Varazhanovezhibidi,
-				blanksound,
+				sound_Jest_Serious_Shabarura,
 				sound_Jest_Serious_Harakenizuburana,
-				blanksound,
+				sound_Jest_Serious_Varazhanovezhibidi,
+				sound_Jest_Dark_Vishkana,
+				sound_Jest_Dark_Rilakanazhi,
+				sound_Jest_Talk_halakazanadi,
+				sound_Jest_Dark_Harakivabaja,
+				sound_Jest_Laugh_HAhaha,
+				sound_Jest_Talk_haleKIzena,
+				sound_Jest_Dark_Vishkana, //Rosey-darling
+				sound_Jest_Dark_Harakivabaja,
+				sound_Jest_Talk_halezaDIZEna,
 				sound_Jest_Talk_Volapachi_Halaka,
-				blanksound,
+				sound_Jest_Talk_haleKIzena,
+				sound_Jest_Dark_Rilakanazhi,
 				sound_Jest_Talk_jaravajikaraZHAna
 			];
 			
@@ -288,6 +387,10 @@ switch (JestAftermathCutscene_State)
 			else if !(instance_exists(obj_Text))
 			{
 				JestAftermathCutscene_State = JESTAFTERMATHCUTSCENE.CUTSCENE_END;
+			}
+			else if (obj_Text.TextBox_Page >= 7)
+			{
+				Jest_NoctisCty.sprite_index = spr_Jest_Idle;
 			}
 			
 		#endregion

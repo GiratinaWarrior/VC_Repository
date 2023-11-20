@@ -24,7 +24,7 @@ switch(LavenderDeathCutscene_State)
 					
 		#region Lavender Rise
 				
-			SetRoomAudio_Music(music_LavenderDeathTheme, 0.3, 1000 * 0);
+			SetRoomAudio_Music_Default(music_LavenderDeathTheme);
 				
 			sprite_index = spr_Lavender_Rise;
 			

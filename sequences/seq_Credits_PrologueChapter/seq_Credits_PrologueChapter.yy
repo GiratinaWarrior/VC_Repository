@@ -28,7 +28,7 @@
     "path": "folders/Sequences.yy",
   },
   "playback": 0,
-  "playbackSpeed": 20.0,
+  "playbackSpeed": 10.0,
   "playbackSpeedType": 0,
   "showBackdrop": true,
   "showBackdropImage": false,

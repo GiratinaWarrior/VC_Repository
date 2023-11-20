@@ -169,7 +169,7 @@ function SetRoomAudio_Music_Default(_music = blanksound){
 		
 			with (obj_PlayBGM)
 			{
-				BGM_Volume = 0.5;
+				BGM_Volume = 0.8;
 				BGM_GainRate = 10;
 			}
 		
@@ -223,6 +223,16 @@ function SetRoomAudio_Music_Default(_music = blanksound){
 				BGM_GainRate = 0;
 			}
 		
+			break;
+			
+		case music_LavenderDeathTheme:
+			
+			with (obj_PlayBGM)
+			{
+				BGM_Volume = 0.3
+				BGM_GainRate = 0;
+			}
+			
 			break;
 			
 		case music_Credits:

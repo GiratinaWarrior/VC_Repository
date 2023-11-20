@@ -28,9 +28,16 @@ switch (PrologueCutscene_Stage)
 		[
 			"Where love becomes life and dread becomes death",
 			"The new moon rises and draws its first breath",
-			"The crown of the dark gazes the black night",
+			"The crown of the dark is consumed by the black night",
 			"And the lunar gem becomes the worlds brightest light"
 		];
+		
+		/*
+			Where love becomes life and dread becomes death: Where the roses grow (New Moon Garden), the circle of life
+			The new moon rises and draws its first breath: Rose opens her eyes
+			The crown of the dark gazes is consumed by the black night: Lavender is killed by Voizatia
+			And the lunar gem becomes the worlds brightest light: Rose becomes the hero of Nox
+		*/
 		
 		//If Lavender has started talking
 		if !(PrologueCutscene_ProphecyTalkStarted)
