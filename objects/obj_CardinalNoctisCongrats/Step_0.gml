@@ -10,8 +10,8 @@ switch(CardinalNoctisCongrats_State)
 		
 			var _text = 
 			[
-				"Ah, there you are Rose-darling, about time you showed",
-				"No time to waste, time to get started"
+				"Ah, there you are Rose-darling, about time you showed.",
+				"No time to waste, time to get started."
 			]
 		
 			if (!CardinalNoctisCongrats_LavenderGreeting_TalkStarted)
@@ -82,8 +82,8 @@ switch(CardinalNoctisCongrats_State)
 
 			var _text = 
 			[
-				"Attention, all Residents of Noctis City, come forth for it is time",
-				"It is time to begin",
+				"Attention, all Residents of Noctis City, come forth!",
+				"It is time to begin!",
 				"The Cardinal Inauguration Ceremony!"
 			];
 		
@@ -146,13 +146,15 @@ switch(CardinalNoctisCongrats_State)
 			
 			var _text = 
 			[
-				"My children of Nox, during my time as Cardinal, our life together has been wonderful and filled with peace", 
-				"We did not have worry about starving, suffering from illness, and falling in war, and we could spend our days doing pointless things like knitting clothes, lazing around in the moonlight, and planting flowers.",
-				"The only reason such fun could ever exist was because of the struggles of the previous Cardinals who fought for peace so that we could have it easy, and you know...",
-				"I have been recently starting to think that it is about time I took it even easier, and as we all know, there is only one way to go about this.", 
+				"My children of Nox, during my time as Cardinal, our life together has been wonderful and filled with peace.", 
+				"We did not have worry about starving, suffering from illness, and falling in war, and we could spend our days doing pointless things.",
+				"Knitting clothes, lazing around in the moonlight, and planting flowers.",
+				"The only reason such fun could ever exist was because of the struggles of the previous Cardinals who fought for peace.",
+				"I have been starting to think that it is time I took it even easier, and there is only one way to go about this.", 
 				"Rose!", 
-				"She who stands before you has successfully completed our onerous tests, and is ready to succeed the will of me and my predecessors",
-				"I ask you to welcome my beautiful daughter as your new guardian figure, but much more importantly, as our friend"
+				"She who stands before you has successfully completed our onerous tests.", 
+				"She is ready to succeed the will of me and my predecessors",
+				"I ask you to welcome my beautiful daughter as your new guardian figure, but much more importantly, as our friend."
 			];
 		
 			if (!CardinalNoctisCongrats_LavenderSpeech_TalkStarted)
@@ -176,17 +178,25 @@ switch(CardinalNoctisCongrats_State)
 		
 			var _text = 
 			[
-				"WOOOOOOOOOOHOOOOOOOOOOOOOOO",
+				"WOOOOOOHOOOOOOOO",
 				"ROSE! ROSE! CARDINAL ROSE! ROSE! ROSE! CARDINAL ROSE!",
-				"WOOOOOOOOOOHOOOOOOOOOOOOOOO"
+				"WOOOOOOHOOOOOOOO"
 			];
+			
+			var _voice = 
+			[
+				sound_Applause,
+				blanksound,
+				blanksound
+			]
 		
 			if (!CardinalNoctisCongrats_AudienceCheer_TalkStarted)
 			{
 				CutsceneText(_text, "Noxians", TEXTBOX_POS.BOTTOM, ft_NPC);
+				obj_Text.TextBox_Voices = _voice;
 				CardinalNoctisCongrats_AudienceCheer_TalkStarted = true;
 			}
-			else if (!instance_exists(obj_Text))
+			else if (!instance_exists(obj_Text)) && !audio_is_playing(sound_Applause)
 			{
 				CardinalNoctisCongrats_State = CARDINALNOCTISCONGRATS.LAVENDER_END_SPEECH;
 			}
@@ -270,7 +280,7 @@ switch(CardinalNoctisCongrats_State)
 			var _text = 
 			[
 				"WHAT WAS THAT!?",
-				"IT CAME FROM THE SHRINE",
+				"IT CAME FROM THE SHRINE!",
 				"THE SHRINE! THE SHRINE! THE SHRINE JUST EXPLODED!",
 				"WHATS HAPPENING?!"
 			];
@@ -298,7 +308,7 @@ switch(CardinalNoctisCongrats_State)
 			[
 				"PEOPLE OF NOX!",
 				"Calm yourselves this instant, panic breeds chaos.",
-				"There is no need to fear, a former Cardinal such as I will not permit any injuries for anyone",
+				"There is no need to fear, a former Cardinal such as I will not permit any injuries for anyone.",
 				"Nasi, Nadiolo, Fanna, Grela, Raijay!", 
 				"You 5 will retreat underground to safety, I cannot have you all in danger.",
 				"Jest! You will be in charge of leading them underground and protecting them from external threats."
@@ -325,15 +335,15 @@ switch(CardinalNoctisCongrats_State)
 		
 			var _text = 
 			[
-				"Righty-o Mother",
-				"Don't you worry little and big ones",
+				"Righty-o Mother!",
+				"Don't you worry little and big ones!",
 				"You're all safe with me and fun!"
 			];
 			
 			var _voice = 
 			[
+				sound_Jest_Talk_Volapachi_Halaka,
 				sound_Jest_Talk_haleKIzena,
-				blanksound,
 				sound_Jest_Talk_jaravajikaraZHAna,
 			]
 		

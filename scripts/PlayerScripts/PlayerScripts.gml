@@ -33,6 +33,12 @@ function PlayerFootsteps()
 	audio_play_sound(choose(sound_Footstep1, sound_Footstep2, sound_Footstep3, sound_Footstep4), 50, false, 1.5);
 }
 
+function ShowPlayerLocation()
+{
+	show_debug_message("X: {0}, ", obj_Player.x);
+	show_debug_message("Y: {0}, ", obj_Player.y);
+}
+
 //function for the players basic sword attack
 /// @description PlayerState_SeleneSword(sprite, hitbox, direction)
 /// @arg sprite

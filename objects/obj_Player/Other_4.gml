@@ -24,6 +24,11 @@ if (layer_exists("Player"))
 */
 if (!RoomIsCutscene)
 {
+	with (obj_Camera)
+	{
+		x = other.x;
+		y = other.y;
+	}
 	hascontrol = true;
 }
 

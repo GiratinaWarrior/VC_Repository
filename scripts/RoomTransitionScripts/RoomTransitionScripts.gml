@@ -78,6 +78,7 @@ function PlayerTransition(_targetRoom, _targetX, _targetY, _exitSeq, _enterSeq, 
 		
 		if (_movingUp && !global.MidTransition)
 		{
+			show_debug_message("Moving 'Down'")
 			y += 1000;
 		}
 		

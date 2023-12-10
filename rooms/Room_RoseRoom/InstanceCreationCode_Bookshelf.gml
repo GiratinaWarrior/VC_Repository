@@ -23,8 +23,8 @@ EntityAdditionFunc = function()
 			[
 				 "It's 'The Dawn of Nox'",
 				 "Ah, the nostalgia it brings...",
-				 "Mother used to read this book to us whenever we went to sleep",
-				 "Not that I remember the plot or anything",
+				 "Mother used to read this as our bedtime story.",
+				 "Not that I remember the plot or anything...",
 				 "Oh well, not like it matters anyway, right?"
 			];
 			
@@ -39,7 +39,8 @@ EntityAdditionFunc = function()
 			var _godOfLaughs = 
 			[
 				"It's 'To be the Lord of Laughs'",
-				"What's up with these jokes? Does the Lord of Laughs only know about puns?"
+				"What's up with these jokes?", 
+				"Does the Lord of Laughs only know puns?"
 			];
 			
 			TextBox_Text = array_concat(RoseRoomBookShelf_MainTextArray, _godOfLaughs);
@@ -53,7 +54,7 @@ EntityAdditionFunc = function()
 			[
 				"It's 'Flower Handbook'", 
 				"Ooh, our families names are in here",
-				"Except Brother, but he already had a name"
+				"Except Brother, but he already had a name."
 			];
 			
 			TextBox_Text = array_concat(RoseRoomBookShelf_MainTextArray, _flowerHandbook);
@@ -65,8 +66,8 @@ EntityAdditionFunc = function()
 			var _shrineGeneralGuide = 
 			[
 				"It's 'How to Conjure the Greatest Servant Ever'",
-				"Is this the book mother used to create the Shrine General?",
-				"Did she not realize it was satire?",
+				"Wait! Is this the book Mother used to make that Shrine General!",
+				"How did she not realize it was satire?",
 				"No wonder he turned out like that!"
 			]
 			
@@ -74,6 +75,20 @@ EntityAdditionFunc = function()
 		}
 		
 		BookArray[4] = function()
+		{
+		
+			var _valnyxShrine = 
+			[
+				"It's 'The Nature of Valnyx Shrine'!",
+				"It says here that Valnyx Shrine can transform!",
+				"But only to the will of the strongest person inside it.",
+				"Let's hope no one stronger than Mother arrives."
+			]
+			
+			TextBox_Text = array_concat(RoseRoomBookShelf_MainTextArray, _valnyxShrine);
+		}
+		
+		BookArray[5] = function()
 		{
 			
 			var _mysteryBook = 
@@ -88,7 +103,7 @@ EntityAdditionFunc = function()
 		
 		}
 		
-		var chosenText = BookArray[irandom_range(0, 3)];
+		var chosenText = BookArray[irandom_range(0, 4)];
 		
 		chosenText();
 	

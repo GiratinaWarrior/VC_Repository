@@ -24,7 +24,7 @@ switch(LavenderDeathCutscene_State)
 					
 		#region Lavender Rise
 				
-			SetRoomAudio_Music_Default(music_LavenderDeathTheme);
+			SetRoomAudio_Music_Default(music_LavenderDeathThemeV2);
 				
 			sprite_index = spr_Lavender_Rise;
 			
@@ -41,8 +41,7 @@ switch(LavenderDeathCutscene_State)
 	//Lavender Talk First Stage
 	case LAVENDERDEATH_CUTSCENE.LAVENDER_TALK_FIRST:
 		
-		#region Lavender Talk First
-			
+		#region Lavender Talk First			
 			
 			var _text = 
 			[
@@ -79,11 +78,20 @@ switch(LavenderDeathCutscene_State)
 				"All you had to do was lie on the ground and you would both live.",
 				"Or are you unsatisfied with what I have in store for your daughter?",
 				"Not like YOU can do anything about it.",
+			];
+			
+			var _voice = 
+			[
+				sound_Voizatia_Laugh_Tthuhuhuhu,
+				sound_Voizatia_Light_Orkazna,
+				sound_Voizatia_Light_Yaramah,
+				sound_Voizatia_Light_SHIhalaga
 			]
 			
 			if !(LavenderDeathCutscene_VoizatiaReact_TalkStarted)
 			{
 				CutsceneText(_text, "Voizatia", p, ft_Voizatia);
+				obj_Text.TextBox_Voices = _voice;
 				LavenderDeathCutscene_VoizatiaReact_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))
@@ -361,40 +369,6 @@ switch(LavenderDeathCutscene_State)
 		
 		break;//end Lavender Despair Talk Stage
 	
-	//Voizatia Appear Stage
-	case LAVENDERDEATH_CUTSCENE.VOIZATIA_APPEAR:
-	
-		#region Voizatia Appear
-			
-			with (obj_VoizatiaUndefeated)
-			{
-				image_alpha = 1;
-				x = other.x + 40;
-				y = other.y - 25; //332;
-				
-				if (sprite_index == spr_Voizatia_Stand_Attack_Charge) && (image_index >= image_number - 1)
-				{
-					sprite_index = spr_Voizatia_Stand_Attack;
-				}
-				
-			}
-			
-			if (LavenderDeathCutscene_TimeSource == noone)
-			{
-				obj_Camera.sprite_index = noone;
-				var _func = function()
-				{
-					LavenderDeathCutscene_State = LAVENDERDEATH_CUTSCENE.LAVENDER_FINAL_TALK;
-					time_source_destroy(LavenderDeathCutscene_TimeSource);
-					LavenderDeathCutscene_TimeSource = noone;
-				}
-				LavenderDeathCutscene_TimeSource = TimeSourceCreateAndStart(60, _func);
-			}
-		
-		#endregion
-	
-		break;//end Voizatia Appear
-		
 	//Lavender Final Attack Stage
 	case LAVENDERDEATH_CUTSCENE.LAVENDER_FINAL_TALK:
 		
@@ -477,13 +451,23 @@ switch(LavenderDeathCutscene_State)
 				"You really used your strongest attack to buy time in order to say your goodbyes",
 				"What a worthless effort.",
 				"Were you that scared of seeing the rest of your daughters life?",
-				"That you'd rather die than be a witness?",
+				"That you'd rather die than be a witness to it?",
 				"Very well. I'll grant your wish."
 			];
+			
+			var _voice = 
+			[
+				sound_Voizatia_Laugh_Tthuhuhuhu,
+				sound_Voizatia_Serious_Movialio,
+				sound_Voizatia_Serious_KorKENZmanya,
+				sound_Voizatia_Serious_KorKilimamya,
+				sound_Voizatia_Serious_Mezhovalaka,
+			]
 			
 			if !(LavenderDeathCutscene_VoizatiaMockLavender_TalkStarted)
 			{
 				CutsceneText(_text, "Voizatia", p, ft_Voizatia);
+				obj_Text.TextBox_Voices = _voice;
 				LavenderDeathCutscene_VoizatiaMockLavender_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))

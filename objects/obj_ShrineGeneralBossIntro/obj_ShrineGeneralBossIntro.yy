@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "3_ShrineArenaBossIntro",
-    "path": "folders/Objects/Cutscenes/Opening/3_ShrineArenaBossIntro.yy",
+    "name": "3_ShrineGeneralBossIntro",
+    "path": "folders/Objects/Cutscenes/Opening/3_ShrineGeneralBossIntro.yy",
   },
   "parentObjectId": null,
   "persistent": false,

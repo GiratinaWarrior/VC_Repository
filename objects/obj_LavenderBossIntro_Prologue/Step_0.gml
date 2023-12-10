@@ -58,7 +58,7 @@ switch(LavenderBossIntroPrologue_State)
 			var _text = 
 			[
 				"The sky sure is beautiful tonight, is it not?",
-				"Not a single cloud obscuring the stars nor blotting out the moon",
+				"Not a single cloud obscuring the stars nor blotting out the moon.",
 				"But clouds are necessary for the moon to be so beautiful, eitherwise such a beautiful sight would become stale.",
 				"Same with these flowers.",
 				"If flowers did not wither away, we could never appreciate their beauty.",
@@ -118,7 +118,7 @@ switch(LavenderBossIntroPrologue_State)
 			[
 				"Hahaha, did you like my little poem, Rose-darling?",
 				"I think it is quite beautiful, if I do say so myself.",
-				"I am not the greatest at getting to the point, so I will be doing some 'show do not tell'"
+				"I am not the greatest at getting to the point, so I will be doing some 'show do not tell'."
 			];
 			
 			if !(LavenderBossIntroPrologue_LavenderExplain_TalkStarted)
@@ -179,8 +179,8 @@ switch(LavenderBossIntroPrologue_State)
 			var _text = 
 			[
 				"Rose!",
-				"The final test to become Cardinal is to surpass the previous Cardinal to justify your title",
-				"If you can defeat me in battle, you will be ready for anything the world throws at you",
+				"The final test to become Cardinal is to surpass the previous Cardinal to justify your title.",
+				"If you can defeat me in battle, you will be ready for anything the world throws at you.",
 				"Do not hold back. Go all out. Show me all of your strength, as I will show you the power of the Former Cardinal.",
 				"Come forth! Show me how my little flower has bloomed!",
 			];
@@ -311,7 +311,7 @@ switch(LavenderBossIntroPrologue_State)
 			var _text = 
 			[
 				"Rose...",
-				"Rose-darling, you really have become strong, stronger than I ever could have predicted",
+				"Rose-darling, you really have become strong, stronger than I ever could have predicted.",
 				"I am truly proud to be able to call you my own daughter.",
 				"You are undoubtedly worthy of the title 'Cardinal of Nox'."
 			];
@@ -450,13 +450,19 @@ switch(LavenderBossIntroPrologue_State)
 								LavenderBossIntroPrologue_TimeSource = noone;
 							}
 						}
-						with (other)
-						{
-							if (LavenderBossIntroPrologue_TimeSource == noone) LavenderBossIntroPrologue_TimeSource = TimeSourceCreateAndStart(30, _func);
-						}
+					with (other)
+					{
+						if (LavenderBossIntroPrologue_TimeSource == noone) LavenderBossIntroPrologue_TimeSource = TimeSourceCreateAndStart(30, _func);
+					}
 					if (sprite_index == spr_Lavender_Walk)
 					{
 						x -= 3;
+						
+						if (x <= obj_Player.x)
+						{
+							obj_Player.image_xscale = -1;
+						}
+						
 					}
 					
 					if (x <= 400)
@@ -476,7 +482,7 @@ switch(LavenderBossIntroPrologue_State)
 	
 		#region Cutscene End Stage
 		
-			SetRoomAudio_Music_Default(music_ShrineMemoryTheme);
+			//SetRoomAudio_Music_Default(music_ShrineMemoryTheme);
 		
 			instance_destroy(LavenderBossIntroPrologue_BattleEnd_Lavender);
 			

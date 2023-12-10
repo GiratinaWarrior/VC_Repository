@@ -5,20 +5,24 @@
 /// @param font is the font choice of the text
 /// @param color is the color of the text
 /// @param box is the sprite of the textbox
-function CutsceneText(_text = [""], _name = "" , _pos = TEXTBOX_POS.BOTTOM, _font = ft_NPC, _color = c_black , _box = spr_TextBox, _skippable = true){
+function CutsceneText(_text = [""], _name = "" , _pos = TEXTBOX_POS.BOTTOM, _font = ft_NPC, _color = c_black , _box = spr_NewTextBox, _skippable = true){
 	
 	var _textObj = instance_create_depth(x, y, -99, obj_Text);
 	
 	with(_textObj)
 	{
+		
+		//SetTextDefaults();
+		
 		TextBox_Text = _text;
 		if (_name != "")
 		{
 			for (var i = 0; i < array_length(TextBox_Text); i++)
 			{
-				TextBox_Text[i] = _name + ": " + TextBox_Text[i];
+				//TextBox_Text[i] = _name + ": " + TextBox_Text[i];
 			}
 		}
+		Name = _name;
 		TextBox_Font = _font;
 		TextBox_BoxSprite = _box;
 		TextBox_TextColor = _color;
@@ -41,7 +45,10 @@ function CutsceneText(_text = [""], _name = "" , _pos = TEXTBOX_POS.BOTTOM, _fon
 /// @param text
 function Text(_text)
 {
+	//SetTextDefaults();
+	
 	TextBox_Text[TextBox_PageNumber] = _text;
 	TextBox_PageNumber++;
 
 }
+

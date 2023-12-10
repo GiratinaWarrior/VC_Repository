@@ -1,5 +1,7 @@
 /// @description Controls
 
+
+
 //Move right and left
 global.Key_Right = keyboard_check(vk_right) || keyboard_check(ord("D"));
 global.Key_Left = keyboard_check(vk_left) || keyboard_check(ord("A"));
@@ -33,7 +35,7 @@ global.Key_Heal = keyboard_check(ord("F"));
 global.Key_Talk = keyboard_check_pressed(vk_space) || mouse_check_button_pressed(mb_right);
 
 //Skipping cutscenes
-global.Key_Skip = keyboard_check_pressed(ord("C"));
+global.Key_Skip = keyboard_check(ord("C"));
 
 //---------Controller--------//
 

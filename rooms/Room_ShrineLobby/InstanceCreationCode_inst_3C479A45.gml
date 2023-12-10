@@ -1,3 +1,3 @@
 target = Room_ShrineTutorial_VallenHeal;
 WarpX = 32;
-WarpY = 192;
+WarpY = 208;

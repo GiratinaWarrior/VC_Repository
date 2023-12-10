@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-var _skippable = true;
+var _skippable = false;
 
 var _skipButton = global.Key_Skip;
 
@@ -84,10 +84,18 @@ switch(VoizatiaBossIntro_State)
 				"Thats one hell of a low bar, it's a miracle that no ones tripped over it yet.",
 				"Wouldn't you agree Rose?",
 			];
+			
+			var _voice = 
+			[
+				sound_Voizatia_Laugh_Tthuhuhuhu,
+				sound_Voizatia_Light_Orkazna,
+				sound_Voizatia_Light_ValaSHImana,
+			]
 		
 			if !(VoizatiaBossIntro_VoizatiaTalkLavender_TalkStarted)
 			{
-				CutsceneText(_text, "Voziatia", TEXTBOX_POS.BOTTOM, ft_Voizatia);
+				CutsceneText(_text, "Voizatia", TEXTBOX_POS.BOTTOM, ft_Voizatia);
+				obj_Text.TextBox_Voices = _voice;
 				VoizatiaBossIntro_VoizatiaTalkLavender_TalkStarted = true;
 			}
 			
@@ -139,17 +147,27 @@ switch(VoizatiaBossIntro_State)
 			
 			var _text = 
 			[
-				"You're different from these people aren't you? I can tell. There's something about you, something familiar.",
+				"You're different from these people aren't you? I can tell.", 
+				"There's something about you, something familiar.",
 				"I could tell the moment I saw you, and the fact that you're here means you beat Malvalia, as expected.",
 				"I hope you weren't to rough with her, she may be rude, reckless, and sassy, but she's still my little sister.",
 				"Though I guess I can't really ask that since I roughed up your...mother."
 			];
 			
+			var _voice = 
+			[
+				sound_Voizatia_Light_Kaaah,
+				sound_Voizatia_Light_Yaramah,
+				sound_Voizatia_Light_ShihaGAla,
+				sound_Voizatia_Light_ValaSHImana,
+				sound_Voizatia_Light_SHIhalaga
+			]
+			
 			if !(VoizatiaBossIntro_VoizatiaTalkRose_TalkStarted)
 			{
 				layer_sequence_destroy(VoizatiaBossIntro_VoizatiaTeleportRose_Sequence);
 				CutsceneText(_text, "Voizatia", TEXTBOX_POS.BOTTOM, ft_Voizatia);
-				//obj_Player.image_xscale = 1;
+				obj_Text.TextBox_Voices = _voice;
 				VoizatiaBossIntro_VoizatiaTalkRose_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))
@@ -184,9 +202,22 @@ switch(VoizatiaBossIntro_State)
 				"So here's the deal...",
 			];
 			
+			var _voice = 
+			[
+				sound_Voizatia_Light_Kaaah,
+				sound_Voizatia_Light_Orkazna,
+				sound_Voizatia_Serious_KorKilimamya,
+				sound_Voizatia_Serious_KorKENZmanya,
+				sound_Voizatia_Light_SHIhalaga,
+				sound_Voizatia_Light_ValaSHImana,
+				sound_Voizatia_Light_Yaramah,
+				sound_Voizatia_Light_ShihaGAla
+			]
+			
 			if !(VoizatiaBossIntro_VoizatiaProposal_TalkStarted)
 			{
 				CutsceneText(_text, "Voizatia", TEXTBOX_POS.BOTTOM, ft_Voizatia);
+				obj_Text.TextBox_Voices = _voice;
 				VoizatiaBossIntro_VoizatiaProposal_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))
@@ -235,9 +266,20 @@ switch(VoizatiaBossIntro_State)
 				"Or do you prefer you and your mother dying right here and right now?"
 			];
 		
+			var _voice = 
+			[
+				sound_Voizatia_Light_Orkazna,
+				sound_Voizatia_Light_ShihaGAla,
+				sound_Voizatia_Light_ValaSHImana,
+				sound_Voizatia_Serious_KorKilimamya,
+				sound_Voizatia_Serious_KorKENZmanya,
+				sound_Voizatia_Serious_Movialio,
+			]
+		
 			if !(VoizatiaBossIntro_VoizatiaThreatenLavender_TalkStarted)
 			{
 				CutsceneText(_text, "Voizatia", TEXTBOX_POS.BOTTOM, ft_Voizatia);
+				obj_Text.TextBox_Voices = _voice;
 				obj_Player.image_xscale = -1;
 				VoizatiaBossIntro_VoizatiaThreatenLavender_TalkStarted = true;
 			}
@@ -270,10 +312,20 @@ switch(VoizatiaBossIntro_State)
 				"Defeating me here will solve all of your problems won't it? There's no point in my deal is there?",
 				"Then how about this?",
 			];
+			
+			var _voice = 
+			[
+				sound_Voizatia_Laugh_Tthuhuhuhu,
+				sound_Voizatia_Serious_Movialio,
+				sound_Voizatia_Serious_KorKENZmanya,
+				sound_Voizatia_Serious_KorKilimamya,
+				sound_Voizatia_Serious_Mezhovalaka,
+			]
 		
 			if !(VoizatiaBossIntro_VoizatiaChallengeRose_TalkStarted)
 			{
 				CutsceneText(_text, "Voizatia", TEXTBOX_POS.BOTTOM, ft_Voizatia);
+				obj_Text.TextBox_Voices = _voice;
 				VoizatiaBossIntro_VoizatiaChallengeRose_TalkStarted = true;
 			}
 			
@@ -317,9 +369,14 @@ switch(VoizatiaBossIntro_State)
 		
 			var _text = ["COME AT ME!"];
 			
+			var _voice = [sound_Voizatia_Attack_Vyakai];
+			
 			if !(VoizatiaBossIntro_VoizatiaProvoke_TalkStarted)
 			{
 				CutsceneText(_text, "Voizatia", TEXTBOX_POS.BOTTOM, ft_Voizatia);
+				obj_Text.TextBox_Voices = _voice;
+				obj_Text.TextBox_TextSkippable = false;
+				obj_Text.TextBox_TextColor = c_red;
 				VoizatiaBossIntro_VoizatiaProvoke_TalkStarted = true;
 			}
 		
@@ -434,18 +491,26 @@ switch(VoizatiaBossIntro_State)
 			
 			var _text = 
 			[
-				"Heh",
-				"Hehe",
-				"Hehehe",
-				"HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAAAAAAAAAAAAAAAAAAAAAAAA!",
+				"Hehehehehe",
+				"HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAAAAAAAAAAAAAA!",
 				"THIS IS JUST TOO MUCH!",
 				"YOUR FACE! YOUR FACE LOOKED SO STUPID! LIKE YOU JUST REGRETTED YOUR ENTIRE WORTHLESS LIFE UNTIL NOW!",
 				"Haaaa, man."
 			];
 			
+			var _voice = 
+			[
+				sound_Voizatia_Laugh_Tthuhuhuhu,
+				sound_Voizatia_Laugh_AHAHAHAHA,
+				sound_Voizatia_Laugh_AHAHAHAHA,
+				sound_Voizatia_Laugh_AHAHAHAHA,
+				sound_Voizatia_Light_Kaaah
+			]
+			
 			if !(VoizatiaBossIntro_VoizatiaMock_TalkStarted)
 			{
 				CutsceneText(_text, "Voizatia", TEXTBOX_POS.BOTTOM, ft_Voizatia);
+				obj_Text.TextBox_Voices = _voice;
 				VoizatiaBossIntro_VoizatiaMock_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))
@@ -495,12 +560,22 @@ switch(VoizatiaBossIntro_State)
 				"Once you do so, come back in order to be killed gloriously by me.",
 				"You must do this alone, you may not accept help from anyone, not even your brother.",
 				"What? It's better than the way your mother died."
-				
 			];
+		
+			var _voice = 
+			[
+				sound_Voizatia_Light_ShihaGAla,
+				sound_Voizatia_Serious_Mezhovalaka,
+				sound_Voizatia_Serious_Movialio,
+				sound_Voizatia_Serious_KorKENZmanya,
+				sound_Voizatia_Serious_KorKilimamya,
+				sound_Voizatia_Light_ValaSHImana,
+			]
 		
 			if !(VoizatiaBossIntro_VoizatiaOrders_TalkStarted)
 			{
 				CutsceneText(_text, "Voizatia", TEXTBOX_POS.BOTTOM, ft_Voizatia);
+				obj_Text.TextBox_Voices = _voice;
 				VoizatiaBossIntro_VoizatiaOrders_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))
@@ -560,11 +635,22 @@ switch(VoizatiaBossIntro_State)
 				"Hahaha",
 				"I sure can't wait for the next time we meet.",
 				"We're going to have one hell of a time",
+			];
+			
+			var _voice = 
+			[
+				sound_Voizatia_Light_Kaaah,
+				sound_Voizatia_Light_Yaramah,
+				sound_Voizatia_Light_Orkazna,
+				sound_Voizatia_Laugh_Tthuhuhuhu,
+				sound_Voizatia_Light_SHIhalaga,
+				sound_Voizatia_Laugh_Tthuhuhuhu
 			]
 				
 			if !(VoizatiaBossIntro_VoizatiaFlyTalk_TalkStarted)
 			{
 				CutsceneText(_text, "Voizatia", TEXTBOX_POS.BOTTOM, ft_Voizatia);
+				obj_Text.TextBox_Voices = _voice;
 				VoizatiaBossIntro_VoizatiaFlyTalk_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))

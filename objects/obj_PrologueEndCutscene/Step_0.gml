@@ -60,16 +60,27 @@ switch (PrologueEndCutscene_Stage)
 			var _text = 
 			[
 				"Now then, what to do now?",
-				"Rose should be on her way to where Escular is right about now, so I should find something to do.",
+				"Rose should be on her way to where Phantom Lance is right about now, so I should find something to do.",
 				"Perhaps I should read some of this Shrines books.",
 				"It's been a while, I wonder if they've updated their inventory.",
 				"Or maybe I could go on a decimation rampage in Noctis City, give Rose a little more motivation.",
 				"Or better yet..."
 			];
 		
+			var _voice = 
+			[
+				sound_Voizatia_Light_Kaaah,
+				sound_Voizatia_Light_Yaramah,
+				sound_Voizatia_Light_ShihaGAla,
+				sound_Voizatia_Light_ValaSHImana,
+				sound_Voizatia_Serious_KorKilimamya,
+				sound_Voizatia_Light_Orkazna,
+			]
+		
 			if !(PrologueEndCutscene_VoizatiaEnterTalk_TalkStarted)
 			{
 				PrologueEndCutscene_VoizatiaEnterTalk_Talk = CutsceneText(_text, "Voizatia", p, ft_Voizatia);
+				PrologueEndCutscene_VoizatiaEnterTalk_Talk.TextBox_Voices = _voice;
 				PrologueEndCutscene_VoizatiaEnterTalk_TalkStarted = true;
 			}
 			
@@ -93,10 +104,18 @@ switch (PrologueEndCutscene_Stage)
 				"Man, you really have it hard, don't ya?",
 				"Malvalia."
 			];
+			
+			var _voice = 
+			[
+				sound_Voizatia_Light_Kaaah,
+				sound_Voizatia_Light_Yaramah,
+				sound_Voizatia_Light_Orkazna,
+			]
 		
 			if !(PrologueEndCutscene_VoizatiaNoticeMalvalia_TalkStarted)
 			{
 				PrologueEndCutscene_VoizatiaNoticeMalvalia_Talk = CutsceneText(_text, "Voizatia", p, ft_Voizatia);
+				PrologueEndCutscene_VoizatiaNoticeMalvalia_Talk.TextBox_Voices = _voice;
 				PrologueEndCutscene_VoizatiaNoticeMalvalia_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))
@@ -120,11 +139,10 @@ switch (PrologueEndCutscene_Stage)
 			}	
 			else if (layer_sequence_is_finished(PrologueEndCutscene_MalvaliaEnter_Sequence))
 			{
-				PrologueEndCutscene_MalvaliaIdle = layer_sequence_create(layer, x, y, seq_PrologueEndCutscene_MalvaliaIdle);
+				PrologueEndCutscene_MalvaliaIdle = layer_sequence_create(layer, x, y, seq_PrologueEndCutscene_MalvaliaIdleAngry);
 				layer_sequence_destroy(PrologueEndCutscene_MalvaliaEnter_Sequence);
 				PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.MALVALIA_ENTER_TALK;
-			}
-			
+			}	
 			
 		#endregion
 		
@@ -165,21 +183,33 @@ switch (PrologueEndCutscene_Stage)
 			
 			var _text = 
 			[
-				"Now now, calm down. I'm glad that you've inherited the ways of our people, but blind rage isn't gonna get you anywhere, ya gotta be rational",
+				"Now now, calm down. I'm glad that you've inherited the ways of our people, but blind rage isn't gonna get you anywhere, ya gotta be rational.",
 				"Think carefully of how you're gonna beat her, and what the 'most painful death' even looks like.",
 				"Only then will slaughtering her be satisfying.",
 				"That is who we, the Vlastels, truly are.",
 				"So until then.",
 				"Calm. Down."
+			];
+			
+			var _voice = 
+			[
+				sound_Voizatia_Light_Kaaah,
+				sound_Voizatia_Light_SHIhalaga,
+				sound_Voizatia_Light_ValaSHImana,
+				sound_Voizatia_Serious_KorKilimamya,
+				sound_Voizatia_Light_Orkazna,
+				sound_Voizatia_Attack_Valahai
 			]
 			
 			if !(PrologueEndCutscene_VoizatiaCalmMalvalia_TalkStarted)
 			{
 				PrologueEndCutscene_VoizatiaCalmMalvalia_Talk = CutsceneText(_text, "Voizatia", p, ft_Voizatia);
+				PrologueEndCutscene_VoizatiaCalmMalvalia_Talk.TextBox_Voices = _voice;
 				PrologueEndCutscene_VoizatiaCalmMalvalia_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))
 			{
+				//layer_sequence_destroy(PrologueEndCutscene_MalvaliaIdle);
 				if (PrologueEndCutscene_TimeSource == noone) PrologueEndCutscene_TimeSource = TimeSourceCreateAndStart(60, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.MALVALIA_EXIT_TALK; time_source_destroy(PrologueEndCutscene_TimeSource); PrologueEndCutscene_TimeSource = noone;});
 			}
 		
@@ -191,7 +221,7 @@ switch (PrologueEndCutscene_Stage)
 	case PROLOGUE_END_CUTSCENE.MALVALIA_EXIT_TALK:
 	
 		#region Malvalia Exit Talk
-		
+			
 			var _text = 
 			[
 				"...",
@@ -213,7 +243,7 @@ switch (PrologueEndCutscene_Stage)
 			}
 			else if !(instance_exists(obj_Text))
 			{
-				if (PrologueEndCutscene_TimeSource == noone) PrologueEndCutscene_TimeSource = TimeSourceCreateAndStart(100, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.MALVALIA_EXIT; time_source_destroy(PrologueEndCutscene_TimeSource); PrologueEndCutscene_TimeSource = noone;});
+				if (PrologueEndCutscene_TimeSource == noone) PrologueEndCutscene_TimeSource = TimeSourceCreateAndStart(30, function(){PrologueEndCutscene_Stage = PROLOGUE_END_CUTSCENE.MALVALIA_EXIT; time_source_destroy(PrologueEndCutscene_TimeSource); PrologueEndCutscene_TimeSource = noone;});
 			}
 		
 		#endregion
@@ -261,19 +291,33 @@ switch (PrologueEndCutscene_Stage)
 				"And there she goes, sounds like she'll be having fun.",
 				"I guess that's my cue to go do something.",
 				"...",
-				"Ha",
-				"Hahahahaha",
+				"Hahahahaha...",
 				"HAHAHAHAHAHAHAHAHA!",
 				"haaa...",
 				"Damn, when was the last time I was THIS excited, I feel like a kid that's stepped into their backyard for the first time!",
 				"I see now, this planet truly is interesting.",
 				"You were right about everything, just as expected from you...",
-				"Your Majesty!"
+				"Your Majesty! "
+			];
+			
+			var _voice = 
+			[
+				sound_Voizatia_Light_ValaSHImana,
+				sound_Voizatia_Light_Yaramah,
+				blanksound,
+				sound_Voizatia_Laugh_Tthuhuhuhu,
+				sound_Voizatia_Laugh_AHAHAHAHA,
+				sound_Voizatia_Light_Kaaah,
+				sound_Voizatia_Light_Orkazna,
+				sound_Voizatia_Serious_KorKilimamya,
+				sound_Voizatia_Serious_KorKENZmanya,
+				sound_Voizatia_Attack_Vyakai
 			]
 			
 			if !(PrologueEndCutscene_VoizatiaLastTalk_TalkStarted)
 			{
 				PrologueEndCutscene_VoizatiaLastTalk_Talk = CutsceneText(_text, "Voizatia", p, ft_Voizatia);
+				PrologueEndCutscene_VoizatiaLastTalk_Talk.TextBox_Voices = _voice;
 				PrologueEndCutscene_VoizatiaLastTalk_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))

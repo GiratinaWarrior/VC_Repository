@@ -112,6 +112,7 @@ function VoizatiaBossPrologue_SinEruption()
 		{			
 			image_index = 0;
 			sprite_index = spr_Voizatia_SinEruption_Attack;
+			audio_play_sound(sound_Voizatia_Attack_OohshimaKAla, 100, false, 3);
 		}
 	}
 	

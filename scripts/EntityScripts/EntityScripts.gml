@@ -48,14 +48,18 @@ function EntityTextBox()
 					{
 						TextBox_Text = other.TextBox_Text;
 						TextBox_Voices = other.TextBox_Voices;
-						if (other.Name != "" && !other.NameInserted)
+						
+						Name = other.Name;
+						
+						if (Name != "" && !other.NameInserted)
 						{
 							for (var n = 0; n < array_length(TextBox_Text); n++)
 							{
-								TextBox_Text[n] = other.Name + ": " + TextBox_Text[n];
+								//TextBox_Text[n] = Name + ": " + TextBox_Text[n];
 							}
 							other.NameInserted = true;
 						}
+						
 						TextBox_UIPosition = other.TextBox_UIPosition;
 						TextBox_Font = other.TextBox_Font;
 					}//end access myTextbox

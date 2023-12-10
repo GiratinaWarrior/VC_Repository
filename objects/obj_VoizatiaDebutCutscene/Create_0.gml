@@ -3,8 +3,12 @@
 SetSpawnpoint(1888, 1782, Room_DarkShrineBasementStairs);
 SaveGame();
 
+VoizatiaDebut_Wall = noone;
+
 enum VOIZATIADEBUT 
 {
+	OFF,
+	CAMERA_PAN,
 	ROSE_ENTER, //Rose enters the scene
 	VOIZATIA_TALK_FIRST, //Voizatia speaks for the first time
 	LAVENDER_RESPOND_FIRST, //Lavender retorts to Voizatias statement
@@ -22,7 +26,10 @@ enum VOIZATIADEBUT
 	MALVALIA_SUMMON_SHADOWS, //Malvalia summons the Shadow Realm
 	MALVALIA_EXIT_TALK, //Malvalia tells Rose to follow her
 	MALVALIA_EXIT, //Malvalia disappears into the Shadow Realm Gate
-	CUTSCENE_END //The cutscene is over
+	CUTSCENE_END, //The cutscene is over
+	
+	SHADOWREALM_TRANS
+	
 }
 
 VoizatiaDebut_State = 0;
@@ -30,6 +37,8 @@ VoizatiaDebut_State = 0;
 VoizatiaDebut_LavenderIdle_Sequence = noone;
 VoizatiaDebut_VoizatiaIdle_Sequence = noone;
 VoizatiaDebut_MalvaliaIdle_Sequence = noone;
+
+VoizatiaDebut_TimeSource = noone;
 
 //-----------Rose Enter Stage-------------------//
 VoizatiaDebut_RoseEnter_Sequence = noone;

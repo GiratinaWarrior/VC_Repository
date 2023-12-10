@@ -5,6 +5,9 @@ ySpeed = 0;
 
 Axeye_Dir = 1;
 
+Axeye_AttackSpeed_X = 0;
+Axeye_AttackSpeed_Y = 0;
+
 enum AXEYE_STATE
 {
 	IDLE,
@@ -49,7 +52,5 @@ Axeye_AttackDir = 0;
 
 Axeye_AttackSpeed = 8;
 
-//------Stuck State------------//
-Axeye_UnstuckSpeed = -5;
-Axeye_UnstuckRate = 0.1;
-Axeye_UnstuckSpeedMax = 2;
+Axeye_AttackTimer = 0;
+Axeye_AttackTimerLimit = 50;

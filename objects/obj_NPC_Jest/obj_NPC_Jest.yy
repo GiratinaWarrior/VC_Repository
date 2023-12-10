@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_Jest_Idle_Sad",
-    "path": "sprites/spr_Jest_Idle_Sad/spr_Jest_Idle_Sad.yy",
+    "name": "spr_Jest_Idle",
+    "path": "sprites/spr_Jest_Idle/spr_Jest_Idle.yy",
   },
   "spriteMaskId": null,
   "visible": true,

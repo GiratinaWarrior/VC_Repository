@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Other",
-    "path": "folders/Objects/PlayerStuff/Mechanics/Other.yy",
+    "name": "Persistents",
+    "path": "folders/Objects/Operators/Persistents.yy",
   },
   "parentObjectId": null,
   "persistent": true,

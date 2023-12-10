@@ -1,19 +1,10 @@
-/// @description Camera follow player
-
-
-
-if (instance_exists(follow))
-{
-	//show_debug_message("Target: {0}", follow);
-	//show_debug_message("Target Coordinates: x = {0}, y = {1}", follow.x, follow.y);
-}
+/// @description Camera follow playe
 
 #region Camera follows player
 
 //Update destination 
 if (instance_exists(follow)) 
 {
-
 	if (follow == obj_Player)
 	{
 		//move the camera infront of the player
@@ -26,8 +17,8 @@ if (instance_exists(follow))
 	
 		if (Camera_PlayerFollowXTimer++ > Camera_PlayerFollowXTimerLimit) && (follow.hascontrol)
 		{
-			Camera_PlayerAheadDist += 5;
-			xTo = follow.x + (sign(follow.xSpeed) * min(300, Camera_PlayerAheadDist));
+			Camera_PlayerAheadDist += 2;
+			xTo = follow.x + (sign(follow.xSpeed) * min(200, Camera_PlayerAheadDist));
 		}
 		else
 		{
@@ -36,23 +27,7 @@ if (instance_exists(follow))
 		
 		
 		
-		/*
-		if (follow.ySpeed < 1)
-		{
-			Camera_PlayerFollowYTimer = 0;
-		}
 	
-		if (Camera_PlayerFollowYTimer++ >= Camera_PlayerFollowYTimerLimit) && (follow.hascontrol)
-		{
-			Camera_PlayerBelowDist += 4;
-			yTo = follow.y + (sign(follow.ySpeed) * min(200, Camera_PlayerBelowDist));
-		}
-		else
-		{
-			Camera_PlayerBelowDist = 0;
-			yTo = follow.y;
-		}
-		*/
 		
 		if (follow.ySpeed <= 0.4)
 		{
@@ -71,19 +46,7 @@ if (instance_exists(follow))
 			Camera_PlayerBelowDist = 0;
 		}
 		
-		/*
-		if (follow.ySpeed > 3)
-		{
-			yTo = follow.y + (sign(follow.ySpeed) * 200);
-		}
-		else
-		{
-			yTo = follow.y;
-		}
-		*/
-		
-	}//end follow is player
-	
+	}//end follow is player	
 }//end follow exists
 
 //Update object position

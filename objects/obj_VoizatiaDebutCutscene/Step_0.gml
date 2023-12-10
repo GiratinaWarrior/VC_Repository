@@ -4,9 +4,76 @@ var _VoizatiaFont = ft_Voizatia;
 
 var _MalvaliaFont = ft_Malvalia;
 
+var _skippable = false;
+
+var _skipButton = global.Key_Skip;
+
+var _skipFunc = function()
+{
+	if (VoizatiaDebut_State != VOIZATIADEBUT.SHADOWREALM_TRANS)
+	{
+		instance_destroy(obj_Text);
+		with (obj_CarvalinePedestal)
+		{
+			sprite_index = spr_CarvalinePedestal_Empty;
+		}
+		//obj_Player.x = 256 + RES_W;
+		//obj_Player.y = 464;
+		layer_sequence_destroy(VoizatiaDebut_VoizatiaIdle_Sequence);
+		layer_sequence_destroy(VoizatiaDebut_LavenderIdle_Sequence);
+		layer_sequence_destroy(VoizatiaDebut_RoseEnter_Sequence);
+		VoizatiaDebut_State = VOIZATIADEBUT.SHADOWREALM_TRANS;
+	}
+	
+}
+
+if (_skipButton && _skippable)
+{
+	_skipFunc();
+}
+
 //Voizatia Debut Cutscene State machine
 switch(VoizatiaDebut_State)
 {
+	
+	case VOIZATIADEBUT.OFF:
+		
+		if !(VoizatiaDebut_RoseEnter_SequenceCreated)
+		{
+			//obj_Camera.follow = noone;
+			//VoizatiaDebut_RoseEnter_Sequence = layer_sequence_create("ShrinePedestal", 0, 4, seq_VoizatiaDebut_RoseEnter);
+			VoizatiaDebut_LavenderIdle_Sequence = layer_sequence_create("ShrinePedestal", 0, 0, seq_VoizatiaDebut_LavenderIdle);
+			VoizatiaDebut_VoizatiaIdle_Sequence = layer_sequence_create(layer, 0, 0, seq_VoizatiaDebut_VoizatiaIdle);
+			VoizatiaDebut_RoseEnter_SequenceCreated = true;
+		}
+		
+		break;
+		
+	case VOIZATIADEBUT.CAMERA_PAN:
+		
+		var _cameraTargetX = 1440;
+		var _cameraTargetY = 270;
+			
+		with (obj_Camera)
+		{
+			follow = noone;
+			xTo = _cameraTargetX;
+			yTo = _cameraTargetY;
+		}
+		
+		if (VoizatiaDebut_TimeSource == noone)
+		{
+			var _func = function()
+			{
+				VoizatiaDebut_State = VOIZATIADEBUT.VOIZATIA_TALK_FIRST;
+				time_source_destroy(VoizatiaDebut_TimeSource);
+				VoizatiaDebut_TimeSource = noone;
+			}
+			TimeSourceCreateAndStart(130, _func);
+		}
+		
+		break;
+	
 	//Rose Enter Stage
 	case VOIZATIADEBUT.ROSE_ENTER:
 		
@@ -15,20 +82,21 @@ switch(VoizatiaDebut_State)
 			if !(VoizatiaDebut_RoseEnter_SequenceCreated)
 			{
 				obj_Camera.follow = noone;
-				VoizatiaDebut_RoseEnter_Sequence = layer_sequence_create(layer, 0, 4, seq_VoizatiaDebut_RoseEnter);
-				VoizatiaDebut_LavenderIdle_Sequence = layer_sequence_create(layer, 0, 0, seq_VoizatiaDebut_LavenderIdle);
+				VoizatiaDebut_RoseEnter_Sequence = layer_sequence_create("ShrinePedestal", 0, 4, seq_VoizatiaDebut_RoseEnter);
+				VoizatiaDebut_LavenderIdle_Sequence = layer_sequence_create("ShrinePedestal", 0, 0, seq_VoizatiaDebut_LavenderIdle);
 				VoizatiaDebut_VoizatiaIdle_Sequence = layer_sequence_create(layer, 0, 0, seq_VoizatiaDebut_VoizatiaIdle);
 				VoizatiaDebut_RoseEnter_SequenceCreated = true;
 			}
 			else if (layer_sequence_is_finished(VoizatiaDebut_RoseEnter_Sequence))
 			{
 				obj_Player.x = 256 + RES_W;
-				obj_Player.y = 464//190 + RES_H/2;
+				obj_Player.y = 464;//190 + RES_H/2;
 				layer_sequence_destroy(VoizatiaDebut_RoseEnter_Sequence);
 				VoizatiaDebut_State = VOIZATIADEBUT.VOIZATIA_TALK_FIRST;
 			}
 			
 			obj_Camera.xTo = 3000;
+			obj_Camera.x = 2000;
 		
 		#endregion
 		
@@ -50,9 +118,19 @@ switch(VoizatiaDebut_State)
 				"Permanently."
 			]
 		
+			var _voice = 
+			[
+				sound_Voizatia_Light_Kaaah,
+				sound_Voizatia_Light_Yaramah,
+				sound_Voizatia_Light_ValaSHImana,
+				sound_Voizatia_Light_ShihaGAla,
+				sound_Voizatia_Serious_KorKilimamya
+			]
+			
 			if !(VoizatiaDebut_VoizatiaTalkFirst_TalkStarted)
 			{
 				CutsceneText(_text, "???", TEXTBOX_POS.TOP, _VoizatiaFont);
+				obj_Text.TextBox_Voices = _voice;
 				VoizatiaDebut_VoizatiaTalkFirst_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))
@@ -104,10 +182,22 @@ switch(VoizatiaDebut_State)
 				"The name's Voizatia.",
 				"Please do your best to put up a decent fight."
 			];
+			
+			var _voice = 
+			[
+				sound_Voizatia_Light_Kaaah,
+				sound_Voizatia_Light_Orkazna,
+				sound_Voizatia_Light_SHIhalaga,
+				sound_Voizatia_Light_ShihaGAla,
+				sound_Voizatia_Light_ValaSHImana,
+				sound_Voizatia_Serious_Mezhovalaka,
+				sound_Voizatia_Serious_Movialio,
+			]
 		
 			if !(VoizatiaDebut_VoizatiaRespondSecond_TalkStarted)
 			{
 				CutsceneText(_text, "???", TEXTBOX_POS.TOP, _VoizatiaFont);
+				obj_Text.TextBox_Voices = _voice;
 				VoizatiaDebut_VoizatiaRespondSecond_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))
@@ -153,11 +243,18 @@ switch(VoizatiaDebut_State)
 				"It's only fair that both sides start with the same number of pieces",
 				"Come forth, Malvalia!"
 			];
+			
+			var _voice = 
+			[
+				sound_Voizatia_Light_Kaaah,
+				sound_Voizatia_Serious_KorKilimamya,
+				sound_Voizatia_Yell_Kai,
+			]
 		
 			if !(VoizatiaDebut_VoizatiaSummonMalvalia_TalkStarted)
 			{
 				CutsceneText(_text, "Voizatia", TEXTBOX_POS.TOP, _VoizatiaFont);
-				
+				obj_Text.TextBox_Voices = _voice;
 				VoizatiaDebut_VoizatiaSummonMalvalia_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))
@@ -229,9 +326,18 @@ switch(VoizatiaDebut_State)
 				"IT'LL BE THE LAST THING YOU'LL EVER DO AFTER ALL!"
 			];
 			
+			var _voice = 
+			[
+				sound_Voizatia_Light_Kaaah,
+				sound_Voizatia_Light_Orkazna,
+				sound_Voizatia_Light_SHIhalaga,
+				sound_Voizatia_Serious_KorKENZmanya,
+			]
+			
 			if !(VoizatiaDebut_VoizatiaRespondThird_TalkStarted)
 			{
 				CutsceneText(_text, "Voizatia", TEXTBOX_POS.TOP, _VoizatiaFont);
+				obj_Text.TextBox_Voices = _voice;
 				VoizatiaDebut_VoizatiaRespondThird_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))
@@ -348,7 +454,7 @@ switch(VoizatiaDebut_State)
 				"Hahahhahaaaaaaa",
 				"You seriously wanna do this? I'll let ya go if you get on your knees by yourself, how about it my little doll?",
 				"...",
-				"Tch, alright then, you asked for it",
+				"Tch, alright then, you asked for it.",
 				"COME FORTH! SHADOW REALM GATE!"
 			];
 		
@@ -359,7 +465,7 @@ switch(VoizatiaDebut_State)
 			}
 			else if !(instance_exists(obj_Text))
 			{
-				VoizatiaDebut_State = VOIZATIADEBUT.MALVALIA_SUMMON_SHADOWS;
+				VoizatiaDebut_State =  VOIZATIADEBUT.MALVALIA_SUMMON_SHADOWS;//VOIZATIADEBUT.MALVALIA_SUMMON_SHADOWS;
 			}
 		
 		#endregion
@@ -400,7 +506,7 @@ switch(VoizatiaDebut_State)
 		
 			var _text = 
 			[
-				"This shabby place is a gross place to fight, I don't want dirt in my hair, so we'll fight somewhere else",
+				"We're fighting on MY turf, not in your stupid dollhouse.",
 				"In my world, the Shadow Realm",
 				"Follow me, my little doll..."
 			];
@@ -434,6 +540,9 @@ switch(VoizatiaDebut_State)
 			{
 				layer_sequence_destroy(VoizatiaDebut_MalvaliaExit_Sequence);
 				VoizatiaDebut_State = VOIZATIADEBUT.CUTSCENE_END;
+				layer_set_visible("FloorCeilingWall_Closed", true);
+				VoizatiaDebut_Wall = instance_create_layer(992, 384, "Platforms", obj_Wall);
+				VoizatiaDebut_Wall.image_yscale = 3;
 			}
 		
 		#endregion
@@ -458,6 +567,17 @@ switch(VoizatiaDebut_State)
 			SetSpawnpoint(256 + 960, 190 + 270, Room_DarkShrineBasementPedestal);
 			
 			SaveGame();
+			
+			layer_set_visible("FloorCeilingWall_Closed", true);
+			layer_set_visible("FloorCeilingWall_Open", false)
+			if (VoizatiaDebut_Wall == noone)
+			{
+				VoizatiaDebut_Wall = instance_create_layer(992, 384, "Platforms", obj_Wall);
+				VoizatiaDebut_Wall.image_yscale = 3;
+			}
+			
+			
+			layer_depth("ShadowPortalCutscene", layer_get_depth("Player") - 10);
 			
 			instance_destroy();
 			

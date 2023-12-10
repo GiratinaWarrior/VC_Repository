@@ -1,3 +1,3 @@
 target = Room_DarkShrineBasementStairs;
 WarpX = 1888;
-WarpY = 96;
+WarpY = 108;

@@ -4,17 +4,7 @@
 
 //audio_play_sound(sound_AxeyeCharge, 1, false);
 
-#region Movement
 
-	Wall_BounceOn();
-	Wall_SwitchRun();
-	Boundary_SwitchRun();
-	Boundary_BounceOn();
-	
-	x += xSpeed;
-	y += ySpeed;
-
-#endregion
 
 #region State Transition
 
@@ -117,6 +107,10 @@
 						Axeye_AttackDir = point_direction(x, y, obj_Player.x, obj_Player.y);
 					}
 					
+					Axeye_AttackSpeed_X = lengthdir_x(Axeye_AttackSpeed, Axeye_AttackDir);
+					Axeye_AttackSpeed_Y = lengthdir_y(Axeye_AttackSpeed, Axeye_AttackDir);
+					xSpeed = Axeye_AttackSpeed_X;
+					ySpeed = Axeye_AttackSpeed_Y;
 					Axeye_State = AXEYE_STATE.ATTACK;
 					audio_play_sound(sound_AxeyeAttack, 50, false, 0.3)
 				}
@@ -130,73 +124,21 @@
 			
 			#region Attack
 				
-				//mask_index = spr_Axeye_AttackHitbox;
-				
-				xSpeed = lengthdir_x(Axeye_AttackSpeed, Axeye_AttackDir);
-				ySpeed = lengthdir_y(Axeye_AttackSpeed, Axeye_AttackDir);
-				
-				image_angle += Axeye_SpinSpeed * Axeye_SpinDir;
+				image_angle -= Axeye_SpinSpeed * Axeye_SpinDir;
 				
 				Damage = 3;
 				
-				if (place_meeting(x, y + ySpeed, obj_Wall) || place_meeting(x + xSpeed, y, obj_Wall))
+				if (Axeye_AttackTimer++ > Axeye_AttackTimerLimit)
 				{
-					
-					var _hitWallAction = 0;
-					
-					switch(_hitWallAction)
-					{
-						//Slow down until speed is 0
-						case 0:
-							xSpeed *= 0.3;
-							ySpeed *= 0.3;
-							break;
-							
-						//Bounce back
-						case 1:
-							if (place_meeting(x + xSpeed + sign(xSpeed), y, obj_Wall))
-							{
-								xSpeed *= -0.3;
-							}
-					
-							if (place_meeting(x, y + ySpeed + sign(ySpeed), obj_Wall))
-							{
-								xSpeed *= -0.3;
-							}
-							break;
-						
-					}
-					
 					Axeye_State = AXEYE_STATE.IDLE;
+					Axeye_AttackTimer = 0;
 				}
 				
-				SpeedTrail();
+				SpeedTrail(c_gray);
 				
 			#endregion
 			
 			break;//end Attack Stage
-		
-		//Stuck State: Axeye hits a wall and is temporarily stuck as it tries to free itself
-		case AXEYE_STATE.STUCK:
-		
-			#region Stuck
-				
-				Damage = 0;
-				
-				xSpeed = -lengthdir_x(max(0, min(Axeye_UnstuckSpeed, Axeye_UnstuckSpeedMax)), Axeye_AttackDir);
-				ySpeed = -lengthdir_y(max(0, min(Axeye_UnstuckSpeed, Axeye_UnstuckSpeedMax)), Axeye_AttackDir);
-				
-				Axeye_UnstuckSpeed += Axeye_UnstuckRate;
-				
-				if !(place_meeting(x - xSpeed, y - ySpeed, obj_Wall))
-				{
-					Axeye_Idle_Timer = 0;
-					Axeye_State = AXEYE_STATE.IDLE;
-				}
-			
-			#endregion
-			
-			break;//end Stuck State
 		
 		//Hurt State: Axeye gets hurt
 		case AXEYE_STATE.HURT:
@@ -219,7 +161,17 @@
 
 #endregion
 
+#region Movement
 
+	Wall_BounceOn();
+	Wall_SwitchRun();
+	Boundary_SwitchRun();
+	Boundary_BounceOn();
+	
+	x += xSpeed;
+	y += ySpeed;
+
+#endregion
 
 
 

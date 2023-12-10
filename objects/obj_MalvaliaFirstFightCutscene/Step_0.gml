@@ -5,7 +5,7 @@ switch (MalvaliaFirstFightCutscene_State)
 {
 	//Off Stage: Don't start the cutscene yet until the room transition is finished
 	case MALVALIAFIRSTFIGHTCUTSCENE.OFF:
-	
+		
 		if !(global.MidTransition)
 		{
 			MalvaliaFirstFightCutscene_State = MALVALIAFIRSTFIGHTCUTSCENE.MALVALIA_ENTER;

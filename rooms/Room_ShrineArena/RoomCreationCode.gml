@@ -19,11 +19,6 @@ if (!global.ShrineGeneral_Defeated)
 //If the Shrine General has been defeated
 else if (global.ShrineGeneral_Defeated)
 {
-
-	if (instance_exists(obj_ShrineArenaBossIntroCutscene))
-	{
-		instance_destroy(obj_ShrineArenaBossIntroCutscene);
-	}
 	
 	SetRoomAudio_Music_Default(music_ShrinePeacefulTheme);
 	with (obj_Camera)
@@ -34,8 +29,4 @@ else if (global.ShrineGeneral_Defeated)
 	layer_set_visible("Floortiles_PartialOpen", false);
 	layer_set_visible("Floortiles_FullOpen", true);
 	
-	with (obj_ShrineArenaBossIntroCutscene)
-	{
-		instance_destroy();	
-	}
 }

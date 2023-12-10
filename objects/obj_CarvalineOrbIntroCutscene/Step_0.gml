@@ -107,6 +107,17 @@ switch(CarvalineOrbIntroCutscene_Stage)
 				layer_sequence_destroy(CarvalineOrbIntroCutscene_Story_Sequence);
 				CarvalineOrbIntroCutscene_Stage = CARVALINEORBINTROCUTSCENE.STORY_END;	
 			}
+			else
+			{
+				if (global.Key_Skip)
+				{
+					layer_sequence_speedscale(CarvalineOrbIntroCutscene_Story_Sequence, 10);
+				}
+				else
+				{
+					layer_sequence_speedscale(CarvalineOrbIntroCutscene_Story_Sequence, 1);
+				}
+			}
 			
 			
 		#endregion
@@ -176,12 +187,15 @@ switch(CarvalineOrbIntroCutscene_Stage)
 							"I hav- Oh dear, where are my manners! I forgot to give you your dialogue skipping permissions back!",
 							"There you go, now then, where was I?",
 							"Ah yes.",
-							"I have always dreamed of being a writer, and now that you are almost ready to have my title of Valnyx Shrine Cardinal, I can still reach it.",
-							"I am particularily fond of historical texts, because the way they portray events of the past fascinate me, whether by glorification or erasing certain details.",
-							"The story I just told and have just recently named 'Dawn of Nox', describes the events that led to the society of Nox as we know it, including the origins of vallen.",
-							"Once I start my writing career as an editor, I would take good care to make sure that such absurb stories like that never be permitted into any form of library, that story is an insult to the amazing history of Nox.",
+							"I have always dreamed of being a writer, and now that you are almost ready to have my title of Valnyx Shrine Cardinal,", 
+							"I can still reach it.",
+							"I am particularily fond of historical texts, because the way they portray events of the past fascinate me.", 
+							"Whether by glorification or erasing certain details.",
+							"That story I told you was 'Dawn of Nox', you used to love it as a kid, not that you would remember that.", 
+							"Describes the events that led to the society of Nox as we know it, including the origins of vallen.",
+							"Once I become a writer, I would make sure that my works never reach this level of nonsensical.",
 							"Aside from the fact that it is a complete abomination from a literary perspective, 'Dawn of Nox' is a fabrication.",
-							"Quite a wild statement to make, but the original story has a gaping plothole that renders it susceptible to suspicious .",
+							"Quite a wild statement to make, but the original story has a gaping plothole that renders it susceptible to suspicious.",
 							"And that plothole..."
 						];
 					
@@ -256,12 +270,15 @@ switch(CarvalineOrbIntroCutscene_Stage)
 						var _text = 
 						[
 							"Is the very existence of THESE. The 'Carvaline Orbs' that are wedged into the 'Carvaline Pedestal'.",
-							"Out of all of the previous Cardinals within the past millenia, not a single one in recorded history has a concrete idea of what these objects are",
-							"They did not know what they were, where they came from, who made them, and nor for what purpose",
+							"Out of all of the previous Cardinals within the past millenia,", 
+							"Not a single one in recorded history has a concrete idea of what these objects are.",
+							"They did not know what they were, where they came from, who made them, and nor for what purpose.",
 							"All that is certain is that it is the Cardinals duty to guard these things.",
-							"The power of the orbs can also be felt throughout Valnyx Shrine, as if its attempting to impose its will onto us.",
-							"Strange is it not? Why is it that objects of such vast potential are not once mentioned in this story?",
-							"(...Despite being the cause of the sisters power and tyranny...)"
+							"The power of the orbs can also be felt throughout Valnyx Shrine.",
+							"It is almost as if they are attempting to impose someones will onto us.",
+							"Do you not find it strange that such objects are not mentioned once in the story?",
+							"Despite them existing in the same time period in the very Shrine the sisters ruled in?",
+							"(...Despite being the cause of...)"
 						];
 						
 						//Have Lavender start talking
@@ -313,10 +330,12 @@ switch(CarvalineOrbIntroCutscene_Stage)
 					
 						var _text =
 	 					[
-							"Since over 18 years ago, I have spent my time uncovering the true ending, I am no fan of happy endings afterall.", 
+							"Since over 18 years ago, I have spent my time uncovering the true ending.",
+							"I am no fan of happy endings afterall.", 
 							"I prefer anything between bittersweet to tragic.",
 							"History truly is fascinating is it not?",
-							"The idea of discovering the past myself excited me, it made me feel like a child exploring their backyard."
+							"The idea of discovering the past myself excited me.", 
+							"It made me feel like a child exploring their backyard."
 						];
 					
 						if !(CarvalineOrbIntroCutscene_LavenderTalk_ExplainCardinalMore_StartedTalk)
@@ -362,8 +381,9 @@ switch(CarvalineOrbIntroCutscene_Stage)
 					#region Exit Talk
 					
 						var _text = 
-						[
-							"Moving on from the lore stuff, it is time to undergo the last test to becoming Cardinal of Nox",
+						[	
+							"Moving on from the lore stuff, since I am sure you are getting bored of my walls of dialogue.",
+							"It is time to undergo the last test to becoming Cardinal of Nox",
 							"New Moon Garden",
 							"The final test will be conducted there.",
 							"Come when you are ready."
@@ -383,6 +403,19 @@ switch(CarvalineOrbIntroCutscene_Stage)
 						else if (!instance_exists(obj_Text))
 						{
 							CarvalineOrbIntroCutscene_Stage = CARVALINEORBINTROCUTSCENE.LAVENDER_EXIT;
+						}
+						else
+						{
+							if (obj_Text.TextBox_Page == 2)
+							{
+								obj_Text.TextBox_TextColor = c_red;
+								obj_Text.TextBox_CharIncrease = 0.3;
+							}
+							else
+							{
+								obj_Text.TextBox_TextColor = c_black;
+								obj_Text.TextBox_CharIncrease = 1;
+							}
 						}
 					
 					#endregion

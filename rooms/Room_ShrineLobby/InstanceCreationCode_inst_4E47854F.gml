@@ -1,2 +1,6 @@
-Text("So you have arrived here My Lady, although that ledge up there is unfortunately beyond you");
-Text("I am in despair that I cannot assist you, please forgive my lack of utility.");
+TextBox_Text = 
+[
+	"So you have arrived here My Lady.",
+	"Unfortunately, that ledge up there is beyond the current you.",
+	"I am in despair that I can help you. Please forgive me.",
+]

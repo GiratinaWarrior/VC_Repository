@@ -1,11 +1,13 @@
 /// @description Create the TextBox and it's variables
 
+Name = "";
+
 //The distance the textbox is from the edge of the screen
 TextBox_EdgeMargin = 10;
 
 //The width and height of the text box
-TextBox_Width = WINDOW_WIDTH - TextBox_EdgeMargin * 2;
-TextBox_Height = WINDOW_HEIGHT/3 - TextBox_EdgeMargin; 
+TextBox_Width = WINDOW_WIDTH - TextBox_EdgeMargin * 2; //1900 
+TextBox_Height = WINDOW_HEIGHT/3 - TextBox_EdgeMargin; //350
 
 //The Text displayed by the textbox
 TextBox_Text = array_create(1, "");
@@ -39,7 +41,7 @@ TextBox_BufferY = TextBox_BorderBuffer;
 
 TextBox_TextWidth = TextBox_Width - (TextBox_BufferX * 2);
 
-TextBox_BoxSprite = spr_TextBox;
+TextBox_BoxSprite = spr_NewTextBox;
 TextBox_TextColor = c_black;
 TextBox_Font = ft_NPC;
 
@@ -58,3 +60,6 @@ TextBox_UIPosition = TEXTBOX_POS.BOTTOM;
 TextBox_Cutscene = false;
 
 TextBox_TextSkippable = true;
+
+
+

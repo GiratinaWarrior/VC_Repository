@@ -40,19 +40,23 @@ switch (Guardark_State)
 	//The Guardark patrols the area
 	case GUARDARK_STATE.PATROL:
 		
-		sprite_index = spr_Guardark_Idle;
+		#region Patrol State
+		
+			sprite_index = spr_Guardark_Idle;
 	
-		image_speed = 1;
+			image_speed = 1;
 		
-		if (xSpeed != 0)
-		{
-			Guardark_Dir = sign(xSpeed);
-		}
+			if (xSpeed != 0)
+			{
+				Guardark_Dir = sign(xSpeed);
+			}
 		
-		if (PlayerInRange)
-		{
-			Guardark_State = GUARDARK_STATE.SHOOT;
-		}
+			if (PlayerInRange)
+			{
+				Guardark_State = GUARDARK_STATE.SHOOT;
+			}
+				
+		#endregion
 		
 		break;//end Guardark patrol
 		

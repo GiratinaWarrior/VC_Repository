@@ -12,6 +12,13 @@ switch (JestAftermathCutscene_State)
 		
 		#region Jest Talk Self
 		
+			with (obj_Camera)
+			{
+				follow = noone;
+				xTo = (obj_Player.x + Jest_NoctisCty.x)/2;
+				yTo = obj_Player.y;
+			}
+			
 			SetRoomAudio_Music_Default(blanksound);
 		
 			var _text = 
@@ -42,6 +49,20 @@ switch (JestAftermathCutscene_State)
 					JestAftermathCutscene_TimeSource = noone;
 				}
 				if (JestAftermathCutscene_TimeSource == noone) JestAftermathCutscene_TimeSource = TimeSourceCreateAndStart(50, _func);
+			}
+			else
+			{
+				with (obj_Text)
+				{
+					if (TextBox_CharCount < string_length(TextBox_Text[TextBox_Page]))
+					{
+						Jest_NoctisCty.image_speed = 1;
+					}
+					else
+					{
+						Jest_NoctisCty.image_speed = 0;
+					}
+				}
 			}
 		
 		#endregion
@@ -111,9 +132,25 @@ switch (JestAftermathCutscene_State)
 			{
 				JestAftermathCutscene_State = JESTAFTERMATHCUTSCENE.JEST_LISTEN;
 			}
-			else if (obj_Text.TextBox_Page >= 3)
+			else
 			{
-				Jest_NoctisCty.sprite_index = spr_Jest_Idle_Sad;
+				with (obj_Text)
+				{
+					
+					if (TextBox_Page >= 3)
+					{
+						Jest_NoctisCty.sprite_index = spr_Jest_Idle_Sad;
+					}
+					
+					if (TextBox_CharCount < string_length(TextBox_Text[TextBox_Page]))
+					{
+						Jest_NoctisCty.image_speed = 1;
+					}
+					else
+					{
+						Jest_NoctisCty.image_speed = 0;
+					}
+				}
 			}
 			
 		#endregion
@@ -202,6 +239,20 @@ switch (JestAftermathCutscene_State)
 				}
 				if (JestAftermathCutscene_TimeSource == noone) JestAftermathCutscene_TimeSource = TimeSourceCreateAndStart(50, _jestUS);
 			}
+			else
+			{
+				with (obj_Text)
+				{
+					if (TextBox_CharCount < string_length(TextBox_Text[TextBox_Page]))
+					{
+						Jest_NoctisCty.image_speed = 1;
+					}
+					else
+					{
+						Jest_NoctisCty.image_speed = 0;
+					}
+				}
+			}
 			
 		#endregion
 		
@@ -212,8 +263,6 @@ switch (JestAftermathCutscene_State)
 		
 		#region Jest Back Up 
 		
-			
-
 			var _text = 
 			[	
 				"WAIT!",
@@ -274,6 +323,31 @@ switch (JestAftermathCutscene_State)
 				}
 				if (JestAftermathCutscene_TimeSource == noone) JestAftermathCutscene_TimeSource = TimeSourceCreateAndStart(50, _jestUS);
 			}
+			else
+			{
+				
+				with (obj_Text)
+				{
+					
+					if (TextBox_Page >= 6 && TextBox_Page <= 9)
+					{
+						Jest_NoctisCty.sprite_index = spr_Jest_Idle_Sad;
+					}
+					else
+					{
+						Jest_NoctisCty.sprite_index = spr_Jest_Idle;
+					}
+					
+					if (TextBox_CharCount < string_length(TextBox_Text[TextBox_Page]))
+					{
+						Jest_NoctisCty.image_speed = 1;
+					}
+					else
+					{
+						Jest_NoctisCty.image_speed = 0;
+					}
+				}
+			}
 			
 		
 		#endregion
@@ -325,6 +399,20 @@ switch (JestAftermathCutscene_State)
 				}
 				
 				if (JestAftermathCutscene_TimeSource == noone) JestAftermathCutscene_TimeSource = TimeSourceCreateAndStart(120, _func);
+			}
+			else
+			{
+				with (obj_Text)
+				{
+					if (TextBox_CharCount < string_length(TextBox_Text[TextBox_Page]))
+					{
+						Jest_NoctisCty.image_speed = 1;
+					}
+					else
+					{
+						Jest_NoctisCty.image_speed = 0;
+					}
+				}
 			}
 		
 		#endregion
@@ -388,9 +476,26 @@ switch (JestAftermathCutscene_State)
 			{
 				JestAftermathCutscene_State = JESTAFTERMATHCUTSCENE.CUTSCENE_END;
 			}
-			else if (obj_Text.TextBox_Page >= 7)
+			else
 			{
-				Jest_NoctisCty.sprite_index = spr_Jest_Idle;
+				with (obj_Text)
+				{
+					
+					if (TextBox_Page >= 7)
+					{
+						Jest_NoctisCty.sprite_index = spr_Jest_Idle;
+					}
+					
+					
+					if (TextBox_CharCount < string_length(TextBox_Text[TextBox_Page]))
+					{
+						Jest_NoctisCty.image_speed = 1;
+					}
+					else
+					{
+						Jest_NoctisCty.image_speed = 0;
+					}
+				}
 			}
 			
 		#endregion
@@ -404,9 +509,11 @@ switch (JestAftermathCutscene_State)
 		
 			obj_Player.hascontrol = true;
 			
+			obj_Camera.follow = noone;
+			
 			global.JestTalkedTo_PrologueChapterAftermath = true;
 			
-			//SetRoomAudio_Music_Default(music_NoctisCityTheme);
+			Jest_NoctisCty.image_speed = 1;
 			
 			SetSpawnpoint(1776, 1728);
 			

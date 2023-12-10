@@ -3,6 +3,7 @@
 var p = TEXTBOX_POS.TOP - 20;
 var c = c_white;
 var s = blanksprite;
+var n = "SG";
 
 //Stage Machine
 switch(ShrineArenaBossIntro_State)
@@ -18,11 +19,8 @@ switch(ShrineArenaBossIntro_State)
 				ShrineArenaBossIntro_AudienceIdle1 = layer_sequence_create("Audience", -32, 272, seq_ShrineGeneralBossIntro_AudienceIdle);
 				ShrineArenaBossIntro_AudienceIdle2 = layer_sequence_create("Audience", -64, 208, seq_ShrineGeneralBossIntro_AudienceIdle);
 				ShrineArenaBossIntro_JestIdle = layer_sequence_create("Jest", 0, 0, seq_ShrineGeneralBossIntro_JestIdle);
+				layer_sequence_speedscale(ShrineArenaBossIntro_JestIdle, 0);
 				ShrineArenaBossIntro_IdleCreated = true;
-			}
-			else
-			{
-				//ShrineArenaBossIntro_State = SHRINEARENABOSSINTRO.ROSE_ENTER;
 			}
 			
 		#endregion
@@ -86,6 +84,20 @@ switch(ShrineArenaBossIntro_State)
 			{
 				ShrineArenaBossIntro_State = SHRINEARENABOSSINTRO.LIGHTS_ON;
 			}
+			else
+			{
+				with (obj_Text)
+				{
+					if (TextBox_CharCount < string_length(TextBox_Text[TextBox_Page]))
+					{
+						layer_sequence_speedscale(other.ShrineArenaBossIntro_JestIdle, 1);
+					}
+					else
+					{
+						layer_sequence_speedscale(other.ShrineArenaBossIntro_JestIdle, 0);
+					}
+				}
+			}
 		
 		#endregion
 		
@@ -139,7 +151,7 @@ switch(ShrineArenaBossIntro_State)
 				"For the first timers of this game",
 				"(Which is everyone)",
 				"The rules are simple",
-				"The two competitors in the ring will battle until they fall!",
+				"The two fighters in the ring will fight 'til they fall!",
 				"The last one standing will be our grand champion!",
 				"ARE YOU ALL READY!!!!!"
 			];
@@ -166,6 +178,20 @@ switch(ShrineArenaBossIntro_State)
 			{
 				ShrineArenaBossIntro_State = SHRINEARENABOSSINTRO.AUDIENCE_CHEER_JEST;
 			}
+			else
+			{
+				with (obj_Text)
+				{
+					if (TextBox_CharCount < string_length(TextBox_Text[TextBox_Page]))
+					{
+						layer_sequence_speedscale(other.ShrineArenaBossIntro_JestIdle, 1);
+					}
+					else
+					{
+						layer_sequence_speedscale(other.ShrineArenaBossIntro_JestIdle, 0);
+					}
+				}
+			}
 		
 		#endregion
 		
@@ -178,7 +204,7 @@ switch(ShrineArenaBossIntro_State)
 		
 			var _text = 
 			[
-				"YEEEEEEEEEEEEEEEEEEAAAAAAAAAAAAAAAAA!!!"
+				"YEEEEEEEAAAAAAA!!!"
 			];
 				
 			var _voice = 
@@ -218,8 +244,8 @@ switch(ShrineArenaBossIntro_State)
 				"Now then, it's time to introduce our competitors!",
 				"In the right corner..!", 
 				"We have the one to become the next Cardinal of Nox!",
-				"As graceful like a feather, as beautiful as a clear sky, and as strong as a hero!",
-				"Rosey- LADY ROSE!!!!"
+				"As graceful like a feather. As beautiful as a clear sky!",
+				"Rosey-, LADY ROSE!!!!"
 			]
 			
 			var _voice = 
@@ -241,6 +267,20 @@ switch(ShrineArenaBossIntro_State)
 			else if !(instance_exists(obj_Text))
 			{
 				ShrineArenaBossIntro_State = SHRINEARENABOSSINTRO.AUDIENCE_CHEER_ROSE;
+			}
+			else
+			{
+				with (obj_Text)
+				{
+					if (TextBox_CharCount < string_length(TextBox_Text[TextBox_Page]))
+					{
+						layer_sequence_speedscale(other.ShrineArenaBossIntro_JestIdle, 1);
+					}
+					else
+					{
+						layer_sequence_speedscale(other.ShrineArenaBossIntro_JestIdle, 0);
+					}
+				}
 			}
 			
 		#endregion
@@ -298,16 +338,22 @@ switch(ShrineArenaBossIntro_State)
 			[
 				"And in the left corner!",
 				"We have the great leader of the Shrine Soldiers",
-				"He's STRONGER! TOUGHER! SMARTER! AND EVEN LOOKS COOLER!",
+				"He's STRONGER!", 
+				"TOUGHER!",
+				"SMARTER!",
+				"AND EVEN LOOKS COOLER!",
 				"He is the great...",
 				"SHRINE GENERAL!!!"
-			]
+			];
 			
 			var _voice = 
 			[
 				sound_Jest_Talk_haleKIzena,
-				sound_Jest_Talk_halezaDIZEna,
 				sound_Jest_Talk_Volapachi_Halaka,
+				sound_Jest_Laugh_Hah,
+				sound_Jest_Laugh_Hah,
+				sound_Jest_Laugh_Hah,
+				sound_Jest_Laugh_Hah,
 				sound_Jest_Dark_Vishkana,
 				sound_Jest_Laugh_HAhaha,
 			]
@@ -321,6 +367,20 @@ switch(ShrineArenaBossIntro_State)
 			else if !(instance_exists(obj_Text))
 			{
 				ShrineArenaBossIntro_State = SHRINEARENABOSSINTRO.LIGHTS_OFF;
+			}
+			else
+			{
+				with (obj_Text)
+				{
+					if (TextBox_CharCount < string_length(TextBox_Text[TextBox_Page]))
+					{
+						layer_sequence_speedscale(other.ShrineArenaBossIntro_JestIdle, 1);
+					}
+					else
+					{
+						layer_sequence_speedscale(other.ShrineArenaBossIntro_JestIdle, 0);
+					}
+				}
 			}
 		
 		#endregion
@@ -406,7 +466,7 @@ switch(ShrineArenaBossIntro_State)
 			
 			if !(ShrineArenaBossIntro_GeneralEnterTalk_TalkStarted)
 			{
-				CutsceneText(_text, "Shrine General", p, ft_NPC, c, s);	
+				CutsceneText(_text, n, p, ft_NPC, c, s);	
 				ShrineArenaBossIntro_GeneralIdle = layer_sprite_create("ShrineGeneral", obj_Camera.x - 350, obj_Camera.y + 118, spr_ShrineGeneral_FullBody_PhaseOne);
 				layer_sprite_speed(ShrineArenaBossIntro_GeneralIdle, 0);
 				layer_sequence_destroy(ShrineArenaBossIntro_GeneralEnter_Sequence);
@@ -464,15 +524,15 @@ switch(ShrineArenaBossIntro_State)
 			
 			var _text = 
 			[
-				"HARMPHA HARMPHA HAR HAR HAR!",
-				"You sure took your time to arrive Rose!",
-				"Now it is time for us to DUUEEEEELLLL!!!",
-				"Do not you dare hold back!"
+				"HARMPHA HARMPHA HAR HAR!",
+				"You sure took your time!",
+				"Finally! It is time to DUEL!",
+				"Do not dare hold back!"
 			]
 			
 			if !(ShrineArenaBossIntro_GeneralChallenge_TalkStarted)
 			{
-				CutsceneText(_text, "Shrine General", p, ft_NPC, c, s);
+				CutsceneText(_text, n, p, ft_NPC, c, s);
 				ShrineArenaBossIntro_GeneralChallenge_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))
@@ -533,14 +593,15 @@ switch(ShrineArenaBossIntro_State)
 			
 			var _text = 
 			[
-				"Now that both competitors have been introduced, it's time to begin...!",
-				"THE COUNTDOWN",
-				"The battle will start when I say 'go'",
+				"Now that both competitors have been introduced...",
+				"It's time to begin...!",
+				"THE COUNTDOWN!",
+				"The battle will start when I say 'go'.",
 				"Ready!",
 				"3!",
 				"2!",
 				"1!",
-				"GOOOOOOOOOOOOOOOOOOOOOOOOOO!!"
+				"GOOOOOOOOOOOOO!!"
 			]
 			
 			var _voice = 
@@ -548,6 +609,7 @@ switch(ShrineArenaBossIntro_State)
 				sound_Jest_Talk_halezaDIZEna,
 				sound_Jest_Dark_Vishkana,
 				sound_Jest_Talk_Volapachi_Halaka,
+				sound_Jest_Dark_Rilakanazhi,
 				sound_Jest_Laugh_Hah,
 				blanksound,
 				blanksound,
@@ -564,6 +626,20 @@ switch(ShrineArenaBossIntro_State)
 			else if !(instance_exists(obj_Text))
 			{
 				ShrineArenaBossIntro_State = SHRINEARENABOSSINTRO.BATTLE_START;
+			}
+			else
+			{
+				with (obj_Text)
+				{
+					if (TextBox_CharCount < string_length(TextBox_Text[TextBox_Page]))
+					{
+						layer_sequence_speedscale(other.ShrineArenaBossIntro_JestIdle, 1);
+					}
+					else
+					{
+						layer_sequence_speedscale(other.ShrineArenaBossIntro_JestIdle, 0);
+					}
+				}
 			}
 		
 		#endregion
@@ -588,6 +664,9 @@ switch(ShrineArenaBossIntro_State)
 			obj_Player.hascontrol = true;
 			
 			ShrineArenaBossIntro_State = SHRINEARENABOSSINTRO.IN_BATTLE;
+			
+			layer_sequence_speedscale(ShrineArenaBossIntro_JestIdle, 1);
+
 			
 		#endregion
 		
@@ -646,16 +725,16 @@ switch(ShrineArenaBossIntro_State)
 			
 			var _text = 
 			[
-				"I-I-I-I-I'v-v-v",
-				"I lo-lo-lo-los-los-los-lost-t-t-t-t-t-t",
-				"to-to-to-to a-a-a-a k-k-k-k-k-k-ki-ki-ki-kid...",
+				"I-I-I-I-I-I'v-v-v-v-v-v-v-v",
+				"I lo-lo-los-los-los-lost-t-t",
+				"to-to a-a k-k-ki-kid...",
 				"I-",
-				"I just remembered I have something extremely urgent to do."
+				"I've something urgent to do."
 			]
 			
 			if !(ShrineArenaBossIntro_GeneralDefeatTalk_TalkStarted)
 			{
-				CutsceneText(_text, "Shrine General", p, ft_NPC, c, s);
+				CutsceneText(_text, n, p, ft_NPC, c, s);
 				obj_Text.TextBox_TextSkippable = false;
 				ShrineArenaBossIntro_GeneralDefeatTalk_TalkStarted = true;
 			}
@@ -697,7 +776,8 @@ switch(ShrineArenaBossIntro_State)
 			[
 				"oh...",
 				"*ahem*",
-				"LADIES AND GENTLENOXIANS! That was an amazing match, and it's come to an amazing end!",
+				"LADIES AND GENTLENOXIANS!", 
+				"That was an amazing match, and it's now over!",
 				"THE WINNER!",
 				"IS!",
 				"LADY ROSEY-DARLING!!!",
@@ -709,10 +789,11 @@ switch(ShrineArenaBossIntro_State)
 				sound_Jest_Talk_Huh,
 				blanksound,
 				sound_Jest_Talk_halezaDIZEna,
-				sound_Jest_Talk_haleKIzena,
+				sound_Jest_Talk_halakazanadi,
 				sound_Jest_Laugh_Hah,
 				sound_Jest_Laugh_HAhaha,
-				sound_Jest_Talk_Volapachi_Halaka
+				sound_Jest_Talk_Volapachi_Halaka,
+				sound_Jest_Talk_halezaDIZEna
 			];
 			
 			if !(ShrineArenaBossIntro_JestAnnounceWinner_TalkStarted)
@@ -725,10 +806,29 @@ switch(ShrineArenaBossIntro_State)
 			{
 				ShrineArenaBossIntro_State = SHRINEARENABOSSINTRO.AUDIENCE_APPLAUD;
 			}
-			else if (obj_Text.TextBox_Page > 1)
+			else
 			{
-				SetRoomAudio_Music_Default(music_JestEncounterTheme);
+				
+				with (obj_Text)
+				{
+					
+					if (TextBox_Page > 1)
+					{
+						SetRoomAudio_Music_Default(music_JestEncounterTheme);
+					}
+					
+					if (TextBox_CharCount < string_length(TextBox_Text[TextBox_Page]))
+					{
+						layer_sequence_speedscale(other.ShrineArenaBossIntro_JestIdle, 1);
+					}
+					else
+					{
+						layer_sequence_speedscale(other.ShrineArenaBossIntro_JestIdle, 0);
+					}
+				}
+		
 			}
+			
 			
 		#endregion
 			
@@ -742,9 +842,9 @@ switch(ShrineArenaBossIntro_State)
 			var _text = 
 			[
 				"WOOOOOOOOOH!!",
-				"ROSEY-DARLING! ROSEY-DARLING! ROSEY-DARLING!",
-				"(are we gonna get executed for saying that?)",
-				"LADY ROSE! LADY ROSE! LADY ROSE! LADY ROSE!"
+				"ROSEY-DARLING! ROSEY-DARLING!",
+				"(wait we might get terminated)",
+				"LADY ROSE! LADY ROSE! LADY ROSE!"
 			];
 				
 			var _voice = 
@@ -785,7 +885,8 @@ switch(ShrineArenaBossIntro_State)
 			var _text = 
 			[
 				"Now then ladies and gentlenoxians!",
-				"It 's been a wonderful day, but all good things must come to an end!",
+				"It's been a wonderful day", 
+				"But all good things must come to an end!",
 				"I shall see you all next time!",
 				"On the SHRINE ARENA BATTLEGROUNDS!",
 				"So goodbye everyone!",
@@ -802,6 +903,7 @@ switch(ShrineArenaBossIntro_State)
 				sound_Jest_Talk_haleKIzena,
 				sound_Jest_Talk_halakazanadi,
 				sound_Jest_Talk_halezaDIZEna,
+				sound_Jest_Talk_Volapachi_Halaka,
 				sound_Jest_Talk_jaravajikaraZHAna,
 				blanksound,
 				blanksound,
@@ -819,6 +921,20 @@ switch(ShrineArenaBossIntro_State)
 			else if !(instance_exists(obj_Text))
 			{
 				ShrineArenaBossIntro_State = SHRINEARENABOSSINTRO.AUDIENCE_EXIT;
+			}
+			else
+			{
+				with (obj_Text)
+				{
+					if (TextBox_CharCount < string_length(TextBox_Text[TextBox_Page]))
+					{
+						layer_sequence_speedscale(other.ShrineArenaBossIntro_JestIdle, 1);
+					}
+					else
+					{
+						layer_sequence_speedscale(other.ShrineArenaBossIntro_JestIdle, 0);
+					}
+				}
 			}
 		
 		#endregion
@@ -874,6 +990,20 @@ switch(ShrineArenaBossIntro_State)
 			else if !(instance_exists(obj_Text))
 			{
 				ShrineArenaBossIntro_State = SHRINEARENABOSSINTRO.JEST_EXIT;
+			}
+			else
+			{
+				with (obj_Text)
+				{
+					if (TextBox_CharCount < string_length(TextBox_Text[TextBox_Page]))
+					{
+						layer_sequence_speedscale(other.ShrineArenaBossIntro_JestIdle, 1);
+					}
+					else
+					{
+						layer_sequence_speedscale(other.ShrineArenaBossIntro_JestIdle, 0);
+					}
+				}
 			}
 		
 		#endregion

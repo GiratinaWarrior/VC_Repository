@@ -64,7 +64,7 @@ switch(CardinalFamilyCongrats_Stage)
 				"I will be taking away your skip dialogue priviledges temporarily.",
 				"Rose-darling. Listen.",
 				"The duty of a Cardinal, is to act as a guardian to the Noxians, protecting them, and guiding them.",
-				"At least, that's what everyone outside of this shrine knows, but there is one more thing that a Cardinal is responsible for",
+				"At least, that's what everyone outside of this shrine knows, but there is one more thing that a Cardinal is responsible for.",
 			]
 		
 			//If Lavender hasn't started talking, TALK

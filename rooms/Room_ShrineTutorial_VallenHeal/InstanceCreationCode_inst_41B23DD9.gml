@@ -1,3 +1,3 @@
 target = Room_ShrineLobby;
 WarpX = 1920;
-WarpY = 832;
+WarpY = 880;

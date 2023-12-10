@@ -10,11 +10,11 @@ TextBox_TextHeight = string_height(TextBox_Text) * TextBox_TextHeightModifier;
 switch(TextBox_Font)
 {
 	case ft_NPC:
-		TextBox_TextHeightModifier = 1.2;
+		TextBox_TextHeightModifier = 0.8;
 		break;
 	
 	case ft_Lavender:
-		TextBox_TextHeightModifier = 1;
+		TextBox_TextHeightModifier = 0.8;
 		break;
 	
 }
@@ -63,7 +63,7 @@ if (TextBox_CharCount <= TextBox_CharIncrease)
 	audio_play_sound(sound_Select, 200, false);
 	var _currentSound = TextBox_Voices[TextBox_Page];
 //	show_debug_message("Current Sound: {0} ", _currentSound);
-	audio_play_sound(_currentSound, 1000, false, 5);
+	audio_play_sound(_currentSound, 100000, false, 10);
 	
 	if (TextBox_Page != 0) && (TextBox_Voices[TextBox_Page] != blanksound) && (TextBox_Voices[TextBox_Page - 1] != TextBox_Voices[TextBox_Page])
 	{
@@ -78,4 +78,6 @@ TextBox_TextSect = string_copy(TextBox_Text[TextBox_Page], 1, TextBox_CharCount)
 TextBox_TextHeight = string_height(TextBox_Text) * TextBox_TextHeightModifier;
 
 //Draw the text to the screen
-draw_text_ext(TextBox_X + TextBox_BufferX, TextBox_Y + TextBox_BufferY, TextBox_TextSect, TextBox_TextHeight, TextBox_TextWidth);
+draw_text_ext(TextBox_X + TextBox_BufferX, TextBox_Y + TextBox_BufferY, Name + ": " + TextBox_TextSect, TextBox_TextHeight, TextBox_TextWidth);
+
+

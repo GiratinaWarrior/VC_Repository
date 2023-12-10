@@ -18,6 +18,8 @@ if (global.Key_Talk)
 		{
 			instance_destroy(); //Destroy the text object
 			
+			audio_stop_sound(TextBox_Voices[TextBox_Page]);
+			
 			//If this textbox was not created for a cutscene
 			if (!TextBox_Cutscene)
 			{

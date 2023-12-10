@@ -2,6 +2,8 @@
 
 //show_debug_overlay(true);
 
+window_set_cursor(cr_none);
+
 //---------------------Default Music (Unneeded)--------------//
 
 //Music and sound effects

@@ -1,5 +1,8 @@
 /// @description Stuff
 
+
+
+
 global.Health = clamp(global.Health, 0, global.MaxHealth);
 
 global.Vallen = clamp(global.Vallen, 0, global.MaxVallen);
@@ -8,6 +11,8 @@ global.Vallen = round(global.Vallen);
 
 x = round(x);
 y = round(y);
+
+//ShowPlayerLocation();
 
 ySpeed = clamp(ySpeed, -ySpeed_Max, ySpeed_Max);
 
