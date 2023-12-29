@@ -94,15 +94,15 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_29DF6F6F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":true,"inheritedItemId":{"name":"inst_3074310E","path":"rooms/Room_ShrineBasementEntrance/Room_ShrineBasementEntrance.yy",},"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Wall","path":"objects/obj_Wall/obj_Wall.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":4.0,"x":-96.0,"y":320.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":false,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"MainAndPillar","depth":200,"effectEnabled":true,"effectType":"none","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":true,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":17,"SerialiseWidth":30,"TileCompressedData":[
--180,47,240,4,28,12,28,12,28,12,28,12,28,12,28,12,28,12,28,12,28,12,28,12,28,12,28,12,28,12,
-28,12,28,24,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,
-0,32,0,6,33,15,33,15,33,15,33,15,33,15,33,15,33,15,33,15,33,15,33,15,33,15,33,15,33,15,
-33,15,33,24,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,
-0,32,0,24,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,
-0,32,0,6,33,15,33,15,33,15,33,15,33,15,33,15,33,15,33,15,33,15,33,15,33,15,33,15,33,15,
-33,15,33,24,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,
-0,32,0,2,20,3,20,3,20,3,20,3,20,3,20,3,20,3,20,3,20,3,20,3,20,3,20,3,20,3,
-20,3,20,-90,47,],"TileDataFormat":1,},"tilesetId":{"name":"tiles_DarkShrineMainTileSet","path":"tilesets/tiles_DarkShrineMainTileSet/tiles_DarkShrineMainTileSet.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+-181,47,4,4,28,28,12,-3,28,1,12,-3,28,1,12,-3,28,1,12,-3,28,1,12,-3,28,1,12,-3,28,7,
+12,28,47,24,0,0,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,7,
+32,0,47,24,0,0,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,7,
+32,0,47,24,0,0,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,7,
+32,0,47,24,0,0,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,7,
+32,0,47,24,0,0,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,7,
+32,0,47,24,0,0,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,7,
+32,0,47,2,20,20,3,-3,20,1,3,-3,20,1,3,-3,20,1,3,-3,20,1,3,-3,20,1,3,-3,20,2,
+3,20,-90,47,],"TileDataFormat":1,},"tilesetId":{"name":"tiles_DarkShrineMainBrickTileSet","path":"tilesets/tiles_DarkShrineMainBrickTileSet/tiles_DarkShrineMainBrickTileSet.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"resourceType":"GMRAssetLayer","resourceVersion":"1.0","name":"Door","assets":[
         {"resourceType":"GMRSpriteGraphic","resourceVersion":"1.0","name":"graphic_4F9FF2F4","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":{"name":"graphic_4F9FF2F4","path":"rooms/Room_ShrineBasementEntrance/Room_ShrineBasementEntrance.yy",},"inheritItemSettings":false,"rotation":0.0,"scaleX":2.0,"scaleY":2.0,"spriteId":{"name":"spr_DarkShrineBasementDoor","path":"sprites/spr_DarkShrineBasementDoor/spr_DarkShrineBasementDoor.yy",},"x":32.0,"y":224.0,},
       ],"depth":300,"effectEnabled":true,"effectType":"_filter_greyscale","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":true,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
@@ -110,7 +110,7 @@
       ],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Player","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":true,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":false,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"RoomWarp_DarkShrineBasementEntrance_To_DarkShrineGroundFloor","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":{"name":"RoomWarp_ShrineBasementEntrance_To_ShrineGroundFloor","path":"rooms/Room_ShrineBasementEntrance/Room_ShrineBasementEntrance.yy",},"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_RoomWarp","path":"objects/obj_RoomWarp/obj_RoomWarp.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":3.0,"x":1056.0,"y":320.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"RoomWarp_DarkShrineBasementEntrance_DarkShrineBasementStairs","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":{"name":"RoomWarp_ShrineBasementEntrance_ShrineBasementStairs","path":"rooms/Room_ShrineBasementEntrance/Room_ShrineBasementEntrance.yy",},"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_RoomWarp","path":"objects/obj_RoomWarp/obj_RoomWarp.yy",},"properties":[],"rotation":0.0,"scaleX":1.171875,"scaleY":3.0,"x":-48.0,"y":320.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"RoomWarp_DarkShrineBasementEntrance_DarkShrineBasementStairs","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":{"name":"RoomWarp_ShrineBasementEntrance_ShrineBasementStairs","path":"rooms/Room_ShrineBasementEntrance/Room_ShrineBasementEntrance.yy",},"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_RoomWarp","path":"objects/obj_RoomWarp/obj_RoomWarp.yy",},"properties":[],"rotation":0.0,"scaleX":1.171875,"scaleY":3.0,"x":0.0,"y":320.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"BackgroundTiles","depth":500,"effectEnabled":true,"effectType":"_filter_tintfilter","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":true,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
         {"name":"g_TintCol","type":1,"value":"#FF7F7F7F",},

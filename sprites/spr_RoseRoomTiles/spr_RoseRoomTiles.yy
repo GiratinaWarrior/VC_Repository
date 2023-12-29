@@ -20,13 +20,14 @@
   "height": 192,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e0734ca9-3250-46a0-a038-cb48b7a9194c","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"758f064a-48ab-4022-a9bc-627eeb6be8b4","blendMode":0,"displayName":"default (2)","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e0734ca9-3250-46a0-a038-cb48b7a9194c","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":false,},
   ],
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "LightShrine",
-    "path": "folders/Sprites/Tiles/Shrine/LightShrine.yy",
+    "name": "Used",
+    "path": "folders/Sprites/Tiles/Shrine/LightShrine/Used.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

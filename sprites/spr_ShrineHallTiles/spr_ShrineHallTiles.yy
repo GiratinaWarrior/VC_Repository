@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "LightShrine",
-    "path": "folders/Sprites/Tiles/Shrine/LightShrine.yy",
+    "name": "Unused",
+    "path": "folders/Sprites/Tiles/Shrine/LightShrine/Unused.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

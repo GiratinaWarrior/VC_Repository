@@ -78,6 +78,7 @@ TextBox_TextSect = string_copy(TextBox_Text[TextBox_Page], 1, TextBox_CharCount)
 TextBox_TextHeight = string_height(TextBox_Text) * TextBox_TextHeightModifier;
 
 //Draw the text to the screen
-draw_text_ext(TextBox_X + TextBox_BufferX, TextBox_Y + TextBox_BufferY, Name + ": " + TextBox_TextSect, TextBox_TextHeight, TextBox_TextWidth);
+if (Name != "") draw_text_ext(TextBox_X + TextBox_BufferX, TextBox_Y + TextBox_BufferY, Name + ": " + TextBox_TextSect, TextBox_TextHeight, TextBox_TextWidth);
 
+else draw_text_ext(TextBox_X + TextBox_BufferX, TextBox_Y + TextBox_BufferY,  TextBox_TextSect, TextBox_TextHeight, TextBox_TextWidth);
 

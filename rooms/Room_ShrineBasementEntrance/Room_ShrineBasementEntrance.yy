@@ -94,15 +94,15 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_614B80CA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Wall","path":"objects/obj_Wall/obj_Wall.yy",},"properties":[],"rotation":0.0,"scaleX":0.5,"scaleY":1.0,"x":16.0,"y":256.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":false,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"MainAndPillar","depth":200,"effectEnabled":true,"effectType":"none","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":17,"SerialiseWidth":30,"TileCompressedData":[
--180,47,240,4,28,12,28,12,28,12,28,12,28,12,28,12,28,12,28,12,28,12,28,12,28,12,28,12,28,12,
-28,12,28,24,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,
-0,32,0,6,33,15,33,15,33,15,33,15,33,15,33,15,33,15,33,15,33,15,33,15,33,15,33,15,33,15,
-33,15,33,24,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,
-0,32,0,24,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,
-0,32,0,6,33,15,33,15,33,15,33,15,33,15,33,15,33,15,33,15,33,15,33,15,33,15,33,15,33,15,
-33,15,33,24,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,
-0,32,0,2,20,3,20,3,20,3,20,3,20,3,20,3,20,3,20,3,20,3,20,3,20,3,20,3,20,3,
-20,3,20,-90,47,],"TileDataFormat":1,},"tilesetId":{"name":"tiles_ShrineMainLavenderTileSet","path":"tilesets/tiles_ShrineMainLavenderTileSet/tiles_ShrineMainLavenderTileSet.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+-181,47,8,4,28,28,12,28,12,28,12,-3,28,5,12,28,12,28,12,-3,28,5,12,28,12,28,12,-3,28,7,
+12,28,47,24,0,0,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,7,
+32,0,47,24,0,0,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,7,
+32,0,47,24,0,0,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,7,
+32,0,47,24,0,0,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,7,
+32,0,47,24,0,0,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,7,
+32,0,47,24,0,0,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,1,32,-3,0,15,
+32,0,47,2,20,20,3,20,3,20,3,20,3,20,3,-3,20,9,3,20,3,20,3,20,3,20,3,-3,20,2,
+3,20,-90,47,],"TileDataFormat":1,},"tilesetId":{"name":"tiles_ShrineMainBrickTileSet","path":"tilesets/tiles_ShrineMainBrickTileSet/tiles_ShrineMainBrickTileSet.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"resourceType":"GMRAssetLayer","resourceVersion":"1.0","name":"Door","assets":[
         {"resourceType":"GMRSpriteGraphic","resourceVersion":"1.0","name":"graphic_4F9FF2F4","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"rotation":0.0,"scaleX":2.0,"scaleY":2.0,"spriteId":{"name":"spr_ShrineBasementDoor","path":"sprites/spr_ShrineBasementDoor/spr_ShrineBasementDoor.yy",},"x":32.0,"y":224.0,},
       ],"depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
@@ -114,7 +114,7 @@
         {"name":"g_TintCol","type":1,"value":"#FF999999",},
       ],"tiles":{"SerialiseHeight":17,"SerialiseWidth":30,"TileCompressedData":[
 -150,-2147483648,1,36,-29,-2147483648,5,2,20,21,33,22,-25,20,-2,47,3,24,-2147483648,16,-27,47,3,2,20,1,-145,47,2,28,
-12,-28,28,2,-2147483648,32,-33,-2147483648,1,46,-35,-2147483648,1,42,-18,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"tiles_ShrineMainLavenderTileSet","path":"tilesets/tiles_ShrineMainLavenderTileSet/tiles_ShrineMainLavenderTileSet.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+12,-28,28,2,-2147483648,32,-33,-2147483648,1,46,-35,-2147483648,1,42,-18,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"tiles_ShrineMainBrickTileSet","path":"tilesets/tiles_ShrineMainBrickTileSet/tiles_ShrineMainBrickTileSet.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"spr_ShrineBrickYellow","path":"sprites/spr_ShrineBrickYellow/spr_ShrineBrickYellow.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":5,"y":5,},
   ],
   "parent": {

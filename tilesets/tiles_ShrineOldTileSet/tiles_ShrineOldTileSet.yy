@@ -62,8 +62,8 @@
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "parent": {
-    "name": "LightShrine",
-    "path": "folders/Tile Sets/Shrine/LightShrine.yy",
+    "name": "Unused",
+    "path": "folders/Tile Sets/Shrine/LightShrine/Unused.yy",
   },
   "spriteId": {
     "name": "spr_ShrineHallTiles",

@@ -105,7 +105,7 @@
 0,32,0,6,33,15,33,15,33,15,33,15,33,15,33,15,33,15,33,15,33,15,33,15,33,15,33,15,33,15,
 33,15,33,24,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,
 0,32,0,2,20,3,20,3,20,3,20,3,20,3,20,3,20,3,20,3,20,3,20,3,20,3,20,3,20,3,
-20,3,20,-90,47,],"TileDataFormat":1,},"tilesetId":{"name":"tiles_DarkShrineMainTileSet","path":"tilesets/tiles_DarkShrineMainTileSet/tiles_DarkShrineMainTileSet.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+20,3,20,-90,47,],"TileDataFormat":1,},"tilesetId":{"name":"tiles_DarkShrineMainBrickTileSet","path":"tilesets/tiles_DarkShrineMainBrickTileSet/tiles_DarkShrineMainBrickTileSet.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"resourceType":"GMRAssetLayer","resourceVersion":"1.0","name":"Door","assets":[
         {"resourceType":"GMRSpriteGraphic","resourceVersion":"1.0","name":"graphic_4F9FF2F4","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":{"name":"graphic_4F9FF2F4","path":"rooms/Room_ShrineBasementEntrance/Room_ShrineBasementEntrance.yy",},"inheritItemSettings":true,"rotation":0.0,"scaleX":2.0,"scaleY":2.0,"spriteId":{"name":"spr_ShrineBasementDoor","path":"sprites/spr_ShrineBasementDoor/spr_ShrineBasementDoor.yy",},"x":32.0,"y":224.0,},
       ],"depth":300,"effectEnabled":true,"effectType":"_filter_greyscale","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":true,"inheritLayerSettings":true,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
@@ -119,7 +119,7 @@
         {"name":"g_TintCol","type":1,"value":"#FF7F7F7F",},
       ],"tiles":{"SerialiseHeight":17,"SerialiseWidth":30,"TileCompressedData":[
 -150,-2147483648,1,36,-29,-2147483648,1,2,-29,20,-180,47,2,28,12,-28,28,2,-2147483648,44,-33,-2147483648,1,46,-35,-2147483648,1,42,-18,-2147483648,
-],"TileDataFormat":1,},"tilesetId":{"name":"tiles_DarkShrineMainTileSet","path":"tilesets/tiles_DarkShrineMainTileSet/tiles_DarkShrineMainTileSet.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+],"TileDataFormat":1,},"tilesetId":{"name":"tiles_DarkShrineMainBrickTileSet","path":"tilesets/tiles_DarkShrineMainBrickTileSet/tiles_DarkShrineMainBrickTileSet.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":true,"inheritLayerSettings":true,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"spr_ShrineBrickYellow","path":"sprites/spr_ShrineBrickYellow/spr_ShrineBrickYellow.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":5,"y":5,},
   ],
   "parent": {

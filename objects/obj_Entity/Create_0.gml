@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 Speech[0] = "";
-//Name = "";
+Name = "";
 NameInserted = false;
 TextBox_Text[0] = "";
 TextBox_Voices = array_create(20, blanksound);
