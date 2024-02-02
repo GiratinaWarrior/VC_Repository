@@ -413,7 +413,7 @@ switch(ShrineArenaBossIntro_State)
 				ShrineArenaBossIntro_TimeSource = TimeSourceCreateAndStart(60, _func, [], -1);
 			}
 			
-			if (obj_Camera.image_alpha >= 0.5)
+			if (obj_Camera.image_alpha >= 0.2)
 			{
 				ShrineArenaBossIntro_State = SHRINEARENABOSSINTRO.GENERAL_ENTER;
 				time_source_destroy(ShrineArenaBossIntro_TimeSource);
@@ -650,6 +650,8 @@ switch(ShrineArenaBossIntro_State)
 	case SHRINEARENABOSSINTRO.BATTLE_START:
 		
 		#region Battle Start
+			
+			PlayerFullHeal();
 			
 			SetRoomAudio_Music_Default(music_ShrineGeneralTheme);
 			

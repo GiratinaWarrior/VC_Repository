@@ -32,6 +32,14 @@ switch (PrologueCutscene_Stage)
 			"And the lunar gem becomes the worlds brightest light"
 		];
 		
+		var _voice = 
+		[
+			sound_Lavender_Talk_AvaboLinfinit,
+			sound_Lavender_Talk_Gonnamenah,
+			sound_Lavender_Talk_AnaSOOnaREEM,
+			sound_Lavender_Talk_RinuLefoom
+		]
+		
 		/*
 			Where love becomes life and dread becomes death: Where the roses grow (New Moon Garden), the circle of life
 			The new moon rises and draws its first breath: Rose opens her eyes
@@ -47,6 +55,7 @@ switch (PrologueCutscene_Stage)
 			
 			//Cutscene Text
 			CutsceneText(_text, "???", TEXTBOX_POS.BOTTOM, ft_Lavender, c_red);
+			obj_Text.TextBox_Voices = _voice;
 			
 			//Display Lavender's idle sprite
 			PrologueCutscene_LavenderSprite = layer_sprite_create(layer, room_width/2 - 222, room_height/2 - 14, spr_Lavender_Idle);
@@ -79,10 +88,21 @@ switch (PrologueCutscene_Stage)
 			"Prophecies are real annoying, if only the ans-"
 		];
 		
+		var _voice = 
+		[
+			sound_Lavender_Talk_Aleevah,
+			sound_Lavender_Talk_KaiyeeveYanamainVaiyimi,
+			blanksound,
+			sound_Lavender_Curious_EkitiVenimin,
+			blanksound,
+			sound_Lavender_Talk_AloBAwaKIneru
+		]
+		
 		//Start Lavenders deciphering of the prophecy
 		if !(PrologueCutscene_ProphecyDecipherStarted)
 		{
 			CutsceneText(_text, "???", TEXTBOX_POS.BOTTOM, ft_Lavender);
+			obj_Text.TextBox_Voices = _voice;
 			PrologueCutscene_ProphecyDecipherStarted = true;
 		}
 		//When lavender is finsihed talking
@@ -105,6 +125,12 @@ switch (PrologueCutscene_Stage)
 			"Oh? That star is a strange one.", 
 			"How do you do little star?"
 		];
+		
+		var _voice = 
+		[
+			sound_Lavender_Excited_Avinasoom,
+			sound_Lavender_Curious_EkitiVenimin
+		]
 		
 		//Start Lavenders deciphering of the prophecy
 		if !(PrologueCutscene_StarNoticeStarted)

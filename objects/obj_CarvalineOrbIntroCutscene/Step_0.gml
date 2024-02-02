@@ -111,7 +111,7 @@ switch(CarvalineOrbIntroCutscene_Stage)
 			{
 				if (global.Key_Skip)
 				{
-					layer_sequence_speedscale(CarvalineOrbIntroCutscene_Story_Sequence, 10);
+					//layer_sequence_speedscale(CarvalineOrbIntroCutscene_Story_Sequence, 10);
 				}
 				else
 				{
@@ -192,16 +192,35 @@ switch(CarvalineOrbIntroCutscene_Stage)
 							"I am particularily fond of historical texts, because the way they portray events of the past fascinate me.", 
 							"Whether by glorification or erasing certain details.",
 							"That story I told you was 'Dawn of Nox', you used to love it as a kid, not that you would remember that.", 
-							"Describes the events that led to the society of Nox as we know it, including the origins of vallen.",
+							"It describes the events that led to the society of Nox as we know it, including the origins of vallen.",
 							"Once I become a writer, I would make sure that my works never reach this level of nonsensical.",
 							"Aside from the fact that it is a complete abomination from a literary perspective, 'Dawn of Nox' is a fabrication.",
 							"Quite a wild statement to make, but the original story has a gaping plothole that renders it susceptible to suspicious.",
 							"And that plothole..."
 						];
+						
+						var _voice = 
+						[
+							sound_Lavender_Talk_Aleevah, //Ahaha
+							sound_Lavender_Talk_AloBAwaKIneru //I hav- Oh dear
+							sound_Lavender_Talk_RinuLefoom, //there you go
+							sound_Lavender_Talk_Aleevah, //ah yes
+							sound_Lavender_Excited_Avinasoom, //i have always
+							sound_Lavender_Excited_SAYAlora, //i can still 
+							sound_Lavender_Excited_GurumeNEEtoom, //font of history
+							sound_Lavender_Excited_SenavoreyOOnium, //glory erase
+							sound_Lavender_Talk_KaiyeeveYanamainVaiyimi, //dawn of nox
+							sound_Lavender_Talk_RinuLefoom, //describes
+							sound_Lavender_Talk_AvaboLinfinit, //become a writer
+							sound_Lavender_Talk_AloBAwaKIneru, //abomination
+							sound_Lavender_Excited_RavinaLAsheen, //wild statement
+							sound_Lavender_Curious_EkitiVenimin //plothole
+						]
 					
 						if !(CarvalineOrbIntroCutscene_LavenderTalk_Intro_TalkStarted)
 						{
 							CarvalineOrbIntroCutscene_LavenderSpeech = CutsceneText(_text, "Lavender", TEXTBOX_POS.TOP, ft_Lavender);
+							CarvalineOrbIntroCutscene_LavenderSpeech.TextBox_Text = _voice;
 							with (obj_Player)
 							{
 								image_xscale = -1;
@@ -281,10 +300,25 @@ switch(CarvalineOrbIntroCutscene_Stage)
 							"(...Despite being the cause of...)"
 						];
 						
+						var _voice = 
+						[
+							sound_Lavender_Excited_SAYAlora, //existence of these
+							sound_Lavender_Talk_AvaboLinfinit, //previous cardinals
+							sound_Lavender_Talk_AnaSOOnaREEM, //not a single one
+							sound_Lavender_Excited_GurumeNEEtoom, //did not know
+							sound_Lavender_Talk_RinuLefoom, //all certain
+							sound_Lavender_Talk_AloBAwaKIneru, //power of orbs
+							sound_Lavender_Talk_Gonnamenah, //almost as if
+							sound_Lavender_Curious_EkitiVenimin, //find it strange
+							sound_Lavender_Excited_Avinasoom, //despite existing
+							blanksound //...cause
+						]
+						
 						//Have Lavender start talking
 						if !(CarvalineOrbIntroCutscene_LavenderTalk_ExplainCardinal_StartedTalk)
 						{
 							CutsceneText(_text, "Lavender", TEXTBOX_POS.TOP, ft_Lavender);
+							obj_Text.TextBox_Voices = _text;
 							CarvalineOrbIntroCutscene_LavenderTalk_ExplainCardinal_StartedTalk = true;
 						}
 						
@@ -337,10 +371,20 @@ switch(CarvalineOrbIntroCutscene_Stage)
 							"The idea of discovering the past myself excited me.", 
 							"It made me feel like a child exploring their backyard."
 						];
+						
+						var _voice = 
+						[
+							sound_Lavender_Talk_Aleevah, //since 18
+							sound_Lavender_Talk_AvaboLinfinit, //no happy
+							sound_Lavender_Excited_Avinasoom, //bittersweet
+							sound_Lavender_Excited_RavinaLAsheen, //history
+							sound_Lavender_Excited_SAYAlora //child
+						]
 					
 						if !(CarvalineOrbIntroCutscene_LavenderTalk_ExplainCardinalMore_StartedTalk)
 						{
 							CutsceneText(_text, "Lavender", TEXTBOX_POS.TOP, ft_Lavender);
+							obj_Text.TextBox_Voices = _voice;
 							CarvalineOrbIntroCutscene_LavenderTalk_ExplainCardinalMore_StartedTalk = true;
 						}
 						else if !(instance_exists(obj_Text))
@@ -394,10 +438,20 @@ switch(CarvalineOrbIntroCutscene_Stage)
 							"We are going to have one heaven of a time, so take care not to be tardy!"
 							*/
 						]
+						
+						var _voice = 
+						[
+							sound_Lavender_Talk_Aleevah, //lore stuff
+							sound_Lavender_Talk_Gonnamenah, //it is time
+							sound_Lavender_Excited_SAYAlora, //NMG
+							sound_Lavender_Talk_RinuLefoom, //final test
+							sound_Lavender_Talk_AvaboLinfinit, //come
+						]
 					
 						if !(CarvalineOrbIntroCutscene_LavenderTalk_ExitTalk_TalkStarted)
 						{
 							CutsceneText(_text, "Lavender", TEXTBOX_POS.TOP, ft_Lavender);
+							obj_Text.TextBox_Voices = _voice;
 							CarvalineOrbIntroCutscene_LavenderTalk_ExitTalk_TalkStarted = true;
 						}
 						else if (!instance_exists(obj_Text))

@@ -322,7 +322,7 @@ switch(VoizatiaDebut_State)
 			[
 				"Cut 'em some slack Malvalia, I'm sure these girls can be some fun",
 				"I'll take Lavender, you have fun with Rose",
-				"I'm not into older women, but I'm fine with taking this outside, and its best if you enjoy it, Lavender",
+				"Let's have ourselves an unfair fight outside, why don't we",
 				"IT'LL BE THE LAST THING YOU'LL EVER DO AFTER ALL!"
 			];
 			
@@ -431,7 +431,7 @@ switch(VoizatiaDebut_State)
 			if !(VoizatiaDebut_LavenderExit_SequenceCreated)
 			{
 				layer_sequence_destroy(VoizatiaDebut_LavenderIdle_Sequence);
-				VoizatiaDebut_LavenderExit_Sequence = layer_sequence_create(layer, 0, 0, seq_VoizatiaDebut_LavenderExit);
+				VoizatiaDebut_LavenderExit_Sequence = layer_sequence_create("Lavender", 0, 0, seq_VoizatiaDebut_LavenderExit);
 				VoizatiaDebut_LavenderExit_SequenceCreated = true;
 			}
 			else if (layer_sequence_is_finished(VoizatiaDebut_LavenderExit_Sequence))

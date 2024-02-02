@@ -16,12 +16,14 @@
 /// text color is the default color of the text
 /// text chosen color is the color of the text that is being hovered over
 
-#macro TEXT_MARGIN 8
+#macro TEXT_MARGIN 24
 
-function Menu(_x, _y, _options, _description = -1, _font = ft_TitleScreen, _box = blanksprite, _textcolor = c_white, _textcolorchosen = c_yellow){
+function Menu(_x, _y, _options, _description = -1, _font = ft_TitleScreen, _box = blanksprite, _textcolor = c_white, _textcolorchosen = c_red){
+	
+	var _menu = instance_create_depth(_x, _y, -999, obj_Menu);
 	
 	//Create Menu object instance
-	with (instance_create_depth(_x, _y, -999, obj_Menu))
+	with (_menu)
 	{
 		
 		Menu_Hover = 0;
@@ -38,7 +40,7 @@ function Menu(_x, _y, _options, _description = -1, _font = ft_TitleScreen, _box 
 		Menu_Options = _options;	
 		Menu_Desc = _description;
 		Menu_NumOfOptions = array_length(_options);
-		Menu_HoverMarker = "- ";
+		Menu_HoverMarker = "";
 		
 		//Set the font and text margin
 		Menu_Margin = TEXT_MARGIN;
@@ -60,7 +62,7 @@ function Menu(_x, _y, _options, _description = -1, _font = ft_TitleScreen, _box 
 		Menu_Width += string_width(Menu_HoverMarker);
 		
 		//Set the height
-		Menu_HeightLine = 30;
+		Menu_HeightLine = 120;
 		Menu_Height = Menu_HeightLine * (Menu_NumOfOptions + !(Menu_Desc == -1));
 		
 		//Set the size of the text box
@@ -68,5 +70,7 @@ function Menu(_x, _y, _options, _description = -1, _font = ft_TitleScreen, _box 
 		Menu_FullHeight = Menu_Height + (Menu_Margin * 2);
 	
 	}//end create Menu instance
+	
+	return _menu;
 
 }//end Menu function

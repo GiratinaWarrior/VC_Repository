@@ -52,7 +52,7 @@
   "layers": [
     {"resourceType":"GMRAssetLayer","resourceVersion":"1.0","name":"Clouds","assets":[
         {"resourceType":"GMRParticleSystem","resourceVersion":"1.0","name":"particle_2416507F","colour":4294967295,"frozen":false,"ignore":false,"inheritedItemId":null,"inheritItemSettings":true,"particleSystemId":null,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":128.0,"y":256.0,},
-      ],"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":true,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":false,"layers":[],"properties":[],"userdefinedDepth":false,"visible":false,},
+      ],"depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":true,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":false,"layers":[],"properties":[],"userdefinedDepth":false,"visible":false,},
     {"resourceType":"GMREffectLayer","resourceVersion":"1.0","name":"Shadow","depth":0,"effectEnabled":true,"effectType":"_filter_tintfilter","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":true,"inheritLayerSettings":true,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
         {"name":"g_TintCol","type":1,"value":"#FF7F7F7F",},
       ],"userdefinedDepth":false,"visible":false,},

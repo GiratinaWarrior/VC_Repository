@@ -13,10 +13,17 @@ switch(CardinalNoctisCongrats_State)
 				"Ah, there you are Rose-darling, about time you showed.",
 				"No time to waste, time to get started."
 			]
+			
+			var _voice = 
+			[
+				sound_Lavender_Talk_Aleevah,
+				sound_Lavender_Talk_RinuLefoom,
+			]
 		
 			if (!CardinalNoctisCongrats_LavenderGreeting_TalkStarted)
 			{
 				CutsceneText(_text, "Lavender", TEXTBOX_POS.BOTTOM, ft_Lavender);
+				obj_Text.TextBox_Voices = _voice;
 				
 				with (obj_NPC)
 				{
@@ -87,9 +94,17 @@ switch(CardinalNoctisCongrats_State)
 				"The Cardinal Inauguration Ceremony!"
 			];
 		
+			var _voice =
+			[
+				sound_Lavender_Excited_AREEsheneLEEN, //attention
+				sound_Lavender_Excited_Avinasoom, //it is time
+				sound_Lavender_Excited_SAYAlora, //Cardinal Ceremony
+			]
+		
 			if (!CardinalNoctisCongrats_LavenderCallAssembly_TalkStarted)
 			{
 				CutsceneText(_text, "Lavender", TEXTBOX_POS.BOTTOM, ft_Lavender);
+				obj_Text.TextBox_Voices = _voice;
 				CardinalNoctisCongrats_LavenderCallAssembly_TalkStarted = true;
 			}
 			else if (!instance_exists(obj_Text))
@@ -157,9 +172,23 @@ switch(CardinalNoctisCongrats_State)
 				"I ask you to welcome my beautiful daughter as your new guardian figure, but much more importantly, as our friend."
 			];
 		
+			var _voice = 
+			[
+				sound_Lavender_Talk_Aleevah, //My children
+				sound_Lavender_Talk_AvaboLinfinit, //We did not worry
+				sound_Lavender_Talk_Gonnamenah, //Knitting clothes
+				sound_Lavender_Talk_AnaSOOnaREEM, //The only reason
+				sound_Lavender_Talk_AloBAwaKIneru, //I have been
+				sound_Lavender_Excited_SAYAlora, //Rose
+				sound_Lavender_Excited_RavinaLAsheen, //She who stands
+				sound_Lavender_Excited_SenavoreyOOnium, //She is ready
+				sound_Lavender_Excited_AREEsheneLEEN //I ask you
+			]
+		
 			if (!CardinalNoctisCongrats_LavenderSpeech_TalkStarted)
 			{
 				CutsceneText(_text, "Lavender", TEXTBOX_POS.BOTTOM, ft_Lavender);
+				obj_Text.TextBox_Voices = _voice;
 				CardinalNoctisCongrats_LavenderSpeech_TalkStarted = true;
 			}
 			else if (!instance_exists(obj_Text))
@@ -215,10 +244,17 @@ switch(CardinalNoctisCongrats_State)
 				"Ahem, now that my thesaurus-petting speech is finished",
 				"It is about time w-"
 			];
+			
+			var _voice = 
+			[
+				sound_Lavender_Talk_Aleevah, //Ahem
+				sound_Lavender_Talk_RinuLefoom //It is 
+			]
 		
 			if (!CardinalNoctisCongrats_LavenderEndSpeech_TalkStarted)
 			{
 				CutsceneText(_text, "Lavender", TEXTBOX_POS.BOTTOM, ft_Lavender);
+				obj_Text.TextBox_Voices = _voice;
 				CardinalNoctisCongrats_LavenderEndSpeech_TalkStarted = true;
 			}
 			else if (!instance_exists(obj_Text))
@@ -232,6 +268,7 @@ switch(CardinalNoctisCongrats_State)
 					if (TextBox_CharCount >= string_length(TextBox_Text[TextBox_Page]) && !(TextBox_Page + 1 < array_length(TextBox_Text)))
 					{
 						instance_destroy(obj_Text);
+						audio_stop_sound(_voice[1]);
 						other.CardinalNoctisCongrats_State = CARDINALNOCTISCONGRATS.SHRINE_EXPLOSION;
 					}
 				}
@@ -313,6 +350,12 @@ switch(CardinalNoctisCongrats_State)
 				"You 5 will retreat underground to safety, I cannot have you all in danger.",
 				"Jest! You will be in charge of leading them underground and protecting them from external threats."
 			];
+			
+			//TO DO
+			var _voice = 
+			[
+				
+			]
 		
 			if (!CardinalNoctisCongrats_LavenderOrders_TalkStarted)
 			{
@@ -431,6 +474,12 @@ switch(CardinalNoctisCongrats_State)
 				"And the one time that it is unguarded, how skeptical...",
 				"Onwards my little warrior, haste makes no waste!"
 			];
+			
+			//TO DO
+			var _voice = 
+			[
+				
+			]
 		
 			if (!CardinalNoctisCongrats_LavenderOrdersFamily_TalkStarted)
 			{

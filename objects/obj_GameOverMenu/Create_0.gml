@@ -24,5 +24,5 @@ MenuOptions_2DArray =
 ]
 
 //Menu(x, y, MenuOptions_2DArray, -1, ft_TitleScreen, blanksprite, c_white, c_yellow);
-Menu(896, 800, MenuOptions_2DArray, -1 , ft_TitleScreen);
+Menu(room_width/2, 750, MenuOptions_2DArray, -1 , ft_TitleScreen);
 

@@ -65,9 +65,19 @@ switch(LavenderBossIntroPrologue_State)
 				"Life is only beautiful because death exists."
 			];
 			
+			var _voice = 
+			[
+				sound_Lavender_Talk_Aleevah, //sky is beauty
+				sound_Lavender_Talk_AloBAwaKIneru, //not a cloud
+				sound_Lavender_Talk_KaiyeeveYanamainVaiyimi, //moon to be beauty
+				sound_Lavender_Talk_Gonnamenah //same with flower
+				//flower wither
+			]
+			
 			if !(LavenderBossIntroPrologue_LavenderTalkFirst_TalkStarted)
 			{
 				LavenderBossIntroPrologue_LavenderTalkFirst_Talk = CutsceneText(_text, n, p, f, c_red);				
+				LavenderBossIntroPrologue_LavenderTalkFirst_Talk.TextBox_Voices = _voice;
 				LavenderBossIntroPrologue_LavenderTalkFirst_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))
@@ -121,9 +131,17 @@ switch(LavenderBossIntroPrologue_State)
 				"I am not the greatest at getting to the point, so I will be doing some 'show do not tell'."
 			];
 			
+			var _voice = 
+			[
+				sound_Lavender_Talk_Aleevah, //haha
+				sound_Lavender_Curious_EkitiVenimin, //i think
+				sound_Lavender_Talk_RinuLefoom //im not greatest
+			]
+			
 			if !(LavenderBossIntroPrologue_LavenderExplain_TalkStarted)
 			{
 				LavenderBossIntroPrologue_LavenderExplain_Talk = CutsceneText(_text, n, p, f);
+				LavenderBossIntroPrologue_LavenderExplain_Talk.TextBox_Voices = _voice;
 				LavenderBossIntroPrologue_LavenderExplain_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))
@@ -185,6 +203,12 @@ switch(LavenderBossIntroPrologue_State)
 				"Come forth! Show me how my little flower has bloomed!",
 			];
 			
+			//TO DO 
+			var _voice = 
+			[
+				
+			]
+			
 			if !(LavenderBossIntroPrologue_LavenderChallenge_TalkStarted)
 			{
 				LavenderBossIntroPrologue_LavenderChallenge_Talk = CutsceneText(_text, n, p, f);
@@ -204,6 +228,8 @@ switch(LavenderBossIntroPrologue_State)
 	case LAVENDERBOSSINTROPROLOGUE_STATE.BATTLE_START:
 		
 		#region Battle Start
+			
+			PlayerFullHeal();
 			
 			if (LavenderBossIntroPrologue_LavenderBoss == noone)
 			{	
@@ -316,9 +342,18 @@ switch(LavenderBossIntroPrologue_State)
 				"You are undoubtedly worthy of the title 'Cardinal of Nox'."
 			];
 			
+			var _voice = 
+			[
+				sound_Lavender_Talk_Aleevah, //rose...
+				sound_Lavender_Excited_RavinaLAsheen, //you become strong
+				sound_Lavender_Excited_Avinasoom, //i am proud
+				sound_Lavender_Talk_RinuLefoom //worthy
+			]
+			
 			if !(LavenderBossIntroPrologue_LavenderDefeated_TalkStarted)
 			{
 				LavenderBossIntroPrologue_LavenderDefeated_Talk = CutsceneText(_text, n, p, f);
+				LavenderBossIntroPrologue_LavenderDefeated_Talk.TextBox_Text = _voice;
 				LavenderBossIntroPrologue_LavenderDefeated_TalkStarted = true;
 			}
 			
@@ -401,9 +436,18 @@ switch(LavenderBossIntroPrologue_State)
 				"We are going to have one heaven of a time!"
 			];
 			
+			var _voice = 
+			[
+				 sound_Lavender_Talk_Aleevah, //now that
+				 sound_Lavender_Talk_AloBAwaKIneru, //invited everyone
+				 sound_Lavender_Excited_GurumeNEEtoom, //dont dawdle
+				 sound_Lavender_Excited_SAYAlora, //heaven of a time
+			]
+			
 			if !(LavenderBossIntroPrologue_LavenderExitTalk_TalkStarted)
 			{
 				LavenderBossIntroPrologue_LavenderExitTalk_Talk = CutsceneText(_text, n, p, f);
+				LavenderBossIntroPrologue_LavenderExitTalk_Talk.TextBox_Voices = _voice;
 				LavenderBossIntroPrologue_LavenderExitTalk_TalkStarted = true;
 			}
 			

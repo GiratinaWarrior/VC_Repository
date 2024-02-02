@@ -115,8 +115,8 @@
     "path": "folders/Tile Sets/Field.yy",
   },
   "spriteId": {
-    "name": "spr_FieldTiles",
-    "path": "sprites/spr_FieldTiles/spr_FieldTiles.yy",
+    "name": "spr_SomniumFieldTiles",
+    "path": "sprites/spr_SomniumFieldTiles/spr_SomniumFieldTiles.yy",
   },
   "spriteNoExport": true,
   "textureGroupId": {

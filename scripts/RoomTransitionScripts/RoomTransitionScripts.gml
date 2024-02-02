@@ -62,7 +62,7 @@ function TransitionFinished()
 ///@param ExitSequence
 ///@param EnterSequence
 ///@param RoomIsCutscene
-function PlayerTransition(_targetRoom, _targetX, _targetY, _exitSeq, _enterSeq, _roomIsCutscene = false, _movingUp = false)
+function PlayerTransition(_targetRoom, _targetX, _targetY, _exitSeq = seq_FadeOut, _enterSeq = seq_FadeIn, _roomIsCutscene = false, _movingUp = false)
 {
 	//Access the player object
 	with (obj_Player)

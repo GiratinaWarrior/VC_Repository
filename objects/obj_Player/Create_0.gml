@@ -212,14 +212,14 @@ RoomIsCutscene = false;
 
 HealthBarWidth = 200; 
 HealthBarHeight = HealthBarWidth/10;
-HealthBarX = 10;
-HealthBarY = 10;
+HealthBarX = 0;
+HealthBarY = 0;
 
 
 VallenBarWidth = 150;
 VallenBarHeight = VallenBarWidth/10;
 VallenBarX = HealthBarX;
-VallenBarY = HealthBarY + HealthBarHeight + 5;
+VallenBarY = HealthBarY + 40;
 
 #endregion
 

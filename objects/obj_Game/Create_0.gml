@@ -54,6 +54,7 @@ global.AbilityUnlocked_ClingToHope = false;
 
 //-----------------------------------------------Story Flags-------------------------------------//
 
+global.IsDemo = true;
 
 //The number of orbs we've retrieved
 global.OrbsCollected = 0;
@@ -66,9 +67,9 @@ global.OceanOrb = 0;
 global.TundraOrb = 0;
 global.DesertOrb = 0;
 
-//--------------Cutscenes---------------//
+//------------------------------------------------Cutscenes----------------------------------------//
 
-/////Main Shrine
+//-----------------------Light Shrine
 
 //Jests first appearence 
 global.JestDebut_Cutscene_Seen = false;
@@ -88,7 +89,7 @@ global.Lavender_Defeated_Prologue = false;
 //The Noxians celebrate Rose
 global.CardinalNoctisCongrats_Cutscene_Seen = false;
 
-/////Dark Shrine
+//-----------------------Dark Shrine
 
 //Valnyx Shrine comes under attack
 global.ValnyxShrineUnderAttack_Active = false;
@@ -105,4 +106,10 @@ global.VoizatiaLavenderAftermath_Cutscene_Seen = false;
 //Regrouping with Jest in the Aftermath
 global.JestTalkedTo_PrologueChapterAftermath = false;
 
-//SetGlobalArray();
+//The cutscene where Voizatia is talking to Malvalia at Valnyx Shrine Peak
+global.PrologueEnd_Cutscene_Seen = false;
+
+//---------------------Somnium Forest
+
+
+

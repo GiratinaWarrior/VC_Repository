@@ -50,6 +50,9 @@
   ],
   "isDnd": false,
   "layers": [
+    {"resourceType":"GMRAssetLayer","resourceVersion":"1.0","name":"Clouds","assets":[
+        {"resourceType":"GMRParticleSystem","resourceVersion":"1.0","name":"particle_5C1D7A14","colour":4294967295,"frozen":false,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"particleSystemId":{"name":"ps_DarkClouds","path":"particles/ps_DarkClouds/ps_DarkClouds.yy",},"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":576.0,"y":224.0,},
+      ],"depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMREffectLayer","resourceVersion":"1.0","name":"Shadow","depth":0,"effectEnabled":true,"effectType":"_filter_tintfilter","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":true,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":false,"layers":[],"properties":[
         {"name":"g_TintCol","type":1,"value":"#FF7F7F7F",},
       ],"userdefinedDepth":false,"visible":false,},

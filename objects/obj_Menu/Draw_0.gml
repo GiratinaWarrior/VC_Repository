@@ -4,7 +4,7 @@
 draw_sprite_stretched(Menu_Box, 0, x - Menu_Margin, y - Menu_Margin, Menu_FullWidth, Menu_FullHeight);
 
 //set the text
-DrawSetText(Menu_TextColor, Menu_Font, fa_left, fa_top);
+DrawSetText(Menu_TextColor, Menu_Font, fa_center, fa_top);
 
 draw_set_alpha(Menu_StartAlpha);
 

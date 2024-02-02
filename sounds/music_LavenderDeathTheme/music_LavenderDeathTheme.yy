@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 150.70041,
+  "duration": 150.78906,
   "parent": {
     "name": "CharacterThemes",
     "path": "folders/Sounds/Music/CharacterThemes.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "music_LavenderDeathTheme.mp3",
+  "soundFile": "music_LavenderDeathTheme.ogg",
   "type": 0,
-  "volume": 0.3,
+  "volume": 0.2,
 }

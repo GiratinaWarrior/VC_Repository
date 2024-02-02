@@ -65,12 +65,27 @@ switch(CardinalFamilyCongrats_Stage)
 				"Rose-darling. Listen.",
 				"The duty of a Cardinal, is to act as a guardian to the Noxians, protecting them, and guiding them.",
 				"At least, that's what everyone outside of this shrine knows, but there is one more thing that a Cardinal is responsible for.",
+			];
+			
+			var _voice = 
+			[
+				sound_Lavender_Talk_Aleevah, //greetings
+				sound_Lavender_Talk_AloBAwaKIneru,  //although
+				sound_Lavender_Excited_GurumeNEEtoom, //congrats
+				sound_Lavender_Talk_Gonnamenah, //but before
+				sound_Lavender_Talk_RinuLefoom, //skip dialogue
+				sound_Lavender_Excited_AREEsheneLEEN, //do not
+				sound_Lavender_Talk_AnaSOOnaREEM, //taking away
+				sound_Lavender_Talk_RinuLefoom, //listen
+				sound_Lavender_Excited_Avinasoom, //the duty
+				sound_Lavender_Talk_AloBAwaKIneru //at least
 			]
 		
 			//If Lavender hasn't started talking, TALK
 			if (!CardinalFamilyCongrats_TalkStarted)
 			{
 				CardinalFamilyCongrats_Speech = CutsceneText(_text, "Lavender", TEXTBOX_POS.BOTTOM, ft_Lavender);
+				CardinalFamilyCongrats_Speech.TextBox_Voices = _voice;
 				CardinalFamilyCongrats_TalkLavenderSprite = layer_sprite_create(layer, x + 145, y - 16, spr_Lavender_Idle);
 				CardinalFamilyCongrats_TalkStarted = true;
 			}
@@ -83,8 +98,6 @@ switch(CardinalFamilyCongrats_Stage)
 			//If its time to take away your skip dialogue priviledges
 			else if (CardinalFamilyCongrats_Speech.TextBox_Page >= 4)
 			{
-				
-				
 				CardinalFamilyCongrats_Speech.TextBox_TextSkippable = false;
 				CardinalFamilyCongrats_Speech.TextBox_CharIncrease = 0.5;
 			}
@@ -135,11 +148,17 @@ switch(CardinalFamilyCongrats_Stage)
 			[
 				"Follow me"
 			]
+			
+			var _voice = 
+			[
+				sound_Lavender_Talk_Aleevah
+			]
 		
 			//If Lavender hasn't started talking, TALK
 			if (!CardinalFamilyCongrats_ExitTalkStarted)
 			{
 				CutsceneText(_text, "Lavender", TEXTBOX_POS.TOP, ft_Lavender);
+				obj_Text.TextBox_Voices = _voice;
 				layer_sprite_x(CardinalFamilyCongrats_TalkLavenderSprite, x);
 				layer_sprite_y(CardinalFamilyCongrats_TalkLavenderSprite, y + 176);
 				layer_sprite_xscale(CardinalFamilyCongrats_TalkLavenderSprite, -1);

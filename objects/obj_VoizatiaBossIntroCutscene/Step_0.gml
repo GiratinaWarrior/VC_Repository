@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-var _skippable = false;
+var _skippable = true;
 
 var _skipButton = global.Key_Skip;
 

@@ -342,7 +342,14 @@ switch (PrologueEndCutscene_Stage)
 	
 		#region Cutscene End
 				
-			TransitionStart(Room_Credits_PrologueChapter, seq_FadeOut, seq_FadeIn);
+			if (global.IsDemo)
+			{
+				TransitionStart(Room_Credits_PrologueChapter, seq_FadeOut, seq_FadeIn);
+			}
+			else
+			{
+				PlayerTransition(Room_SomniumField1, 32, 576);
+			}
 			
 			instance_destroy();
 		

@@ -221,8 +221,6 @@ switch(JestDebut_Stage)
 			
 				SetRoomAudio_Music_Default(music_ShrinePeacefulTheme);
 			
-				PlayerFullHeal();
-			
 				SetSpawnpoint(obj_Player.x, obj_Player.y);
 			
 				SaveGame();

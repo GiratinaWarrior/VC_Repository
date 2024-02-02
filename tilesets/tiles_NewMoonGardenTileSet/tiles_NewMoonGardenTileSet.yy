@@ -66,8 +66,8 @@
     "path": "folders/Tile Sets/Special.yy",
   },
   "spriteId": {
-    "name": "spr_NewMoonGardenTiles",
-    "path": "sprites/spr_NewMoonGardenTiles/spr_NewMoonGardenTiles.yy",
+    "name": "spr_NewMoonGardenTile",
+    "path": "sprites/spr_NewMoonGardenTile/spr_NewMoonGardenTile.yy",
   },
   "spriteNoExport": true,
   "textureGroupId": {

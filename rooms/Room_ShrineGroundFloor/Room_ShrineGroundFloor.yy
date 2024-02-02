@@ -173,14 +173,14 @@
 -13,28,-150,0,-7,20,1,36,-8,0,1,34,-13,20,-7,47,1,24,-8,0,1,16,-20,47,1,2,-5,20,4,36,
 0,0,16,-13,47,17,28,12,28,28,12,28,28,12,28,28,12,28,28,25,0,0,16,-13,47,17,0,32,0,0,
 32,0,0,32,0,0,32,0,0,32,0,0,16,-13,47,17,0,32,0,0,32,0,0,32,0,0,32,0,0,32,
-0,0,16,-13,47,17,20,3,20,20,3,20,20,3,20,20,3,20,20,3,20,20,1,-43,47,],"TileDataFormat":1,},"tilesetId":{"name":"tiles_ShrineMainBrickTileSet","path":"tilesets/tiles_ShrineMainBrickTileSet/tiles_ShrineMainBrickTileSet.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+0,0,16,-13,47,17,20,3,20,20,3,20,20,3,20,20,3,20,20,3,20,20,1,-43,47,],"TileDataFormat":1,},"tilesetId":{"name":"tiles_ShrineMainBrickTileSet","path":"tilesets/tiles_ShrineMainBrickTileSet/tiles_ShrineMainBrickTileSet.yy",},"userdefinedDepth":false,"visible":false,"x":0,"y":0,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Floor_MainDoorClosed","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":17,"SerialiseWidth":30,"TileCompressedData":[
 -13,47,4,24,0,0,16,-26,47,4,24,0,0,16,-26,47,4,24,0,0,16,-14,47,1,4,-11,28,4,38,0,
 0,40,-13,28,2,47,24,-28,0,2,47,24,-28,0,2,47,24,-28,0,2,47,24,-28,0,2,47,24,-28,0,2,
 47,2,-5,20,1,36,-8,0,1,34,-13,20,-7,47,1,24,-8,0,1,16,-20,47,1,2,-5,20,4,36,0,0,
 16,-13,47,17,28,12,28,28,12,28,28,12,28,28,12,28,28,25,0,0,16,-13,47,17,0,32,0,0,32,0,
 0,32,0,0,32,0,0,32,0,0,16,-13,47,17,0,32,0,0,32,0,0,32,0,0,32,0,0,32,0,0,
-16,-13,47,17,20,3,20,20,3,20,20,3,20,20,3,20,20,3,20,20,1,-43,47,],"TileDataFormat":1,},"tilesetId":{"name":"tiles_ShrineMainBrickTileSet","path":"tilesets/tiles_ShrineMainBrickTileSet/tiles_ShrineMainBrickTileSet.yy",},"userdefinedDepth":false,"visible":false,"x":0,"y":0,},
+16,-13,47,17,20,3,20,20,3,20,20,3,20,20,3,20,20,3,20,20,1,-43,47,],"TileDataFormat":1,},"tilesetId":{"name":"tiles_ShrineMainBrickTileSet","path":"tilesets/tiles_ShrineMainBrickTileSet/tiles_ShrineMainBrickTileSet.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Cutscene","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3CDFC73D","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_EventStart_OneTime","path":"objects/obj_EventStart_OneTime/obj_EventStart_OneTime.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":2.5,"x":608.0,"y":128.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},

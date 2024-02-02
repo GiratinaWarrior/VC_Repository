@@ -242,17 +242,6 @@ function ShrineGeneralPhaseOne_RapidPunches() {
 				sprite_index = spr_ShrineGeneral_Body_RapidPunchFlurry_PhaseOne;
 			
 				xSpeed = image_xscale = ShrineGeneral_Speed/10;
-				
-				#region Regular Arms
-				
-					//Temporarily deactivate the Shrine Generals left and right arms
-					//instance_deactivate_object(ShrineGeneral_RightArm);
-					//instance_deactivate_object(ShrineGeneral_LeftArm);
-					
-					//ShrineGeneral_RightArm.image_alpha = 0;
-					//ShrineGeneral_LeftArm.image_alpha = ShrineGeneral_RightArm.image_alpha;
-				
-				#endregion 
 			
 				#region Mirage Arms
 					

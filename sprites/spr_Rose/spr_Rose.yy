@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "spr_Rose",
   "bbox_bottom": 15,
-  "bbox_left": 0,
-  "bbox_right": 6,
+  "bbox_left": 3,
+  "bbox_right": 11,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"399cf1bc-7f20-4211-aa90-21710c00317e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d0c3d243-892f-4101-96a4-1eed87a0844d",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 16,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e6f4256e-6713-483f-8d58-15bf074abe9b","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"1e484b7d-b529-40e7-a432-b7a6340a3fc3","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": {
     "resourceType": "GMNineSliceData",
@@ -35,8 +35,8 @@
     ],
     "highlightColour": 1728023040,
     "highlightStyle": 1,
-    "left": 0,
-    "right": 0,
+    "left": 5,
+    "right": 5,
     "tileMode": [
       0,
       0,
@@ -77,12 +77,12 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"399cf1bc-7f20-4211-aa90-21710c00317e","path":"sprites/spr_Rose/spr_Rose.yy",},},},"Disabled":false,"id":"5648b7c7-0002-4817-9323-64684ad2b595","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d0c3d243-892f-4101-96a4-1eed87a0844d","path":"sprites/spr_Rose/spr_Rose.yy",},},},"Disabled":false,"id":"568a5064-d6a1-44ab-9cc5-1112f1ac86fb","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 4,
+    "xorigin": 8,
     "yorigin": 16,
   },
   "swatchColours": null,
@@ -93,5 +93,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 8,
+  "width": 16,
 }
