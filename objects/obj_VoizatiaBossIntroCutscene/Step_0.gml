@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-var _skippable = true;
+var _skippable = false;
 
 var _skipButton = global.Key_Skip;
 
@@ -111,6 +111,8 @@ switch(VoizatiaBossIntro_State)
 				if (VoizatiaBossIntro_TimeSource == noone) VoizatiaBossIntro_TimeSource = TimeSourceCreateAndStart(30, _func, [], 1);
 			}
 
+			else SkipTextOption();
+			
 
 		#endregion
 		
@@ -135,6 +137,8 @@ switch(VoizatiaBossIntro_State)
 				layer_sequence_x(VoizatiaBossIntro_VoizatiaIdle, 256);
 				//show_debug_message("Voizatia Teleported");
 			}
+		
+			else SkipCutsceneOption(VoizatiaBossIntro_VoizatiaTeleportRose_Sequence);
 		
 		#endregion
 	
@@ -180,6 +184,7 @@ switch(VoizatiaBossIntro_State)
 				}
 				if (VoizatiaBossIntro_TimeSource == noone) VoizatiaBossIntro_TimeSource = TimeSourceCreateAndStart(120, _func, [], 1);
 			}
+			else SkipTextOption();
 		
 		#endregion
 	
@@ -224,6 +229,7 @@ switch(VoizatiaBossIntro_State)
 			{
 				VoizatiaBossIntro_State = VOIZATIABOSSINTRO.VOIZATIA_HOSTAGE;
 			}
+			else SkipTextOption();
 		
 		#endregion
 	
@@ -246,6 +252,7 @@ switch(VoizatiaBossIntro_State)
 				layer_sequence_destroy(VoizatiaBossIntro_VoizatiaHostage_Sequence);
 				VoizatiaBossIntro_State = VOIZATIABOSSINTRO.VOIZATIA_THREATEN_LAVENDER;
 			}
+			else SkipCutsceneOption(VoizatiaBossIntro_VoizatiaHostage_Sequence);
 			
 		#endregion
 	
@@ -295,6 +302,8 @@ switch(VoizatiaBossIntro_State)
 				if (VoizatiaBossIntro_TimeSource == noone) VoizatiaBossIntro_TimeSource = TimeSourceCreateAndStart(90, _func, [], 1);
 			}
 		
+			else SkipTextOption();
+		
 		#endregion
 	
 		break;//end Voizatia Threaten Lavender
@@ -333,7 +342,9 @@ switch(VoizatiaBossIntro_State)
 			{
 				VoizatiaBossIntro_State = VOIZATIABOSSINTRO.VOIZATIA_ASCEND;
 			}
-		
+			
+			else SkipTextOption();
+			
 		#endregion
 		
 		break;//end Voizatia Challenge Rose
@@ -357,6 +368,8 @@ switch(VoizatiaBossIntro_State)
 				layer_sequence_destroy(VoizatiaBossIntro_VoizatiaAscend_Sequence);
 				VoizatiaBossIntro_State = VOIZATIABOSSINTRO.VOIZATIA_PROVOKE;
 			}
+			
+			else SkipCutsceneOption(VoizatiaBossIntro_VoizatiaAscend_Sequence);
 		
 		#endregion
 	
@@ -384,7 +397,7 @@ switch(VoizatiaBossIntro_State)
 			{
 				VoizatiaBossIntro_State = VOIZATIABOSSINTRO.BATTLE_START;
 			}
-		
+			
 		#endregion
 	
 		break;//end Voizatia Provoke Stage
@@ -523,6 +536,7 @@ switch(VoizatiaBossIntro_State)
 				}
 				if (VoizatiaBossIntro_TimeSource == noone) VoizatiaBossIntro_TimeSource = TimeSourceCreateAndStart(40, _func);
 			}
+		//	else SkipTextOption();
 		
 		#endregion
 		
@@ -542,6 +556,7 @@ switch(VoizatiaBossIntro_State)
 			{
 				VoizatiaBossIntro_State = VOIZATIABOSSINTRO.VOIZATIA_ORDERS;
 			}
+			
 			
 		#endregion
 		
@@ -588,6 +603,7 @@ switch(VoizatiaBossIntro_State)
 				}
 				if (VoizatiaBossIntro_TimeSource == noone) VoizatiaBossIntro_TimeSource = TimeSourceCreateAndStart(30, _func);
 			}
+			//else SkipTextOption();
 			
 		#endregion
 	
@@ -657,7 +673,8 @@ switch(VoizatiaBossIntro_State)
 			{
 				VoizatiaBossIntro_State = VOIZATIABOSSINTRO.VOIZATIA_EXIT;
 			}
-		
+		//	else SkipTextOption();
+		;
 		#endregion
 		
 		break;//end Voizatia Fly Talk Stage

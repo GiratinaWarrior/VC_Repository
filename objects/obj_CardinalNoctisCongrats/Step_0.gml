@@ -1,5 +1,6 @@
 /// @description The Cardinal Inauguration Cutscene
 
+
 //The Stages of the Cardinal Ceremony
 switch(CardinalNoctisCongrats_State)
 {
@@ -39,6 +40,11 @@ switch(CardinalNoctisCongrats_State)
 			{
 				CardinalNoctisCongrats_State = CARDINALNOCTISCONGRATS.LAVENDER_ASCEND;
 			}
+			else
+			{
+				SkipTextOption();	
+			}
+			
 			
 		#endregion
 		
@@ -67,6 +73,7 @@ switch(CardinalNoctisCongrats_State)
 			}
 			else
 			{
+				SkipCutsceneOption(CardinalNoctisCongrats_LavenderAscend_Sequence);
 				with (obj_Camera)
 				{
 					follow = noone;
@@ -111,6 +118,10 @@ switch(CardinalNoctisCongrats_State)
 			{
 				CardinalNoctisCongrats_State = CARDINALNOCTISCONGRATS.AUDIENCE_ASSEMBLE;
 			}
+			else
+			{
+				SkipTextOption();
+			}
 			
 		#endregion
 		
@@ -146,6 +157,10 @@ switch(CardinalNoctisCongrats_State)
 						CardinalNoctisCongrats_AudienceIdleSequence = layer_sequence_create("Residents", 656, 530, seq_CardinalNoctisCongrats_AudienceIdle);
 					}
 				CardinalNoctisCongrats_State = CARDINALNOCTISCONGRATS.LAVENDER_SPEECH;
+			}
+			else
+			{
+				SkipCutsceneOption(CardinalNoctisCongrats_AudienceAssemble_Sequence);
 			}
 		
 		#endregion
@@ -195,6 +210,10 @@ switch(CardinalNoctisCongrats_State)
 			{
 				CardinalNoctisCongrats_State = CARDINALNOCTISCONGRATS.AUDIENCE_CHEER;
 			}
+			else
+			{
+				SkipTextOption();
+			}
 			
 		#endregion
 		
@@ -228,6 +247,10 @@ switch(CardinalNoctisCongrats_State)
 			else if (!instance_exists(obj_Text)) && !audio_is_playing(sound_Applause)
 			{
 				CardinalNoctisCongrats_State = CARDINALNOCTISCONGRATS.LAVENDER_END_SPEECH;
+			}
+			else
+			{
+				SkipTextOption();
 			}
 		
 		#endregion
@@ -270,6 +293,10 @@ switch(CardinalNoctisCongrats_State)
 						instance_destroy(obj_Text);
 						audio_stop_sound(_voice[1]);
 						other.CardinalNoctisCongrats_State = CARDINALNOCTISCONGRATS.SHRINE_EXPLOSION;
+					}
+					else
+					{
+						SkipTextOption();
 					}
 				}
 			}
@@ -331,6 +358,10 @@ switch(CardinalNoctisCongrats_State)
 			{
 				CardinalNoctisCongrats_State = CARDINALNOCTISCONGRATS.LAVENDER_ORDERS;
 			}
+			else
+			{
+				SkipTextOption();
+			}
 		
 		#endregion
 		
@@ -351,20 +382,30 @@ switch(CardinalNoctisCongrats_State)
 				"Jest! You will be in charge of leading them underground and protecting them from external threats."
 			];
 			
-			//TO DO
+			
 			var _voice = 
 			[
-				
+				sound_Lavender_Serious_Inasam, //People of Nox
+				sound_Lavender_Serious_Inasamazagazu, //Calm yourselves
+				sound_Lavender_Serious_AnasivuUnazin, //There is no need
+				sound_Lavender_Serious_AkahNahSavah, //Nasi, Nadiolo .....
+				sound_Lavender_Serious_RahSavanai, //You 5 will retreat
+				sound_Lavender_Serious_ZanaziAkoo, //Jest
 			]
 		
 			if (!CardinalNoctisCongrats_LavenderOrders_TalkStarted)
 			{
 				CutsceneText(_text, "Lavender", TEXTBOX_POS.BOTTOM, ft_Lavender);
+				obj_Text.TextBox_Voices = _voice;
 				CardinalNoctisCongrats_LavenderOrders_TalkStarted = true;
 			}
 			else if (!instance_exists(obj_Text))
 			{
 				CardinalNoctisCongrats_State = CARDINALNOCTISCONGRATS.JEST_CONFIRM;
+			}
+			else
+			{
+				SkipTextOption();
 			}
 		
 		#endregion
@@ -400,6 +441,7 @@ switch(CardinalNoctisCongrats_State)
 			{
 				CardinalNoctisCongrats_State = CARDINALNOCTISCONGRATS.AUDIENCE_RETREAT;
 			}
+			else SkipTextOption();
 		
 		#endregion
 		
@@ -421,6 +463,7 @@ switch(CardinalNoctisCongrats_State)
 				layer_sequence_destroy(CardinalNoctisCongrats_AudienceRetreat_Sequence);
 				CardinalNoctisCongrats_State = CARDINALNOCTISCONGRATS.LAVENDER_DESCEND;
 			}
+			else SkipCutsceneOption(CardinalNoctisCongrats_AudienceRetreat_Sequence);
 			
 		#endregion
 	
@@ -449,6 +492,7 @@ switch(CardinalNoctisCongrats_State)
 			}
 			else
 			{
+				SkipCutsceneOption(CardinalNoctisCongrats_LavenderDescend_Sequence);
 				with (obj_Camera)
 				{
 					follow = noone;
@@ -478,17 +522,26 @@ switch(CardinalNoctisCongrats_State)
 			//TO DO
 			var _voice = 
 			[
-				
+				sound_Lavender_Serious_Inzuga, //Rose
+				sound_Lavender_Serious_IzahRahna, //That explosion
+				sound_Lavender_Serious_Zinamanarasa, //Valnyx Shrine
+				sound_Lavender_Curious_SawakaAbina, //And the one time
+				sound_Lavender_Serious_Venemin, //Onwards my little warrior
 			]
 		
 			if (!CardinalNoctisCongrats_LavenderOrdersFamily_TalkStarted)
 			{
 				CutsceneText(_text, "Lavender", TEXTBOX_POS.BOTTOM, ft_Lavender);
+				obj_Text.TextBox_Voices = _voice;
 				CardinalNoctisCongrats_LavenderOrdersFamily_TalkStarted = true;
 			}
 			else if (!instance_exists(obj_Text))
 			{
 				CardinalNoctisCongrats_State = CARDINALNOCTISCONGRATS.LAVENDER_EXIT;
+			}
+			else
+			{
+				SkipTextOption();
 			}
 		
 		#endregion
@@ -510,6 +563,10 @@ switch(CardinalNoctisCongrats_State)
 			{
 				layer_sequence_destroy(CardinalNoctisCongrats_LavenderExit_Sequence);
 				CardinalNoctisCongrats_State = CARDINALNOCTISCONGRATS.CUTSCENE_END;
+			}
+			else
+			{
+				SkipCutsceneOption(CardinalNoctisCongrats_LavenderExit_Sequence)
 			}
 			
 		#endregion

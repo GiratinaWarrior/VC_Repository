@@ -52,6 +52,7 @@ switch (JestAftermathCutscene_State)
 			}
 			else
 			{
+				//SkipTextOption();
 				with (obj_Text)
 				{
 					if (TextBox_CharCount < string_length(TextBox_Text[TextBox_Page]))
@@ -91,7 +92,6 @@ switch (JestAftermathCutscene_State)
 				if (JestAftermathCutscene_TimeSource == noone) JestAftermathCutscene_TimeSource = TimeSourceCreateAndStart(50, _func);
 				
 			}
-			
 		
 		#endregion
 		

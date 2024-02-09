@@ -27,6 +27,7 @@ switch (MalvaliaFirstFightCutscene_State)
 			{
 				MalvaliaFirstFightCutscene_State = MALVALIAFIRSTFIGHTCUTSCENE.MALVALIA_ENTER_TALK;
 			}
+			else SkipCutsceneOption(MalvaliaFirstFightCutscene_MalvaliaEnter_Sequence);
 			
 		#endregion
 		
@@ -54,7 +55,7 @@ switch (MalvaliaFirstFightCutscene_State)
 			{
 				MalvaliaFirstFightCutscene_State = MALVALIAFIRSTFIGHTCUTSCENE.BATTLE_START;
 			}
-		
+			else SkipTextOption();
 		
 		#endregion
 		
@@ -111,6 +112,7 @@ switch (MalvaliaFirstFightCutscene_State)
 				MalvaliaFirstFightCutscene_State = MALVALIAFIRSTFIGHTCUTSCENE.MALVALIA_EXIT;
 			//	show_debug_message("NEXT STAGE");
 			}
+			else SkipTextOption();
 			
 		#endregion
 		
@@ -134,6 +136,7 @@ switch (MalvaliaFirstFightCutscene_State)
 				MalvaliaFirstFightCutscene_State = MALVALIAFIRSTFIGHTCUTSCENE.SHADOW_REALM_COLLAPSE;
 				layer_sequence_destroy(MalvaliaFirstFightCutscene_MalvaliaExit_Sequence);
 			}
+			else SkipCutsceneOption(MalvaliaFirstFightCutscene_MalvaliaExit_Sequence);
 			
 		#endregion
 		

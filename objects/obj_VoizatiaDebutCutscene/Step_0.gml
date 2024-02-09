@@ -73,34 +73,6 @@ switch(VoizatiaDebut_State)
 		}
 		
 		break;
-	
-	//Rose Enter Stage
-	case VOIZATIADEBUT.ROSE_ENTER:
-		
-		#region Rose Enter
-		
-			if !(VoizatiaDebut_RoseEnter_SequenceCreated)
-			{
-				obj_Camera.follow = noone;
-				VoizatiaDebut_RoseEnter_Sequence = layer_sequence_create("ShrinePedestal", 0, 4, seq_VoizatiaDebut_RoseEnter);
-				VoizatiaDebut_LavenderIdle_Sequence = layer_sequence_create("ShrinePedestal", 0, 0, seq_VoizatiaDebut_LavenderIdle);
-				VoizatiaDebut_VoizatiaIdle_Sequence = layer_sequence_create(layer, 0, 0, seq_VoizatiaDebut_VoizatiaIdle);
-				VoizatiaDebut_RoseEnter_SequenceCreated = true;
-			}
-			else if (layer_sequence_is_finished(VoizatiaDebut_RoseEnter_Sequence))
-			{
-				obj_Player.x = 256 + RES_W;
-				obj_Player.y = 464;//190 + RES_H/2;
-				layer_sequence_destroy(VoizatiaDebut_RoseEnter_Sequence);
-				VoizatiaDebut_State = VOIZATIADEBUT.VOIZATIA_TALK_FIRST;
-			}
-			
-			obj_Camera.xTo = 3000;
-			obj_Camera.x = 2000;
-		
-		#endregion
-		
-		break;//end Rose Enter Stage
 		
 	//Voizatia Talk First Stage
 	case VOIZATIADEBUT.VOIZATIA_TALK_FIRST:
@@ -137,6 +109,10 @@ switch(VoizatiaDebut_State)
 			{	
 				VoizatiaDebut_State = VOIZATIADEBUT.LAVENDER_RESPOND_FIRST;
 			}
+			else
+			{
+				SkipTextOption();
+			}
 		
 		#endregion
 		
@@ -152,15 +128,26 @@ switch(VoizatiaDebut_State)
 				"Unfortunately, I would prefer to keep those down here to rot, that is what is best for this world after all.",
 				"And besides, you rudely barged in with terrorism of all things, could you not have at least knocked?"
 			]
+			
+			var _voice = 
+			[
+				sound_Lavender_Serious_Zinamanarasa, //Unfortunately
+				sound_Lavender_Serious_ZanaziAkoo, //And besides
+			]
 		
 			if !(VoizatiaDebut_LavenderRespondFirst_TalkStarted)
 			{
 				CutsceneText(_text, "Lavender", TEXTBOX_POS.TOP, ft_Lavender);
+				obj_Text.TextBox_Voices = _voice;
 				VoizatiaDebut_LavenderRespondFirst_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))
 			{
 				VoizatiaDebut_State = VOIZATIADEBUT.VOIZATIA_RESPOND_SECOND;
+			}
+			else
+			{
+				SkipTextOption();
 			}
 		
 		#endregion
@@ -204,7 +191,8 @@ switch(VoizatiaDebut_State)
 			{	
 				VoizatiaDebut_State = VOIZATIADEBUT.VOIZATIA_FLY;
 			}
-		
+			else SkipTextOption();
+			
 		#endregion
 		
 		break;//end Voizatia Respond Second Stage
@@ -227,6 +215,7 @@ switch(VoizatiaDebut_State)
 				VoizatiaDebut_VoizatiaIdle_Sequence = layer_sequence_create(layer, 0, 0, seq_VoizatiaDebut_VoizatiaFloat);
 				VoizatiaDebut_State = VOIZATIADEBUT.VOIZATIA_SUMMON_MALVALIA;
 			}
+			else SkipCutsceneOption(VoizatiaDebut_VoizatiaFly_Sequence);
 			
 		#endregion
 		
@@ -261,6 +250,7 @@ switch(VoizatiaDebut_State)
 			{
 				VoizatiaDebut_State = VOIZATIADEBUT.MALVALIA_ENTER;
 			}
+			else SkipTextOption();
 		
 		#endregion
 	
@@ -282,7 +272,8 @@ switch(VoizatiaDebut_State)
 				VoizatiaDebut_MalvaliaIdle_Sequence = layer_sequence_create(layer, 0, 0, seq_VoizatiaDebut_MalvaliaFloat);
 				VoizatiaDebut_State = VOIZATIADEBUT.MALVALIA_TALK_FIRST;
 			}
-		
+			else SkipCutsceneOption(VoizatiaDebut_MalvaliaEnter_Sequence);
+			
 		#endregion
 		
 		break;//end Malvalia Enter Stage
@@ -308,6 +299,7 @@ switch(VoizatiaDebut_State)
 			{
 				VoizatiaDebut_State = VOIZATIADEBUT.VOIZATIA_RESPOND_THIRD;
 			}
+			else SkipTextOption();
 			
 		#endregion
 	
@@ -344,6 +336,7 @@ switch(VoizatiaDebut_State)
 			{
 				VoizatiaDebut_State = VOIZATIADEBUT.VOIZATIA_EXIT;
 			}
+			else SkipTextOption();
 			
 		#endregion
 		
@@ -369,6 +362,7 @@ switch(VoizatiaDebut_State)
 				layer_sequence_destroy(VoizatiaDebut_VoizatiaExit_Sequence);
 				VoizatiaDebut_State = VOIZATIADEBUT.LAVENDER_MOVE;
 			}
+			else SkipCutsceneOption(VoizatiaDebut_VoizatiaExit_Sequence);
 			
 		#endregion
 		
@@ -391,6 +385,7 @@ switch(VoizatiaDebut_State)
 				VoizatiaDebut_LavenderIdle_Sequence = layer_sequence_create(layer, 0, 0, seq_VoizatiaDebut_LavenderIdleMoved);
 				VoizatiaDebut_State = VOIZATIADEBUT.LAVENDER_EXIT_TALK;
 			}
+			else SkipCutsceneOption(VoizatiaDebut_LavenderMove_Sequence);
 			
 		#endregion
 	
@@ -406,18 +401,28 @@ switch(VoizatiaDebut_State)
 				"Rose-darling, listen to me carefully",
 				"That Malvalia is stronger than she appears. Do not let your guard down for a second",
 				"And above all else, do not fight Voizatia, you will not win",
-				"Have faith in your old little mother"
+				"Have faith in your little old mother"
 			];
+		
+			var _voice = 
+			[
+				sound_Lavender_Serious_Inasam, //Rose-darling
+				sound_Lavender_Serious_AnasivuUnazin, //That Malvalia
+				sound_Lavender_Serious_AkahNahSavah, //And above all else
+				sound_Lavender_Talk_AloBAwaKIneru, //Have faith
+			]
 		
 			if !(VoizatiaDebut_LavenderExitTalk_TalkStarted)
 			{
 				CutsceneText(_text, "Lavender", TEXTBOX_POS.TOP, ft_Lavender);
+				obj_Text.TextBox_Voices = _voice;
 				VoizatiaDebut_LavenderExitTalk_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))
 			{
 				VoizatiaDebut_State = VOIZATIADEBUT.LAVENDER_EXIT;
 			}
+			else SkipTextOption();
 		
 		#endregion
 	
@@ -439,7 +444,8 @@ switch(VoizatiaDebut_State)
 				layer_sequence_destroy(VoizatiaDebut_LavenderExit_Sequence);
 				VoizatiaDebut_State = VOIZATIADEBUT.MALVALIA_CHALLENGE;
 			}
-		
+			else SkipCutsceneOption(VoizatiaDebut_LavenderExit_Sequence);
+			
 		#endregion
 		
 		break;//end Lavender Exit Stage
@@ -467,6 +473,7 @@ switch(VoizatiaDebut_State)
 			{
 				VoizatiaDebut_State =  VOIZATIADEBUT.MALVALIA_SUMMON_SHADOWS;//VOIZATIADEBUT.MALVALIA_SUMMON_SHADOWS;
 			}
+			else SkipTextOption();
 		
 		#endregion
 		
@@ -492,7 +499,7 @@ switch(VoizatiaDebut_State)
 			else
 			{
 				layer_sprite_alpha(VoizatiaDebut_MalvaliaSummonShadows_Gate, VoizatiaDebut_MalvaliaSummonShadows_GateAlpha);
-				VoizatiaDebut_MalvaliaSummonShadows_GateAlpha+=0.01;
+				VoizatiaDebut_MalvaliaSummonShadows_GateAlpha+=0.01 + (global.Key_Skip * 0.04);
 			}
 			
 		#endregion
@@ -520,6 +527,7 @@ switch(VoizatiaDebut_State)
 			{
 				VoizatiaDebut_State = VOIZATIADEBUT.MALVALIA_EXIT;
 			}
+			else SkipTextOption();
 		
 		#endregion
 		
@@ -544,6 +552,8 @@ switch(VoizatiaDebut_State)
 				VoizatiaDebut_Wall = instance_create_layer(992, 384, "Platforms", obj_Wall);
 				VoizatiaDebut_Wall.image_yscale = 3;
 			}
+			else SkipCutsceneOption(VoizatiaDebut_MalvaliaExit_Sequence);
+			
 		
 		#endregion
 		

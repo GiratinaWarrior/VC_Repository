@@ -52,3 +52,26 @@ function Text(_text)
 
 }
 
+function SkipTextOption()
+{
+	if (global.Key_Skip)
+	{
+		obj_Text.TextBox_CharIncrease = 5;
+	}
+	else
+	{
+		obj_Text.TextBox_CharIncrease = 1;
+	}
+}
+
+function SkipCutsceneOption(_seq)
+{
+	if (global.Key_Skip)
+	{
+		layer_sequence_speedscale(_seq, global.CutsceneSkipScale);
+	}
+	else
+	{
+		layer_sequence_speedscale(_seq, 1);
+	}
+}

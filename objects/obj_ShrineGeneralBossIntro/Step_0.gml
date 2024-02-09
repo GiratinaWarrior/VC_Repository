@@ -86,6 +86,7 @@ switch(ShrineArenaBossIntro_State)
 			}
 			else
 			{
+				SkipTextOption();
 				with (obj_Text)
 				{
 					if (TextBox_CharCount < string_length(TextBox_Text[TextBox_Page]))
@@ -114,7 +115,7 @@ switch(ShrineArenaBossIntro_State)
 				{
 					with(obj_Camera)
 					{
-						image_alpha -= 0.25;
+						image_alpha -= 0.25 * (1 + global.Key_Skip);
 						
 						if (image_alpha >= 0)
 						{
@@ -180,6 +181,7 @@ switch(ShrineArenaBossIntro_State)
 			}
 			else
 			{
+				SkipTextOption();
 				with (obj_Text)
 				{
 					if (TextBox_CharCount < string_length(TextBox_Text[TextBox_Page]))
@@ -228,6 +230,10 @@ switch(ShrineArenaBossIntro_State)
 					instance_destroy();
 				}
 			}
+			else
+			{
+				SkipTextOption();
+			}
 		
 		#endregion
 		
@@ -270,6 +276,7 @@ switch(ShrineArenaBossIntro_State)
 			}
 			else
 			{
+				SkipTextOption();
 				with (obj_Text)
 				{
 					if (TextBox_CharCount < string_length(TextBox_Text[TextBox_Page]))
@@ -324,6 +331,10 @@ switch(ShrineArenaBossIntro_State)
 					instance_destroy();
 				}
 			}
+			else
+			{
+				SkipTextOption();
+			}
 		
 		#endregion
 		
@@ -370,6 +381,7 @@ switch(ShrineArenaBossIntro_State)
 			}
 			else
 			{
+				SkipTextOption()
 				with (obj_Text)
 				{
 					if (TextBox_CharCount < string_length(TextBox_Text[TextBox_Page]))
@@ -400,7 +412,7 @@ switch(ShrineArenaBossIntro_State)
 				{
 					with(obj_Camera)
 					{
-						image_alpha += 0.25;
+						image_alpha += 0.25 * (1 + global.Key_Skip);
 						
 						if (image_alpha <= 1)
 						{
@@ -448,6 +460,10 @@ switch(ShrineArenaBossIntro_State)
 			{
 				ShrineArenaBossIntro_State = SHRINEARENABOSSINTRO.GENERAL_ENTER_TALK;
 			}
+			else
+			{
+				SkipCutsceneOption(ShrineArenaBossIntro_GeneralEnter_Sequence);
+			}
 		
 		#endregion
 		
@@ -476,6 +492,10 @@ switch(ShrineArenaBossIntro_State)
 			{
 				ShrineArenaBossIntro_State = SHRINEARENABOSSINTRO.LIGHTS_BACK_ON;
 			}
+			else
+			{
+				SkipTextOption();
+			}
 		
 		#endregion
 		
@@ -492,7 +512,7 @@ switch(ShrineArenaBossIntro_State)
 				{
 					with(obj_Camera)
 					{
-						image_alpha -= 0.5;
+						image_alpha -= 0.5 * (1 + global.Key_Skip);
 						
 						if (image_alpha >= 0)
 						{
@@ -550,6 +570,11 @@ switch(ShrineArenaBossIntro_State)
 				}
 				
 			}
+			else
+			{
+				SkipTextOption();
+			}
+			
 			
 		#endregion
 		
@@ -629,6 +654,7 @@ switch(ShrineArenaBossIntro_State)
 			}
 			else
 			{
+				SkipTextOption();
 				with (obj_Text)
 				{
 					if (TextBox_CharCount < string_length(TextBox_Text[TextBox_Page]))
@@ -744,7 +770,11 @@ switch(ShrineArenaBossIntro_State)
 			{
 				ShrineArenaBossIntro_State = SHRINEARENABOSSINTRO.GENERAL_EXIT;
 			}
-		
+			else
+			{
+				SkipTextOption();
+			}
+			
 		#endregion 
 		
 		break;//end General Defeat Talk Stage
@@ -756,9 +786,10 @@ switch(ShrineArenaBossIntro_State)
 		
 			if (layer_sprite_get_x(ShrineArenaBossIntro_GeneralIdle) > -700)
 			{
-				layer_sprite_x(ShrineArenaBossIntro_GeneralIdle, layer_sprite_get_x(ShrineArenaBossIntro_GeneralIdle) - 10);
+				layer_sprite_x(ShrineArenaBossIntro_GeneralIdle, layer_sprite_get_x(ShrineArenaBossIntro_GeneralIdle) - (10 * (1 + global.Key_Skip)));
 				layer_sprite_xscale(ShrineArenaBossIntro_GeneralIdle, -1);
 			}
+			
 			else
 			{
 				layer_sprite_destroy(ShrineArenaBossIntro_GeneralIdle);
@@ -810,7 +841,7 @@ switch(ShrineArenaBossIntro_State)
 			}
 			else
 			{
-				
+				SkipTextOption();
 				with (obj_Text)
 				{
 					
@@ -874,6 +905,10 @@ switch(ShrineArenaBossIntro_State)
 				}
 			}
 		
+			else
+			{
+				SkipTextOption();
+			}
 		
 		#endregion
 		
@@ -926,6 +961,7 @@ switch(ShrineArenaBossIntro_State)
 			}
 			else
 			{
+				SkipTextOption();
 				with (obj_Text)
 				{
 					if (TextBox_CharCount < string_length(TextBox_Text[TextBox_Page]))
@@ -950,8 +986,8 @@ switch(ShrineArenaBossIntro_State)
 			
 			if (layer_sequence_get_x(ShrineArenaBossIntro_AudienceIdle1) <= 1000)
 			{
-				layer_sequence_x(ShrineArenaBossIntro_AudienceIdle1, layer_sequence_get_x(ShrineArenaBossIntro_AudienceIdle1) + 5);
-				layer_sequence_x(ShrineArenaBossIntro_AudienceIdle2, layer_sequence_get_x(ShrineArenaBossIntro_AudienceIdle2) + 5);
+				layer_sequence_x(ShrineArenaBossIntro_AudienceIdle1, layer_sequence_get_x(ShrineArenaBossIntro_AudienceIdle1) + (5 * (1 + global.Key_Skip)));
+				layer_sequence_x(ShrineArenaBossIntro_AudienceIdle2, layer_sequence_get_x(ShrineArenaBossIntro_AudienceIdle2) + (5 * (1 + global.Key_Skip)));
 			}
 			else
 			{
@@ -995,6 +1031,7 @@ switch(ShrineArenaBossIntro_State)
 			}
 			else
 			{
+				SkipTextOption()
 				with (obj_Text)
 				{
 					if (TextBox_CharCount < string_length(TextBox_Text[TextBox_Page]))
@@ -1027,6 +1064,10 @@ switch(ShrineArenaBossIntro_State)
 			{
 				layer_sequence_destroy(ShrineArenaBossIntro_JestExit_Sequence);
 				ShrineArenaBossIntro_State = SHRINEARENABOSSINTRO.CUTSCENE_END;
+			}
+			else
+			{
+				SkipCutsceneOption(ShrineArenaBossIntro_JestExit_Sequence);
 			}
 			
 		#endregion

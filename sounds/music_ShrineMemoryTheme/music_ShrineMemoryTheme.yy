@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "music_ShrineMemoryTheme.mp3",
   "type": 0,
-  "volume": 0.17,
+  "volume": 0.16,
 }

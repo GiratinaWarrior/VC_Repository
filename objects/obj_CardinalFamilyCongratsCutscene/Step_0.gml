@@ -33,7 +33,12 @@ switch(CardinalFamilyCongrats_Stage)
 				{
 					CardinalFamilyCongrats_Stage = CARDINALFAMILYCONGRATSCUTSCENE_STAGE.LAVENDER_TALK;
 				}//end sequence finished
-			
+				
+				else
+				{
+					SkipCutsceneOption(CardinalFamilyCongrats_EnterSequenceElm);
+				}
+				
 			}//end entrance sequence created
 		
 		#endregion
@@ -101,6 +106,10 @@ switch(CardinalFamilyCongrats_Stage)
 				CardinalFamilyCongrats_Speech.TextBox_TextSkippable = false;
 				CardinalFamilyCongrats_Speech.TextBox_CharIncrease = 0.5;
 			}
+			else
+			{
+				SkipTextOption();
+			}
 			
 		#endregion
 		
@@ -126,6 +135,10 @@ switch(CardinalFamilyCongrats_Stage)
 				if (layer_sequence_is_finished(CardinalFamilyCongrats_ExitSequenceElm))
 				{
 					CardinalFamilyCongrats_Stage = CARDINALFAMILYCONGRATSCUTSCENE_STAGE.LAVENDER_EXIT_TALK;
+				}
+				else
+				{
+					SkipCutsceneOption(CardinalFamilyCongrats_ExitSequenceElm);
 				}
 			}
 			
@@ -170,7 +183,11 @@ switch(CardinalFamilyCongrats_Stage)
 			{
 				//Move on to the fly away stage
 				CardinalFamilyCongrats_Stage = CARDINALFAMILYCONGRATSCUTSCENE_STAGE.LAVENDER_WALK_EXIT;
-		}
+			}
+			else
+			{
+				SkipTextOption();
+			}
 		
 		#endregion
 		
@@ -196,6 +213,10 @@ switch(CardinalFamilyCongrats_Stage)
 				if (layer_sequence_is_finished(CardinalFamilyCongrats_WalkExitSequenceElm))
 				{
 					CardinalFamilyCongrats_Stage = CARDINALFAMILYCONGRATSCUTSCENE_STAGE.END;
+				}
+				else
+				{
+					SkipCutsceneOption(CardinalFamilyCongrats_WalkExitSequenceElm);
 				}
 			}
 			

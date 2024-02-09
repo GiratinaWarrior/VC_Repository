@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 1.436687,
   "parent": {
-    "name": "Lavender",
-    "path": "folders/Sounds/Sound Effects/NPCTalking/Lavender.yy",
+    "name": "Curious",
+    "path": "folders/Sounds/Sound Effects/NPCTalking/Lavender/Curious.yy",
   },
   "preload": false,
   "sampleRate": 44100,

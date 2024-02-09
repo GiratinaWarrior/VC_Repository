@@ -8,9 +8,9 @@ switch(JestDebut_Stage)
 	//While Jest is inactive
 	case JESTDEBUTCUTSCENE_STAGE.OFFSCREEN:
 	
-		SetRoomAudio_Music(blanksound);
-	
 		#region Offscreen
+	
+			SetRoomAudio_Music(blanksound);
 	
 			var _text = 
 			[
@@ -32,6 +32,11 @@ switch(JestDebut_Stage)
 			else if (!instance_exists(obj_Text))
 			{
 				JestDebut_Stage = JESTDEBUTCUTSCENE_STAGE.ENTER;
+			}
+			
+			else
+			{
+				SkipTextOption();
 			}
 			
 		#endregion
@@ -57,6 +62,10 @@ switch(JestDebut_Stage)
 				layer_sequence_destroy(JestDebut_EnterSequence);
 				SetRoomAudio_Music_Default(music_JestEncounterTheme);
 				JestDebut_Stage = JESTDEBUTCUTSCENE_STAGE.ENTER_TALK;
+			}
+			else
+			{
+				SkipCutsceneOption(JestDebut_EnterSequence);
 			}
 			
 		#endregion
@@ -94,6 +103,7 @@ switch(JestDebut_Stage)
 			//If jest is currently talking
 			else if (instance_exists(obj_Text))
 			{
+				SkipTextOption();
 				with (obj_Text)
 				{
 					if (TextBox_CharCount < string_length(TextBox_Text[TextBox_Page]))
@@ -134,6 +144,10 @@ switch(JestDebut_Stage)
 				layer_sequence_destroy(JestDebut_DanceSequence);
 				JestDebut_Stage = JESTDEBUTCUTSCENE_STAGE.EXIT_TALK;
 			}
+			else
+			{
+				SkipCutsceneOption(JestDebut_DanceSequence);
+			}
 			
 		#endregion
 	
@@ -172,6 +186,7 @@ switch(JestDebut_Stage)
 			//If jest is currently talking
 			else if (instance_exists(obj_Text))
 			{
+				SkipTextOption();
 				with (obj_Text)
 				{
 					if (TextBox_CharCount < string_length(TextBox_Text[TextBox_Page]))
@@ -226,6 +241,11 @@ switch(JestDebut_Stage)
 				SaveGame();
 			
 				instance_destroy();	
+			}
+		
+			else
+			{
+				SkipCutsceneOption(JestDebut_ExitSequence);
 			}
 		
 		#endregion

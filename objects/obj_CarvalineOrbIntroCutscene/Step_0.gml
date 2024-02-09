@@ -65,6 +65,10 @@ switch(CarvalineOrbIntroCutscene_Stage)
 			{
 				CarvalineOrbIntroCutscene_Stage = CARVALINEORBINTROCUTSCENE.STORY;	
 			}
+			else
+			{
+				SkipCutsceneOption(CarvalineorbIntroCutscene_StartStory_Sequence);
+			}
 		
 		#endregion
 		
@@ -109,14 +113,7 @@ switch(CarvalineOrbIntroCutscene_Stage)
 			}
 			else
 			{
-				if (global.Key_Skip)
-				{
-					//layer_sequence_speedscale(CarvalineOrbIntroCutscene_Story_Sequence, 10);
-				}
-				else
-				{
-					layer_sequence_speedscale(CarvalineOrbIntroCutscene_Story_Sequence, 1);
-				}
+				SkipCutsceneOption(CarvalineOrbIntroCutscene_Story_Sequence);
 			}
 			
 			
@@ -151,10 +148,12 @@ switch(CarvalineOrbIntroCutscene_Stage)
 			//Move on to the next sequence after the current one is finished
 			else if (layer_sequence_is_finished(CarvalineOrbIntroCutscene_StoryEnd_Sequence))
 			{
-				
-				
 				layer_sequence_destroy(CarvalineOrbIntroCutscene_StoryEnd_Sequence);
 				CarvalineOrbIntroCutscene_Stage = CARVALINEORBINTROCUTSCENE.LAVENDER_TALK;
+			}
+			else
+			{
+				SkipCutsceneOption(CarvalineOrbIntroCutscene_StoryEnd_Sequence);
 			}
 		
 		#endregion
@@ -202,7 +201,7 @@ switch(CarvalineOrbIntroCutscene_Stage)
 						var _voice = 
 						[
 							sound_Lavender_Talk_Aleevah, //Ahaha
-							sound_Lavender_Talk_AloBAwaKIneru //I hav- Oh dear
+							sound_Lavender_Talk_AloBAwaKIneru, //I hav- Oh dear
 							sound_Lavender_Talk_RinuLefoom, //there you go
 							sound_Lavender_Talk_Aleevah, //ah yes
 							sound_Lavender_Excited_Avinasoom, //i have always
@@ -220,7 +219,7 @@ switch(CarvalineOrbIntroCutscene_Stage)
 						if !(CarvalineOrbIntroCutscene_LavenderTalk_Intro_TalkStarted)
 						{
 							CarvalineOrbIntroCutscene_LavenderSpeech = CutsceneText(_text, "Lavender", TEXTBOX_POS.TOP, ft_Lavender);
-							CarvalineOrbIntroCutscene_LavenderSpeech.TextBox_Text = _voice;
+							obj_Text.TextBox_Voices = _voice;
 							with (obj_Player)
 							{
 								image_xscale = -1;
@@ -242,8 +241,9 @@ switch(CarvalineOrbIntroCutscene_Stage)
 							}
 							else
 							{
+								SkipTextOption();
 								CarvalineOrbIntroCutscene_LavenderSpeech.TextBox_TextSkippable = true;
-								CarvalineOrbIntroCutscene_LavenderSpeech.TextBox_CharIncrease = 1;
+							//	CarvalineOrbIntroCutscene_LavenderSpeech.TextBox_CharIncrease = 1;
 							}
 							
 						}
@@ -276,7 +276,11 @@ switch(CarvalineOrbIntroCutscene_Stage)
 							CreateParticleSystem(ps_CarvalineOrbFlash, "Shine", 1696, 352);
 							CarvalineOrbIntroCutscene_LavenderSpeech_Stage = CARVALINEORBINTROCUTSCENE_LAVENDERSPEECH.EXPLAIN_CARDINAL;
 						}
-					
+						else
+						{
+							SkipCutsceneOption(CarvalineOrbIntroCutscene_LavenderTalk_ApproachPedestal_Sequence);
+						}
+
 					#endregion
 				
 					break;//end Approach Pedestal Stage
@@ -318,7 +322,7 @@ switch(CarvalineOrbIntroCutscene_Stage)
 						if !(CarvalineOrbIntroCutscene_LavenderTalk_ExplainCardinal_StartedTalk)
 						{
 							CutsceneText(_text, "Lavender", TEXTBOX_POS.TOP, ft_Lavender);
-							obj_Text.TextBox_Voices = _text;
+							obj_Text.TextBox_Voices = _voice;
 							CarvalineOrbIntroCutscene_LavenderTalk_ExplainCardinal_StartedTalk = true;
 						}
 						
@@ -353,6 +357,11 @@ switch(CarvalineOrbIntroCutscene_Stage)
 							
 						}//end Lavender done talking
 						
+						else
+						{
+							SkipTextOption();
+						}
+						
 					#endregion
 					
 					break;//end Approach Pedestal Stage
@@ -378,6 +387,7 @@ switch(CarvalineOrbIntroCutscene_Stage)
 							sound_Lavender_Talk_AvaboLinfinit, //no happy
 							sound_Lavender_Excited_Avinasoom, //bittersweet
 							sound_Lavender_Excited_RavinaLAsheen, //history
+							sound_Lavender_Excited_AREEsheneLEEN, //the idea
 							sound_Lavender_Excited_SAYAlora //child
 						]
 					
@@ -387,9 +397,15 @@ switch(CarvalineOrbIntroCutscene_Stage)
 							obj_Text.TextBox_Voices = _voice;
 							CarvalineOrbIntroCutscene_LavenderTalk_ExplainCardinalMore_StartedTalk = true;
 						}
+					
 						else if !(instance_exists(obj_Text))
 						{
 							CarvalineOrbIntroCutscene_LavenderSpeech_Stage = CARVALINEORBINTROCUTSCENE_LAVENDERSPEECH.APPROACH_EXIT;
+						}
+						
+						else
+						{
+							SkipTextOption();
 						}
 						
 					#endregion
@@ -414,6 +430,11 @@ switch(CarvalineOrbIntroCutscene_Stage)
 							layer_sequence_destroy(CarvalineOrbIntroCutscene_LavenderTalk_ApproachExit_Sequence);
 							CarvalineOrbIntroCutscene_LavenderSpeech_Stage = CARVALINEORBINTROCUTSCENE_LAVENDERSPEECH.EXIT_TALK;
 						}
+						else
+						{
+							SkipCutsceneOption(CarvalineOrbIntroCutscene_LavenderTalk_ApproachExit_Sequence);
+						}
+					
 					
 					#endregion
 					
@@ -468,7 +489,8 @@ switch(CarvalineOrbIntroCutscene_Stage)
 							else
 							{
 								obj_Text.TextBox_TextColor = c_black;
-								obj_Text.TextBox_CharIncrease = 1;
+								//obj_Text.TextBox_CharIncrease = 1;
+								SkipTextOption()
 							}
 						}
 					
@@ -521,6 +543,11 @@ switch(CarvalineOrbIntroCutscene_Stage)
 				}
 				
 				instance_destroy();
+			}
+			
+			else
+			{
+				SkipCutsceneOption(CarvalineOrbIntroCutscene_LavenderExit_Sequence);
 			}
 			
 		#endregion

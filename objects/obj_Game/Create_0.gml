@@ -4,6 +4,10 @@
 
 window_set_cursor(cr_none);
 
+global.CutsceneSkipScale = 10;
+
+#region Globals
+
 //---------------------Default Music (Unneeded)--------------//
 
 //Music and sound effects
@@ -112,4 +116,4 @@ global.PrologueEnd_Cutscene_Seen = false;
 //---------------------Somnium Forest
 
 
-
+#endregion

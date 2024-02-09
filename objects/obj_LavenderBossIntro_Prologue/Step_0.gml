@@ -92,7 +92,11 @@ switch(LavenderBossIntroPrologue_State)
 				if (LavenderBossIntroPrologue_TimeSource == noone) LavenderBossIntroPrologue_TimeSource = TimeSourceCreateAndStart(60, _func);
 				
 			}
-		
+			else
+			{
+				SkipTextOption();
+			}
+			
 		#endregion
 		
 		break;//end Lavender Talk First Stage
@@ -114,7 +118,11 @@ switch(LavenderBossIntroPrologue_State)
 				LavenderBossIntroPrologue_LavenderIdle = layer_sequence_create(layer, 0, 0, seq_LavenderBossIntro_LavenderIdle);
 				LavenderBossIntroPrologue_State = LAVENDERBOSSINTROPROLOGUE_STATE.LAVENDER_EXPLAIN;
 			}
-		
+			else
+			{
+				SkipCutsceneOption(LavenderBossIntroPrologue_LavenderIdle);
+			}
+			
 		#endregion
 		
 		break;//end Lavender Turn Stage
@@ -148,7 +156,10 @@ switch(LavenderBossIntroPrologue_State)
 			{
 				LavenderBossIntroPrologue_State = LAVENDERBOSSINTROPROLOGUE_STATE.LAVENDER_CHARGE;
 			}
-		
+			else
+			{
+				SkipTextOption();
+			}
 		#endregion
 		
 		break;//end Lavender Explain Stage
@@ -180,6 +191,10 @@ switch(LavenderBossIntroPrologue_State)
 				LavenderBossIntroPrologue_State = LAVENDERBOSSINTROPROLOGUE_STATE.LAVENDER_CHALLENGE;
 				
 			}
+			else
+			{
+				SkipCutsceneOption(LavenderBossIntroPrologue_LavenderIdle);
+			}
 			
 			
 		#endregion
@@ -203,21 +218,31 @@ switch(LavenderBossIntroPrologue_State)
 				"Come forth! Show me how my little flower has bloomed!",
 			];
 			
-			//TO DO 
+			
 			var _voice = 
 			[
-				
+				sound_Lavender_Serious_Sakii, //Rose
+				sound_Lavender_Serious_Inasamazagazu, //The final test
+				sound_Lavender_Serious_AnasivuUnazin, //if you can 
+				sound_Lavender_Serious_AkahNahSavah, //Do not hold back
+				sound_Lavender_Serious_Vanakah, //Come forth
 			]
 			
 			if !(LavenderBossIntroPrologue_LavenderChallenge_TalkStarted)
 			{
 				LavenderBossIntroPrologue_LavenderChallenge_Talk = CutsceneText(_text, n, p, f);
+				LavenderBossIntroPrologue_LavenderChallenge_Talk.TextBox_Voices = _voice;
 				LavenderBossIntroPrologue_LavenderChallenge_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))
 			{
 				layer_sequence_destroy(LavenderBossIntroPrologue_LavenderIdle);
 				LavenderBossIntroPrologue_State = LAVENDERBOSSINTROPROLOGUE_STATE.BATTLE_START;
+			}
+			
+			else
+			{
+				SkipTextOption();
 			}
 			
 		#endregion
@@ -287,14 +312,14 @@ switch(LavenderBossIntroPrologue_State)
 			with(LavenderBossIntroPrologue_BattleEnd_Lavender)
 			{
 								
-				y = min(204, y + 2);
+				y = min(204, y + 2 + (global.Key_Skip * 4));
 				
 				image_xscale = -sign(x - obj_Player.x);
 				
 			//	show_debug_message("X: {0}", x);
 			//	show_debug_message("Y: {0}", y);
 				
-				var _xSpe = 2;
+				var _xSpe = 2 + (global.Key_Skip * 4);
 				
 				if (x < 960)
 				{
@@ -369,6 +394,11 @@ switch(LavenderBossIntroPrologue_State)
 				if (LavenderBossIntroPrologue_TimeSource == noone) LavenderBossIntroPrologue_TimeSource = TimeSourceCreateAndStart(50, _func);
 			}
 			
+			else
+			{
+				SkipTextOption();
+			}
+			
 		#endregion
 	
 		break;//end Lavender Defeated Talk Stage
@@ -382,7 +412,7 @@ switch(LavenderBossIntroPrologue_State)
 			
 			with (LavenderBossIntroPrologue_BattleEnd_Lavender)
 			{
-				y = min(320, y + 2);
+				y = min(320, y + 2 + (4 * global.Key_Skip));
 				
 				if (y == 320) && (sprite_index != spr_Lavender_Idle)
 				{
@@ -461,6 +491,11 @@ switch(LavenderBossIntroPrologue_State)
 				}
 				if (LavenderBossIntroPrologue_TimeSource == noone) LavenderBossIntroPrologue_TimeSource = TimeSourceCreateAndStart(20, _func);
 			}
+			
+			else
+			{
+				SkipTextOption();
+			}
 		
 		#endregion
 	
@@ -485,22 +520,22 @@ switch(LavenderBossIntroPrologue_State)
 				else
 				{
 					
-						var _func = function()
+					var _func = function()
+					{
+						sprite_index = spr_Lavender_Walk;
+						with (obj_LavenderBossIntro_Prologue)
 						{
-							sprite_index = spr_Lavender_Walk;
-							with (obj_LavenderBossIntro_Prologue)
-							{
-								time_source_destroy(LavenderBossIntroPrologue_TimeSource);
-								LavenderBossIntroPrologue_TimeSource = noone;
-							}
+							time_source_destroy(LavenderBossIntroPrologue_TimeSource);
+							LavenderBossIntroPrologue_TimeSource = noone;
 						}
+					}
 					with (other)
 					{
 						if (LavenderBossIntroPrologue_TimeSource == noone) LavenderBossIntroPrologue_TimeSource = TimeSourceCreateAndStart(30, _func);
 					}
 					if (sprite_index == spr_Lavender_Walk)
 					{
-						x -= 3;
+						x -= 3 + (global.Key_Skip * 4);
 						
 						if (x <= obj_Player.x)
 						{

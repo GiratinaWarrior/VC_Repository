@@ -30,6 +30,8 @@ switch(LavenderDeathCutscene_State)
 				
 			sprite_index = spr_Lavender_Rise;
 			
+			image_speed = 1 + global.Key_Skip;
+			
 			obj_Camera.xTo = x;
 			
 			if (animation_end())
@@ -68,6 +70,8 @@ switch(LavenderDeathCutscene_State)
 			{
 				LavenderDeathCutscene_State = LAVENDERDEATH_CUTSCENE.VOIZATIA_REACT;
 			}
+			
+			
 		
 		#endregion
 		
@@ -104,6 +108,8 @@ switch(LavenderDeathCutscene_State)
 			{
 				LavenderDeathCutscene_State = LAVENDERDEATH_CUTSCENE.LAVENDER_TALK_VOIZATIA;
 			}
+			
+			//else SkipTextOption();
 			
 		#endregion
 		

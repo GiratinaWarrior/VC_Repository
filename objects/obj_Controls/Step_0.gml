@@ -1,7 +1,5 @@
 /// @description Controls
 
-
-
 //Move right and left
 global.Key_Right = keyboard_check(vk_right) || keyboard_check(ord("D"));
 global.Key_Left = keyboard_check(vk_left) || keyboard_check(ord("A"));
