@@ -53,7 +53,7 @@ LavenderBossBattlePrologue_BloodPetals_Particle = noone;
 LavenderBossBattlePrologue_BloodPetals_ParticleCreated = false;
 //LavenderBossBattlePrologue_BloodPetals_ParticleInfo  = particle_get_info(ps_Lavender_BloodPetals);
 
-LavenderBossBattlePrologue_PetalRate = 10;
+LavenderBossBattlePrologue_PetalRate = 15;
 LavenderBossBattlePrologue_PetalTimer = 0;
 
 LavenderBossBattlePrologue_MaxPetalTimer = 0;

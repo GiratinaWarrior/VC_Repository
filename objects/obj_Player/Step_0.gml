@@ -1,8 +1,5 @@
 /// @description Stuff
 
-
-
-
 global.Health = clamp(global.Health, 0, global.MaxHealth);
 
 global.Vallen = clamp(global.Vallen, 0, global.MaxVallen);

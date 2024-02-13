@@ -306,15 +306,15 @@ switch(CarvalineOrbIntroCutscene_Stage)
 						
 						var _voice = 
 						[
-							sound_Lavender_Excited_SAYAlora, //existence of these
-							sound_Lavender_Talk_AvaboLinfinit, //previous cardinals
-							sound_Lavender_Talk_AnaSOOnaREEM, //not a single one
-							sound_Lavender_Excited_GurumeNEEtoom, //did not know
-							sound_Lavender_Talk_RinuLefoom, //all certain
-							sound_Lavender_Talk_AloBAwaKIneru, //power of orbs
-							sound_Lavender_Talk_Gonnamenah, //almost as if
-							sound_Lavender_Curious_EkitiVenimin, //find it strange
-							sound_Lavender_Excited_Avinasoom, //despite existing
+							sound_Lavender_Serious_AkahNahSavah, //existence of these
+							sound_Lavender_Curious_Inasamazagazu, //previous cardinals
+							sound_Lavender_Serious_ZanaziAkoo, //not a single one
+							sound_Lavender_Serious_Zinamanarasa, //did not know
+							sound_Lavender_Serious_Inzuga, //all certain
+							sound_Lavender_Serious_Vanakah, //power of orbs
+							sound_Lavender_Serious_AnasivuUnazin, //almost as if
+							sound_Lavender_Serious_Venemin, //find it strange
+							sound_Lavender_Serious_Sakii, //despite existing
 							blanksound //...cause
 						]
 						
@@ -464,9 +464,9 @@ switch(CarvalineOrbIntroCutscene_Stage)
 						[
 							sound_Lavender_Talk_Aleevah, //lore stuff
 							sound_Lavender_Talk_Gonnamenah, //it is time
-							sound_Lavender_Excited_SAYAlora, //NMG
-							sound_Lavender_Talk_RinuLefoom, //final test
-							sound_Lavender_Talk_AvaboLinfinit, //come
+							sound_Lavender_Serious_Sakii, //NMG
+							sound_Lavender_Serious_Venemin, //final test
+							sound_Lavender_Serious_Inzuga, //come
 						]
 					
 						if !(CarvalineOrbIntroCutscene_LavenderTalk_ExitTalk_TalkStarted)

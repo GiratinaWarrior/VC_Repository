@@ -21,6 +21,8 @@ Gravity = 0;
 VoizatiaBossPrologue_StateChangeTimer = 0;
 VoizatiaBossPrologue_StateChangeTimerLimit = 50;
 
+VoizatiaBossPrologue_MainAttackSpeedFactor = 1;
+
 //----------------Idle State----------------//
 
 VoizatiaBossPrologue_InRangeSword = false;
@@ -74,7 +76,10 @@ VoizatiaBossPrologue_SinEruptionCreateFunction = function()
 {
 	audio_play_sound(sound_SinEruption, 90, false, 0.5);
 						
-	instance_create_layer(VoizatiaBossPrologue_SinEruption_X, VoizatiaBossPrologue_SinEruption_Y, SinEruption_Layer, obj_SinEruption);
+	with(instance_create_layer(VoizatiaBossPrologue_SinEruption_X, VoizatiaBossPrologue_SinEruption_Y, SinEruption_Layer, obj_SinEruption))
+	{
+		SinEruption_RiseSpeed *= other.VoizatiaBossPrologue_MainAttackSpeedFactor;
+	}
 }
 
 VoizatiaBossPrologue_SinEruption_TimeSource 

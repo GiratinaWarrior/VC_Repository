@@ -471,9 +471,75 @@ function PlayerTakenDamage(){
 		PlayerState = PLAYERSTATE.HURT;
 	
 		hascontrol = false;
-	}
+		
+		//In case the player dies, this is their cause of death
+		switch(AttackerID.object_index)
+		{
+			//If the player was killed by the Shrine Soldiers
+			case obj_ShrineSoldier: 
+			case parent_EnemyMeleeHitbox:
+				
+				global.Player_CauseOfDeath = PLAYER_DEATHCAUSE.SHRINE_SOLDIER;
+				
+				break;//end killed by SS
+			
+			//If the player was killed by the Shrine General
+			case obj_ShrineGeneral_Main_PhaseOne:
+			case obj_ShrineGeneral_LeftArm_PhaseOne:
+			case obj_ShrineGeneral_RightArm_PhaseOne:
+			case obj_ShrineGeneral_RapidPunch:
+			
+				global.Player_CauseOfDeath = PLAYER_DEATHCAUSE.SHRINE_GENERAL;
+				
+				break;//end killed by SG
+				
+			//If the player was killed by Lavender
+			case obj_BloodPetal:
+			case obj_PoisonSeed:
+			case obj_PoisonFlower:
+			case obj_PoisonBubble:
+			case obj_DivineArsenal_Weapon:
+				
+				global.Player_CauseOfDeath = PLAYER_DEATHCAUSE.LAVENDER;
+				
+				break;//end player killed by Lavender
 
-}
+			//If the player was killed by a Guardark
+			case obj_Guardark:
+			case obj_GuardarkBullet:
+				
+				global.Player_CauseOfDeath = PLAYER_DEATHCAUSE.GUARDARK;
+				
+				break;//end player killed by Guardark
+				
+			//If the player was killed by an Axeye
+			case obj_Axeye:
+			
+				global.Player_CauseOfDeath = PLAYER_DEATHCAUSE.AXEYE;
+				
+				break;//end player killed by Axeye
+			
+			//If the player was killed by a Chakrolem
+			case obj_Chakrolem:
+			case obj_ChakrolemBomb:
+				
+				global.Player_CauseOfDeath = PLAYER_DEATHCAUSE.CHAKROLEM;
+				
+				break;//end player killed by Chakrolem
+			
+			//If the player was killed by Malvalia
+			case obj_BlackGeyser:
+			case obj_RedNeedles:
+			
+				global.Player_CauseOfDeath = PLAYER_DEATHCAUSE.MALVALIA;
+			
+				break;//end player killed by Malvalia
+			
+		}//end player cause of death
+		
+	}//end damage is not 0
+
+}//end PlayerTakenDamage
 
 function PlayerHeal(_healAmount = global.MaxHealth - global.Health)
 {

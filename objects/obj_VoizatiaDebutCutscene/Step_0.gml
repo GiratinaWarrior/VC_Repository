@@ -6,7 +6,7 @@ var _MalvaliaFont = ft_Malvalia;
 
 var _skippable = false;
 
-var _skipButton = global.Key_Skip;
+var _skipButton = global.Key_SpeedUp;
 
 var _skipFunc = function()
 {
@@ -406,7 +406,7 @@ switch(VoizatiaDebut_State)
 		
 			var _voice = 
 			[
-				sound_Lavender_Serious_Inasam, //Rose-darling
+				sound_Lavender_Curious_Inasam, //Rose-darling
 				sound_Lavender_Serious_AnasivuUnazin, //That Malvalia
 				sound_Lavender_Serious_AkahNahSavah, //And above all else
 				sound_Lavender_Talk_AloBAwaKIneru, //Have faith
@@ -499,7 +499,7 @@ switch(VoizatiaDebut_State)
 			else
 			{
 				layer_sprite_alpha(VoizatiaDebut_MalvaliaSummonShadows_Gate, VoizatiaDebut_MalvaliaSummonShadows_GateAlpha);
-				VoizatiaDebut_MalvaliaSummonShadows_GateAlpha+=0.01 + (global.Key_Skip * 0.04);
+				VoizatiaDebut_MalvaliaSummonShadows_GateAlpha+=0.01 + (global.Key_SpeedUp * 0.04);
 			}
 			
 		#endregion

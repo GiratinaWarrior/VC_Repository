@@ -5,6 +5,52 @@ var c = c_white;
 var s = blanksprite;
 var n = "SG";
 
+var _skippable = true;
+
+var _skipFunc = function()
+{
+	audio_stop_sound(sound_LightsOn);
+	with (obj_Camera)
+	{
+		sprite_index = noone;
+		image_alpha = 1;
+		follow = noone;
+		x = 480; //-350 ==== 130
+		y = 270; //+118 ==== 388
+	}
+	if !(ShrineArenaBossIntro_DoorsCreated)
+	{
+		ShrineArenaBossIntro_EntranceWall = instance_create_layer(928, 416, "Platforms", obj_Wall);
+		ShrineArenaBossIntro_ExitWall = instance_create_layer(32, 416, "Platforms", obj_Wall);
+		layer_set_visible("Floortiles_Closed", true);
+		layer_set_visible("Floortiles_FullOpen", false);
+		ShrineArenaBossIntro_DoorsCreated = true;
+	}
+	instance_destroy(obj_Text);
+	
+	#region TimeSource Stop
+	
+		if (ShrineArenaBossIntro_TimeSource != noone)
+		{
+			time_source_destroy(ShrineArenaBossIntro_TimeSource);
+			ShrineArenaBossIntro_TimeSource = noone;
+		}
+	
+		if (layer_sequence_exists("Jest", ShrineArenaBossIntro_GeneralEnter_Sequence))
+		{
+			layer_sequence_destroy(ShrineArenaBossIntro_GeneralEnter_Sequence);
+		}
+	
+	#endregion
+	
+	ShrineArenaBossIntro_State = SHRINEARENABOSSINTRO.BATTLE_START;
+}
+
+if (global.Key_Skip) && (_skippable) && (ShrineArenaBossIntro_State >= SHRINEARENABOSSINTRO.CAMERA_PAN || ShrineArenaBossIntro_State < SHRINEARENABOSSINTRO.BATTLE_START)
+{
+	_skipFunc();
+}
+
 //Stage Machine
 switch(ShrineArenaBossIntro_State)
 {
@@ -115,7 +161,7 @@ switch(ShrineArenaBossIntro_State)
 				{
 					with(obj_Camera)
 					{
-						image_alpha -= 0.25 * (1 + global.Key_Skip);
+						image_alpha -= 0.25;
 						
 						if (image_alpha >= 0)
 						{
@@ -412,7 +458,7 @@ switch(ShrineArenaBossIntro_State)
 				{
 					with(obj_Camera)
 					{
-						image_alpha += 0.25 * (1 + global.Key_Skip);
+						image_alpha += 0.25;
 						
 						if (image_alpha <= 1)
 						{
@@ -425,7 +471,7 @@ switch(ShrineArenaBossIntro_State)
 				ShrineArenaBossIntro_TimeSource = TimeSourceCreateAndStart(60, _func, [], -1);
 			}
 			
-			if (obj_Camera.image_alpha >= 0.2)
+			if (obj_Camera.image_alpha >= 0.8)
 			{
 				ShrineArenaBossIntro_State = SHRINEARENABOSSINTRO.GENERAL_ENTER;
 				time_source_destroy(ShrineArenaBossIntro_TimeSource);
@@ -512,7 +558,7 @@ switch(ShrineArenaBossIntro_State)
 				{
 					with(obj_Camera)
 					{
-						image_alpha -= 0.5 * (1 + global.Key_Skip);
+						image_alpha -= 0.25;
 						
 						if (image_alpha >= 0)
 						{
@@ -684,7 +730,9 @@ switch(ShrineArenaBossIntro_State)
 			//Create the ShrineGeneral
 			if !(instance_exists(obj_ShrineGeneral_Main_PhaseOne))
 			{
-				instance_create_layer(layer_sprite_get_x(ShrineArenaBossIntro_GeneralIdle), layer_sprite_get_y(ShrineArenaBossIntro_GeneralIdle), "ShrineGeneral", obj_ShrineGeneral_Main_PhaseOne);
+				//instance_create_layer(layer_sprite_get_x(ShrineArenaBossIntro_GeneralIdle), layer_sprite_get_y(ShrineArenaBossIntro_GeneralIdle), "ShrineGeneral", obj_ShrineGeneral_Main_PhaseOne);
+				instance_create_layer(130, 388, "ShrineGeneral", obj_ShrineGeneral_Main_PhaseOne);
+				
 				layer_sprite_destroy(ShrineArenaBossIntro_GeneralIdle);
 				ShrineArenaBossIntro_GeneralIdle = noone;
 			}
@@ -786,7 +834,7 @@ switch(ShrineArenaBossIntro_State)
 		
 			if (layer_sprite_get_x(ShrineArenaBossIntro_GeneralIdle) > -700)
 			{
-				layer_sprite_x(ShrineArenaBossIntro_GeneralIdle, layer_sprite_get_x(ShrineArenaBossIntro_GeneralIdle) - (10 * (1 + global.Key_Skip)));
+				layer_sprite_x(ShrineArenaBossIntro_GeneralIdle, layer_sprite_get_x(ShrineArenaBossIntro_GeneralIdle) - (10 * (1 + global.Key_SpeedUp)));
 				layer_sprite_xscale(ShrineArenaBossIntro_GeneralIdle, -1);
 			}
 			
@@ -986,8 +1034,8 @@ switch(ShrineArenaBossIntro_State)
 			
 			if (layer_sequence_get_x(ShrineArenaBossIntro_AudienceIdle1) <= 1000)
 			{
-				layer_sequence_x(ShrineArenaBossIntro_AudienceIdle1, layer_sequence_get_x(ShrineArenaBossIntro_AudienceIdle1) + (5 * (1 + global.Key_Skip)));
-				layer_sequence_x(ShrineArenaBossIntro_AudienceIdle2, layer_sequence_get_x(ShrineArenaBossIntro_AudienceIdle2) + (5 * (1 + global.Key_Skip)));
+				layer_sequence_x(ShrineArenaBossIntro_AudienceIdle1, layer_sequence_get_x(ShrineArenaBossIntro_AudienceIdle1) + (5 * (1 + global.Key_SpeedUp)));
+				layer_sequence_x(ShrineArenaBossIntro_AudienceIdle2, layer_sequence_get_x(ShrineArenaBossIntro_AudienceIdle2) + (5 * (1 + global.Key_SpeedUp)));
 			}
 			else
 			{

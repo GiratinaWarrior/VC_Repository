@@ -1,15 +1,37 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-var _skippable = false;
-
-var _skipButton = global.Key_Skip;
-
 var _skipFunction = function()
 {
 	VoizatiaBossIntro_State = VOIZATIABOSSINTRO.BATTLE_START;
+	with (obj_Camera)
+	{
+		sprite_index = noone;
+		image_alpha = 1;
+		follow = noone;
+		xTo = 960;
+		yTo = 270;
+		x = xTo;
+		y = yTo;
+	}
+	time_source_destroy(VoizatiaBossIntro_TimeSource);
+	VoizatiaBossIntro_TimeSource = noone;
 	layer_sequence_destroy(VoizatiaBossIntro_VoizatiaIdle); 
+	if (layer_sequence_exists("VoizatiaTeleport" ,VoizatiaBossIntro_VoizatiaTeleportRose_Sequence))
+	{
+		layer_sequence_destroy(VoizatiaBossIntro_VoizatiaTeleportRose_Sequence);
+	}
+	if (layer_sequence_exists("VoizatiaTeleport" ,VoizatiaBossIntro_VoizatiaHostage_Sequence))
+	{
+		layer_sequence_destroy(VoizatiaBossIntro_VoizatiaHostage_Sequence);
+	}
+	
 	instance_destroy(obj_Text);
+}
+
+if (global.Key_Skip) && (VoizatiaBossIntro_State >= VOIZATIABOSSINTRO.CAMERA_PAN) && (VoizatiaBossIntro_State < VOIZATIABOSSINTRO.BATTLE_START)
+{
+	_skipFunction();
 }
 
 //Stage machine for the Voizatia Boss Intro cutscene
@@ -61,11 +83,6 @@ switch(VoizatiaBossIntro_State)
 			}
 			
 			if (VoizatiaBossIntro_TimeSource == noone) VoizatiaBossIntro_TimeSource = TimeSourceCreateAndStart(110, _func, [], 1);
-			
-			if (_skippable) && (_skipButton)
-			{
-				_skipFunction();
-			}
 		
 		#endregion
 	
@@ -188,7 +205,7 @@ switch(VoizatiaBossIntro_State)
 		
 		#endregion
 	
-		break;//end Voizatia Talk Rose Stage\
+		break;//end Voizatia Talk Rose Stage
 		
 	//Voizatia Proposal Stage
 	case VOIZATIABOSSINTRO.VOIZATIA_PROPOSAL:

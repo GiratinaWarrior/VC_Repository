@@ -54,19 +54,22 @@ function Text(_text)
 
 function SkipTextOption()
 {
-	if (global.Key_Skip)
+	if (instance_exists(obj_Text))
 	{
-		obj_Text.TextBox_CharIncrease = 5;
-	}
-	else
-	{
-		obj_Text.TextBox_CharIncrease = 1;
+		if (global.Key_SpeedUp)
+		{
+			obj_Text.TextBox_CharIncrease = 5;
+		}
+		else
+		{
+			obj_Text.TextBox_CharIncrease = 1;
+		}
 	}
 }
 
 function SkipCutsceneOption(_seq)
 {
-	if (global.Key_Skip)
+	if (global.Key_SpeedUp)
 	{
 		layer_sequence_speedscale(_seq, global.CutsceneSkipScale);
 	}

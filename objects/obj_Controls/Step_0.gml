@@ -33,7 +33,9 @@ global.Key_Heal = keyboard_check(ord("F"));
 global.Key_Talk = keyboard_check_pressed(vk_space) || mouse_check_button_pressed(mb_right);
 
 //Skipping cutscenes
-global.Key_Skip = keyboard_check(ord("C"));
+global.Key_SpeedUp = keyboard_check(ord("C"));
+
+global.Key_Skip = keyboard_check(ord("V"));
 
 //---------Controller--------//
 

@@ -30,7 +30,7 @@ switch(LavenderDeathCutscene_State)
 				
 			sprite_index = spr_Lavender_Rise;
 			
-			image_speed = 1 + global.Key_Skip;
+			image_speed = 1 + global.Key_SpeedUp;
 			
 			obj_Camera.xTo = x;
 			
@@ -59,9 +59,18 @@ switch(LavenderDeathCutscene_State)
 				"Turn Rose...into...YOUR......puppet..."
 			]
 			
+			var _voice = 
+			[
+				sound_Lavender_Dying_NahBah, //no never
+				sound_Lavender_Dying_Ivorsee, //Voizatia
+				sound_Lavender_Dying_Fuehbelow, //wont let u
+				sound_Lavender_Dying_Heygarfieo, //turn rose puppet
+			]
+			
 			if !(LavenderDeathCutscene_LavenderTalkFirst_TalkStarted)
 			{
 				CutsceneText(_text, n, p, f);
+				obj_Text.TextBox_Voices = _voice;
 				obj_Text.TextBox_TextSkippable = false;
 				obj_Text.TextBox_CharIncrease = 0.5;
 				LavenderDeathCutscene_LavenderTalkFirst_TalkStarted = true;
@@ -70,8 +79,6 @@ switch(LavenderDeathCutscene_State)
 			{
 				LavenderDeathCutscene_State = LAVENDERDEATH_CUTSCENE.VOIZATIA_REACT;
 			}
-			
-			
 		
 		#endregion
 		
@@ -126,12 +133,22 @@ switch(LavenderDeathCutscene_State)
 				"Let...me...tell...you...something...",
 				"A...real good...plot twist...",
 				"Never...fails...",
-				"TO TAKE YOU BY SURPRISE!"
+				"TO THROW YOU OFF YOUR CHAIR!"
+			]
+			
+			var _voice = 
+			[
+				sound_Lavender_Dying_DohrenKat, //I cant?
+				sound_Lavender_Dying_IsefomSifui, //let me tell you
+				sound_Lavender_Dying_LerrManzar, //a real good plot twist
+				sound_Lavender_Dying_Risal, //never fails
+				sound_Lavender_Attack_Final_AvasHan, //TO SURPRISE
 			]
 				
 			if !(LavenderDeathCutscene_LavenderTalkVoizatia_TalkStarted)
 			{
 				CutsceneText(_text, n, p, f);
+				obj_Text.TextBox_Voices = _voice;
 				obj_Text.TextBox_TextSkippable = false;
 				obj_Text.TextBox_CharIncrease = 0.5;
 				LavenderDeathCutscene_LavenderTalkVoizatia_TalkStarted = true;
@@ -273,7 +290,6 @@ switch(LavenderDeathCutscene_State)
 		
 		#region Lavender Approach Rose
 		
-		
 			var _targetX = obj_PlayerDefeated.x + 50;
 		
 			x = max(_targetX, x - 1);
@@ -319,11 +335,19 @@ switch(LavenderDeathCutscene_State)
 				"..."
 			]
 			
+			var _voice = 
+			[
+				sound_Lavender_Dying_Limpao, //Rose darling
+				sound_Lavender_Dying_Risal, //I
+				blanksound, //...
+			]
+			
 			if !(LavenderDeathCutscene_LavenderTalkSecond_TalkStarted)
 			{
 				//sprite_index = spr_Lavender_Cry;
 				CutsceneText(_text, n, p, f);
 				obj_Text.TextBox_TextSkippable = false;
+				obj_Text.TextBox_Voices = _voice;
 				obj_Text.TextBox_CharIncrease = 0.5;
 				LavenderDeathCutscene_LavenderTalkSecond_TalkStarted = true;
 			}
@@ -386,9 +410,22 @@ switch(LavenderDeathCutscene_State)
 				"Don't ever forget..."
 			]
 			
+			var _voice = 
+			[
+				sound_Lavender_Dying_PownKai, //im sorry 5x
+				sound_Lavender_Dying_DohrenKat, //im so sorry
+				sound_Lavender_Dying_Ivorsee, //sorry weak
+				sound_Lavender_Dying_Heygarfieo, //sorry strong
+				sound_Lavender_Dying_Fuehbelow, //sorry pain
+				sound_Lavender_Dying_LerrManzar, //but rose
+				sound_Lavender_Dying_IsefomSifui, //no matter what
+				sound_Lavender_Dying_NahBah, //dont forget
+			]
+			
 			if !(LavenderDeathCutscene_LavenderDespairTalk_TalkStarted)
 			{
 				CutsceneText(_text, n, p, f);
+				obj_Text.TextBox_Voices = _voice;
 				obj_Text.TextBox_TextSkippable = false;
 				LavenderDeathCutscene_LavenderDespairTalk_TalkStarted = true;
 			}
@@ -429,9 +466,15 @@ switch(LavenderDeathCutscene_State)
 				"I...love...you..."
 			]
 			
+			var _voice = 
+			[
+				sound_Lavender_Dying_Awee, //love ya
+			]
+			
 			if !(LavenderDeathCutscene_LavenderFinalTalk_TalkStarted)
 			{
 				CutsceneText(_text, n, p, f, c_red);
+				obj_Text.TextBox_Voices = _voice;
 				obj_Text.TextBox_TextSkippable = false;
 				obj_Text.TextBox_CharIncrease = 0.4;
 				LavenderDeathCutscene_LavenderFinalTalk_TalkStarted = true;

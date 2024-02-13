@@ -1,5 +1,5 @@
 /// @description
-if (!Indestructible) && (Reflected)
+if (!Indestructible) && (Reflected || FriendlyFire)
 {
 	instance_destroy();
 }

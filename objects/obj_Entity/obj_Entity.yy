@@ -43,6 +43,7 @@
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"TextMarker_OffsetY","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"-sprite_yoffset - 10","varType":0,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"TextBox_Font","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"ft_NPC","varType":5,},
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"Name","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"\"\"","varType":2,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"TextBox_TextEndFunc","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"EmptyFunction","varType":0,},
   ],
   "solid": false,
   "spriteId": {

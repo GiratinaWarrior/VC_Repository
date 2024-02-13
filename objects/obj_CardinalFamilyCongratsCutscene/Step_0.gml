@@ -1,6 +1,6 @@
 /// @description Stages of the Cutscene
 
-CardinalFamilyCongrats_skipButton = global.Key_Skip;
+CardinalFamilyCongrats_skipButton = global.Key_SpeedUp;
 
 if (CardinalFamilyCongrats_skippable) && (CardinalFamilyCongrats_skipButton)
 {
@@ -81,9 +81,9 @@ switch(CardinalFamilyCongrats_Stage)
 				sound_Lavender_Talk_RinuLefoom, //skip dialogue
 				sound_Lavender_Excited_AREEsheneLEEN, //do not
 				sound_Lavender_Talk_AnaSOOnaREEM, //taking away
-				sound_Lavender_Talk_RinuLefoom, //listen
+				sound_Lavender_Talk_AvaboLinfinit, //listen
 				sound_Lavender_Excited_Avinasoom, //the duty
-				sound_Lavender_Talk_AloBAwaKIneru //at least
+				sound_Lavender_Talk_KaiyeeveYanamainVaiyimi //at least
 			]
 		
 			//If Lavender hasn't started talking, TALK

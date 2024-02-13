@@ -1,11 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-var _leftBoundary = obj_Camera.x - (RES_W/2) + (sprite_width/2) + 15;
-var _rightBoundary = obj_Camera.x + (RES_W/2) - (sprite_width/2) - 15;
 
-var _upperBoundary = (sprite_height/2) + 15;
-var _lowerBoundary = 352 - (sprite_height/2) - 15;
 
 #region Check Attacks In Range
 
@@ -96,7 +92,12 @@ switch (VoizatiaBossPrologue_CurrentState)
 			if (VoizatiaBossPrologue_StateChangeTimer++ > VoizatiaBossPrologue_StateChangeTimerLimit)
 			{
 				VoizatiaBossPrologue_CurrentState = VoizatiaBossPrologue_NextState;
+				VoizatiaBossPrologue_MainAttackSpeedFactor += 0.1;
 				VoizatiaBossPrologue_StateChangeTimer = 0;	
+			}
+			else
+			{
+				VoizatiaBossPrologue_StateChangeTimer += VoizatiaBossPrologue_MainAttackSpeedFactor;
 			}
 			
 		#endregion

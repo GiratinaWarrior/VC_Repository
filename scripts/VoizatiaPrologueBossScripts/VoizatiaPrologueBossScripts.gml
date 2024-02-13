@@ -58,7 +58,7 @@ function VoizatiaBossPrologue_RougeSpear()
 	if (VoizatiaBossPrologue_RougeSpear_SpearsThrown <= VoizatiaBossPrologue_RougeSpear_MaxSpears)
 	{
 		//If its time to throw a new spear
-		if (VoizatiaBossPrologue_RougeSpear_FireCooldown++ > VoizatiaBossPrologue_RougeSpear_FireRate)
+		if (VoizatiaBossPrologue_RougeSpear_FireCooldown > VoizatiaBossPrologue_RougeSpear_FireRate)
 		{
 			
 			VoizatiaBossPrologue_RougeSpear_Direction = random_range(180, 360);
@@ -73,7 +73,7 @@ function VoizatiaBossPrologue_RougeSpear()
 				image_angle = other.VoizatiaBossPrologue_RougeSpear_Direction;
 				
 				VoizatiaBossPrologue_RougeSpear_Direction = other.VoizatiaBossPrologue_RougeSpear_Direction;
-				VoizatiaBossPrologue_RougeSpear_Speed = other.VoizatiaBossPrologue_RougeSpear_Speed;
+				VoizatiaBossPrologue_RougeSpear_Speed = other.VoizatiaBossPrologue_RougeSpear_Speed * other.VoizatiaBossPrologue_MainAttackSpeedFactor;
 				
 			}
 			
@@ -81,6 +81,10 @@ function VoizatiaBossPrologue_RougeSpear()
 			VoizatiaBossPrologue_RougeSpear_SpearsThrown++;
 			
 		}//end throw new spear
+		else
+		{
+			VoizatiaBossPrologue_RougeSpear_FireCooldown += VoizatiaBossPrologue_MainAttackSpeedFactor;
+		}
 		
 	}//end maximum not reached
 	
@@ -121,7 +125,7 @@ function VoizatiaBossPrologue_SinEruption()
 	{
 	
 		//If the attack state is still ongoing
-		if (VoizatiaBossPrologue_SinEruption_StateTimer++ < VoizatiaBossPrologue_SinEruption_StateTimerLimit)
+		if (VoizatiaBossPrologue_SinEruption_StateTimer < VoizatiaBossPrologue_SinEruption_StateTimerLimit)
 		{
 			//If its time to summon a Sin Eruption
 			if (VoizatiaBossPrologue_SinEruption_AttackTimer++ > VoizatiaBossPrologue_SinEruption_AttackTimerLimit)
@@ -139,6 +143,10 @@ function VoizatiaBossPrologue_SinEruption()
 				//VoizatiaBossPrologue_SinEruption_NumOfAttack++;
 				VoizatiaBossPrologue_SinEruption_AttackTimer = 0;
 			}//end summon SE
+			else
+			{
+				VoizatiaBossPrologue_SinEruption_StateTimer += VoizatiaBossPrologue_MainAttackSpeedFactor
+			}
 			
 		}//end attack state ongoing
 		
@@ -151,6 +159,7 @@ function VoizatiaBossPrologue_SinEruption()
 			VoizatiaBossPrologue_SinEruption_AttackTimer = 0;
 			VoizatiaBossPrologue_SinEruption_StateTimer = 0;
 			VoizatiaBossPrologue_SinEruption_NumOfAttack = 0;
+			//VoizatiaBossPrologue_SinEruption_StateTimerLimit = max(VoizatiaBossPrologue_SinEruption_StateTimerLimit - 10, 0);
 			part_particles_clear(VoizatiaBossPrologue_SinEruption_ConjureParticle);
 		}//end stop attack state
 		

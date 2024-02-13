@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-image_yscale += 0.7;
+image_yscale += SinEruption_RiseSpeed;
 
 if (image_yscale >= 30)
 {

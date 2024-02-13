@@ -4,6 +4,8 @@ ySpeed = -1;
 Gravity = 0;
 Done = 0;
 
+Player_CauseOfDeath = "";
+
 layer = layer_create(-9998, "PlayerDeath");
 
 //PlayerDeathParticles = CreateParticleSystem(ps_PlayerDeath, layer, x, y);

@@ -385,8 +385,8 @@ switch(CardinalNoctisCongrats_State)
 			
 			var _voice = 
 			[
-				sound_Lavender_Serious_Inasam, //People of Nox
-				sound_Lavender_Serious_Inasamazagazu, //Calm yourselves
+				sound_Lavender_Serious_IzahRahna, //People of Nox
+				sound_Lavender_Serious_Zinamanarasa, //Calm yourselves
 				sound_Lavender_Serious_AnasivuUnazin, //There is no need
 				sound_Lavender_Serious_AkahNahSavah, //Nasi, Nadiolo .....
 				sound_Lavender_Serious_RahSavanai, //You 5 will retreat

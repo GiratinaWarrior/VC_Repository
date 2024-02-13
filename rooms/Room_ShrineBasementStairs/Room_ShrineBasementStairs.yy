@@ -390,7 +390,7 @@
   "isDnd": false,
   "layers": [
     {"resourceType":"GMREffectLayer","resourceVersion":"1.0","name":"Shadow","depth":0,"effectEnabled":true,"effectType":"_filter_tintfilter","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
-        {"name":"g_TintCol","type":1,"value":"#FF4C4C4C",},
+        {"name":"g_TintCol","type":1,"value":"#FFCCCCCC",},
       ],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Player","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"RoomWarp_ShrineBasementStairs_To_ShrineBasementEntrance","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_RoomWarp","path":"objects/obj_RoomWarp/obj_RoomWarp.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":2.0,"x":2016.0,"y":64.0,},
@@ -846,7 +846,9 @@
 24,0,0,16,-12,47,2,28,8,-19,47,1,24,-3,0,2,16,24,-4,0,17,16,24,0,32,0,-2147483648,-2147483648,0,0,40,8,47,47,24,0,0,16,-12,47,2,-2147483648,16,-19,47,1,2,-3,20,2,1,2,-4,20,4,1,24,0,17,-3,
 20,10,36,0,0,16,47,47,2,20,20,1,-12,47,2,33,29,-5,28,1,8,-10,47,1,4,-13,28,3,38,0,40,-3,28,8,30,33,33,29,28,28,8,4,-3,28,4,8,47,47,4,-7,28,-7,-2147483648,1,16,-10,47,1,24,-14,
 -2147483648,1,0,-10,-2147483648,11,16,24,0,-2147483648,-2147483648,16,47,47,24,0,0,-5,-2147483648,],"TileDataFormat":1,},"tilesetId":{"name":"tiles_ShrineMainBrickTileSet","path":"tilesets/tiles_ShrineMainBrickTileSet/tiles_ShrineMainBrickTileSet.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
-    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4283190348,"depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"spr_ShrineBrickYellow","path":"sprites/spr_ShrineBrickYellow/spr_ShrineBrickYellow.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
+    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4283190348,"depth":500,"effectEnabled":true,"effectType":"_filter_tintfilter","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[
+        {"name":"g_TintCol","type":1,"value":"#FFFFFFFF",},
+      ],"spriteId":{"name":"spr_ShrineBrickYellow","path":"sprites/spr_ShrineBrickYellow/spr_ShrineBrickYellow.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
   ],
   "parent": {
     "name": "Basement",

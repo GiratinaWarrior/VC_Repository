@@ -3,6 +3,29 @@ var n = "Lavender",
 var p = TEXTBOX_POS.BOTTOM;
 var f = ft_Lavender;
 
+var _skipFunc = function()
+{
+	with (obj_Camera)
+	{
+		follow = noone;
+		x = 960;
+		y = 270;
+		xTo = 960;
+		yTo = 270;
+	}
+	time_source_destroy(LavenderBossIntroPrologue_TimeSource);
+	LavenderBossIntroPrologue_TimeSource = noone;
+	if (layer_sequence_exists(layer, LavenderBossIntroPrologue_LavenderIdle)) layer_sequence_destroy(LavenderBossIntroPrologue_LavenderIdle);
+	if (layer_sequence_exists(layer, LavenderBossIntroPrologue_LavenderCharge_Sequence)) layer_sequence_destroy(LavenderBossIntroPrologue_LavenderCharge_Sequence);
+	instance_destroy(obj_Text);
+	LavenderBossIntroPrologue_State = LAVENDERBOSSINTROPROLOGUE_STATE.BATTLE_START;
+}
+
+if (global.Key_Skip) && (LavenderBossIntroPrologue_State >= LAVENDERBOSSINTROPROLOGUE_STATE.CAMERA_PAN) && (LavenderBossIntroPrologue_State < LAVENDERBOSSINTROPROLOGUE_STATE.BATTLE_START)
+{
+	_skipFunc();
+}
+
 //Stage machine for this cutscene
 switch(LavenderBossIntroPrologue_State)
 {
@@ -70,8 +93,9 @@ switch(LavenderBossIntroPrologue_State)
 				sound_Lavender_Talk_Aleevah, //sky is beauty
 				sound_Lavender_Talk_AloBAwaKIneru, //not a cloud
 				sound_Lavender_Talk_KaiyeeveYanamainVaiyimi, //moon to be beauty
-				sound_Lavender_Talk_Gonnamenah //same with flower
-				//flower wither
+				sound_Lavender_Talk_Gonnamenah, //same with flower
+				sound_Lavender_Serious_Inzuga, //flower wither
+				sound_Lavender_Serious_Venemin //life is beautiful
 			]
 			
 			if !(LavenderBossIntroPrologue_LavenderTalkFirst_TalkStarted)
@@ -222,7 +246,7 @@ switch(LavenderBossIntroPrologue_State)
 			var _voice = 
 			[
 				sound_Lavender_Serious_Sakii, //Rose
-				sound_Lavender_Serious_Inasamazagazu, //The final test
+				sound_Lavender_Serious_ZanaziAkoo, //The final test
 				sound_Lavender_Serious_AnasivuUnazin, //if you can 
 				sound_Lavender_Serious_AkahNahSavah, //Do not hold back
 				sound_Lavender_Serious_Vanakah, //Come forth
@@ -253,6 +277,9 @@ switch(LavenderBossIntroPrologue_State)
 	case LAVENDERBOSSINTROPROLOGUE_STATE.BATTLE_START:
 		
 		#region Battle Start
+			
+			//Set the music
+			SetRoomAudio_Music_Default(music_LavenderBattleTheme);	
 			
 			PlayerFullHeal();
 			
@@ -312,14 +339,14 @@ switch(LavenderBossIntroPrologue_State)
 			with(LavenderBossIntroPrologue_BattleEnd_Lavender)
 			{
 								
-				y = min(204, y + 2 + (global.Key_Skip * 4));
+				y = min(204, y + 2 + (global.Key_SpeedUp * 4));
 				
 				image_xscale = -sign(x - obj_Player.x);
 				
 			//	show_debug_message("X: {0}", x);
 			//	show_debug_message("Y: {0}", y);
 				
-				var _xSpe = 2 + (global.Key_Skip * 4);
+				var _xSpe = 2 + (global.Key_SpeedUp * 4);
 				
 				if (x < 960)
 				{
@@ -378,7 +405,7 @@ switch(LavenderBossIntroPrologue_State)
 			if !(LavenderBossIntroPrologue_LavenderDefeated_TalkStarted)
 			{
 				LavenderBossIntroPrologue_LavenderDefeated_Talk = CutsceneText(_text, n, p, f);
-				LavenderBossIntroPrologue_LavenderDefeated_Talk.TextBox_Text = _voice;
+				LavenderBossIntroPrologue_LavenderDefeated_Talk.TextBox_Voices = _voice;
 				LavenderBossIntroPrologue_LavenderDefeated_TalkStarted = true;
 			}
 			
@@ -412,7 +439,7 @@ switch(LavenderBossIntroPrologue_State)
 			
 			with (LavenderBossIntroPrologue_BattleEnd_Lavender)
 			{
-				y = min(320, y + 2 + (4 * global.Key_Skip));
+				y = min(320, y + 2 + (4 * global.Key_SpeedUp));
 				
 				if (y == 320) && (sprite_index != spr_Lavender_Idle)
 				{
@@ -535,7 +562,7 @@ switch(LavenderBossIntroPrologue_State)
 					}
 					if (sprite_index == spr_Lavender_Walk)
 					{
-						x -= 3 + (global.Key_Skip * 4);
+						x -= 3 + (global.Key_SpeedUp * 4);
 						
 						if (x <= obj_Player.x)
 						{

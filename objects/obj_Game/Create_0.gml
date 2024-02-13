@@ -6,6 +6,19 @@ window_set_cursor(cr_none);
 
 global.CutsceneSkipScale = 10;
 
+global.Player_CauseOfDeath = 0;
+
+enum PLAYER_DEATHCAUSE
+{
+	SHRINE_SOLDIER,
+	SHRINE_GENERAL,
+	LAVENDER,
+	GUARDARK,
+	AXEYE,
+	CHAKROLEM,
+	MALVALIA,
+}
+
 #region Globals
 
 //---------------------Default Music (Unneeded)--------------//
