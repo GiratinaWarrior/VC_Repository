@@ -289,10 +289,18 @@ switch(VoizatiaDebut_State)
 				"What a joke! Where's the fun to be had here?",
 				"Dolls are only fun when they can take a beating!"
 			];
+			
+			var _voice = 
+			[
+				sound_Malvalia_Mocking_Arakshira,
+				sound_Malvalia_Mocking_Doorkifla,
+				sound_Malvalia_Mocking_Jalahai,
+			]
 		
 			if !(VoizatiaDebut_MalvaliaTalkFirst_TalkStarted)
 			{
 				CutsceneText(_text, "Malvalia", TEXTBOX_POS.TOP, _MalvaliaFont);
+				obj_Text.TextBox_Voices = _voice;
 				VoizatiaDebut_MalvaliaTalkFirst_TalkStarted = true;
 			}
 			else if (!instance_exists(obj_Text))
@@ -463,10 +471,20 @@ switch(VoizatiaDebut_State)
 				"Tch, alright then, you asked for it.",
 				"COME FORTH! SHADOW REALM GATE!"
 			];
+			
+			var _voice = 
+			[
+				sound_Malvalia_Laugh_uHahahaha,
+				sound_Malvalia_Laugh_Soofmaha,
+				blanksound,
+				sound_Malvalia_Mocking_Korgilay,
+				sound_Malvalia_Attacking_Kao,
+			]
 		
 			if !(VoizatiaDebut_MalvaliaChallenge_TalkStarted)
 			{
 				CutsceneText(_text, "Malvalia", TEXTBOX_POS.TOP, _MalvaliaFont);
+				obj_Text.TextBox_Voices = _voice;
 				VoizatiaDebut_MalvaliaChallenge_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))
@@ -517,10 +535,18 @@ switch(VoizatiaDebut_State)
 				"In my world, the Shadow Realm",
 				"Follow me, my little doll..."
 			];
+			
+			var _voice = 
+			[
+				sound_Malvalia_Mocking_Vashkana,
+				sound_Malvalia_Mocking_KaleizaInja,
+				sound_Malvalia_Calm_Almei,
+			]
 		
 			if !(VoizatiaDebut_MalvaliaExitTalk_TalkStarted)
 			{
 				CutsceneText(_text, "Malvalia", TEXTBOX_POS.TOP, _MalvaliaFont);
+				obj_Text.TextBox_Voices = _voice;
 				VoizatiaDebut_MalvaliaExitTalk_TalkStarted = true;
 			} 
 			else if !(instance_exists(obj_Text))

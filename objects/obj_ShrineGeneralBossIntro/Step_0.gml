@@ -975,10 +975,10 @@ switch(ShrineArenaBossIntro_State)
 				"I shall see you all next time!",
 				"On the SHRINE ARENA BATTLEGROUNDS!",
 				"So goodbye everyone!",
+				"......",
 				".....",
+				"....",
 				"...",
-				"..",
-				".",
 				"That means leave."
 			]
 			

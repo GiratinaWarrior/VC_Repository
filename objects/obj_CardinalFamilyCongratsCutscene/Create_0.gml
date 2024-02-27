@@ -1,6 +1,6 @@
 /// @description Setting the variables
 
-y += 4;
+y += 2;
 
 obj_Player.hascontrol = false;
 

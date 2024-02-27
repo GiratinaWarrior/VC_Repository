@@ -43,10 +43,17 @@ switch (MalvaliaFirstFightCutscene_State)
 				"Perfect. Let's get started my little doll.",
 				"Do your best to not break for me."
 			];
+			
+			var _voice = 
+			[
+				sound_Malvalia_Mocking_Meluvola,
+				sound_Malvalia_Calm_Visandi
+			]
 		
 			if !(MalvaliaFirstFightCutscene_MalvaliaEnterTalk_TalkStarted)
 			{
 				CutsceneText(_text, "Malvalia", TEXTBOX_POS.TOP, ft_Malvalia);
+				obj_Text.TextBox_Voices = _voice;
 				MalvaliaFirstFightCutscene_MalvaliaIdle_Sequence = layer_sequence_create(layer, 0, 135, seq_MalvaliaFirstFight_MalvaliaIdle);
 				layer_sequence_destroy(MalvaliaFirstFightCutscene_MalvaliaEnter_Sequence);
 				MalvaliaFirstFightCutscene_MalvaliaEnterTalk_TalkStarted = true;
@@ -100,6 +107,16 @@ switch (MalvaliaFirstFightCutscene_State)
 				"we're not done........",
 				"one day...I'll...drag...you...down...to.......HELL!"
 			];
+			
+			var _voice = 
+			[
+				sound_Malvalia_Weak_Elva,
+				sound_Malvalia_Weak_Shinsay,
+				sound_Malvalia_Weak_Farkova,
+				sound_Malvalia_Weak_Gwar,
+				sound_Malvalia_Weak_Tempa,
+				sound_Malvalia_Weak_MeroMalsa
+			]
 			
 			if !(MalvaliaFirstFightCutscene_MalvaliaDefeatedTalk_TalkStarted)
 			{

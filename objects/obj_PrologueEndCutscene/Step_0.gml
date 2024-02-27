@@ -161,9 +161,18 @@ switch (PrologueEndCutscene_Stage)
 				"I CAN'T LIVE WITH THIS HUMILIATION!"
 			];
 			
+			var _voice = 
+			[
+				sound_Malvalia_Angry_Spickovick,
+				sound_Malvalia_Angry_Kenzolomo,
+				sound_Malvalia_Angry_Karass,
+				sound_Malvalia_Angry_Oroma,
+			]
+			
 			if !(PrologueEndCutscene_MalvaliaEnterTalk_TalkStarted)
 			{
 				PrologueEndCutscene_MalvaliaEnterTalk_Talk = CutsceneText(_text, "Malvalia", p, ft_Malvalia);
+				PrologueEndCutscene_MalvaliaEnterTalk_Talk.TextBox_Voices = _voice;
 				PrologueEndCutscene_MalvaliaEnterTalk_TalkStarted = true;
 			}
 			
@@ -236,9 +245,24 @@ switch (PrologueEndCutscene_Stage)
 				"You're gonna get it real soon!"
 			];
 			
+			var _voice = 
+			[
+				blanksound,
+				blanksound,
+				blanksound,
+				sound_Malvalia_Calm_Esparo,
+				sound_Malvalia_Calm_Almei,
+				sound_Malvalia_Calm_Visandi,
+				sound_Malvalia_Laugh_uHahahaha,
+				sound_Malvalia_Angry_FairQUIsha,
+				sound_Malvalia_Laugh_Soofmaha,
+				sound_Malvalia_Mocking_KaleizaInja
+			]
+			
 			if !(PrologueEndCutscene_MalvaliaExitTalk_TalkStarted)
 			{
 				PrologueEndCutscene_MalvaliaExitTalk_Talk = CutsceneText(_text, "Malvalia", p, ft_Malvalia);
+				PrologueEndCutscene_MalvaliaExitTalk_Talk.TextBox_Voices = _voice;
 				PrologueEndCutscene_MalvaliaExitTalk_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))

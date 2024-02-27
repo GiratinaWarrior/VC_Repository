@@ -56,5 +56,5 @@ global.Health = global.MaxHealth;
 SetRoomAudio_Music(blanksound, 0, 0);
 
 audio_stop_all();
-
+ 
 audio_play_sound(sound_PlayerDeath, 1, false);

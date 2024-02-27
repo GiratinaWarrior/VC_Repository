@@ -10,7 +10,7 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 2.08975,
+  "duration": 2.115875,
   "parent": {
     "name": "Jest",
     "path": "folders/Sounds/Sound Effects/NPCTalking/Jest.yy",
