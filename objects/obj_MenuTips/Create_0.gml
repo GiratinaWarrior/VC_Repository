@@ -35,15 +35,15 @@ TipText_DarkShrine = //array_concat(TipText,
 TipText_Lavender = //array_concat(TipText,
 	[
 		"Lavender is kinda invincible when the Blood Petals fall.",
-		"Those Poison Bubble Flowers look very alive! Is there a way to fix that?",
-		"Running into a giant weapon is a very bad idea. But is what about jumping on it?"
+		"Those Poison Bubble Flowers look very alive! \nIs there a way to fix that?",
+		"Running into a giant weapon is a very bad idea. \nBut is what about jumping on it?"
 	]
 //)
 
 TipText_Malvalia = //array_concat(TipText,
 	[
-		"Malvalia's too prideful to try dodging your attacks, perhaps you could take advantage of this?",
-		"The Red Needles look like they hurt, she deserves a taste of her own medicine!"
+		"Malvalia's too prideful to try dodging your attacks, \nperhaps you could take advantage of this?",
+		"The Red Needles look like they hurt, \nshe deserves a taste of her own medicine!"
 	]
 //)
 

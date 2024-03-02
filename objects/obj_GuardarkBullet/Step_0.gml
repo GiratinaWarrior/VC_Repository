@@ -2,13 +2,9 @@
 
 x += xSpeed;
 
-if (abs(y - ystart) > GuardarkBullet_MaxDistance)
+if (abs(x - xstart) > GuardarkBullet_MaxDistance)
 {
-	image_alpha -= 0.1;
 	Damage = 0;
-	if (image_alpha <= 0)
-	{
-		instance_destroy();
-	}
+	FadeAndDestroy(0.1);
 }
 

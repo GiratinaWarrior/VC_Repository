@@ -434,6 +434,7 @@ switch(VoizatiaBossIntro_State)
 			
 			obj_Player.hascontrol = true;
 			obj_Player.Player_ForcedToLose = true;
+			PlayerFullHeal();
 			
 			VoizatiaBossIntro_TimeSource = noone;
 			
@@ -586,7 +587,7 @@ switch(VoizatiaBossIntro_State)
 		
 			var _text = 
 			[
-				"Now that that interruption has been dealt with...",
+				"Now with that interruption dealt with...",
 				"I will repeat your orders.",
 				"Go and hunt down my comrades who possess the Carvaline Orbs",
 				"Once you do so, come back in order to be killed gloriously by me.",

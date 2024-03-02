@@ -317,6 +317,7 @@ switch(CardinalNoctisCongrats_State)
 				ScreenShake(64, 5 * 60);
 				SetRoomAudio_Music();
 				audio_play_sound(sound_ShrineExplosion, 1000, false);
+				audio_stop_sound(sound_Applause);
 				CardinalNoctisCongrats_ShrineExplosion_Shaken = true;
 			}
 			//If the earthquake is finished

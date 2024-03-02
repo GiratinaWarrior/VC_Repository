@@ -13,7 +13,7 @@ var _recoverfunc = function()
 	image_speed = 1;
 }
 
-if !(Attacked) && (other.Reflected)
+if !(Attacked) && (other.Reflected || other.FriendlyFire)
 {
 	other.PlayerAttackDamage = other.Damage;
 	Enemy_Stunned(_hurtfunc, _recoverfunc);

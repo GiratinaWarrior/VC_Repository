@@ -121,6 +121,7 @@ switch (MalvaliaFirstFightCutscene_State)
 			if !(MalvaliaFirstFightCutscene_MalvaliaDefeatedTalk_TalkStarted)
 			{
 				CutsceneText(_text, "Malvalia", TEXTBOX_POS.TOP, ft_Malvalia);	
+				obj_Text.TextBox_Voices = _voice;
 				MalvaliaFirstFightCutscene_MalvaliaDefeatedTalk_TalkStarted = true;
 			}
 			else if !(instance_exists(obj_Text))

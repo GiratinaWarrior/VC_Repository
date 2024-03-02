@@ -1,13 +1,5 @@
 /// @description
 
-//Malvalia faces the player
-if (instance_exists(obj_Player))
-{
-	
-	//image_xscale = sign(x - obj_Player.x);
-	
-}//end face player
-
 //Malvalia State machine
 switch(Malvalia_FirstFight_CurrentState)
 {
@@ -92,6 +84,7 @@ switch(Malvalia_FirstFight_CurrentState)
 				{
 					image_index = 0;
 					sprite_index = spr_Malvalia_BlackGeyser_Attack;
+					audio_play_sound(sound_Malvalia_Attacking_Hoa, 400, false, 10);
 				}
 			}
 			//If the current sprite is attacking
@@ -175,6 +168,7 @@ switch(Malvalia_FirstFight_CurrentState)
 					{
 						image_index = 0;
 						sprite_index = spr_Malvalia_RedNeedles_Attack;
+						audio_play_sound(sound_Malvalia_Attacking_Aindelemour, 400, false, 10);
 					}
 				}
 				//If the current sprite is attacking

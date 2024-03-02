@@ -307,7 +307,7 @@
     {"name":"inst_79613F74","path":"rooms/Room_NoctisCity/Room_NoctisCity.yy",},
     {"name":"inst_47D64B08","path":"rooms/Room_NoctisCity/Room_NoctisCity.yy",},
     {"name":"inst_6ECB70FA","path":"rooms/Room_NoctisCity/Room_NoctisCity.yy",},
-    {"name":"DavidOdisho","path":"rooms/Room_NoctisCity/Room_NoctisCity.yy",},
+    {"name":"inst_240D4D48","path":"rooms/Room_NoctisCity/Room_NoctisCity.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -633,7 +633,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"Nadiolo","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":{"name":"Nadiolo","path":"rooms/Room_NoctisCity_Prologue/Room_NoctisCity_Prologue.yy",},"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_NPC","path":"objects/obj_NPC/obj_NPC.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1216.0,"y":1216.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"Nasi","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":{"name":"Nasi","path":"rooms/Room_NoctisCity_Prologue/Room_NoctisCity_Prologue.yy",},"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_NPC","path":"objects/obj_NPC/obj_NPC.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1088.0,"y":1216.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"Fanna","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":{"name":"Fanna","path":"rooms/Room_NoctisCity_Prologue/Room_NoctisCity_Prologue.yy",},"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_NPCWater","path":"objects/obj_NPCWater/obj_NPCWater.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1888.0,"y":1056.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"DavidOdisho","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_NPC","path":"objects/obj_NPC/obj_NPC.yy",},"properties":[
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_240D4D48","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_NPC","path":"objects/obj_NPC/obj_NPC.yy",},"properties":[
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_Entity","path":"objects/obj_Entity/obj_Entity.yy",},"propertyId":{"name":"TalkRange","path":"objects/obj_Entity/obj_Entity.yy",},"value":"300",},
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_Entity","path":"objects/obj_Entity/obj_Entity.yy",},"propertyId":{"name":"TextBox_UIPosition","path":"objects/obj_Entity/obj_Entity.yy",},"value":"0",},
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_NPC","path":"objects/obj_NPC/obj_NPC.yy",},"propertyId":{"name":"NPC_CanFloat","path":"objects/obj_NPC/obj_NPC.yy",},"value":"True",},

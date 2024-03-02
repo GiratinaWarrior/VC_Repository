@@ -2,8 +2,8 @@
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
   "name": "Room_DarkShrineBasementFloor13",
-  "creationCodeFile": "rooms/Room_DarkShrineBasementFloor1/RoomCreationCode.gml",
-  "inheritCode": true,
+  "creationCodeFile": "rooms/Room_DarkShrineBasementFloor13/RoomCreationCode.gml",
+  "inheritCode": false,
   "inheritCreationOrder": true,
   "inheritLayers": false,
   "instanceCreationOrder": [

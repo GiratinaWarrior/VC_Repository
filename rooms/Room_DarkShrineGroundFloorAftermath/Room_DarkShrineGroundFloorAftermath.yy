@@ -2,8 +2,8 @@
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
   "name": "Room_DarkShrineGroundFloorAftermath",
-  "creationCodeFile": "rooms/Room_DarkShrineGroundFloor/RoomCreationCode.gml",
-  "inheritCode": true,
+  "creationCodeFile": "rooms/Room_DarkShrineGroundFloorAftermath/RoomCreationCode.gml",
+  "inheritCode": false,
   "inheritCreationOrder": true,
   "inheritLayers": true,
   "instanceCreationOrder": [

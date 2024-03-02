@@ -46,7 +46,9 @@ var _skipFunc = function()
 	ShrineArenaBossIntro_State = SHRINEARENABOSSINTRO.BATTLE_START;
 }
 
-if (global.Key_Skip) && (_skippable) && (ShrineArenaBossIntro_State >= SHRINEARENABOSSINTRO.CAMERA_PAN || ShrineArenaBossIntro_State < SHRINEARENABOSSINTRO.BATTLE_START)
+if (global.Key_Skip) && (_skippable) && 
+(ShrineArenaBossIntro_State >= SHRINEARENABOSSINTRO.CAMERA_PAN &&
+ShrineArenaBossIntro_State < SHRINEARENABOSSINTRO.BATTLE_START)
 {
 	_skipFunc();
 }
@@ -268,7 +270,7 @@ switch(ShrineArenaBossIntro_State)
 				ShrineArenaBossIntro_AudienceCheerJest_TalkStarted = true;
 			}
 			
-			else if !(instance_exists(obj_Text)) && !audio_is_playing(sound_Applause)
+			else if !(instance_exists(obj_Text))// || !audio_is_playing(sound_Applause)
 			{
 				ShrineArenaBossIntro_State = SHRINEARENABOSSINTRO.JEST_INTRODUCE_ROSE;
 				with (obj_Text)
@@ -369,7 +371,7 @@ switch(ShrineArenaBossIntro_State)
 				ShrineArenaBossIntro_AudienceCheerRose_TalkStarted = true;
 			}
 			
-			else if !(instance_exists(obj_Text)) && !audio_is_playing(sound_Applause)
+			else if !(instance_exists(obj_Text))// && !audio_is_playing(sound_Applause)
 			{
 				ShrineArenaBossIntro_State = SHRINEARENABOSSINTRO.JEST_INTRODUCE_GENERAL;
 				with (obj_Text)
@@ -944,7 +946,7 @@ switch(ShrineArenaBossIntro_State)
 				ShrineArenaBossIntro_AudienceApplaud_TalkStarted = true;
 			}
 			
-			else if !(instance_exists(obj_Text)) && !audio_is_playing(sound_Applause)
+			else if !(instance_exists(obj_Text)) //&& !audio_is_playing(sound_Applause)
 			{
 				ShrineArenaBossIntro_State = SHRINEARENABOSSINTRO.JEST_DISMISS;
 				with (obj_Text)

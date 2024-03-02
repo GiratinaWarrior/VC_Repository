@@ -2,8 +2,8 @@
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
   "name": "Room_DarkShrineBasementEntranceAftermath",
-  "creationCodeFile": "rooms/Room_DarkShrineBasementEntrance/RoomCreationCode.gml",
-  "inheritCode": true,
+  "creationCodeFile": "rooms/Room_DarkShrineBasementEntranceAftermath/RoomCreationCode.gml",
+  "inheritCode": false,
   "inheritCreationOrder": true,
   "inheritLayers": true,
   "instanceCreationOrder": [

@@ -267,7 +267,7 @@ switch (JestAftermathCutscene_State)
 			[	
 				"WAIT!",
 				"I'M THE JESTER! I SHOULD BE PLAYING WITH PUPPETS!",
-				"Rosey-darling Rosey-darling. I just got a great idea",
+				"Rosey-darling Rosey-darling. I just got a great idea!",
 				"You should become MY puppet!",
 				"Follow my script! Not that mans!",
 				"Yes..that's it!",

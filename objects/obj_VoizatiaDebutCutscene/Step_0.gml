@@ -292,9 +292,9 @@ switch(VoizatiaDebut_State)
 			
 			var _voice = 
 			[
+				sound_Malvalia_Laugh_uHahahaha,
 				sound_Malvalia_Mocking_Arakshira,
 				sound_Malvalia_Mocking_Doorkifla,
-				sound_Malvalia_Mocking_Jalahai,
 			]
 		
 			if !(VoizatiaDebut_MalvaliaTalkFirst_TalkStarted)
@@ -478,7 +478,7 @@ switch(VoizatiaDebut_State)
 				sound_Malvalia_Laugh_Soofmaha,
 				blanksound,
 				sound_Malvalia_Mocking_Korgilay,
-				sound_Malvalia_Attacking_Kao,
+				sound_Malvalia_Attacking_HaroMinisMiuh,
 			]
 		
 			if !(VoizatiaDebut_MalvaliaChallenge_TalkStarted)

@@ -1,0 +1,2 @@
+SetSpawnpoint();
+SaveGame();
