@@ -62,8 +62,8 @@
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "parent": {
-    "name": "Field",
-    "path": "folders/Tile Sets/Field.yy",
+    "name": "Old",
+    "path": "folders/Tile Sets/Field/Old.yy",
   },
   "spriteId": {
     "name": "spr_FieldTownInsideTiles",

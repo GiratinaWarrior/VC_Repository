@@ -19,7 +19,7 @@ switch(TurretState)
 				{
 				
 					//If the count down reaches 0
-					if (countdown <= 0)
+					if (RuneTurret_Cooldown <= 0)
 					{
 						//Switch to the charging state
 						TurretState = RUNETURRET_STATE.CHARGE;
@@ -28,7 +28,7 @@ switch(TurretState)
 					//If the countdown hasn't reached 0
 					else
 					{
-						countdown--;
+						RuneTurret_Cooldown--;
 					}
 		
 				}//end player in range
@@ -93,20 +93,20 @@ switch(TurretState)
 				if (instance_exists(obj_Player))
 				{
 					//Set the direction to be at the Player
-					other.shootDir = point_direction(other.x, other.y, obj_Player.x, obj_Player.y);
+					other.RuneTurret_ShootDir = point_direction(other.x, other.y, obj_Player.x, obj_Player.y);
 				}
 				
 				//How mouch the Rune Turret can miss by
 				var shootRange = 0;
 					
 				//The direction that the Rune Turret travels in
-				direction = other.shootDir + random_range(-shootRange, shootRange);
+				direction = other.RuneTurret_ShootDir + random_range(-shootRange, shootRange);
 				image_angle = direction;
 					
 			}//end create Rune Turret Laser
 				
 			//Reset the countdown
-			countdown = countdownrate;
+			RuneTurret_Cooldown = RuneTurret_CooldownRate;
 			
 			TurretState = RUNETURRET_STATE.IDLE;
 		

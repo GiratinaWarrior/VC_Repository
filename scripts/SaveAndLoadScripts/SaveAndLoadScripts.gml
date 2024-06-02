@@ -33,7 +33,8 @@ function SaveGame()
 		VoizatiaDebuted : global.VoizatiaDebuted,
 		MalvaliaDefeated : global.MalvaliaDefeated,
 		VoizatiaLavenderAftermath : global.VoizatiaLavenderAftermath_Cutscene_Seen,
-		JestPrologueAftermath : global.JestTalkedTo_PrologueChapterAftermath
+		JestPrologueAftermath : global.JestTalkedTo_PrologueChapterAftermath,
+		MysticasiaGuardCutscene : global.MysticasiaGuard_Cutscene_Seen,
 	}
 	
 	var _dataString = json_stringify(_saveVar);
@@ -86,6 +87,10 @@ function LoadSave()
 		global.MalvaliaDefeated = _loadData.MalvaliaDefeated;
 		global.VoizatiaLavenderAftermath_Cutscene_Seen = _loadData.VoizatiaLavenderAftermath;
 		global.JestTalkedTo_PrologueChapterAftermath = _loadData.JestPrologueAftermath;
+		global.MysticasiaGuard_Cutscene_Seen = _loadData.MysticasiaGuardCutscene;
+		
+		//instance_create_layer(0, 0, layer, obj_Game, _loadData);
+		
 	} 
 
 }

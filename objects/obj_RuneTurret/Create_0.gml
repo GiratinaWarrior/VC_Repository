@@ -3,11 +3,11 @@
 //Health = 5;
 HitFrom = 0;
 
-countdownrate = 80;
-countdown = countdownrate;
+RuneTurret_CooldownRate = 80;
+RuneTurret_Cooldown = RuneTurret_CooldownRate;
 
 //bullet
-shootDir = 0;
+RuneTurret_ShootDir = 0;
 
 xSpeed = 0;
 ySpeed = 0;

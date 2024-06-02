@@ -11,7 +11,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "8_VoizatiaDebut",
-    "path": "folders/Objects/Cutscenes/Opening/8_VoizatiaDebut.yy",
+    "path": "folders/Objects/Cutscenes/Prologue/8_VoizatiaDebut.yy",
   },
   "parentObjectId": null,
   "persistent": false,

@@ -40,16 +40,6 @@ function SetRoomAudio_Music_Default(_music = blanksound){
 	switch(_music)
 	{
 		
-		case blanksound:
-			
-			with (obj_PlayBGM)
-			{
-				BGM_Volume = 0;
-				BGM_GainRate = 300;
-			}
-			
-			break;
-		
 		//The true main theme
 		case music_MainTheme:
 			
@@ -59,204 +49,21 @@ function SetRoomAudio_Music_Default(_music = blanksound){
 				BGM_GainRate = 0;
 			}
 			
-			break;
+			break;//end main theme
 		
-		//If the title theme from insurgence is playing
-		case music_TitleTheme_Insurgence:
+		#region Misc
 		
-			with (obj_PlayBGM)
-			{
-				BGM_Volume = 0.5;
-				BGM_GainRate = 0;
-			}
-		
-			break;
-			
-		//If the title theme from rejuvenation is playing
-		case music_TitleTheme_Insurgence:
-		
-			with (obj_PlayBGM)
-			{
-				BGM_Volume = 0.4;
-				BGM_GainRate = 0;
-			}
-		
-			break;
-		
-		//If no music is playing
-		case blanksound:
-		
-			with (obj_PlayBGM)
-			{
-				BGM_Volume = 0.05;
-				BGM_GainRate = 100;
-			}
-			
-			break;//end no music
-		
-		case music_ShrineMemoryTheme:
-		
-			with (obj_PlayBGM)
-			{
-				BGM_Volume = 0.3;
-				BGM_GainRate = 200;
-			}
-		
-			break;
-		
-		//If the Valnyx Shrine theme is playing
-		case music_ShrinePeacefulTheme:
+			case blanksound:
 			
 			with (obj_PlayBGM)
 			{
-				BGM_Volume = 0.5;
-				BGM_GainRate = 0;
+				BGM_Volume = 0;
+				BGM_GainRate = 300;
 			}
 			
-			break;//end Valnyx Shrine Theme
+			break;//end blanksound
 			
-		//If the V
-		case music_JestEncounterTheme:
-		
-			with (obj_PlayBGM)
-			{
-				BGM_Volume = 0.2;
-				BGM_GainRate = 0;
-			}
-		
-			break;
-			
-		case music_ShrineGeneralTheme:
-		
-			with (obj_PlayBGM)
-			{
-				BGM_Volume = 0.4;
-				BGM_GainRate = 0;
-			}
-		
-			break;
-			
-		case music_LavenderEncounterTheme:
-		
-			with (obj_PlayBGM)
-			{
-				BGM_Volume = 0.4;
-				BGM_GainRate = 0;
-			}
-			
-			break;
-			
-		case music_ShrineBasementTheme:
-		
-			with (obj_PlayBGM)
-			{
-				BGM_Volume = 0.5;
-				BGM_GainRate = 0;
-			}
-			
-			break;
-			
-		case music_StoryCutsceneTheme:
-		
-			with (obj_PlayBGM)
-			{
-				BGM_Volume = 0.5;
-				BGM_GainRate = 0;
-			}
-		
-			break;
-			
-		case music_LavenderBattleTheme:
-			
-			with (obj_PlayBGM)
-			{
-				BGM_Volume = 0.5;
-				BGM_GainRate = 0;
-			}
-			
-			break;
-			
-		case music_NoctisCityTheme:
-		
-			with (obj_PlayBGM)
-			{
-				BGM_Volume = 0.6;
-				BGM_GainRate = 10;
-			}
-		
-			break;
-			
-		case music_HighStakesPanic:
-		
-			with (obj_PlayBGM)
-			{
-				BGM_Volume = 0.25;
-				BGM_GainRate = 0;
-			}
-			
-			break;
-			
-		case music_DarkShrineBasementTheme:
-		
-			with (obj_PlayBGM)
-			{
-				BGM_Volume = 0.3;
-				BGM_GainRate = 100;
-			}
-		
-			break;
-			
-		case music_VoizatiaEncounterTheme:
-		
-			with (obj_PlayBGM)
-			{
-				BGM_Volume = 0.9;
-				BGM_GainRate = 100;
-			}
-			
-			break;
-			
-		case music_VoizatiaEncounterThemeV2:
-		
-			with (obj_PlayBGM)
-			{
-				BGM_Volume = 0.2;
-				BGM_GainRate = 0;
-			}
-			
-			break;
-			
-		case music_VlastelTheme:
-		
-			with (obj_PlayBGM)
-			{
-				BGM_Volume = 1.2;
-				BGM_GainRate = 0;
-			}
-		
-			break;
-			
-		case music_LavenderDeathTheme:
-			
-			with (obj_PlayBGM)
-			{
-				BGM_Volume = 0.3;
-				BGM_GainRate = 0;
-			}
-			
-			break;
-			
-		case music_LavenderDeathThemeV2:
-			
-			with (obj_PlayBGM)
-			{
-				BGM_Volume = 0.5;
-				BGM_GainRate = 0;
-			}
-			
-			break;
-			
-		case music_Credits:
+			case music_Credits:
 		
 			with (obj_PlayBGM)
 			{
@@ -265,7 +72,194 @@ function SetRoomAudio_Music_Default(_music = blanksound){
 			}
 			
 			break;
+		
+		#endregion
+		
+		#region Prologue Arc / Shrine Themes
+		
+			case music_ShrineMemoryTheme:
+		
+				with (obj_PlayBGM)
+				{
+					BGM_Volume = 0.3;
+					BGM_GainRate = 200;
+				}
+		
+				break;
+		
+			//If the Valnyx Shrine theme is playing
+			case music_ShrinePeacefulTheme:
 			
+				with (obj_PlayBGM)
+				{
+					BGM_Volume = 0.5;
+					BGM_GainRate = 0;
+				}
+			
+				break;//end Valnyx Shrine Theme
+			
+			//If Jest's encounter theme is playing
+			case music_JestEncounterTheme:
+		
+				with (obj_PlayBGM)
+				{
+					BGM_Volume = 0.2;
+					BGM_GainRate = 0;
+				}
+		
+				break;//end Jest Encounter Theme
+			
+			//If the Shrine General's battle theme is laying
+			case music_ShrineGeneralTheme:
+		
+				with (obj_PlayBGM)
+				{
+					BGM_Volume = 0.4;
+					BGM_GainRate = 0;
+				}
+		
+				break;
+			
+			case music_LavenderEncounterTheme:
+		
+				with (obj_PlayBGM)
+				{
+					BGM_Volume = 0.4;
+					BGM_GainRate = 0;
+				}
+			
+				break;
+			
+			case music_ShrineBasementTheme:
+		
+				with (obj_PlayBGM)
+				{
+					BGM_Volume = 0.5;
+					BGM_GainRate = 0;
+				}
+			
+				break;
+			
+			case music_StoryCutsceneTheme:
+		
+				with (obj_PlayBGM)
+				{
+					BGM_Volume = 0.5;
+					BGM_GainRate = 0;
+				}
+		
+				break;
+			
+			case music_LavenderBattleTheme:
+			
+				with (obj_PlayBGM)
+				{
+					BGM_Volume = 0.5;
+					BGM_GainRate = 0;
+				}
+			
+				break;
+			
+			case music_NoctisCityTheme:
+		
+				with (obj_PlayBGM)
+				{
+					BGM_Volume = 0.6;
+					BGM_GainRate = 10;
+				}
+		
+				break;
+			
+			case music_HighStakesPanic:
+		
+				with (obj_PlayBGM)
+				{
+					BGM_Volume = 0.25;
+					BGM_GainRate = 0;
+				}
+			
+				break;
+			
+			case music_DarkShrineBasementTheme:
+		
+				with (obj_PlayBGM)
+				{
+					BGM_Volume = 0.3;
+					BGM_GainRate = 100;
+				}
+		
+				break;
+			
+			case music_VoizatiaEncounterTheme:
+		
+				with (obj_PlayBGM)
+				{
+					BGM_Volume = 0.9;
+					BGM_GainRate = 100;
+				}
+			
+				break;
+			
+			case music_LavenderDeathTheme:
+			
+				with (obj_PlayBGM)
+				{
+					BGM_Volume = 0.3;
+					BGM_GainRate = 0;
+				}
+			
+				break;
+			
+			case music_LavenderDeathThemeV2:
+			
+				with (obj_PlayBGM)
+				{
+					BGM_Volume = 0.5;
+					BGM_GainRate = 0;
+				}
+			
+				break;
+			
+		#endregion Prologue Themes
+		
+		#region Universal
+		
+			case music_VoizatiaEncounterThemeV2:
+		
+				with (obj_PlayBGM)
+				{
+					BGM_Volume = 0.2;
+					BGM_GainRate = 0;
+				}
+			
+				break;
+			
+			case music_VlastelTheme:
+		
+				with (obj_PlayBGM)
+				{
+					BGM_Volume = 1.2;
+					BGM_GainRate = 0;
+				}
+		
+				break;
+			
+		#endregion
+		
+		#region Field Arc
+		
+			case music_SomniumFieldTheme:
+				
+				with (obj_PlayBGM)
+				{
+					BGM_Volume = 0.7;
+					BGM_GainRate = 100;
+				}
+				
+				break;
+		
+		#endregion
+		
 		default:
 		
 			with (obj_PlayBGM)

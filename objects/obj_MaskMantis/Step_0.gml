@@ -4,26 +4,24 @@
 
 ySpeed += Gravity;
 
-//show_debug_message(JumpTimer);
+	//turn around at a ledge
+	Wall_LedgeTurn();
 
-//turn around at a ledge
-Wall_LedgeTurn();
+	//Turn direction at a wall
+	Wall_SwitchRun();
 
-//Turn direction at a wall
-Wall_SwitchRun();
+	//Collision for walls when falling
+	Wall_FallOn();
 
-x += xSpeed;
+	x += xSpeed;
 
-//Collision for walls when falling
-Wall_FallOn();
-
-y += ySpeed;
+	y += ySpeed;
 
 #endregion
 
 #region Change State
 
-//If MM has been attacked by the player
+//If MM has not been attacked
 if (!Attacked)
 {
 	//If the Masked Mantis is on the ground
@@ -69,13 +67,12 @@ if (!Attacked)
 	
 	}//end MM in the air 
 }
-//If MM has not been attacked
+
+//Else If MM has been attacked
 else
 {
 	MantisState = MASKMANTIS_STATE.KNOCKBACK;
 }
-
-
 
 #endregion
 
@@ -120,6 +117,8 @@ switch(MantisState)
 		
 	//If MM is jumping
 	case MASKMANTIS_STATE.JUMP:
+	
+		//Damage = 2;
 	
 		//Face the direction they're moving
 		if (xSpeed != 0)

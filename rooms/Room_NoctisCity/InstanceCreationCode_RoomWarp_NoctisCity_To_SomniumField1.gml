@@ -8,7 +8,7 @@ if !(global.PrologueEnd_Cutscene_Seen)
 }
 else
 {
-	target = Room_SomniumField1;
-	WarpX = 32;
-	WarpY = 576;
+	target = Room_NoctisCity_FieldTunnel;
+	WarpX = 64;
+	WarpY = 400;
 }

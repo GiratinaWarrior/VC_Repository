@@ -366,13 +366,17 @@ switch (PrologueEndCutscene_Stage)
 	
 		#region Cutscene End
 				
+			SetRoomAudio_Music_Default();
+			
+			global.PrologueEnd_Cutscene_Seen = true;
+				
 			if (global.IsDemo)
 			{
 				TransitionStart(Room_Credits_PrologueChapter, seq_FadeOut, seq_FadeIn);
 			}
 			else
 			{
-				PlayerTransition(Room_SomniumField1, 32, 576);
+				PlayerTransition(Room_NoctisCity_FieldTunnel, 64, 384);
 			}
 			
 			instance_destroy();

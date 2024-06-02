@@ -24,7 +24,7 @@ enum PLAYER_DEATHCAUSE
 //---------------------Default Music (Unneeded)--------------//
 
 //Music and sound effects
-global.FieldTheme = music_FieldTheme;
+global.FieldTheme = music_SomniumFieldTheme;
 global.FieldSound = sound_WindBlowing;
 
 global.OceanTheme = music_OceanTheme;
@@ -71,7 +71,7 @@ global.AbilityUnlocked_ClingToHope = false;
 
 //-----------------------------------------------Story Flags-------------------------------------//
 
-global.IsDemo = true;
+global.IsDemo = false;
 
 //The number of orbs we've retrieved
 global.OrbsCollected = 0;
@@ -128,5 +128,7 @@ global.PrologueEnd_Cutscene_Seen = false;
 
 //---------------------Somnium Forest
 
+//When the player is about to enter Mysticasia town and is stopped by a guard.
+global.MysticasiaGuard_Cutscene_Seen = false;
 
 #endregion

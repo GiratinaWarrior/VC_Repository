@@ -10,7 +10,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "7_CardinalNoctisCongrats",
-    "path": "folders/Objects/Cutscenes/Opening/7_CardinalNoctisCongrats.yy",
+    "path": "folders/Objects/Cutscenes/Prologue/7_CardinalNoctisCongrats.yy",
   },
   "parentObjectId": null,
   "persistent": false,

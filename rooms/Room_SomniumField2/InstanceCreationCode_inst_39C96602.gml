@@ -1,1 +1,0 @@
-JumpPower = 0;

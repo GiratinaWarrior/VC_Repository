@@ -10,7 +10,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "12_PrologueEnd",
-    "path": "folders/Objects/Cutscenes/Opening/12_PrologueEnd.yy",
+    "path": "folders/Objects/Cutscenes/Prologue/12_PrologueEnd.yy",
   },
   "parentObjectId": null,
   "persistent": false,

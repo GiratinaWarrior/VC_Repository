@@ -10,7 +10,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "10_VoizatiaBossIntro",
-    "path": "folders/Objects/Cutscenes/Opening/10_VoizatiaBossIntro.yy",
+    "path": "folders/Objects/Cutscenes/Prologue/10_VoizatiaBossIntro.yy",
   },
   "parentObjectId": null,
   "persistent": false,

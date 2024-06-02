@@ -36,3 +36,8 @@ function SetSpawnpoint(_x = global.WarpTargetX, _y = global.WarpTargetY, _room =
 	
 	
 }
+
+function SetSpawnAtPlayer()
+{
+	SetSpawnpoint(obj_Player.x, obj_Player.y);
+}

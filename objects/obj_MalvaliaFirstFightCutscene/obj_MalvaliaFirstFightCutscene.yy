@@ -10,7 +10,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "9_MalvaliaFirstFight",
-    "path": "folders/Objects/Cutscenes/Opening/9_MalvaliaFirstFight.yy",
+    "path": "folders/Objects/Cutscenes/Prologue/9_MalvaliaFirstFight.yy",
   },
   "parentObjectId": null,
   "persistent": false,

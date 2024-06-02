@@ -10,7 +10,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "3_ShrineGeneralBossIntro",
-    "path": "folders/Objects/Cutscenes/Opening/3_ShrineGeneralBossIntro.yy",
+    "path": "folders/Objects/Cutscenes/Prologue/3_ShrineGeneralBossIntro.yy",
   },
   "parentObjectId": null,
   "persistent": false,

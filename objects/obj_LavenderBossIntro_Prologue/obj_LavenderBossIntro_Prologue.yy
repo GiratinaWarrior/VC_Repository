@@ -10,7 +10,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "6_LavenderBossIntro",
-    "path": "folders/Objects/Cutscenes/Opening/6_LavenderBossIntro.yy",
+    "path": "folders/Objects/Cutscenes/Prologue/6_LavenderBossIntro.yy",
   },
   "parentObjectId": null,
   "persistent": false,

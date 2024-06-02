@@ -11,7 +11,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "5_CarvalineOrbIntroCutscene",
-    "path": "folders/Objects/Cutscenes/Opening/5_CarvalineOrbIntroCutscene.yy",
+    "path": "folders/Objects/Cutscenes/Prologue/5_CarvalineOrbIntroCutscene.yy",
   },
   "parentObjectId": null,
   "persistent": false,
