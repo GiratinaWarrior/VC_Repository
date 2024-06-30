@@ -1,14 +1,14 @@
 {
-  "resourceType": "GMPath",
-  "resourceVersion": "1.0",
-  "name": "pt_Tundragon8",
-  "closed": true,
-  "kind": 1,
-  "parent": {
-    "name": "Room3",
-    "path": "folders/Paths/Tundragons/Room3.yy",
+  "$GMPath":"",
+  "%Name":"pt_Tundragon8",
+  "closed":true,
+  "kind":1,
+  "name":"pt_Tundragon8",
+  "parent":{
+    "name":"Room3",
+    "path":"folders/Paths/Tundragons/Room3.yy",
   },
-  "points": [
+  "points":[
     {"speed":100.0,"x":320.0,"y":64.0,},
     {"speed":100.0,"x":736.0,"y":128.0,},
     {"speed":100.0,"x":1184.0,"y":64.0,},
@@ -17,5 +17,7 @@
     {"speed":100.0,"x":796.41364,"y":-133.18706,},
     {"speed":100.0,"x":320.0,"y":-128.0,},
   ],
-  "precision": 4,
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "ShrineSoldierScripts",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "ShrineSoldier",
-    "path": "folders/Objects/Enemies/Shrine/Light/ShrineSoldier.yy",
+  "$GMScript":"",
+  "%Name":"ShrineSoldierScripts",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ShrineSoldierScripts",
+  "parent":{
+    "name":"ShrineSoldier",
+    "path":"folders/Objects/Enemies/Shrine/Light/ShrineSoldier.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "seq_PrologueEndCutscene_MalvaliaIdleAngry_Events38",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "12_PrologueEnd",
-    "path": "folders/Objects/Cutscenes/Prologue/12_PrologueEnd.yy",
+  "$GMScript":"",
+  "%Name":"seq_PrologueEndCutscene_MalvaliaIdleAngry_Events38",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"seq_PrologueEndCutscene_MalvaliaIdleAngry_Events38",
+  "parent":{
+    "name":"12_PrologueEnd",
+    "path":"folders/Objects/Cutscenes/Prologue/12_PrologueEnd.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

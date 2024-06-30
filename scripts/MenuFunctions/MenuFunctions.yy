@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "MenuFunctions",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Menus",
-    "path": "folders/Objects/Operators/Menus.yy",
+  "$GMScript":"",
+  "%Name":"MenuFunctions",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"MenuFunctions",
+  "parent":{
+    "name":"Menus",
+    "path":"folders/Objects/Operators/Menus.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

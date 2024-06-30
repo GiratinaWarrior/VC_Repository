@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "EnemyScripts",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Entity",
-    "path": "folders/Scripts/Entity.yy",
+  "$GMScript":"",
+  "%Name":"EnemyScripts",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"EnemyScripts",
+  "parent":{
+    "name":"Entity",
+    "path":"folders/Scripts/Entity.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

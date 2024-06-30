@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "Lavender_Prologue_Scripts",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "2_Lavender_Prologue",
-    "path": "folders/Objects/Enemies/Bosses/Prologue/2_Lavender_Prologue.yy",
+  "$GMScript":"",
+  "%Name":"Lavender_Prologue_Scripts",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Lavender_Prologue_Scripts",
+  "parent":{
+    "name":"2_Lavender_Prologue",
+    "path":"folders/Objects/Enemies/Bosses/Prologue/2_Lavender_Prologue.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

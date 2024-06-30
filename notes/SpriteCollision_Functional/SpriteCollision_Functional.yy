@@ -1,9 +1,11 @@
 {
-  "resourceType": "GMNotes",
-  "resourceVersion": "1.1",
-  "name": "SpriteCollision_Functional",
-  "parent": {
-    "name": "Neutral",
-    "path": "folders/Sprites/Player/Animations/Player/Neutral.yy",
+  "$GMNotes":"",
+  "%Name":"SpriteCollision_Functional",
+  "name":"SpriteCollision_Functional",
+  "parent":{
+    "name":"Neutral",
+    "path":"folders/Sprites/Player/Animations/Player/Neutral.yy",
   },
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
 }

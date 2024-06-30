@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "GuardarkScripts",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Guardark",
-    "path": "folders/Objects/Enemies/Shrine/Dark/Guardark.yy",
+  "$GMScript":"",
+  "%Name":"GuardarkScripts",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GuardarkScripts",
+  "parent":{
+    "name":"Guardark",
+    "path":"folders/Objects/Enemies/Shrine/Dark/Guardark.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "VioletRoseryState_Frenzy",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "States",
-    "path": "folders/Objects/Enemies/Bosses/VioletRosery/States.yy",
+  "$GMScript":"",
+  "%Name":"VioletRoseryState_Frenzy",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"VioletRoseryState_Frenzy",
+  "parent":{
+    "name":"States",
+    "path":"folders/Objects/Enemies/Bosses/VioletRosery/States.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

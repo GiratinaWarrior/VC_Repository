@@ -1,9 +1,11 @@
 {
-  "resourceType": "GMNotes",
-  "resourceVersion": "1.1",
-  "name": "SpareTextCode_First",
-  "parent": {
-    "name": "Notes",
-    "path": "folders/Objects/Textentities/Notes.yy",
+  "$GMNotes":"",
+  "%Name":"SpareTextCode_First",
+  "name":"SpareTextCode_First",
+  "parent":{
+    "name":"Notes",
+    "path":"folders/Objects/Textentities/Notes.yy",
   },
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
 }

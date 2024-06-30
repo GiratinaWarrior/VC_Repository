@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "FeralArrow",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Attacks",
-    "path": "folders/Objects/Enemies/Bosses/VioletRosery/Attacks.yy",
+  "$GMScript":"",
+  "%Name":"FeralArrow",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"FeralArrow",
+  "parent":{
+    "name":"Attacks",
+    "path":"folders/Objects/Enemies/Bosses/VioletRosery/Attacks.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

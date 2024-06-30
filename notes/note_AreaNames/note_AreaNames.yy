@@ -1,9 +1,11 @@
 {
-  "resourceType": "GMNotes",
-  "resourceVersion": "1.1",
-  "name": "note_AreaNames",
-  "parent": {
-    "name": "Unplayable",
-    "path": "folders/Rooms/Unplayable.yy",
+  "$GMNotes":"",
+  "%Name":"note_AreaNames",
+  "name":"note_AreaNames",
+  "parent":{
+    "name":"Unplayable",
+    "path":"folders/Rooms/Unplayable.yy",
   },
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
 }

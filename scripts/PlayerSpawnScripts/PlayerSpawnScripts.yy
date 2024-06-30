@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "PlayerSpawnScripts",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "SaveSpawn",
-    "path": "folders/Scripts/SaveSpawn.yy",
+  "$GMScript":"",
+  "%Name":"PlayerSpawnScripts",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"PlayerSpawnScripts",
+  "parent":{
+    "name":"SaveSpawn",
+    "path":"folders/Scripts/SaveSpawn.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

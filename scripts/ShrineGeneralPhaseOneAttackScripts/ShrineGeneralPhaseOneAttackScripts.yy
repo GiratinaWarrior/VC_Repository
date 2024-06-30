@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "ShrineGeneralPhaseOneAttackScripts",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Scripts",
-    "path": "folders/Objects/Enemies/Bosses/Prologue/1_ShrineGeneral/Scripts.yy",
+  "$GMScript":"",
+  "%Name":"ShrineGeneralPhaseOneAttackScripts",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ShrineGeneralPhaseOneAttackScripts",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Objects/Enemies/Bosses/Prologue/1_ShrineGeneral/Scripts.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

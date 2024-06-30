@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "RestInTurmoil",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Attacks",
-    "path": "folders/Objects/Enemies/Bosses/VioletRosery/Attacks.yy",
+  "$GMScript":"",
+  "%Name":"RestInTurmoil",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"RestInTurmoil",
+  "parent":{
+    "name":"Attacks",
+    "path":"folders/Objects/Enemies/Bosses/VioletRosery/Attacks.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

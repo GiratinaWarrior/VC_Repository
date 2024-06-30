@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "BossScripts",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Entity",
-    "path": "folders/Scripts/Entity.yy",
+  "$GMScript":"",
+  "%Name":"BossScripts",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"BossScripts",
+  "parent":{
+    "name":"Entity",
+    "path":"folders/Scripts/Entity.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

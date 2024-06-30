@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "VioletRoseryState_Turmoil",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "States",
-    "path": "folders/Objects/Enemies/Bosses/VioletRosery/States.yy",
+  "$GMScript":"",
+  "%Name":"VioletRoseryState_Turmoil",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"VioletRoseryState_Turmoil",
+  "parent":{
+    "name":"States",
+    "path":"folders/Objects/Enemies/Bosses/VioletRosery/States.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,9 +1,11 @@
 {
-  "resourceType": "GMNotes",
-  "resourceVersion": "1.1",
-  "name": "OldAfterCutscene",
-  "parent": {
-    "name": "9_MalvaliaFirstFight",
-    "path": "folders/Objects/Cutscenes/Prologue/9_MalvaliaFirstFight.yy",
+  "$GMNotes":"",
+  "%Name":"OldAfterCutscene",
+  "name":"OldAfterCutscene",
+  "parent":{
+    "name":"9_MalvaliaFirstFight",
+    "path":"folders/Objects/Cutscenes/Prologue/9_MalvaliaFirstFight.yy",
   },
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
 }
