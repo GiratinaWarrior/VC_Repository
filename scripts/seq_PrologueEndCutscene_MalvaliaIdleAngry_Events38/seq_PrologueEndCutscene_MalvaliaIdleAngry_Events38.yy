@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"seq_PrologueEndCutscene_MalvaliaIdleAngry_Events38",
   "isCompatibility":false,
   "isDnD":false,

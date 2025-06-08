@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"ChakrolemScript",
   "isCompatibility":false,
   "isDnD":false,

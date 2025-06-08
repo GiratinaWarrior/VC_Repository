@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"VioletRoseryState_Arrow",
   "isCompatibility":false,
   "isDnD":false,

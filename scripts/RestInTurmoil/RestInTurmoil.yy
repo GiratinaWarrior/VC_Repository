@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"RestInTurmoil",
   "isCompatibility":false,
   "isDnD":false,

@@ -41,7 +41,7 @@
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
-    "$GMSequence":"",
+    "$GMSequence":"v1",
     "%Name":"spr_Lavender_DivineArsenal_Decharge",
     "autoRecord":true,
     "backdropHeight":768,
@@ -77,36 +77,16 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9c3fb3c5-3e86-4ea9-b211-ef048a9cf3bb","path":"sprites/spr_Lavender_DivineArsenal_Decharge/spr_Lavender_DivineArsenal_Decharge.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"0052675c-ef0d-4afd-9d0c-49c0391db4ea","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"676a61ef-2409-4ee2-86b2-dff477302c84","path":"sprites/spr_Lavender_DivineArsenal_Decharge/spr_Lavender_DivineArsenal_Decharge.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"5b4d9892-d4da-43db-bdc2-4b165be5b589","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c423527e-2a80-4195-99d3-424d865ae4ad","path":"sprites/spr_Lavender_DivineArsenal_Decharge/spr_Lavender_DivineArsenal_Decharge.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"dea501e0-c5c9-464f-8b08-d0d2ae136a75","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9d158850-4c39-423c-b6ef-088bf56aef43","path":"sprites/spr_Lavender_DivineArsenal_Decharge/spr_Lavender_DivineArsenal_Decharge.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"1d818ba3-fe31-4f43-89cb-1106ff5f3729","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"42eb0a36-d2f9-437b-b833-7f727baf09d7","path":"sprites/spr_Lavender_DivineArsenal_Decharge/spr_Lavender_DivineArsenal_Decharge.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"455dfe94-2589-4d30-a764-e3e8ecb69c4c","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"42cfe4de-e98a-44c6-abf1-d35fb8bad76f","path":"sprites/spr_Lavender_DivineArsenal_Decharge/spr_Lavender_DivineArsenal_Decharge.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"5d5aed8f-3a67-4132-a9d0-cbc9f134521e","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"cf768675-c273-46de-8bbd-0521de2b8d3f","path":"sprites/spr_Lavender_DivineArsenal_Decharge/spr_Lavender_DivineArsenal_Decharge.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"66f48cb3-70de-4764-80f3-2f99270ab16a","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e4452ce6-c6b0-47cd-87a2-637d7bee5312","path":"sprites/spr_Lavender_DivineArsenal_Decharge/spr_Lavender_DivineArsenal_Decharge.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"0365b018-ca58-46d8-8e0c-9caff98de443","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"66f4ebfb-5951-4407-a534-8ec9429455ca","path":"sprites/spr_Lavender_DivineArsenal_Decharge/spr_Lavender_DivineArsenal_Decharge.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"c46fb94d-1504-448c-8b7f-5988d97faa40","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4a9db3b8-c466-4984-b093-13ee2eef8ab1","path":"sprites/spr_Lavender_DivineArsenal_Decharge/spr_Lavender_DivineArsenal_Decharge.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"4cda0b2f-2c8a-4fbd-ab97-857dc4b7bd87","IsCreationKey":false,"Key":9.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"9c3fb3c5-3e86-4ea9-b211-ef048a9cf3bb","path":"sprites/spr_Lavender_DivineArsenal_Decharge/spr_Lavender_DivineArsenal_Decharge.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"0052675c-ef0d-4afd-9d0c-49c0391db4ea","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"676a61ef-2409-4ee2-86b2-dff477302c84","path":"sprites/spr_Lavender_DivineArsenal_Decharge/spr_Lavender_DivineArsenal_Decharge.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"5b4d9892-d4da-43db-bdc2-4b165be5b589","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"c423527e-2a80-4195-99d3-424d865ae4ad","path":"sprites/spr_Lavender_DivineArsenal_Decharge/spr_Lavender_DivineArsenal_Decharge.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"dea501e0-c5c9-464f-8b08-d0d2ae136a75","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"9d158850-4c39-423c-b6ef-088bf56aef43","path":"sprites/spr_Lavender_DivineArsenal_Decharge/spr_Lavender_DivineArsenal_Decharge.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"1d818ba3-fe31-4f43-89cb-1106ff5f3729","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"42eb0a36-d2f9-437b-b833-7f727baf09d7","path":"sprites/spr_Lavender_DivineArsenal_Decharge/spr_Lavender_DivineArsenal_Decharge.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"455dfe94-2589-4d30-a764-e3e8ecb69c4c","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"42cfe4de-e98a-44c6-abf1-d35fb8bad76f","path":"sprites/spr_Lavender_DivineArsenal_Decharge/spr_Lavender_DivineArsenal_Decharge.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"5d5aed8f-3a67-4132-a9d0-cbc9f134521e","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"cf768675-c273-46de-8bbd-0521de2b8d3f","path":"sprites/spr_Lavender_DivineArsenal_Decharge/spr_Lavender_DivineArsenal_Decharge.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"66f48cb3-70de-4764-80f3-2f99270ab16a","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"e4452ce6-c6b0-47cd-87a2-637d7bee5312","path":"sprites/spr_Lavender_DivineArsenal_Decharge/spr_Lavender_DivineArsenal_Decharge.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"0365b018-ca58-46d8-8e0c-9caff98de443","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"66f4ebfb-5951-4407-a534-8ec9429455ca","path":"sprites/spr_Lavender_DivineArsenal_Decharge/spr_Lavender_DivineArsenal_Decharge.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"c46fb94d-1504-448c-8b7f-5988d97faa40","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"4a9db3b8-c466-4984-b093-13ee2eef8ab1","path":"sprites/spr_Lavender_DivineArsenal_Decharge/spr_Lavender_DivineArsenal_Decharge.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"4cda0b2f-2c8a-4fbd-ab97-857dc4b7bd87","IsCreationKey":false,"Key":9.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

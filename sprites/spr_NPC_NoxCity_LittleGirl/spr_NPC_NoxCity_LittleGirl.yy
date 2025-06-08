@@ -41,7 +41,7 @@
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
-    "$GMSequence":"",
+    "$GMSequence":"v1",
     "%Name":"spr_NPC_NoxCity_LittleGirl",
     "autoRecord":true,
     "backdropHeight":768,
@@ -77,36 +77,16 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"cd535c95-364a-43c1-8801-af01f67aa01b","path":"sprites/spr_NPC_NoxCity_LittleGirl/spr_NPC_NoxCity_LittleGirl.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"7ee47ce6-615b-43aa-9410-9d1134693b61","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b0eccd78-9f81-49aa-a71a-48a1a46d53e5","path":"sprites/spr_NPC_NoxCity_LittleGirl/spr_NPC_NoxCity_LittleGirl.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"2d7a0c0b-c1bb-44e5-a15f-20d590d21208","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0742a341-a75d-4be8-929a-ef4061c9d3bc","path":"sprites/spr_NPC_NoxCity_LittleGirl/spr_NPC_NoxCity_LittleGirl.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d0eddd14-22d1-4302-ae0f-df22125e7c15","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2663102c-c720-4557-b2e3-5b708695adcd","path":"sprites/spr_NPC_NoxCity_LittleGirl/spr_NPC_NoxCity_LittleGirl.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"18f2550e-560b-4e44-8432-dee78abf4601","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b34a5743-f2f8-402f-b2f7-22b4701bbe5c","path":"sprites/spr_NPC_NoxCity_LittleGirl/spr_NPC_NoxCity_LittleGirl.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"2b9bee7b-fc5f-41c7-997d-7ac8ea9340dc","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e78a74d4-cfe6-43e7-bce4-d95c36a54c66","path":"sprites/spr_NPC_NoxCity_LittleGirl/spr_NPC_NoxCity_LittleGirl.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"05c2164f-f791-4ff9-a29b-1036c82f5b65","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b436b52a-e6e4-4a7a-9784-ad8b2585cd25","path":"sprites/spr_NPC_NoxCity_LittleGirl/spr_NPC_NoxCity_LittleGirl.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"a94f6eb6-1e69-4cc6-8b09-bc8f8b3ef427","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"50725a2d-80cf-4b8a-8ea2-4ba73864e0da","path":"sprites/spr_NPC_NoxCity_LittleGirl/spr_NPC_NoxCity_LittleGirl.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"808f43db-ff72-411d-baed-6b23566870da","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"fac68d60-509c-4e72-adf4-cc50f3003b1e","path":"sprites/spr_NPC_NoxCity_LittleGirl/spr_NPC_NoxCity_LittleGirl.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"bcc96fe6-af62-4505-9132-4051feda58cf","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"70594be0-9f30-40ae-9bc8-c8d842469125","path":"sprites/spr_NPC_NoxCity_LittleGirl/spr_NPC_NoxCity_LittleGirl.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"7d37b003-3b21-4049-8894-87b5506f2329","IsCreationKey":false,"Key":9.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"cd535c95-364a-43c1-8801-af01f67aa01b","path":"sprites/spr_NPC_NoxCity_LittleGirl/spr_NPC_NoxCity_LittleGirl.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"7ee47ce6-615b-43aa-9410-9d1134693b61","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"b0eccd78-9f81-49aa-a71a-48a1a46d53e5","path":"sprites/spr_NPC_NoxCity_LittleGirl/spr_NPC_NoxCity_LittleGirl.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"2d7a0c0b-c1bb-44e5-a15f-20d590d21208","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"0742a341-a75d-4be8-929a-ef4061c9d3bc","path":"sprites/spr_NPC_NoxCity_LittleGirl/spr_NPC_NoxCity_LittleGirl.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"d0eddd14-22d1-4302-ae0f-df22125e7c15","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"2663102c-c720-4557-b2e3-5b708695adcd","path":"sprites/spr_NPC_NoxCity_LittleGirl/spr_NPC_NoxCity_LittleGirl.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"18f2550e-560b-4e44-8432-dee78abf4601","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"b34a5743-f2f8-402f-b2f7-22b4701bbe5c","path":"sprites/spr_NPC_NoxCity_LittleGirl/spr_NPC_NoxCity_LittleGirl.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"2b9bee7b-fc5f-41c7-997d-7ac8ea9340dc","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"e78a74d4-cfe6-43e7-bce4-d95c36a54c66","path":"sprites/spr_NPC_NoxCity_LittleGirl/spr_NPC_NoxCity_LittleGirl.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"05c2164f-f791-4ff9-a29b-1036c82f5b65","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"b436b52a-e6e4-4a7a-9784-ad8b2585cd25","path":"sprites/spr_NPC_NoxCity_LittleGirl/spr_NPC_NoxCity_LittleGirl.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"a94f6eb6-1e69-4cc6-8b09-bc8f8b3ef427","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"50725a2d-80cf-4b8a-8ea2-4ba73864e0da","path":"sprites/spr_NPC_NoxCity_LittleGirl/spr_NPC_NoxCity_LittleGirl.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"808f43db-ff72-411d-baed-6b23566870da","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"fac68d60-509c-4e72-adf4-cc50f3003b1e","path":"sprites/spr_NPC_NoxCity_LittleGirl/spr_NPC_NoxCity_LittleGirl.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"bcc96fe6-af62-4505-9132-4051feda58cf","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"70594be0-9f30-40ae-9bc8-c8d842469125","path":"sprites/spr_NPC_NoxCity_LittleGirl/spr_NPC_NoxCity_LittleGirl.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"7d37b003-3b21-4049-8894-87b5506f2329","IsCreationKey":false,"Key":9.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

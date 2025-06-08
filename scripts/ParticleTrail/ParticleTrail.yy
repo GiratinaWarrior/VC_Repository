@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"ParticleTrail",
   "isCompatibility":false,
   "isDnD":false,

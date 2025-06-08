@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"Lavender_Prologue_Scripts",
   "isCompatibility":false,
   "isDnD":false,

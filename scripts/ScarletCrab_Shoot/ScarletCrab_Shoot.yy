@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"ScarletCrab_Shoot",
   "isCompatibility":false,
   "isDnD":false,

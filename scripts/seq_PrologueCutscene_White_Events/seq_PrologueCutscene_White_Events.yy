@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"seq_PrologueCutscene_White_Events",
   "isCompatibility":false,
   "isDnD":false,

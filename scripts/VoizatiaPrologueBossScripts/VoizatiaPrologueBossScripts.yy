@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"VoizatiaPrologueBossScripts",
   "isCompatibility":false,
   "isDnD":false,

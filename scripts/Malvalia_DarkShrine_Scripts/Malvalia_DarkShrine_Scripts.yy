@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"Malvalia_DarkShrine_Scripts",
   "isCompatibility":false,
   "isDnD":false,
