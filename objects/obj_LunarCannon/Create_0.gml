@@ -7,7 +7,7 @@ var _func = function()
 {
 	Damage = 0;
 	LunarCannon_Fading = true;
-	time_source_destroy();
+	time_source_destroy(LunarCannon_TimeSource);
 	LunarCannon_TimeSource = noone;
 }
 
